@@ -16,24 +16,24 @@ You must be a Lambda School student to view this page.
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
@@ -43,24 +43,24 @@ You must be a Lambda School student to view this page.
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
@@ -78,9 +78,9 @@ Responsive design covers topics that range from fixed layouts to fully responsiv
 
 #### Objectives:
 
--   Student should be able to describe the differences in fixed, fluid, adaptive, and responsive layouts
--   Student should be able to demonstrate knowledge of media queries by correctly implementing them in a project
--   Student should be able to describe how using scalable units for font sizes impacts accessibility and why designing accessible web pages is important
+- Student should be able to describe the differences in fixed, fluid, adaptive, and responsive layouts
+- Student should be able to demonstrate knowledge of media queries by correctly implementing them in a project
+- Student should be able to describe how using scalable units for font sizes impacts accessibility and why designing accessible web pages is important
 
 ## [Intro to JavaScript](../module/recPmaqIfzn9NMPLY)
 
@@ -88,12 +88,12 @@ JavaScript is the backbone of interactive web pages. This module will tackle bas
 
 #### Objectives:
 
--   Student should be able to understand what Javascript is and explain its use in web development
--   Student should be able to explain global object in JavaScript and be able to use the Math object
--   Student should be able to write control flow using if/else statements
--   Student should be able to write a basic for loop and while loop
--   Student should be able to understand JavaScript functions, why we use them, and be able to write correct function syntax
--   Student should be able to write and call functions using arguments, parameters and the return statement
+- Student should be able to understand what Javascript is and explain its use in web development
+- Student should be able to explain global object in JavaScript and be able to use the Math object
+- Student should be able to write control flow using if/else statements
+- Student should be able to write a basic for loop and while loop
+- Student should be able to understand JavaScript functions, why we use them, and be able to write correct function syntax
+- Student should be able to write and call functions using arguments, parameters and the return statement
 
 ## [Arrays](../module/recXRqGjyTS6uDzSA)
 
@@ -101,8 +101,8 @@ Arrays allow you, the developer, to work with lots of changing data efficiently 
 
 #### Objectives:
 
--   Student should be able to use arrays to store and access data
--   Student should be able to use array properties and array methods
+- Student should be able to use arrays to store and access data
+- Student should be able to use array properties and array methods
 
 ## [Objects](../module/recQV3tKcEDXa840D)
 
@@ -110,5 +110,5 @@ Objects are yet another data type that can be used to store a collection of data
 
 #### Objectives:
 
--   Student should be able to use objects to store and access data
--   Student should be able to learn to create methods on Objects, and utilize the ‘this’ keyword
+- Student should be able to use objects to store and access data
+- Student should be able to learn to create methods on Objects, and utilize the ‘this’ keyword

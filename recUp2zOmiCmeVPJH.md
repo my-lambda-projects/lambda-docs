@@ -16,43 +16,43 @@ You must be a Lambda School student to view this page.
 
 <a href="/labs-new/sprint/recA58aGQUpzCzR0I" class="bd-toc-link">1.  Welcome to Lambda Labs</a>
 
--   [Labs Overview](/labs-new/module/recQoRVnuH8ZTGO23/)
+- [Labs Overview](/labs-new/module/recQoRVnuH8ZTGO23/)
 
 <a href="/labs-new/sprint/recEnxumaKZ7yHZHw" class="bd-toc-link">2.  Sprint 1 - Planning a Project</a>
 
--   [Guided Project: Planning](/labs-new/module/rec7JPnP0pXGAP2Jo/)
--   [Guided Project: Plan Critique](/labs-new/module/recra4AWVdeHriA7K/)
--   [Module Inquiry 1](/labs-new/module/reca587Ou79n4JDmT/)
--   [Guided Project: Engineering](/labs-new/module/recYk51eKPftN24Gv/)
--   [Guided Project: GitHub](/labs-new/module/recxvP9aTVUFLUuhk/)
--   [Guided Project: Engineering Critique](/labs-new/module/rec7NZCFRi6EgXsa1/)
--   [Module Inquiry 2](/labs-new/module/recedcXwfMEbKReKU/)
--   [Sprint Challenge](/labs-new/module/recZL7TFXJI2b935w/)
+- [Guided Project: Planning](/labs-new/module/rec7JPnP0pXGAP2Jo/)
+- [Guided Project: Plan Critique](/labs-new/module/recra4AWVdeHriA7K/)
+- [Module Inquiry 1](/labs-new/module/reca587Ou79n4JDmT/)
+- [Guided Project: Engineering](/labs-new/module/recYk51eKPftN24Gv/)
+- [Guided Project: GitHub](/labs-new/module/recxvP9aTVUFLUuhk/)
+- [Guided Project: Engineering Critique](/labs-new/module/rec7NZCFRi6EgXsa1/)
+- [Module Inquiry 2](/labs-new/module/recedcXwfMEbKReKU/)
+- [Sprint Challenge](/labs-new/module/recZL7TFXJI2b935w/)
 
 <a href="/labs-new/sprint/recUp2zOmiCmeVPJH" class="bd-toc-link">3.  Sprint 2 - Demonstrating Contribution</a>
 
--   [Guided Project: Pair Programming](/labs-new/module/recDE1yLi7fBNUfIu/)
--   [Module Inquiry 3](/labs-new/module/recFTj2n2I2J6V47t/)
--   [Guided Project: Discussing Your Work](/labs-new/module/recEBojAtFGOgbuz6/)
--   [Module Inquiry 4](/labs-new/module/rec0ONoNSxKc44E6n/)
--   [Sprint Challenge](/labs-new/module/rechUVGd9i8UhcK3Q/)
+- [Guided Project: Pair Programming](/labs-new/module/recDE1yLi7fBNUfIu/)
+- [Module Inquiry 3](/labs-new/module/recFTj2n2I2J6V47t/)
+- [Guided Project: Discussing Your Work](/labs-new/module/recEBojAtFGOgbuz6/)
+- [Module Inquiry 4](/labs-new/module/rec0ONoNSxKc44E6n/)
+- [Sprint Challenge](/labs-new/module/rechUVGd9i8UhcK3Q/)
 
 <a href="/labs-new/sprint/recxUI33uhloBsscr" class="bd-toc-link">4.  Sprint 3 - Giving and Receiving Feedback</a>
 
--   [Module Inquiry 5](/labs-new/module/reccEtL7wPhA4MQx2/)
--   [Guided Project: Giving Feedback](/labs-new/module/recMcL9ePYKbNdwuX/)
--   [Module Inquiry 6](/labs-new/module/recqqnYPyMwOu1U34/)
--   [Guided Project: Receiving Feedback](/labs-new/module/rec3jI54tyIq2rVUo/)
--   [Module Inquiry 7](/labs-new/module/recyprrmts7m3ADTL/)
--   [Sprint Challenge](/labs-new/module/recYiLzsJs9W1gyn3/)
+- [Module Inquiry 5](/labs-new/module/reccEtL7wPhA4MQx2/)
+- [Guided Project: Giving Feedback](/labs-new/module/recMcL9ePYKbNdwuX/)
+- [Module Inquiry 6](/labs-new/module/recqqnYPyMwOu1U34/)
+- [Guided Project: Receiving Feedback](/labs-new/module/rec3jI54tyIq2rVUo/)
+- [Module Inquiry 7](/labs-new/module/recyprrmts7m3ADTL/)
+- [Sprint Challenge](/labs-new/module/recYiLzsJs9W1gyn3/)
 
 <a href="/labs-new/sprint/rec0twF34QpHEbwhl" class="bd-toc-link">5.  Sprint 4 - Presenting Your Work</a>
 
--   [Guided Project: Blog Presentation](/labs-new/module/reckW7SYI2WwuK4zu/)
--   [Module Inquiry 8](/labs-new/module/recG67cpSyretq0bG/)
--   [Module Inquiry 9](/labs-new/module/recVlEgPG8P5BmY25/)
--   [Module Inquiry 10](/labs-new/module/recz8x4RdVXPKcnzu/)
--   [Sprint Challenge](/labs-new/module/recz0vtwiCYTZAutU/)
+- [Guided Project: Blog Presentation](/labs-new/module/reckW7SYI2WwuK4zu/)
+- [Module Inquiry 8](/labs-new/module/recG67cpSyretq0bG/)
+- [Module Inquiry 9](/labs-new/module/recVlEgPG8P5BmY25/)
+- [Module Inquiry 10](/labs-new/module/recz8x4RdVXPKcnzu/)
+- [Sprint Challenge](/labs-new/module/recz0vtwiCYTZAutU/)
 
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjM1IiB2aWV3Ym94PSIwIDAgNzU2IDE5NyIgZmlsbD0iI2VjMzk0NCI+PGc+PHBhdGggZD0iTTI5Mi45LDEyNi42aC02LjdjLTksMC0xMi42LTEuOS0xMi42LTkuNVY0OC41YzAtNy43LDEuNi04LjYsMTEuNC05Ljd2LTQuNWgtNDEuM3Y0LjUgYzkuOCwxLjEsMTEuNCwxLjksMTEuNCw5Ljd2NjkuM2MwLDcuNy0xLjYsOC42LTExLjQsOS43djQuNWg3My43bDQuOS0yOS40aC00LjRDMzA4LjUsMTE5LjYsMzAzLjksMTI2LjYsMjkyLjksMTI2LjZ6Ij48L3BhdGg+PHBhdGggZD0iTTM4NS41LDEyMS4xVjc5LjNjMC0xNS44LTkuNC0yMi40LTI2LjYtMjIuNGMtMTUsMC0yNi44LDYuNi0yNi44LDE5LjNjMCwyLjQsMC4yLDMuMywwLjgsNWgxNi42IGMtMC41LTItMC43LTUtMC43LTcuNWMwLTkuNiwzLjYtMTIuNCw5LjQtMTIuNGM2LjQsMCw5LjcsMiw5LjcsMTQuNHYxMS4ybC0yMC44LDcuN2MtMTAuNiw0LjEtMTkuMyw4LjgtMTkuMywyMC43IGMwLDEwLjksNy41LDE3LjgsMTguNiwxNy44YzkuOSwwLDE3LjQtNi4yLDIxLjktMTIuMWwwLjEtMC4xbDAsMFYxMzJoMjZ2LTQuNEMzODcuNywxMjcuMSwzODUuNSwxMjYuMiwzODUuNSwxMjEuMXogTTM2OCwxMTcuOCBjLTQuNCwzLjMtNy42LDUuMy0xMiw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNFYxMTcuOEwzNjgsMTE3Ljh6Ij48L3BhdGg+PHBhdGggZD0iTTUxNC40LDEyMVY3OS41YzAtMTQuOC02LTIyLjQtMTguNy0yMi40Yy0xMS41LDAtMTkuNCw2LjYtMjUuNSwxMy45Yy0xLjgtOS42LTcuNy0xMy45LTE3LjgtMTMuOSBjLTExLjQsMC0xOC43LDYuMi0yNC44LDEzLjZWNTdoLTIuM2wtMjMuOCw3LjR2Mi40bDguNiw1djQ5LjRjMCw1LTIuMSw2LjEtOC45LDYuNHY0LjRoMzUuMXYtNC40Yy02LjctMC4zLTguNy0xLjMtOC43LTYuNHYtNDcgYzQuNy0zLjYsOS41LTYuNSwxNS41LTYuNWM3LjYsMCwxMC41LDQuMiwxMC41LDEyLjd2NDAuOGMwLDUtMS45LDYuMS04LjcsNi40djQuNGwzNC44LDB2LTQuNGMtNi43LTAuMy04LjYtMS4zLTguNi02LjR2LTQ3IGM0LjctMy42LDkuNS02LjUsMTUuNS02LjVjNy42LDAsMTAuNSw0LjIsMTAuNSwxMi43bC0wLjEsNDAuNWMwLDUtMS44LDYuNC04LjYsNi43bDAsNC40aDM1LjF2LTQuNCBDNTE2LjcsMTI3LjQsNTE0LjQsMTI2LjEsNTE0LjQsMTIxeiI+PC9wYXRoPjxwYXRoIGQ9Ik01NzMuMiw1Ny4zYy0xMSwwLTE4LjUsNS43LTIzLjQsMTIuOFYyMi45aC0yLjdsLTIzLjQsNi44djIuNWw4LjYsNC41VjEzMmgyLjlsOC0zLjVjNS44LDMuMywxMi4zLDUsMjAuMiw1IGMyMC44LDAsMzcuNC0xNS44LDM3LjQtNDIuNkM2MDAuOSw2OS45LDU5MC40LDU3LjMsNTczLjIsNTcuM3ogTTU2My40LDEyOC43Yy01LjQsMC0xMC4zLTIuNC0xMy43LTcuOVY3My42IGMzLjQtMy40LDguNS01LjcsMTMuNS01LjdjMTMuOSwwLDIwLDEyLjgsMjAsMjkuNUM1ODMuMywxMTQuNyw1NzUuOCwxMjguNSw1NjMuNCwxMjguN3oiPjwvcGF0aD48cGF0aCBkPSJNNjc3LDEyMS4yVjIyLjhoLTIuNkw2NTEsMjkuNlYzMmw4LjYsNC41djI1LjdjLTMuNC0zLjItOC44LTUuMS0xNS41LTUuMWMtMTkuOSwwLTM1LjIsMTUuMy0zNS4yLDQxLjMgYzAsMjAuNywxMS4yLDM0LjYsMjguMSwzNC42YzkuOCwwLDE3LTUuMywyMi42LTEzLjF2MC45VjEzMmgyNi4zbDAtNC40QzY3OS4xLDEyNy4zLDY3NywxMjYuMyw2NzcsMTIxLjJ6IE02NTkuNiwxMTcuMSBMNjU5LjYsMTE3LjFjLTMuNCwzLjQtOCw1LjEtMTMuMiw1LjFjLTEzLjIsMC0yMC40LTEyLjgtMjAuNC0yOS44YzAtMTcuOCw3LjMtMjkuMiwxOS41LTI5LjJjOC43LDAsMTQuMSw2LjksMTQuMSwxOC4zIEw2NTkuNiwxMTcuMXoiPjwvcGF0aD48cGF0aCBkPSJNNzQ3LjEsMTIxLjFWNzkuM2MwLTE1LjgtOS40LTIyLjQtMjYuNi0yMi40Yy0xNSwwLTI2LjgsNi42LTI2LjgsMTkuM2MwLDIuNCwwLjIsMy4zLDAuOCw1aDE2LjYgYy0wLjUtMi0wLjctNS0wLjctNy41YzAtOS42LDMuNi0xMi40LDkuNC0xMi40YzYuNCwwLDkuNywyLDkuNywxNC40djExLjJsLTIwLjgsNy43Yy0xMC42LDQuMS0xOS4zLDguOC0xOS4zLDIwLjcgYzAsMTAuOSw3LjUsMTcuOCwxOC42LDE3LjhjOS45LDAsMTcuNC02LjIsMjEuOS0xMi4xdi0wLjFoMC4xbDAsMTEuMWwyNiwwLjF2LTQuNUM3NDkuMywxMjcuMSw3NDcuMSwxMjYuMiw3NDcuMSwxMjEuMXogTTcyOS42LDExNy44Yy00LjQsMy4zLTcuNiw1LjMtMTIuMSw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNEw3MjkuNiwxMTcuOEw3MjkuNiwxMTcuOHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTAsMHY5MC40YzAsNjUuNyw1MC45LDg4LjUsODguMSwxMDUuMmgwLjFsMywxLjRjMC43LTAuNCwxLjQtMC43LDIuMi0xYzAuNC0wLjIsMC45LTAuNCwxLjMtMC42IGMzNy4zLTE2LjYsODguNC0zOS41LDg4LjQtMTA1VjBIMHogTTExNiwxMzJsLTItNS4zbC0yNi42LTcwYy0xLjYsNC4xLTUuMywxNC05LjMsMjQuNmwtMTUuMyw0MS4zYy0wLjcsMi0wLjMsMywwLjIsMy43IGMxLjEsMS4zLDMuNSwxLjMsNy4zLDEuM0g3MWwwLDQuNEg0Mi40bDAtNC40aDIuMmMzLjksMCw3LjEtMS43LDkuNS02LjVsMi45LTYuNmwyNi41LTY3LjhsLTQuNy0xMi41aDI0LjdsMzQuMSw4OS43bDMuMSw4LjFIMTE2eiI+PC9wYXRoPjwvc3ZnPg==" /></a>
 
@@ -60,43 +60,43 @@ You must be a Lambda School student to view this page.
 
 <a href="/labs-new/sprint/recA58aGQUpzCzR0I" class="bd-toc-link">1.  Welcome to Lambda Labs</a>
 
--   [Labs Overview](/labs-new/module/recQoRVnuH8ZTGO23/)
+- [Labs Overview](/labs-new/module/recQoRVnuH8ZTGO23/)
 
 <a href="/labs-new/sprint/recEnxumaKZ7yHZHw" class="bd-toc-link">2.  Sprint 1 - Planning a Project</a>
 
--   [Guided Project: Planning](/labs-new/module/rec7JPnP0pXGAP2Jo/)
--   [Guided Project: Plan Critique](/labs-new/module/recra4AWVdeHriA7K/)
--   [Module Inquiry 1](/labs-new/module/reca587Ou79n4JDmT/)
--   [Guided Project: Engineering](/labs-new/module/recYk51eKPftN24Gv/)
--   [Guided Project: GitHub](/labs-new/module/recxvP9aTVUFLUuhk/)
--   [Guided Project: Engineering Critique](/labs-new/module/rec7NZCFRi6EgXsa1/)
--   [Module Inquiry 2](/labs-new/module/recedcXwfMEbKReKU/)
--   [Sprint Challenge](/labs-new/module/recZL7TFXJI2b935w/)
+- [Guided Project: Planning](/labs-new/module/rec7JPnP0pXGAP2Jo/)
+- [Guided Project: Plan Critique](/labs-new/module/recra4AWVdeHriA7K/)
+- [Module Inquiry 1](/labs-new/module/reca587Ou79n4JDmT/)
+- [Guided Project: Engineering](/labs-new/module/recYk51eKPftN24Gv/)
+- [Guided Project: GitHub](/labs-new/module/recxvP9aTVUFLUuhk/)
+- [Guided Project: Engineering Critique](/labs-new/module/rec7NZCFRi6EgXsa1/)
+- [Module Inquiry 2](/labs-new/module/recedcXwfMEbKReKU/)
+- [Sprint Challenge](/labs-new/module/recZL7TFXJI2b935w/)
 
 <a href="/labs-new/sprint/recUp2zOmiCmeVPJH" class="bd-toc-link">3.  Sprint 2 - Demonstrating Contribution</a>
 
--   [Guided Project: Pair Programming](/labs-new/module/recDE1yLi7fBNUfIu/)
--   [Module Inquiry 3](/labs-new/module/recFTj2n2I2J6V47t/)
--   [Guided Project: Discussing Your Work](/labs-new/module/recEBojAtFGOgbuz6/)
--   [Module Inquiry 4](/labs-new/module/rec0ONoNSxKc44E6n/)
--   [Sprint Challenge](/labs-new/module/rechUVGd9i8UhcK3Q/)
+- [Guided Project: Pair Programming](/labs-new/module/recDE1yLi7fBNUfIu/)
+- [Module Inquiry 3](/labs-new/module/recFTj2n2I2J6V47t/)
+- [Guided Project: Discussing Your Work](/labs-new/module/recEBojAtFGOgbuz6/)
+- [Module Inquiry 4](/labs-new/module/rec0ONoNSxKc44E6n/)
+- [Sprint Challenge](/labs-new/module/rechUVGd9i8UhcK3Q/)
 
 <a href="/labs-new/sprint/recxUI33uhloBsscr" class="bd-toc-link">4.  Sprint 3 - Giving and Receiving Feedback</a>
 
--   [Module Inquiry 5](/labs-new/module/reccEtL7wPhA4MQx2/)
--   [Guided Project: Giving Feedback](/labs-new/module/recMcL9ePYKbNdwuX/)
--   [Module Inquiry 6](/labs-new/module/recqqnYPyMwOu1U34/)
--   [Guided Project: Receiving Feedback](/labs-new/module/rec3jI54tyIq2rVUo/)
--   [Module Inquiry 7](/labs-new/module/recyprrmts7m3ADTL/)
--   [Sprint Challenge](/labs-new/module/recYiLzsJs9W1gyn3/)
+- [Module Inquiry 5](/labs-new/module/reccEtL7wPhA4MQx2/)
+- [Guided Project: Giving Feedback](/labs-new/module/recMcL9ePYKbNdwuX/)
+- [Module Inquiry 6](/labs-new/module/recqqnYPyMwOu1U34/)
+- [Guided Project: Receiving Feedback](/labs-new/module/rec3jI54tyIq2rVUo/)
+- [Module Inquiry 7](/labs-new/module/recyprrmts7m3ADTL/)
+- [Sprint Challenge](/labs-new/module/recYiLzsJs9W1gyn3/)
 
 <a href="/labs-new/sprint/rec0twF34QpHEbwhl" class="bd-toc-link">5.  Sprint 4 - Presenting Your Work</a>
 
--   [Guided Project: Blog Presentation](/labs-new/module/reckW7SYI2WwuK4zu/)
--   [Module Inquiry 8](/labs-new/module/recG67cpSyretq0bG/)
--   [Module Inquiry 9](/labs-new/module/recVlEgPG8P5BmY25/)
--   [Module Inquiry 10](/labs-new/module/recz8x4RdVXPKcnzu/)
--   [Sprint Challenge](/labs-new/module/recz0vtwiCYTZAutU/)
+- [Guided Project: Blog Presentation](/labs-new/module/reckW7SYI2WwuK4zu/)
+- [Module Inquiry 8](/labs-new/module/recG67cpSyretq0bG/)
+- [Module Inquiry 9](/labs-new/module/recVlEgPG8P5BmY25/)
+- [Module Inquiry 10](/labs-new/module/recz8x4RdVXPKcnzu/)
+- [Sprint Challenge](/labs-new/module/recz0vtwiCYTZAutU/)
 
 # Sprint 2 - Demonstrating Contribution
 
@@ -108,14 +108,14 @@ Check out the guided projects, module inquiries, and sprint challenge for your s
 
 ## Objectives
 
--   Student can articulate the challenges and lessons learned from managing their time working on a complex project in a team.
+- Student can articulate the challenges and lessons learned from managing their time working on a complex project in a team.
 
 ## Resources
 
--   🐙 [Training Kit GitHub Repo](https://github.com/LambdaSchool/labs-curriculum)
--   🐙 [Labs Student Guide](https://www.notion.so/lambdaschool/Labs-25-Student-Guide-7be23f8048ca4d2eae69a06f4613f67a)
+- 🐙 [Training Kit GitHub Repo](https://github.com/LambdaSchool/labs-curriculum)
+- 🐙 [Labs Student Guide](https://www.notion.so/lambdaschool/Labs-25-Student-Guide-7be23f8048ca4d2eae69a06f4613f67a)
 
-------------------------------------------------------------------------
+---
 
 ## Schedule
 
@@ -131,37 +131,37 @@ In addition to reviewing the code as it’s written, the navigator also consider
 
 ## Lesson
 
-### *I Do*
+### _I Do_
 
 #### What is pair programming?
 
--   Your instructor walks through the definition, roles, and objectives of pair programming.
+- Your instructor walks through the definition, roles, and objectives of pair programming.
 
-### *We Do*
+### _We Do_
 
 #### Live pair programming
 
--   Two engineering managers demonstrate a pair programming session for the class. One acts as driver and the other as navigator.
+- Two engineering managers demonstrate a pair programming session for the class. One acts as driver and the other as navigator.
 
 #### Pair programming feedback
 
--   Your instructor directs you to breakout rooms and where you compare notes on the pair programming session you observed – what seemed to work well and where you noticed opportunity for improvement.
+- Your instructor directs you to breakout rooms and where you compare notes on the pair programming session you observed – what seemed to work well and where you noticed opportunity for improvement.
 
 #### Reviewing feedback
 
--   Your instructors conduct a live review of student feedback on their pairing session and discuss strengths and weaknesses.
+- Your instructors conduct a live review of student feedback on their pairing session and discuss strengths and weaknesses.
 
 #### Instructor/student pairing session
 
--   Your instructor invites a student volunteer to replace an engineering manager in the role of navigator. The student and instructor demonstrate another pairing session for the class (with the instructor driving). They create a pull request together.
+- Your instructor invites a student volunteer to replace an engineering manager in the role of navigator. The student and instructor demonstrate another pairing session for the class (with the instructor driving). They create a pull request together.
 
-### *You Do*
+### _You Do_
 
 #### Instructor/student feedback
 
--   Your instructor offers feedback on the pair programming session and directs students to schedule a pairing session with another student.
+- Your instructor offers feedback on the pair programming session and directs students to schedule a pairing session with another student.
 
-------------------------------------------------------------------------
+---
 
 ## After Class
 
@@ -184,15 +184,15 @@ Take a few minutes to review the principles you’ve learned. What questions do 
 
 ## Objectives
 
--   Student can articulate their delivery process in contributing to and completing individual tasks.
--   Student can demonstrate, in detail, how their solution relates to the specification and architectural standards.
+- Student can articulate their delivery process in contributing to and completing individual tasks.
+- Student can demonstrate, in detail, how their solution relates to the specification and architectural standards.
 
 ## Resources
 
--   🐙 [Training Kit GitHub Repo](https://github.com/LambdaSchool/labs-curriculum)
--   🐙 [Labs Student Guide](https://www.notion.so/lambdaschool/Labs-25-Student-Guide-7be23f8048ca4d2eae69a06f4613f67a)
+- 🐙 [Training Kit GitHub Repo](https://github.com/LambdaSchool/labs-curriculum)
+- 🐙 [Labs Student Guide](https://www.notion.so/lambdaschool/Labs-25-Student-Guide-7be23f8048ca4d2eae69a06f4613f67a)
 
-------------------------------------------------------------------------
+---
 
 ## Schedule
 
@@ -208,41 +208,41 @@ Taking time to consider and practice responding to likely hiring manager questio
 
 ## Lesson
 
-### *I Do*
+### _I Do_
 
 #### Talking about what you built
 
--   Your Careers Specialist discusses what hiring managers are looking for when they ask candidates to talk about what they built.
+- Your Careers Specialist discusses what hiring managers are looking for when they ask candidates to talk about what they built.
 
-### *We Do*
+### _We Do_
 
 #### Hiring manager questions
 
--   Your Careers Specialist guides class participation via Slack in assembling a number of questions hiring managers could ask about your individual contribution.
+- Your Careers Specialist guides class participation via Slack in assembling a number of questions hiring managers could ask about your individual contribution.
 
 #### Mock interview
 
--   Your Careers Specialist interviews the Engineering Manager about a feature they built:
-    -   “Tell me about a project you worked on”
-    -   “What did you specifically build on the project?”
-    -   “Can you show me what you built?”
--   During the interview, the Engineering Manager walks through a pull request and live demo of what they built.
+- Your Careers Specialist interviews the Engineering Manager about a feature they built:
+  - “Tell me about a project you worked on”
+  - “What did you specifically build on the project?”
+  - “Can you show me what you built?”
+- During the interview, the Engineering Manager walks through a pull request and live demo of what they built.
 
 #### Breakout room write-up
 
--   In breakout rooms, in groups of four, you’re given a set of interview questions. One student in the group pulls up their work and everyone writes answers to the following questions about that work:
-    -   “Tell me about a project you worked on?”
-    -   “What specifically did you build on the project?”
-    -   “Can you show me what you built?”
--   For the last question, students should link screenshots and code snippets.
+- In breakout rooms, in groups of four, you’re given a set of interview questions. One student in the group pulls up their work and everyone writes answers to the following questions about that work:
+  - “Tell me about a project you worked on?”
+  - “What specifically did you build on the project?”
+  - “Can you show me what you built?”
+- For the last question, students should link screenshots and code snippets.
 
-### *You Do*
+### _You Do_
 
 #### Student interview
 
--   Your Career Specialist and Engineering Manager conduct a live interview with a student volunteer and provide feedback. You’ll then be directed to use what you’ve learned to level up your careers artifacts.
+- Your Career Specialist and Engineering Manager conduct a live interview with a student volunteer and provide feedback. You’ll then be directed to use what you’ve learned to level up your careers artifacts.
 
-------------------------------------------------------------------------
+---
 
 ## After Class
 
@@ -265,9 +265,9 @@ Take a few minutes to review the principles you’ve learned. What questions do 
 
 ## Objectives
 
--   Student can articulate their delivery process in contributing to and completing individual tasks.
--   Student can demonstrate, in detail, how their solution relates to the specification and architectural standards.
--   Student can articulate the challenges and lessons learned from managing their time working on a complex project in a team.
+- Student can articulate their delivery process in contributing to and completing individual tasks.
+- Student can demonstrate, in detail, how their solution relates to the specification and architectural standards.
+- Student can articulate the challenges and lessons learned from managing their time working on a complex project in a team.
 
 ## Prompt 1 - Communicating Individual Contribution
 
@@ -275,8 +275,8 @@ On the job, you will be responsible for shipping features regularly. Engineers a
 
 Here are some examples of hiring manager interview questions:
 
--   “Tell me about a project you’ve built.”
--   “What were some technical challenges on that project? How did you overcome them?”
+- “Tell me about a project you’ve built.”
+- “What were some technical challenges on that project? How did you overcome them?”
 
 We took these questions and cooked them into your labs experience. This week, you should have shipped at least one feature. Answer the following questions like you would in an interview:
 
@@ -288,8 +288,8 @@ We took these questions and cooked them into your labs experience. This week, yo
 
 As a software developer, you will almost always be on a team. As a result, engineering hiring managers want to see how you work on a team. As a junior developer, you will often pair with seniors on features. Here are some examples of interview questions you may get asked concerning teamwork:
 
--   “Tell me about a time you worked on a team. What was hard about it?”
--   “What is your greatest weakness as a team player? How have you improved?”
+- “Tell me about a time you worked on a team. What was hard about it?”
+- “What is your greatest weakness as a team player? How have you improved?”
 
 This week we taught you how to pair with other team members. You should have worked with at least one other person to deliver a feature. Reflect on that experience and answer the following questions like you would in an interview:
 
@@ -324,6 +324,6 @@ To ensure you are creating a robust and ready to use job search resume, use this
 
 ## Additional Resources
 
--   [How to Respond to Interview Questions About Teamwork](https://www.thebalancecareers.com/how-to-respond-to-interview-questions-about-teamwork-2061100)
+- [How to Respond to Interview Questions About Teamwork](https://www.thebalancecareers.com/how-to-respond-to-interview-questions-about-teamwork-2061100)
 
 #### Objectives:

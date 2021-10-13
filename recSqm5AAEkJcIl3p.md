@@ -16,29 +16,29 @@ You must be a Lambda School student to view this page.
 
 <a href="/web4java/sprint/recnLDyTtONLTMiFJ" class="bd-toc-link">1.  Java Precourse Information</a>
 
--   [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
--   [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
+- [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
+- [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
 
 <a href="/web4java/sprint/recoJ4ZqNQWX3cy6E" class="bd-toc-link">2.  Java Fundamentals</a>
 
--   [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
--   [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
--   [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
--   [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
+- [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
+- [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
+- [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
+- [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
 
 <a href="/web4java/sprint/recRVUSWQEtosl0Cz" class="bd-toc-link">3.  RDBMS and Intro to APIs</a>
 
--   [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
--   [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
--   [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
--   [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
+- [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
+- [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
+- [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
+- [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
 
 <a href="/web4java/sprint/recSqm5AAEkJcIl3p" class="bd-toc-link">4.  Java Frameworks</a>
 
--   [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
--   [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
--   [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
--   [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
+- [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
+- [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
+- [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
+- [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
 
 <a href="/web4java/sprint/recC5dhR9menaROwx" class="bd-toc-link">5.  WEB Unit 4 Java Build</a>
 
@@ -48,29 +48,29 @@ You must be a Lambda School student to view this page.
 
 <a href="/web4java/sprint/recnLDyTtONLTMiFJ" class="bd-toc-link">1.  Java Precourse Information</a>
 
--   [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
--   [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
+- [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
+- [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
 
 <a href="/web4java/sprint/recoJ4ZqNQWX3cy6E" class="bd-toc-link">2.  Java Fundamentals</a>
 
--   [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
--   [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
--   [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
--   [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
+- [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
+- [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
+- [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
+- [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
 
 <a href="/web4java/sprint/recRVUSWQEtosl0Cz" class="bd-toc-link">3.  RDBMS and Intro to APIs</a>
 
--   [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
--   [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
--   [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
--   [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
+- [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
+- [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
+- [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
+- [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
 
 <a href="/web4java/sprint/recSqm5AAEkJcIl3p" class="bd-toc-link">4.  Java Frameworks</a>
 
--   [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
--   [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
--   [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
--   [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
+- [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
+- [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
+- [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
+- [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
 
 <a href="/web4java/sprint/recC5dhR9menaROwx" class="bd-toc-link">5.  WEB Unit 4 Java Build</a>
 
@@ -80,15 +80,15 @@ You must be a Lambda School student to view this page.
 
 Enhancing our Web APIs with exception handling, automated testing, and finally deployment is the focus of these modules. Topics include
 
--   Exceptions Handling
--   Exception Java Constructs
--   Swagger
--   Automated Testing
--   JUnit and Others
--   Deploying Locally
--   Deploying to the Cloud
--   Connecting to a JavaScript Front End
--   CURL
+- Exceptions Handling
+- Exception Java Constructs
+- Swagger
+- Automated Testing
+- JUnit and Others
+- Deploying Locally
+- Deploying to the Cloud
+- Connecting to a JavaScript Front End
+- CURL
 
 ## [Java - Exception Handling](../module/rec3E1WYDyoiEF1e3)
 
@@ -96,11 +96,11 @@ Enhancing our Web APIs with exception handling, automated testing, and finally d
 
 #### Objectives:
 
--   Student should be able to implement industry-standard exception handling including user-friendly exception messages
--   Student should be able to implement exception handling using a variety of Java constructs
--   Student should be able to use data validation annotations to verify data prior to processing the data
--   Student should be able to gather and use data from other APIs
--   Student should be able to implement custom Swagger Documentation (\*\*\* OPTIONAL \*\*\*)
+- Student should be able to implement industry-standard exception handling including user-friendly exception messages
+- Student should be able to implement exception handling using a variety of Java constructs
+- Student should be able to use data validation annotations to verify data prior to processing the data
+- Student should be able to gather and use data from other APIs
+- Student should be able to implement custom Swagger Documentation (\*\*\* OPTIONAL \*\*\*)
 
 ## [Java - User Authentication](../module/rececDV2OMIUcY2eH)
 
@@ -108,11 +108,11 @@ Enhancing our Web APIs with exception handling, automated testing, and finally d
 
 #### Objectives:
 
--   Student should be able to understand the flow and implement of Spring Security and OAuth2 to provide authentication for a project
--   Student should be able to read user information from the access token
--   Student should be able to understand the issues related to CORS and implement solutions to those issues
--   Student should be able to understand how to implement a new user and logout endpoints
--   Student should be able to use Postman to manually test Web APIs using Authentication
+- Student should be able to understand the flow and implement of Spring Security and OAuth2 to provide authentication for a project
+- Student should be able to read user information from the access token
+- Student should be able to understand the issues related to CORS and implement solutions to those issues
+- Student should be able to understand how to implement a new user and logout endpoints
+- Student should be able to use Postman to manually test Web APIs using Authentication
 
 ## [Java - Automated Testing](../module/recDboXln5wm4aKJt)
 
@@ -120,10 +120,10 @@ Enhancing our Web APIs with exception handling, automated testing, and finally d
 
 #### Objectives:
 
--   Student should be able to explain what automated testing is and why it is important
--   Student should be able to use JUnit to write, run, and interpret the output of unit tests for services with or without database access
--   Student should be able to use JUnit to write, run, and interpret the output of unit tests for controllers
--   Student should be able to implement Automated Integration Testing for REST APIs using JUnit and RestAssured
+- Student should be able to explain what automated testing is and why it is important
+- Student should be able to use JUnit to write, run, and interpret the output of unit tests for services with or without database access
+- Student should be able to use JUnit to write, run, and interpret the output of unit tests for controllers
+- Student should be able to implement Automated Integration Testing for REST APIs using JUnit and RestAssured
 
 ## [Java - Java Deployment and Best Practices](../module/rec7pCiBPzI4DkAJT)
 
@@ -131,9 +131,9 @@ Enhancing our Web APIs with exception handling, automated testing, and finally d
 
 #### Objectives:
 
--   Student should be able to convert our JAVA Spring applications from using H2 to using PostgreSQL
--   Student should be able to deploy to a cloud service a full RESTful Web Services application with a JAR using PostgreSQL, Maven, Spring including Spring Boot, and Tomcat
--   Student should be able to connect to a JavaScript Frontend to authenticate to a Java Spring Application including determining authenticated users information
--   Student should be able to use CURL to perform CRUD operations using a Spring Application
--   Student should be able to understand what else a Java programmer should know
--   Student should be able to locally deploy a full RESTful Web Services application with a JAR using PostgreSQL, Maven, Spring including Spring Boot, and Tomcat (\*\*\* OPTIONAL \*\*\*)
+- Student should be able to convert our JAVA Spring applications from using H2 to using PostgreSQL
+- Student should be able to deploy to a cloud service a full RESTful Web Services application with a JAR using PostgreSQL, Maven, Spring including Spring Boot, and Tomcat
+- Student should be able to connect to a JavaScript Frontend to authenticate to a Java Spring Application including determining authenticated users information
+- Student should be able to use CURL to perform CRUD operations using a Spring Application
+- Student should be able to understand what else a Java programmer should know
+- Student should be able to locally deploy a full RESTful Web Services application with a JAR using PostgreSQL, Maven, Spring including Spring Boot, and Tomcat (\*\*\* OPTIONAL \*\*\*)

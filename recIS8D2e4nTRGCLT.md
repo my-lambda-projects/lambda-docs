@@ -16,24 +16,24 @@ You must be a Lambda School student to view this page.
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
@@ -43,24 +43,24 @@ You must be a Lambda School student to view this page.
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
@@ -78,8 +78,8 @@ This module will give you practice with function scope and closures. Closures ar
 
 #### Objectives:
 
--   Student should be able to explain function scope
--   Student should be able to describe what closure is, how closure is created in a program and why it is important to understand closures in JavaScript
+- Student should be able to explain function scope
+- Student should be able to describe what closure is, how closure is created in a program and why it is important to understand closures in JavaScript
 
 ## [Advanced Array Methods](../module/recNilLQDqhqvPuNk)
 
@@ -87,8 +87,8 @@ This module will give you practice with advanced array methods such as `.map`, `
 
 #### Objectives:
 
--   Student should be able to demonstrate the proper use a of a callback function by passing a function to another function as a parameter
--   Student should be able to demonstrate ability to use \`.map\` \`.reduce\` \`.filter\` and describe their use cases
+- Student should be able to demonstrate the proper use a of a callback function by passing a function to another function as a parameter
+- Student should be able to demonstrate ability to use \`.map\` \`.reduce\` \`.filter\` and describe their use cases
 
 ## [Prototypes and Inheritance](../module/rec0AWuNLezbpit7m)
 
@@ -96,21 +96,21 @@ This lesson introduces us to the `this` keyword and it’s many uses. After we l
 
 #### Objectives:
 
--   Student should be able to explain the four principles of the 'this' keyword and demonstrate each explanation with an example of their uses
--   Student should be able to describe, and use prototypes, constructor functions the new keyword, and pseudo-classical inheritance to build a small object based video game
+- Student should be able to explain the four principles of the 'this' keyword and demonstrate each explanation with an example of their uses
+- Student should be able to describe, and use prototypes, constructor functions the new keyword, and pseudo-classical inheritance to build a small object based video game
 
 ## [Classes](../module/recyS588eOvVUKAMc)
 
 JavaScript IV introduces you to the powerful paradigm of Object Oriented Programming (OOP) in JavaScript. We will take a deep dive into these topics:
 
--   The JavaScript Prototype object
--   constructor functions
--   Pseudo-classical Inheritence
--   the `class` keyword
+- The JavaScript Prototype object
+- constructor functions
+- Pseudo-classical Inheritence
+- the `class` keyword
 
 By the end of the day you should be familiar with objects and how to use Constructors and Classes to build out objects and achieve inheritance across these objects.
 
 #### Objectives:
 
--   Student should be able to describe and demonstrate how class syntax works
--   Student should be able to convert a pseudo classically instantiated program into class syntax
+- Student should be able to describe and demonstrate how class syntax works
+- Student should be able to convert a pseudo classically instantiated program into class syntax

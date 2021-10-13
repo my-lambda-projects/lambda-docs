@@ -16,24 +16,24 @@ You must be a Lambda School student to view this page.
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
@@ -43,24 +43,24 @@ You must be a Lambda School student to view this page.
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
@@ -80,29 +80,29 @@ This module will guide you into the intricacies of React Router V5. As you learn
 
 #### Objectives:
 
--   Student should be able to explain the difference between client-side routing and sever-side routing
--   Student should be able to set up routes within a React Application using the Router, Route and Link components
--   Student should be able to use Router's useParam hook to add dynamic Routes to an application
--   Student should be able to use Router's useRouteMatch hook to add nested Routes to an application
--   Student should be able to use Router's useHistory hook to programmatically navigate to other routes
+- Student should be able to explain the difference between client-side routing and sever-side routing
+- Student should be able to set up routes within a React Application using the Router, Route and Link components
+- Student should be able to use Router's useParam hook to add dynamic Routes to an application
+- Student should be able to use Router's useRouteMatch hook to add nested Routes to an application
+- Student should be able to use Router's useHistory hook to programmatically navigate to other routes
 
 ## [Form Management](../module/rect081xiYT2cfxGF)
 
 #### Objectives:
 
--   Student should be able to demonstrate how to build a form with the basic HTML form elements
--   Student should be able to use the onChange handler to capture input values
--   Student should be able to utilize a form's submit event to work with form data
--   Student should be able to demonstrate the ability to handle multiple inputs in a form
--   Student should be able to use controlled inputs to manage form data
+- Student should be able to demonstrate how to build a form with the basic HTML form elements
+- Student should be able to use the onChange handler to capture input values
+- Student should be able to utilize a form's submit event to work with form data
+- Student should be able to demonstrate the ability to handle multiple inputs in a form
+- Student should be able to use controlled inputs to manage form data
 
 ## [Advanced Form Management](../module/recKK5C7wV0WiECfr)
 
 #### Objectives:
 
--   Student should be able to control forms and form inputs (checkbox, dropdown) in custom forms
--   Student should be able to validate user input in forms
--   Student should be able to make POST requests to pass data collected from a form to a database
+- Student should be able to control forms and form inputs (checkbox, dropdown) in custom forms
+- Student should be able to validate user input in forms
+- Student should be able to make POST requests to pass data collected from a form to a database
 
 ## [cypress.io](../module/recduYpjgZBQaQM8X)
 
@@ -112,7 +112,7 @@ The visual testing application, cypress, is a great place to start learning abou
 
 #### Objectives:
 
--   Student should be able to define what end-to-end testing is and explain its importance
--   Student should be able to use the Cypress GUI to write tests and interact with Elements
--   Student should be able to use Cypress to test controlled input
--   Student should be able to run all tests in without any UI
+- Student should be able to define what end-to-end testing is and explain its importance
+- Student should be able to use the Cypress GUI to write tests and interact with Elements
+- Student should be able to use Cypress to test controlled input
+- Student should be able to run all tests in without any UI

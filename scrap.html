@@ -1,304 +1,900 @@
-<!DOCTYPE html><html><head>
-      <title>scrap</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-      <link rel="stylesheet" href="file:///c:\Users\bryan\.vscode-insiders\extensions\shd101wyy.markdown-preview-enhanced-0.6.0\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <style>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>scrap</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="file:///c:\Users\bryan\.vscode-insiders\extensions\shd101wyy.markdown-preview-enhanced-0.6.0\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css"
+    />
+
+    <style>
       /**
  * prism.js Github theme based on GitHub's theme.
  * @author Sam Clarke
  */
-code[class*="language-"],
-pre[class*="language-"] {
-  color: #333;
-  background: none;
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.4;
+      code[class*="language-"],
+      pre[class*="language-"] {
+        color: #333;
+        background: none;
+        font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: 1.4;
 
-  -moz-tab-size: 8;
-  -o-tab-size: 8;
-  tab-size: 8;
+        -moz-tab-size: 8;
+        -o-tab-size: 8;
+        tab-size: 8;
 
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
 
-/* Code blocks */
-pre[class*="language-"] {
-  padding: .8em;
-  overflow: auto;
-  /* border: 1px solid #ddd; */
-  border-radius: 3px;
-  /* background: #fff; */
-  background: #f5f5f5;
-}
+      /* Code blocks */
+      pre[class*="language-"] {
+        padding: 0.8em;
+        overflow: auto;
+        /* border: 1px solid #ddd; */
+        border-radius: 3px;
+        /* background: #fff; */
+        background: #f5f5f5;
+      }
 
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-  padding: .1em;
-  border-radius: .3em;
-  white-space: normal;
-  background: #f5f5f5;
-}
+      /* Inline code */
+      :not(pre) > code[class*="language-"] {
+        padding: 0.1em;
+        border-radius: 0.3em;
+        white-space: normal;
+        background: #f5f5f5;
+      }
 
-.token.comment,
-.token.blockquote {
-  color: #969896;
-}
+      .token.comment,
+      .token.blockquote {
+        color: #969896;
+      }
 
-.token.cdata {
-  color: #183691;
-}
+      .token.cdata {
+        color: #183691;
+      }
 
-.token.doctype,
-.token.punctuation,
-.token.variable,
-.token.macro.property {
-  color: #333;
-}
+      .token.doctype,
+      .token.punctuation,
+      .token.variable,
+      .token.macro.property {
+        color: #333;
+      }
 
-.token.operator,
-.token.important,
-.token.keyword,
-.token.rule,
-.token.builtin {
-  color: #a71d5d;
-}
+      .token.operator,
+      .token.important,
+      .token.keyword,
+      .token.rule,
+      .token.builtin {
+        color: #a71d5d;
+      }
 
-.token.string,
-.token.url,
-.token.regex,
-.token.attr-value {
-  color: #183691;
-}
+      .token.string,
+      .token.url,
+      .token.regex,
+      .token.attr-value {
+        color: #183691;
+      }
 
-.token.property,
-.token.number,
-.token.boolean,
-.token.entity,
-.token.atrule,
-.token.constant,
-.token.symbol,
-.token.command,
-.token.code {
-  color: #0086b3;
-}
+      .token.property,
+      .token.number,
+      .token.boolean,
+      .token.entity,
+      .token.atrule,
+      .token.constant,
+      .token.symbol,
+      .token.command,
+      .token.code {
+        color: #0086b3;
+      }
 
-.token.tag,
-.token.selector,
-.token.prolog {
-  color: #63a35c;
-}
+      .token.tag,
+      .token.selector,
+      .token.prolog {
+        color: #63a35c;
+      }
 
-.token.function,
-.token.namespace,
-.token.pseudo-element,
-.token.class,
-.token.class-name,
-.token.pseudo-class,
-.token.id,
-.token.url-reference .token.variable,
-.token.attr-name {
-  color: #795da3;
-}
+      .token.function,
+      .token.namespace,
+      .token.pseudo-element,
+      .token.class,
+      .token.class-name,
+      .token.pseudo-class,
+      .token.id,
+      .token.url-reference .token.variable,
+      .token.attr-name {
+        color: #795da3;
+      }
 
-.token.entity {
-  cursor: help;
-}
+      .token.entity {
+        cursor: help;
+      }
 
-.token.title,
-.token.title .token.punctuation {
-  font-weight: bold;
-  color: #1d3e81;
-}
+      .token.title,
+      .token.title .token.punctuation {
+        font-weight: bold;
+        color: #1d3e81;
+      }
 
-.token.list {
-  color: #ed6a43;
-}
+      .token.list {
+        color: #ed6a43;
+      }
 
-.token.inserted {
-  background-color: #eaffea;
-  color: #55a532;
-}
+      .token.inserted {
+        background-color: #eaffea;
+        color: #55a532;
+      }
 
-.token.deleted {
-  background-color: #ffecec;
-  color: #bd2c00;
-}
+      .token.deleted {
+        background-color: #ffecec;
+        color: #bd2c00;
+      }
 
-.token.bold {
-  font-weight: bold;
-}
+      .token.bold {
+        font-weight: bold;
+      }
 
-.token.italic {
-  font-style: italic;
-}
+      .token.italic {
+        font-style: italic;
+      }
 
+      /* JSON */
+      .language-json .token.property {
+        color: #183691;
+      }
 
-/* JSON */
-.language-json .token.property {
-  color: #183691;
-}
+      .language-markup .token.tag .token.punctuation {
+        color: #333;
+      }
 
-.language-markup .token.tag .token.punctuation {
-  color: #333;
-}
+      /* CSS */
+      code.language-css,
+      .language-css .token.function {
+        color: #0086b3;
+      }
 
-/* CSS */
-code.language-css,
-.language-css .token.function {
-  color: #0086b3;
-}
+      /* YAML */
+      .language-yaml .token.atrule {
+        color: #63a35c;
+      }
 
-/* YAML */
-.language-yaml .token.atrule {
-  color: #63a35c;
-}
+      code.language-yaml {
+        color: #183691;
+      }
 
-code.language-yaml {
-  color: #183691;
-}
+      /* Ruby */
+      .language-ruby .token.function {
+        color: #333;
+      }
 
-/* Ruby */
-.language-ruby .token.function {
-  color: #333;
-}
+      /* Markdown */
+      .language-markdown .token.url {
+        color: #795da3;
+      }
 
-/* Markdown */
-.language-markdown .token.url {
-  color: #795da3;
-}
+      /* Makefile */
+      .language-makefile .token.symbol {
+        color: #795da3;
+      }
 
-/* Makefile */
-.language-makefile .token.symbol {
-  color: #795da3;
-}
+      .language-makefile .token.variable {
+        color: #183691;
+      }
 
-.language-makefile .token.variable {
-  color: #183691;
-}
+      .language-makefile .token.builtin {
+        color: #0086b3;
+      }
 
-.language-makefile .token.builtin {
-  color: #0086b3;
-}
+      /* Bash */
+      .language-bash .token.keyword {
+        color: #0086b3;
+      }
 
-/* Bash */
-.language-bash .token.keyword {
-  color: #0086b3;
-}
+      /* highlight */
+      pre[data-line] {
+        position: relative;
+        padding: 1em 0 1em 3em;
+      }
+      pre[data-line] .line-highlight-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        display: block;
+        width: 100%;
+      }
 
-/* highlight */
-pre[data-line] {
-  position: relative;
-  padding: 1em 0 1em 3em;
-}
-pre[data-line] .line-highlight-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  display: block;
-  width: 100%;
-}
+      pre[data-line] .line-highlight {
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: inherit 0;
+        margin-top: 1em;
+        background: hsla(24, 20%, 50%, 0.08);
+        background: linear-gradient(
+          to right,
+          hsla(24, 20%, 50%, 0.1) 70%,
+          hsla(24, 20%, 50%, 0)
+        );
+        pointer-events: none;
+        line-height: inherit;
+        white-space: pre;
+      }
 
-pre[data-line] .line-highlight {
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: inherit 0;
-  margin-top: 1em;
-  background: hsla(24, 20%, 50%,.08);
-  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
-  pointer-events: none;
-  line-height: inherit;
-  white-space: pre;
-}
+      pre[data-line] .line-highlight:before,
+      pre[data-line] .line-highlight[data-end]:after {
+        content: attr(data-start);
+        position: absolute;
+        top: 0.4em;
+        left: 0.6em;
+        min-width: 1em;
+        padding: 0 0.5em;
+        background-color: hsla(24, 20%, 50%, 0.4);
+        color: hsl(24, 20%, 95%);
+        font: bold 65%/1.5 sans-serif;
+        text-align: center;
+        vertical-align: 0.3em;
+        border-radius: 999px;
+        text-shadow: none;
+        box-shadow: 0 1px white;
+      }
 
-pre[data-line] .line-highlight:before, 
-pre[data-line] .line-highlight[data-end]:after {
-  content: attr(data-start);
-  position: absolute;
-  top: .4em;
-  left: .6em;
-  min-width: 1em;
-  padding: 0 .5em;
-  background-color: hsla(24, 20%, 50%,.4);
-  color: hsl(24, 20%, 95%);
-  font: bold 65%/1.5 sans-serif;
-  text-align: center;
-  vertical-align: .3em;
-  border-radius: 999px;
-  text-shadow: none;
-  box-shadow: 0 1px white;
-}
-
-pre[data-line] .line-highlight[data-end]:after {
-  content: attr(data-end);
-  top: auto;
-  bottom: .4em;
-}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
-html body:before {
-  content: "Failed to compile `style.less`. NameError: Property '$font-primary' is undefined in input on line 10, column 18:
+      pre[data-line] .line-highlight[data-end]:after {
+        content: attr(data-end);
+        top: auto;
+        bottom: 0.4em;
+      }
+      html body {
+        font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans,
+          sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #333;
+        background-color: #fff;
+        overflow: initial;
+        box-sizing: border-box;
+        word-wrap: break-word;
+      }
+      html body > :first-child {
+        margin-top: 0;
+      }
+      html body h1,
+      html body h2,
+      html body h3,
+      html body h4,
+      html body h5,
+      html body h6 {
+        line-height: 1.2;
+        margin-top: 1em;
+        margin-bottom: 16px;
+        color: #000;
+      }
+      html body h1 {
+        font-size: 2.25em;
+        font-weight: 300;
+        padding-bottom: 0.3em;
+      }
+      html body h2 {
+        font-size: 1.75em;
+        font-weight: 400;
+        padding-bottom: 0.3em;
+      }
+      html body h3 {
+        font-size: 1.5em;
+        font-weight: 500;
+      }
+      html body h4 {
+        font-size: 1.25em;
+        font-weight: 600;
+      }
+      html body h5 {
+        font-size: 1.1em;
+        font-weight: 600;
+      }
+      html body h6 {
+        font-size: 1em;
+        font-weight: 600;
+      }
+      html body h1,
+      html body h2,
+      html body h3,
+      html body h4,
+      html body h5 {
+        font-weight: 600;
+      }
+      html body h5 {
+        font-size: 1em;
+      }
+      html body h6 {
+        color: #5c5c5c;
+      }
+      html body strong {
+        color: #000;
+      }
+      html body del {
+        color: #5c5c5c;
+      }
+      html body a:not([href]) {
+        color: inherit;
+        text-decoration: none;
+      }
+      html body a {
+        color: #08c;
+        text-decoration: none;
+      }
+      html body a:hover {
+        color: #00a3f5;
+        text-decoration: none;
+      }
+      html body img {
+        max-width: 100%;
+      }
+      html body > p {
+        margin-top: 0;
+        margin-bottom: 16px;
+        word-wrap: break-word;
+      }
+      html body > ul,
+      html body > ol {
+        margin-bottom: 16px;
+      }
+      html body ul,
+      html body ol {
+        padding-left: 2em;
+      }
+      html body ul.no-list,
+      html body ol.no-list {
+        padding: 0;
+        list-style-type: none;
+      }
+      html body ul ul,
+      html body ul ol,
+      html body ol ol,
+      html body ol ul {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      html body li {
+        margin-bottom: 0;
+      }
+      html body li.task-list-item {
+        list-style: none;
+      }
+      html body li > p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      html body .task-list-item-checkbox {
+        margin: 0 0.2em 0.25em -1.8em;
+        vertical-align: middle;
+      }
+      html body .task-list-item-checkbox:hover {
+        cursor: pointer;
+      }
+      html body blockquote {
+        margin: 16px 0;
+        font-size: inherit;
+        padding: 0 15px;
+        color: #5c5c5c;
+        background-color: #f0f0f0;
+        border-left: 4px solid #d6d6d6;
+      }
+      html body blockquote > :first-child {
+        margin-top: 0;
+      }
+      html body blockquote > :last-child {
+        margin-bottom: 0;
+      }
+      html body hr {
+        height: 4px;
+        margin: 32px 0;
+        background-color: #d6d6d6;
+        border: 0 none;
+      }
+      html body table {
+        margin: 10px 0 15px 0;
+        border-collapse: collapse;
+        border-spacing: 0;
+        display: block;
+        width: 100%;
+        overflow: auto;
+        word-break: normal;
+        word-break: keep-all;
+      }
+      html body table th {
+        font-weight: bold;
+        color: #000;
+      }
+      html body table td,
+      html body table th {
+        border: 1px solid #d6d6d6;
+        padding: 6px 13px;
+      }
+      html body dl {
+        padding: 0;
+      }
+      html body dl dt {
+        padding: 0;
+        margin-top: 16px;
+        font-size: 1em;
+        font-style: italic;
+        font-weight: bold;
+      }
+      html body dl dd {
+        padding: 0 16px;
+        margin-bottom: 16px;
+      }
+      html body code {
+        font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+        font-size: 0.85em !important;
+        color: #000;
+        background-color: #f0f0f0;
+        border-radius: 3px;
+        padding: 0.2em 0;
+      }
+      html body code::before,
+      html body code::after {
+        letter-spacing: -0.2em;
+        content: "\00a0";
+      }
+      html body pre > code {
+        padding: 0;
+        margin: 0;
+        font-size: 0.85em !important;
+        word-break: normal;
+        white-space: pre;
+        background: transparent;
+        border: 0;
+      }
+      html body .highlight {
+        margin-bottom: 16px;
+      }
+      html body .highlight pre,
+      html body pre {
+        padding: 1em;
+        overflow: auto;
+        font-size: 0.85em !important;
+        line-height: 1.45;
+        border: #d6d6d6;
+        border-radius: 3px;
+      }
+      html body .highlight pre {
+        margin-bottom: 0;
+        word-break: normal;
+      }
+      html body pre code,
+      html body pre tt {
+        display: inline;
+        max-width: initial;
+        padding: 0;
+        margin: 0;
+        overflow: initial;
+        line-height: inherit;
+        word-wrap: normal;
+        background-color: transparent;
+        border: 0;
+      }
+      html body pre code:before,
+      html body pre tt:before,
+      html body pre code:after,
+      html body pre tt:after {
+        content: normal;
+      }
+      html body p,
+      html body blockquote,
+      html body ul,
+      html body ol,
+      html body dl,
+      html body pre {
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      html body kbd {
+        color: #000;
+        border: 1px solid #d6d6d6;
+        border-bottom: 2px solid #c7c7c7;
+        padding: 2px 4px;
+        background-color: #f0f0f0;
+        border-radius: 3px;
+      }
+      @media print {
+        html body {
+          background-color: #fff;
+        }
+        html body h1,
+        html body h2,
+        html body h3,
+        html body h4,
+        html body h5,
+        html body h6 {
+          color: #000;
+          page-break-after: avoid;
+        }
+        html body blockquote {
+          color: #5c5c5c;
+        }
+        html body pre {
+          page-break-inside: avoid;
+        }
+        html body table {
+          display: table;
+        }
+        html body img {
+          display: block;
+          max-width: 100%;
+          max-height: 100%;
+        }
+        html body pre,
+        html body code {
+          word-wrap: break-word;
+          white-space: pre;
+        }
+      }
+      .markdown-preview {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+      .markdown-preview .pagebreak,
+      .markdown-preview .newpage {
+        page-break-before: always;
+      }
+      .markdown-preview pre.line-numbers {
+        position: relative;
+        padding-left: 3.8em;
+        counter-reset: linenumber;
+      }
+      .markdown-preview pre.line-numbers > code {
+        position: relative;
+      }
+      .markdown-preview pre.line-numbers .line-numbers-rows {
+        position: absolute;
+        pointer-events: none;
+        top: 1em;
+        font-size: 100%;
+        left: 0;
+        width: 3em;
+        letter-spacing: -1px;
+        border-right: 1px solid #999;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .markdown-preview pre.line-numbers .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+      }
+      .markdown-preview pre.line-numbers .line-numbers-rows > span:before {
+        content: counter(linenumber);
+        color: #999;
+        display: block;
+        padding-right: 0.8em;
+        text-align: right;
+      }
+      .markdown-preview .mathjax-exps .MathJax_Display {
+        text-align: center !important;
+      }
+      .markdown-preview:not([for="preview"]) .code-chunk .btn-group {
+        display: none;
+      }
+      .markdown-preview:not([for="preview"]) .code-chunk .status {
+        display: none;
+      }
+      .markdown-preview:not([for="preview"]) .code-chunk .output-div {
+        margin-bottom: 16px;
+      }
+      .scrollbar-style::-webkit-scrollbar {
+        width: 8px;
+      }
+      .scrollbar-style::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: transparent;
+      }
+      .scrollbar-style::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: rgba(150, 150, 150, 0.66);
+        border: 4px solid rgba(150, 150, 150, 0.66);
+        background-clip: content-box;
+      }
+      html body[for="html-export"]:not([data-presentation-mode]) {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode])
+        .markdown-preview {
+        position: relative;
+        top: 0;
+      }
+      @media screen and (min-width: 914px) {
+        html
+          body[for="html-export"]:not([data-presentation-mode])
+          .markdown-preview {
+          padding: 2em calc(50% - 457px + 2em);
+        }
+      }
+      @media screen and (max-width: 914px) {
+        html
+          body[for="html-export"]:not([data-presentation-mode])
+          .markdown-preview {
+          padding: 2em;
+        }
+      }
+      @media screen and (max-width: 450px) {
+        html
+          body[for="html-export"]:not([data-presentation-mode])
+          .markdown-preview {
+          font-size: 14px !important;
+          padding: 1em;
+        }
+      }
+      @media print {
+        html
+          body[for="html-export"]:not([data-presentation-mode])
+          #sidebar-toc-btn {
+          display: none;
+        }
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode])
+        #sidebar-toc-btn {
+        position: fixed;
+        bottom: 8px;
+        left: 8px;
+        font-size: 28px;
+        cursor: pointer;
+        color: inherit;
+        z-index: 99;
+        width: 32px;
+        text-align: center;
+        opacity: 0.4;
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc]
+        #sidebar-toc-btn {
+        opacity: 1;
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc]
+        .md-sidebar-toc {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100%;
+        padding: 32px 0 48px 0;
+        font-size: 14px;
+        box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
+        box-sizing: border-box;
+        overflow: auto;
+        background-color: inherit;
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc]
+        .md-sidebar-toc::-webkit-scrollbar {
+        width: 8px;
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc]
+        .md-sidebar-toc::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: transparent;
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc]
+        .md-sidebar-toc::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: rgba(150, 150, 150, 0.66);
+        border: 4px solid rgba(150, 150, 150, 0.66);
+        background-clip: content-box;
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc]
+        .md-sidebar-toc
+        a {
+        text-decoration: none;
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc]
+        .md-sidebar-toc
+        ul {
+        padding: 0 1.6em;
+        margin-top: 0.8em;
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc]
+        .md-sidebar-toc
+        li {
+        margin-bottom: 0.8em;
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc]
+        .md-sidebar-toc
+        ul {
+        list-style-type: none;
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc]
+        .markdown-preview {
+        left: 300px;
+        width: calc(100% - 300px);
+        padding: 2em calc(50% - 457px - 150px);
+        margin: 0;
+        box-sizing: border-box;
+      }
+      @media screen and (max-width: 1274px) {
+        html
+          body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc]
+          .markdown-preview {
+          padding: 2em;
+        }
+      }
+      @media screen and (max-width: 450px) {
+        html
+          body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc]
+          .markdown-preview {
+          width: 100%;
+        }
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc])
+        .markdown-preview {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc])
+        .md-sidebar-toc {
+        display: none;
+      }
+      html body:before {
+        content: "Failed to compile `style.less`. NameError: Property '$font-primary' is undefined in input on line 10, column 18:
 9 html {
 10     font-family: $font-primary;
 11     font-size: 110%;
 " !important;
-  padding: 2em !important;
-}
-.mume.mume { display: none !important; }
-      </style>
-    </head>
-    <body for="html-export">
-      <div class="mume markdown-preview  ">
+        padding: 2em !important;
+      }
+      .mume.mume {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body for="html-export">
+    <div class="mume markdown-preview">
       <h2 class="mume-header" id="learn">Learn</h2>
 
-<h4 class="mume-header" id="learn-to-explain-class-components-and-use-a-class-component-to-render-some-state-data-to-the-dom">Learn to explain class components, and use a class component to render some state data to the DOM</h4>
+      <h4
+        class="mume-header"
+        id="learn-to-explain-class-components-and-use-a-class-component-to-render-some-state-data-to-the-dom"
+      >
+        Learn to explain class components, and use a class component to render
+        some state data to the DOM
+      </h4>
 
-<p>React comes with it a constructor class called <code>Component</code> that has some very special properties on it. This is a class like any other class that you&apos;ve already become familiar with. React gives us a bunch of functionality through this single <code>base Component</code>. Using this is how we can scale out our static component based web pages to become fully functioning web-applications. To understand how to build out is fundamental and crucial for success when working with JS.</p>
-<h5 class="mume-header" id="overview">Overview</h5>
+      <p>
+        React comes with it a constructor class called
+        <code>Component</code> that has some very special properties on it. This
+        is a class like any other class that you&apos;ve already become familiar
+        with. React gives us a bunch of functionality through this single
+        <code>base Component</code>. Using this is how we can scale out our
+        static component based web pages to become fully functioning
+        web-applications. To understand how to build out is fundamental and
+        crucial for success when working with JS.
+      </p>
+      <h5 class="mume-header" id="overview">Overview</h5>
 
-<p>React gave us the idea of components as independent pieces of UI. And thus far, you have learned how to build out <code>functional components</code> for use in making multiple DOM elements. Now, we&apos;re going to be learning about the <code>React.Component</code> base class that allows us to use some of the methods that the React team has curated to tap into what we call the <code>Component Lifecycle</code>. These methods (known as life cycle hooks <em>more on these to come</em>) give us control over how our components work, and if we&apos;d like to use them, we have to build out a class component that <code>extends</code> the <code>React.Component</code> parent class. Any time you see a line of code that looks like the following, you&apos;re using the React.Component parent class, and you have the ability to tap into these methods.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">FooComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-</pre><p>By creating components as classes, you can set up a data object that your component is concerned with. This is done using <code>state</code> and setting up that object on our constructor method. Once we have some data that we can render out to the DOM, we need a vehicle that will allow us to render that data. This is achieved with the JSX method <code>render()</code> from within the life-cycle hook. We&apos;ll walk you through the steps below.</p>
-<p>Declare your <code>class component</code> by extending the <code>React.Component</code> parent class. <code>class FooComponent extends React.Component {}</code>. Use the <code>constructor</code> function to set up some state. <em>because we&apos;re calling extends, we also need to call <code>super();</code> otherwise we won&apos;t have access the <code>this</code></em> We need to render some sort of UI to the DOM. We do this by calling the life-cycle method <code>render</code>.</p>
-<p>I like to remember these steps by referencing one of my favorite bands: Creedence Clearwater Revival (CCR), which stands for class, constructor, and render/return.</p>
-<p>Declare your <em>class</em>, and extend the <code>React.Component</code> Base class.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">FooComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+      <p>
+        React gave us the idea of components as independent pieces of UI. And
+        thus far, you have learned how to build out
+        <code>functional components</code> for use in making multiple DOM
+        elements. Now, we&apos;re going to be learning about the
+        <code>React.Component</code> base class that allows us to use some of
+        the methods that the React team has curated to tap into what we call the
+        <code>Component Lifecycle</code>. These methods (known as life cycle
+        hooks <em>more on these to come</em>) give us control over how our
+        components work, and if we&apos;d like to use them, we have to build out
+        a class component that <code>extends</code> the
+        <code>React.Component</code> parent class. Any time you see a line of
+        code that looks like the following, you&apos;re using the
+        React.Component parent class, and you have the ability to tap into these
+        methods.
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token keyword">class</span> <span class="token class-name">FooComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</pre>
+      <p>
+        By creating components as classes, you can set up a data object that
+        your component is concerned with. This is done using
+        <code>state</code> and setting up that object on our constructor method.
+        Once we have some data that we can render out to the DOM, we need a
+        vehicle that will allow us to render that data. This is achieved with
+        the JSX method <code>render()</code> from within the life-cycle hook.
+        We&apos;ll walk you through the steps below.
+      </p>
+      <p>
+        Declare your <code>class component</code> by extending the
+        <code>React.Component</code> parent class.
+        <code>class FooComponent extends React.Component {}</code>. Use the
+        <code>constructor</code> function to set up some state.
+        <em
+          >because we&apos;re calling extends, we also need to call
+          <code>super();</code> otherwise we won&apos;t have access the
+          <code>this</code></em
+        >
+        We need to render some sort of UI to the DOM. We do this by calling the
+        life-cycle method <code>render</code>.
+      </p>
+      <p>
+        I like to remember these steps by referencing one of my favorite bands:
+        Creedence Clearwater Revival (CCR), which stands for class, constructor,
+        and render/return.
+      </p>
+      <p>
+        Declare your <em>class</em>, and extend the
+        <code>React.Component</code> Base class.
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token keyword">class</span> <span class="token class-name">FooComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
 
-</pre><ol>
-<li>Now we&apos;ll set up our <em>constructor</em> and add state.</li>
-</ol>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</pre>
+      <ol>
+        <li>Now we&apos;ll set up our <em>constructor</em> and add state.</li>
+      </ol>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">state</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-</pre><ol>
-<li><em>Render</em> some UI and <em>return</em> some <code>JSX.</code></li>
-</ol>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</pre>
+      <ol>
+        <li>
+          <em>Render</em> some UI and <em>return</em> some <code>JSX.</code>
+        </li>
+      </ol>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword control-flow">return</span> <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span><span class="token maybe-class-name">Hello</span><span class="token punctuation">,</span> <span class="token constant">I</span> am <span class="token maybe-class-name">Foo</span> <span class="token maybe-class-name">Component</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-</pre><p>Our final component should look like this.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">FooComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+</pre>
+      <p>Our final component should look like this.</p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token keyword">class</span> <span class="token class-name">FooComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
   <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">state</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
@@ -307,16 +903,72 @@ html body:before {
     <span class="token keyword control-flow">return</span> <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span><span class="token maybe-class-name">Hello</span><span class="token punctuation">,</span> <span class="token constant">I</span> am <span class="token maybe-class-name">Foo</span> <span class="token maybe-class-name">Component</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</pre><p>Now that we have constructed a skeleton for our Class component, it can be a bit more dynamic. The way we&apos;ll achieve this will be to use some data that we&apos;ll pre-define as some information we&apos;d like our component to display. We&apos;ll then take that data and do this really cool thing called <code>interpolation</code> in order to present it to the DOM within some Text.</p>
-<p>Components built out extending the Base <code>React.Component</code> class come with a bunch of benefits directly from the React API. A list of the benefits to what we get out of the Component class can be found <a href="https://reactjs.org/docs/react-component.html#getsnapshotbeforeupdate">here</a>, in theReact documentation about class components. We will be discussing the <code>life-cycle</code> methods at another place in time, so don&apos;t worry too much about those for now.</p>
-<p>For now, let&apos;s focus on a component caring about its own state (data) and managing that state in a reactive way. The <code>state</code> object that we set up on our <code>constructor</code> has a very React-specific way of doing things. It allows us to drive our UI using data. Again, think about Facebook here. You see a LOT of data and interact with it all of the time when you&apos;re using the Facebook app. Because of the way we work with social media today, we expect this data the UI to represent that data in close to real-time. This is one reason why React is really good and how reactivity can be achieved.</p>
-<h3 class="mume-header" id="apply-what-youve-learned">Apply What You&apos;ve Learned</h3>
+</pre>
+      <p>
+        Now that we have constructed a skeleton for our Class component, it can
+        be a bit more dynamic. The way we&apos;ll achieve this will be to use
+        some data that we&apos;ll pre-define as some information we&apos;d like
+        our component to display. We&apos;ll then take that data and do this
+        really cool thing called <code>interpolation</code> in order to present
+        it to the DOM within some Text.
+      </p>
+      <p>
+        Components built out extending the Base
+        <code>React.Component</code> class come with a bunch of benefits
+        directly from the React API. A list of the benefits to what we get out
+        of the Component class can be found
+        <a
+          href="https://reactjs.org/docs/react-component.html#getsnapshotbeforeupdate"
+          >here</a
+        >, in theReact documentation about class components. We will be
+        discussing the <code>life-cycle</code> methods at another place in time,
+        so don&apos;t worry too much about those for now.
+      </p>
+      <p>
+        For now, let&apos;s focus on a component caring about its own state
+        (data) and managing that state in a reactive way. The
+        <code>state</code> object that we set up on our
+        <code>constructor</code> has a very React-specific way of doing things.
+        It allows us to drive our UI using data. Again, think about Facebook
+        here. You see a LOT of data and interact with it all of the time when
+        you&apos;re using the Facebook app. Because of the way we work with
+        social media today, we expect this data the UI to represent that data in
+        close to real-time. This is one reason why React is really good and how
+        reactivity can be achieved.
+      </p>
+      <h3 class="mume-header" id="apply-what-youve-learned">
+        Apply What You&apos;ve Learned
+      </h3>
 
-<p>Build out a class component that prints a message to the screen using a few DOM elements. We will hold a message on state, and print that message to the screen by selecting it an assigning it to a DOM element. Then we will take it a step further and pass that message down to another component using props.</p>
-<p>Go ahead and navigate over to <a href="https://codesandbox.io/s/3xwzql38nm">this Codesandbox</a>, where we will write our React Code. CodeSandbox is an online editor that can be used to write React Code right away! I can&apos;t emphasize how cool this really is. For now, you&apos;ll just have to trust me.</p>
-<p>You&apos;ll notice that we&apos;re getting an error on this page. As we begin to define our app class, elements will start to come to life on for us. For now, let&apos;s start by simply adding the class through CCR.</p>
-<p>When you&apos;re done, your browser window should re-render without any errors. Your app class should look like this:</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+      <p>
+        Build out a class component that prints a message to the screen using a
+        few DOM elements. We will hold a message on state, and print that
+        message to the screen by selecting it an assigning it to a DOM element.
+        Then we will take it a step further and pass that message down to
+        another component using props.
+      </p>
+      <p>
+        Go ahead and navigate over to
+        <a href="https://codesandbox.io/s/3xwzql38nm">this Codesandbox</a>,
+        where we will write our React Code. CodeSandbox is an online editor that
+        can be used to write React Code right away! I can&apos;t emphasize how
+        cool this really is. For now, you&apos;ll just have to trust me.
+      </p>
+      <p>
+        You&apos;ll notice that we&apos;re getting an error on this page. As we
+        begin to define our app class, elements will start to come to life on
+        for us. For now, let&apos;s start by simply adding the class through
+        CCR.
+      </p>
+      <p>
+        When you&apos;re done, your browser window should re-render without any
+        errors. Your app class should look like this:
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
   <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">state</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
@@ -325,44 +977,139 @@ html body:before {
     <span class="token keyword control-flow">return</span> <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span><span class="token maybe-class-name">Hello</span> <span class="token maybe-class-name">From</span> <span class="token maybe-class-name">App</span><span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</pre><p>Now, let&apos;s add a property to our state data. Define a <code>message</code> property on the state object.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">state</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+</pre>
+      <p>
+        Now, let&apos;s add a property to our state data. Define a
+        <code>message</code> property on the state object.
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">state</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
   message<span class="token operator">:</span> <span class="token string">&quot;Hello from App State!!&quot;</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</pre><p>Now that we have the message on our component&apos;s state, we can use it through interpolation. In our render method, let&apos;s change the message inside of <code>div</code> to reference the state object. Remember the <code>this</code> keyword when pointing to an object on the Class constructor.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</pre>
+      <p>
+        Now that we have the message on our component&apos;s state, we can use
+        it through interpolation. In our render method, let&apos;s change the
+        message inside of <code>div</code> to reference the state object.
+        Remember the <code>this</code> keyword when pointing to an object on the
+        Class constructor.
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword control-flow">return</span> <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">state</span><span class="token punctuation">.</span><span class="token property-access">message</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-</pre><p>Hooray! You&apos;ve now built your first class component, and you&apos;re ready to rock n&apos; roll.</p>
-<h5 class="mume-header" id="challenge">Challenge</h5>
+</pre>
+      <p>
+        Hooray! You&apos;ve now built your first class component, and
+        you&apos;re ready to rock n&apos; roll.
+      </p>
+      <h5 class="mume-header" id="challenge">Challenge</h5>
 
-<p>Take the functionality of this class component that we built earlier and extend it just a little bit. Declare a <code>Functional Component</code> called <code>RenderMessage</code> inside <a href="https://codesandbox.io/s/103jkor46q">this CodeSandbox</a>.</p>
-<ul>
-<li>Make sure you declare your Props Object that will be passed into this component.</li>
-<li>Return a <code>div</code> who&apos;s child is <code>props.message</code></li>
-<li>Now inside of the <code>App</code> class pass in that <code>RenderMessage</code> component and pass down a message prop to <code>RenderMessage</code>. This message prop should be set equal to the message property on the state object.</li>
-<li>Once it&apos;s all wired up properly you&apos;ve done it!</li>
-</ul>
-<h5 class="mume-header" id="dig-deeper">Dig Deeper</h5>
+      <p>
+        Take the functionality of this class component that we built earlier and
+        extend it just a little bit. Declare a
+        <code>Functional Component</code> called
+        <code>RenderMessage</code> inside
+        <a href="https://codesandbox.io/s/103jkor46q">this CodeSandbox</a>.
+      </p>
+      <ul>
+        <li>
+          Make sure you declare your Props Object that will be passed into this
+          component.
+        </li>
+        <li>
+          Return a <code>div</code> who&apos;s child is
+          <code>props.message</code>
+        </li>
+        <li>
+          Now inside of the <code>App</code> class pass in that
+          <code>RenderMessage</code> component and pass down a message prop to
+          <code>RenderMessage</code>. This message prop should be set equal to
+          the message property on the state object.
+        </li>
+        <li>Once it&apos;s all wired up properly you&apos;ve done it!</li>
+      </ul>
+      <h5 class="mume-header" id="dig-deeper">Dig Deeper</h5>
 
-<ul>
-<li><a href="https://www.andreasreiterer.at/web-development/react-functional-components/">Functional Components vs. Class Components</a><br>
-Learn when to use them, so when the time comes, you&apos;ll know!</li>
-</ul>
-<hr>
-<h4 class="mume-header" id="learn-to-share-data-between-components-using-state-and-props">Learn to share data between components using state and props</h4>
+      <ul>
+        <li>
+          <a
+            href="https://www.andreasreiterer.at/web-development/react-functional-components/"
+            >Functional Components vs. Class Components</a
+          ><br />
+          Learn when to use them, so when the time comes, you&apos;ll know!
+        </li>
+      </ul>
+      <hr />
+      <h4
+        class="mume-header"
+        id="learn-to-share-data-between-components-using-state-and-props"
+      >
+        Learn to share data between components using state and props
+      </h4>
 
-<p>We know about state already, and we know how to nest components. Now we&apos;re going to learn about how to share state with nested components using the react paradigm called props. Understanding how we link up data in a <code>uni-directional</code> (top to bottom) fashion will help you understand how react works generally.</p>
-<h5 class="mume-header" id="overview-1">Overview</h5>
+      <p>
+        We know about state already, and we know how to nest components. Now
+        we&apos;re going to learn about how to share state with nested
+        components using the react paradigm called props. Understanding how we
+        link up data in a <code>uni-directional</code> (top to bottom) fashion
+        will help you understand how react works generally.
+      </p>
+      <h5 class="mume-header" id="overview-1">Overview</h5>
 
-<p><a href="https://codesandbox.io/s/yk37ykmyrz">Here</a> is a link to the follow-along exercise from the video.</p>
-<p>React is useless if we can&apos;t pass state around from one component to another. We use <code>state to props</code> to achieve functionality. Meaning that whatever is set on the state of one <code>Component</code> can be shared amongst all components by passing it down as props. Up until this point, we haven&apos;t had a significant need for this approach, but as your applications grow, you most certainly will. Now that we understand reactivity, we need to understand this <code>parent child</code> relationship in React in order to work with state more effectively and fluidly.</p>
-<p>Because state is persistent as long as the component is on the screen, we can use it to hold on to memory for our application. Memory is any data that we pull in from a server, any edits from a submission form, or users interaction with your web page.</p>
-<p>Remember that state is just an object that lives on the <code>class component&apos;s</code> constructor. We can take this state and pass it around as props. This will another reason why React is so powerful. What&apos;s great about this state object, is that when it changes, our component will re-render. We can also pass whatever data is found on this state object around as props to other components.</p>
-<p>Remember that props are read-only, and components can use props to display information to the screen. One other principle that is built into React is that when a component&apos;s props are bound to the state of a parent component, the child component will re-render as well. This is again how we build out reactive data in react.</p>
-<p>Now that we know more about state let&apos;s see how this works. We&apos;ll have a component set up to pass some Props around to a <code>functional component</code>.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+      <p>
+        <a href="https://codesandbox.io/s/yk37ykmyrz">Here</a> is a link to the
+        follow-along exercise from the video.
+      </p>
+      <p>
+        React is useless if we can&apos;t pass state around from one component
+        to another. We use <code>state to props</code> to achieve functionality.
+        Meaning that whatever is set on the state of one
+        <code>Component</code> can be shared amongst all components by passing
+        it down as props. Up until this point, we haven&apos;t had a significant
+        need for this approach, but as your applications grow, you most
+        certainly will. Now that we understand reactivity, we need to understand
+        this <code>parent child</code> relationship in React in order to work
+        with state more effectively and fluidly.
+      </p>
+      <p>
+        Because state is persistent as long as the component is on the screen,
+        we can use it to hold on to memory for our application. Memory is any
+        data that we pull in from a server, any edits from a submission form, or
+        users interaction with your web page.
+      </p>
+      <p>
+        Remember that state is just an object that lives on the
+        <code>class component&apos;s</code> constructor. We can take this state
+        and pass it around as props. This will another reason why React is so
+        powerful. What&apos;s great about this state object, is that when it
+        changes, our component will re-render. We can also pass whatever data is
+        found on this state object around as props to other components.
+      </p>
+      <p>
+        Remember that props are read-only, and components can use props to
+        display information to the screen. One other principle that is built
+        into React is that when a component&apos;s props are bound to the state
+        of a parent component, the child component will re-render as well. This
+        is again how we build out reactive data in react.
+      </p>
+      <p>
+        Now that we know more about state let&apos;s see how this works.
+        We&apos;ll have a component set up to pass some Props around to a
+        <code>functional component</code>.
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
   <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">state</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
@@ -378,10 +1125,27 @@ Learn when to use them, so when the time comes, you&apos;ll know!</li>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</pre><p>Now let&apos;s take this a step further and instead of rendering an <code>&lt;h1&gt;</code> lets actually put this message in another component and pass it through.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function"><span class="token maybe-class-name">WelcomeBanner</span></span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span><span class="token maybe-class-name">Hello</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>props<span class="token punctuation">.</span><span class="token property-access">message</span><span class="token punctuation">}</span><span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span><span class="token punctuation">;</span>
-</pre><p>Now to pass this around properly, we need to re-factor our render function inside the <code>&lt;App /&gt;</code> component.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token spread operator">...</span>
+</pre>
+      <p>
+        Now let&apos;s take this a step further and instead of rendering an
+        <code>&lt;h1&gt;</code> lets actually put this message in another
+        component and pass it through.
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token keyword">const</span> <span class="token function-variable function"><span class="token maybe-class-name">WelcomeBanner</span></span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span><span class="token maybe-class-name">Hello</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>props<span class="token punctuation">.</span><span class="token property-access">message</span><span class="token punctuation">}</span><span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+</pre>
+      <p>
+        Now to pass this around properly, we need to re-factor our render
+        function inside the <code>&lt;App /&gt;</code> component.
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token spread operator">...</span>
 
 <span class="token method function property-access">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword control-flow">return</span> <span class="token punctuation">(</span>
@@ -393,17 +1157,40 @@ Learn when to use them, so when the time comes, you&apos;ll know!</li>
 
 <span class="token spread operator">...</span>
 
-</pre><p>There we have it; now we are sharing data between a component&apos;s state and a component&apos;s props. This means that when the state object changes, so too will the props. We&apos;re going to combine that functionality in our follow along section.</p>
-<h3 class="mume-header" id="apply-what-youve-learned-1">Apply What You&apos;ve Learned</h3>
+</pre>
+      <p>
+        There we have it; now we are sharing data between a component&apos;s
+        state and a component&apos;s props. This means that when the state
+        object changes, so too will the props. We&apos;re going to combine that
+        functionality in our follow along section.
+      </p>
+      <h3 class="mume-header" id="apply-what-youve-learned-1">
+        Apply What You&apos;ve Learned
+      </h3>
 
-<p>Build out a few components and put some concepts together there.</p>
-<ul>
-<li>We&apos;re going to be updating some state on a parent component.</li>
-<li>That state will be wired up to a few other components as we pass the props around.</li>
-<li>We will also be passing around a few handler functions that help us update/delete our state.</li>
-</ul>
-<p>Lets set up a form component that we can use to update our message component from above.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function"><span class="token maybe-class-name">WelcomeBanner</span></span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span><span class="token maybe-class-name">Hello</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>props<span class="token punctuation">.</span><span class="token property-access">message</span><span class="token punctuation">}</span><span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+      <p>Build out a few components and put some concepts together there.</p>
+      <ul>
+        <li>
+          We&apos;re going to be updating some state on a parent component.
+        </li>
+        <li>
+          That state will be wired up to a few other components as we pass the
+          props around.
+        </li>
+        <li>
+          We will also be passing around a few handler functions that help us
+          update/delete our state.
+        </li>
+      </ul>
+      <p>
+        Lets set up a form component that we can use to update our message
+        component from above.
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token keyword">const</span> <span class="token function-variable function"><span class="token maybe-class-name">WelcomeBanner</span></span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span><span class="token maybe-class-name">Hello</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>props<span class="token punctuation">.</span><span class="token property-access">message</span><span class="token punctuation">}</span><span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span><span class="token punctuation">;</span>
 
 <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
   <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -421,16 +1208,34 @@ Learn when to use them, so when the time comes, you&apos;ll know!</li>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</pre><p>Now let&apos;s build a form component that can handle some data defined on state, below on the child components.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function"><span class="token maybe-class-name">FormComponent</span></span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</pre>
+      <p>
+        Now let&apos;s build a form component that can handle some data defined
+        on state, below on the child components.
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token keyword">const</span> <span class="token function-variable function"><span class="token maybe-class-name">FormComponent</span></span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword control-flow">return</span> <span class="token punctuation">(</span>
     <span class="token operator">&lt;</span>form<span class="token operator">&gt;</span>
       <span class="token operator">&lt;</span>input placeholder<span class="token operator">=</span><span class="token string">&quot;change state&quot;</span> onChange<span class="token operator">=</span><span class="token punctuation">{</span>props<span class="token punctuation">.</span><span class="token property-access">updateStateMessage</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">&gt;</span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</pre><p>We&apos;re going to need to build out a change handler function on our <code>App</code> component that we can pass down to the form. We&apos;ll have to define the prop as <code>updateStateMessage</code> in order to make our <code>onChange</code> event handler work out properly.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token spread operator">...</span>
+</pre>
+      <p>
+        We&apos;re going to need to build out a change handler function on our
+        <code>App</code> component that we can pass down to the form. We&apos;ll
+        have to define the prop as <code>updateStateMessage</code> in order to
+        make our <code>onChange</code> event handler work out properly.
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token spread operator">...</span>
 
 <span class="token method-variable function-variable method function property-access">messageChangeHandler</span> <span class="token operator">=</span> <span class="token parameter">event</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token method function property-access">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>welcomeMessage<span class="token operator">:</span> event<span class="token punctuation">.</span><span class="token property-access">target</span><span class="token punctuation">.</span><span class="token property-access">value</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -445,53 +1250,161 @@ Learn when to use them, so when the time comes, you&apos;ll know!</li>
 <span class="token punctuation">}</span>
 <span class="token spread operator">...</span>
 
-</pre><h5 class="mume-header" id="challenge-1">Challenge</h5>
+</pre>
+      <h5 class="mume-header" id="challenge-1">Challenge</h5>
 
-<p>Using the following tools:</p>
-<ul>
-<li>Class component</li>
-<li>functional FormComponent, MessageComponent</li>
-<li>click, and change handlers</li>
-<li><code>setState</code></li>
-</ul>
-<p>Build out a form that will allow a user to handle data. You&apos;ll need a button, input field, and some data-bound to a DOM element that displays what the user is submitting.</p>
-<p>When a user clicks submit, show the data that&apos;s on state in an <code>alert</code> statement.</p>
-<p>Stretch Loop over a list of items showing those items to the screen. (Can be a list of strings). When a user clicks submit, instead of logging the item, push an item into that list, and watch the magic happen.</p>
-<hr>
-<h4 class="mume-header" id="learn-to-respond-to-events-triggered-by-user-interaction-and-handle-user-input-via-forms-in-react">Learn to respond to events triggered by user interaction and handle user input via forms in React</h4>
+      <p>Using the following tools:</p>
+      <ul>
+        <li>Class component</li>
+        <li>functional FormComponent, MessageComponent</li>
+        <li>click, and change handlers</li>
+        <li><code>setState</code></li>
+      </ul>
+      <p>
+        Build out a form that will allow a user to handle data. You&apos;ll need
+        a button, input field, and some data-bound to a DOM element that
+        displays what the user is submitting.
+      </p>
+      <p>
+        When a user clicks submit, show the data that&apos;s on state in an
+        <code>alert</code> statement.
+      </p>
+      <p>
+        Stretch Loop over a list of items showing those items to the screen.
+        (Can be a list of strings). When a user clicks submit, instead of
+        logging the item, push an item into that list, and watch the magic
+        happen.
+      </p>
+      <hr />
+      <h4
+        class="mume-header"
+        id="learn-to-respond-to-events-triggered-by-user-interaction-and-handle-user-input-via-forms-in-react"
+      >
+        Learn to respond to events triggered by user interaction and handle user
+        input via forms in React
+      </h4>
 
-<p>In Web development everything you do is based around the Document Object Model (DOM). The DOM has built into it an event loop that listens for changes across some part of the UI. To access that event loop in the Virtual DOM the react team put together what is called the Synthetic Event so that we can pretty much have access to all the events we would need to provide users with an interactive web application. Learn to harness the power of events in React and you&apos;ll be set to build out React Web Applications.</p>
-<h5 class="mume-header" id="overview1">Overview1</h5>
+      <p>
+        In Web development everything you do is based around the Document Object
+        Model (DOM). The DOM has built into it an event loop that listens for
+        changes across some part of the UI. To access that event loop in the
+        Virtual DOM the react team put together what is called the Synthetic
+        Event so that we can pretty much have access to all the events we would
+        need to provide users with an interactive web application. Learn to
+        harness the power of events in React and you&apos;ll be set to build out
+        React Web Applications.
+      </p>
+      <h5 class="mume-header" id="overview1">Overview1</h5>
 
-<p><a href="https://codesandbox.io/s/k0q2wwyj2o">Here</a> is the link to the codesandbox follow-along exercise from the video.</p>
-<p>Events in any programing language are unique to the language itself. When javascript runs in web browsers, it has a very eloquent way of handling events that are triggered by user interaction. This is one of the things that we, as web developers, should be most concerned with. How do we take in user input via forms and respond to clicks, mouse events, or scrolling? We will be learning how to respond to events within the React Ecosystem. Here is a statement straight from the <a href="https://reactjs.org/docs/handling-events.html">React Docs</a>.</p>
-<blockquote>
-<p>Handling events with React elements is very similar to handling events on DOM elements. There are some syntactic differences:</p>
-<ul>
-<li>React events are named using camelCase, rather than lowercase.</li>
-<li>With JSX you pass a function as the event handler, rather than a string.</li>
-</ul>
-</blockquote>
-<p>Now, let&apos;s dive in and see what it is like to handle events in ReactJS.</p>
-<p>It is important to understand that React has it&apos;s own &quot;Synthetic Event&quot; built into the API. This will mimic event handling as you&apos;re already used to when it comes to the DOM. When we bind up click/change/mouseOver handlers to DOM elements, we usually do so on the element itself, or we select the DOM element using vanilla JS to target by ID and append some function handler to that element.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token operator">&lt;</span>button onclick<span class="token operator">=</span><span class="token string">&quot;getElementById(&apos;demo&apos;).innerHTML=Date()&quot;</span><span class="token operator">&gt;</span>
+      <p>
+        <a href="https://codesandbox.io/s/k0q2wwyj2o">Here</a> is the link to
+        the codesandbox follow-along exercise from the video.
+      </p>
+      <p>
+        Events in any programing language are unique to the language itself.
+        When javascript runs in web browsers, it has a very eloquent way of
+        handling events that are triggered by user interaction. This is one of
+        the things that we, as web developers, should be most concerned with.
+        How do we take in user input via forms and respond to clicks, mouse
+        events, or scrolling? We will be learning how to respond to events
+        within the React Ecosystem. Here is a statement straight from the
+        <a href="https://reactjs.org/docs/handling-events.html">React Docs</a>.
+      </p>
+      <blockquote>
+        <p>
+          Handling events with React elements is very similar to handling events
+          on DOM elements. There are some syntactic differences:
+        </p>
+        <ul>
+          <li>
+            React events are named using camelCase, rather than lowercase.
+          </li>
+          <li>
+            With JSX you pass a function as the event handler, rather than a
+            string.
+          </li>
+        </ul>
+      </blockquote>
+      <p>
+        Now, let&apos;s dive in and see what it is like to handle events in
+        ReactJS.
+      </p>
+      <p>
+        It is important to understand that React has it&apos;s own
+        &quot;Synthetic Event&quot; built into the API. This will mimic event
+        handling as you&apos;re already used to when it comes to the DOM. When
+        we bind up click/change/mouseOver handlers to DOM elements, we usually
+        do so on the element itself, or we select the DOM element using vanilla
+        JS to target by ID and append some function handler to that element.
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token operator">&lt;</span>button onclick<span class="token operator">=</span><span class="token string">&quot;getElementById(&apos;demo&apos;).innerHTML=Date()&quot;</span><span class="token operator">&gt;</span>
   <span class="token maybe-class-name">What</span> is the time<span class="token operator">?</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
-</pre><p>We see stuff like the above code example all of the time. Now the purpose of today&apos;s exercises is to get us used to handling these types of events in the ReactJS ecosystem using Components/JSX and plain ol&apos; JavaScript function handlers. This is where React starts to get really fun. React provides what we call the <a href="https://reactjs.org/docs/events.html">Synthetic Event</a>, which is similar to the Event object in the DOM. This is how we interact with the DOM within the <code>React Virtual DOM</code> ecosystem.</p>
-<p>Build a little button that we can click on to see what&apos;s going on under the hood.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Button</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+</pre>
+      <p>
+        We see stuff like the above code example all of the time. Now the
+        purpose of today&apos;s exercises is to get us used to handling these
+        types of events in the ReactJS ecosystem using Components/JSX and plain
+        ol&apos; JavaScript function handlers. This is where React starts to get
+        really fun. React provides what we call the
+        <a href="https://reactjs.org/docs/events.html">Synthetic Event</a>,
+        which is similar to the Event object in the DOM. This is how we interact
+        with the DOM within the <code>React Virtual DOM</code> ecosystem.
+      </p>
+      <p>
+        Build a little button that we can click on to see what&apos;s going on
+        under the hood.
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token keyword">class</span> <span class="token class-name">Button</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
   <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword control-flow">return</span> <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token comment">// we&apos;ll fill this in}&gt;Click Me&lt;/button&gt;;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-</pre><p>So we have a simple button component that will return some Button JSX to the screen and mount up a button. Notice the <code>onClick</code> prop we used for our button. It&apos;s <code>camelCase</code>, which is different already from the standard <code>onClick</code> function that we normally would store as an attribute on a standard <code>button</code> element. This will be one of the major differences between React <code>Event Handling</code> and native <code>DOM event handling</code>.</p>
-<p>Now that we have our button, we&apos;ll build a function handler that will allow us to interact with it. Let&apos;s assume that this function handler was found on a class component, so we can just add it as a method on that class.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token function-variable function">clickHandler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</pre>
+      <p>
+        So we have a simple button component that will return some Button JSX to
+        the screen and mount up a button. Notice the <code>onClick</code> prop
+        we used for our button. It&apos;s <code>camelCase</code>, which is
+        different already from the standard <code>onClick</code> function that
+        we normally would store as an attribute on a standard
+        <code>button</code> element. This will be one of the major differences
+        between React <code>Event Handling</code> and native
+        <code>DOM event handling</code>.
+      </p>
+      <p>
+        Now that we have our button, we&apos;ll build a function handler that
+        will allow us to interact with it. Let&apos;s assume that this function
+        handler was found on a class component, so we can just add it as a
+        method on that class.
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token function-variable function">clickHandler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// this is the react Synthetic Event</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</pre><p>The above code looks a lot like a typo, but inside of a class, this is valid JS. We&apos;ll chat more about this at length later, but now we need to bind this function up to our JSX element and use it to log out of the React synthetic event.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Button</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+</pre>
+      <p>
+        The above code looks a lot like a typo, but inside of a class, this is
+        valid JS. We&apos;ll chat more about this at length later, but now we
+        need to bind this function up to our JSX element and use it to log out
+        of the React synthetic event.
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token keyword">class</span> <span class="token class-name">Button</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
   <span class="token function-variable function">clickHandler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
     <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// this is the react Synthetic Event</span>
   <span class="token punctuation">}</span><span class="token punctuation">;</span>
@@ -500,25 +1413,82 @@ Learn when to use them, so when the time comes, you&apos;ll know!</li>
     <span class="token keyword control-flow">return</span> <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">clickHandler</span><span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token maybe-class-name">Click</span> <span class="token maybe-class-name">Me</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</pre><p>Now we should see this on the screen, and when we click on it, we can see what the console is logging out for us.</p>
-<p><img src="https://tk-assets.lambdaschool.com/439c001d-9009-4454-8afc-4d18d19363ed_ScreenShot2018-07-23at3.21.03PM.png" alt="synthetic event handler console.log"></p>
-<p>You should also see a bunch of warnings in the console from the ReactAPI warning engine at this point as well. That&apos;s ok; it&apos;s just telling us there are things to be aware of when working with the event. For now, we can ignore the warnings are recognize that this synthetic event object looks a little bit different than the original object that we would see with the DOM. The key takeaway here is that components can talk to buttons on event dispatch. From now on, this is how you should deal with events.</p>
-<h3 class="mume-header" id="apply-what-youve-learned-2">Apply What You&apos;ve Learned</h3>
+</pre>
+      <p>
+        Now we should see this on the screen, and when we click on it, we can
+        see what the console is logging out for us.
+      </p>
+      <p>
+        <img
+          src="https://tk-assets.lambdaschool.com/439c001d-9009-4454-8afc-4d18d19363ed_ScreenShot2018-07-23at3.21.03PM.png"
+          alt="synthetic event handler console.log"
+        />
+      </p>
+      <p>
+        You should also see a bunch of warnings in the console from the ReactAPI
+        warning engine at this point as well. That&apos;s ok; it&apos;s just
+        telling us there are things to be aware of when working with the event.
+        For now, we can ignore the warnings are recognize that this synthetic
+        event object looks a little bit different than the original object that
+        we would see with the DOM. The key takeaway here is that components can
+        talk to buttons on event dispatch. From now on, this is how you should
+        deal with events.
+      </p>
+      <h3 class="mume-header" id="apply-what-youve-learned-2">
+        Apply What You&apos;ve Learned
+      </h3>
 
-<p>Now, let&apos;s build out a little Application that can handle some data that we pass through a few JSX elements.</p>
-<p>We&apos;re going to build out some event handler functions for the following events across multiple elements:</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token operator">-</span>onClick <span class="token operator">-</span> onDoubleClick <span class="token operator">-</span> onMouseEnter <span class="token operator">-</span> onChange<span class="token punctuation">;</span>
-</pre><p>Build out a <code>singleClickHandler</code> function that will call <code>alert(&quot;Single Click!&quot;);</code></p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token function-variable function">singleClickHandler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">&quot;Single Click!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</pre><p>And add it to the first Button in our App.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">singleClickHandler</span><span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token maybe-class-name">Click</span> <span class="token maybe-class-name">Handler</span> <span class="token maybe-class-name">Demo</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
-</pre><p>Lets do the same with a <code>doubleClickHandler</code> function, a <code>mouseEnterHandler</code> function and an <code>changeHandler</code> function.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token function-variable function">doubleClickHandler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">&quot;Double Clicked!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <p>
+        Now, let&apos;s build out a little Application that can handle some data
+        that we pass through a few JSX elements.
+      </p>
+      <p>
+        We&apos;re going to build out some event handler functions for the
+        following events across multiple elements:
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token operator">-</span>onClick <span class="token operator">-</span> onDoubleClick <span class="token operator">-</span> onMouseEnter <span class="token operator">-</span> onChange<span class="token punctuation">;</span>
+</pre>
+      <p>
+        Build out a <code>singleClickHandler</code> function that will call
+        <code>alert(&quot;Single Click!&quot;);</code>
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token function-variable function">singleClickHandler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">&quot;Single Click!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+      <p>And add it to the first Button in our App.</p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">singleClickHandler</span><span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token maybe-class-name">Click</span> <span class="token maybe-class-name">Handler</span> <span class="token maybe-class-name">Demo</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+</pre>
+      <p>
+        Lets do the same with a <code>doubleClickHandler</code> function, a
+        <code>mouseEnterHandler</code> function and an
+        <code>changeHandler</code> function.
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token function-variable function">doubleClickHandler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">&quot;Double Clicked!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token function-variable function">mouseEnterHandler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">&quot;Mouse Entered&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token function-variable function">changeHandler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">&quot;Item was changed&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</pre><pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;App&quot;</span><span class="token operator">&gt;</span>
+</pre>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;App&quot;</span><span class="token operator">&gt;</span>
   <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span><span class="token maybe-class-name">Hello</span> <span class="token maybe-class-name">Handlers</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
   <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span><span class="token maybe-class-name">Lets</span> build out some handler functions<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
   <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">singleClickHandler</span><span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token maybe-class-name">Click</span> <span class="token maybe-class-name">Handler</span> <span class="token maybe-class-name">Demo</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
@@ -526,108 +1496,227 @@ Learn when to use them, so when the time comes, you&apos;ll know!</li>
   <span class="token operator">&lt;</span>div onMouseEnter<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">mouseEnterHandler</span><span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token maybe-class-name">Mouse</span> <span class="token maybe-class-name">Enter</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
   <span class="token operator">&lt;</span>input onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">changeHandler</span><span class="token punctuation">}</span> placeholder<span class="token operator">=</span><span class="token string">&quot;Change my input&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
-</pre><p>Play around with the events on the screen and see how things are interacting one with another.</p>
-<p>The input <code>changeHandler</code> for a min. Let&apos;s pass in the synthetic event through the function body. One thing that is cool about an input field is that we can pull in the resources it uses off of the <code>event.target.value</code> property that is found on the Synthetic Event object that will be passed in.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token function-variable function">changeHandler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token function">alert</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span><span class="token property-access">target</span><span class="token punctuation">.</span><span class="token property-access">value</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</pre><p>So now, as we type, we can see what&apos;s in the input field. Let&apos;s take this a step further and set up a state object. Then use a new function <code>setState</code> to reset the state on that object. Add this <code>constructor to our class Component</code>.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript">  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</pre>
+      <p>
+        Play around with the events on the screen and see how things are
+        interacting one with another.
+      </p>
+      <p>
+        The input <code>changeHandler</code> for a min. Let&apos;s pass in the
+        synthetic event through the function body. One thing that is cool about
+        an input field is that we can pull in the resources it uses off of the
+        <code>event.target.value</code> property that is found on the Synthetic
+        Event object that will be passed in.
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token function-variable function">changeHandler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token function">alert</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span><span class="token property-access">target</span><span class="token punctuation">.</span><span class="token property-access">value</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+      <p>
+        So now, as we type, we can see what&apos;s in the input field.
+        Let&apos;s take this a step further and set up a state object. Then use
+        a new function <code>setState</code> to reset the state on that object.
+        Add this <code>constructor to our class Component</code>.
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      >  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">state</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
       someValue<span class="token operator">:</span> <span class="token string">&apos;&apos;</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
 
-</pre><p>Now change our change handler to look like this.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token function-variable function">changeHandler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</pre>
+      <p>Now change our change handler to look like this.</p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token function-variable function">changeHandler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token method function property-access">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> someValue<span class="token operator">:</span> event<span class="token punctuation">.</span><span class="token property-access">target</span><span class="token punctuation">.</span><span class="token property-access">value</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</pre><p>Great, setState will update our <code>someValue</code> property on our state object by simply typing in the input field. Let&apos;s prove this by logging our state object inside the render function.</p>
-<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</pre>
+      <p>
+        Great, setState will update our <code>someValue</code> property on our
+        state object by simply typing in the input field. Let&apos;s prove this
+        by logging our state object inside the render function.
+      </p>
+      <pre
+        data-role="codeBlock"
+        data-info="js"
+        class="language-javascript"
+      ><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">state</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token spread operator">...</span>
 
-</pre><p>Check your console!</p>
-<p><a href="https://codesandbox.io/s/rmnj2r1o0p">https://codesandbox.io/s/rmnj2r1o0p</a> Here is a working copy of what we achieved!</p>
-<h5 class="mume-header" id="challenge-2">Challenge</h5>
+</pre>
+      <p>Check your console!</p>
+      <p>
+        <a href="https://codesandbox.io/s/rmnj2r1o0p"
+          >https://codesandbox.io/s/rmnj2r1o0p</a
+        >
+        Here is a working copy of what we achieved!
+      </p>
+      <h5 class="mume-header" id="challenge-2">Challenge</h5>
 
-<p>Using this Code sandbox that we&apos;ve been working in together, build out an app that holds a string item on the state object.</p>
-<ul>
-<li>Build out a function handler that can take in the edits from an <code>onChange event</code> and then use the <code>setState</code> function to set those items on state.</li>
-<li>You should have seen me do this already, so you may have to refer back to previous walk-throughs.</li>
-</ul>
-<hr>
-<h2 class="mume-header" id="httpslearn-legacylambdaschoolcomweb3modulerecndkrwb24lgazicprojectsprojects"><a href="https://learn-legacy.lambdaschool.com/web3/module/recnDKrWb24lgaziC/#projects"></a>Projects</h2>
+      <p>
+        Using this Code sandbox that we&apos;ve been working in together, build
+        out an app that holds a string item on the state object.
+      </p>
+      <ul>
+        <li>
+          Build out a function handler that can take in the edits from an
+          <code>onChange event</code> and then use the
+          <code>setState</code> function to set those items on state.
+        </li>
+        <li>
+          You should have seen me do this already, so you may have to refer back
+          to previous walk-throughs.
+        </li>
+      </ul>
+      <hr />
+      <h2
+        class="mume-header"
+        id="httpslearn-legacylambdaschoolcomweb3modulerecndkrwb24lgazicprojectsprojects"
+      >
+        <a
+          href="https://learn-legacy.lambdaschool.com/web3/module/recnDKrWb24lgaziC/#projects"
+        ></a
+        >Projects
+      </h2>
 
-<ul>
-<li>
-<h5><a href="https://github.com/LambdaSchool/React-Todo">React Todo</a></h5>
-</li>
-<li>
-<h5><a href="https://github.com/LambdaSchool/React-Sorting-Hat">React-Sorting-Hat</a></h5>
-<p>Stretch assignment for those that have finished the Todo Project beyond MVP</p>
-</li>
-</ul>
-<h2 class="mume-header" id="httpslearn-legacylambdaschoolcomweb3modulerecndkrwb24lgazicreviewreview"><a href="https://learn-legacy.lambdaschool.com/web3/module/recnDKrWb24lgaziC/#review"></a>Review</h2>
+      <ul>
+        <li>
+          <h5>
+            <a href="https://github.com/LambdaSchool/React-Todo">React Todo</a>
+          </h5>
+        </li>
+        <li>
+          <h5>
+            <a href="https://github.com/LambdaSchool/React-Sorting-Hat"
+              >React-Sorting-Hat</a
+            >
+          </h5>
+          <p>
+            Stretch assignment for those that have finished the Todo Project
+            beyond MVP
+          </p>
+        </li>
+      </ul>
+      <h2
+        class="mume-header"
+        id="httpslearn-legacylambdaschoolcomweb3modulerecndkrwb24lgazicreviewreview"
+      >
+        <a
+          href="https://learn-legacy.lambdaschool.com/web3/module/recnDKrWb24lgaziC/#review"
+        ></a
+        >Review
+      </h2>
 
-<h3 class="mume-header" id="class-recordings">Class Recordings</h3>
+      <h3 class="mume-header" id="class-recordings">Class Recordings</h3>
 
-<p>You can use class recordings to help you master the material.</p>
-<ul>
-<li>
-<p><a href="https://youtu.be/CDooIXMwS50">Class Components for Web35 w/ Warren Longmire</a></p>
-<p>Class Components</p>
-</li>
-<li>
-<p><a href="https://learn-legacy.lambdaschool.com/archive/WEB3/module/recnDKrWb24lgaziC">All previous recordings</a></p>
-</li>
-</ul>
-<h3 class="mume-header" id="demonstrate-mastery">Demonstrate Mastery</h3>
+      <p>You can use class recordings to help you master the material.</p>
+      <ul>
+        <li>
+          <p>
+            <a href="https://youtu.be/CDooIXMwS50"
+              >Class Components for Web35 w/ Warren Longmire</a
+            >
+          </p>
+          <p>Class Components</p>
+        </li>
+        <li>
+          <p>
+            <a
+              href="https://learn-legacy.lambdaschool.com/archive/WEB3/module/recnDKrWb24lgaziC"
+              >All previous recordings</a
+            >
+          </p>
+        </li>
+      </ul>
+      <h3 class="mume-header" id="demonstrate-mastery">Demonstrate Mastery</h3>
 
-<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
-<ul>
-<li>
-<p>Objective challenge:</p>
-<p>Let&apos;s take the functionality of this class component that we built earlier and extend it just a little bit. Declare a <code>Functional Component</code> called <code>RenderMessage</code> inside <a href="https://codesandbox.io/s/103jkor46q">this CodeSandbox</a>.</p>
-<ul>
-<li>Make sure you declare your Props Object that will be passed into this component.</li>
-<li>Return a <code>div</code> who&apos;s child is <code>props.message</code></li>
-<li>Now inside of the <code>App</code> class pass in that <code>RenderMessage</code> component and pass down a message prop to <code>RenderMessage</code>. This message prop should be set equal to the message property on the state object.</li>
-<li>Once it&apos;s all wired up properly you&apos;ve done it!</li>
-</ul>
-</li>
-<li>
-<p>Objective challenge:</p>
-<p>Using the following tools:</p>
-<ul>
-<li>Class component</li>
-<li>functional FormComponent, MessageComponent</li>
-<li>click, and change handlers</li>
-<li><code>setState</code></li>
-</ul>
-<p>Build out a form that will allow a user to handle data. You&apos;ll need a button, input field, and some data-bound to a DOM element that displays what the user is submitting.</p>
-<p>When a user clicks submit, show the data that&apos;s on state in an <code>alert</code> statement.</p>
-<p>Stretch Loop over a list of items showing those items to the screen. (Can be a list of strings). When a user clicks submit, instead of logging the item, push an item into that list, and watch the magic happen.</p>
-</li>
-<li>
-<p>Objective challenge:</p>
-<p>Using this Code sandbox that we&apos;ve been working in together, build out an app that holds a string item on the state object.</p>
-<ul>
-<li>Build out a function handler that can take in the edits from an <code>onChange event</code> and then use the <code>setState</code> function to set those items on state.</li>
-<li>You should have seen me do this already, so you may have to refer back to previous walk-throughs.</li>
-</ul>
-</li>
-</ul>
-
-      </div>
-      
-      
-    
-    
-    
-    
-    
-    
-    
-    
-  
-    </body></html>
+      <p>
+        To demonstrate mastery of this module, you need to complete and pass a
+        code review on each of the following:
+      </p>
+      <ul>
+        <li>
+          <p>Objective challenge:</p>
+          <p>
+            Let&apos;s take the functionality of this class component that we
+            built earlier and extend it just a little bit. Declare a
+            <code>Functional Component</code> called
+            <code>RenderMessage</code> inside
+            <a href="https://codesandbox.io/s/103jkor46q">this CodeSandbox</a>.
+          </p>
+          <ul>
+            <li>
+              Make sure you declare your Props Object that will be passed into
+              this component.
+            </li>
+            <li>
+              Return a <code>div</code> who&apos;s child is
+              <code>props.message</code>
+            </li>
+            <li>
+              Now inside of the <code>App</code> class pass in that
+              <code>RenderMessage</code> component and pass down a message prop
+              to <code>RenderMessage</code>. This message prop should be set
+              equal to the message property on the state object.
+            </li>
+            <li>Once it&apos;s all wired up properly you&apos;ve done it!</li>
+          </ul>
+        </li>
+        <li>
+          <p>Objective challenge:</p>
+          <p>Using the following tools:</p>
+          <ul>
+            <li>Class component</li>
+            <li>functional FormComponent, MessageComponent</li>
+            <li>click, and change handlers</li>
+            <li><code>setState</code></li>
+          </ul>
+          <p>
+            Build out a form that will allow a user to handle data. You&apos;ll
+            need a button, input field, and some data-bound to a DOM element
+            that displays what the user is submitting.
+          </p>
+          <p>
+            When a user clicks submit, show the data that&apos;s on state in an
+            <code>alert</code> statement.
+          </p>
+          <p>
+            Stretch Loop over a list of items showing those items to the screen.
+            (Can be a list of strings). When a user clicks submit, instead of
+            logging the item, push an item into that list, and watch the magic
+            happen.
+          </p>
+        </li>
+        <li>
+          <p>Objective challenge:</p>
+          <p>
+            Using this Code sandbox that we&apos;ve been working in together,
+            build out an app that holds a string item on the state object.
+          </p>
+          <ul>
+            <li>
+              Build out a function handler that can take in the edits from an
+              <code>onChange event</code> and then use the
+              <code>setState</code> function to set those items on state.
+            </li>
+            <li>
+              You should have seen me do this already, so you may have to refer
+              back to previous walk-throughs.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

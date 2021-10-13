@@ -16,29 +16,29 @@ You must be a Lambda School student to view this page.
 
 <a href="/web4java/sprint/recnLDyTtONLTMiFJ" class="bd-toc-link">1.  Java Precourse Information</a>
 
--   [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
--   [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
+- [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
+- [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
 
 <a href="/web4java/sprint/recoJ4ZqNQWX3cy6E" class="bd-toc-link">2.  Java Fundamentals</a>
 
--   [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
--   [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
--   [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
--   [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
+- [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
+- [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
+- [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
+- [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
 
 <a href="/web4java/sprint/recRVUSWQEtosl0Cz" class="bd-toc-link">3.  RDBMS and Intro to APIs</a>
 
--   [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
--   [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
--   [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
--   [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
+- [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
+- [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
+- [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
+- [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
 
 <a href="/web4java/sprint/recSqm5AAEkJcIl3p" class="bd-toc-link">4.  Java Frameworks</a>
 
--   [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
--   [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
--   [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
--   [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
+- [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
+- [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
+- [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
+- [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
 
 <a href="/web4java/sprint/recC5dhR9menaROwx" class="bd-toc-link">5.  WEB Unit 4 Java Build</a>
 
@@ -48,29 +48,29 @@ You must be a Lambda School student to view this page.
 
 <a href="/web4java/sprint/recnLDyTtONLTMiFJ" class="bd-toc-link">1.  Java Precourse Information</a>
 
--   [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
--   [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
+- [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
+- [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
 
 <a href="/web4java/sprint/recoJ4ZqNQWX3cy6E" class="bd-toc-link">2.  Java Fundamentals</a>
 
--   [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
--   [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
--   [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
--   [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
+- [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
+- [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
+- [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
+- [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
 
 <a href="/web4java/sprint/recRVUSWQEtosl0Cz" class="bd-toc-link">3.  RDBMS and Intro to APIs</a>
 
--   [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
--   [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
--   [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
--   [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
+- [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
+- [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
+- [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
+- [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
 
 <a href="/web4java/sprint/recSqm5AAEkJcIl3p" class="bd-toc-link">4.  Java Frameworks</a>
 
--   [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
--   [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
--   [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
--   [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
+- [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
+- [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
+- [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
+- [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
 
 <a href="/web4java/sprint/recC5dhR9menaROwx" class="bd-toc-link">5.  WEB Unit 4 Java Build</a>
 
@@ -80,16 +80,16 @@ You must be a Lambda School student to view this page.
 
 Developing Web APIs using Java and the Spring Framework and connecting those to a PostgreSQL database is the focus of these modules. Topics include:
 
--   Build REST API with Spring Boot
--   Beans
--   Maven Phases
--   CRUD
--   CRUD Using SQL
--   CRUD Using JPA
--   Seeding using JPA
--   Seeding using SQL
--   Data Normalization
--   Advanced Queries
+- Build REST API with Spring Boot
+- Beans
+- Maven Phases
+- CRUD
+- CRUD Using SQL
+- CRUD Using JPA
+- Seeding using JPA
+- Seeding using SQL
+- Data Normalization
+- Advanced Queries
 
 ## [Java - Spring Database Creation Including Seed Data](../module/recb0OVmRrJzqhH4D)
 
@@ -97,12 +97,12 @@ Developing Web APIs using Java and the Spring Framework and connecting those to 
 
 #### Objectives:
 
--   Student should be able to perform CRUD operations on an RDBMS using JPA and Hibernate (data modeling)
--   Student should be able to implement seed data using SQL statements
--   Student should be able to explain and use Spring Data Relationships
--   Student should be able to implement a data seeding class using JPA and Hibernate
--   Student should be able to implement massive data seeding
--   Student should be able to use H2 Console and H2 IntelliJ integration to explore data
+- Student should be able to perform CRUD operations on an RDBMS using JPA and Hibernate (data modeling)
+- Student should be able to implement seed data using SQL statements
+- Student should be able to explain and use Spring Data Relationships
+- Student should be able to implement a data seeding class using JPA and Hibernate
+- Student should be able to implement massive data seeding
+- Student should be able to use H2 Console and H2 IntelliJ integration to explore data
 
 ## [Java - Read Data using CRUD Operations](../module/rec3THcdjv8BumGCt)
 
@@ -110,10 +110,10 @@ Developing Web APIs using Java and the Spring Framework and connecting those to 
 
 #### Objectives:
 
--   Student should be able to perform CRUD operations on an RDBMS using JPA and Hibernate (reading)
--   Student should be able to use JPA constructs to create advanced queries
--   Student should be able to use the JsonIgnoreProperties annotation to prevent infinite loops
--   Student should be able to use SQL, JPA and Hibernate to perform custom query operations on a RDBMS through a Spring Application
+- Student should be able to perform CRUD operations on an RDBMS using JPA and Hibernate (reading)
+- Student should be able to use JPA constructs to create advanced queries
+- Student should be able to use the JsonIgnoreProperties annotation to prevent infinite loops
+- Student should be able to use SQL, JPA and Hibernate to perform custom query operations on a RDBMS through a Spring Application
 
 ## [Java - Inserting Deleting and Updating Data using CRUD Operations](../module/recJihkiNn2KH2nEW)
 
@@ -121,11 +121,11 @@ Developing Web APIs using Java and the Spring Framework and connecting those to 
 
 #### Objectives:
 
--   Student should be able to use Postman to manually test Web APIs with all CRUD operations
--   Student should be able to perform CRUD operations on an RDBMS JPA and Hibernate (Creating and Updating Records)
--   Student should be able to perform CRUD operations on an RDBMS JPA and Hibernate (Updating certain fields in records)
--   Student should be able to perform CRUD operations on an RDBMS JPA and Hibernate (Deleting records)
--   Student should be able to understand and implement @Transactional annotation
+- Student should be able to use Postman to manually test Web APIs with all CRUD operations
+- Student should be able to perform CRUD operations on an RDBMS JPA and Hibernate (Creating and Updating Records)
+- Student should be able to perform CRUD operations on an RDBMS JPA and Hibernate (Updating certain fields in records)
+- Student should be able to perform CRUD operations on an RDBMS JPA and Hibernate (Deleting records)
+- Student should be able to understand and implement @Transactional annotation
 
 ## [Java - Data Modeling and Auditing Fields with custom querying](../module/rec2oQCFWOVShtxIx)
 
@@ -133,9 +133,9 @@ Developing Web APIs using Java and the Spring Framework and connecting those to 
 
 #### Objectives:
 
--   Student should be able to add additional fields to a Many to Many Join Table
--   Student should be able to add standard auditing fields to each table
--   Student should be able to populate and display standard auditing fields
--   Student should be able to use SQL, JPA and Hibernate to perform custom data manipulation operations on a RDBMS through a Spring Application
--   Student should be able to implement default Swagger documentation
--   Student should be able to print the default Swagger documentation
+- Student should be able to add additional fields to a Many to Many Join Table
+- Student should be able to add standard auditing fields to each table
+- Student should be able to populate and display standard auditing fields
+- Student should be able to use SQL, JPA and Hibernate to perform custom data manipulation operations on a RDBMS through a Spring Application
+- Student should be able to implement default Swagger documentation
+- Student should be able to print the default Swagger documentation

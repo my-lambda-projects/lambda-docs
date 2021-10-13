@@ -16,24 +16,24 @@ You must be a Lambda School student to view this page.
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
@@ -43,24 +43,24 @@ You must be a Lambda School student to view this page.
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
@@ -74,9 +74,9 @@ Today we will learn all about `classes` in React. We will use classes to build o
 
 #### Objectives:
 
--   Student should be able to explain class components, and use a class component to render some state data to the DOM
--   Student should be able to share data between components using state and props
--   Student should be able to respond to events triggered by user interaction and handle user input via forms in React
+- Student should be able to explain class components, and use a class component to render some state data to the DOM
+- Student should be able to share data between components using state and props
+- Student should be able to respond to events triggered by user interaction and handle user input via forms in React
 
 ## [The React Lifecycle](../module/rec1DPoOZSmocXfak)
 
@@ -84,17 +84,17 @@ Every component in React has what we call a lifecycle. The Lifecycle is a a part
 
 #### Objectives:
 
--   Student should be able to describe the three phases of the React Component Lifecycle
--   Student should be able to properly explain what the \`constructor\` and \`render\` methods do and what their place is in the React Component Lifecycle
--   Student should be able to use the \`componentDidMount\` function to set a component's state post render
+- Student should be able to describe the three phases of the React Component Lifecycle
+- Student should be able to properly explain what the \`constructor\` and \`render\` methods do and what their place is in the React Component Lifecycle
+- Student should be able to use the \`componentDidMount\` function to set a component's state post render
 
 ## [Composing and Sharing Non-Visual Behavior](../module/recAxmnYmusEi8JuL)
 
 #### Objectives:
 
--   Student should be able to define stateful logic
--   Student should be able to apply non-visual behavior (stateful logic) with custom hooks
--   Student should be able to compose hooks in a custom hook to extend multiple pieces of stateful logic
+- Student should be able to define stateful logic
+- Student should be able to apply non-visual behavior (stateful logic) with custom hooks
+- Student should be able to compose hooks in a custom hook to extend multiple pieces of stateful logic
 
 ## [Testing Web Applications](../module/rechTQVfCg4p85Hoi)
 
@@ -102,6 +102,6 @@ In this module we will learn about automated testing, and more specifically how 
 
 #### Objectives:
 
--   Student should be able to explain what automated testing is and its importance
--   Student should be able to use react-testing-library for testing react components
--   Student should be able to use react-testing-library to test user interactions with fireEvent
+- Student should be able to explain what automated testing is and its importance
+- Student should be able to use react-testing-library for testing react components
+- Student should be able to use react-testing-library to test user interactions with fireEvent

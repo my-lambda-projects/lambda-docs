@@ -16,46 +16,46 @@ You must be a Lambda School student to view this page.
 
 <a href="/cs/sprint/recd4D4w3QrigPqUF" class="bd-toc-link">1.  Intro to Python and OOP</a>
 
--   [Introduction to Python I](/cs/module/recay2erzDlYUPSeO/)
--   [Introduction to Python II](/cs/module/recwpe3Y9TVWrGT8L/)
--   [Introduction to Python III](/cs/module/reca7NYptklr7F403/)
--   [Introduction to Python IV](/cs/module/recc3eWphKVYd0oHT/)
+- [Introduction to Python I](/cs/module/recay2erzDlYUPSeO/)
+- [Introduction to Python II](/cs/module/recwpe3Y9TVWrGT8L/)
+- [Introduction to Python III](/cs/module/reca7NYptklr7F403/)
+- [Introduction to Python IV](/cs/module/recc3eWphKVYd0oHT/)
 
 <a href="/cs/sprint/recR4gHcvD21ziR9a" class="bd-toc-link">2.  Data Structures</a>
 
--   [Data Structures I](/cs/module/rec3MaMAY78iDm7ax/)
--   [Data Structures II](/cs/module/recMcvOrFw5BWUku3/)
--   [Data Structures III](/cs/module/recx53S3pYfDfvFDm/)
--   [Data Structures IV](/cs/module/recHdwPne4Xt3A7lk/)
+- [Data Structures I](/cs/module/rec3MaMAY78iDm7ax/)
+- [Data Structures II](/cs/module/recMcvOrFw5BWUku3/)
+- [Data Structures III](/cs/module/recx53S3pYfDfvFDm/)
+- [Data Structures IV](/cs/module/recHdwPne4Xt3A7lk/)
 
 <a href="/cs/sprint/recd9grrKlURJ453N" class="bd-toc-link">3.  Algorithms</a>
 
--   [Iterative Sorting](/cs/module/reck76SPX26beGSqE/)
--   [Recursive Sorting](/cs/module/reccRh9h6ccXghfA4/)
--   [A First-Pass Solution](/cs/module/recrCuZQMVI6LvxhD/)
--   [Writing Better Solutions](/cs/module/recsvJCzPlM2X63ZX/)
+- [Iterative Sorting](/cs/module/reck76SPX26beGSqE/)
+- [Recursive Sorting](/cs/module/reccRh9h6ccXghfA4/)
+- [A First-Pass Solution](/cs/module/recrCuZQMVI6LvxhD/)
+- [Writing Better Solutions](/cs/module/recsvJCzPlM2X63ZX/)
 
 <a href="/cs/sprint/recvDjRQEq49uoWsU" class="bd-toc-link">4.  CS Unit 1 Build</a>
 
 <a href="/cs/sprint/recAr3gdL8U57eho1" class="bd-toc-link">5.  Hash Tables</a>
 
--   [Hash Tables I](/cs/module/recSwIvbSV630gdVk/)
--   [Hash Tables II](/cs/module/recHzCwboKBLBB0Re/)
--   [Hash Tables III & IV](/cs/module/recsEDFseukQWg92c/)
+- [Hash Tables I](/cs/module/recSwIvbSV630gdVk/)
+- [Hash Tables II](/cs/module/recHzCwboKBLBB0Re/)
+- [Hash Tables III & IV](/cs/module/recsEDFseukQWg92c/)
 
 <a href="/cs/sprint/rec7U9K7OCL5ihj0t" class="bd-toc-link">6.  Graphs</a>
 
--   [Graphs I](/cs/module/recBMbHtb8AOXq3UL/)
--   [Graphs II](/cs/module/recZL2m6Gx7B4dU3G/)
--   [Graphs III](/cs/module/reck4RVWsg82eiYPZ/)
--   [Graphs IV](/cs/module/recoGWlBHjuJxkL1y/)
+- [Graphs I](/cs/module/recBMbHtb8AOXq3UL/)
+- [Graphs II](/cs/module/recZL2m6Gx7B4dU3G/)
+- [Graphs III](/cs/module/reck4RVWsg82eiYPZ/)
+- [Graphs IV](/cs/module/recoGWlBHjuJxkL1y/)
 
 <a href="/cs/sprint/recndTnO1V8oDbBPb" class="bd-toc-link">7.  Computer Architecture</a>
 
--   [Computer Architecture: Basics, Number Bases](/cs/module/recsuJbrrFgbFUCRX/)
--   [Computer Architecture: Bitwise Operations](/cs/module/rec2NHr4Eyib7XdED/)
--   [Computer Architecture: The System Stack](/cs/module/recvQUkzz23NTj20G/)
--   [Computer Architecture: Subroutines, CALL/RET](/cs/module/recGPVAdvQcmopSIO/)
+- [Computer Architecture: Basics, Number Bases](/cs/module/recsuJbrrFgbFUCRX/)
+- [Computer Architecture: Bitwise Operations](/cs/module/rec2NHr4Eyib7XdED/)
+- [Computer Architecture: The System Stack](/cs/module/recvQUkzz23NTj20G/)
+- [Computer Architecture: Subroutines, CALL/RET](/cs/module/recGPVAdvQcmopSIO/)
 
 <a href="/cs/sprint/reco0t22NdXmr8VyL" class="bd-toc-link">8.  CS Unit 2 Build</a>
 
@@ -65,46 +65,46 @@ You must be a Lambda School student to view this page.
 
 <a href="/cs/sprint/recd4D4w3QrigPqUF" class="bd-toc-link">1.  Intro to Python and OOP</a>
 
--   [Introduction to Python I](/cs/module/recay2erzDlYUPSeO/)
--   [Introduction to Python II](/cs/module/recwpe3Y9TVWrGT8L/)
--   [Introduction to Python III](/cs/module/reca7NYptklr7F403/)
--   [Introduction to Python IV](/cs/module/recc3eWphKVYd0oHT/)
+- [Introduction to Python I](/cs/module/recay2erzDlYUPSeO/)
+- [Introduction to Python II](/cs/module/recwpe3Y9TVWrGT8L/)
+- [Introduction to Python III](/cs/module/reca7NYptklr7F403/)
+- [Introduction to Python IV](/cs/module/recc3eWphKVYd0oHT/)
 
 <a href="/cs/sprint/recR4gHcvD21ziR9a" class="bd-toc-link">2.  Data Structures</a>
 
--   [Data Structures I](/cs/module/rec3MaMAY78iDm7ax/)
--   [Data Structures II](/cs/module/recMcvOrFw5BWUku3/)
--   [Data Structures III](/cs/module/recx53S3pYfDfvFDm/)
--   [Data Structures IV](/cs/module/recHdwPne4Xt3A7lk/)
+- [Data Structures I](/cs/module/rec3MaMAY78iDm7ax/)
+- [Data Structures II](/cs/module/recMcvOrFw5BWUku3/)
+- [Data Structures III](/cs/module/recx53S3pYfDfvFDm/)
+- [Data Structures IV](/cs/module/recHdwPne4Xt3A7lk/)
 
 <a href="/cs/sprint/recd9grrKlURJ453N" class="bd-toc-link">3.  Algorithms</a>
 
--   [Iterative Sorting](/cs/module/reck76SPX26beGSqE/)
--   [Recursive Sorting](/cs/module/reccRh9h6ccXghfA4/)
--   [A First-Pass Solution](/cs/module/recrCuZQMVI6LvxhD/)
--   [Writing Better Solutions](/cs/module/recsvJCzPlM2X63ZX/)
+- [Iterative Sorting](/cs/module/reck76SPX26beGSqE/)
+- [Recursive Sorting](/cs/module/reccRh9h6ccXghfA4/)
+- [A First-Pass Solution](/cs/module/recrCuZQMVI6LvxhD/)
+- [Writing Better Solutions](/cs/module/recsvJCzPlM2X63ZX/)
 
 <a href="/cs/sprint/recvDjRQEq49uoWsU" class="bd-toc-link">4.  CS Unit 1 Build</a>
 
 <a href="/cs/sprint/recAr3gdL8U57eho1" class="bd-toc-link">5.  Hash Tables</a>
 
--   [Hash Tables I](/cs/module/recSwIvbSV630gdVk/)
--   [Hash Tables II](/cs/module/recHzCwboKBLBB0Re/)
--   [Hash Tables III & IV](/cs/module/recsEDFseukQWg92c/)
+- [Hash Tables I](/cs/module/recSwIvbSV630gdVk/)
+- [Hash Tables II](/cs/module/recHzCwboKBLBB0Re/)
+- [Hash Tables III & IV](/cs/module/recsEDFseukQWg92c/)
 
 <a href="/cs/sprint/rec7U9K7OCL5ihj0t" class="bd-toc-link">6.  Graphs</a>
 
--   [Graphs I](/cs/module/recBMbHtb8AOXq3UL/)
--   [Graphs II](/cs/module/recZL2m6Gx7B4dU3G/)
--   [Graphs III](/cs/module/reck4RVWsg82eiYPZ/)
--   [Graphs IV](/cs/module/recoGWlBHjuJxkL1y/)
+- [Graphs I](/cs/module/recBMbHtb8AOXq3UL/)
+- [Graphs II](/cs/module/recZL2m6Gx7B4dU3G/)
+- [Graphs III](/cs/module/reck4RVWsg82eiYPZ/)
+- [Graphs IV](/cs/module/recoGWlBHjuJxkL1y/)
 
 <a href="/cs/sprint/recndTnO1V8oDbBPb" class="bd-toc-link">7.  Computer Architecture</a>
 
--   [Computer Architecture: Basics, Number Bases](/cs/module/recsuJbrrFgbFUCRX/)
--   [Computer Architecture: Bitwise Operations](/cs/module/rec2NHr4Eyib7XdED/)
--   [Computer Architecture: The System Stack](/cs/module/recvQUkzz23NTj20G/)
--   [Computer Architecture: Subroutines, CALL/RET](/cs/module/recGPVAdvQcmopSIO/)
+- [Computer Architecture: Basics, Number Bases](/cs/module/recsuJbrrFgbFUCRX/)
+- [Computer Architecture: Bitwise Operations](/cs/module/rec2NHr4Eyib7XdED/)
+- [Computer Architecture: The System Stack](/cs/module/recvQUkzz23NTj20G/)
+- [Computer Architecture: Subroutines, CALL/RET](/cs/module/recGPVAdvQcmopSIO/)
 
 <a href="/cs/sprint/reco0t22NdXmr8VyL" class="bd-toc-link">8.  CS Unit 2 Build</a>
 
@@ -116,21 +116,21 @@ You must be a Lambda School student to view this page.
 
 ## Goals
 
--   Practice solving arbitrary problems
--   Practice HackerRank-style whiteboard challenges
--   Practice interviewing
--   Learn interviewing techniques
--   Learn interview coding best-practices
+- Practice solving arbitrary problems
+- Practice HackerRank-style whiteboard challenges
+- Practice interviewing
+- Learn interviewing techniques
+- Learn interview coding best-practices
 
 ## Requirements/MVP
 
--   Participate in and attend guided demo daily
--   Work on afternoon programming challenges
--   Meet with your TL for 1:1s
--   Meet with your TL for behavioral interview prep
--   Complete the Unit Assessment
--   Things that are **not** required:
-    -   Solving the whiteboarding problems (but you must attempt)
+- Participate in and attend guided demo daily
+- Work on afternoon programming challenges
+- Meet with your TL for 1:1s
+- Meet with your TL for behavioral interview prep
+- Complete the Unit Assessment
+- Things that are **not** required:
+  - Solving the whiteboarding problems (but you must attempt)
 
 ## Guided Projects
 
@@ -142,37 +142,37 @@ We’ll also have some additional material:
 
 Selected topics may include:
 
--   UPER: the key to thinking on your feet
--   How to describe a problem
--   How to describe a solution at a high level
--   How to talk about code you wrote
--   Copy code before submitting
--   Using UPER with whiteboarding
--   How to answer questions about optimization
--   Which data structure to use when?
--   Big-O, time and space complexity
--   How to comment code
--   How to format code
--   Make your code look sharp
--   How to code review/be code reviewed
--   How to react when the interviewer tells you a better way of doing things than you did
--   How to relax and work well under pressure
--   Having the right attitude while interviewing
--   How and when to be self-critical in an interview
--   How to practice interviewing with anyone
--   Self-assessing your interviewing strengths and weaknesses
+- UPER: the key to thinking on your feet
+- How to describe a problem
+- How to describe a solution at a high level
+- How to talk about code you wrote
+- Copy code before submitting
+- Using UPER with whiteboarding
+- How to answer questions about optimization
+- Which data structure to use when?
+- Big-O, time and space complexity
+- How to comment code
+- How to format code
+- Make your code look sharp
+- How to code review/be code reviewed
+- How to react when the interviewer tells you a better way of doing things than you did
+- How to relax and work well under pressure
+- Having the right attitude while interviewing
+- How and when to be self-critical in an interview
+- How to practice interviewing with anyone
+- Self-assessing your interviewing strengths and weaknesses
 
 ### Tuesday: How to Present your Work
 
--   Presentation by Kathleen Hunt
+- Presentation by Kathleen Hunt
 
 ### Wednesday: General Interviewing techniques
 
--   Presentation by Jordan Isbell
+- Presentation by Jordan Isbell
 
 ### Thursday: What Companies Really Want to See
 
--   Presentation by Lindsay Gilson
+- Presentation by Lindsay Gilson
 
 ## Afternoon Projects
 
@@ -186,7 +186,7 @@ It’s not required to work on both. The second one is there in case you solve t
 
 During your 1:1 with your TL, they will ask you to describe the problem you worked on, as well as your strategy for solving it. Time permitting, they’ll also look at your code.
 
-Hint: during this interview, pretend *you’re* the instructor and you’re teaching the TL about this problem and how to attack it.
+Hint: during this interview, pretend _you’re_ the instructor and you’re teaching the TL about this problem and how to attack it.
 
 Even if you haven’t solved the problem, tell them about the problem and your attempt so far.
 

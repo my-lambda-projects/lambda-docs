@@ -16,46 +16,46 @@ You must be a Lambda School student to view this page.
 
 <a href="/cs/sprint/recd4D4w3QrigPqUF" class="bd-toc-link">1.  Intro to Python and OOP</a>
 
--   [Introduction to Python I](/cs/module/recay2erzDlYUPSeO/)
--   [Introduction to Python II](/cs/module/recwpe3Y9TVWrGT8L/)
--   [Introduction to Python III](/cs/module/reca7NYptklr7F403/)
--   [Introduction to Python IV](/cs/module/recc3eWphKVYd0oHT/)
+- [Introduction to Python I](/cs/module/recay2erzDlYUPSeO/)
+- [Introduction to Python II](/cs/module/recwpe3Y9TVWrGT8L/)
+- [Introduction to Python III](/cs/module/reca7NYptklr7F403/)
+- [Introduction to Python IV](/cs/module/recc3eWphKVYd0oHT/)
 
 <a href="/cs/sprint/recR4gHcvD21ziR9a" class="bd-toc-link">2.  Data Structures</a>
 
--   [Data Structures I](/cs/module/rec3MaMAY78iDm7ax/)
--   [Data Structures II](/cs/module/recMcvOrFw5BWUku3/)
--   [Data Structures III](/cs/module/recx53S3pYfDfvFDm/)
--   [Data Structures IV](/cs/module/recHdwPne4Xt3A7lk/)
+- [Data Structures I](/cs/module/rec3MaMAY78iDm7ax/)
+- [Data Structures II](/cs/module/recMcvOrFw5BWUku3/)
+- [Data Structures III](/cs/module/recx53S3pYfDfvFDm/)
+- [Data Structures IV](/cs/module/recHdwPne4Xt3A7lk/)
 
 <a href="/cs/sprint/recd9grrKlURJ453N" class="bd-toc-link">3.  Algorithms</a>
 
--   [Iterative Sorting](/cs/module/reck76SPX26beGSqE/)
--   [Recursive Sorting](/cs/module/reccRh9h6ccXghfA4/)
--   [A First-Pass Solution](/cs/module/recrCuZQMVI6LvxhD/)
--   [Writing Better Solutions](/cs/module/recsvJCzPlM2X63ZX/)
+- [Iterative Sorting](/cs/module/reck76SPX26beGSqE/)
+- [Recursive Sorting](/cs/module/reccRh9h6ccXghfA4/)
+- [A First-Pass Solution](/cs/module/recrCuZQMVI6LvxhD/)
+- [Writing Better Solutions](/cs/module/recsvJCzPlM2X63ZX/)
 
 <a href="/cs/sprint/recvDjRQEq49uoWsU" class="bd-toc-link">4.  CS Unit 1 Build</a>
 
 <a href="/cs/sprint/recAr3gdL8U57eho1" class="bd-toc-link">5.  Hash Tables</a>
 
--   [Hash Tables I](/cs/module/recSwIvbSV630gdVk/)
--   [Hash Tables II](/cs/module/recHzCwboKBLBB0Re/)
--   [Hash Tables III & IV](/cs/module/recsEDFseukQWg92c/)
+- [Hash Tables I](/cs/module/recSwIvbSV630gdVk/)
+- [Hash Tables II](/cs/module/recHzCwboKBLBB0Re/)
+- [Hash Tables III & IV](/cs/module/recsEDFseukQWg92c/)
 
 <a href="/cs/sprint/rec7U9K7OCL5ihj0t" class="bd-toc-link">6.  Graphs</a>
 
--   [Graphs I](/cs/module/recBMbHtb8AOXq3UL/)
--   [Graphs II](/cs/module/recZL2m6Gx7B4dU3G/)
--   [Graphs III](/cs/module/reck4RVWsg82eiYPZ/)
--   [Graphs IV](/cs/module/recoGWlBHjuJxkL1y/)
+- [Graphs I](/cs/module/recBMbHtb8AOXq3UL/)
+- [Graphs II](/cs/module/recZL2m6Gx7B4dU3G/)
+- [Graphs III](/cs/module/reck4RVWsg82eiYPZ/)
+- [Graphs IV](/cs/module/recoGWlBHjuJxkL1y/)
 
 <a href="/cs/sprint/recndTnO1V8oDbBPb" class="bd-toc-link">7.  Computer Architecture</a>
 
--   [Computer Architecture: Basics, Number Bases](/cs/module/recsuJbrrFgbFUCRX/)
--   [Computer Architecture: Bitwise Operations](/cs/module/rec2NHr4Eyib7XdED/)
--   [Computer Architecture: The System Stack](/cs/module/recvQUkzz23NTj20G/)
--   [Computer Architecture: Subroutines, CALL/RET](/cs/module/recGPVAdvQcmopSIO/)
+- [Computer Architecture: Basics, Number Bases](/cs/module/recsuJbrrFgbFUCRX/)
+- [Computer Architecture: Bitwise Operations](/cs/module/rec2NHr4Eyib7XdED/)
+- [Computer Architecture: The System Stack](/cs/module/recvQUkzz23NTj20G/)
+- [Computer Architecture: Subroutines, CALL/RET](/cs/module/recGPVAdvQcmopSIO/)
 
 <a href="/cs/sprint/reco0t22NdXmr8VyL" class="bd-toc-link">8.  CS Unit 2 Build</a>
 
@@ -65,46 +65,46 @@ You must be a Lambda School student to view this page.
 
 <a href="/cs/sprint/recd4D4w3QrigPqUF" class="bd-toc-link">1.  Intro to Python and OOP</a>
 
--   [Introduction to Python I](/cs/module/recay2erzDlYUPSeO/)
--   [Introduction to Python II](/cs/module/recwpe3Y9TVWrGT8L/)
--   [Introduction to Python III](/cs/module/reca7NYptklr7F403/)
--   [Introduction to Python IV](/cs/module/recc3eWphKVYd0oHT/)
+- [Introduction to Python I](/cs/module/recay2erzDlYUPSeO/)
+- [Introduction to Python II](/cs/module/recwpe3Y9TVWrGT8L/)
+- [Introduction to Python III](/cs/module/reca7NYptklr7F403/)
+- [Introduction to Python IV](/cs/module/recc3eWphKVYd0oHT/)
 
 <a href="/cs/sprint/recR4gHcvD21ziR9a" class="bd-toc-link">2.  Data Structures</a>
 
--   [Data Structures I](/cs/module/rec3MaMAY78iDm7ax/)
--   [Data Structures II](/cs/module/recMcvOrFw5BWUku3/)
--   [Data Structures III](/cs/module/recx53S3pYfDfvFDm/)
--   [Data Structures IV](/cs/module/recHdwPne4Xt3A7lk/)
+- [Data Structures I](/cs/module/rec3MaMAY78iDm7ax/)
+- [Data Structures II](/cs/module/recMcvOrFw5BWUku3/)
+- [Data Structures III](/cs/module/recx53S3pYfDfvFDm/)
+- [Data Structures IV](/cs/module/recHdwPne4Xt3A7lk/)
 
 <a href="/cs/sprint/recd9grrKlURJ453N" class="bd-toc-link">3.  Algorithms</a>
 
--   [Iterative Sorting](/cs/module/reck76SPX26beGSqE/)
--   [Recursive Sorting](/cs/module/reccRh9h6ccXghfA4/)
--   [A First-Pass Solution](/cs/module/recrCuZQMVI6LvxhD/)
--   [Writing Better Solutions](/cs/module/recsvJCzPlM2X63ZX/)
+- [Iterative Sorting](/cs/module/reck76SPX26beGSqE/)
+- [Recursive Sorting](/cs/module/reccRh9h6ccXghfA4/)
+- [A First-Pass Solution](/cs/module/recrCuZQMVI6LvxhD/)
+- [Writing Better Solutions](/cs/module/recsvJCzPlM2X63ZX/)
 
 <a href="/cs/sprint/recvDjRQEq49uoWsU" class="bd-toc-link">4.  CS Unit 1 Build</a>
 
 <a href="/cs/sprint/recAr3gdL8U57eho1" class="bd-toc-link">5.  Hash Tables</a>
 
--   [Hash Tables I](/cs/module/recSwIvbSV630gdVk/)
--   [Hash Tables II](/cs/module/recHzCwboKBLBB0Re/)
--   [Hash Tables III & IV](/cs/module/recsEDFseukQWg92c/)
+- [Hash Tables I](/cs/module/recSwIvbSV630gdVk/)
+- [Hash Tables II](/cs/module/recHzCwboKBLBB0Re/)
+- [Hash Tables III & IV](/cs/module/recsEDFseukQWg92c/)
 
 <a href="/cs/sprint/rec7U9K7OCL5ihj0t" class="bd-toc-link">6.  Graphs</a>
 
--   [Graphs I](/cs/module/recBMbHtb8AOXq3UL/)
--   [Graphs II](/cs/module/recZL2m6Gx7B4dU3G/)
--   [Graphs III](/cs/module/reck4RVWsg82eiYPZ/)
--   [Graphs IV](/cs/module/recoGWlBHjuJxkL1y/)
+- [Graphs I](/cs/module/recBMbHtb8AOXq3UL/)
+- [Graphs II](/cs/module/recZL2m6Gx7B4dU3G/)
+- [Graphs III](/cs/module/reck4RVWsg82eiYPZ/)
+- [Graphs IV](/cs/module/recoGWlBHjuJxkL1y/)
 
 <a href="/cs/sprint/recndTnO1V8oDbBPb" class="bd-toc-link">7.  Computer Architecture</a>
 
--   [Computer Architecture: Basics, Number Bases](/cs/module/recsuJbrrFgbFUCRX/)
--   [Computer Architecture: Bitwise Operations](/cs/module/rec2NHr4Eyib7XdED/)
--   [Computer Architecture: The System Stack](/cs/module/recvQUkzz23NTj20G/)
--   [Computer Architecture: Subroutines, CALL/RET](/cs/module/recGPVAdvQcmopSIO/)
+- [Computer Architecture: Basics, Number Bases](/cs/module/recsuJbrrFgbFUCRX/)
+- [Computer Architecture: Bitwise Operations](/cs/module/rec2NHr4Eyib7XdED/)
+- [Computer Architecture: The System Stack](/cs/module/recvQUkzz23NTj20G/)
+- [Computer Architecture: Subroutines, CALL/RET](/cs/module/recGPVAdvQcmopSIO/)
 
 <a href="/cs/sprint/reco0t22NdXmr8VyL" class="bd-toc-link">8.  CS Unit 2 Build</a>
 
@@ -116,14 +116,14 @@ You must be a Lambda School student to view this page.
 
 ## Non-DS Students
 
-Conway’s Game of Life is a venerable old algorithm that simulates “life” on a 2D grid. It’s a class of algorithm known as a *cellular automaton*.
+Conway’s Game of Life is a venerable old algorithm that simulates “life” on a 2D grid. It’s a class of algorithm known as a _cellular automaton_.
 
 DS students have the option to implement this project, or the DS-specific projects, below.
 
--   [Conway’s Game of Life information and Build Week instructions](https://github.com/LambdaSchool/CS-Build-Week-1)
+- [Conway’s Game of Life information and Build Week instructions](https://github.com/LambdaSchool/CS-Build-Week-1)
 
 ## DS Students
 
 You have the option of doing the Game of Life project, above, or one of these more DS-specific projects.
 
--   [DS Build Week 1 Projects](https://github.com/LambdaSchool/CS-Data-Science-Build-Week-1)
+- [DS Build Week 1 Projects](https://github.com/LambdaSchool/CS-Data-Science-Build-Week-1)

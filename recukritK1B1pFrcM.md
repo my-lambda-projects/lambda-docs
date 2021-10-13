@@ -16,24 +16,24 @@ You must be a Lambda School student to view this page.
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
@@ -43,24 +43,24 @@ You must be a Lambda School student to view this page.
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
@@ -74,9 +74,9 @@ The difficulties of storing and efficiently performing logic on data within comp
 
 #### Objectives:
 
--   Student should be able to explain what immutability is in programming and demonstrate its benefits
--   Student should be able to describe reducer functions
--   Student should be able to employ the \`useReducer\` hook to manage state in a component
+- Student should be able to explain what immutability is in programming and demonstrate its benefits
+- Student should be able to describe reducer functions
+- Student should be able to employ the \`useReducer\` hook to manage state in a component
 
 ## [Redux](../module/recba2NUdVmgKYyR3)
 
@@ -84,11 +84,11 @@ React is a very sophisticated UI - Component Library that can be used together w
 
 #### Objectives:
 
--   Student should be able to explain what Redux is and the problem it solves
--   Student should be able to create a Redux Store and connect it to a React application
--   Student should be able to use the connect() function to "connect" React components to the Redux store
--   Student should be able to write Actions and Action Creators to describe state changes
--   Student should be able to write Reducers to respond to actions and update state
+- Student should be able to explain what Redux is and the problem it solves
+- Student should be able to create a Redux Store and connect it to a React application
+- Student should be able to use the connect() function to "connect" React components to the Redux store
+- Student should be able to write Actions and Action Creators to describe state changes
+- Student should be able to write Reducers to respond to actions and update state
 
 ## [Async Redux](../module/recSoiWNJzGURrXYh)
 
@@ -96,9 +96,9 @@ By nature Redux is synchronous. Because of this we need to apply some middleware
 
 #### Objectives:
 
--   Student should be able to describe the Finite State Machine pattern and it's relationship to building Redux applications
--   Student should be able to implement Redux Middleware libraries into a Redux Store using \`applyMiddleware\`
--   Student should be able to effectively use \`redux-thunk\` and asynchronous action creators to consume data from external API's
+- Student should be able to describe the Finite State Machine pattern and it's relationship to building Redux applications
+- Student should be able to implement Redux Middleware libraries into a Redux Store using \`applyMiddleware\`
+- Student should be able to effectively use \`redux-thunk\` and asynchronous action creators to consume data from external API's
 
 ## [Context API](../module/recByjgF7FwwH5Z7W)
 
@@ -106,6 +106,6 @@ In your typical react application `state` is passed top-down (parent to child) v
 
 #### Objectives:
 
--   Student should be able to describe what the Context API is and the problem is solves
--   Student should be able to provide data to the component tree with a context provider
--   Student should be able to consume data from a context object in nested components
+- Student should be able to describe what the Context API is and the problem is solves
+- Student should be able to provide data to the component tree with a context provider
+- Student should be able to consume data from a context object in nested components
