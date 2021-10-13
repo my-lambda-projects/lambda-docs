@@ -1,0 +1,876 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Intended as a home for Lambda School curriculum.">
+<meta name="author" content="">
+<meta name="generator" content="Jekyll v3.8.0">
+<title>User Interface · Lambda School</title>
+
+<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+  analytics.page();
+  }}();
+</script>
+
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#a0001e">
+</head>
+<body>
+<noscript>Please enable JavaScript to view this page.</noscript>
+<div id="redirect-message" style="display: none;">
+You must be logged in to view this page.
+</div>
+<div id="unauthorized-message" style="display: none;">
+You must be a Lambda School student to view this page.
+</div>
+<div id="content-wrapper" >
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container">
+<span class="skiplink-text">Skip to main content</span>
+</div>
+</a>
+<div class="mobile-menu">
+<div class="m-drop">
+<div class="mobile-row">
+<div class="header-row" style="padding: 3px 7px">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
+</svg></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+</button>
+</div>
+</div>
+<div class="nav-row">
+<div class="results-container">
+<ul id="results-container" class="dropdown list-group"></ul>
+</div>
+<div id="mobile-course-menu" class="collapse nav-row">
+<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+<nav class="bd-links">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web Fundamentals</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/rec2neAvlo6zM07qc">
+1.&nbsp;&nbsp;User Interface and Git
+</a>
+<ul class="nav bd-sidenav">
+
+<li class="active bd-sidenav-active">
+<a href="/web1/module/recl0IyzS2Vl89lZa/">
+User Interface
+</a>
+</li>
+<li>
+<a href="/web1/module/rect59e95N6OSvoCd/">
+Git for Web Development
+</a>
+</li>
+<li>
+<a href="/web1/module/rec6KMj0W3ukhYeWv/">
+Intro CSS
+</a>
+</li>
+<li>
+<a href="/web1/module/recYyDfYS2UmsvquL/">
+CSS Layouts
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/recYAgtervk7WilBW">
+2.&nbsp;&nbsp;Advanced CSS and Intro JavaScript
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web1/module/recUPpx89Z2uWzkzU/">
+Responsive Design
+</a>
+</li>
+<li>
+<a href="/web1/module/recPmaqIfzn9NMPLY/">
+Intro to JavaScript
+</a>
+</li>
+<li>
+<a href="/web1/module/recXRqGjyTS6uDzSA/">
+Arrays
+</a>
+</li>
+<li>
+<a href="/web1/module/recQV3tKcEDXa840D/">
+Objects
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/recIS8D2e4nTRGCLT">
+3.&nbsp;&nbsp;JavaScript Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web1/module/recrBjfZ9mBasSPpa/">
+Scope and Closure
+</a>
+</li>
+<li>
+<a href="/web1/module/recNilLQDqhqvPuNk/">
+Advanced Array Methods
+</a>
+</li>
+<li>
+<a href="/web1/module/rec0AWuNLezbpit7m/">
+Prototypes and Inheritance
+</a>
+</li>
+<li>
+<a href="/web1/module/recyS588eOvVUKAMc/">
+Classes
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/rec2di8phTBw15e4E">
+4.&nbsp;&nbsp;WEB Unit 1 Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-container">
+<div class="sidebar-container bd-sidebar">
+<div class="docs-sidebar">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
+<ul id="results-container" class="dropdown list-group"></ul>
+<nav class="bd-links collapse" id="bd-docs-nav">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web Fundamentals</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/rec2neAvlo6zM07qc">
+1.&nbsp;&nbsp;User Interface and Git
+</a>
+<ul class="nav bd-sidenav">
+
+<li class="active bd-sidenav-active">
+<a href="/web1/module/recl0IyzS2Vl89lZa/">
+User Interface
+</a>
+</li>
+<li>
+<a href="/web1/module/rect59e95N6OSvoCd/">
+Git for Web Development
+</a>
+</li>
+<li>
+<a href="/web1/module/rec6KMj0W3ukhYeWv/">
+Intro CSS
+</a>
+</li>
+<li>
+<a href="/web1/module/recYyDfYS2UmsvquL/">
+CSS Layouts
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/recYAgtervk7WilBW">
+2.&nbsp;&nbsp;Advanced CSS and Intro JavaScript
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web1/module/recUPpx89Z2uWzkzU/">
+Responsive Design
+</a>
+</li>
+<li>
+<a href="/web1/module/recPmaqIfzn9NMPLY/">
+Intro to JavaScript
+</a>
+</li>
+<li>
+<a href="/web1/module/recXRqGjyTS6uDzSA/">
+Arrays
+</a>
+</li>
+<li>
+<a href="/web1/module/recQV3tKcEDXa840D/">
+Objects
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/recIS8D2e4nTRGCLT">
+ 3.&nbsp;&nbsp;JavaScript Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web1/module/recrBjfZ9mBasSPpa/">
+Scope and Closure
+</a>
+</li>
+<li>
+<a href="/web1/module/recNilLQDqhqvPuNk/">
+Advanced Array Methods
+</a>
+</li>
+<li>
+<a href="/web1/module/rec0AWuNLezbpit7m/">
+Prototypes and Inheritance
+</a>
+</li>
+<li>
+<a href="/web1/module/recyS588eOvVUKAMc/">
+Classes
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/rec2di8phTBw15e4E">
+4.&nbsp;&nbsp;WEB Unit 1 Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<main class="content-container flex-wrapper" role="main">
+<div class="sticky-nav">
+<div class="sprint-nav">
+<ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+<li class="toc-entry toc-h2"><a href="#projects">Projects</a></li>
+<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+</ul>
+</div>
+
+</div>
+<div class="wrapper limit-width">
+<div class="flex-wrapper">
+<div class="limit-width">
+<div class="jumbotron">
+<h1 class="bd-title" id="content">User Interface</h1>
+<span class="lead">
+<p class="bd-lead"></p>
+<p>Even the most complex web applications start with simple HTML elements. Knowing how to use HTML and style it with CSS has a massive impact for your future as a developer. This module will explore the fundamentals of HTML and CSS.</p>
+</span>
+<strong>At the end of this module, you should be able to:</strong>
+<ul>
+<li>learn what HTML is and what it is used for in Web Development</li>
+<li>learn to utilize common HTML tags and attributes to mark up a basic page of content</li>
+<li>understand the main concepts of CSS (selectors and style rules), and be able to apply them to an HTML page</li>
+</ul>
+</div>
+<div class="alert alert-warning" role="alert">
+<h4>Pro Tip</h4>
+<p>Dress for the job you want, not the job you have. When interviewing, dress a step up from what you’d wear to work every day.</p>
+</div>
+<h2 class="display-4">
+<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
+<p class="lead">Review each preclass resource before class.</p>
+<div class="preclass">
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0bXl34ordKU" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/N0nHktkWgMg" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hht3VNemm4o" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+</ul>
+</div>
+<h2 class="display-4">
+<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
+<h4 class="mark mb-3 p-2">Learn to learn what HTML is and what it is used for in Web Development</h4>
+<h5>Overview</h5>
+<h3 id="what-is-html">What is HTML?</h3>
+<p>HTML is one of the languages we use for web development. HTML is what we call a “markup language” (as opposed to a “programming” language like JavaScript or Python). This means that it is specifically designed to <em>display data</em> in a graphical form (rather than <em>execute tasks</em>).</p>
+<p>HTML was created as a language when the first visual web browsers came into existence in the early 90s. It is read by the browser and then used as a blueprint for displaying information on your screen.</p>
+<h4 id="what-is-a-markup-language">What is a markup language?</h4>
+<p>Every webpage is essentially just plain text. If you type the sentence “Lambda school is awesome” in an HTML file, you can open it in your web browser and even deploy it to the web. Of course, we know that web pages are much more nuanced than that, and that is thanks to HTML elements.</p>
+<p>We can think of elements as being boxes of content on our web page. Different types of content will be contained in different boxes depending on their importance. For example, “Lambda school is awesome” might be a <code class="highlighter-rouge">header</code> element, with a list of reasons why as a <code class="highlighter-rouge">p</code> (paragraph) element. When you box the text above in a <code class="highlighter-rouge">header</code> (or <code class="highlighter-rouge">h1</code>) element, it looks something like this.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span> Lambda School is Awesome <span class="nt">&lt;/h1&gt;</span>
+</code></pre></div></div>
+<p>We use certain elements for headers, other elements for images, and still other elements for text. We will be focusing on four different display elements today: division elements (divs), headers, paragraphs, and spans.</p>
+<h4 id="how-do-we-create-html-code">How do we create HTML code?</h4>
+<p>We will be writing our HTML code in a sandbox environment called CodePen. CodePen is a great learning tool (as well as a great place to tinker with small chunks of code on the job). We write HTML directly in the HTML section of CodePen and the elements that we create will render in real-time on screen. This is much faster than having to save our file and reload it in the browser every time we make a change.</p>
+<p>Go ahead and edit the code below to make your webpage display any sentence you’d like.</p>
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="lambdaschool" data-slug-hash="f3c5f02c778ef23285f134f2f31369cb" data-editable="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="PreCourse">
+<span>See the Pen <a href="https://codepen.io/lambdaschool/pen/f3c5f02c778ef23285f134f2f31369cb">
+PreCourse</a> by Lambda School (<a href="https://codepen.io/lambdaschool">@lambdaschool</a>)
+on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+<p><em>Note:</em> CodePen allows us to leave out a couple of critical elements: the <code class="highlighter-rouge">html</code>, <code class="highlighter-rouge">head</code>, and <code class="highlighter-rouge">body</code> elements. These are important to understand when we start writing HTML code in our text editors, but for now, we can ignore them, because CodePen handles them automatically.</p>
+<h4 id="what-are-tags">What are tags?</h4>
+<p>To create an HTML element, we need to use tags. Each element contains the text (like we saw above), the tag (<code class="highlighter-rouge">h1</code>) and any number of other details that we’ll learn about later on. The tag names are built into the language and must be written exactly as expected in order for our HTML to render correctly. For example, <code class="highlighter-rouge">paragraph</code> is not a valid tag name in HTML, but <code class="highlighter-rouge">p</code> is. You can use online documentation to verify which tag names exist and what elements they are used for.</p>
+<p>If we wanted to tag the sentence above as an important header (the biggest text by default), we’d use the <code class="highlighter-rouge">&lt;h1&gt;</code> and <code class="highlighter-rouge">&lt;/h1&gt;</code> beginning and end tags, as shown below. Before you move on, edit the codepen above to include the <code class="highlighter-rouge">&lt;h1&gt;</code> tags and note how the result changes!</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>Lamba School is Awesome!<span class="nt">&lt;/h1&gt;</span>
+</code></pre></div></div>
+<p>Once we decide which tag we want to use, we can create an opening tag using brackets: <code class="highlighter-rouge">&lt;p&gt;</code>. These tags must be syntactically precise: an opening bracket + a tag name + a closing bracket. A closing tag looks almost exactly the same, except with a backslash before the tag name. So a closing paragraph tag would look like this: <code class="highlighter-rouge">&lt;/p&gt;</code>. Thus, to create a paragraph with text, we need only write an opening tag and a closing tag:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>text goes here<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+<h4 id="so-what-are-divs-headers-paragraphs-and-spans-exactly">So what are divs, headers, paragraphs, and spans exactly?</h4>
+<p>We will be focusing today on four types of display elements. Now that we understand how to create these elements, let’s explore their use cases.</p>
+<ul>
+<li>
+<code class="highlighter-rouge">&lt;p&gt;</code>
+<ul>
+<li>The p (“paragraph”) element. This element is meant for holding text. By default, it will render text to the screen on a new line.</li>
+</ul>
+</li>
+</ul>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;p&gt;</span>Here is a paragraph!<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+<ul>
+<li>
+<code class="highlighter-rouge">&lt;div&gt;</code>
+<ul>
+<li>The div element is a generic container. It is used primarily for grouping other HTML elements together. It is invisible by default but can be used to position or style a group of elements. Div isn’t super useful in plain html, but will become powerful when we start to “stack” HTML with JavaScript and CSS.</li>
+<li>
+<code class="highlighter-rouge">&lt;div&gt;</code> is a block-level element, meaning it will take up its own, full line.</li>
+</ul>
+</li>
+</ul>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;p&gt;</span>This paragraph is about grapefruits.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>This paragraph is also about grapefruits! I guess it's related to the paragraph above.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<ul>
+<li>
+<code class="highlighter-rouge">&lt;span&gt;</code>
+<ul>
+<li>The span element is a generic text container. It does not create a new line like the p element does. This element is invisible by default but can be used for styling words or phrases within a larger body of text.</li>
+<li>Unlike <code class="highlighter-rouge">&lt;div&gt;</code>, <code class="highlighter-rouge">&lt;span&gt;</code> operates inline and therefore doesn’t take up its own line.</li>
+</ul>
+</li>
+</ul>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>This paragraph contains a <span class="nt">&lt;span&gt;</span>very important phrase<span class="nt">&lt;/span&gt;</span> that should be styled in some way.<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+<ul>
+<li>
+<code class="highlighter-rouge">&lt;h1&gt;-&lt;h6&gt;</code>
+<ul>
+<li>These are heading tags there are intended to be used as a way to present the subject matter of the page. 1 is the most important and 6 is the least important. By default, 1 will be the largest, 2 will be the next largest, and etc.</li>
+<li>Avoid using heading tags to resize text. Headings use size to indicate their relative importance, but CSS is preferred for general-purpose resizing.</li>
+<li>You should only use one <code class="highlighter-rouge">&lt;h1&gt;</code> per page. Using more than one will not result in an error, but using only one is seen as a best practice. It makes logical sense — <code class="highlighter-rouge">&lt;h1&gt;</code> is the most important heading, and tells you what the purpose of the overall page is. You wouldn’t have a book with more than one title, or a movie with more than one name! Having a single top-level title is also arguably better for screen reader users, and SEO.</li>
+</ul>
+</li>
+</ul>
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="lambdaschool" data-slug-hash="19c92b335519fea1c509f759c4d14696" data-editable="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="PreCourse tag levels">
+<span>See the Pen <a href="https://codepen.io/lambdaschool/pen/19c92b335519fea1c509f759c4d14696">
+PreCourse tag levels</a> by Lambda School (<a href="https://codepen.io/lambdaschool">@lambdaschool</a>)
+on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+<h3 id="semantic-html5">Semantic HTML5</h3>
+<p>The W3C uses the word <code class="highlighter-rouge">recommended</code> to describe the most up to date web standards. The current recommended standard for HTML markup is HTML5. HTML5 comes with more meaningful tags to better describe our code. We use the word <code class="highlighter-rouge">semantic</code> to describe tags with meaning.</p>
+<p>Some examples of semantic tags include:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+<span class="nt">&lt;section&gt;</span>
+<span class="nt">&lt;nav&gt;</span>
+<span class="nt">&lt;header&gt;</span>
+<span class="nt">&lt;footer&gt;</span>
+</code></pre></div></div>
+<p>Notice that you can quickly figure out what each tag listed should be described in HTML. The fact that you can read the tag and know more about its meaning instantly is a direct example of why we say it’s semantic HTML.</p>
+<p>Compare the semantic tags above with this list of non-semantic tags below:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div&gt;</span>
+<span class="nt">&lt;span&gt;</span>
+</code></pre></div></div>
+<p>At this point, we can see the advantage of semantic markup for web developers. The clarity and meaning should be found right in the tags. There is another large advantage in writing semantically correct code: computer algorithms consuming your code.</p>
+<p>Search engines are algorithms looking for meaning. If your code has a lot of divs without meaning, you could lose out on valuable search engine optimization ranking. Knowing that both humans and machines prefer semantic code, we should get some practice writing it and knowing when to use it.</p>
+<h3 id="div-tags-arent-bad">
+<code class="highlighter-rouge">&lt;div&gt;</code> Tags Aren’t Bad</h3>
+<p>In the example above, we shed a bit of bad light on using divs with classes, but the reality is that often, you need a div to get the job done. When do we use div tags? Whenever we don’t need to describe meaning. Using a div to create space, add structure, or style elements is just fine. The concept of using markup like this is called presentational HTML.</p>
+<p>Presentational HTML does not convey meaning. It is used to achieve something the designer or client wanted but perhaps doesn’t contain meaning. An example of this would be:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Half the content here should go here.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;p&gt;</span>The other half here should go here.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div></div>
+<p>Notice how we can use the <code class="highlighter-rouge">&lt;section&gt;</code> tag to wrap the content, but we could split the content into two halves using divs. Semantically we are still using <code class="highlighter-rouge">&lt;section&gt;</code>, and at the same time, we are using presentational <code class="highlighter-rouge">&lt;div&gt;</code> tags to split the content in half. We could then use CSS on our divs to split the content without hurting the semantic structure.</p>
+<h4 id="how-can-i-inspect-an-existing-web-page">How can I inspect an existing web page?</h4>
+<p>When learning HTML, it can be useful to investigate existing web pages. There is a tool built into Chrome and Firefox called the inspector that allows us to do this. Just right-click any element on a webpage and select “inspect” or “inspect element”, depending on the browser. Note that we don’t recommend using Safari or Edge for web development. This will pop up a sidebar that allows you to explore all the HTML on the web page. It can be overwhelming for a new developer, but it is a good way to get a taste of what goes into building a complex, production web page.</p>
+<h5>Follow Along</h5>
+<p>Let’s practice marking up text in the pen below. For the next few lessons, we’re going to focus on building a replica of an old version of Lambdaschool.com’s home page. Please note that changes you make to inline pens will not ‘save’, to fork and save your own copy of this pen, click the logo in the right corner to open it in a new tab.</p>
+<p>First, let’s take a look at Lambda’s old homepage: </p>
+<p><img src="https://i.imgur.com/ZWSo5vE.gif" alt="lambda real website"></p>
+<p class="codepen" data-height="436" data-theme-id="dark" data-default-tab="html,result" data-user="lambdaschool" data-slug-hash="961cd3dbdd87725892b6d6415f547925" style="height: 436px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="PreCourse tag levels Tutorial">
+<span>See the Pen <a href="https://codepen.io/lambdaschool/pen/961cd3dbdd87725892b6d6415f547925">
+PreCourse tag levels Tutorial</a> by Lambda School (<a href="https://codepen.io/lambdaschool">@lambdaschool</a>)
+on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+<p>The first thing we want to do with our plain text is incorporate HTML elements to identify exactly what different components do. Looking at the real lambdaschool.com we can see that some text is large, some is small, and some is encased in a button. Together, lets add the proper tags in the codepen above. To start, we’ll add a <code class="highlighter-rouge">&lt;h1&gt;</code> heading around “Lambda School” in <code class="highlighter-rouge">&lt;h1&gt;</code> header and <code class="highlighter-rouge">&lt;/h1&gt;</code> closing tags.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span> Lambda School <span class="nt">&lt;/h1&gt;</span>
+</code></pre></div></div>
+<p>Next, let’s grab the subtitle “Higher learning. Higher earning” and “your new tech career starts here” and place them in <code class="highlighter-rouge">&lt;h2&gt;</code> heading and <code class="highlighter-rouge">&lt;/h2&gt;</code> closing tags.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h2&gt;</span> Higher learning. Higher earning. <span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h2&gt;</span>Your new tech career starts here. <span class="nt">&lt;/h2&gt;</span>
+</code></pre></div></div>
+<p>Next up, add “apply to Lambda”. We want this to be a button - to create a button, all we have to do is use the semantic <code class="highlighter-rouge">&lt;button&gt;</code> tags. Right now, this button won’t do anything, but we’ll add that feature soon. For now, we can be excited that it <em>looks</em> like a button.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button&gt;</span> Apply to Lambda<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+<p>Finally, let’s wrap the two “big” chunks of text in <code class="highlighter-rouge">&lt;p&gt;</code> tags.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button&gt;</span>Apply to Lambda<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+<p>Our final product should look something like this. Not quite the same as <a href="lambdaschool.com">lambdaschool.com</a> yet, but we’re on our way!</p>
+<p><img src="https://i.imgur.com/FJ21qOt.png" alt="Screen Shot 2020-01-16 at 4.28.21 PM"></p>
+<h5>Challenge</h5>
+<p>Create your own CodePen. Add a <code class="highlighter-rouge">h1</code> title with your name, and start to fill out the page with some details about you and why you’re interested in web development. Be sure to include at least 3 tags.</p>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to learn to utilize common HTML tags and attributes to mark up a basic page of content</h4>
+<h5>Overview</h5>
+<h3 id="expanded-basic-elements">Expanded ‘Basic’ elements</h3>
+<p>There are dozens of elements available in HTML. However, just a handful are used regularly. We will only cover the most commonly used in this lesson. You can achieve virtually anything you want with these basic HTML elements and some CSS (which we will talk about later). It is important to note that your HTML elements should match the exact information you are attempting to display. This is known as being ‘semantically correct’. This is done for a number of reasons including accessibility and SEO and is considered industry standard.</p>
+<h4 id="attributes">Attributes</h4>
+<p>Before we jump into learning about a couple more HTML elements, let’s learn about another way to supply data to an element. When we need to include information that we don’t want to render on the page (like the link to an image) we use special flags inside of our tags called attributes. We will see attributes in action in the next section for hyperlinks and images.</p>
+<p>To this point we’ve learned the terms element, tag, and attribute. While those can get confusing quickly, the distinctions are visually clear.</p>
+<p><img src="https://i.imgur.com/Ro4Ia1r.png" alt="Screen-Shot-2014-08-12-at-2.08.43-AM"></p>
+<h4 id="more-elements">More Elements</h4>
+<ul>
+<li>
+<code class="highlighter-rouge">&lt;a&gt;</code>
+<ul>
+<li>The ‘a’ (“anchor”) element, allows us to create links to other web pages (or even to other areas within our own web page). You will always see the ‘a’ element used with the <code class="highlighter-rouge">href</code> attribute to tell the browser what address you want the link to point to.</li>
+</ul>
+</li>
+</ul>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.lambdaschool.com"</span><span class="nt">&gt;</span>Here is a link!<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+<ul>
+<li>
+<code class="highlighter-rouge">&lt;img&gt;</code>
+<ul>
+<li>This element will display an image on the screen. It will always have an ‘src’ attribute which points to the address of the image to be displayed. NOTE: img tags can be self-closing, as in they do not need two tags. Simply put the <code class="highlighter-rouge">/</code> before the closing bracket in the first tag:</li>
+</ul>
+</li>
+</ul>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://picsum.photos/500/300"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+<ul>
+<li>
+<code class="highlighter-rouge">&lt;ul&gt;</code> and <code class="highlighter-rouge">&lt;ol&gt;</code>
+<ul>
+<li>This element represents an “unordered list”. This is the parent element and will contain list items. There is also an ordered, or numbered, list <code class="highlighter-rouge">&lt;ol&gt;</code>, each has their own purpose. Generally speaking, <code class="highlighter-rouge">&lt;ul&gt;</code> would be used for a grocery list and <code class="highlighter-rouge">&lt;ol&gt;</code> for a recipe where direction need to be followed in a specific order. In addition, some developers like to style their lists in CSS and opt not to use these tags.</li>
+</ul>
+</li>
+<li>
+<code class="highlighter-rouge">&lt;li&gt;</code>
+<ul>
+<li>This stands for <code class="highlighter-rouge">list item</code> and is the companion to <code class="highlighter-rouge">&lt;ul&gt;</code> and <code class="highlighter-rouge">&lt;ol&gt;</code>. These elements represent the items to appear in the list. Any other elements can appear in an <code class="highlighter-rouge">li</code>.</li>
+</ul>
+</li>
+</ul>
+<p class="codepen" data-height="386" data-theme-id="dark" data-default-tab="html,result" data-user="lambdaschool" data-slug-hash="39f0bcce5f5149bc0524a13bb1767bf3" data-editable="true" style="height: 386px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="PreCourse tags">
+<span>See the Pen <a href="https://codepen.io/lambdaschool/pen/39f0bcce5f5149bc0524a13bb1767bf3">
+PreCourse tags</a> by Lambda School (<a href="https://codepen.io/lambdaschool">@lambdaschool</a>)
+on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+<p><strong>Challenge:</strong> Before moving on, add a fourth item to the list that links to Wikipedia’s <a href="https://en.wikipedia.org/wiki/List_of_lists_of_lists">List of List Article.</a> (hint: you’ll need to use both a tag and an attribute!)</p>
+<h4 id="nesting-elements-and-indentation">Nesting Elements and Indentation</h4>
+<p>We’ve seen in previous examples that we can nest, or level, elements inside of tags. In fact, this is a major part of writing HTML. Nested elements are referred to as <code class="highlighter-rouge">children</code> and the top-level elements as <code class="highlighter-rouge">parents</code>. You will see this type of structure throughout your time writing HTML (and all code for that matter). One thing to note is that while indentation is not a requirement of HTML (nor of CSS and JavaScript), it is still often practiced as a readability issue. We not only write code for ourselves, but also for our teammates and those that come after us. Indentation lets your code be much more easily read and understood. Feel free to test this out by editing the code above, you shouldn’t see a change in the ‘result’ page.</p>
+<h5>Follow Along</h5>
+<p class="codepen" data-height="586" data-theme-id="dark" data-default-tab="html,result" data-user="lambdaschool" data-slug-hash="5d24a9de4455e40d4a5dc5c628812326" style="height: 586px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="PreCourse attributes">
+<span>See the Pen <a href="https://codepen.io/lambdaschool/pen/5d24a9de4455e40d4a5dc5c628812326">
+PreCourse attributes</a> by Lambda School (<a href="https://codepen.io/lambdaschool">@lambdaschool</a>)
+on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+<p>With our newfound knowledge of attributes we can add in the image, and make our “Apply to Lambda” button functional.</p>
+<p>First, let’s add the image with an <code class="highlighter-rouge">&lt;img&gt;</code> tag. The Lambda School homepage image lives at the following URL: <code class="highlighter-rouge">https://assets-global.website-files.com/5cd091cfb5499f22bdf72905/5d1133da829994859a190d12_website-home4.jpg</code>. We’ll use the <code class="highlighter-rouge">src</code> attribute to add this to our page. Note that <code class="highlighter-rouge">img</code> elements don’t need a closing tag. Also, notice that this URL is <strong>not</strong> “lambdaschool.com,” even though that’s where we see the picture. Instead, the URL points to the location where the image is hosted on the cloud. Following this link will lead to <em>just</em> our background photo.</p>
+<pre><code class="language-HTML">&lt;img src = "https://assets-global.website-files.com/5cd091cfb5499f22bdf72905/5d1133da829994859a190d12_website-home4.jpg"&gt;
+</code></pre>
+<p>We can also use attributes to make our “Apply to Lambda.” button functional. To do so, we’ll need to use the attribute <code class="highlighter-rouge">href</code>, and point it to Lambda School’s application page: <code class="highlighter-rouge">https://apply.lambdaschool.com/apply/</code>. If we were building the whole website from scratch, we’d reference another html file the our folder.</p>
+<pre><code class="language-HTML">&lt;button onclick = "location.href='https://apply.lambdaschool.com/apply/';"&gt; Apply to Lambda.&lt;/button&gt;
+</code></pre>
+<p>Right now, the image is huge and that’s okay. In the next lesson, we’ll learn about CSS and start to style things how we want them to look.</p>
+<h5>Challenge</h5>
+<p>Go back to your CodePen and add some images of things you like, or links to your social media profiles, blog, or other websites you enjoy!</p>
+<p>Note: to add an image, it will need to live somewhere on the web. You can store images on the cloud and right click, then navigate to <code class="highlighter-rouge">copy image URL</code> to obtain an image’s location.</p>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to understand the main concepts of CSS (selectors and style rules), and be able to apply them to an HTML page</h4>
+<h5>Overview</h5>
+<h3 id="introduction-to-cascading-stylesheets">Introduction to Cascading Stylesheets</h3>
+<p>Before we begin, let’s think about the analogy of a web page as a house. In order to build a house, we need a few things. First, we need raw materials - like wood and bricks. Then, we need paint and decorations, and a plan to put them together. In this analogy, HTML is the raw materials. It has so much potential, but it’s just laying in a pile on the ground. We need the plan, the paint, and the decorations to make a home. That is where CSS comes in.</p>
+<p>Eventually, we’d want electricity and plumbing to make our home functional. That’s JavaScript, which we’ll learn about next.</p>
+<h4 id="what-is-css">What is CSS?</h4>
+<p>CSS stands for Cascading Style Sheets. It is a different language than HTML but it works with HTML. It allows us to add style and layout to our web pages. Usually, when we think about web pages, we think about nicely put-together, pretty-looking sites, and so far what we have built has been pretty bland, if not ugly. HTML and CSS work together to create the webpages we are used to seeing. Once the browser reads the HTML, it will then read the CSS and give different styling rules to different elements in our HTML based on how we select them.</p>
+<h4 id="the-style-and-link-elements">The <code class="highlighter-rouge">style</code> and <code class="highlighter-rouge">link</code> Elements</h4>
+<p>Before we can add CSS to our web page, we need to inform the browser that what it is reading is in fact CSS. We can tell the browser that through HTML elements known as the <code class="highlighter-rouge">style</code> and <code class="highlighter-rouge">link</code> elements. These elements will go in between the <code class="highlighter-rouge">head</code> tags, as it is not necessarily data we need to appear on the screen.</p>
+<p>There are two ways of including CSS in our HTML.</p>
+<ul>
+<li>We can write our CSS directly between two <code class="highlighter-rouge">style</code> tags, this isn’t very common, but it would look something like this.</li>
+</ul>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;style&gt;</span>
+  <span class="o">&lt;!</span><span class="nt">--</span> <span class="nt">CSS</span> <span class="nt">goes</span> <span class="nt">here</span> <span class="nt">--</span><span class="o">&gt;</span>
+<span class="nt">&lt;/style&gt;</span>
+</code></pre></div></div>
+<ul>
+<li>More often, we will link to an external CSS file using the <code class="highlighter-rouge">link</code> element. This element will include two attributes: <code class="highlighter-rouge">rel</code> and <code class="highlighter-rouge">href</code>. <code class="highlighter-rouge">rel</code> will refer to the type of file we are linking: in this case, <code class="highlighter-rouge">"stylesheet"</code>, and the <code class="highlighter-rouge">href</code> will point to the location of the file on your computer, or more simply, the file name.</li>
+</ul>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"./styles.css"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+</code></pre></div></div>
+<p>Note that, in codepen, linking is done “under the hood”, so we can code our CSS straight in the CSS pannel like so.</p>
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="lambdaschool" data-slug-hash="4918a680ea2327cb02fc888270483aa0" data-editable="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="PreCourse Style">
+<span>See the Pen <a href="https://codepen.io/lambdaschool/pen/4918a680ea2327cb02fc888270483aa0">
+PreCourse Style</a> by Lambda School (<a href="https://codepen.io/lambdaschool">@lambdaschool</a>)
+on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+<p><strong>Check for Understanding:</strong> Before you move on, edit the CodePen to make our text blue.</p>
+<h4 id="introduction-to-css-selectors">Introduction to CSS Selectors</h4>
+<p>You may notice in the pen above that the CSS references a specific tag, in this case, <code class="highlighter-rouge">&lt;h1&gt;</code>. In order for us to apply styling rules to HTML elements, we have to know which elements to apply the rules to. This is where selectors come in.</p>
+<p>You can select all elements of a certain type - <code class="highlighter-rouge">p</code>, <code class="highlighter-rouge">div</code>, <code class="highlighter-rouge">h1</code>, or <code class="highlighter-rouge">body</code>; or you can select all elements with a certain <code class="highlighter-rouge">class</code> or <code class="highlighter-rouge">id</code>. By adding a <code class="highlighter-rouge">class</code> or <code class="highlighter-rouge">id</code> attribute to an element, we then make it possible for the CSS to select that element more easily and accurately. Compare the HTML tags to the CSS selectors below and see if you can figure out the rules governing CSS selectors.</p>
+<p class="codepen" data-height="325" data-theme-id="dark" data-default-tab="html,result" data-user="lambdaschool" data-slug-hash="061349c6b346983da14bdba6939809a8" data-editable="true" style="height: 325px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="PreCourse Style w divs">
+<span>See the Pen <a href="https://codepen.io/lambdaschool/pen/061349c6b346983da14bdba6939809a8">
+PreCourse Style w divs</a> by Lambda School (<a href="https://codepen.io/lambdaschool">@lambdaschool</a>)
+on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+<h4 id="anatomy-of-styling-rules-syntax">Anatomy of Styling Rules (Syntax)</h4>
+<p>In CSS, after the name of the selector, we will use braces (<code class="highlighter-rouge">{}</code>) to hold property and value styles for that selector.</p>
+<p>Styling rules will need to adhere to a certain syntax in our CSS so that the browser knows how to read them properly. Within the braces, we will then have the name of the property, a colon(<code class="highlighter-rouge">:</code>), and the value of the rule. This will be followed by a semicolon(<code class="highlighter-rouge">;</code>).</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">body</span> <span class="p">{</span>
+    <span class="err">background</span> <span class="err">=</span> <span class="err">blue;</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">div</span> <span class="p">{</span>
+    <span class="py">styling_property</span><span class="p">:</span> <span class="n">value</span> <span class="n">of</span> <span class="n">rule</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+<p><code class="highlighter-rouge">Id</code>s: are titles that can only appear on a single element. Think of it as you would your driver’s license number. ONLY you have that one number.</p>
+<p><code class="highlighter-rouge">Class</code>es: on the other hand can apply to multiple elements. Think of it like a classroom. Usually, you aren’t the only person in a class, although you might be. The class is big enough for lots of people.</p>
+<p>Class selectors will always begin with <code class="highlighter-rouge">.</code>, and Id selectors will always begin with <code class="highlighter-rouge">#</code>.</p>
+<p><strong>Check for Understanding:</strong> In the codepen above, change the text color of the <strong>class</strong> to <em>red</em>.</p>
+<h4 id="styling-rules">Styling Rules</h4>
+<p>Now that we have some HTML elements selected, we can begin to add styling. There are a LOT of different ways you can style an object. You can control how big or small it is, what color it is, where it is placed on the screen, or even if it is visible or not. We will go over some of the most common styling properties and how to use them.</p>
+<ul>
+<li>
+<code class="highlighter-rouge">background</code> or <code class="highlighter-rouge">background-color</code>
+<ul>
+<li>Background can be set to a variety of rules. Most common would be setting the background to a color or an image. Both are displayed below. If you want to be more explicit, you can use the property <code class="highlighter-rouge">background-color</code> to only set the color of the background.</li>
+</ul>
+</li>
+</ul>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">h1</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="sx">url('http://imageurl.com/image.jpg')</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+<ul>
+<li>
+<code class="highlighter-rouge">color</code>
+<ul>
+<li>Color is used for text only. It will change the color of your text.</li>
+</ul>
+</li>
+<li>
+<code class="highlighter-rouge">font-size</code>
+<ul>
+<li>We can’t use width or height for text, but we can determine the size of the font used. You can use any size unit here that you would use with a font in a word processor (px, em, in, and etc). Px or pixel is the most popular.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Challenge:</strong> In the codepen above, change the background color of your webpage to <em>grey</em></p>
+<h5>Follow Along</h5>
+<p>When we added the image to lambdaschool.com it created a <em>massive</em> problem (no pun intended). Together let’s add some CSS style to get our image to the background, and to change text color and style.</p>
+<p class="codepen" data-height="515" data-theme-id="dark" data-default-tab="html,result" data-user="lambdaschool" data-slug-hash="52b9e575871e7ebb68d0e7a42dd20422" data-editable="true" style="height: 515px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="M2O1 - CSS ">
+<span>See the Pen <a href="https://codepen.io/lambdaschool/pen/52b9e575871e7ebb68d0e7a42dd20422">
+M2O1 - CSS </a> by Lambda School (<a href="https://codepen.io/lambdaschool">@lambdaschool</a>)
+on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+<p>Let’s start with the simple stuff. Before we do anything else, let’s add some font color and style to our semantic elements. Here we are selecting multiple elements with commas and assigning all of the text to the color “black” and the font-family “sans-serif”. We’re also designating text color, background color, and font size for our button.</p>
+<p>CSS is a great place to practice your google-fu. There are hundreds of CSS styling properties and infinitely more descriptors. You’re not expected to know all of these properties. Instead, describe your issue to google, test things out, and use your design eye to find what you like the most.</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">button</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#BB2026</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Next, let’s add id attributes in HTML and style to them by selecting those ids in CSS. We’ll start by creating an ‘image-container’ and ‘text-container’ id. We want the ‘image-container’ to wrap around everything <em>except</em> “Higher learning. Higher earning.” and “Lambda is designed for student success…etc,” to do that, we’ll need to place a <code class="highlighter-rouge">&lt;div id ="image-container"&gt;</code> tag at the beginning of our HTML, and a <code class="highlighter-rouge">&lt;/div&gt;</code> tag after the button. We’ll add a second div called <code class="highlighter-rouge">&lt;div id ="other-text"&gt;</code> around the rest.</p>
+<p>Finally, we can move our image from the “body” to the div and start getting a more complete website. You’ll notice that the image looks cut off - the box model will help us deal with that.</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">#image-container</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="sx">url("https://assets-global.website-files.com/5cd091cfb5499f22bdf72905/5d1133da829994859a190d12_website-home4.jpg")</span><span class="p">;</span>
+  <span class="nl">background-position</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span> 
+<span class="p">}</span>
+
+<span class="nf">#text-container</span> <span class="p">{</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Our final product should look like this. It is looking a lot closer to lambdaschool.com, but…squished? Next up, we’ll learn about the box model which will help take care of the squishing and get us to a more believable lambdaschool replica.</p>
+<p><img src="https://i.imgur.com/hMywz6G.png" alt="Screen Shot 2020-01-16 at 4.48.44 PM"></p>
+<h5>Challenge</h5>
+<p>Go back to your codepen and add style. Include a font, text-color, and background style.</p>
+<hr>
+<h2 class="display-4">
+<a id="projects" class="anchor" href="#projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Projects</h2>
+<ul class="list-group">
+<li class="list-group-item">
+<h5><a target="_blank" href="https://codepen.io/lambdaschool/pen/vaKejB">UI I: Project I - Sweet Eats Bakery Markup</a></h5>
+<p>Sweet Eats Bakery has provided content for you to markup on their website. Use semantic HTML tags to give their content meaning.</p>
+</li>
+<li class="list-group-item">
+<h5><a target="_blank" href="https://codepen.io/lambdaschool/pen/vaXWWG/?editors=0100">UI I: Project 2 - Sweet Eats Bakery Style</a></h5>
+<p>Now that we have some practice with semantic HTML, we need to add some style to our project. This project is going to explore selectors, inheritance in combination with our new found HTML skills.</p>
+</li>
+</ul>
+<h2 class="display-4">
+<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
+<h3 class="display-5">Class Recordings</h3>
+<p class="lead">You can use class recordings to help you master the material.</p>
+<div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<strong><a target="_blank" href="https://youtu.be/Jte8Z7nGxQg">User Interface for WebPT22 w/Nathan Braun</a></strong>
+<p>Even the most complex web applications start with simple HTML elements. Knowing how to use HTML and style it with CSS has a massive impact for your future as a developer. This module will explore the fundamentals of HTML and CSS.</p>
+</li>
+<li class="list-group-item">
+<a href="/archive/FSW/module/recl0IyzS2Vl89lZa">All previous recordings</a>
+</li>
+</ul>
+</div>
+<h3 class="display-5">Demonstrate Mastery</h3>
+<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
+<ul>
+<li>Objective challenge: <p>Create your own CodePen. Add a <code class="highlighter-rouge">h1</code> title with your name, and start to fill out the page with some details about you and why you’re interested in web development. Be sure to include at least 3 tags.</p>
+</li>
+<li>Objective challenge: <p>Go back to your CodePen and add some images of things you like, or links to your social media profiles, blog, or other websites you enjoy!</p>
+<p>Note: to add an image, it will need to live somewhere on the web. You can store images on the cloud and right click, then navigate to <code class="highlighter-rouge">copy image URL</code> to obtain an image’s location.</p>
+</li>
+<li>Objective challenge: <p>Go back to your codepen and add style. Include a font, text-color, and background style.</p>
+</li>
+<li>Project: UI I: Project I - Sweet Eats Bakery Markup</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80850900-4');
+</script>
+<script type="text/javascript">
+  function getDomain() {
+    const domainName = window.location.hostname.split('.')[1];
+    return `${domainName}.com`;
+  }
+</script>
+<script src="" integrity="" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
+<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+  SimpleJekyllSearch.init({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    dataSource: '/search.json',
+    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="User Interface">{title}</a></li>',
+    noResultsText: '',
+    limit: 10,
+    fuzzy: true,
+  })
+</script>
+<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
+  if (window.attachEvent) {
+    window.attachEvent('onload', verifySignedIn);
+  } else {
+    if (window.onload) {
+      var currentOnLoadFn = window.onload;
+      var newOnLoadFn = function (evt) {
+        currentOnLoadFn(evt);
+        verifySignedIn();
+      };
+      window.onload = newOnLoadFn;
+    } else {
+      window.onload = verifySignedIn;
+    }
+  }
+
+  function verifySignedIn() {
+    if (isPagePublic()) {
+      return showPageContents();
+    }
+
+    window.__user = null;
+    isSignedIn().then((user) => {
+      window.__user = user;
+
+      if (!user.signedIn) {
+        redirectToSignIn();
+      } else if (!user.student && !window.__openToAdmissions) {
+        showUnauthorizedMessage();
+      } else {
+        showPageContents();
+      }
+    });
+  }
+
+  function isPagePublic() {
+    const openCourses = [
+      'and-pre',
+      'ds-pre',
+      'fsw-pre',
+      'help',
+      'ios-pre',
+    ];
+
+    const openPages = [
+      'cs-and',
+      'cs-fsw',
+      'cs-ios',
+      'cr',
+      'ds',
+      'jx',
+      'p4s',
+      'ux',
+    ];
+
+    const pathParts = window.location.pathname.split('/');
+    const courseName = pathParts[1];
+    const pageName = pathParts[pathParts.length - 1];
+
+    return openCourses.includes(courseName) || openPages.includes(pageName);
+  }
+
+  function isSignedIn() {
+    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
+
+    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
+
+    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
+      .then((response) => response.text())
+      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
+      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
+      .catch((error) => {});
+  }
+
+  function redirectToSignIn() {
+    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+    const redirectMessage = document.querySelector('#redirect-message');
+    redirectMessage.style.display = "block";
+    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+    window.location = signInUrl;
+  }
+
+  function showPageContents() {
+    document.querySelector('#content-wrapper').style.visibility = 'visible';
+  }
+
+  function showUnauthorizedMessage() {
+    document.querySelector('#unauthorized-message').style.display = 'block';
+  }
+
+  function getAuthBaseUrl() {
+    const domain = getDomain();
+    const authBaseUrl = `https://auth.${domain}`;
+    return authBaseUrl;
+  }
+</script><script src="/assets/js/docs.min.js"></script><script>
+  var MathJax = {
+    tex: {
+      inlineMath: [['$$', '$$'], ['\[', '\])']]
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax span": {
+          color: "#000000"
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script>
+  handleExternalLinks();
+
+  function handleExternalLinks() {
+    const domain = getDomain();
+    const links = document.querySelectorAll('a');
+    return links.forEach((link) => {
+      if (!link.host.includes(domain)) link.target = '_blank';
+    })
+  };
+</script>
+</div>
+</body>
+</html>

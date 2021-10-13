@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Intended as a home for Lambda School curriculum.">
+<meta name="author" content="">
+<meta name="generator" content="Jekyll v3.8.0">
+<title>Technical Interview Tips I · Lambda School</title>
+
+<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+  analytics.page();
+  }}();
+</script>
+
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#a0001e">
+</head>
+<body>
+<noscript>Please enable JavaScript to view this page.</noscript>
+<div id="redirect-message" style="display: none;">
+You must be logged in to view this page.
+</div>
+<div id="unauthorized-message" style="display: none;">
+You must be a Lambda School student to view this page.
+</div>
+<div id="content-wrapper" style="visibility: hidden;">
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container">
+<span class="skiplink-text">Skip to main content</span>
+</div>
+</a>
+<div class="mobile-menu">
+<div class="m-drop">
+<div class="mobile-row">
+<div class="header-row" style="padding: 3px 7px">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
+</svg></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+</button>
+</div>
+</div>
+<div class="nav-row">
+<div class="results-container">
+<ul id="results-container" class="dropdown list-group"></ul>
+</div>
+<div id="mobile-course-menu" class="collapse nav-row">
+<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+<nav class="bd-links">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Computer Science</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/reckLrPDHRpFN3a6p">
+1.&nbsp;&nbsp;Computer Science Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/cs/module/recHNgXTaBpnn052p/">
+Python Basics
+</a>
+</li>
+<li>
+<a href="/cs/module/recagU9ihCuMePtbx/">
+Problem Solving
+</a>
+</li>
+<li>
+<a href="/cs/module/recZ6g2C5xkxHmT16/">
+Time and Space Complexity
+</a>
+</li>
+<li>
+<a href="/cs/module/recy2QANAS6Blpc5o/">
+Computer Memory Basics
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/recdbs5ZPBtMb6fou">
+2.&nbsp;&nbsp;Data Structures and Algorithms I
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/cs/module/recR43dkPzilEMXlE/">
+Array and String Manipulation
+</a>
+</li>
+<li>
+<a href="/cs/module/recQJcAAjpSTtNf8A/">
+Linked Lists
+</a>
+</li>
+<li>
+<a href="/cs/module/rec07JKgm7ltWrPYD/">
+Queues and Stacks
+</a>
+</li>
+<li>
+<a href="/cs/module/rec00Cf3TiBWiCONA/">
+Searching and Recursion
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/recyC7E0YQc0qQgxa">
+3.&nbsp;&nbsp;Data Structures and Algorithms II
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/cs/module/recgJOPYUjvQaN2sa/">
+Binary Search Trees
+</a>
+</li>
+<li>
+<a href="/cs/module/recS3C67spna4M4HU/">
+Tree Traversal
+</a>
+</li>
+<li>
+<a href="/cs/module/recEPIaHFEriTuU2x/">
+Graphs I
+</a>
+</li>
+<li>
+<a href="/cs/module/recX4dkkIPeJ6JjX6/">
+Graphs II
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/recsJW8CaZiKcyUZj">
+4.&nbsp;&nbsp;Data Structures and Algorithms III
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/cs/module/recLpJY4yFQcV3qeW/">
+Hash Tables I
+</a>
+</li>
+<li>
+<a href="/cs/module/recG6onEnlSOWziKO/">
+Hash Tables II
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/cs/module/reczaVKTynSkqN8ZS/">
+Technical Interview Tips I
+</a>
+</li>
+<li>
+<a href="/cs/module/rec6kEjLri9SXMYdE/">
+Technical Interview Tips II
+</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-container">
+<div class="sidebar-container bd-sidebar">
+<div class="docs-sidebar">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
+<ul id="results-container" class="dropdown list-group"></ul>
+<nav class="bd-links collapse" id="bd-docs-nav">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Computer Science</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/reckLrPDHRpFN3a6p">
+1.&nbsp;&nbsp;Computer Science Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/cs/module/recHNgXTaBpnn052p/">
+Python Basics
+</a>
+</li>
+<li>
+<a href="/cs/module/recagU9ihCuMePtbx/">
+Problem Solving
+</a>
+</li>
+<li>
+<a href="/cs/module/recZ6g2C5xkxHmT16/">
+Time and Space Complexity
+</a>
+</li>
+<li>
+<a href="/cs/module/recy2QANAS6Blpc5o/">
+Computer Memory Basics
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/recdbs5ZPBtMb6fou">
+2.&nbsp;&nbsp;Data Structures and Algorithms I
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/cs/module/recR43dkPzilEMXlE/">
+Array and String Manipulation
+</a>
+</li>
+<li>
+<a href="/cs/module/recQJcAAjpSTtNf8A/">
+Linked Lists
+</a>
+</li>
+<li>
+<a href="/cs/module/rec07JKgm7ltWrPYD/">
+Queues and Stacks
+</a>
+</li>
+<li>
+<a href="/cs/module/rec00Cf3TiBWiCONA/">
+Searching and Recursion
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/recyC7E0YQc0qQgxa">
+3.&nbsp;&nbsp;Data Structures and Algorithms II
+ </a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/cs/module/recgJOPYUjvQaN2sa/">
+Binary Search Trees
+</a>
+</li>
+<li>
+<a href="/cs/module/recS3C67spna4M4HU/">
+Tree Traversal
+</a>
+</li>
+<li>
+<a href="/cs/module/recEPIaHFEriTuU2x/">
+Graphs I
+</a>
+</li>
+<li>
+<a href="/cs/module/recX4dkkIPeJ6JjX6/">
+Graphs II
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/recsJW8CaZiKcyUZj">
+4.&nbsp;&nbsp;Data Structures and Algorithms III
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/cs/module/recLpJY4yFQcV3qeW/">
+Hash Tables I
+</a>
+</li>
+<li>
+<a href="/cs/module/recG6onEnlSOWziKO/">
+Hash Tables II
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/cs/module/reczaVKTynSkqN8ZS/">
+Technical Interview Tips I
+</a>
+</li>
+<li>
+<a href="/cs/module/rec6kEjLri9SXMYdE/">
+Technical Interview Tips II
+</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<main class="content-container flex-wrapper" role="main">
+<div class="sticky-nav">
+<div class="sprint-nav">
+<ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+</ul>
+</div>
+
+</div>
+<div class="wrapper limit-width">
+<div class="flex-wrapper">
+<div class="limit-width">
+<div class="jumbotron">
+<h1 class="bd-title" id="content">Technical Interview Tips I</h1>
+<span class="lead">
+<p class="bd-lead"></p>
+</span>
+<strong>At the end of this module, you should be able to:</strong>
+<ul>
+<li>understand the typical interview process for a technical programming job</li>
+<li>recall best-practices and tips for technical interviews</li>
+</ul>
+</div>
+<div class="alert alert-warning" role="alert">
+<h4>Pro Tip</h4>
+<p>When reporting errors, copy-pasting the text is better than a screenshot unless the issue is actually visual.</p>
+</div>
+<h2 class="display-4">
+<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
+<p class="lead">Review each preclass resource before class.</p>
+<div class="preclass">
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SuuXXjJly2I" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SuuXXjJly2I" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+</ul>
+</div>
+<h2 class="display-4">
+<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
+<h4 class="mark mb-3 p-2">Learn to understand the typical interview process for a technical programming job</h4>
+<h5>Overview</h5>
+<p>The most typical steps in the process for interviewing for your first technical programming job are:</p>
+<ol>
+<li>A <strong>non-technical phone screen</strong>.</li>
+<li>A <strong>take-home coding assessment</strong>.</li>
+<li>Anywhere from one to three plus <strong>technical phone interviews</strong>.</li>
+<li>An <strong>onsite interview</strong>.</li>
+</ol>
+<p>Let’s go through each step in a bit more detail to know what to expect as you begin your job hunt.</p>
+<h5>Follow Along</h5>
+<h3 id="the-non-technical-phone-screen">The Non-Technical Phone Screen</h3>
+<p>A non-technical phone screen is the first phone call a company will offer you. It is a very informal call where you tell them about your career goals and what kind of projects you are interested in working on. It may also include some logistical questions like when you want to start and your general timeline for when you’d be ready for your next role. It usually lasts less than half an hour, and you will most likely not talk with a technical recruiter for this call. In this call, you may not even know which team you would end up being on.</p>
+<p>Make sure to be as honest as possible during this call. The more up-front you are with the recruiter, the more likely it is that they can help you obtain the type of position that would be the best fit for you.</p>
+<p>If the recruiter tries to talk to you about your desired salary during this call, it’s better not to answer. Just tell the recruiter that you’d rather speak about compensation after having a better idea of if the company is a good fit for you.</p>
+<h3 id="the-take-home-coding-assessment">The Take-Home Coding Assessment</h3>
+<p>Take-home coding assessments are becoming more and more common, especially with startups and smaller companies.</p>
+<p>Usually, you will receive specifications for an application or service, a time constraint for writing your code, and a deadline for when you need to submit your completed code. Be aware that the specific deadline is usually negotiable.</p>
+<p>An example of a take-home coding assessment could be:</p>
+<blockquote>
+<p>Build a two-player tic tac toe app where a game is played by alternating clicks until the game is won by “X” or “O” or the game ends in a tie. Your game should include a reset button so that the user can begin a new game. It would be best if you worked on making the board fully responsive.</p>
+</blockquote>
+<p>If they include any “bonus” features, make sure to try to implement those. If you don’t have time to implement them, you should provide a write-up that shows your plan for implementing them.</p>
+<p>If the role you are interviewing for is for a particular tech stack, the take-home assessment will likely require you to use that specific stack in your implementation.</p>
+<p>A few alternatives to the take-home coding assessment is that companies will pay you to come work with them for a few days as a “trial”.</p>
+<h3 id="technical-phone-interviews">Technical Phone Interviews</h3>
+<p>Each technical phone interview is usually about one-hour long. The interviewer usually will call you, and then you will join them on some form of video conferencing software. Make sure to plan so you can take the call in a quiet and professional setting that has a good internet connection. First impressions in this setting are determined by the audio/video quality of the call. It’d be a good idea to make sure you have a good set of headphones and a microphone.</p>
+<p>The interviewer’s primary purpose is to be able to assess how you code live. You will often be coding in some live code sharing platform or just sharing your screen directly through the video conferencing software you are using. Make sure to mute notifications on your computer and phone before the interview starts. You don’t want any interruptions during the interview process.</p>
+<p>It can be helpful to think of your technical phone interview as having three distinct phases:</p>
+<h4 id="phase-one-chitchat--getting-comfortable">Phase One: Chitchat &amp; Getting Comfortable</h4>
+<p>This phase of the interview usually lasts about five to ten minutes. It would be best to remember that your interviewer wants you to be comfortable showing your best self. They don’t want you to fail; they want to find a good programmer for the job, and they are hoping that you are the right one.</p>
+<p>Often, to open the interview and help you get comfortable, they will ask you basic questions like, “Tell me a little bit about yourself.” Or, “Tell me about a project you worked on that you are proud of.” You need to make sure that you can talk in-depth about any projects you’ve worked on in the past. It would help if you highlighted what worked well on the project and what didn’t work well. You should also be able to talk about how would you change things if you could go back?</p>
+<h4 id="phase-two-technical-challenges">Phase Two: Technical Challenges</h4>
+<p>This phase of the interview usually lasts anywhere from thirty to fifty minutes. It is the most critical part of the interview and why they have a technical person who conducts the interview. Sometimes, the interviewer will want to see you work on a few shorter but varied questions. Other times they will give you one more extended problem that will take the entirety of the interview.</p>
+<p>What types of questions should you expect? It’s hard to be sure, and that’s why a lot of general practice on random and varied questions is essential.</p>
+<p>A hint that is sometimes true is that startups and smaller companies care about developers that can make consistent progress rather than writing the most efficient or perfect code. Because of that, you can expect questions that likely ask you to build something or debug something.</p>
+<p>For larger companies they often want to test your knowledge about general data structures and algorithms. They will be paying closer attention to your problem-solving abilities and how you work on optimizing your code’s efficiency.</p>
+<p>Regardless of what types of problems they ask you to solve, it is crucial for you to work on communicating your problem-solving process out loud.</p>
+<p>If the role requires an in-depth knowledge of a specific language, the interviewer may also ask you about language-specific details to test how much you know about its ins and outs.</p>
+<h4 id="phase-three-asking-questions">Phase Three: Asking Questions</h4>
+<p>This interview phase usually lasts about five to ten minutes and is a straightforward way to make yourself stand out in the interview process. Before the interview, spend time researching the company and role on the internet. See if you can find interviews online with the CEO or articles about the company. Does the company or the engineering team within the company have a blog where they post their current projects or discoveries? If so, spend time reading articles and formulate a few questions you can ask the interviewer that shows you care about the specific company and the problems they are working on solving.</p>
+<p>At the end of the interview, they will likely give you a timeframe when you can expect to hear about the next steps. If you’ve done well, you may have an additional phone interview or be invited for an onsite interview.</p>
+<h3 id="the-onsite-interview">The Onsite Interview</h3>
+<p>This stage of the interview process happens in person at the company’s office. The company will pay for a flight and accommodations for you if you are from out of town.</p>
+<p>An onsite interview usually contains two to six individual technical interviews in a small conference room or office. Each interview will be structured like a technical phone screen. The primary difference between these technical interviews and the phone interview is that you’ll often be coding by hand on a whiteboard.</p>
+<p>If you haven’t yet done this, it can feel strange. Especially if you are used to relying on the features that are included in most IDEs. Make sure to practice coding and solving challenges on a whiteboard or with a pencil and paper before your onsite interview. Here are a few simple tips to help you specifically with your whiteboarding:</p>
+<ul>
+<li>Always start in the top-left corner of your writing space as this ensures you will have the most room available as possible.</li>
+<li>Leave some blank space in-between each line of code in case you need to go back and add something in later.</li>
+<li>Always be careful and thoughtful when you are naming variables. You want to write your code as clearly as possible, and good variable names will decrease your chances of getting confused (especially under such a high-pressure setting).</li>
+</ul>
+<p>These days can be draining and feel incredibly long. It is advised not to make any other appointments or plans for your onsite day. You don’t want to be hurrying or stressing about time frames during an otherwise already stressful day.</p>
+<p>In addition to the in-person technical interviews, it is also fairly common for you to go out to lunch with a group of employees. Additionally, you will likely interview with a director level or executive level person at the company. If you’ve made it this far, this interview will involve this person trying to pitch you on why you should join their team and company. It is fairly common to be invited out for drinks and dinner with the company at the very end of the day.</p>
+<h5>Challenge</h5>
+<p>Spend some time reflecting on the interview stage that you think will be the most difficult for you. Why? Take some time to write out a plan of action to better prepare for that stage of the interview specifically. What weaknesses can you work on improving so that you will have a better chance of success during that stage of the interview?</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://learntocodewith.me/posts/technical-interview/" target="blank_">https://learntocodewith.me/posts/technical-interview/</a><br> </li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to recall best-practices and tips for technical interviews</h4>
+<h5>Overview</h5>
+<p>There is no substitute for practice. The only way to make sure you are getting better at whiteboarding is to practice whiteboarding. So, next time you are solving a code challenge, try to solve it with pencil and paper instead of an IDE or text editor. Practice all of the suggestions below to have them become second nature by the time you are actually in a real interview.</p>
+<h5>Follow Along</h5>
+<h3 id="small-talk">Small Talk</h3>
+<p>Usually, at the beginning of a coding interview, you will have to engage in small talk with your interviewer. This portion of the interview gives you a chance to relax and get comfortable before diving into the technical part. However, that doesn’t mean that you cannot prepare or do some things to help you do well during this portion.</p>
+<p>Your interviewer might be trying to assess a few things during the small talk portion of the interview:</p>
+<ul>
+<li>Do you think about and care about how to code well and not just get things done? Do you think about improving your general programming skills and learning new programming languages?</li>
+<li>How much do you care about your craft? Do you work all of your projects through to completion? Do you care about the details and make sure you do even the little things correctly?</li>
+<li>How enjoyable would it be to work with you and solve technical problems together? How well do you communicate in general?</li>
+</ul>
+<p>To prepare for the small talk portion of the interview, you can make sure that you’ve thought of and written out examples of the following:</p>
+<ul>
+<li>interesting technical problems you recently solved or are currently working on solving</li>
+<li>interpersonal conflicts or team problems that you’ve overcome</li>
+<li>areas where you’ve displayed leadership or ownership over a problem or project</li>
+<li>times where you’ve realized you should have done things differently on a project after further reflection</li>
+</ul>
+<p>It’d also be a good idea to have a piece of trivia or something interesting about your favorite language. Think of something you like about the language and something that bothers you or that you wish was different somehow.</p>
+<p>It would help if you also had a few questions prepared about the company’s specific product or business. It would also help if you had a question about the company’s engineering and project management strategy and approach.</p>
+<p>The main thing for you to focus on is to show you are proud of what you’ve done in the past, you are excited about what the team you are hoping to join is doing, and you have enough experience to care about the specifics of the engineering team and their workflows.</p>
+<h3 id="communication">Communication</h3>
+<p>You might think that the primary thing your interviewer will care about is how easily you appear to solve the technical challenges they give to you. That is not always the case. Suppose you struggled early on but could communicate what your plan was and what you specifically were having trouble with, even if the interviewer had to provide tips or help. In that case, this can make you an even more desirable candidate. Remember, you will join a team trying to solve novel challenges. Your future team wants to work with something that can help them solve these challenges and communicate effectively with the other members about the challenges.</p>
+<p>You want to try to make the interviewer feel like you are already on their team. You want to give them a good idea of what it would be like to work with you. Do everything you can to make your problem solving feel collaborative with the interviewer.</p>
+<p>Try to think out loud while you are solving problems. Talk through what your thought process is and make sure to talk about the problem-solving framework that you will be using (UPER). It would help if you started by saying something like, “Okay. First, I’m going to understand the problem in as much detail as possible by carefully reading the problem description and asking all of my clarifying questions.”</p>
+<p>Never try to appear to know something that you don’t. If you honestly don’t know something, it’s okay to admit that. Instead, say something like, “I don’t know, but I’d make a guess that…”. Explain why or how you are making this educated guess. You can also talk about resources or ways to find that information if given the opportunity.</p>
+<p>Try to remember to slow down. You don’t get extra points for speed. You want to carefully and thoroughly consider the interviewer’s questions and your responses.</p>
+<h3 id="getting-unstuck">Getting Unstuck</h3>
+<p>What do you do if you get stuck while solving a problem during an interview? Don’t give up because you certainly haven’t failed. The interviewer wants to see how you’ll react to when you get stuck inevitably on the job.</p>
+<p>If you get stuck, take a step back and make sure you fully understand the problem. If you haven’t already, try to illustrate the problem with pictures. Think of the most simplistic test cases and draw those cases out. Remember, you might be getting stuck because you are trying to optimize prematurely. You don’t need to write the most beautiful or most efficient solution on your first pass. Just get a solution, and you can reflect upon and improve your solution once you get it working.</p>
+<p>Say what you currently know and what you are thinking might work. Often, when you are thinking out loud and explaining your approach and understanding of the problem, the interviewer will provide you with a hint that might get you unstuck. Sometimes, just by pausing and waiting, the interviewer will jump in and give you a hint.</p>
+<p>When analyzing the time and space complexity of your solution or potential solutions, make sure you talk out loud and explain your reasoning.</p>
+<h3 id="dont-sweat-the-details">Don’t Sweat the Details</h3>
+<p>One of the keys to technical interviews is not getting hung up on details. You want to focus on getting all of your thoughts and ideas down, and then you can worry about clean up and polishing your solutions.</p>
+<p>Don’t get hung up on potential off-by-one errors until the end.</p>
+<p>If you forget a specific syntax in the language you are using (especially if you are whiteboarding), don’t worry, write it in pseudocode and come back to it later.</p>
+<p>Use thoughtful and descriptive variable names. These are crucial for both you and the interviewer to understand your solution quickly.</p>
+<p>If you are writing an algorithm, don’t hesitate to use a helper function that isn’t even defined yet. You can always define that function later if you have time. If you don’t have time, you still solved the original algorithm, and the interviewer got to see your whole process instead of getting stuck on solving a minor implementation detail.</p>
+<h3 id="finish-by-cleaning-up">Finish by Cleaning Up</h3>
+<p>Once you’ve got an initial solution, choose a simple test case input and walk through your solution using that input. Please don’t do it in your head. Talk out the process that your solution will go through when running the input through your procedures. That’ll make sure the interviewer accurately understands what your ideas were for solving the problem.</p>
+<p>Now that you’ve got an initial solution, this is the point where you want to make sure you’ve corrected any “off-by-one errors” that may be present.</p>
+<p>Make sure to test edge cases at the end. If your solution breaks with edge cases, either fix it right there or at least describe how you would plan on improving it.</p>
+<p>Not every interviewer wants to watch you go through the cleanup steps. Instead of just jumping right into it, you can tell the interviewer that you would typically go into cleaning up the solution and clarify with them if that’s something you should do now during the interview.</p>
+<h5>Challenge</h5>
+<p>What do you think will be the hardest for you during a technical interview? What are your current weaknesses and deficits regarding the suggestions and tips outlined above? Write out a plan of action on how you will improve those areas as you continue working towards landing your first job.</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/" target="blank_">https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/</a><br> </li>
+</ul>
+<hr>
+<h2 class="display-4">
+<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
+<h3 class="display-5">Class Recordings</h3>
+<p class="lead">You can use class recordings to help you master the material.</p>
+<div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<a href="/archive/cs/module/reczaVKTynSkqN8ZS">All previous recordings</a>
+</li>
+</ul>
+</div>
+<h3 class="display-5">Demonstrate Mastery</h3>
+<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
+<ul>
+<li>Objective challenge: <p>Spend some time reflecting on the interview stage that you think will be the most difficult for you. Why? Take some time to write out a plan of action to better prepare for that stage of the interview specifically. What weaknesses can you work on improving so that you will have a better chance of success during that stage of the interview?</p>
+</li>
+<li>Objective challenge: <p>What do you think will be the hardest for you during a technical interview? What are your current weaknesses and deficits regarding the suggestions and tips outlined above? Write out a plan of action on how you will improve those areas as you continue working towards landing your first job.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80850900-4');
+</script>
+<script type="text/javascript">
+  function getDomain() {
+    const domainName = window.location.hostname.split('.')[1];
+    return `${domainName}.com`;
+  }
+</script>
+<script src="" integrity="" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
+<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+  SimpleJekyllSearch.init({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    dataSource: '/search.json',
+    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Technical Interview Tips I">{title}</a></li>',
+    noResultsText: '',
+    limit: 10,
+    fuzzy: true,
+  })
+</script>
+<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
+  if (window.attachEvent) {
+    window.attachEvent('onload', verifySignedIn);
+  } else {
+    if (window.onload) {
+      var currentOnLoadFn = window.onload;
+      var newOnLoadFn = function (evt) {
+        currentOnLoadFn(evt);
+        verifySignedIn();
+      };
+      window.onload = newOnLoadFn;
+    } else {
+      window.onload = verifySignedIn;
+    }
+  }
+
+  function verifySignedIn() {
+    if (isPagePublic()) {
+      return showPageContents();
+    }
+
+    window.__user = null;
+    isSignedIn().then((user) => {
+      window.__user = user;
+
+      if (!user.signedIn) {
+        redirectToSignIn();
+      } else if (!user.student && !window.__openToAdmissions) {
+        showUnauthorizedMessage();
+      } else {
+        showPageContents();
+      }
+    });
+  }
+
+  function isPagePublic() {
+    const openCourses = [
+      'and-pre',
+      'ds-pre',
+      'fsw-pre',
+      'help',
+      'ios-pre',
+    ];
+
+    const openPages = [
+      'cs-and',
+      'cs-fsw',
+      'cs-ios',
+      'cr',
+      'ds',
+      'jx',
+      'p4s',
+      'ux',
+    ];
+
+    const pathParts = window.location.pathname.split('/');
+    const courseName = pathParts[1];
+    const pageName = pathParts[pathParts.length - 1];
+
+    return openCourses.includes(courseName) || openPages.includes(pageName);
+  }
+
+  function isSignedIn() {
+    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
+
+    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
+
+    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
+      .then((response) => response.text())
+      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
+      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
+      .catch((error) => {});
+  }
+
+  function redirectToSignIn() {
+    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+    const redirectMessage = document.querySelector('#redirect-message');
+    redirectMessage.style.display = "block";
+    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+    window.location = signInUrl;
+  }
+
+  function showPageContents() {
+    document.querySelector('#content-wrapper').style.visibility = 'visible';
+  }
+
+  function showUnauthorizedMessage() {
+    document.querySelector('#unauthorized-message').style.display = 'block';
+  }
+
+  function getAuthBaseUrl() {
+    const domain = getDomain();
+    const authBaseUrl = `https://auth.${domain}`;
+    return authBaseUrl;
+  }
+</script><script src="/assets/js/docs.min.js"></script><script>
+  var MathJax = {
+    tex: {
+      inlineMath: [['$$', '$$'], ['\[', '\])']]
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax span": {
+          color: "#000000"
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script>
+  handleExternalLinks();
+
+  function handleExternalLinks() {
+    const domain = getDomain();
+    const links = document.querySelectorAll('a');
+    return links.forEach((link) => {
+      if (!link.host.includes(domain)) link.target = '_blank';
+    })
+  };
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,1343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Intended as a home for Lambda School curriculum.">
+<meta name="author" content="">
+<meta name="generator" content="Jekyll v3.8.0">
+<title>Java - Inserting Deleting and Updating Data using CRUD Operations · Lambda School</title>
+
+<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+  analytics.page();
+  }}();
+</script>
+
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#a0001e">
+</head>
+<body>
+<noscript>Please enable JavaScript to view this page.</noscript>
+<div id="redirect-message" style="display: none;">
+You must be logged in to view this page.
+</div>
+<div id="unauthorized-message" style="display: none;">
+You must be a Lambda School student to view this page.
+</div>
+<div id="content-wrapper" style="visibility: hidden;">
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container">
+<span class="skiplink-text">Skip to main content</span>
+</div>
+</a>
+<div class="mobile-menu">
+<div class="m-drop">
+<div class="mobile-row">
+<div class="header-row" style="padding: 3px 7px">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
+</svg></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+</button>
+</div>
+</div>
+<div class="nav-row">
+<div class="results-container">
+<ul id="results-container" class="dropdown list-group"></ul>
+</div>
+<div id="mobile-course-menu" class="collapse nav-row">
+<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+<nav class="bd-links">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web API: Java</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recnLDyTtONLTMiFJ">
+1.&nbsp;&nbsp;Java Precourse Information
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recfnUAvFbeyIAHib/">
+Welcome to Java Spring
+</a>
+</li>
+<li>
+<a href="/web4java/module/recjH0lMflsFIVzDM/">
+Java Spring Course Table of Contents
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recoJ4ZqNQWX3cy6E">
+2.&nbsp;&nbsp;Java Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recAGVTYNZyJbEFpu/">
+Java - JDK and Java Classes
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec6Hrk77HupYeoN5/">
+Java Interfaces, Abstract Classes, Lambda Expression
+</a>
+</li>
+<li>
+<a href="/web4java/module/recyJ663TrxVgpqY9/">
+Java - RDBMS and SQL Basics
+</a>
+</li>
+<li>
+<a href="/web4java/module/recqtftA9E98qpbak/">
+Java - Intro to Maven, Spring, and Tomcat Using REST API
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recRVUSWQEtosl0Cz">
+3.&nbsp;&nbsp;RDBMS and Intro to APIs
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recb0OVmRrJzqhH4D/">
+Java - Spring Database Creation Including Seed Data
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec3THcdjv8BumGCt/">
+Java - Read Data using CRUD Operations
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/web4java/module/recJihkiNn2KH2nEW/">
+Java - Inserting Deleting and Updating Data using CRUD Operations
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec2oQCFWOVShtxIx/">
+Java - Data Modeling and Auditing Fields with custom querying
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recSqm5AAEkJcIl3p">
+4.&nbsp;&nbsp;Java Frameworks
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/rec3E1WYDyoiEF1e3/">
+Java - Exception Handling
+</a>
+</li>
+<li>
+<a href="/web4java/module/rececDV2OMIUcY2eH/">
+Java - User Authentication
+</a>
+</li>
+<li>
+<a href="/web4java/module/recDboXln5wm4aKJt/">
+Java - Automated Testing
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec7pCiBPzI4DkAJT/">
+Java - Java Deployment and Best Practices
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recC5dhR9menaROwx">
+5.&nbsp;&nbsp;WEB Unit 4 Java Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+<hr>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-container">
+<div class="sidebar-container bd-sidebar">
+<div class="docs-sidebar">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
+<ul id="results-container" class="dropdown list-group"></ul>
+<nav class="bd-links collapse" id="bd-docs-nav">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web API: Java</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recnLDyTtONLTMiFJ">
+1.&nbsp;&nbsp;Java Precourse Information
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recfnUAvFbeyIAHib/">
+Welcome to Java Spring
+</a>
+</li>
+<li>
+<a href="/web4java/module/recjH0lMflsFIVzDM/">
+Java Spring Course Table of Contents
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recoJ4ZqNQWX3cy6E">
+2.&nbsp;&nbsp;Java Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recAGVTYNZyJbEFpu/">
+Java - JDK and Java Classes
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec6Hrk77HupYeoN5/">
+Java Interfaces, Abstract Classes, Lambda Expression
+</a>
+</li>
+<li>
+<a href="/web4java/module/recyJ663TrxVgpqY9/">
+Java - RDBMS and SQL Basics
+</a>
+</li>
+<li>
+<a href="/web4java/module/recqtftA9E98qpbak/">
+Java - Intro to Maven, Spring, and Tomcat Using REST API
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recRVUSWQEtosl0Cz">
+3.&nbsp;&nbsp;RDBMS and Intro to APIs
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recb0OVmRrJzqhH4D/">
+Java - Spring Database Creation Including Seed Data
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec3THcdjv8BumGCt/">
+Java - Read Data using CRUD Operations
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/web4java/module/recJihkiNn2KH2nEW/">
+Java - Inserting Deleting and Updating Data using CRUD Operations
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec2oQCFWOVShtxIx/">
+Java - Data Modeling and Auditing Fields with custom querying
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recSqm5AAEkJcIl3p">
+4.&nbsp;&nbsp;Java Frameworks
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/rec3E1WYDyoiEF1e3/">
+Java - Exception Handling
+</a>
+</li>
+<li>
+<a href="/web4java/module/rececDV2OMIUcY2eH/">
+Java - User Authentication
+</a>
+</li>
+<li>
+<a href="/web4java/module/recDboXln5wm4aKJt/">
+Java - Automated Testing
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec7pCiBPzI4DkAJT/">
+Java - Java Deployment and Best Practices
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recC5dhR9menaROwx">
+5.&nbsp;&nbsp;WEB Unit 4 Java Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+<hr>
+</nav>
+</div>
+</div>
+<main class="content-container flex-wrapper" role="main">
+<div class="sticky-nav">
+<div class="sprint-nav">
+<ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+<li class="toc-entry toc-h2"><a href="#guided-project">Guided Project</a></li>
+<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+</ul>
+</div>
+
+</div>
+<div class="wrapper limit-width">
+<div class="flex-wrapper">
+<div class="limit-width">
+<div class="jumbotron">
+ <h1 class="bd-title" id="content">Java - Inserting Deleting and Updating Data using CRUD Operations</h1>
+<span class="lead">
+<p class="bd-lead"></p>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<p><a id="Insert_Delete_Update_Data_using_CRUD_Operations"></a></p>
+</span>
+<strong>At the end of this module, you should be able to:</strong>
+<ul>
+<li>use Postman to manually test Web APIs with all CRUD operations</li>
+<li>perform CRUD operations on an RDBMS JPA and Hibernate (Creating and Updating Records)</li>
+<li>perform CRUD operations on an RDBMS JPA and Hibernate (Updating certain fields in records)</li>
+<li>perform CRUD operations on an RDBMS JPA and Hibernate (Deleting records)</li>
+<li>understand and implement @Transactional annotation</li>
+</ul>
+</div>
+<div class="alert alert-warning" role="alert">
+<h4>Pro Tip</h4>
+<p>Treat everyone with as much respect and integrity as you wish to be treated with.</p>
+</div>
+<h2 class="display-4">
+<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
+<p class="lead">Review each preclass resource before class.</p>
+<div class="preclass">
+<ul class="list-group list-group-flush">
+</ul>
+</div>
+<h2 class="display-4">
+<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
+<h4 class="mark mb-3 p-2">Learn to use Postman to manually test Web APIs with all CRUD operations</h4>
+<p><a id="Using_Postman"></a></p>
+<h5>Overview</h5>
+<ul>
+<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_create_delete_update</a> for the code used in the objective.</li>
+</ul>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+<li>JetBrains IntelliJ IDEA IDE</li>
+<li>Postman</li>
+</ul>
+<p>We have already seen how to use <strong>Postman</strong> to retrieve data from an API system. Now we need to use it to manipulate that data! How do we send Postman the data needed for a POST, PUT, PATCH? Where does the status code appear so we can see what is happening? Where do we find the location header for a POST? Let’s find out!</p>
+<h5>Follow Along</h5>
+<p>We need a backend system, an API, to work with. We are going to be using the sampleemps_create_delete_update application from the Github Repository <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_create_delete_update</a>tt.</p>
+<ul>
+<li>Clone the repo (if you haven’t already!)</li>
+<li>Open and run the sampleemps_create_delete_update</li>
+<li>Launch Postman</li>
+<li>Get a blank tab in Postman</li>
+</ul>
+<h3 id="post">POST</h3>
+<p>We are going to look at POST. PATCH and PUT work the same. However, POST has the additional Header Location data we need to find.</p>
+<p>We are going to add this employee</p>
+<pre><code class="language-JSON">{
+    "jobtitles": [
+        {
+            "jobtitleid": 2
+        }
+    ],
+    "name": "Mojo",
+    "salary": 100000.00,
+    "emails": [
+        {
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a1cccecbcee1cdcec2c0cd8fc2cecc">[email&#160;protected]</a>"
+        },
+        {
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="53303c21343a133b3c3e367d3f3c30323f">[email&#160;protected]</a>"
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>Pick <code class="highlighter-rouge">POST</code> for the HTTP method and use the route <code class="highlighter-rouge">http://localhost:2019/employees/employee</code>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%203%20-%20JX%20Java%20-%20Inserting%20Deleting%20and%20Updating%20Data%20using%20CRUD%20Operations%20including%20generating%20Seed%20Data/assets/postmanpost.png" alt="Postman POST"></p>
+<ul>
+<li>Select the <code class="highlighter-rouge">Body</code> tab from the <code class="highlighter-rouge">Request</code> Pane</li>
+<li>In the <code class="highlighter-rouge">Body</code> tab, select <code class="highlighter-rouge">raw</code> data type. A pull down menu will show at the end of the data type list.</li>
+<li>In the Pull Down menu, select JSON</li>
+<li>In the data panel, enter your JSON data to be sent with the request</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%203%20-%20JX%20Java%20-%20Inserting%20Deleting%20and%20Updating%20Data%20using%20CRUD%20Operations%20including%20generating%20Seed%20Data/assets/postmandata.png" alt="Postman Data"></p>
+<ul>
+<li>You results show up in the Response Pane</li>
+<li>No data is returned so the <code class="highlighter-rouge">Body</code> is empty</li>
+<li>Go to the <code class="highlighter-rouge">Headers</code> tab. Here you will find the location header along with all the headers that were returned</li>
+<li>You location header is the header that has
+<ul>
+<li>KEY = <code class="highlighter-rouge">Location</code>
+</li>
+<li>VALUE = <code class="highlighter-rouge">http://localhost:2019/employees/employee/63</code>
+</li>
+</ul>
+</li>
+<li>Also notice you get a Status of <code class="highlighter-rouge">201 Created</code>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%203%20-%20JX%20Java%20-%20Inserting%20Deleting%20and%20Updating%20Data%20using%20CRUD%20Operations%20including%20generating%20Seed%20Data/assets/postmanheaders.png" alt="Postman Headers"></p>
+<p>You have now added an employee!</p>
+<h3 id="delete">DELETE</h3>
+<p>Delete works almost identical to GET. The differences being that you pick the DELETE method and inside of getting data back, you remove the data. So how you do it is similar, the results are vastly different!</p>
+<p>Let’s delete employee 8</p>
+<ul>
+<li>Get a new tab in Postman</li>
+<li>HTTP Method is DELETE</li>
+<li>Route is http://localhost:2019/employees/employee/8</li>
+</ul>
+<p>Send the request and you get</p>
+<ul>
+<li>Nothing in the <code class="highlighter-rouge">Body</code>
+</li>
+<li>Status of <code class="highlighter-rouge">200 OK</code>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%203%20-%20JX%20Java%20-%20Inserting%20Deleting%20and%20Updating%20Data%20using%20CRUD%20Operations%20including%20generating%20Seed%20Data/assets/postmandelete.png" alt="Postman Delete"></p>
+<h5>Challenge</h5>
+<p>Use Postman to do a <code class="highlighter-rouge">PATCH</code> for employee 14. Due to the random nature of the seed data, you may need to use a different employee id.</p>
+<p>The route to use is http://localhost:2019/employees/employee/14</p>
+<p>The data to use is</p>
+<pre><code class="language-JSON">{
+    "salary": 10000000.00,
+    "emails": [
+        {
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="91f8f0fce2fefcf4f3fef5e8d1fdfef2f0fdbff2fefc">[email&#160;protected]</a>"
+        }
+    ]
+}
+</code></pre>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://www.postman.com/" target="blank_">Postman Homepage</a><br> Postman Homepage</li>
+<li>
+<a href="https://learning.postman.com/" target="blank_">Postman Learning Center</a><br> Postman Learning Center</li>
+<li>
+<a href="https://insomnia.rest/" target="blank_">Insomnia</a><br> Popular Postman Competitor - Insomnia</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to perform CRUD operations on an RDBMS JPA and Hibernate (Creating and Updating Records)</h4>
+<p><a id="CRUD_Creating_and_replacing"></a></p>
+<h5>Overview</h5>
+<ul>
+<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_create_delete_update</a> for the code used in the objective.</li>
+</ul>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+<li>JetBrains IntelliJ IDEA IDE</li>
+<li>Postman</li>
+</ul>
+<p>We are going to look at the sample employees application again. This time let’s explore the application found at <a href="https://github.com/LambdaSchool/java-sampleemps/tree/master/sampleemps_create_delete_update">https://github.com/LambdaSchool/java-sampleemps/tree/master/sampleemps_create_delete_update</a>.</p>
+<h3 id="post">POST</h3>
+<p>Let’s first add an employee record to our database. We will then update that record by completely replacing it with new data. So this is what I am planning</p>
+<ul>
+<li>
+<p>This endpoint POST http://localhost:2019/employees/employee</p>
+</li>
+<li>
+<p>Sent with this Request Body</p>
+</li>
+</ul>
+<pre><code class="language-JSON">{
+    "jobtitles": [
+        {
+            "jobtitleid": 2,
+            "title": "Wizard" // here the title of the job is optional!
+        }
+    ],
+    "name": "Mojo",
+    "salary": 100000.00,
+    "emails": [
+        {
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="325f5d585d725e5d51535e1c515d5f">[email&#160;protected]</a>"
+        },
+        {
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="12717d60757b527a7d7f773c7e7d71737e">[email&#160;protected]</a>"
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>Yields this output</li>
+</ul>
+<pre><code class="language-TEXT">No Body
+
+Location Header: http://localhost:2019/employees/employee/15
+Status 201 Created
+</code></pre>
+<p>Do note that in the Employee model, we have a column constraint on <code class="highlighter-rouge">name</code> that affects what data can be added, changed in the employee table.</p>
+<pre><code class="language-JAVA">&lt;... other code ...&gt;
+    @Column(nullable = false, unique = true)
+    private String name;
+&lt;... other code ...&gt;
+</code></pre>
+<p>This means that the name of the employee must be present and must be unique. Every employee must have a name and have their own name!</p>
+<p>We will add the code to implement this in a moment.</p>
+<h3 id="put">PUT</h3>
+<ul>
+<li>
+<p>This endpoint PUT http://localhost:2019/employees/employee/15</p>
+</li>
+<li>
+<p>Sent with this Request Body</p>
+</li>
+</ul>
+<pre><code class="language-JSON">{
+    "name": "Mojo",
+    "salary": 80000.00,
+    "emails": [
+        {
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dcbfb3aebbb5b99cb0b3bfbdb0f2bfb3b1">[email&#160;protected]</a>"
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>Yields this output</li>
+</ul>
+<pre><code class="language-TEXT">No Body
+
+Status Ok
+</code></pre>
+<p>Now let’s completely replace the record with new data. The HTTP method PUT completely replaces the referenced employee, referenced by a given employee primary key. The employee record and all associated records are replaced in the database, whether they need to be updated or not. Thus PUT endpoint takes a full employee record, just like POST does! If you want to update just certain fields while leaving the rest untouched, use the PATCH method.</p>
+<p>Do note that with one to many relationships, the id number of the many part of the relationship changes with each PUT! That is the ONLY data changes with each PUT. Otherwise, you can run a given PUT as many times as you wish, yielding the same result.</p>
+<ul>
+<li>Of course, we need an endpoint in the Employee Controller</li>
+<li>No Location Header is returned because the id of the Employee is already known.</li>
+<li>The final status is OK since no employee record gets created, just replaced.</li>
+</ul>
+<p>We will add the code to implement this in a moment.</p>
+<h5>Follow Along</h5>
+<h3 id="post">POST</h3>
+<p>Let’s add some code to the sample employees application we have been working on.</p>
+<p>Add the necessary endpoint to the Employee Controller. The annotation @RequestBody says the parameter is coming in from the Request Body. The @Valid annotation says to verify if the incoming Request Body JSON object can be converted a valid Employee Java Object. If it cannot be converted, throw an exception!</p>
+<pre><code class="language-JAVA">    @PostMapping(value = "/employee",
+        consumes = {"application/json"})
+    public ResponseEntity&lt;?&gt; addNewEmployee(
+        @Valid
+        @RequestBody
+            Employee newEmployee)
+    {
+</code></pre>
+<ul>
+<li>We “nullify” any id sent in the request body</li>
+<li>We save the record to the database by calling the appropriate method in the Employee Service</li>
+</ul>
+<pre><code class="language-JAVA">        // ids are not recognized by the Post method
+        newEmployee.setEmployeeid(0);
+        newEmployee = employeeService.save(newEmployee);
+</code></pre>
+<ul>
+<li>We create the location header.</li>
+</ul>
+<pre><code class="language-JAVA">        // set the location header for the newly created resource
+        HttpHeaders responseHeaders = new HttpHeaders();
+        URI newEmployeeURI = ServletUriComponentsBuilder.fromCurrentRequest() // get the URI for this request
+            .path("/{employeeid}") // add to it a path variable
+            .buildAndExpand(newEmployee.getEmployeeid()) // populate that path variable with the newly created restaurant id
+            .toUri(); // convert that work into a human readable URI
+        responseHeaders.setLocation(newEmployeeURI); // in the header, set the location location to that URI
+</code></pre>
+<ul>
+<li>We return the location header and with a status of created.</li>
+</ul>
+<pre><code class="language-JAVA">        return new ResponseEntity&lt;&gt;(null,
+            responseHeaders,
+            HttpStatus.CREATED);
+    }
+</code></pre>
+<p>Now, let’s update the implementation of the save method in the class services.EmployeeServiceImp</p>
+<p>We will need access to the JobTitleRepository so add it as a field to the class.</p>
+<pre><code class="language-JAVA">    @Autowired
+    private JobTitleRepository jtrepos;
+</code></pre>
+<ul>
+<li>Create a new employee record in case we need to do some additional data manipulations and so we can add in data for associated tables</li>
+</ul>
+<pre><code class="language-JAVA">    @Transactional
+    @Override
+    public Employee save(Employee employee)
+    {
+        Employee newEmployee = new Employee();
+</code></pre>
+<ul>
+<li>Set the single value fields</li>
+</ul>
+<pre><code class="language-JAVA">        newEmployee.setName(employee.getName());
+        newEmployee.setSalary(employee.getSalary());
+</code></pre>
+<ul>
+<li>Handle the many to many relationship. In order to have the actual data from the associated table, and not just a pointer to the data, we have to loop through what job titles we want and add them to this employee. Just adding the object pointer is not enough. We need the actual data!!!</li>
+</ul>
+<pre><code class="language-JAVA">        newEmployee.getJobtitles()
+                .clear();
+        for (JobTitle jt : employee.getJobtitles())
+        {
+            JobTitle newJT = jtrepos.findById(jt.getJobtitleid())
+                    .orElseThrow(() -&gt; new EntityNotFoundException("JobTitle " + jt.getJobtitleid() + " Not Found"));
+
+            newEmployee.getJobtitles().add(newJT);
+        }
+</code></pre>
+<ul>
+<li>Handle the one to many relationship. The same idea about needing the actual data works for the emails as well!!!</li>
+</ul>
+<pre><code class="language-JAVA">        newEmployee.getEmails()
+            .clear();
+        for (Email e : employee.getEmails())
+        {
+            Email newEmail = new Email();
+            newEmail.setEmail(e.getEmail());
+            newEmail.setEmployee(newEmployee);
+
+            newEmployee.getEmails()
+                .add(newEmail);
+        }
+</code></pre>
+<ul>
+<li>Save the record and return the new record along with the newly generated id number</li>
+</ul>
+<pre><code class="language-JAVA">        return employeerepos.save(newEmployee);
+</code></pre>
+<h3 id="put">PUT</h3>
+<p>Let’s add some code to the sample employees application we have been working on.</p>
+<p>Add the necessary endpoint to the Employee Controller.</p>
+<pre><code class="language-JAVA">    @PutMapping(value = "/employee/{employeeid}",
+        consumes = {"application/json"})
+    public ResponseEntity&lt;?&gt; updateFullEmployee(
+        @Valid // verifies the give employee record is valid
+        @RequestBody
+            Employee updateEmployee, // the Jackson dependency converts from JSON to Java Objects
+        @PathVariable
+            long employeeid) // the primary key of the employee record to replace
+    {
+        updateEmployee.setEmployeeid(employeeid); // set the primary key to the one from the path variable
+        employeeService.save(updateEmployee);
+
+        return new ResponseEntity&lt;&gt;(HttpStatus.OK);
+    }
+</code></pre>
+<ul>
+<li>Now we need to update the Employee Service Implementation. If we have a non-zero primary key, see if it exists. If it does, great! We will replace that Employee record. If the primary key does not exist, throw an exception and stop the process. This gives us the complete SAVE method:</li>
+</ul>
+<pre><code class="language-JAVA">    public Employee save(Employee employee)
+    {
+        Employee newEmployee = new Employee();
+
+        if (employee.getEmployeeid() != 0)
+        {
+            employeerepos.findById(employee.getEmployeeid())
+                .orElseThrow(() -&gt; new EntityNotFoundException("Employee " + employee.getEmployeeid() + " Not Found"));
+
+            newEmployee.setEmployeeid(employee.getEmployeeid());
+        }
+
+        // everything else stays the same!
+        // save will create a new record if the id is 0,
+        // otherwise save replaces the records!
+</code></pre>
+<p>So test out some endpoints!</p>
+<ul>
+<li>POST http://localhost:2019/employees/employee</li>
+</ul>
+<p>You can use the following for test data</p>
+<pre><code class="language-JSON">{
+    "jobtitles": [
+        {
+            "jobtitleid": 2,
+            "title": "Wizard"
+        }
+    ],
+    "name": "Mojo",
+    "salary": 100000.00,
+    "emails": [
+        {
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dbb6b4b1b49bb7b4b8bab7f5b8b4b6">[email&#160;protected]</a>"
+        },
+        {
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6b0804190c022b0304060e450704080a07">[email&#160;protected]</a>"
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>PUT http://localhost:2019/employees/employee/15</li>
+</ul>
+<p>You can use the following for test data. Due to the random nature of the seed data, you may have to use a different ID for the employee to update.</p>
+<pre><code class="language-JSON">{
+    "name": "Corgie",
+    "salary": 80000.00,
+        "jobtitles": [
+        {
+            "jobtitleid": 1,
+            "title": "Big Boss"
+        },
+        {
+            "jobtitleid": 2,
+            "title": "Wizard"
+        }
+    ],
+    "emails": [
+        {
+            "emailid": 4,
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="096166797a4965666a6865276a6664">[email&#160;protected]</a>"
+        },
+        {
+            "emailid": 5,
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0a687f6464734a62657a7a6364246665696b66">[email&#160;protected]</a>"
+        }
+    ]
+}
+</code></pre>
+<p>Your code will be similar to that found in the GitHub Repo for sampleemps!</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://restfulapi.net/rest-put-vs-post/" target="blank_">REST - PUT vs POST</a><br> REST - PUT vs POST</li>
+<li>
+<a href="https://www.springboottutorial.com/spring-boot-crud-rest-service-with-jpa-hibernate" target="blank_">CRUD REST API/Service</a><br> Creating a CRUD REST API/Service with Spring Boot, JPA and Hibernate</li>
+<li>
+<a href="http://progressivecoder.com/rest-api-using-spring-boot-insert-update/" target="blank_">REST API using Spring Boot</a><br> REST API using Spring Boot – Insert and Update Data</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to perform CRUD operations on an RDBMS JPA and Hibernate (Updating certain fields in records)</h4>
+<p><a id="CRUD_Partially_Updating"></a></p>
+<h5>Overview</h5>
+<ul>
+<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_create_delete_update</a> for the code used in the objective.</li>
+</ul>
+<h4 id="software-needed">Software Needed</h4>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+<li>JetBrains IntelliJ IDEA IDE</li>
+<li>Postman</li>
+</ul>
+<h3 id="i-do">I do</h3>
+<p>We have much to do to update in adding these CRUD functions. Find the code in the repo as it is mentioned in the objective!</p>
+<p>What if we do not want to replace the whole record but just certain fields. This is where PATCH comes in. Let’s implement PATCH.</p>
+<h4 id="patch">PATCH</h4>
+<ul>
+<li>
+<p>This endpoint PATCH http://localhost:2019/employees/employee/15</p>
+</li>
+<li>
+<p>Sent with this Request Body</p>
+</li>
+</ul>
+<pre><code class="language-JSON">{
+    "salary": 150000.00,
+    "emails": [
+    {
+        "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a8c0c7c5cde8c4c7cbc9c486cbc7c5">[email&#160;protected]</a>"
+    }
+    ]
+}
+</code></pre>
+<ul>
+<li>Yields this output</li>
+</ul>
+<pre><code class="language-TEXT">No Body
+
+Status Ok
+</code></pre>
+<h5>Follow Along</h5>
+<p>Let’s add some code!</p>
+<ul>
+<li>Of course, we need an endpoint where our frontend client can access the PATCH method.</li>
+<li>This endpoint is similar to the PUT endpoint except
+<ul>
+<li>The primary key is sent to the Employee Service via a parameter instead of inside the Employee object. This is a personal preference.</li>
+<li>We do NOT verify that the Employee object is “valid”. A valid employee object would require a Name field. If we are not updating the name field, we won’t have one so the employee object would be registered as invalid. Not what we want.</li>
+<li>We call the update function as opposed to the save function from the Employee Service Class.</li>
+</ul>
+</li>
+</ul>
+<p>Add the following endpoint to the EmployeeController class</p>
+<pre><code class="language-JAVA">    @PatchMapping(value = "/employee/{employeeid}",
+        consumes = {"application/json"})
+    public ResponseEntity&lt;?&gt; updateEmployee(
+        @RequestBody
+            Employee updateEmployee,
+        @PathVariable
+            long employeeid)
+    {
+        employeeService.update(updateEmployee,
+            employeeid);
+        return new ResponseEntity&lt;&gt;(HttpStatus.OK);
+    }
+</code></pre>
+<ul>
+<li>Now we need to make the update function available in the Employee Service class, so add it to the services.EmployeeService class</li>
+</ul>
+<pre><code class="language-JAVA">&lt;... other code ...&gt;
+    Employee update(Employee employee, long employeeid);
+&lt;... other code ...&gt;
+</code></pre>
+<ul>
+<li>We need to implement the function in the Employee Service Implementation class.</li>
+<li>
+<p>We are going to check if fields coming in from the frontend client are NULL, meaning that the frontend client did not send a new value for that field. Primitive data types have to handled differently. Remember that primitive data types are not objects so NULL has no meaning for them. Let’s address that first.</p>
+</li>
+<li>We need to make some changes to the employee model.
+<ul>
+<li>If we checked is see if <code class="highlighter-rouge">salary</code> was NULL, meaning that during PATCH it did not come in from the frontend client, we have to check to see if <code class="highlighter-rouge">salary</code> is 0.00. Remember NULL has no meaning for doubles.</li>
+<li>If we check and salary is 0.00, is it 0.00 because the frontend client set it to 0.00 or is it 0.00 because it was not sent by the frontend client. Let’s fix that problem.</li>
+</ul>
+</li>
+<li>Let’s add the boolean field called <code class="highlighter-rouge">hasvalueforsalary</code> to the Employee model class. I like to add it right above the salary field. We do NOT need to create Getters and Setters for this field!</li>
+<li>Mark <code class="highlighter-rouge">hasvalueforsalary</code> as <code class="highlighter-rouge">@Transient</code>. This means the field will not be saved in the database and is just part of the Java object.</li>
+<li>Notice that we will be referencing <code class="highlighter-rouge">hasvalueforsalary</code> as a public field and not using a getter and setter. Personal preference again.</li>
+</ul>
+<pre><code class="language-JAVA">    @Transient
+    public boolean hasvalueforsalary = false;
+    private double salary;
+</code></pre>
+<ul>
+<li>Before the class we add the annotation <code class="highlighter-rouge">@JsonIgnoreProperties(value = {"hasvalueforsalary"})</code>. The <code class="highlighter-rouge">hasvalueforsalary</code> field will be used internally to the application to determine if a salary value came from the frontend client or should be treated as NULL. Do not ever send this value in JSON to the frontend client.</li>
+</ul>
+<pre><code class="language-JAVA">&lt;... other code ...&gt;
+@JsonIgnoreProperties(value = {"hasvalueforsalary"})
+public class Employee
+{
+&lt;... other code ...&gt;
+</code></pre>
+<ul>
+<li>Finally, let’s update the <code class="highlighter-rouge">setSalary</code> setter method. Setters are always used to make the conversion from the JSON received from the frontend client to Java objects. We take advantage of that fact by setting <code class="highlighter-rouge">hasvalueforsalary = true</code> in the setter for <code class="highlighter-rouge">salary</code>. If <code class="highlighter-rouge">salary</code> is not included in the JSON from the frontend client, <code class="highlighter-rouge">setSalary</code> is never called and <code class="highlighter-rouge">hasvalueforsalary</code> remains false.</li>
+</ul>
+<pre><code class="language-JAVA">&lt;... other code ...&gt;
+    public void setSalary(double salary)
+    {
+        hasvalueforsalary = true;
+        this.salary = salary;
+    }
+&lt;... other code ...&gt;
+</code></pre>
+<ul>
+<li>Now back to our implementation of the Employee Service update function.</li>
+<li>The header includes the data to update and the primary key of the record to update. Of course, update will change data so make it <code class="highlighter-rouge">@Transactional</code>
+</li>
+</ul>
+<pre><code class="language-JAVA">    @Transactional
+    @Override
+    public Employee update(
+        Employee employee,
+        long employeeid)
+    {
+</code></pre>
+<ul>
+<li>Find the employee record referenced by the given primary key and create a new employee record with that data.</li>
+</ul>
+<pre><code class="language-JAVA">        Employee currentEmployee = employeerepos.findById(employeeid)
+            .orElseThrow(() -&gt; new EntityNotFoundException("Employee " + employeeid + " Not Found"));
+</code></pre>
+<ul>
+<li>Check each non-list field in the employee object that was received from the frontend client. If the field is NULL, meaning that a value did not come in from the frontend client, just keep the old data. If a field is NOT NULL, the frontend client sent in new data and so replace in the object found above that new data.</li>
+</ul>
+<pre><code class="language-JAVA">        if (employee.getName() != null)
+        {
+            currentEmployee.setName(employee.getName());
+        }
+
+        if (employee.hasvalueforsalary)
+        {
+            currentEmployee.setSalary(employee.getSalary());
+        }
+</code></pre>
+<ul>
+<li>Relationships require a decision. How to deal with items sent by the frontend client that are part of a relationship?
+<ul>
+<li>I have decided that if data is sent for the one to many or the many to many relationships, that data is meant to completely replace the data for the relationship.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-JAVA">        if (employee.getJobtitles().size() &gt; 0)
+        {
+            currentEmployee.getJobtitles()
+                .clear();
+            for (JobTitle jt : employee.getJobtitles())
+            {
+                JobTitle newJT = jtrepos.findById(jt.getJobtitleid())
+                    .orElseThrow(() -&gt; new EntityNotFoundException("JobTitle " + jt.getJobtitleid() + " Not Found"));
+
+                currentEmployee.getJobtitles()
+                    .add(newJT);
+            }
+        }
+
+        if (employee.getEmails()
+            .size() &gt; 0)
+        {
+            currentEmployee.getEmails()
+                .clear();
+            for (Email e : employee.getEmails())
+            {
+                Email newEmail = new Email();
+                newEmail.setEmail(e.getEmail());
+                newEmail.setEmployee(currentEmployee);
+
+                currentEmployee.getEmails()
+                    .add(newEmail);
+            }
+        }
+</code></pre>
+<ul>
+<li>Finally, save to the database and return a full employee record with all the updated data. This still does a replace in the database but the frontend client only has to send us the data it wants changed, not all the data as with a PUT.</li>
+</ul>
+<pre><code class="language-JAVA">        return employeerepos.save(currentEmployee);
+    }
+</code></pre>
+<p>You can now test out the endpoint</p>
+<ul>
+<li>PATCH http://localhost:2019/employees/employee/15</li>
+</ul>
+<p>You can use the following for test data. Due to the random nature of the seed data, you may have to use a different ID for the employee to update.</p>
+<pre><code class="language-JSON">{
+    "salary": 10000000.00,
+    "jobtitles": [
+            {
+                "jobtitleid": 2,
+                "title": "Wizard"
+            },
+            {
+                "jobtitleid": 1,
+                "title": "Big Boss"
+            }
+        ],
+    "emails": [
+        {
+            "emailid": 4,
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="244c4b545764484b4745480a474b49">[email&#160;protected]</a>"
+        },
+        {
+            "emailid": 5,
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d7b5a2b9b9ae97bfb8a7a7beb9f9bbb8b4b6bb">[email&#160;protected]</a>"
+        }
+    ]
+}
+</code></pre>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="http://restcookbook.com/HTTP%20Methods/patch/" target="blank_">PATCH HTTP method?</a><br> When should we use the PATCH HTTP method?</li>
+<li>
+<a href="https://www.baeldung.com/http-put-patch-difference-spring" target="blank_">HTTP PUT vs HTTP PATCH</a><br> Baeldung - HTTP PUT vs HTTP PATCH in a REST API</li>
+<li>
+<a href="https://cassiomolin.com/2019/06/10/using-http-patch-in-spring/" target="blank_">PATCH in Spring</a><br> Using HTTP PATCH in Spring</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to perform CRUD operations on an RDBMS JPA and Hibernate (Deleting records)</h4>
+<p><a id="CRUD_Deleting"></a></p>
+<h5>Overview</h5>
+<ul>
+<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_read_delete</a> for the code used in the objective.</li>
+</ul>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+<li>JetBrains IntelliJ IDEA IDE</li>
+<li>Postman</li>
+</ul>
+<p>How do we get rid of data in the database. Let’s delete it. This is the most straight forward of the CRUD operations. You say delete with the given employee primary key and that employee and all associated records are deleted. Let’s code it!</p>
+<ul>
+<li>
+<p>Endpoint DELETE http://localhost:2019/employees/employee/15</p>
+</li>
+<li>
+<p>Yields the Output</p>
+</li>
+</ul>
+<pre><code class="language-Text">No Body
+
+Status Ok
+</code></pre>
+<h5>Follow Along</h5>
+<p>Let’s code this! First we need an endpoint and from that endpoint we only need a primary key, so in the Employee Controller add the following code. Notice we are doing a delete so we are using <code class="highlighter-rouge">@DeleteMapping</code> instead of <code class="highlighter-rouge">@GetMapping</code>!</p>
+<pre><code class="language-JAVA">    @DeleteMapping(value = "/employee/{employeeid}")
+    public ResponseEntity&lt;?&gt; deleteEmployeeById(
+        @PathVariable
+            long employeeid)
+    {
+        employeeService.delete(employeeid);
+        return new ResponseEntity&lt;&gt;(HttpStatus.OK);
+    }
+</code></pre>
+<p>Now we need to add the delete method to the Employee Service interface. Note the return is void. Nothing gets returns; there is nothing to get returned. It got deleted!</p>
+<pre><code class="language-JAVA">    void delete(long employeeid);
+</code></pre>
+<p>Now implement the delete method in the Employee Service Implementation. Notice that we first determine if we have the employee primary key in the database. If we do, great delete. If we do not, throw an exception.</p>
+<p>The <code class="highlighter-rouge">findById</code> method returns an object of type <code class="highlighter-rouge">Object</code>. One of the methods in the class <code class="highlighter-rouge">Object</code> is <code class="highlighter-rouge">isPresent</code> which checks to see if the object exist (is not null)!</p>
+<pre><code class="language-JAVA">    @Transactional
+    @Override
+    public void delete(long employeeid)
+    {
+        if (employeerepos.findById(employeeid)
+            .isPresent())
+        {
+            employeerepos.deleteById(employeeid);
+        } else
+        {
+            throw new EntityNotFoundException("Employee " + employeeid + " Not Found");
+        }
+    }
+</code></pre>
+<p>Bye Bye employee. Enjoy your farewell cake!</p>
+<p>When we delete an employee, associated email records get deleted. This is because we have CASCADE.ALL set on the One to Many relationship between employee and emails. The Many to Many relationship automatically deletes the joins between employees and jobtitles when employee is deleted. The actual job title table is left intact!</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://howtodoinjava.com/hibernate/hibernate-jpa-cascade-types/" target="blank_">Cascade Types</a><br> Hibernate JPA Cascade Types</li>
+<li>
+<a href="https://www.baeldung.com/spring-data-jpa-delete" target="blank_">Baeldung</a><br> Baeldung - Spring Data JPA Delete and Relationships</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to understand and implement @Transactional annotation</h4>
+<p><a id="Transactional"></a></p>
+<h5>Overview</h5>
+<ul>
+<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_create_delete_update</a> for the code used in the objective.</li>
+</ul>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+<li>JetBrains IntelliJ IDEA IDE</li>
+<li>Postman</li>
+</ul>
+<p>We have much to update in adding these CRUD functions. Find the Transactional code in the repo as it is mentioned in the objective!</p>
+<p>The @Transactional Annotation</p>
+<p>Any method that changes data should be made transactional!</p>
+<p>Two main libraries implement the <code class="highlighter-rouge">@Transactional</code> annotation. For most purposes these two implementations are interchangeable. In fact, the Spring Framework has its own version of each library. The two libraries are</p>
+<ul>
+<li><code class="highlighter-rouge">org.springframework.transaction.annotation.Transactional</code></li>
+<li><code class="highlighter-rouge">javax.transaction</code></li>
+</ul>
+<p>So best practice - if you are using the Spring Framework, import the library <code class="highlighter-rouge">org.springframework.transaction.annotation.Transactional</code>. Otherwise, import the library <code class="highlighter-rouge">javax.transaction</code></p>
+<p>To make a method transactional, add the <code class="highlighter-rouge">@Transactional</code> annotation before the method name. For example:</p>
+<pre><code class="language-JAVA">    @Transactional
+    @Override
+    public void delete(long employeeid)
+    {
+        ...
+    }
+</code></pre>
+<p>If you make the class transactional, each method in the class is considered transactional. If you make both the class and method transactional, the annotation at the method level takes precedent. I like to make the methods transactional. I have experienced issues with just making a class transactional.</p>
+<pre><code class="language-JAVA">@Transactional
+@Service(value = "employeeSerivce") // needed to name this implementation as the service to use
+public class EmployeeServiceImpl implements EmployeeService
+{
+    ...
+}
+</code></pre>
+<p>Normally we use the transactional annotation to make manipulating data a single transaction. For example, look at delete.</p>
+<ul>
+<li>Delete an employee records triggers
+<ul>
+<li>Delete of 0 or more email records</li>
+<li>Delete of 0 or more Employee JobTitle records</li>
+</ul>
+</li>
+</ul>
+<p>For a transactional delete to succeed, all three deletes must succeed. If a problem is found during any of the deletes, the transactional initiates a rollback - all the data deleted is restored and the database is left in the same it was in before the failed delete was attempted. In this matter our database maintains <strong>referential integrity</strong>. We do not delete an employee while leaving emails of that employee in the emails table. Referential integrity can be defined as the accuracy and consistency of data within the various relationships.</p>
+<p>Many times it is helpful to make a method work as a single transaction. The <code class="highlighter-rouge">@Transactional</code> annotation has a couple of useful options.</p>
+<ul>
+<li>
+<code class="highlighter-rouge">@Transactional(readOnly=true)</code> - method does not write to the database</li>
+<li>
+<code class="highlighter-rouge">@Transactional(timeout=XX)</code> - timeout in seconds. applies to both data manipulation and queries. I know of interviews where you are asked how to restrict how long a query can run before timing out. Here it is!</li>
+</ul>
+<p>We have already added <code class="highlighter-rouge">@Transacational</code> in our code each time we wrote a method to change data, so no need to change any code at this point!</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://spring.io/guides/gs/managing-transactions/" target="blank_">Spring IO</a><br> Spring IO - Managing Transactions</li>
+<li>
+<a href="https://www.javainuse.com/spring/boot-transaction" target="blank_">Spring Boot</a><br> Spring Boot Declarative Transaction Management Example</li>
+<li>
+<a href="https://www.javainuse.com/spring/boot-transaction-isolation" target="blank_">Spring Boot</a><br> Spring Boot - Transaction Isolation Tutorial</li>
+<li>
+<a href="https://www.javainuse.com/spring/boot-rollback" target="blank_">Spring Boot</a><br> Spring Boot Transaction Management - Transaction Rollback Example</li>
+<li>
+<a href="https://www.javainuse.com/spring/boot-transaction-isolation" target="blank_">Spring Boot</a><br> Spring Boot - Transaction Isolation Tutorial</li>
+<li>
+<a href="https://marcin-chwedczuk.github.io/spring-transactional-cheat-sheet" target="blank_">Spring @Transactional cheat sheet</a><br> Spring @Transactional cheat sheet</li>
+</ul>
+<hr>
+<h2>
+<a id="guided-project" class="anchor" href="#guided-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Guided Project</h2>
+<h3>crudyrestaurants_delete_save_update</h3>
+<p>Using restaurants with menus as our model, we explore CRUD operations related to creating, updating and deleting data working towards the crudyrestaurants_delete_save_update application found in the repo</p>
+<a target="_blank" href="https://github.com/LambdaSchool/java-crudyrestaurants.git">GitHub Repo</a>
+<hr>
+<h2 class="display-4">
+<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
+<ul class="list-group">
+<li class="list-group-item">
+<h5><a target="_blank" href="https://github.com/LambdaSchool/java-crudyorders.git">Crudy Orders</a></h5>
+<p>This is part 3 of a 3 part series. In the first part you are tasked with setting up the database model in a Java Spring Application. In the second part you are tasked with adding Get routes to the application. In the third part you are tasked with adding the rest of the CRUD operation</p>
+</li>
+</ul>
+<h2 class="display-4">
+<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
+<h3 class="display-5">Class Recordings</h3>
+<p class="lead">You can use class recordings to help you master the material.</p>
+<div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<strong><a target="_blank" href="https://youtu.be/BB5f1Btns5o">CRUD Operations for WEB33 with John Mitchell</a></strong>
+</li>
+<li class="list-group-item">
+<a href="/archive/WEB4Java/module/recJihkiNn2KH2nEW">All previous recordings</a>
+</li>
+</ul>
+</div>
+<h3 class="display-5">Demonstrate Mastery</h3>
+<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
+<ul>
+<li>Objective challenge: <p>Use Postman to do a <code class="highlighter-rouge">PATCH</code> for employee 14. Due to the random nature of the seed data, you may need to use a different employee id.</p>
+<p>The route to use is http://localhost:2019/employees/employee/14</p>
+<p>The data to use is</p>
+<pre><code class="language-JSON">{
+    "salary": 10000000.00,
+    "emails": [
+        {
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="99f0f8f4eaf6f4fcfbf6fde0d9f5f6faf8f5b7faf6f4">[email&#160;protected]</a>"
+        }
+    ]
+}
+</code></pre>
+</li>
+<li>Guided Project: crudyrestaurants_delete_save_update</li>
+<li>Project: Crudy Orders</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80850900-4');
+</script>
+<script type="text/javascript">
+  function getDomain() {
+    const domainName = window.location.hostname.split('.')[1];
+    return `${domainName}.com`;
+  }
+</script>
+<script src="" integrity="" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
+<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+  SimpleJekyllSearch.init({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    dataSource: '/search.json',
+    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Java - Inserting Deleting and Updating Data using CRUD Operations">{title}</a></li>',
+    noResultsText: '',
+    limit: 10,
+    fuzzy: true,
+  })
+</script>
+<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
+  if (window.attachEvent) {
+    window.attachEvent('onload', verifySignedIn);
+  } else {
+    if (window.onload) {
+      var currentOnLoadFn = window.onload;
+      var newOnLoadFn = function (evt) {
+        currentOnLoadFn(evt);
+        verifySignedIn();
+      };
+      window.onload = newOnLoadFn;
+    } else {
+      window.onload = verifySignedIn;
+    }
+  }
+
+  function verifySignedIn() {
+    if (isPagePublic()) {
+      return showPageContents();
+    }
+
+    window.__user = null;
+    isSignedIn().then((user) => {
+      window.__user = user;
+
+      if (!user.signedIn) {
+        redirectToSignIn();
+      } else if (!user.student && !window.__openToAdmissions) {
+        showUnauthorizedMessage();
+      } else {
+        showPageContents();
+      }
+    });
+  }
+
+  function isPagePublic() {
+    const openCourses = [
+      'and-pre',
+      'ds-pre',
+      'fsw-pre',
+      'help',
+      'ios-pre',
+    ];
+
+    const openPages = [
+      'cs-and',
+      'cs-fsw',
+      'cs-ios',
+      'cr',
+      'ds',
+      'jx',
+      'p4s',
+      'ux',
+    ];
+
+    const pathParts = window.location.pathname.split('/');
+    const courseName = pathParts[1];
+    const pageName = pathParts[pathParts.length - 1];
+
+    return openCourses.includes(courseName) || openPages.includes(pageName);
+  }
+
+  function isSignedIn() {
+    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
+
+    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
+
+    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
+      .then((response) => response.text())
+      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
+      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
+      .catch((error) => {});
+  }
+
+  function redirectToSignIn() {
+    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+    const redirectMessage = document.querySelector('#redirect-message');
+    redirectMessage.style.display = "block";
+    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+    window.location = signInUrl;
+  }
+
+  function showPageContents() {
+    document.querySelector('#content-wrapper').style.visibility = 'visible';
+  }
+
+  function showUnauthorizedMessage() {
+    document.querySelector('#unauthorized-message').style.display = 'block';
+  }
+
+  function getAuthBaseUrl() {
+    const domain = getDomain();
+    const authBaseUrl = `https://auth.${domain}`;
+    return authBaseUrl;
+  }
+</script><script src="/assets/js/docs.min.js"></script><script>
+  var MathJax = {
+    tex: {
+      inlineMath: [['$$', '$$'], ['\[', '\])']]
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax span": {
+          color: "#000000"
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script>
+  handleExternalLinks();
+
+  function handleExternalLinks() {
+    const domain = getDomain();
+    const links = document.querySelectorAll('a');
+    return links.forEach((link) => {
+      if (!link.host.includes(domain)) link.target = '_blank';
+    })
+  };
+</script>
+</div>
+</body>
+</html>

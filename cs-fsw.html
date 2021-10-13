@@ -1,0 +1,3686 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Intended as a home for Lambda School curriculum.">
+  <meta name="author" content="">
+  <meta name="generator" content="Jekyll v3.8.0">
+  <title>Full Stack Web Development · Lambda School</title>
+
+  <link rel='stylesheet' integrity crossorigin='anonymous'
+    href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+  <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+  <link rel='stylesheet'
+    href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+  <link rel='stylesheet'
+    href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+  <script>
+    ( function ( i, s, o, g, r, a, m ) {
+      i[ 'GoogleAnalyticsObject' ] = r;
+      i[ r ] = i[ r ] || function () {
+        ( i[ r ].q = i[ r ].q || [] ).push( arguments )
+      }, i[ r ].l = 1 * new Date();
+      a = s.createElement( o ),
+        m = s.getElementsByTagName( o )[ 0 ];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore( a, m )
+    } )( window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga' );
+    ga( 'create', 'UA-122016605-1', 'learn.lambdaschool.com' );
+    ga( 'send', 'pageview' );
+  </script>
+
+  <script>
+    ! function () {
+      var analytics = window.analytics = window.analytics || [];
+      if ( !analytics.initialize )
+        if ( analytics.invoked ) window.console && console.error && console.error( "Segment snippet included twice." );
+        else {
+          analytics.invoked = !0;
+          analytics.methods = [ "trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset",
+            "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"
+          ];
+          analytics.factory = function ( t ) {
+            return function () {
+              var e = Array.prototype.slice.call( arguments );
+              e.unshift( t );
+              analytics.push( e );
+              return analytics
+            }
+          };
+          for ( var t = 0; t < analytics.methods.length; t++ ) {
+            var e = analytics.methods[ t ];
+            analytics[ e ] = analytics.factory( e )
+          }
+          analytics.load = function ( t, e ) {
+            var n = document.createElement( "script" );
+            n.type = "text/javascript";
+            n.async = !0;
+            n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
+            var a = document.getElementsByTagName( "script" )[ 0 ];
+            a.parentNode.insertBefore( n, a );
+            analytics._loadOptions = e
+          };
+          analytics.SNIPPET_VERSION = "4.1.0";
+          analytics.load( "BjKorwKrSvMamfNoGkBq9rISk7wF6QQX" );
+          analytics.page();
+        }
+    }();
+  </script>
+
+  <link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#a0001e">
+</head>
+
+<body>
+  <noscript>Please enable JavaScript to view this page.</noscript>
+  <div id="redirect-message" style="display: none;">
+    You must be logged in to view this page.
+  </div>
+  <div id="unauthorized-message" style="display: none;">
+    You must be a Lambda School student to view this page.
+  </div>
+  <div id="content-wrapper">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+    <div class="mobile-menu">
+      <div class="m-drop">
+        <div class="mobile-row">
+          <div class="header-row" style="padding: 3px 7px">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg"
+                width="33" height="35" viewBox="0 0 33 35" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                  fill="#EC3944" />
+              </svg></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu"
+              aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
+                <title>Menu</title>
+                <path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                  d="M4 7h22M4 15h22M4 23h22"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="nav-row">
+          <div class="results-container">
+            <ul id="results-container" class="dropdown list-group"></ul>
+          </div>
+          <div id="mobile-course-menu" class="collapse nav-row">
+            <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+              <nav class="bd-links">
+                <div class="bd-toc-item">
+                  <h4 class="bd-toc-link"></h4>
+                </div>
+
+                <hr>
+                <div class="bd-toc-item">
+                  <h4 class="bd-toc-link">Lambda Launch</h4>
+                </div>
+
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/ll/sprint/recQf3zxkHFPeRABL">
+                    1.&nbsp;&nbsp;Lambda Orientation
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/ll/module/recBC1BCvLsTSiaLS/">
+                        Learning at Lambda
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/ll/module/recnBWTWXqXWjWCUd/">
+                        Labs and Beyond
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/ll/module/rec7Vyq18G1tytzyk/">
+                        Values and Support
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <hr>
+                <div class="bd-toc-item">
+                  <h4 class="bd-toc-link">Web Fundamentals</h4>
+                </div>
+
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web1/sprint/rec2neAvlo6zM07qc">
+                    1.&nbsp;&nbsp;User Interface and Git
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/web1/module/recl0IyzS2Vl89lZa/">
+                        User Interface
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web1/module/rect59e95N6OSvoCd/">
+                        Git for Web Development
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web1/module/rec6KMj0W3ukhYeWv/">
+                        Intro CSS
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web1/module/recYyDfYS2UmsvquL/">
+                        CSS Layouts
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web1/sprint/recYAgtervk7WilBW">
+                    2.&nbsp;&nbsp;Advanced CSS and Intro JavaScript
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/web1/module/recUPpx89Z2uWzkzU/">
+                        Responsive Design
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web1/module/recPmaqIfzn9NMPLY/">
+                        Intro to JavaScript
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web1/module/recXRqGjyTS6uDzSA/">
+                        Arrays
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web1/module/recQV3tKcEDXa840D/">
+                        Objects
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web1/sprint/recIS8D2e4nTRGCLT">
+                    3.&nbsp;&nbsp;JavaScript Fundamentals
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/web1/module/recrBjfZ9mBasSPpa/">
+                        Scope and Closure
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web1/module/recNilLQDqhqvPuNk/">
+                        Advanced Array Methods
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web1/module/rec0AWuNLezbpit7m/">
+                        Prototypes and Inheritance
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web1/module/recyS588eOvVUKAMc/">
+                        Classes
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web1/sprint/rec2di8phTBw15e4E">
+                    4.&nbsp;&nbsp;WEB Unit 1 Build
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                  </ul>
+                </div>
+                <hr>
+                <div class="bd-toc-item">
+                  <h4 class="bd-toc-link">Web Applications I</h4>
+                </div>
+
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web2/sprint/recPSZMPrmESUYo2C">
+                    1.&nbsp;&nbsp;Applied JavaScript
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/web2/module/rectn5PUU5ubcQkPu/">
+                        DOM I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web2/module/recJWv3RIfa4NFXbn/">
+                        DOM II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web2/module/rec847sNXZX9CVDNl/">
+                        Components I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web2/module/recd6kDKS6eMapSRq/">
+                        Components II
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web2/sprint/recYL2HDPPpkDmGEm">
+                    2.&nbsp;&nbsp;Intro to React
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/web2/module/recZau7hH8vzww14N/">
+                        React Components and Component State
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web2/module/recgzSGQtp2HYwgSR/">
+                        Composing React Components and Passing Data Via Props
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web2/module/recKe8PW6ZMwjL1Qg/">
+                        Component Side Effects
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web2/module/recNDoSqyUw3eq1y3/">
+                        Advanced Styling Techniques
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web2/sprint/recH2pYM3qVavZTRN">
+                    3.&nbsp;&nbsp;Single Page Applications
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/web2/module/recd7jGy7tfVkcFlX/">
+                        React Router
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web2/module/rect081xiYT2cfxGF/">
+                        Form Management
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web2/module/recKK5C7wV0WiECfr/">
+                        Advanced Form Management
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web2/module/recduYpjgZBQaQM8X/">
+                        cypress.io
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web2/sprint/recwKyMueNtoTTmUD">
+                    4.&nbsp;&nbsp;WEB Unit 2 Build
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                  </ul>
+                </div>
+                <hr>
+                <div class="bd-toc-item">
+                  <h4 class="bd-toc-link">Web Applications II</h4>
+                </div>
+
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web3/sprint/recq59MvEIZfUAohy">
+                    1.&nbsp;&nbsp;Advanced React
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/web3/module/recnDKrWb24lgaziC/">
+                        Class Components
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web3/module/rec1DPoOZSmocXfak/">
+                        The React Lifecycle
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web3/module/recAxmnYmusEi8JuL/">
+                        Composing and Sharing Non-Visual Behavior
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web3/module/rechTQVfCg4p85Hoi/">
+                        Testing Web Applications
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web3/sprint/recukritK1B1pFrcM">
+                    2.&nbsp;&nbsp;Advanced State Management
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/web3/module/rectpk6uIV3pCHJh8/">
+                        The Reducer Pattern
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web3/module/recba2NUdVmgKYyR3/">
+                        Redux
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web3/module/recSoiWNJzGURrXYh/">
+                        Async Redux
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web3/module/recByjgF7FwwH5Z7W/">
+                        Context API
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web3/sprint/recnhsJGy28gNi1K5">
+                    3.&nbsp;&nbsp;Advanced Web Applications
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/web3/module/recS9H6qCj0dQe32B/">
+                        Testing React
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web3/module/recQlbCZf9tOVgiXC/">
+                        Client-Side Authentication
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web3/module/recupVjaAKPqbuk7Y/">
+                        HTTP / AJAX II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web3/module/receOMvCB7dSyX5FL/">
+                        Deploying Web Apps
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web3/sprint/recVFiuMBzbcZllxC">
+                    4.&nbsp;&nbsp;WEB Unit 3 Build
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                  </ul>
+                </div>
+                <hr>
+                <div class="bd-toc-item">
+                  <h4 class="bd-toc-link">Web API: Node</h4>
+                </div>
+
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web4node/sprint/reckzQd7ZgiFY5ok5">
+                    1.&nbsp;&nbsp;Build a Web API
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/web4node/module/recZiPP8Oyg1WlHxT/">
+                        Introduction to Node.js and Express
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4node/module/recBjiSulq0PYLCIj/">
+                        Server-Side Routing with Express
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4node/module/recCJjYFEz0i5O5p5/">
+                        Express Middleware
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4node/module/recs9QOkOAtZhsjc4/">
+                        Web Deployment and Best Practices
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web4node/sprint/receFLR7MpwQXesIN">
+                    2.&nbsp;&nbsp;Adding Data Persistence
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/web4node/module/recFG7SqlSCAB8iU7/">
+                        Introduction to Relational Databases
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4node/module/recIbfNn9xRhLTOv4/">
+                        Database Schema Design
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4node/module/recw2ezN22yjehidj/">
+                        Multi-Table Queries
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4node/module/rec5J23yAIdjmFbgP/">
+                        Data Modeling
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web4node/sprint/recGqGeZ7n75vZivn">
+                    3.&nbsp;&nbsp;Authentication and Testing
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/web4node/module/recQD9lnhqWEFh6g4/">
+                        Introduction to Authentication
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4node/module/reciCHdNjavSKaaLt/">
+                        Using JSON Web Tokens (JWT)
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4node/module/recd26oZ3GBNHh3Na/">
+                        WEB Unit Testing
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4node/module/reciXdxRA8zXJXDID/">
+                        Testing the Back End
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web4node/sprint/recWkcWui91eG1s8q">
+                    4.&nbsp;&nbsp;WEB Unit 4 Node Build
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                  </ul>
+                </div>
+                <hr>
+                <div class="bd-toc-item">
+                  <h4 class="bd-toc-link">Web API: Java</h4>
+                </div>
+
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web4java/sprint/recnLDyTtONLTMiFJ">
+                    1.&nbsp;&nbsp;Java Precourse Information
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/web4java/module/recfnUAvFbeyIAHib/">
+                        Welcome to Java Spring
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4java/module/recjH0lMflsFIVzDM/">
+                        Java Spring Course Table of Contents
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web4java/sprint/recoJ4ZqNQWX3cy6E">
+                    2.&nbsp;&nbsp;Java Fundamentals
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/web4java/module/recAGVTYNZyJbEFpu/">
+                        Java - JDK and Java Classes
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4java/module/rec6Hrk77HupYeoN5/">
+                        Java Interfaces, Abstract Classes, Lambda Expression
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4java/module/recyJ663TrxVgpqY9/">
+                        Java - RDBMS and SQL Basics
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4java/module/recqtftA9E98qpbak/">
+                        Java - Intro to Maven, Spring, and Tomcat Using REST API
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web4java/sprint/recRVUSWQEtosl0Cz">
+                    3.&nbsp;&nbsp;RDBMS and Intro to APIs
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/web4java/module/recb0OVmRrJzqhH4D/">
+                        Java - Spring Database Creation Including Seed Data
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4java/module/rec3THcdjv8BumGCt/">
+                        Java - Read Data using CRUD Operations
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4java/module/recJihkiNn2KH2nEW/">
+                        Java - Inserting Deleting and Updating Data using CRUD Operations
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4java/module/rec2oQCFWOVShtxIx/">
+                        Java - Data Modeling and Auditing Fields with custom querying
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web4java/sprint/recSqm5AAEkJcIl3p">
+                    4.&nbsp;&nbsp;Java Frameworks
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/web4java/module/rec3E1WYDyoiEF1e3/">
+                        Java - Exception Handling
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4java/module/rececDV2OMIUcY2eH/">
+                        Java - User Authentication
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4java/module/recDboXln5wm4aKJt/">
+                        Java - Automated Testing
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4java/module/rec7pCiBPzI4DkAJT/">
+                        Java - Java Deployment and Best Practices
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web4java/sprint/recC5dhR9menaROwx">
+                    5.&nbsp;&nbsp;WEB Unit 4 Java Build
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                  </ul>
+                </div>
+                <hr>
+                <div class="bd-toc-item">
+                  <h4 class="bd-toc-link">Computer Science</h4>
+                </div>
+
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/reckLrPDHRpFN3a6p">
+                    1.&nbsp;&nbsp;Computer Science Fundamentals
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/recHNgXTaBpnn052p/">
+                        Python Basics
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recagU9ihCuMePtbx/">
+                        Problem Solving
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recZ6g2C5xkxHmT16/">
+                        Time and Space Complexity
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recy2QANAS6Blpc5o/">
+                        Computer Memory Basics
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recdbs5ZPBtMb6fou">
+                    2.&nbsp;&nbsp;Data Structures and Algorithms I
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/recR43dkPzilEMXlE/">
+                        Array and String Manipulation
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recQJcAAjpSTtNf8A/">
+                        Linked Lists
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/rec07JKgm7ltWrPYD/">
+                        Queues and Stacks
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/rec00Cf3TiBWiCONA/">
+                        Searching and Recursion
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recyC7E0YQc0qQgxa">
+                    3.&nbsp;&nbsp;Data Structures and Algorithms II
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/recgJOPYUjvQaN2sa/">
+                        Binary Search Trees
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recS3C67spna4M4HU/">
+                        Tree Traversal
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recEPIaHFEriTuU2x/">
+                        Graphs I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recX4dkkIPeJ6JjX6/">
+                        Graphs II
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recsJW8CaZiKcyUZj">
+                    4.&nbsp;&nbsp;Data Structures and Algorithms III
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/recLpJY4yFQcV3qeW/">
+                        Hash Tables I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recG6onEnlSOWziKO/">
+                        Hash Tables II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/reczaVKTynSkqN8ZS/">
+                        Technical Interview Tips I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/rec6kEjLri9SXMYdE/">
+                        Technical Interview Tips II
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <hr>
+                <div class="bd-toc-item">
+                  <h4 class="bd-toc-link">Web Annex</h4>
+                </div>
+
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/webannex/sprint/recfwZvI7QhMa7xbG">
+                    1.&nbsp;&nbsp;User Interface and Git
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/webannex/module/recl0IyzS2Vl89lZa/">
+                        User Interface
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/rect59e95N6OSvoCd/">
+                        Git for Web Development
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/recGvXyWT6AvGtMHR/">
+                        User Interface II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/recaVbBZhh8BTyMdM/">
+                        User Interface III
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/webannex/sprint/recIXiQgpgMdJ81ms">
+                    2.&nbsp;&nbsp;Advanced CSS
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/webannex/module/recuDrqSGpWcepCMs/">
+                        Responsive Design I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/recE3IqPtDxaVI0DW/">
+                        Responsive Design II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/reculyBhIYkuoBRqh/">
+                        Preprocessing I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/rec1hRu3bO6L0uxn2/">
+                        Preprocessing II
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/webannex/sprint/recclZwJxMU8kUngT">
+                    3.&nbsp;&nbsp;JavaScript Fundamentals
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/webannex/module/recCT3KJYTIRYwQMh/">
+                        JavaScript I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/rec1oaBmEoSilO2yf/">
+                        JavaScript II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/rec0AWuNLezbpit7m/">
+                        Prototypes and Inheritance
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/recyS588eOvVUKAMc/">
+                        Classes
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/webannex/sprint/recRT8JKvbTiGaosk">
+                    4.&nbsp;&nbsp;Single Page Applications
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
+                        React Router I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/recYkF1FDilIedmwX/">
+                        React Router II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/rect081xiYT2cfxGF/">
+                        Form Management
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/recKK5C7wV0WiECfr/">
+                        Advanced Form Management
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/webannex/sprint/recozTHaHJe6L1ThN">
+                    5.&nbsp;&nbsp;Authentication and Testing
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/webannex/module/recQD9lnhqWEFh6g4/">
+                        Introduction to Authentication
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/recvIPgHwxF194c7q/">
+                        Using Sessions and Cookies
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/reciCHdNjavSKaaLt/">
+                        Using JSON Web Tokens (JWT)
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/reciXdxRA8zXJXDID/">
+                        Testing the Back End
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <hr>
+                <div class="bd-toc-item">
+                  <h4 class="bd-toc-link">Computer Science Legacy</h4>
+                </div>
+
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recd4D4w3QrigPqUF">
+                    1.&nbsp;&nbsp;Intro to Python and OOP
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/recay2erzDlYUPSeO/">
+                        Introduction to Python I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recwpe3Y9TVWrGT8L/">
+                        Introduction to Python II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/reca7NYptklr7F403/">
+                        Introduction to Python III
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recc3eWphKVYd0oHT/">
+                        Introduction to Python IV
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recR4gHcvD21ziR9a">
+                    2.&nbsp;&nbsp;Data Structures
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/rec3MaMAY78iDm7ax/">
+                        Data Structures I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recMcvOrFw5BWUku3/">
+                        Data Structures II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recx53S3pYfDfvFDm/">
+                        Data Structures III
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recHdwPne4Xt3A7lk/">
+                        Data Structures IV
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recd9grrKlURJ453N">
+                    3.&nbsp;&nbsp;Algorithms
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/reck76SPX26beGSqE/">
+                        Iterative Sorting
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/reccRh9h6ccXghfA4/">
+                        Recursive Sorting
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recrCuZQMVI6LvxhD/">
+                        A First-Pass Solution
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recsvJCzPlM2X63ZX/">
+                        Writing Better Solutions
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recvDjRQEq49uoWsU">
+                    4.&nbsp;&nbsp;CS Unit 1 Build
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recAr3gdL8U57eho1">
+                    5.&nbsp;&nbsp;Hash Tables
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/recSwIvbSV630gdVk/">
+                        Hash Tables I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recHzCwboKBLBB0Re/">
+                        Hash Tables II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recsEDFseukQWg92c/">
+                        Hash Tables III & IV
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/rec7U9K7OCL5ihj0t">
+                    6.&nbsp;&nbsp;Graphs
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/recBMbHtb8AOXq3UL/">
+                        Graphs I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recZL2m6Gx7B4dU3G/">
+                        Graphs II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/reck4RVWsg82eiYPZ/">
+                        Graphs III
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recoGWlBHjuJxkL1y/">
+                        Graphs IV
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recndTnO1V8oDbBPb">
+                    7.&nbsp;&nbsp;Computer Architecture
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/recsuJbrrFgbFUCRX/">
+                        Computer Architecture: Basics, Number Bases
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/rec2NHr4Eyib7XdED/">
+                        Computer Architecture: Bitwise Operations
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recvQUkzz23NTj20G/">
+                        Computer Architecture: The System Stack
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recGPVAdvQcmopSIO/">
+                        Computer Architecture: Subroutines, CALL/RET
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/reco0t22NdXmr8VyL">
+                    8.&nbsp;&nbsp;CS Unit 2 Build
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                  </ul>
+                </div>
+                <hr>
+                <div class="bd-toc-item">
+                  <h4 class="bd-toc-link">Lambda Labs</h4>
+                </div>
+
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/labs-new/sprint/recA58aGQUpzCzR0I">
+                    1.&nbsp;&nbsp;Welcome to Lambda Labs
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/labs-new/module/recQoRVnuH8ZTGO23/">
+                        Labs Overview
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/labs-new/sprint/recEnxumaKZ7yHZHw">
+                    2.&nbsp;&nbsp;Sprint 1 - Planning a Project
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/labs-new/module/rec7JPnP0pXGAP2Jo/">
+                        Guided Project: Planning
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/labs-new/module/recra4AWVdeHriA7K/">
+                        Guided Project: Plan Critique
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/labs-new/module/reca587Ou79n4JDmT/">
+                        Module Inquiry 1
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="/labs-new/module/recYk51eKPftN24Gv/">
+                        Guided Project: Engineering
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/labs-new/module/recxvP9aTVUFLUuhk/">
+                        Guided Project: GitHub
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/labs-new/module/rec7NZCFRi6EgXsa1/">
+                        Guided Project: Engineering Critique
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/labs-new/module/recedcXwfMEbKReKU/">
+                        Module Inquiry 2
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/labs-new/module/recZL7TFXJI2b935w/">
+                        Sprint Challenge
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/labs-new/sprint/recUp2zOmiCmeVPJH">
+                    3.&nbsp;&nbsp;Sprint 2 - Demonstrating Contribution
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/labs-new/module/recDE1yLi7fBNUfIu/">
+                        Guided Project: Pair Programming
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/labs-new/module/recFTj2n2I2J6V47t/">
+                        Module Inquiry 3
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/labs-new/module/recEBojAtFGOgbuz6/">
+                        Guided Project: Discussing Your Work
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/labs-new/module/rec0ONoNSxKc44E6n/">
+                        Module Inquiry 4
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/labs-new/module/rechUVGd9i8UhcK3Q/">
+                        Sprint Challenge
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/labs-new/sprint/recxUI33uhloBsscr">
+                    4.&nbsp;&nbsp;Sprint 3 - Giving and Receiving Feedback
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/labs-new/module/reccEtL7wPhA4MQx2/">
+                        Module Inquiry 5
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/labs-new/module/recMcL9ePYKbNdwuX/">
+                        Guided Project: Giving Feedback
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/labs-new/module/recqqnYPyMwOu1U34/">
+                        Module Inquiry 6
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/labs-new/module/rec3jI54tyIq2rVUo/">
+                        Guided Project: Receiving Feedback
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/labs-new/module/recyprrmts7m3ADTL/">
+                        Module Inquiry 7
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/labs-new/module/recYiLzsJs9W1gyn3/">
+                        Sprint Challenge
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/labs-new/sprint/rec0twF34QpHEbwhl">
+                    5.&nbsp;&nbsp;Sprint 4 - Presenting Your Work
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/labs-new/module/reckW7SYI2WwuK4zu/">
+                        Guided Project: Blog Presentation
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/labs-new/module/recG67cpSyretq0bG/">
+                        Module Inquiry 8
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/labs-new/module/recVlEgPG8P5BmY25/">
+                        Module Inquiry 9
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/labs-new/module/recz8x4RdVXPKcnzu/">
+                        Module Inquiry 10
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/labs-new/module/recz0vtwiCYTZAutU/">
+                        Sprint Challenge
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <hr>
+                <div class="bd-toc-item">
+                  <h4 class="bd-toc-link"></h4>
+                </div>
+
+                <hr>
+                <div class="bd-toc-item">
+                  <h4 class="bd-toc-link">Computer Science Annex</h4>
+                </div>
+
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/csannex/sprint/recMPt6jmsCgaqrfj">
+                    1.&nbsp;&nbsp;Data Structures: Heaps
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/csannex/module/recNbOiLfM7bfQ0aE/">
+                        Heaps
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/csannex/sprint/recKzV5STy8vYnbQ1">
+                    2.&nbsp;&nbsp;Intro to Django
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/csannex/module/recvCvXoZKm5cYOc4/">
+                        Django basics and setup
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/csannex/module/recuEEEsf9eXphxy0/">
+                        Building APIs
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/csannex/sprint/recUHGX7arXkBIutr">
+                    3.&nbsp;&nbsp;Python/Django I
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/csannex/module/rec4yg0hRHaeOmBGN/">
+                        Getting started with Python and Django
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/csannex/module/recHhVqI4Y3j6UgLa/">
+                        Object-Oriented Programming
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/csannex/module/recgVHqW0RShuQn1Z/">
+                        Software Design Patterns
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/csannex/sprint/rec64nbdwB28JM7Qu">
+                    4.&nbsp;&nbsp;Python/Django II/Career Development
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/csannex/module/rec7YHjLuXabdlhof/">
+                        REST
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/csannex/module/recjIPIwz5Pn5WbPh/">
+                        GraphQL
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/csannex/module/recVsikSMFoQ25WZd/">
+                        Model-View-Controller
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/csannex/sprint/reczMSFEG5pffpADx">
+                    5.&nbsp;&nbsp;Python/Django III/Career Development
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/csannex/module/reccrn1If8mhlIymc/">
+                        Object-relational mapping
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/csannex/module/recU6Q1DLISGvt0dk/">
+                        Relational Databases
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/csannex/sprint/recTTpwFpgZXtPG2o">
+                    6.&nbsp;&nbsp;Project Week: Cellular Automata
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/csannex/module/rec42j1bkTmC0Hsro/">
+                        Game of Life
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/csannex/sprint/recqkHjNcXzK5DTqd">
+                    7.&nbsp;&nbsp;C Programming Topics
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/csannex/module/recLymrrD7f46rdBa/">
+                        Introduction To C
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/csannex/module/rec7YmMV7ukDLK770/">
+                        Processes and System Calls
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/csannex/module/recfiYtQDLFXGOBFA/">
+                        Scheduling
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/csannex/module/recHPT5QiPS6NOCgz/">
+                        Operating Systems
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/csannex/module/recz76g3pcHs88Dax/">
+                        Web Server I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/csannex/module/recFGnBVmKCyR0427/">
+                        Web Server II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/csannex/module/recH0OAnSr6ZcnZ7F/">
+                        Theory of Computation
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="sidebar-container bd-sidebar">
+        <div class="docs-sidebar">
+          <a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197"
+              fill="#ec3944">
+              <g>
+                <path
+                  d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z">
+                </path>
+                <path
+                  d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z">
+                </path>
+                <path
+                  d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z">
+                </path>
+                <path
+                  d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z">
+                </path>
+                <path
+                  d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z">
+                </path>
+                <path
+                  d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z">
+                </path>
+              </g>
+              <path
+                d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z">
+              </path>
+            </svg></a>
+          <ul id="results-container" class="dropdown list-group"></ul>
+          <nav class="bd-links collapse" id="bd-docs-nav">
+            <div class="bd-toc-item">
+              <h4 class="bd-toc-link"></h4>
+            </div>
+
+            <hr>
+            <div class="bd-toc-item">
+              <h4 class="bd-toc-link">Lambda Launch</h4>
+            </div>
+
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/ll/sprint/recQf3zxkHFPeRABL">
+                1.&nbsp;&nbsp;Lambda Orientation
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/ll/module/recBC1BCvLsTSiaLS/">
+                    Learning at Lambda
+                  </a>
+                </li>
+                <li>
+                  <a href="/ll/module/recnBWTWXqXWjWCUd/">
+                    Labs and Beyond
+                  </a>
+                </li>
+                <li>
+                  <a href="/ll/module/rec7Vyq18G1tytzyk/">
+                    Values and Support
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <hr>
+            <div class="bd-toc-item">
+              <h4 class="bd-toc-link">Web Fundamentals</h4>
+            </div>
+
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web1/sprint/rec2neAvlo6zM07qc">
+                1.&nbsp;&nbsp;User Interface and Git
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/web1/module/recl0IyzS2Vl89lZa/">
+                    User Interface
+                  </a>
+                </li>
+                <li>
+                  <a href="/web1/module/rect59e95N6OSvoCd/">
+                    Git for Web Development
+                  </a>
+                </li>
+                <li>
+                  <a href="/web1/module/rec6KMj0W3ukhYeWv/">
+                    Intro CSS
+                  </a>
+                </li>
+                <li>
+                  <a href="/web1/module/recYyDfYS2UmsvquL/">
+                    CSS Layouts
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web1/sprint/recYAgtervk7WilBW">
+                2.&nbsp;&nbsp;Advanced CSS and Intro JavaScript
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/web1/module/recUPpx89Z2uWzkzU/">
+                    Responsive Design
+                  </a>
+                </li>
+                <li>
+                  <a href="/web1/module/recPmaqIfzn9NMPLY/">
+                    Intro to JavaScript
+                  </a>
+                </li>
+                <li>
+                  <a href="/web1/module/recXRqGjyTS6uDzSA/">
+                    Arrays
+                  </a>
+                </li>
+                <li>
+                  <a href="/web1/module/recQV3tKcEDXa840D/">
+                    Objects
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web1/sprint/recIS8D2e4nTRGCLT">
+                3.&nbsp;&nbsp;JavaScript Fundamentals
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/web1/module/recrBjfZ9mBasSPpa/">
+                    Scope and Closure
+                  </a>
+                </li>
+                <li>
+                  <a href="/web1/module/recNilLQDqhqvPuNk/">
+                    Advanced Array Methods
+                  </a>
+                </li>
+                <li>
+                  <a href="/web1/module/rec0AWuNLezbpit7m/">
+                    Prototypes and Inheritance
+                  </a>
+                </li>
+                <li>
+                  <a href="/web1/module/recyS588eOvVUKAMc/">
+                    Classes
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web1/sprint/rec2di8phTBw15e4E">
+                4.&nbsp;&nbsp;WEB Unit 1 Build
+              </a>
+              <ul class="nav bd-sidenav">
+
+              </ul>
+            </div>
+            <hr>
+            <div class="bd-toc-item">
+              <h4 class="bd-toc-link">Web Applications I</h4>
+            </div>
+
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web2/sprint/recPSZMPrmESUYo2C">
+                1.&nbsp;&nbsp;Applied JavaScript
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/web2/module/rectn5PUU5ubcQkPu/">
+                    DOM I
+                  </a>
+                </li>
+                <li>
+                  <a href="/web2/module/recJWv3RIfa4NFXbn/">
+                    DOM II
+                  </a>
+                </li>
+                <li>
+                  <a href="/web2/module/rec847sNXZX9CVDNl/">
+                    Components I
+                  </a>
+                </li>
+                <li>
+                  <a href="/web2/module/recd6kDKS6eMapSRq/">
+                    Components II
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web2/sprint/recYL2HDPPpkDmGEm">
+                2.&nbsp;&nbsp;Intro to React
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/web2/module/recZau7hH8vzww14N/">
+                    React Components and Component State
+                  </a>
+                </li>
+                <li>
+                  <a href="/web2/module/recgzSGQtp2HYwgSR/">
+                    Composing React Components and Passing Data Via Props
+                  </a>
+                </li>
+                <li>
+                  <a href="/web2/module/recKe8PW6ZMwjL1Qg/">
+                    Component Side Effects
+                  </a>
+                </li>
+                <li>
+                  <a href="/web2/module/recNDoSqyUw3eq1y3/">
+                    Advanced Styling Techniques
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web2/sprint/recH2pYM3qVavZTRN">
+                3.&nbsp;&nbsp;Single Page Applications
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/web2/module/recd7jGy7tfVkcFlX/">
+                    React Router
+                  </a>
+                </li>
+                <li>
+                  <a href="/web2/module/rect081xiYT2cfxGF/">
+                    Form Management
+                  </a>
+                </li>
+                <li>
+                  <a href="/web2/module/recKK5C7wV0WiECfr/">
+                    Advanced Form Management
+                  </a>
+                </li>
+                <li>
+                  <a href="/web2/module/recduYpjgZBQaQM8X/">
+                    cypress.io
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web2/sprint/recwKyMueNtoTTmUD">
+                4.&nbsp;&nbsp;WEB Unit 2 Build
+              </a>
+              <ul class="nav bd-sidenav">
+
+              </ul>
+            </div>
+            <hr>
+            <div class="bd-toc-item">
+              <h4 class="bd-toc-link">Web Applications II</h4>
+            </div>
+
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web3/sprint/recq59MvEIZfUAohy">
+                1.&nbsp;&nbsp;Advanced React
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/web3/module/recnDKrWb24lgaziC/">
+                    Class Components
+                  </a>
+                </li>
+                <li>
+                  <a href="/web3/module/rec1DPoOZSmocXfak/">
+                    The React Lifecycle
+                  </a>
+                </li>
+                <li>
+                  <a href="/web3/module/recAxmnYmusEi8JuL/">
+                    Composing and Sharing Non-Visual Behavior
+                  </a>
+                </li>
+                <li>
+                  <a href="/web3/module/rechTQVfCg4p85Hoi/">
+                    Testing Web Applications
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web3/sprint/recukritK1B1pFrcM">
+                2.&nbsp;&nbsp;Advanced State Management
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/web3/module/rectpk6uIV3pCHJh8/">
+                    The Reducer Pattern
+                  </a>
+                </li>
+                <li>
+                  <a href="/web3/module/recba2NUdVmgKYyR3/">
+                    Redux
+                  </a>
+                </li>
+                <li>
+                  <a href="/web3/module/recSoiWNJzGURrXYh/">
+                    Async Redux
+                  </a>
+                </li>
+                <li>
+                  <a href="/web3/module/recByjgF7FwwH5Z7W/">
+                    Context API
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web3/sprint/recnhsJGy28gNi1K5">
+                3.&nbsp;&nbsp;Advanced Web Applications
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/web3/module/recS9H6qCj0dQe32B/">
+                    Testing React
+                  </a>
+                </li>
+                <li>
+                  <a href="/web3/module/recQlbCZf9tOVgiXC/">
+                    Client-Side Authentication
+                  </a>
+                </li>
+                <li>
+                  <a href="/web3/module/recupVjaAKPqbuk7Y/">
+                    HTTP / AJAX II
+                  </a>
+                </li>
+                <li>
+                  <a href="/web3/module/receOMvCB7dSyX5FL/">
+                    Deploying Web Apps
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web3/sprint/recVFiuMBzbcZllxC">
+                4.&nbsp;&nbsp;WEB Unit 3 Build
+              </a>
+              <ul class="nav bd-sidenav">
+
+              </ul>
+            </div>
+            <hr>
+            <div class="bd-toc-item">
+              <h4 class="bd-toc-link">Web API: Node</h4>
+            </div>
+
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web4node/sprint/reckzQd7ZgiFY5ok5">
+                1.&nbsp;&nbsp;Build a Web API
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/web4node/module/recZiPP8Oyg1WlHxT/">
+                    Introduction to Node.js and Express
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4node/module/recBjiSulq0PYLCIj/">
+                    Server-Side Routing with Express
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4node/module/recCJjYFEz0i5O5p5/">
+                    Express Middleware
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4node/module/recs9QOkOAtZhsjc4/">
+                    Web Deployment and Best Practices
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web4node/sprint/receFLR7MpwQXesIN">
+                2.&nbsp;&nbsp;Adding Data Persistence
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/web4node/module/recFG7SqlSCAB8iU7/">
+                    Introduction to Relational Databases
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4node/module/recIbfNn9xRhLTOv4/">
+                    Database Schema Design
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4node/module/recw2ezN22yjehidj/">
+                    Multi-Table Queries
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4node/module/rec5J23yAIdjmFbgP/">
+                    Data Modeling
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web4node/sprint/recGqGeZ7n75vZivn">
+                3.&nbsp;&nbsp;Authentication and Testing
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/web4node/module/recQD9lnhqWEFh6g4/">
+                    Introduction to Authentication
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4node/module/reciCHdNjavSKaaLt/">
+                    Using JSON Web Tokens (JWT)
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4node/module/recd26oZ3GBNHh3Na/">
+                    WEB Unit Testing
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4node/module/reciXdxRA8zXJXDID/">
+                    Testing the Back End
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web4node/sprint/recWkcWui91eG1s8q">
+                4.&nbsp;&nbsp;WEB Unit 4 Node Build
+              </a>
+              <ul class="nav bd-sidenav">
+
+              </ul>
+            </div>
+            <hr>
+            <div class="bd-toc-item">
+              <h4 class="bd-toc-link">Web API: Java</h4>
+            </div>
+
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web4java/sprint/recnLDyTtONLTMiFJ">
+                1.&nbsp;&nbsp;Java Precourse Information
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/web4java/module/recfnUAvFbeyIAHib/">
+                    Welcome to Java Spring
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4java/module/recjH0lMflsFIVzDM/">
+                    Java Spring Course Table of Contents
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web4java/sprint/recoJ4ZqNQWX3cy6E">
+                2.&nbsp;&nbsp;Java Fundamentals
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/web4java/module/recAGVTYNZyJbEFpu/">
+                    Java - JDK and Java Classes
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4java/module/rec6Hrk77HupYeoN5/">
+                    Java Interfaces, Abstract Classes, Lambda Expression
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4java/module/recyJ663TrxVgpqY9/">
+                    Java - RDBMS and SQL Basics
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4java/module/recqtftA9E98qpbak/">
+                    Java - Intro to Maven, Spring, and Tomcat Using REST API
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web4java/sprint/recRVUSWQEtosl0Cz">
+                3.&nbsp;&nbsp;RDBMS and Intro to APIs
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/web4java/module/recb0OVmRrJzqhH4D/">
+                    Java - Spring Database Creation Including Seed Data
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4java/module/rec3THcdjv8BumGCt/">
+                    Java - Read Data using CRUD Operations
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4java/module/recJihkiNn2KH2nEW/">
+                    Java - Inserting Deleting and Updating Data using CRUD Operations
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4java/module/rec2oQCFWOVShtxIx/">
+                    Java - Data Modeling and Auditing Fields with custom querying
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web4java/sprint/recSqm5AAEkJcIl3p">
+                4.&nbsp;&nbsp;Java Frameworks
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/web4java/module/rec3E1WYDyoiEF1e3/">
+                    Java - Exception Handling
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4java/module/rececDV2OMIUcY2eH/">
+                    Java - User Authentication
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4java/module/recDboXln5wm4aKJt/">
+                    Java - Automated Testing
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4java/module/rec7pCiBPzI4DkAJT/">
+                    Java - Java Deployment and Best Practices
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web4java/sprint/recC5dhR9menaROwx">
+                5.&nbsp;&nbsp;WEB Unit 4 Java Build
+              </a>
+              <ul class="nav bd-sidenav">
+
+              </ul>
+            </div>
+            <hr>
+            <div class="bd-toc-item">
+              <h4 class="bd-toc-link">Computer Science</h4>
+            </div>
+
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/reckLrPDHRpFN3a6p">
+                1.&nbsp;&nbsp;Computer Science Fundamentals
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/recHNgXTaBpnn052p/">
+                    Python Basics
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recagU9ihCuMePtbx/">
+                    Problem Solving
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recZ6g2C5xkxHmT16/">
+                    Time and Space Complexity
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recy2QANAS6Blpc5o/">
+                    Computer Memory Basics
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recdbs5ZPBtMb6fou">
+                2.&nbsp;&nbsp;Data Structures and Algorithms I
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/recR43dkPzilEMXlE/">
+                    Array and String Manipulation
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recQJcAAjpSTtNf8A/">
+                    Linked Lists
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/rec07JKgm7ltWrPYD/">
+                    Queues and Stacks
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/rec00Cf3TiBWiCONA/">
+                    Searching and Recursion
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recyC7E0YQc0qQgxa">
+                3.&nbsp;&nbsp;Data Structures and Algorithms II
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/recgJOPYUjvQaN2sa/">
+                    Binary Search Trees
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recS3C67spna4M4HU/">
+                    Tree Traversal
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recEPIaHFEriTuU2x/">
+                    Graphs I
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recX4dkkIPeJ6JjX6/">
+                    Graphs II
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recsJW8CaZiKcyUZj">
+                4.&nbsp;&nbsp;Data Structures and Algorithms III
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/recLpJY4yFQcV3qeW/">
+                    Hash Tables I
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recG6onEnlSOWziKO/">
+                    Hash Tables II
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/reczaVKTynSkqN8ZS/">
+                    Technical Interview Tips I
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/rec6kEjLri9SXMYdE/">
+                    Technical Interview Tips II
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <hr>
+            <div class="bd-toc-item">
+              <h4 class="bd-toc-link">Web Annex</h4>
+            </div>
+
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/webannex/sprint/recfwZvI7QhMa7xbG">
+                1.&nbsp;&nbsp;User Interface and Git
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/webannex/module/recl0IyzS2Vl89lZa/">
+                    User Interface
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/rect59e95N6OSvoCd/">
+                    Git for Web Development
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/recGvXyWT6AvGtMHR/">
+                    User Interface II
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/recaVbBZhh8BTyMdM/">
+                    User Interface III
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/webannex/sprint/recIXiQgpgMdJ81ms">
+                2.&nbsp;&nbsp;Advanced CSS
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/webannex/module/recuDrqSGpWcepCMs/">
+                    Responsive Design I
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/recE3IqPtDxaVI0DW/">
+                    Responsive Design II
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/reculyBhIYkuoBRqh/">
+                    Preprocessing I
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/rec1hRu3bO6L0uxn2/">
+                    Preprocessing II
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/webannex/sprint/recclZwJxMU8kUngT">
+                3.&nbsp;&nbsp;JavaScript Fundamentals
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/webannex/module/recCT3KJYTIRYwQMh/">
+                    JavaScript I
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/rec1oaBmEoSilO2yf/">
+                    JavaScript II
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/rec0AWuNLezbpit7m/">
+                    Prototypes and Inheritance
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/recyS588eOvVUKAMc/">
+                    Classes
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/webannex/sprint/recRT8JKvbTiGaosk">
+                4.&nbsp;&nbsp;Single Page Applications
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
+                    React Router I
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/recYkF1FDilIedmwX/">
+                    React Router II
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/rect081xiYT2cfxGF/">
+                    Form Management
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/recKK5C7wV0WiECfr/">
+                    Advanced Form Management
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/webannex/sprint/recozTHaHJe6L1ThN">
+                5.&nbsp;&nbsp;Authentication and Testing
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/webannex/module/recQD9lnhqWEFh6g4/">
+                    Introduction to Authentication
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/recvIPgHwxF194c7q/">
+                    Using Sessions and Cookies
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/reciCHdNjavSKaaLt/">
+                    Using JSON Web Tokens (JWT)
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/reciXdxRA8zXJXDID/">
+                    Testing the Back End
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <hr>
+            <div class="bd-toc-item">
+              <h4 class="bd-toc-link">Computer Science Legacy</h4>
+            </div>
+
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recd4D4w3QrigPqUF">
+                1.&nbsp;&nbsp;Intro to Python and OOP
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/recay2erzDlYUPSeO/">
+                    Introduction to Python I
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recwpe3Y9TVWrGT8L/">
+                    Introduction to Python II
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/reca7NYptklr7F403/">
+                    Introduction to Python III
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recc3eWphKVYd0oHT/">
+                    Introduction to Python IV
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recR4gHcvD21ziR9a">
+                2.&nbsp;&nbsp;Data Structures
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/rec3MaMAY78iDm7ax/">
+                    Data Structures I
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recMcvOrFw5BWUku3/">
+                    Data Structures II
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recx53S3pYfDfvFDm/">
+                    Data Structures III
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recHdwPne4Xt3A7lk/">
+                    Data Structures IV
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recd9grrKlURJ453N">
+                3.&nbsp;&nbsp;Algorithms
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/reck76SPX26beGSqE/">
+                    Iterative Sorting
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/reccRh9h6ccXghfA4/">
+                    Recursive Sorting
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recrCuZQMVI6LvxhD/">
+                    A First-Pass Solution
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recsvJCzPlM2X63ZX/">
+                    Writing Better Solutions
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recvDjRQEq49uoWsU">
+                4.&nbsp;&nbsp;CS Unit 1 Build
+              </a>
+              <ul class="nav bd-sidenav">
+
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recAr3gdL8U57eho1">
+                5.&nbsp;&nbsp;Hash Tables
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/recSwIvbSV630gdVk/">
+                    Hash Tables I
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recHzCwboKBLBB0Re/">
+                    Hash Tables II
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recsEDFseukQWg92c/">
+                    Hash Tables III & IV
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/rec7U9K7OCL5ihj0t">
+                6.&nbsp;&nbsp;Graphs
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/recBMbHtb8AOXq3UL/">
+                    Graphs I
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recZL2m6Gx7B4dU3G/">
+                    Graphs II
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/reck4RVWsg82eiYPZ/">
+                    Graphs III
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recoGWlBHjuJxkL1y/">
+                    Graphs IV
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recndTnO1V8oDbBPb">
+                7.&nbsp;&nbsp;Computer Architecture
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/recsuJbrrFgbFUCRX/">
+                    Computer Architecture: Basics, Number Bases
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/rec2NHr4Eyib7XdED/">
+                    Computer Architecture: Bitwise Operations
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recvQUkzz23NTj20G/">
+                    Computer Architecture: The System Stack
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recGPVAdvQcmopSIO/">
+                    Computer Architecture: Subroutines, CALL/RET
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/reco0t22NdXmr8VyL">
+                8.&nbsp;&nbsp;CS Unit 2 Build
+              </a>
+              <ul class="nav bd-sidenav">
+
+              </ul>
+            </div>
+            <hr>
+            <div class="bd-toc-item">
+              <h4 class="bd-toc-link">Lambda Labs</h4>
+            </div>
+
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/labs-new/sprint/recA58aGQUpzCzR0I">
+                1.&nbsp;&nbsp;Welcome to Lambda Labs
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/labs-new/module/recQoRVnuH8ZTGO23/">
+                    Labs Overview
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/labs-new/sprint/recEnxumaKZ7yHZHw">
+                2.&nbsp;&nbsp;Sprint 1 - Planning a Project
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/labs-new/module/rec7JPnP0pXGAP2Jo/">
+                    Guided Project: Planning
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/recra4AWVdeHriA7K/">
+                    Guided Project: Plan Critique
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/reca587Ou79n4JDmT/">
+                    Module Inquiry 1
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/recYk51eKPftN24Gv/">
+                    Guided Project: Engineering
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/recxvP9aTVUFLUuhk/">
+                    Guided Project: GitHub
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/rec7NZCFRi6EgXsa1/">
+                    Guided Project: Engineering Critique
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/recedcXwfMEbKReKU/">
+                    Module Inquiry 2
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/recZL7TFXJI2b935w/">
+                    Sprint Challenge
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/labs-new/sprint/recUp2zOmiCmeVPJH">
+                3.&nbsp;&nbsp;Sprint 2 - Demonstrating Contribution
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/labs-new/module/recDE1yLi7fBNUfIu/">
+                    Guided Project: Pair Programming
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/recFTj2n2I2J6V47t/">
+                    Module Inquiry 3
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/recEBojAtFGOgbuz6/">
+                    Guided Project: Discussing Your Work
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/rec0ONoNSxKc44E6n/">
+                    Module Inquiry 4
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/rechUVGd9i8UhcK3Q/">
+                    Sprint Challenge
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/labs-new/sprint/recxUI33uhloBsscr">
+                4.&nbsp;&nbsp;Sprint 3 - Giving and Receiving Feedback
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/labs-new/module/reccEtL7wPhA4MQx2/">
+                    Module Inquiry 5
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/recMcL9ePYKbNdwuX/">
+                    Guided Project: Giving Feedback
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/recqqnYPyMwOu1U34/">
+                    Module Inquiry 6
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/rec3jI54tyIq2rVUo/">
+                    Guided Project: Receiving Feedback
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/recyprrmts7m3ADTL/">
+                    Module Inquiry 7
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/recYiLzsJs9W1gyn3/">
+                    Sprint Challenge
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/labs-new/sprint/rec0twF34QpHEbwhl">
+                5.&nbsp;&nbsp;Sprint 4 - Presenting Your Work
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/labs-new/module/reckW7SYI2WwuK4zu/">
+                    Guided Project: Blog Presentation
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/recG67cpSyretq0bG/">
+                    Module Inquiry 8
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/recVlEgPG8P5BmY25/">
+                    Module Inquiry 9
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/recz8x4RdVXPKcnzu/">
+                    Module Inquiry 10
+                  </a>
+                </li>
+                <li>
+                  <a href="/labs-new/module/recz0vtwiCYTZAutU/">
+                    Sprint Challenge
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <hr>
+            <div class="bd-toc-item">
+              <h4 class="bd-toc-link"></h4>
+            </div>
+
+            <hr>
+            <div class="bd-toc-item">
+              <h4 class="bd-toc-link">Computer Science Annex</h4>
+            </div>
+
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/csannex/sprint/recMPt6jmsCgaqrfj">
+                1.&nbsp;&nbsp;Data Structures: Heaps
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/csannex/module/recNbOiLfM7bfQ0aE/">
+                    Heaps
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/csannex/sprint/recKzV5STy8vYnbQ1">
+                2.&nbsp;&nbsp;Intro to Django
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/csannex/module/recvCvXoZKm5cYOc4/">
+                    Django basics and setup
+                  </a>
+                </li>
+                <li>
+                  <a href="/csannex/module/recuEEEsf9eXphxy0/">
+                    Building APIs
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/csannex/sprint/recUHGX7arXkBIutr">
+                3.&nbsp;&nbsp;Python/Django I
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/csannex/module/rec4yg0hRHaeOmBGN/">
+                    Getting started with Python and Django
+                  </a>
+                </li>
+                <li>
+                  <a href="/csannex/module/recHhVqI4Y3j6UgLa/">
+                    Object-Oriented Programming
+                  </a>
+                </li>
+                <li>
+                  <a href="/csannex/module/recgVHqW0RShuQn1Z/">
+                    Software Design Patterns
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/csannex/sprint/rec64nbdwB28JM7Qu">
+                4.&nbsp;&nbsp;Python/Django II/Career Development
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/csannex/module/rec7YHjLuXabdlhof/">
+                    REST
+                  </a>
+                </li>
+                <li>
+                  <a href="/csannex/module/recjIPIwz5Pn5WbPh/">
+                    GraphQL
+                  </a>
+                </li>
+                <li>
+                  <a href="/csannex/module/recVsikSMFoQ25WZd/">
+                    Model-View-Controller
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/csannex/sprint/reczMSFEG5pffpADx">
+                5.&nbsp;&nbsp;Python/Django III/Career Development
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/csannex/module/reccrn1If8mhlIymc/">
+                    Object-relational mapping
+                  </a>
+                </li>
+                <li>
+                  <a href="/csannex/module/recU6Q1DLISGvt0dk/">
+                    Relational Databases
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/csannex/sprint/recTTpwFpgZXtPG2o">
+                6.&nbsp;&nbsp;Project Week: Cellular Automata
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/csannex/module/rec42j1bkTmC0Hsro/">
+                    Game of Life
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/csannex/sprint/recqkHjNcXzK5DTqd">
+                7.&nbsp;&nbsp;C Programming Topics
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/csannex/module/recLymrrD7f46rdBa/">
+                    Introduction To C
+                  </a>
+                </li>
+                <li>
+                  <a href="/csannex/module/rec7YmMV7ukDLK770/">
+                    Processes and System Calls
+                  </a>
+                </li>
+                <li>
+                  <a href="/csannex/module/recfiYtQDLFXGOBFA/">
+                    Scheduling
+                  </a>
+                </li>
+                <li>
+                  <a href="/csannex/module/recHPT5QiPS6NOCgz/">
+                    Operating Systems
+                  </a>
+                </li>
+                <li>
+                  <a href="/csannex/module/recz76g3pcHs88Dax/">
+                    Web Server I
+                  </a>
+                </li>
+                <li>
+                  <a href="/csannex/module/recFGnBVmKCyR0427/">
+                    Web Server II
+                  </a>
+                </li>
+                <li>
+                  <a href="/csannex/module/recH0OAnSr6ZcnZ7F/">
+                    Theory of Computation
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <main class="content-container flex-wrapper" role="main">
+        <div class="sticky-nav">
+          <div class="sprint-nav">
+          </div>
+
+        </div>
+        <div class="wrapper limit-width">
+          <div class="jumbotron">
+            <h1 class="bd-title" id="content">Full Stack Web Development</h1>
+            <span class="lead">
+              <p class="bd-lead"></p>
+              <p>Intensive computer science and software engineering training. Learn computers, software engineering and
+                web development top to bottom.</p>
+            </span>
+          </div>
+          <h2 class="display-4"></h2>
+          <hr>
+          <h2 class="display-4">Lambda Launch</h2>
+          <h4><a href="/ll/sprint/recQf3zxkHFPeRABL">Lambda Orientation</a></h4>
+          <p>
+            <p>Lambda Launch material is now updated and available in Canvas. As of August, all material shown in
+              Training Kit is deprecated.</p>
+          </p>
+          <hr>
+          <h2 class="display-4">Web Fundamentals</h2>
+          <h4><a href="/web1/sprint/rec2neAvlo6zM07qc">User Interface and Git</a></h4>
+          <p>
+            <p>Having the ability to craft user interface is key for full stack web developers in all organizations.
+              Another key ability for professional developers is knowing how to use git. This week we will cover those
+              skills and more, and work to create several fully functional websites, including a multi-page portfolio
+              site to showcase your work at Lambda.</p>
+            <p>The goal of this sprint is to build user interfaces and introduce git into our work flow. Concepts
+              covered: Semantic HTML, display types, basic terminal use, basic git use, CSS specificity, and flex box.
+            </p>
+          </p>
+          <h4><a href="/web1/sprint/recYAgtervk7WilBW">Advanced CSS and Intro JavaScript</a></h4>
+          <p>
+            <p>You’ve already started using responsive units to write high-quality stylesheets. In this sprint we’ll
+              expand on that knowledge by covering responsive layouts, media queries, and accessibility such that you
+              can build websites to work on mobile devices too!</p>
+            <p>This sprint will also introduce you to the wild world of JavaScript. We’ll cover variables, conditionals,
+              loops, functions, arrays, and objects. These basic skills will be crucial as you go on to create dynamic
+              and interactive web pages during your time at Lambda School.</p>
+          </p>
+          <h4><a href="/web1/sprint/recIS8D2e4nTRGCLT">JavaScript Fundamentals</a></h4>
+          <p>
+            <p>Everything we teach for the first 14 weeks of your experience here at Lambda School revolves around
+              software engineering for the web. One of the most powerful web languages is JavaScript. Without it, there
+              is no web. All web browsers use JavaScript in some fashion to power rich user experiences for those
+              interacting with a web page or application.</p>
+            <p>JavaScript is everywhere today! And we have the opportunity here to dive deep enough into the language to
+              teach you how to be proficient in building modern, complex and beautiful web applications that are used to
+              power the web today!</p>
+          </p>
+          <h4><a href="/web1/sprint/rec2di8phTBw15e4E">WEB Unit 1 Build</a></h4>
+          <p>
+            <p>It’s time to put all your fundamentals to the test. Being able to combine HTML, CSS, JavaScript,
+              Libraries, and Programming Paradigms into a project is a rare skill indeed.</p>
+            <p>For your project this week, you will demonstrate proficiency by working with a group of students
+              cross-section to deliver a minimum viable product (MVP) over the course of the week.</p>
+            <h4 id="git-for-build-sprint">Git for Build Sprint</h4>
+            <p>Just now I’m sure you were wondering where on earth you could find some essential guidance on navigating
+              Git and GitHub workflows during Build Sprint. Good news! It’s right here!</p>
+            <p><a href="https://www.notion.so/lambdaschool/Git-for-Build-Weeks-20ce2d09dc0e47b1af5d51821b54b810">Git for
+                Build Sprint</a></p>
+            <h4 id="your-primary-role-user-interface-developer">Your primary role User Interface Developer:</h4>
+            <ul>
+              <li>You will build a multi-page marketing website that matches the theme chosen by your group and provides
+                the user with details about the product your team has selected to build.</li>
+              <li>Your marketing website must include responsive mobile and desktop screen widths. Please see the
+                “Responsiveness” portion of your rubric for more information on this.</li>
+              <li>The call to action on the website should be a login button that links the user over to the React
+                application that your Front End Architect is building.</li>
+              <li>Your marketing website must be hosted on a hosting platform like “Netlify” or “Github Pages”.</li>
+              <li>For this Marketing site’s home page you need to have content and copy that relates to the product that
+                your team is working on.</li>
+              <li>Descriptions about the product and about the features it provides would be key.</li>
+              <li>For a second page, you could do an about us section that includes images of the members of your team,
+                and links to one another’s socials/Github.</li>
+            </ul>
+            <h4 id="your-grading-rubric">Your Grading Rubric:</h4>
+            <p>Please review this rubric and fully demonstrate an understanding of your product role by submitting a
+              message to your Project Manager with questions you have.</p>
+            <p><a href="https://www.notion.so/lambdaschool/Web-Unit-1-9d72ca3e8a78480689e63938c7b9599f">Rubric</a></p>
+            <h4 id="build-sprint-overview">Build Sprint Overview:</h4>
+            <p>Still have questions about your build sprint? Here’s a breakdown:</p>
+            <p><a
+                href="https://www.notion.so/lambdaschool/Build-Week-Student-Manual-Full-Time-0ccfe81523b44e8d90e8896d7239c9cf">Full-time
+                student overview</a></p>
+            <p><a
+                href="https://www.notion.so/lambdaschool/Build-Week-Student-Manual-Part-Time-b3c1d25b7ff4460f91fb988f3b407fb0">Part-time
+                student overview</a></p>
+          </p>
+          <hr>
+          <h2 class="display-4">Web Applications I</h2>
+          <h4><a href="/web2/sprint/recPSZMPrmESUYo2C">Applied JavaScript</a></h4>
+          <p>
+            <p>This week is all about exposing you to applying your Javascript knowledge to the Document Object Model
+              and creating rich Javascript user interfaces.</p>
+          </p>
+          <h4><a href="/web2/sprint/recYL2HDPPpkDmGEm">Intro to React</a></h4>
+          <p>
+            <p>React is a UI library that is used in various forms to create complex, rich user interfaces. Facebook had
+              a need to build something that could power their user experiences in such a way that was decoupled and
+              unconcerned when and where the data was received.</p>
+            <p>React is one of the most popular UI libraries today, and in terms of Single Page Applications many
+              (including the React team) tend to think of the library as the “V” in MVC. That is, the View layer of the
+              Model, View, Controller paradigm. React is a pattern, a mindset, that will help developers that use it,
+              build small, reusable pieces of UI that can be easily put together to make a large scale application.</p>
+          </p>
+          <h4><a href="/web2/sprint/recH2pYM3qVavZTRN">Single Page Applications</a></h4>
+          <p>
+            <p>This week we’ll be learning about using three important concepts in react - routing, forms, and testing.
+              With the UI Library (React), the Client Side Routing Library (React Router), the Form library Yup, and the
+              testing app Cypress, you’ll be able to craft rich, robust and highly scale-able Single Page Applications.
+            </p>
+            <p>The approach here is to expose you to this concept of a Single Page Application that doesn’t concern
+              itself with the data that it will be presenting to the user. This is how modern applications are built
+              today, where the client (React App) and server are separated out into their own concepts.</p>
+          </p>
+          <h4><a href="/web2/sprint/recwKyMueNtoTTmUD">WEB Unit 2 Build</a></h4>
+          <p>
+            <h4 id="grading-rubric-link">Grading Rubric Link:</h4>
+            <p>Use <a href="https://www.notion.so/lambdaschool/Web-Unit-2-b9f9c21279964ea4b923ca6252f15421">this
+                rubric</a> to help guide your development processes.</p>
+            <h4 id="build-sprint-overview">Build Sprint Overview:</h4>
+            <p>Still have questions about your build sprint? Here’s a breakdown:</p>
+            <p><a
+                href="https://www.notion.so/lambdaschool/Build-Week-Student-Manual-Full-Time-0ccfe81523b44e8d90e8896d7239c9cf">Full-time
+                student overview</a></p>
+            <p><a
+                href="https://www.notion.so/lambdaschool/Build-Week-Student-Manual-Part-Time-b3c1d25b7ff4460f91fb988f3b407fb0">Part-time
+                student overview</a></p>
+          </p>
+          <hr>
+          <h2 class="display-4">Web Applications II</h2>
+          <h4><a href="/web3/sprint/recq59MvEIZfUAohy">Advanced React</a></h4>
+          <p>
+          </p>
+          <h4><a href="/web3/sprint/recukritK1B1pFrcM">Advanced State Management</a></h4>
+          <p>
+          </p>
+          <h4><a href="/web3/sprint/recnhsJGy28gNi1K5">Advanced Web Applications</a></h4>
+          <p>
+          </p>
+          <h4><a href="/web3/sprint/recVFiuMBzbcZllxC">WEB Unit 3 Build</a></h4>
+          <p>
+            <p>It’s time to put all your fundamentals to the test. Being able to combine the knowledge of building
+              Static Websites with your newly found knowledge of ReactJS and its corresponding packages and libraries is
+              what this unit is all about.</p>
+            <h4 id="web-application-development-role-description">Web Application Development Role Description</h4>
+            <p>React JS has been your focus over the last 4 weeks. You will use those skills learned during the React
+              Unit to build out a web application that consumes a CRUD API.</p>
+            <p>For your project this week, you will demonstrate proficiency by working with a group of students
+              cross-section to deliver a minimum viable product (MVP) over the course of the week.</p>
+            <h2 id="your-primary-role-as-the-web-application-architect">Your primary role as the Web Application
+              Architect:</h2>
+            <p>You will use your skills to be responsible for the Front End Architecture of this project. You will work
+              directly with the UI Developer and the Back End Developer to ensure that all React components are wired up
+              in proper fashion.</p>
+            <h4 id="grading-rubric-link">Grading Rubric Link:</h4>
+            <p>Use <a href="https://www.notion.so/lambdaschool/Web-Unit-3-49465ea3a66440c89b593452e60ba8f8">this
+                rubric</a> to help guide your development processes.</p>
+            <h4 id="build-sprint-overview">Build Sprint Overview:</h4>
+            <p>Still have questions about your build sprint? Here’s a breakdown:</p>
+            <p><a
+                href="https://www.notion.so/lambdaschool/Build-Week-Student-Manual-Full-Time-0ccfe81523b44e8d90e8896d7239c9cf">Full-time
+                student overview</a></p>
+            <p><a
+                href="https://www.notion.so/lambdaschool/Build-Week-Student-Manual-Part-Time-b3c1d25b7ff4460f91fb988f3b407fb0">Part-time
+                student overview</a></p>
+          </p>
+          <hr>
+          <h2 class="display-4">Web API: Node</h2>
+          <h4><a href="/web4node/sprint/reckzQd7ZgiFY5ok5">Build a Web API</a></h4>
+          <p>
+            <p>This week we’ll learn how to build web services based on the <code class="highlighter-rouge">REST</code>
+              (<strong>RE</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer) architectural style.
+            </p>
+            <p>We’ll learn about <code class="highlighter-rouge">Node.js</code>, a runtime environment used to
+              <strong>execute JavaScript code outside the browser</strong> and the popular <code
+                class="highlighter-rouge">Express</code> framework that makes it really easy to write web applications,
+              and web services, on top of <code class="highlighter-rouge">Node.js</code>.</p>
+          </p>
+          <h4><a href="/web4node/sprint/receFLR7MpwQXesIN">Adding Data Persistence</a></h4>
+          <p>
+            <p>This week we’ll learn about databases, what they are and how to use them from our Web APIs.</p>
+            <p>Databases are ubiquitous in just about everything we do, they power our mobile devices, the sites we
+              visit every day, the applications we use and even some of the appliances in our homes. In short databases
+              are the containers of humanity’s digital assets. <strong>Every time you hit a <code
+                  class="highlighter-rouge">Save</code> button data goes into a database!</strong></p>
+            <p>The world of databases is large and complex. There are full careers built around them. Fortunately we’ll
+              approach them from the point of view of a developer and leave all other unneeded complexity for the
+              curious to explore.</p>
+          </p>
+          <h4><a href="/web4node/sprint/recGqGeZ7n75vZivn">Authentication and Testing</a></h4>
+          <p>
+            <p>Authentication is one of the largest concepts that we get to tackle in such a short period of time. Have
+              you ever wondered what happens when you “log in” to a website? Well this week we get a chance to learn all
+              about that. When a user inputs data into a <code class="highlighter-rouge">username/password</code> form
+              and clicks login, what then happens to that data? How does the site the user is working with even know
+              that the data it is showing pertains to that specific user? This all has to do with what we call <code
+                class="highlighter-rouge">Authentication</code>.</p>
+            <p>This concept is HUGE. People spend their entire careers hovering around this single ideal. Auth ties in
+              the principles of <code class="highlighter-rouge">Server Sessions</code> <code
+                class="highlighter-rouge">Password Encryption/Hashing</code> <code class="highlighter-rouge">Security
+                Risks</code> <code class="highlighter-rouge">JSON Web Tokens</code> and the use of different types of
+              <code class="highlighter-rouge">Middlewares</code> and many other ideas. And what we are able to tackle
+              here in the “Web” portion of the Lambda School Computer Science Academy portion will pale in comparison to
+              what you can learn further on your own. And don’t worry, we talk more about this when you get to the 2nd
+              half of the course.</p>
+          </p>
+          <h4><a href="/web4node/sprint/recWkcWui91eG1s8q">WEB Unit 4 Node Build</a></h4>
+          <p>
+            <h3 id="back-end-development-role-description">Back-end Development Role Description</h3>
+            <p>You have been learning all about NodeJS and Express and SQL in order to craft Web Servers and build API’s
+              for consumption by client-side applications. You will use these skills to be in charge of building out the
+              back-end API for your project.</p>
+            <h4 id="your-primary-role-as-a-back-end-architect">Your primary role as a Back-end Architect</h4>
+            <p>You will use your skills to be responsible for the back-end architecture of this project. You will work
+              closely with your Front End Architect and your Scrum Master in order to discover project needs and deliver
+              working Endpoints for your application.</p>
+            <h4 id="grading-rubric">Grading Rubric:</h4>
+            <p>Use <a href="https://www.notion.so/lambdaschool/Web-Unit-4-Node-ac50a1d0cf0a4941a1b20cd28a1c03c6">this
+                rubric</a> to help guide your development processes.</p>
+            <h4 id="build-sprint-overview">Build Sprint Overview:</h4>
+            <p>Still have questions about your build sprint? Here’s a breakdown:</p>
+            <p><a
+                href="https://www.notion.so/lambdaschool/Build-Week-Student-Manual-Full-Time-0ccfe81523b44e8d90e8896d7239c9cf">Full-time
+                student overview</a></p>
+            <p><a
+                href="https://www.notion.so/lambdaschool/Build-Week-Student-Manual-Part-Time-b3c1d25b7ff4460f91fb988f3b407fb0">Part-time
+                student overview</a></p>
+          </p>
+          <hr>
+          <h2 class="display-4">Web API: Java</h2>
+          <h4><a href="/web4java/sprint/recnLDyTtONLTMiFJ">Java Precourse Information</a></h4>
+          <p>
+            <p>I am glad you are taking the time to look at the Java Course. Of course, I am biased but I think it is a
+              great course. By the way, I am the instructor, John Mitchell! However, I want you to make an informed
+              decision. Should you pursue the Java track or stay with the JavaScript Node track? Keep reading and find
+              out!</p>
+            <p>This section also includes a list of some of my favorite Java Resources and, in case you decide to take
+              the class, instructions on installing the necessary software!</p>
+          </p>
+          <h4><a href="/web4java/sprint/recoJ4ZqNQWX3cy6E">Java Fundamentals</a></h4>
+          <p>
+            <p>The fundamentals of Java are discussed during these modules. Specific emphasis is placed on Java
+              constructs needed for Web API programming with the Spring Framework. Topics include:</p>
+            <ul>
+              <li>Using the Standard JDK</li>
+              <li>OOP</li>
+              <li>Java Types</li>
+              <li>Java Classes</li>
+              <li>Interfaces</li>
+              <li>Abstract Classes</li>
+              <li>Lambda Expressions</li>
+              <li>Using GitHub with Java</li>
+              <li>Use JetBrains IntelliJ IDEA IDE</li>
+              <li>Dependency Injection</li>
+              <li>SQL</li>
+              <li>RDBMS</li>
+              <li>Query Single Table</li>
+              <li>Query Multiple Table</li>
+              <li>PostgreSQL</li>
+              <li>REST API</li>
+              <li>Maven, Spring, Tomcat</li>
+            </ul>
+          </p>
+          <h4><a href="/web4java/sprint/recRVUSWQEtosl0Cz">RDBMS and Intro to APIs</a></h4>
+          <p>
+            <p>Developing Web APIs using Java and the Spring Framework and connecting those to a PostgreSQL database is
+              the focus of these modules. Topics include:</p>
+            <ul>
+              <li>Build REST API with Spring Boot</li>
+              <li>Beans</li>
+              <li>Maven Phases</li>
+              <li>CRUD</li>
+              <li>CRUD Using SQL</li>
+              <li>CRUD Using JPA</li>
+              <li>Seeding using JPA</li>
+              <li>Seeding using SQL</li>
+              <li>Data Normalization</li>
+              <li>Advanced Queries</li>
+            </ul>
+          </p>
+          <h4><a href="/web4java/sprint/recSqm5AAEkJcIl3p">Java Frameworks</a></h4>
+          <p>
+            <p>Enhancing our Web APIs with exception handling, automated testing, and finally deployment is the focus of
+              these modules. Topics include</p>
+            <ul>
+              <li>Exceptions Handling</li>
+              <li>Exception Java Constructs</li>
+              <li>Swagger</li>
+              <li>Automated Testing</li>
+              <li>JUnit and Others</li>
+              <li>Deploying Locally</li>
+              <li>Deploying to the Cloud</li>
+              <li>Connecting to a JavaScript Front End</li>
+              <li>CURL</li>
+            </ul>
+          </p>
+          <h4><a href="/web4java/sprint/recC5dhR9menaROwx">WEB Unit 4 Java Build</a></h4>
+          <p>
+            <p>You have been learning all about Java, the Spring Framework and SQL in order to craft Web Servers and
+              build API’s for consumption by client-side applications. You will use these skills to be in charge of
+              building out the back-end API for your project.</p>
+            <p>Your primary role as a Back-end Web API Java Architect
+              You will use your skills to be responsible for the back-end architecture of this project. You will work
+              closely with your Front End Architect and your Scrum Master in order to discover project needs and deliver
+              working Endpoints for your application.</p>
+            <h4 id="grading-rubric-link">Grading Rubric Link:</h4>
+            <p>Use <a href="https://www.notion.so/lambdaschool/Web-Unit-4-Java-fdd83007971f4af68606d06bec118965">this
+                rubric</a> to help guide your development processes.</p>
+            <h4 id="build-sprint-overview">Build Sprint Overview:</h4>
+            <p>Still have questions about your build sprint? Here’s a breakdown:</p>
+            <p><a
+                href="https://www.notion.so/lambdaschool/Build-Week-Student-Manual-Full-Time-0ccfe81523b44e8d90e8896d7239c9cf">Full-time
+                student overview</a></p>
+            <p><a
+                href="https://www.notion.so/lambdaschool/Build-Week-Student-Manual-Part-Time-b3c1d25b7ff4460f91fb988f3b407fb0">Part-time
+                student overview</a></p>
+          </p>
+          <hr>
+          <h2 class="display-4">Computer Science</h2>
+          <h4><a href="/cs/sprint/reckLrPDHRpFN3a6p">Computer Science Fundamentals</a></h4>
+          <p>
+          </p>
+          <h4><a href="/cs/sprint/recdbs5ZPBtMb6fou">Data Structures and Algorithms I</a></h4>
+          <p>
+          </p>
+          <h4><a href="/cs/sprint/recyC7E0YQc0qQgxa">Data Structures and Algorithms II</a></h4>
+          <p>
+          </p>
+          <h4><a href="/cs/sprint/recsJW8CaZiKcyUZj">Data Structures and Algorithms III</a></h4>
+          <p>
+          </p>
+          <hr>
+          <h2 class="display-4">Web Annex</h2>
+          <h4><a href="/webannex/sprint/recfwZvI7QhMa7xbG">User Interface and Git</a></h4>
+          <p>
+            <p><strong>Legacy Content. We are constantly improving your curriculum experience. This content was changed
+                April 3, 2020 and is reference only if you started Lambda before April 2020</strong></p>
+            <p>Having the ability to craft user interface is key for full stack web developers in all organizations.
+              Another key ability for professional developers is knowing how to use git. We cover both topics throughout
+              the week culminating in a multi-page website sprint challenge.</p>
+            <p>The goal of this sprint is to build user interfaces and introduce git into our work flow. Concepts
+              covered: Semantic HTML, box model, display types, layout techniques, flex box, basic terminal use, basic
+              git use.</p>
+          </p>
+          <h4><a href="/webannex/sprint/recIXiQgpgMdJ81ms">Advanced CSS</a></h4>
+          <p>
+            <p><strong>Legacy Content. We are constantly improving your curriculum experience. This content was changed
+                April 3, 2020 and is reference only if you started Lambda before April 2020</strong></p>
+            <p>Responsive design pushes our basic CSS styling forward into thousands of devices. A growing trend in
+              today’s markets continue to be mobile devices that range from large tablets to small screens. You need to
+              be able to correctly deliver content to all of these mediums.</p>
+            <p>Preprocessors introduce variables, scoping, mixins, and functions into CSS allowing for a more robust
+              programming experience. Most development shops rely heavily on preprocessors to get large amounts of work
+              done across multiple teams. Learnings how to use preprocessors will increase overall CSS productivity,
+              reduce errors, and prepare students for the workplace.</p>
+            <p>Preprocessing is a great introduction to JavaScript concepts like scope, variables, and DRY code
+              paradigms.</p>
+          </p>
+          <h4><a href="/webannex/sprint/recclZwJxMU8kUngT">JavaScript Fundamentals</a></h4>
+          <p>
+            <p><strong>Legacy Content. We are constantly improving your curriculum experience. This content was changed
+                April 3, 2020 and is reference only if you started Lambda before April 2020</strong></p>
+            <p>Everything we teach for the first 14 weeks of your experience here at Lambda School revolves around
+              software engineering for the web. One of the most powerful web languages is JavaScript. Without it, there
+              is no web. All web browsers use JavaScript in some fashion to power rich user experiences for those
+              interacting with a web page or application.</p>
+            <p>I love to look at JavaScript through this analogy. Think of a web page as a house. You need someone to
+              architect and get in the structure of your house, someone to add in the design, and someone to add in the
+              electricity to power the house. If you were to think about HTML, CSS and JavaScript as the three necessary
+              building blocks, for a web page, HTML could be the architecture/layout of what your house should be, CSS
+              is the design/style of your house and JavaScript powers the electrical interactions that our house needs
+              to have in order to be functional.</p>
+            <p>JavaScript is everywhere today! And we have the opportunity here to dive deep enough into the language to
+              teach you how to be proficient in building modern, complex and beautiful web applications that are used to
+              power the web today!</p>
+          </p>
+          <h4><a href="/webannex/sprint/recRT8JKvbTiGaosk">Single Page Applications</a></h4>
+          <p>
+            <p><strong>Legacy Content. Removed from curriculum March, 2020</strong></p>
+            <p>This week we’ll be learning about using two very useful packages with React: React Router and Formik.
+              With the UI Library (React), the Client Side Routing Library (React Router), and the Form library Formik,
+              you’ll be able to craft rich, robust and highly scale-able Single Page Applications.</p>
+            <p>The approach here is to expose you to this concept of a Single Page Application that doesn’t concern
+              itself with the data that it will be presenting to the user. This is how modern applications are built
+              today, where the client (React App) and server are separated out into their own concepts.</p>
+          </p>
+          <h4><a href="/webannex/sprint/recozTHaHJe6L1ThN">Authentication and Testing</a></h4>
+          <p>
+            <p><strong>Legacy Content. Removed from curriculum March, 2020</strong></p>
+            <p>Authentication is one of the largest concepts that we get to tackle in such a short period of time. Have
+              you ever wondered what happens when you “log in” to a website? Well this week we get a chance to learn all
+              about that. When a user inputs data into a <code class="highlighter-rouge">username/password</code> form
+              and clicks login, what then happens to that data? How does the site the user is working with even know
+              that the data it is showing pertains to that specific user? This all has to do with what we call <code
+                class="highlighter-rouge">Authentication</code>.</p>
+            <p>This concept is HUGE. People spend their entire careers hovering around this single ideal. Auth ties in
+              the principles of <code class="highlighter-rouge">Server Sessions</code> <code
+                class="highlighter-rouge">Password Encryption/Hashing</code> <code class="highlighter-rouge">Security
+                Risks</code> <code class="highlighter-rouge">JSON Web Tokens</code> and the use of different types of
+              <code class="highlighter-rouge">Middlewares</code> and many other ideas. And what we are able to tackle
+              here in the “Web” portion of the Lambda School Computer Science Academy portion will pale in comparison to
+              what you can learn further on your own. And don’t worry, we talk more about this when you get to the 2nd
+              half of the course.</p>
+          </p>
+          <hr>
+          <h2 class="display-4">Computer Science Legacy</h2>
+          <h4><a href="/cs/sprint/recd4D4w3QrigPqUF">Intro to Python and OOP</a></h4>
+          <p>
+            <p>Learn the Python programming language and the basics of the Object-Oriented Programming (OOP) paradigm.
+            </p>
+          </p>
+          <h4><a href="/cs/sprint/recR4gHcvD21ziR9a">Data Structures</a></h4>
+          <p>
+            <p>In this sprint, you will learn several fundamental data structures, including linked lists, queues, and
+              binary search trees. You will also get your first taste of traversals, which will help prepare you for the
+              upcoming module on graphs.</p>
+            <p>You will also learn how to analyze the complexity of algorithms that make up the methods associated with
+              each data structure. These include inserting, deleting, searching for, and sorting elements. You will
+              practice classifying algorithms using Big O notation, and learn how to compare different operations
+              against each other using these runtime classifications.</p>
+            <p>In your core programs, you’ve most likely used many data structures without thought. You’ve called your
+              variants of <code class="highlighter-rouge">.append()</code> and other functions without really worrying
+              about how or why they work. This is your opportunity to see “under the hood” and gain an engineers
+              understanding of how these structures work and what pitfalls you must be careful of.</p>
+            <p>Indeed, data structures are extremely prevalent and fundamental when it comes to understanding
+              programming and computer science. By the end of the Computer Science curriculum, you’ll have a good idea
+              of the answers to important questions that were raised during the web curriculum such as ‘how do web
+              servers such as Express effectively and efficiently handle hundreds or thousands of concurrent requests
+              simultaneously?’ or ‘how does a database organize the data that it stores in such a way that it can then
+              retrieve it as quickly as possible?’. Such questions can be answered in part by having an understanding of
+              both the wide berth of all the currently-existing data structures that have been dreamt as well as an
+              adequately deep understanding of how many common data structures work.</p>
+            <p>In this sprint, we’ll learn to implement several fundamental data structures that are very often used as
+              the building blocks of more complex and specialized data structures. These are the:</p>
+            <ul>
+              <li>Singly Linked List</li>
+              <li>Queue</li>
+              <li>Stack</li>
+              <li>Doubly Linked List
+                 - Binary Search Tree</li>
+            </ul>
+            <p>Each of these data structures has its own associated strengths and weaknesses. Think of each of them as a
+              tool in a toolbox. You have entirely different classes of tools such as hammers and wrenches that are each
+              used for entirely different use cases. You also have multiple types of screwdrivers. Both are used for
+              tightening and untightening screws, but the Phillips screwdriver is better for certain screws and the
+              flathead screwdriver is better for other types of screws.</p>
+            <p>The same can be said of data structures. There are many instances of wildly different data structures
+              that serve entirely different use cases, and then you have data structures that <em>can</em> both perform
+              the same function, but one will be better at it than the other. More specifically, you <em>could</em>
+              emulate the functionality of a JavaScript Array using an Object, but an Object isn’t going to perform as
+              efficiently when it comes to certain tasks that Arrays are really efficient at.</p>
+            <h2 id="a-note-about-data-structures-in-different-language-contexts">A Note About Data Structures in
+              Different Language Contexts</h2>
+            <p>Let’s go back to the topic of linked lists seeming redundant in Python. Why do we need to learn about
+              linked lists when Python already provides for us such a full-featured array implementation (via lists)
+              that can already do everything a linked list can do? Sure, linked lists have marginally better performance
+              on certain operations when compared to arrays, but does that really justify the existence of the linked
+              list data structure?</p>
+            <p>These are all entirely valid points; working in Python <em>does</em> obviate the need to implement
+              certain data structures such as linked lists and hash tables. This brings us to a core tenet of the
+              Computer Science curriculum: the material that you’ll be exposed to and learning about in the Computer
+              Science curriculum will be almost entirely language-agnostic. Seasoned developers and programmers learn to
+              sever the connection between coming up with a solution to a problem they’re facing, and actually
+              implementing that solution. That probably doesn’t mean a lot right now, but as you go on to expand your
+              knowledge horizons by learning about other programming languages such as C, you’ll come to realize that
+              different languages place different constraints on the programmer. Notably, in C, there is no
+              full-featured array implementation. There’s also no built-in hash table. Thus, you’ll find that when it
+              comes time to work in C, knowing how to implement data structures that seem obsolete in Python will have a
+              payoff.</p>
+            <h2 id="additional-resources">Additional Resources</h2>
+            <ol>
+              <li>
+                <p>https://www.interviewcake.com/article/python/data-structures-coding-interview?course=dsa does a great
+                  job of motivating and introducing most of the data structures we cover in this sprint.</p>
+              </li>
+              <li>
+                <p>A great video explaining heaps and how they work: https://www.youtube.com/watch?v=WCm3TqScBM8</p>
+              </li>
+            </ol>
+          </p>
+          <h4><a href="/cs/sprint/recd9grrKlURJ453N">Algorithms</a></h4>
+          <p>
+            <p>In this sprint, students will be introduced to how to formally think about and solve algorithmic problems
+              as part of the Algorithms module. Some classic algorithmic paradigms will also be introduced.</p>
+            <p>Just as importantly, students will also learn how to analyze the complexity of algorithms. Students will
+              practice classifying algorithms using Big O notation, and learn how to compare different algorithms
+              against each other using these runtime classifications.</p>
+          </p>
+          <h4><a href="/cs/sprint/recvDjRQEq49uoWsU">CS Unit 1 Build</a></h4>
+          <p>
+            <h1 id="cs-build-week-1-conways-game-of-life">CS Build Week 1: Conway’s “Game of Life”</h1>
+            <h2 id="non-ds-students">Non-DS Students</h2>
+            <p>Conway’s Game of Life is a venerable old algorithm that simulates “life” on a 2D grid. It’s a class of
+              algorithm known as a <em>cellular automaton</em>.</p>
+            <p>DS students have the option to implement this project, or the DS-specific projects, below.</p>
+            <ul>
+              <li><a href="https://github.com/LambdaSchool/CS-Build-Week-1">Conway’s Game of Life information and Build
+                  Week instructions</a></li>
+            </ul>
+            <h2 id="ds-students">DS Students</h2>
+            <p>You have the option of doing the Game of Life project, above, or one of these more DS-specific projects.
+            </p>
+            <ul>
+              <li><a href="https://github.com/LambdaSchool/CS-Data-Science-Build-Week-1">DS Build Week 1 Projects</a>
+              </li>
+            </ul>
+          </p>
+          <h4><a href="/cs/sprint/recAr3gdL8U57eho1">Hash Tables</a></h4>
+          <p>
+            <p>Hash tables are arguably the single most important data structure known to developers. Used to implement
+              everything from objects in JavaScript and dictionaries in Python to Memcached over a distributed computer
+              network, hash tables are beloved by programmers for providing key/value storage with constant big-O time
+              complexity for insertion, deletion and search.</p>
+            <p>We will be looking underneath the hood at how this delightful data structure works and answering
+              questions like, how do hash tables work? What is a hash function? What is a hash collision and how are
+              they handled? What is the “birthday problem”? What do we do when our hash table is full?</p>
+            <p>You can think of hash tables as extensions of arrays. In class, we will implement arrays and compare them
+              to linked lists. For your project, you will use this knowledge to implement hash tables in Python.</p>
+            <p>At first glance, this may seem like a silly task. After all, both of these data structures are already
+              built into Python and their implementations are fast, full of features, and of course, already working.
+            </p>
+            <p>The reason we are doing this isn’t so that when we’re done we will <em>have</em> an implementation of
+              these data structures. We do it so that we can obtain a deeper <em>understanding</em> of how our
+              predecessors have invented elegant solutions to difficult problems so that we are better equipped to to
+              solve the problems we will encounter on the job.</p>
+          </p>
+          <h4><a href="/cs/sprint/rec7U9K7OCL5ihj0t">Graphs</a></h4>
+          <p>
+            <p>A graph is a great general-purpose data structure that can be used to solve a wide variety of computing
+              problems. It is the general case of the trees with which you are already familiar, where edges can connect
+              one vertex to any other, not just downward. We will explore how to implement graphs, and several of the
+              algorithms surrounding graphs to how they can be applied to solving real-world problems.</p>
+            <p>Note that the project for this topic is built over four days. See the <a
+                href="https://github.com/LambdaSchool/Graphs/blob/master/projects/graph/README.md">README</a> for the
+              project details.</p>
+          </p>
+          <h4><a href="/cs/sprint/recndTnO1V8oDbBPb">Computer Architecture</a></h4>
+          <p>
+            <p>Until now, the computer itself has been something of a mysterious black box that miraculously executes
+              our instructions for us. This sprint will explore how computers work at a very low level, giving you
+              additional perspective that helps you approach the software development with more confidence.</p>
+          </p>
+          <h4><a href="/cs/sprint/reco0t22NdXmr8VyL">CS Unit 2 Build</a></h4>
+          <p>
+            <h1 id="cs-build-week-2-technical-interview-prep">CS Build Week 2: Technical Interview Prep</h1>
+            <h2 id="goals">Goals</h2>
+            <ul>
+              <li>Practice solving arbitrary problems</li>
+              <li>Practice HackerRank-style whiteboard challenges</li>
+              <li>Practice interviewing</li>
+              <li>Learn interviewing techniques</li>
+              <li>Learn interview coding best-practices</li>
+            </ul>
+            <h2 id="requirementsmvp">Requirements/MVP</h2>
+            <ul>
+              <li>Participate in and attend guided demo daily</li>
+              <li>Work on afternoon programming challenges</li>
+              <li>Meet with your TL for 1:1s</li>
+              <li>Meet with your TL for behavioral interview prep</li>
+              <li>Complete the Unit Assessment</li>
+              <li>Things that are <strong>not</strong> required:
+                <ul>
+                  <li>Solving the whiteboarding problems (but you must attempt)</li>
+                </ul>
+              </li>
+            </ul>
+            <h2 id="guided-projects">Guided Projects</h2>
+            <p>Each day we’ll cover whiteboarding practice, techniques, and tricks.</p>
+            <p>We’ll also have some additional material:</p>
+            <h3 id="monday-whiteboarding-and-technical-interviewing">Monday: Whiteboarding and Technical Interviewing
+            </h3>
+            <p>Selected topics may include:</p>
+            <ul>
+              <li>UPER: the key to thinking on your feet</li>
+              <li>How to describe a problem</li>
+              <li>How to describe a solution at a high level</li>
+              <li>How to talk about code you wrote</li>
+              <li>Copy code before submitting</li>
+              <li>Using UPER with whiteboarding</li>
+              <li>How to answer questions about optimization</li>
+              <li>Which data structure to use when?</li>
+              <li>Big-O, time and space complexity</li>
+              <li>How to comment code</li>
+              <li>How to format code</li>
+              <li>Make your code look sharp</li>
+              <li>How to code review/be code reviewed</li>
+              <li>How to react when the interviewer tells you a better way of doing
+                things than you did</li>
+              <li>How to relax and work well under pressure</li>
+              <li>Having the right attitude while interviewing</li>
+              <li>How and when to be self-critical in an interview</li>
+              <li>How to practice interviewing with anyone</li>
+              <li>Self-assessing your interviewing strengths and weaknesses</li>
+            </ul>
+            <h3 id="tuesday-how-to-present-your-work">Tuesday: How to Present your Work</h3>
+            <ul>
+              <li>Presentation by Kathleen Hunt</li>
+            </ul>
+            <h3 id="wednesday-general-interviewing-techniques">Wednesday: General Interviewing techniques</h3>
+            <ul>
+              <li>Presentation by Jordan Isbell</li>
+            </ul>
+            <h3 id="thursday-what-companies-really-want-to-see">Thursday: What Companies Really Want to See</h3>
+            <ul>
+              <li>Presentation by Lindsay Gilson</li>
+            </ul>
+            <h2 id="afternoon-projects">Afternoon Projects</h2>
+            <p>We will give you two whiteboarding problems.</p>
+            <p>You can choose which to work on first.</p>
+            <p>It’s not required to work on both. The second one is there in case you solve the first one.</p>
+            <h2 id="tl-11s">TL 1:1s</h2>
+            <p>During your 1:1 with your TL, they will ask you to describe the problem you worked on, as well as your
+              strategy for solving it. Time permitting, they’ll also look at your code.</p>
+            <p>Hint: during this interview, pretend <em>you’re</em> the instructor and you’re teaching the TL about this
+              problem and how to attack it.</p>
+            <p>Even if you haven’t solved the problem, tell them about the problem and your attempt so far.</p>
+            <h2 id="tl-led-behavioral-interview-practice">TL-led Behavioral Interview Practice</h2>
+            <p>In a group, TLs will ask people behavioral interview questions. (“Tell us about a time some problem
+              happened and how you solved it” kind of questions.)</p>
+            <p>It’s OK to be nervous. Everyone else in the group is also nervous. But as you do this, the nerves will
+              abate.</p>
+            <p>Even if you’re not the one being asked a question, think of how you’d answer it.</p>
+          </p>
+          <hr>
+          <h2 class="display-4">Lambda Labs</h2>
+          <h4><a href="/labs-new/sprint/recA58aGQUpzCzR0I">Welcome to Lambda Labs</a></h4>
+          <p>
+            <p>First of all, congratulations! You completed the primary instruction for your Lambda course! Take a
+              moment to revel in your awesomeness, I’ll wait.</p>
+            <p>Alright that’s enough, now it’s time to take all that hard work and fresh knowledge and put it to good
+              use.</p>
+          </p>
+          <h4><a href="/labs-new/sprint/recEnxumaKZ7yHZHw">Sprint 1 - Planning a Project</a></h4>
+          <p>
+            <p>Check out the guided projects, module inquiries, and sprint challenge for your first sprint in labs.</p>
+          </p>
+          <h4><a href="/labs-new/sprint/recUp2zOmiCmeVPJH">Sprint 2 - Demonstrating Contribution</a></h4>
+          <p>
+            <p>Check out the guided projects, module inquiries, and sprint challenge for your second sprint in labs.</p>
+          </p>
+          <h4><a href="/labs-new/sprint/recxUI33uhloBsscr">Sprint 3 - Giving and Receiving Feedback</a></h4>
+          <p>
+            <p>Check out the guided projects, module inquiries, and sprint challenge for your third sprint in labs.</p>
+          </p>
+          <h4><a href="/labs-new/sprint/rec0twF34QpHEbwhl">Sprint 4 - Presenting Your Work</a></h4>
+          <p>
+            <p>Check out the guided projects, module inquiries, and sprint challenge for your fourth sprint in labs.</p>
+          </p>
+          <hr>
+          <h2 class="display-4"></h2>
+          <hr>
+          <h2 class="display-4">Computer Science Annex</h2>
+          <h4><a href="/csannex/sprint/recMPt6jmsCgaqrfj">Data Structures: Heaps</a></h4>
+          <p>
+            <p>Heaps Module</p>
+          </p>
+          <h4><a href="/csannex/sprint/recKzV5STy8vYnbQ1">Intro to Django</a></h4>
+          <p>
+            <p>In software development you’ll run into many different languages and ecosystems. Python is a popular
+              language for general purpose computing, excelling in particular with data but with a huge community and
+              packages for just about everything. Django is a “batteries-included” web application framework in Python,
+              used by websites such as Instagram, Disqus, and Bitbucket.</p>
+            <p>In this sprint we will get set up with these tools, and then learn about two different approaches for
+              designing web APIs. REST has been the dominant standard for a number of years. However, GraphQL has gained
+              popularity recently due to its increased flexibility and efficiency.</p>
+          </p>
+          <h4><a href="/csannex/sprint/recUHGX7arXkBIutr">Python/Django I</a></h4>
+          <p>
+            <p>In software development you’ll run into many different languages and ecosystems. Python is a popular
+              language for general purpose computing, excelling in particular with data but with a huge community and
+              packages for just about everything. Django is a “batteries-included” web application framework in Python,
+              used by websites such as Instagram, Disqus, and Bitbucket.</p>
+            <p>In this sprint we will get set up with these tools, and then learn about object-oriented programming,
+              which is an important paradigm for modeling and building real-world software. Lastly we’ll study software
+              design patterns, which offer generalized solution techniques to common development problems.</p>
+          </p>
+          <h4><a href="/csannex/sprint/rec64nbdwB28JM7Qu">Python/Django II/Career Development</a></h4>
+          <p>
+            <p>The heart of many web applications is the API it exposes - in this week we will learn about two paradigms
+              for API design (REST and GraphQL), and how the Model-view-controller design pattern builds on these to
+              result in a full application.</p>
+          </p>
+          <h4><a href="/csannex/sprint/reczMSFEG5pffpADx">Python/Django III/Career Development</a></h4>
+          <p>
+            <p>A lot of the power of a web application framework is how it connects to an underlying database - this
+              connection can be abstracted using an object-relational mapping, and Django has a powerful approach to
+              this. We will learn how to use it, and also more about the (typically relational) databases that underlie
+              it.</p>
+          </p>
+          <h4><a href="/csannex/sprint/recTTpwFpgZXtPG2o">Project Week: Cellular Automata</a></h4>
+          <p>
+            <p>In this project week, you’ll be creating a simulation that visualizes the well known cellular automata,
+              <em>Conway’s Game of Life</em>.</p>
+          </p>
+          <h4><a href="/csannex/sprint/recqkHjNcXzK5DTqd">C Programming Topics</a></h4>
+          <p>
+            <p>For those who are interested in exploring the C programming language, we have several topics below that
+              can be completed independently to get more familiarity with lower-level programming constructs.</p>
+          </p>
+          <hr>
+        </div>
+      </main>
+    </div>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push( arguments );
+      }
+      gtag( 'js', new Date() );
+
+      gtag( 'config', 'UA-80850900-4' );
+    </script>
+    <script type="text/javascript">
+      function getDomain() {
+        const domainName = window.location.hostname.split( '.' )[ 1 ];
+        return `${domainName}.com`;
+      }
+    </script>
+    <script src="" integrity="" crossorigin="anonymous"></script>
+    <script>
+      window.jQuery || document.write( '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>' )
+    </script>
+    <script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script>
+    <script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
+    <script src="/assets/js/activate.js"></script>
+    <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      SimpleJekyllSearch.init( {
+        searchInput: document.getElementById( 'search-input' ),
+        resultsContainer: document.getElementById( 'results-container' ),
+        dataSource: '/search.json',
+        searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Full Stack Web Development">{title}</a></li>',
+        noResultsText: '',
+        limit: 10,
+        fuzzy: true,
+      } )
+    </script>
+    <script src="/assets/js/mermaid.min.js"></script>
+    <script type="text/javascript">
+      if ( window.attachEvent ) {
+        window.attachEvent( 'onload', verifySignedIn );
+      } else {
+        if ( window.onload ) {
+          var currentOnLoadFn = window.onload;
+          var newOnLoadFn = function ( evt ) {
+            currentOnLoadFn( evt );
+            verifySignedIn();
+          };
+          window.onload = newOnLoadFn;
+        } else {
+          window.onload = verifySignedIn;
+        }
+      }
+
+      function verifySignedIn() {
+        if ( isPagePublic() ) {
+          return showPageContents();
+        }
+
+        window.__user = null;
+        isSignedIn().then( ( user ) => {
+          window.__user = user;
+
+          if ( !user.signedIn ) {
+            redirectToSignIn();
+          } else if ( !user.student && !window.__openToAdmissions ) {
+            showUnauthorizedMessage();
+          } else {
+            showPageContents();
+          }
+        } );
+      }
+
+      function isPagePublic() {
+        const openCourses = [
+          'and-pre',
+          'ds-pre',
+          'fsw-pre',
+          'help',
+          'ios-pre',
+        ];
+
+        const openPages = [
+          'cs-and',
+          'cs-fsw',
+          'cs-ios',
+          'cr',
+          'ds',
+          'jx',
+          'p4s',
+          'ux',
+        ];
+
+        const pathParts = window.location.pathname.split( '/' );
+        const courseName = pathParts[ 1 ];
+        const pageName = pathParts[ pathParts.length - 1 ];
+
+        return openCourses.includes( courseName ) || openPages.includes( pageName );
+      }
+
+      function isSignedIn() {
+        const isDeployPreview = window.location.hostname.startsWith( 'deploy-preview' ) && window.location.hostname
+          .endsWith( 'netlify.com' );
+
+        if ( isDeployPreview ) return Promise.resolve( {
+          signedIn: true,
+          student: true
+        } );
+
+        return fetch( `${getAuthBaseUrl()}/whoami`, {
+            credentials: 'include'
+          } )
+          .then( ( response ) => response.text() )
+          .then( ( userAsText ) => userAsText ? JSON.parse( userAsText ) : null )
+          .then( ( userData ) => ( {
+            signedIn: Boolean( userData ),
+            student: Boolean( userData && userData.airtableId ),
+            id: userData ? userData.id : null,
+            email: userData ? userData.email : null
+          } ) )
+          .catch( ( error ) => {} );
+      }
+
+      function redirectToSignIn() {
+        const signInUrl =
+          `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+        const redirectMessage = document.querySelector( '#redirect-message' );
+        redirectMessage.style.display = "block";
+        redirectMessage.innerHTML =
+          `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+        window.location = signInUrl;
+      }
+
+      function showPageContents() {
+        document.querySelector( '#content-wrapper' ).style.visibility = 'visible';
+      }
+
+      function showUnauthorizedMessage() {
+        document.querySelector( '#unauthorized-message' ).style.display = 'block';
+      }
+
+      function getAuthBaseUrl() {
+        const domain = getDomain();
+        const authBaseUrl = `https://auth.${domain}`;
+        return authBaseUrl;
+      }
+    </script>
+    <script src="/assets/js/docs.min.js"></script>
+    <script>
+      var MathJax = {
+        tex: {
+          inlineMath: [
+            [ '$$', '$$' ],
+            [ '\[', '\])' ]
+          ]
+        },
+        "HTML-CSS": {
+          styles: {
+            ".MathJax span": {
+              color: "#000000"
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+    </script>
+    <script>
+      handleExternalLinks();
+
+      function handleExternalLinks() {
+        const domain = getDomain();
+        const links = document.querySelectorAll( 'a' );
+        return links.forEach( ( link ) => {
+          if ( !link.host.includes( domain ) ) link.target = '_blank';
+        } )
+      };
+    </script>
+  </div>
+</body>
+
+</html>

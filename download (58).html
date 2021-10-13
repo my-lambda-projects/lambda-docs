@@ -1,0 +1,1953 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Intended as a home for Lambda School curriculum.">
+<meta name="author" content="">
+<meta name="generator" content="Jekyll v3.8.0">
+<title>Java - Spring Database Creation Including Seed Data · Lambda School</title>
+
+<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+  analytics.page();
+  }}();
+</script>
+
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#a0001e">
+</head>
+<body>
+<noscript>Please enable JavaScript to view this page.</noscript>
+<div id="redirect-message" style="display: none;">
+You must be logged in to view this page.
+</div>
+<div id="unauthorized-message" style="display: none;">
+You must be a Lambda School student to view this page.
+</div>
+<div id="content-wrapper" style="visibility: hidden;">
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container">
+<span class="skiplink-text">Skip to main content</span>
+</div>
+</a>
+<div class="mobile-menu">
+<div class="m-drop">
+<div class="mobile-row">
+<div class="header-row" style="padding: 3px 7px">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
+</svg></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+</button>
+</div>
+</div>
+<div class="nav-row">
+<div class="results-container">
+<ul id="results-container" class="dropdown list-group"></ul>
+</div>
+<div id="mobile-course-menu" class="collapse nav-row">
+<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+<nav class="bd-links">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web API: Java</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recnLDyTtONLTMiFJ">
+1.&nbsp;&nbsp;Java Precourse Information
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recfnUAvFbeyIAHib/">
+Welcome to Java Spring
+</a>
+</li>
+<li>
+<a href="/web4java/module/recjH0lMflsFIVzDM/">
+Java Spring Course Table of Contents
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recoJ4ZqNQWX3cy6E">
+2.&nbsp;&nbsp;Java Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recAGVTYNZyJbEFpu/">
+Java - JDK and Java Classes
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec6Hrk77HupYeoN5/">
+Java Interfaces, Abstract Classes, Lambda Expression
+</a>
+</li>
+<li>
+<a href="/web4java/module/recyJ663TrxVgpqY9/">
+Java - RDBMS and SQL Basics
+</a>
+</li>
+<li>
+<a href="/web4java/module/recqtftA9E98qpbak/">
+Java - Intro to Maven, Spring, and Tomcat Using REST API
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recRVUSWQEtosl0Cz">
+3.&nbsp;&nbsp;RDBMS and Intro to APIs
+</a>
+<ul class="nav bd-sidenav">
+
+<li class="active bd-sidenav-active">
+<a href="/web4java/module/recb0OVmRrJzqhH4D/">
+Java - Spring Database Creation Including Seed Data
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec3THcdjv8BumGCt/">
+Java - Read Data using CRUD Operations
+</a>
+</li>
+<li>
+<a href="/web4java/module/recJihkiNn2KH2nEW/">
+Java - Inserting Deleting and Updating Data using CRUD Operations
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec2oQCFWOVShtxIx/">
+Java - Data Modeling and Auditing Fields with custom querying
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recSqm5AAEkJcIl3p">
+4.&nbsp;&nbsp;Java Frameworks
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/rec3E1WYDyoiEF1e3/">
+Java - Exception Handling
+</a>
+</li>
+<li>
+<a href="/web4java/module/rececDV2OMIUcY2eH/">
+Java - User Authentication
+</a>
+</li>
+<li>
+<a href="/web4java/module/recDboXln5wm4aKJt/">
+Java - Automated Testing
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec7pCiBPzI4DkAJT/">
+Java - Java Deployment and Best Practices
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recC5dhR9menaROwx">
+5.&nbsp;&nbsp;WEB Unit 4 Java Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+<hr>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-container">
+<div class="sidebar-container bd-sidebar">
+<div class="docs-sidebar">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
+<ul id="results-container" class="dropdown list-group"></ul>
+<nav class="bd-links collapse" id="bd-docs-nav">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web API: Java</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recnLDyTtONLTMiFJ">
+1.&nbsp;&nbsp;Java Precourse Information
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recfnUAvFbeyIAHib/">
+Welcome to Java Spring
+</a>
+</li>
+<li>
+<a href="/web4java/module/recjH0lMflsFIVzDM/">
+Java Spring Course Table of Contents
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recoJ4ZqNQWX3cy6E">
+2.&nbsp;&nbsp;Java Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recAGVTYNZyJbEFpu/">
+Java - JDK and Java Classes
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec6Hrk77HupYeoN5/">
+Java Interfaces, Abstract Classes, Lambda Expression
+</a>
+</li>
+<li>
+<a href="/web4java/module/recyJ663TrxVgpqY9/">
+Java - RDBMS and SQL Basics
+</a>
+</li>
+<li>
+<a href="/web4java/module/recqtftA9E98qpbak/">
+Java - Intro to Maven, Spring, and Tomcat Using REST API
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recRVUSWQEtosl0Cz">
+3.&nbsp;&nbsp;RDBMS and Intro to APIs
+</a>
+<ul class="nav bd-sidenav">
+
+<li class="active bd-sidenav-active">
+<a href="/web4java/module/recb0OVmRrJzqhH4D/">
+Java - Spring Database Creation Including Seed Data
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec3THcdjv8BumGCt/">
+Java - Read Data using CRUD Operations
+</a>
+</li>
+<li>
+<a href="/web4java/module/recJihkiNn2KH2nEW/">
+Java - Inserting Deleting and Updating Data using CRUD Operations
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec2oQCFWOVShtxIx/">
+Java - Data Modeling and Auditing Fields with custom querying
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recSqm5AAEkJcIl3p">
+4.&nbsp;&nbsp;Java Frameworks
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/rec3E1WYDyoiEF1e3/">
+Java - Exception Handling
+</a>
+</li>
+<li>
+<a href="/web4java/module/rececDV2OMIUcY2eH/">
+Java - User Authentication
+</a>
+</li>
+<li>
+<a href="/web4java/module/recDboXln5wm4aKJt/">
+Java - Automated Testing
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec7pCiBPzI4DkAJT/">
+Java - Java Deployment and Best Practices
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recC5dhR9menaROwx">
+5.&nbsp;&nbsp;WEB Unit 4 Java Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+<hr>
+</nav>
+</div>
+</div>
+<main class="content-container flex-wrapper" role="main">
+<div class="sticky-nav">
+<div class="sprint-nav">
+<ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+<li class="toc-entry toc-h2"><a href="#guided-project">Guided Project</a></li>
+<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+</ul>
+</div>
+
+</div>
+<div class="wrapper limit-width">
+<div class="flex-wrapper">
+<div class="limit-width">
+<div class="jumbotron">
+<h1 class="bd-title" id="content">Java - Spring Database Creation Including Seed Data</h1>
+<span class="lead">
+<p class="bd-lead"></p>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<p><a id="Data_Model_Creation"></a></p>
+</span>
+<strong>At the end of this module, you should be able to:</strong>
+<ul>
+<li>perform CRUD operations on an RDBMS using JPA and Hibernate (data modeling)</li>
+<li>implement seed data using SQL statements</li>
+<li>explain and use Spring Data Relationships</li>
+<li>implement a data seeding class using JPA and Hibernate</li>
+<li>implement massive data seeding</li>
+<li>use H2 Console and H2 IntelliJ integration to explore data</li>
+</ul>
+</div>
+<div class="alert alert-warning" role="alert">
+<h4>Pro Tip</h4>
+<p>All things in moderation, including moderation.</p>
+</div>
+<h2 class="display-4">
+<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
+<p class="lead">Review each preclass resource before class.</p>
+<div class="preclass">
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<a target="_blank" href="https://www.tutorialspoint.com/jpa/jpa_entity_relationships.htm">JPA Entity Relationships</a>
+</li>
+</ul>
+</div>
+<h2 class="display-4">
+<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
+<h4 class="mark mb-3 p-2">Learn to perform CRUD operations on an RDBMS using JPA and Hibernate (data modeling)</h4>
+<p><a id="Data_Modeling"></a></p>
+<h5>Overview</h5>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+<li>JetBrains IntelliJ IDEA IDE</li>
+<li>Postman</li>
+</ul>
+<p>Let’s start building a full Java Spring CRUD Application! Of course we will need:</p>
+<ul>
+<li>Dependencies
+<ul>
+<li>Spring Boot DevTools</li>
+<li>Spring Web</li>
+<li>Spring Data JPA</li>
+<li>H2 Database</li>
+</ul>
+</li>
+<li>Application.propererties updates
+<ul>
+<li>Configurations useful for working with H2</li>
+<li>Configuration for a port that is not frequently used</li>
+<li>Configuration to tell Spring Boot what happens when no accessors are found for a type (and there are no annotations to indicate it is meant to be serialized).</li>
+<li>Configuration that keeps a transaction inside of the same entity manager This property register an EntityManager to the current thread, so you will have the same EntityManager until the web request is finished.</li>
+<li>Configuration on how to handle schema definitions and seed data</li>
+</ul>
+</li>
+<li>Application Layout through subpackages
+<ul>
+<li><code class="highlighter-rouge">config</code></li>
+<li><code class="highlighter-rouge">controllers</code></li>
+<li><code class="highlighter-rouge">models</code></li>
+<li><code class="highlighter-rouge">repositories</code></li>
+<li><code class="highlighter-rouge">services</code></li>
+</ul>
+</li>
+</ul>
+<h5>Follow Along</h5>
+<p>Let’s create a CRUD application! We are using the IntelliJ IDE to create our applications. To create a Spring Boot application in IntelliJ, follow these steps</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%202%20-%20JX%20Java%20-%20Read%20Data%20using%20CRUD%20Operations%20including%20Seeding%20Data/assets/JX-SP11-M2-01.png" alt="Click on Create a project"></p>
+<ul>
+<li>Follow the wizard to create the application.
+<ul>
+<li>Create a project with the Spring Frame.</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%202%20-%20JX%20Java%20-%20Read%20Data%20using%20CRUD%20Operations%20including%20Seeding%20Data/assets/JX-SP11-M2-02.png" alt="Select Spring Framework"></p>
+<ul>
+<li>Name the project, picking the correct version of the JDK (NOT 8 for class)</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%202%20-%20JX%20Java%20-%20Read%20Data%20using%20CRUD%20Operations%20including%20Seeding%20Data/assets/JX-SP11-M2-03.png" alt="Select Name with Version 11"></p>
+<ul>
+<li>Add the appropriate dependencies: Spring Boot DevTools, Spring Web, Spring Data JPA, H2 Database</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%202%20-%20JX%20Java%20-%20Read%20Data%20using%20CRUD%20Operations%20including%20Seeding%20Data/assets/JX-SP11-M2-04.png" alt="Add dependencies"></p>
+<ul>
+<li>Name the project file</li>
+<li>Note: I am storing all my projects on my Mac under my home directory and then under a subdirectory called <code class="highlighter-rouge">jxwork</code>.</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%202%20-%20JX%20Java%20-%20Read%20Data%20using%20CRUD%20Operations%20including%20Seeding%20Data/assets/JX-SP11-M2-05.png" alt="Name the project file"></p>
+<ul>
+<li>
+<p>If a popup appears asking, select to make this a Maven Project.</p>
+</li>
+<li>
+<p>If a popup appears asking, select to autoimport Maven dependencies.</p>
+</li>
+</ul>
+<h5 id="configure-the-application">Configure the application</h5>
+<ul>
+<li>In the <code class="highlighter-rouge">POM.XML</code> file, comment out the scope for H2</li>
+</ul>
+<pre><code class="language-XML">        &lt;dependency&gt;
+            &lt;groupId&gt;com.h2database&lt;/groupId&gt;
+            &lt;artifactId&gt;h2&lt;/artifactId&gt;
+&lt;!--            &lt;scope&gt;runtime&lt;/scope&gt;--&gt;
+        &lt;/dependency&gt;
+</code></pre>
+<ul>
+<li>Now add these lines to the <code class="highlighter-rouge">application.properties</code> found under main/resources. The comments are there so you know what each line means.</li>
+</ul>
+<pre><code class="language-TEXT">### Configurations useful for working with H2
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+#
+### We set a port that is not frequently used
+server.port=${PORT:2019}
+#
+### Feature that determines what happens when no accessors are found for a type
+### (and there are no annotations to indicate it is meant to be serialized).
+spring.jackson.serialization.fail-on-empty-beans=false
+#
+### keeps a transaction inside of the same entity manager
+### This property register an EntityManager to the current thread,
+### so you will have the same EntityManager until the web request is finished.
+spring.jpa.open-in-view=true
+#
+### What do with the schema
+### drop n create table again, good for testing
+spring.jpa.hibernate.ddl-auto=create
+spring.datasource.initialization-mode=always
+#
+### Good for production!
+### spring.jpa.hibernate.ddl-auto=update
+### spring.datasource.initialization-mode=never
+</code></pre>
+<h5 id="creating-the-application-structure">Creating the application structure</h5>
+<ul>
+<li>First, let’s create each of the needed subpackages. Under the main package (<code class="highlighter-rouge">src/main/java/com.lambdaschool.sampleemps</code>), create the following subpackages
+<ul>
+<li>config</li>
+<li>controllers</li>
+<li>models</li>
+<li>repositories</li>
+<li>services</li>
+</ul>
+</li>
+</ul>
+<p>Now let’s enter some of the code</p>
+<ul>
+<li>Under the subpackage <code class="highlighter-rouge">config</code>
+<ul>
+<li>Create the class <code class="highlighter-rouge">H2ServerConfiguration</code>
+</li>
+<li>Enter the following code in that class</li>
+<li>Entering the comments is optional</li>
+<li>Try not entering the imports. Let IntelliJ do that for you</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-JAVA">package com.lambdaschool.sampleemps.config;
+
+import org.h2.tools.Server;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import java.sql.SQLException;
+
+/**
+ * Configures H2 access through the JetBrains IntelliJ IDEA IDE.
+ * &lt;p&gt;
+ * Adapted from https://techdev.io/en/developer-blog/querying-the-embedded-h2-database-of-a-spring-boot-application
+ * necessary for using the database tool built into intellij
+ */
+@Configuration
+public class H2ServerConfiguration
+{
+
+    /**
+     * TCP port for remote connections, default 9092.
+     */
+    @Value("${h2.tcp.port:9092}")
+    private String h2TcpPort;
+
+    /**
+     * Web port, default 8082.
+     */
+    @Value("${h2.web.port:8082}")
+    private String h2WebPort;
+
+    /**
+     * TCP connection to connect with SQL clients to the embedded h2 database.
+     * &lt;p&gt;
+     * Connect to "jdbc:h2:tcp://localhost:9092/mem:testdb", username "sa", password empty.
+     *
+     * @return The created TcpServer needed to access H2.
+     * @throws SQLException If the server cannot be created.
+     */
+    @Bean
+    @ConditionalOnExpression("${h2.tcp.enabled:true}")
+    public Server h2TcpServer() throws
+        SQLException
+    {
+        return Server.createTcpServer("-tcp",
+            "-tcpAllowOthers",
+            "-tcpPort",
+            h2TcpPort)
+            .start();
+    }
+
+    /**
+     * Web console for the embedded h2 database.
+     * &lt;p&gt;
+     * Go to http://localhost:8082 and connect to the database "jdbc:h2:mem:testdb", username "sa", password empty.
+     *
+     * @return The created web server needed to access H2.
+     * @throws SQLException If the server cannot be created.
+     */
+    @Bean
+    @ConditionalOnExpression("${h2.web.enabled:true}")
+    public Server h2WebServer() throws
+        SQLException
+    {
+        return Server.createWebServer("-web",
+            "-webAllowOthers",
+            "-webPort",
+            h2WebPort)
+            .start();
+    }
+}
+</code></pre>
+<ul>
+<li>Under the subpackage <code class="highlighter-rouge">controllers</code>
+<ul>
+<li>Create the class <code class="highlighter-rouge">EmployeeController</code>
+</li>
+<li>Enter the following code in that class</li>
+<li>Entering the comments is optional</li>
+<li>Try not entering the imports. Let IntelliJ do that for you</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-JAVA">package com.lambdaschool.sampleemps.controllers;
+
+import com.lambdaschool.sampleemps.services.EmployeeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/employees") // optional
+public class EmployeeController
+{
+    @Autowired
+    private EmployeeService employeeService;
+
+}
+</code></pre>
+<p>We are done for now. The rest of the subpackages will be completed in other objectives.</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://www.springboottutorial.com/spring-boot-crud-rest-service-with-jpa-hibernate" target="blank_">CRUD REST API/Service</a><br> Creating a CRUD REST API/Service with Spring Boot, JPA and Hibernate</li>
+<li>
+<a href="https://javabrains.io/topics/hibernate/" target="blank_">Hibernate Introduction</a><br> Hibernate Introduction</li>
+<li>
+<a href="https://vladmihalcea.com/hibernate-facts-the-importance-of-fetch-strategy/" target="blank_">Hibernate fetching strategies</a><br> A beginner’s guide to Hibernate fetching strategies</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to implement seed data using SQL statements</h4>
+<p><a id="Data_Seeding_Using_SQL"></a></p>
+<h5>Overview</h5>
+<ul>
+<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_model</a> for the code used in the objective.</li>
+</ul>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+<li>JetBrains IntelliJ IDEA IDE</li>
+<li>Postman</li>
+</ul>
+<p>Seeding Data is the process of putting into a database an initial set of data. This may be done for testing purposes, or the application may need an initial set of data to begin functioning.</p>
+<p>One popular way of seeding data is using SQL. Spring Boot will look into your <code class="highlighter-rouge">resources</code> folder to see if a file named <code class="highlighter-rouge">data.sql</code> exits. If the file does exist, the data may be loaded into the database. The loading of the data depends on settings in <code class="highlighter-rouge">application.properties</code>. By default, the SQL statements get executed, and the data is loaded. The preferred practice is to explicitly turn this on in <code class="highlighter-rouge">application.properties</code> using the following entry:</p>
+<pre><code class="language-TEXT">spring.datasource.initialization-mode=always
+</code></pre>
+<p>To turn off the execution of <code class="highlighter-rouge">data.sql</code>, use the following entry:</p>
+<pre><code class="language-TEXT">spring.datasource.initialization-mode=never
+</code></pre>
+<p>A common practice is to first delete the data in the database. This is especially necessary when seeding a database with test data. Each time the application is executed, all old data is deleted and refreshed with the data from <code class="highlighter-rouge">data.sql</code>. This way you always know at the start of running the application what your data is. You delete data use the SQL command <code class="highlighter-rouge">delete from &lt;table&gt;</code>. You must delete from tables in a certain order.</p>
+<ol>
+<li>Find all tables whose primary keys do not exist in other tables. Delete from those tables first. This will include join tables and tables with Many to One relationships.</li>
+<li>Keeping finding tables whose primary keys do not exist in other tables and delete from those tables. This process can be repeated until all data is removed.</li>
+</ol>
+<p>For example, we delete from the join table <code class="highlighter-rouge">EMPLOYEETITLES</code> first. Then from the Many to One Table <code class="highlighter-rouge">EMAILS</code>. Then delete from <code class="highlighter-rouge">JOBTITLES</code> and <code class="highlighter-rouge">EMPLOYEES</code>.</p>
+<h5>Follow Along</h5>
+<p>Continue with the application you started in Objective 1 - CRUD</p>
+<ul>
+<li>Create the file <code class="highlighter-rouge">data.sql</code> under <code class="highlighter-rouge">src/main/resources</code>
+</li>
+<li>Enter the following into that file!</li>
+<li>You might get a warning message about SQL dialect is not configured. This can safely be ignored.</li>
+</ul>
+<pre><code class="language-SQL">DELETE
+FROM EMPLOYEETITLES;
+
+DELETE
+FROM EMAILS;
+
+DELETE
+FROM JOBTITLES;
+
+DELETE
+FROM EMPLOYEES;
+</code></pre>
+<p>We populate our database in the reverse order. We have to add data to a table before its primary key can be used in another table. So, start with the EMPLOYEE table</p>
+<ul>
+<li>So now add this to your file</li>
+</ul>
+<pre><code class="language-SQL">INSERT INTO EMPLOYEES (EMPLOYEEID, NAME)
+    VALUES (1, 'CINNAMON'),
+           (2, 'BARNBARN'),
+           (3, 'JOHN');
+</code></pre>
+<p>Now that we have employee primary keys, we can add some employee emails</p>
+<ul>
+<li>Continuing adding to the file</li>
+</ul>
+<pre><code class="language-SQL">INSERT INTO EMAILS (EMAILID, EMAIL, EMPLOYEEID)
+    VALUES (1, '<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="066e697675466a6965676a2865696b">[email&#160;protected]</a>', 1),
+           (2, '<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3b594e5555427b53544b4b5255155754585a57">[email&#160;protected]</a>', 1),
+           (3, '<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4b292a3925292a39250b2724282a2765282426">[email&#160;protected]</a>', 2);
+</code></pre>
+<p>Let’s now create some job titles</p>
+<ul>
+<li>And keep adding to the file</li>
+</ul>
+<pre><code class="language-SQL">INSERT INTO JOBTITLES (JOBTITLEID, TITLE)
+    VALUES (1, 'Big Boss'),
+           (2, 'Wizard');
+</code></pre>
+<p>Now that we have some job titles and employees, let’s create a join table for those.</p>
+<ul>
+<li>Keep adding to the file</li>
+</ul>
+<pre><code class="language-SQL">INSERT INTO EMPLOYEETITLES (EMPLOYEEID, JOBTITLEID)
+    VALUES (1, 1),
+           (1, 2),
+           (2, 2);
+</code></pre>
+<p>Please note that we have been manually assigning primary keys to our database tables. This is fine, but we need to let Spring JPA Hibernate know that we have used some of the primary keys. Hibernate cannot start assigning primary keys at 1, since 1 has already been used. We need to tell Hibernate at what number to start assigning primary keys. We do this with the following statement</p>
+<ul>
+<li>And lastly add this to the file</li>
+</ul>
+<pre><code class="language-SQL">/*
+Must tell hibernate of the id numbers already used.
+The number after with must be greater that the highest number id assigned.
+ */
+alter sequence hibernate_sequence restart with 15;
+</code></pre>
+<p>Note that a comment is surrounded by <code class="highlighter-rouge">\* */</code>. And we have now seeded our database.</p>
+<details>
+<summary>Expand to see a complete data.sql file</summary>
+<pre><code class="language-SQL">
+
+DELETE
+FROM EMPLOYEETITLES;
+
+DELETE
+FROM JOBTITLES;
+
+DELETE
+FROM EMAILS;
+
+DELETE
+FROM EMPLOYEES;
+
+INSERT INTO EMPLOYEES (EMPLOYEEID, NAME, SALARY)
+    VALUES (1, 'CINNAMON', 80000.00),
+           (2, 'BARNBARN', 80000.00),
+           (3, 'JOHN', 75000.00);
+
+INSERT INTO EMAILS (EMAILID, EMAIL, EMPLOYEEID)
+    VALUES (1, '<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="523a3d2221123e3d31333e7c313d3f">[email&#160;protected]</a>', 1),
+           (2, '<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4321362d2d3a032b2c33332a2d6d2f2c20222f">[email&#160;protected]</a>', 1),
+           (3, '<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6c0e0d1e020e0d1e022c00030f0d00420f0301">[email&#160;protected]</a>', 2);
+
+INSERT INTO JOBTITLES (JOBTITLEID, TITLE)
+    VALUES (1, 'Big Boss'),
+           (2, 'Wizard');
+
+INSERT INTO EMPLOYEETITLES (EMPLOYEEID, JOBTITLEID)
+    VALUES (1, 1),
+           (1, 2),
+           (2, 2);
+
+/*
+Must tell hibernate of the id numbers already used.
+The number after with must be greater that the highest number id assigned.
+ */
+alter sequence hibernate_sequence restart with 15;
+
+</code></pre>
+</details>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://www.baeldung.com/spring-boot-data-sql-and-schema-sql" target="blank_">Baeldung</a><br> Baeldung - Quick Guide on Loading Initial Data with Spring Boot</li>
+<li>
+<a href="https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto-initialize-a-database-using-spring-jdbc" target="blank_">Spring</a><br> Spring - How To Initialize a Database</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to explain and use Spring Data Relationships</h4>
+<p><a id="Spring_Data_Relationships"></a></p>
+<h5>Overview</h5>
+<ul>
+<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_model</a> for the code used in the objective.</li>
+</ul>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+<li>JetBrains IntelliJ IDEA IDE</li>
+<li>Postman</li>
+</ul>
+<p>When normalizing our database structure, we create relationships between tables. These relationships usually fall into two main categories: One to Many relationships and Many to Many relationships. Let’s look at each one separately.</p>
+<p>We will use the finished Github Repository <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_model</a> as an example in explaining the topics. Later, we will add code to the application we started in Objective 1 CRUD to put into practice what is explained.</p>
+<p>After normalizing our data, we will end up with different types of tables</p>
+<ul>
+<li>main or driving tables. These are tables that do not contain foreign keys. Other tables will reference them but they do not reference other tables. In our example, <code class="highlighter-rouge">Employees</code> is such a table.</li>
+<li>tables with foreign keys that are the one in a one to many relationship. These tables can be viewed as child tables of the main tables as they cannot stand alone without the reference to the main table. In our example, <code class="highlighter-rouge">Emails</code> is such as a table. Its purpose is to reference the <code class="highlighter-rouge">Employees</code> table adding a list of emails to a row in the <code class="highlighter-rouge">Employees</code> table.</li>
+<li>join tables contain foreign keys to two tables, joining those tables in a many to many relationship. In a Java Spring application, such a table usually does not have its own Model but is created through the ManyToMany annotation. In our example, the <code class="highlighter-rouge">Employeetitles</code> table is such a join table, joining <code class="highlighter-rouge">Employees</code> and <code class="highlighter-rouge">Jobtiles</code>.</li>
+</ul>
+<h3 id="overview-one-to-many">Overview One to Many</h3>
+<p>A row in one table may relate to 0 or more rows in another table. This is the way lists of data are represented. In our example, an employee can have a list of emails so employee has a one to many relationship with emails. It can also be said that emails has a Many to One relationship with employee.</p>
+<p>Other examples of one to many relationships</p>
+<ul>
+<li>book to pages</li>
+<li>person to todo or chores</li>
+<li>order to items in the order</li>
+</ul>
+<p>Usually, this is represented graphically by an arrow. The start of the arrow is on the “one” table; the head of the arrow is on the “many” table.</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%202%20-%20JX%20Java%20-%20Read%20Data%20using%20CRUD%20Operations%20including%20Seeding%20Data/assets/sampleemps-db-onetomany.png" alt="One to Many Relationships"></p>
+<p>In Java Spring we need to specify both the one to many relationship and the reverse many to one relationship. In each case we must provide a field to hold the data from the other table in the relationship. Using our example</p>
+<p>One to Many is from <code class="highlighter-rouge">Employee</code> to <code class="highlighter-rouge">Email</code> so we need a list of emails in employee. We use the annotation <code class="highlighter-rouge">@OneToMany</code> with attributes defining the relationship.</p>
+<pre><code class="language-JAVA">    @OneToMany(mappedBy = "employee",
+            cascade = CascadeType.ALL, // when adding, reading, updating, and delete, the operations should affect the emails table as well)
+            orphanRemoval = true) // if we find a email that has a reference to an employee that does not exist, delete that email record
+    private List&lt;Email&gt; emails = new ArrayList&lt;&gt;();
+</code></pre>
+<p>Note that <code class="highlighter-rouge">employee</code> from the <code class="highlighter-rouge">mappedBy</code> attribute matches the <code class="highlighter-rouge">employee</code> field found right after the <code class="highlighter-rouge">ManyToOne</code> attribute. It is critical that these two be named the same including case!</p>
+<p>Many to One is from <code class="highlighter-rouge">Email</code> to <code class="highlighter-rouge">Employee</code>. Each email can only have one employee so we have a single Employee object in the Email table. We use the annotation <code class="highlighter-rouge">@ManyToOne</code> with attributes defining the relationship.</p>
+<pre><code class="language-JAVA">    @ManyToOne
+    @JoinColumn(name = "employeeid",
+            nullable = false)
+    private Employee employee;
+</code></pre>
+<p>Note that the <code class="highlighter-rouge">employeeid</code> in the <code class="highlighter-rouge">name</code> attribute must match exactly the primary key column from the <code class="highlighter-rouge">Employee</code> table.</p>
+<p>Note that one to one relationship is a special case of the one to many relationship. The “many” side of the relationship is restricted to only one entry.</p>
+<p>Notice that the way this is set up, an employee can be assigned duplicate emails. Making emails unique to an individual employee would require us to implement custom queries and that is beyond the scope of this module. So, just remember, though not encouraged!, employees can have duplicates emails in their lists.</p>
+<h3 id="overview-many-to-many">Overview Many to Many</h3>
+<p>Often in a database we have a list in one table and a list in the another. Each time from each list can be associated with 0 or more items from the other list. In our example we have <code class="highlighter-rouge">Employees</code> that can have 0 or more <code class="highlighter-rouge">Jobtitles</code> and a <code class="highlighter-rouge">Jobtitles</code> can be related to 0 or more <code class="highlighter-rouge">Employees</code>. Hence we have a Many to Many relationship.</p>
+<p>Other examples of Many to Many Relationships include</p>
+<ul>
+<li>Authors to Books. Books can be written by multiple authors and authors can write multiple books</li>
+<li>Students to Classes. Students will take multiple classes and classes will have multiple students.</li>
+<li>Customers to Projects. Many Customers can buy the same project and customers can buy multiple products</li>
+</ul>
+<p>Usually, this is represented by having an arrow from a join table to one of the lists with the head of the arrow pointing at the list. We then have another arrow from the join table to other list with the head of the arrow pointing at the other list. So in reality a Many to Many relationship is made up of two One to Many relationships. So in our example</p>
+<ul>
+<li>Each row in our join table will have only one employee but can have many rows with the same employee.</li>
+<li>Each row in our join table will have only one job title but can have many rows with the same job title.</li>
+<li>Normally we restrict our join table to have a unique combination of employee and job title.</li>
+<li>We will see later how to manually implement a many to many relationship using this one to many idea.</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%202%20-%20JX%20Java%20-%20Read%20Data%20using%20CRUD%20Operations%20including%20Seeding%20Data/assets/sampleemps-db-manytomany.png" alt="Many to Many Relationships"></p>
+<p>In Java Spring we specify the many to many relationship in each table that is involved in the relationship. We decide on one table to be the main table. In our case we will pick <code class="highlighter-rouge">Employee</code>. It does not matter which table we pick. In our case the titles describe the employees, so without employees there would be no reason for job titles. Hence I picked Employee for our driving table.</p>
+<p>In the <code class="highlighter-rouge">Employee</code> model we add this code.</p>
+<pre><code class="language-JAVA">    @ManyToMany()
+    /*
+     * Note: JoinTable is the name of a table that will get created in the database combining the two primary keys making up this relationship
+     *       joinColumn is the primary key of the main, driving, table
+     *       inverseJoinColumns is the primary key of the other table in the relationship
+     *
+     * We are using a Set inside of a List to help with enforcing uniqueness in the employeetitles. Sets by their very nature
+     * only contain unique values. By using Sets we do not have to do a lot of extra coding to enforce uniqueness.
+     * We can treat the HashSet very similar to ArrayLists. Differences will be highlighted throughout the course
+     */
+    @JoinTable(name = "employeetitles",
+            joinColumns = @JoinColumn(name = "employeeid"),
+            inverseJoinColumns = @JoinColumn(name = "jobtitleid"))
+    Set&lt;JobTitle&gt; jobtitles = new HashSet&lt;&gt;();
+</code></pre>
+<p>It is critical that the JoinColumn names match exactly case and all with the respective primary keys of the tables being joined!</p>
+<p>Now in the JobTitle model we add this code</p>
+<pre><code class="language-JAVA">    @ManyToMany(mappedBy = "jobtitles")
+    private Set&lt;Employee&gt; employees = new HashSet&lt;&gt;();
+</code></pre>
+<ul>
+<li>Notice that each model provides a private field LIST to hold the other model’s data!</li>
+<li>Notice that the <code class="highlighter-rouge">mappedBy</code> attribute matches exactly the list name given in the <code class="highlighter-rouge">Employee</code> model, the other model!</li>
+</ul>
+<h5>Follow Along</h5>
+<p>Continue with the application you started in Objective 1 - CRUD and where you added data.sql in Objective 2. Let’s enter some more code</p>
+<h3 id="one-to-many">One to Many</h3>
+<ul>
+<li>Under the subpackage <code class="highlighter-rouge">models</code>
+<ul>
+<li>Create the class <code class="highlighter-rouge">Employee</code>
+</li>
+<li>Enter the following code in that class
+<ul>
+<li>Yes lowercase please!!!
+<ul>
+<li>Please note that all field names that will become columns are lowercase. This is by design. This way we do not have be concerned with how JPA will interpret the column names. They will be lowercase!</li>
+<li>Please note that all table names are lowercase. That way we do not have to worry about how JPA will interpret our table names.</li>
+<li>We also always give a table name. That way we do not have to worry about how JPA will interpret our Entity, Model name.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Note: you do not have enter the comments and the Getters and Setters can be generated in IntelliJ</li>
+<li>Try not entering the imports. Let IntelliJ do that for you</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-JAVA">package com.lambdaschool.sampleemps.models;
+
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+@Entity
+@Table(name = "employees")
+public class Employee
+{
+    @Id // The primary key
+    @GeneratedValue(strategy = GenerationType.AUTO) // We will let the database decide how to generate it
+    private long employeeid; // long so we can have many rows
+
+    @Column(nullable = false,
+            unique = true)
+    private String name;
+
+    private double salary;
+
+    @ManyToMany()
+    /*
+     * Note: JoinTable is the name of a table that will get created in the database combining the two primary keys making up this relationship
+     *       joinColumn is the primary key of the main, driving, table
+     *       inverseJoinColumns is the primary key of the other table in the relationship
+     *
+     * We are using a Set inside of a List to help with enforcing uniqueness in the employeetitles. Sets by their very nature
+     * only contain unique values. By using Sets we do not have to do a lot of extra coding to enforce uniqueness.
+     * We can treat the HashSet very similar to ArrayLists. Differences will be highlighted throughout the course
+     */
+    @JoinTable(name = "employeetitles",
+            joinColumns = @JoinColumn(name = "employeeid"),
+            inverseJoinColumns = @JoinColumn(name = "jobtitleid"))
+    Set&lt;JobTitle&gt; jobtitles = new HashSet&lt;&gt;();
+
+    @OneToMany(mappedBy = "employee",
+            cascade = CascadeType.ALL,
+            // when adding, reading, updating, and delete, the operations should affect the emails table as well)
+            orphanRemoval = true)
+    // if we find a email that has a reference to an employee that does not exist, delete that email record
+    private List&lt;Email&gt; emails = new ArrayList&lt;&gt;();
+
+    public Employee()
+    {
+        // the default constructor is required by the JPA
+    }
+
+    public long getEmployeeid()
+    {
+        return employeeid;
+    }
+
+    public void setEmployeeid(long employeeid)
+    {
+        this.employeeid = employeeid;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public double getSalary()
+    {
+        return salary;
+    }
+
+    public void setSalary(double salary)
+    {
+        this.salary = salary;
+    }
+
+    public List&lt;Email&gt; getEmails()
+    {
+        return emails;
+    }
+
+    public void setEmails(List&lt;Email&gt; emails)
+    {
+        this.emails = emails;
+    }
+
+    public Set&lt;JobTitle&gt; getJobtitles()
+    {
+        return jobtitles;
+    }
+
+    public void setJobtitles(Set&lt;JobTitle&gt; jobtitles)
+    {
+        this.jobtitles = jobtitles;
+    }
+}
+</code></pre>
+<ul>
+<li>Under the subpackage <code class="highlighter-rouge">models</code>
+<ul>
+<li>Create the class <code class="highlighter-rouge">Email</code>
+</li>
+<li>Enter the following code in that class</li>
+<li>Note: you do not have enter the comments and the Getters and Setters can be generated in IntelliJ</li>
+<li>Try not entering the imports. Let IntelliJ do that for you</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-JAVA">package com.lambdaschool.sampleemps.models;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "emails")
+public class Email
+{
+    @Id // The primary key
+    @GeneratedValue(strategy = GenerationType.AUTO) // We will let the database decide how to generate it
+    private long emailid; // long so we can have many rows
+
+    private String email;
+
+    @ManyToOne
+    @JoinColumn(name = "employeeid",
+        nullable = false)
+    private Employee employee;
+
+    public Email()
+    {
+        // the default constructor is required by the JPA
+    }
+
+    // Getters and Setters begin. These can be generated!
+    public long getEmailid()
+    {
+        return emailid;
+    }
+
+    public void setEmailid(long emailid)
+    {
+        this.emailid = emailid;
+    }
+
+    public String getEmail()
+    {
+        return email;
+    }
+
+    public void setEmail(String email)
+    {
+        this.email = email;
+    }
+
+    public Employee getEmployee()
+    {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee)
+    {
+        this.employee = employee;
+    }
+}
+</code></pre>
+<h3 id="many-to-many">Many to Many</h3>
+<ul>
+<li>Under the subpackage <code class="highlighter-rouge">models</code>
+<ul>
+<li>Create the class <code class="highlighter-rouge">JobTitle</code>
+</li>
+<li>Enter the following code in that class</li>
+<li>Note: you do not have enter the comments and the Getters and Setters can be generated in IntelliJ</li>
+<li>Try not entering the imports. Let IntelliJ do that for you</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-JAVA">package com.lambdaschool.sampleemps.models;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+@Entity
+@Table(name = "jobtitles")
+public class JobTitle
+{
+    @Id // The primary key
+    @GeneratedValue(strategy = GenerationType.AUTO) // We will let the database decide how to generate it
+    private long jobtitleid; // long so we can have many rows
+
+    private String title;
+
+    @ManyToMany(mappedBy = "jobtitles")
+    private Set&lt;Employee&gt; employees = new HashSet&lt;&gt;();
+
+    public JobTitle()
+    {
+        // the default constructor is required by the JPA
+    }
+
+    public long getJobtitleid()
+    {
+        return jobtitleid;
+    }
+
+    public void setJobtitleid(long jobtitleid)
+    {
+        this.jobtitleid = jobtitleid;
+    }
+
+    public String getTitle()
+    {
+        return title;
+    }
+
+    public void setTitle(String title)
+    {
+        this.title = title;
+    }
+
+    public Set&lt;Employee&gt; getEmployees()
+    {
+        return employees;
+    }
+
+    public void setEmployees(Set&lt;Employee&gt; employees)
+    {
+        this.employees = employees;
+    }
+}
+</code></pre>
+<h3 id="repositories">Repositories</h3>
+<ul>
+<li>Under the subpackage <code class="highlighter-rouge">repositories</code>
+<ul>
+<li>Create the class <code class="highlighter-rouge">EmployeeRepository</code>
+</li>
+<li>Enter the following code in that class</li>
+<li>Try not entering the imports. Let IntelliJ do that for you</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-Java">package com.lambdaschool.sampleemps.repositories;
+
+import com.lambdaschool.sampleemps.models.Employee;
+import org.springframework.data.repository.CrudRepository;
+
+public interface EmployeeRepository
+    extends CrudRepository&lt;Employee, Long&gt;
+{
+
+}
+</code></pre>
+<ul>
+<li>Under the subpackage <code class="highlighter-rouge">repositories</code>
+<ul>
+<li>Create the class <code class="highlighter-rouge">JobTitleRepository</code>
+</li>
+<li>Enter the following code in that class</li>
+<li>Try not entering the imports. Let IntelliJ do that for you</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-Java">package com.lambdaschool.sampleemps.repositories;
+
+import com.lambdaschool.sampleemps.models.JobTitle;
+import org.springframework.data.repository.CrudRepository;
+
+public interface JobTitleRepository
+    extends CrudRepository&lt;JobTitle, Long&gt;
+{
+
+}
+</code></pre>
+<h3 id="services">Services</h3>
+<ul>
+<li>Under the subpackage <code class="highlighter-rouge">services</code>
+<ul>
+<li>Create the interface <code class="highlighter-rouge">EmployeeService</code>
+<ul>
+<li>This is where we define what operations we will allow on our data</li>
+</ul>
+</li>
+<li>Enter the following code in that class</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-JAVA">package com.lambdaschool.sampleemps.services;
+
+public interface EmployeeService
+{
+
+}
+</code></pre>
+<ul>
+<li>Under the subpackage <code class="highlighter-rouge">services</code>
+<ul>
+<li>Create the interface <code class="highlighter-rouge">EmployeeServiceImpl</code>
+<ul>
+<li>This is where we implement any business rules we need apply to our data</li>
+</ul>
+</li>
+<li>Enter the following code in that class</li>
+<li>Try not entering the imports. Let IntelliJ do that for you</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-JAVA">package com.lambdaschool.sampleemps.services;
+
+import com.lambdaschool.sampleemps.repositories.EmployeeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service(value = "employeeSerivce") // needed to name this implementation as the service to use
+public class EmployeeServiceImpl
+    implements EmployeeService // notice the Impl for implementing a service
+{
+    @Autowired
+    private EmployeeRepository employeerepos;
+
+}
+</code></pre>
+<p>Note in this application we will be using the <code class="highlighter-rouge">JobTitleRepository</code> and the <code class="highlighter-rouge">EmployeeService</code> to access our data. Normally you would either use all repositories or all services but I wanted to get both uses in the same example!</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://stackoverflow.com/questions/11156199/one-to-many-hibernate-join-if-column-names-are-different" target="blank_">Column Names are Different</a><br> One to many hibernate join if column names are different</li>
+<li>
+<a href="https://www.baeldung.com/jpa-one-to-one" target="blank_">Baeldung</a><br> Baeldung: One-to-one Relationship</li>
+<li>
+<a href="https://www.baeldung.com/hibernate-one-to-many" target="blank_">Baeldung</a><br> Baeldung: One-to-many Relationship</li>
+<li>
+<a href="https://www.baeldung.com/jpa-many-to-many" target="blank_">Baeldung</a><br> Baeldung: Many-to-many Relationship</li>
+<li>
+<a href="https://www.baeldung.com/spring-data-rest-relationships" target="blank_">Baeldung</a><br> Baeldung: A Complete Multi-Relationship Application</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to implement a data seeding class using JPA and Hibernate</h4>
+<p><a id="Data_Seeding_Using_Java_Spring"></a></p>
+<h5>Overview</h5>
+<ul>
+<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_model</a>t for the code used in the objective.</li>
+</ul>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+<li>JetBrains IntelliJ IDEA IDE</li>
+<li>Postman</li>
+</ul>
+<p>We can seed data to our application using Java. The models and repositories have to be in place before we use Java to seed our application. Preferably, the services would be in place as well. In this example, I will be using the services. You can use the repositories directly but miss some of the data validation that is done in the services. So let’s code this seed data!</p>
+<h5>Follow Along</h5>
+<ul>
+<li>
+<p>First create a class at the root package, the same package where your main method is located. You can call this class anything you wish. I usually call it <code class="highlighter-rouge">SeedData</code>. Add the following code to this class</p>
+</li>
+<li>
+<p>Let’s look at the starting annotations for this class.</p>
+<ul>
+<li>Since this is making changes to the database, we annotate with <code class="highlighter-rouge">@Transactional</code>. More this annotation later in the course.</li>
+<li>Spring Boot needs to know this class exists so we use <code class="highlighter-rouge">@Component</code>.
+<ul>
+<li>If we wish for this seed data NOT to be added to the database, all we have to do is not tell Spring Boot about the class. We do this by commenting out the <code class="highlighter-rouge">@Component</code> annotation. All the code is still in place but with the <code class="highlighter-rouge">@Component</code> annotation is gone; Spring Boot does not know about the class and thus no seeding the data!!!</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-JAVA">@Transactional
+@Component
+public class SeedData implements CommandLineRunner
+{
+    @Override
+    public void run(String... args) throws Exception
+    {
+
+    }
+}
+</code></pre>
+<p>Notice that SeedData implements <code class="highlighter-rouge">CommandLineRunner</code>. <code class="highlighter-rouge">CommandLineRunner</code> is a special Spring interface with a single <code class="highlighter-rouge">run</code> method. This runs once and only once after the Application Context is loaded. The Application Context is the container that manages all the Beans and so is responsible for running the CommandLineRunner run method.</p>
+<ul>
+<li>To make this work, I want to add a constructor to Email. This constructor will take parameters of an email and an employee using those to create the object. So in the Email model add the constructor</li>
+</ul>
+<pre><code class="language-JAVA">&lt;... other code ...&gt;
+    public Email(String email, Employee employee)
+    {
+        this.email = email;
+        this.employee = employee;
+    }
+&lt;... other code ...&gt;
+</code></pre>
+<ul>
+<li>Looking at the data.sql file as inspiration, let’s recreate that same seed data using Java.
+<ul>
+<li>One big difference is we do not get to pick the primary keys. We will allow Hibernate to generate them for us.</li>
+<li>The data.sql file first deletes all the data. I do not do that in my SeedData. Usually if I am loading data from both places and do not want to wipe out in SeedData what I just added through data.sql.</li>
+<li>I am going to access the JPA methods directly from the repositories as oppose to going through the services. The choice is yours. Using the services is preferred if they are fully implemented! Ours are not. So, autowire in the repositories.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-JAVA">public class SeedData implements CommandLineRunner
+{
+    @Autowired
+    private EmployeeService employeeService;
+
+    @Autowired
+    private JobTitleRepository jobTitlerepos;
+
+</code></pre>
+<ul>
+<li>Let’s create the JobTitles so we can add them when we create the employees</li>
+</ul>
+<pre><code class="language-JAVA">    @Override
+    public void run(String... args) throws Exception
+    {
+        JobTitle jt1 = new JobTitle();
+        jt1.setTitle("Big Boss");
+        jobTitlerepos.save(jt1);
+
+        JobTitle jt2 = new JobTitle();
+        jt2.setTitle("Wizard");
+        jobTitlerepos.save(jt2);
+</code></pre>
+<ul>
+<li>Now, let us create the Employees</li>
+<li>Notice that while creating the Employees, we add their emails and jobtitles
+<ul>
+<li>emails are added by adding an email one at time to the employee’s email arraylist</li>
+<li>jobtitles are added on at a time using the employee’s jobtitle hashset.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-JAVA">        Employee emp1 = new Employee();
+        emp1.setName("CINNAMON");
+        emp1.setSalary(80000.00);
+        emp1.getEmails()
+                .add(new Email("<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="254d4a555665494a4644490b464a48">[email&#160;protected]</a>",
+                               emp1));
+        emp1.getEmails()
+                .add(new Email("<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0f6d7a6161764f67607f7f66612163606c6e63">[email&#160;protected]</a>",
+                               emp1));
+        emp1.getJobtitles().add(jt1);
+        emp1.getJobtitles().add(jt2);
+        employeeService.save(emp1);
+
+        Employee emp2 = new Employee();
+        emp2.setName("BARNBARN");
+        emp2.setSalary(80000.00);
+        emp2.getEmails()
+                .add(new Email("<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="187a796a767a796a765874777b7974367b7775">[email&#160;protected]</a>",
+                               emp2));
+        emp2.getJobtitles().add(jt1);
+        employeeService.save(emp2);
+
+        Employee emp3 = new Employee();
+        emp3.setName("JOHN");
+        emp3.setSalary(75000.00);
+        employeeService.save(emp3);
+    }
+</code></pre>
+<ul>
+<li>Let’s finish creating our Services. Here we will create a minimum service method. We will enhance it later in the course!</li>
+<li>In the services subpackage, update the code for EmployeeService so the interface looks like this:</li>
+</ul>
+<pre><code class="language-JAVA">package com.lambdaschool.sampleemps.services;
+
+import com.lambdaschool.sampleemps.models.Employee;
+
+public interface EmployeeService
+{
+    Employee save(Employee employee);
+}
+</code></pre>
+<ul>
+<li>Now let’s implement a very simple save service.</li>
+<li>In the services subpackage, update the code for EmployeeServiceImpl by adding the following method</li>
+</ul>
+<pre><code class="language-JAVA">    @Transactional
+    @Override
+    public Employee save(Employee employee)
+    {
+        return employeerepos.save(employee);
+    }
+</code></pre>
+<p>Before running make sure that in <code class="highlighter-rouge">application.properties</code> <code class="highlighter-rouge">spring.datasource.initialization-mode</code> is set to <code class="highlighter-rouge">never</code>. This will prevent Spring Boot from loading the data in data.sql!</p>
+<h5>Challenge</h5>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to implement massive data seeding</h4>
+<p><a id="Mass_Data_Seeding"></a></p>
+<h5>Overview</h5>
+<ul>
+<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_model</a> for the code used in the objective.</li>
+</ul>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+<li>JetBrains IntelliJ IDEA IDE</li>
+<li>Postman</li>
+</ul>
+<p>We have much to update in adding these CRUD functions. Your Follow Along task is to find the code in the repo as it is mentioned in the objective!</p>
+<p>Creating your own seed with values that you know is very useful. You know what to look for when you are testing the application. However, sometimes you just want a bunch of random data, say to test performance or pagination. Take a look at Javafaker. This cool dependency allows you to random generate all sorts of data from regular name and telephone number to Star Trek references to Cat information. Take a look at the various categories. For now we will use names and randomly generate salaries.</p>
+<h5>Follow Along</h5>
+<p>To use Javafaker, add the dependency to your <code class="highlighter-rouge">POM.XML</code> file. Add it right above <code class="highlighter-rouge">&lt;/dependencies&gt;</code> closing tab! After adding this dependency:</p>
+<ul>
+<li>Right click on the <code class="highlighter-rouge">pom.xml</code> file
+<ul>
+<li>Goto to the context menu <code class="highlighter-rouge">Maven</code> and select <code class="highlighter-rouge">Reload project</code>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-XML">        &lt;!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.github.javafaker&lt;/groupId&gt;
+            &lt;artifactId&gt;javafaker&lt;/artifactId&gt;
+            &lt;version&gt;1.0.1&lt;/version&gt;
+        &lt;/dependency&gt;
+</code></pre>
+<p>Now add to our SeedData file a random value field right after the <code class="highlighter-rouge">@Autowire</code>d fields.</p>
+<pre><code class="language-JAVA">    private Random random = new Random();
+</code></pre>
+<p>We need to initialize our Javafaker and tell it we are using US English. Put this after you have added your known data so at the end of the run method in SeedData</p>
+<pre><code class="language-JAVA">        Faker nameFaker = new Faker(new Locale("en-US"));
+</code></pre>
+<p>Let’s randomly generate some names. Our names must be unique. This is not guaranteed with Javafaker. So an easy workaround is to generate a bunch of names and add them to a SET. A SET only contains unique values. If you try to add a duplicate value to a SET, that add gets ignored. Perfect for what we want. We will then use this set to create our employees. This technique does not guarantee a certain number of records but it does a good job. This way will generate no more than 100 unique names. So after the <code class="highlighter-rouge">Faker nameFaker</code> variable declaration, add the following code:</p>
+<pre><code class="language-JAVA">        // this section gets a unique list of names
+        Set&lt;String&gt; empNamesSet = new HashSet&lt;&gt;();
+        for (int i = 0; i &lt; 100; i++)
+        {
+            empNamesSet.add(nameFaker.name().fullName());
+        }
+</code></pre>
+<p>Now let’s create more employees from this Javafaker data</p>
+<pre><code class="language-JAVA">        for (String empName : empNamesSet)
+        {
+            Employee employee = new Employee(); // create a new employee object that will be removed at the end of the loop body
+            employee.setName(empName); // set the name
+            employee.setSalary(50000.00 + (100000.00 * random.nextDouble())); // randomly generate salary from 50000 to 150000
+
+            int randomInt = random.nextInt(10); // random number of emails from 0 - 9
+            for (int j = 0; j &lt; randomInt; j++)
+            {
+                employee.getEmails()
+                    .add(new Email(nameFaker.internet().emailAddress(),
+                        employee));
+            }
+            employee.getJobtitles().add(jt1); // just assigning them to the first job title
+            employeeService.save(employee);
+        }
+</code></pre>
+<p>Enjoy this fun and useful dependency!</p>
+<details>
+<summary>Expand to see a complete SeedData.java file</summary>
+<pre><code class="language-Java">
+
+package com.lambdaschool.sampleemps;
+
+import com.github.javafaker.Faker;
+import com.lambdaschool.sampleemps.models.Email;
+import com.lambdaschool.sampleemps.models.Employee;
+import com.lambdaschool.sampleemps.models.JobTitle;
+import com.lambdaschool.sampleemps.repositories.JobTitleRepository;
+import com.lambdaschool.sampleemps.services.EmployeeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.HashSet;
+import java.util.Locale;
+import java.util.Random;
+import java.util.Set;
+
+@Transactional
+@Component
+public class SeedData implements CommandLineRunner
+{
+    @Autowired
+    private EmployeeService employeeService;
+
+    @Autowired
+    private JobTitleRepository jobTitlerepos;
+
+    private Random random = new Random();
+
+    @Override
+    public void run(String... args) throws Exception
+    {
+        JobTitle jt1 = new JobTitle();
+        jt1.setTitle("Big Boss");
+        jobTitlerepos.save(jt1);
+
+        JobTitle jt2 = new JobTitle();
+        jt2.setTitle("Wizard");
+        jobTitlerepos.save(jt2);
+
+        Employee emp1 = new Employee();
+        emp1.setName("CINNAMON");
+        emp1.setSalary(80000.00);
+        emp1.getEmails()
+                .add(new Email("<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="10787f6063507c7f73717c3e737f7d">[email&#160;protected]</a>",
+                               emp1));
+        emp1.getEmails()
+                .add(new Email("<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ceef9e2e2f5cce4e3fcfce5e2a2e0e3efede0">[email&#160;protected]</a>",
+                               emp1));
+        emp1.getJobtitles()
+                .add(jt1);
+        emp1.getJobtitles()
+                .add(jt2);
+        employeeService.save(emp1);
+
+        Employee emp2 = new Employee();
+        emp2.setName("BARNBARN");
+        emp2.setSalary(80000.00);
+        emp2.getEmails()
+                .add(new Email("<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0f6d6e7d616d6e7d614f63606c6e63216c6062">[email&#160;protected]</a>",
+                               emp2));
+        emp2.getJobtitles()
+                .add(jt1);
+        employeeService.save(emp2);
+
+        Employee emp3 = new Employee();
+        emp3.setName("JOHN");
+        emp3.setSalary(75000.00);
+        employeeService.save(emp3);
+
+        Faker nameFaker = new Faker(new Locale("en-US"));
+
+        // this section gets a unique list of names
+        Set<string> empNamesSet = new HashSet&lt;&gt;();
+        for (int i = 0; i &lt; 100; i++)
+        {
+            empNamesSet.add(nameFaker.name()
+                                    .fullName());
+        }
+
+        for (String empName : empNamesSet)
+        {
+            Employee employee = new Employee(); // create a new employee object that will be removed at the end of the loop body
+            employee.setName(empName); // set the name
+            employee.setSalary(50000.00 + (100000.00 * random.nextDouble())); // randomly generate salary from 50000 to 150000
+
+            int randomInt = random.nextInt(10); // random number of emails from 0 - 9
+            for (int j = 0; j &lt; randomInt; j++)
+            {
+                employee.getEmails()
+                        .add(new Email(nameFaker.internet()
+                                               .emailAddress(),
+                                       employee));
+            }
+            employee.getJobtitles()
+                    .add(jt1); // just assigning them to the first job title
+            employeeService.save(employee);
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</string></code></pre></details>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://dius.github.io/java-faker/" target="blank_">Java-faker Homepage</a><br> Java-faker Homepage</li>
+<li>
+<a href="https://www.baeldung.com/java-faker" target="blank_">Baeldung</a><br> Baeldung - A Guide to JavaFaker</li>
+<li>
+<a href="https://www.geeksforgeeks.org/set-in-java/" target="blank_">Set in Java</a><br> Set in Java</li>
+<li>
+<a href="https://www.geeksforgeeks.org/java-util-random-class-java/" target="blank_">Java.util.Random</a><br> Java.util.Random class in Java</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to use H2 Console and H2 IntelliJ integration to explore data</h4>
+<p><a id="H2_Console"></a></p>
+<h5>Overview</h5>
+<ul>
+<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_model</a> for the code used in the objective.</li>
+</ul>
+<h5 id="software-needed">Software Needed</h5>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+<li>JetBrains IntelliJ IDEA IDE</li>
+<li>Postman</li>
+</ul>
+<p>Note we entered this configuration class in a previous module. Now let’s look at more in depth!</p>
+<p>For testing purposes, Java Spring Developers typically use the H2 database. We use H2 as an in memory database. Each time the application is restarted the current data in the database is deleted. In fact the entire database is removed from memory and recreated. The database is then seeded with a fresh data set and is ready for new testing.</p>
+<p>Note: Since this is an in memory database, the database is only available while the application is running.</p>
+<p>For production purposes we need a more full featured, stable, persistence database. For that we will be using PostgreSQL later in this course. However, until we deploy our database, H2 fulfills are our requirements!</p>
+<h5 id="adding-h2-database-to-application">Adding H2 Database to Application</h5>
+<p>This dependency must be added in <code class="highlighter-rouge">POM.XML</code> file</p>
+<pre><code class="language-TEXT">        &lt;dependency&gt;
+            &lt;groupId&gt;com.h2database&lt;/groupId&gt;
+            &lt;artifactId&gt;h2&lt;/artifactId&gt;
+&lt;!--            &lt;scope&gt;runtime&lt;/scope&gt;--&gt;
+        &lt;/dependency&gt;
+</code></pre>
+<p>These configurations should be added to the <code class="highlighter-rouge">application.properties</code> file</p>
+<pre><code class="language-TEXT">### Configurations useful for working with H2
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+</code></pre>
+<p>Add this class in <code class="highlighter-rouge">config</code> package</p>
+<pre><code class="language-JAVA">package com.lambdaschool.sampleemps.config;
+
+import org.h2.tools.Server;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import java.sql.SQLException;
+
+/**
+ * Configures H2 access through the JetBrains IntelliJ IDEA IDE.
+ *
+ * Adapted from https://techdev.io/en/developer-blog/querying-the-embedded-h2-database-of-a-spring-boot-application
+ * necessary for using the database tool built into intellij
+ */
+@Configuration
+public class H2ServerConfiguration
+{
+
+    /**
+     * TCP port for remote connections, default 9092.
+     */
+    @Value("${h2.tcp.port:9092}")
+    private String h2TcpPort;
+
+    /**
+     * Web port, default 8082.
+     */
+    @Value("${h2.web.port:8082}")
+    private String h2WebPort;
+
+    /**
+     * TCP connection to connect with SQL clients to the embedded h2 database.
+     * &lt;p&gt;
+     * Connect to "jdbc:h2:tcp://localhost:9092/mem:testdb", username "sa", password empty.
+     *
+     * @return The created TcpServer needed to access H2.
+     * @throws SQLException If the server cannot be created.
+     */
+    @Bean
+    @ConditionalOnExpression("${h2.tcp.enabled:true}")
+    public Server h2TcpServer() throws SQLException
+    {
+        return Server.createTcpServer("-tcp",
+                                      "-tcpAllowOthers",
+                                      "-tcpPort",
+                                      h2TcpPort)
+                     .start();
+    }
+
+    /**
+     * Web console for the embedded h2 database.
+     * &lt;p&gt;
+     * Go to http://localhost:8082 and connect to the database "jdbc:h2:mem:testdb", username "sa", password empty.
+     *
+     * @return The created web server needed to access H2.
+     * @throws SQLException If the server cannot be created.
+     */
+    @Bean
+    @ConditionalOnExpression("${h2.web.enabled:true}")
+    public Server h2WebServer() throws SQLException
+    {
+        return Server.createWebServer("-web",
+                                      "-webAllowOthers",
+                                      "-webPort",
+                                      h2WebPort)
+                     .start();
+    }
+}
+</code></pre>
+<h5>Follow Along</h5>
+<p>Add the above class to your sample employee application developed in this Module.</p>
+<h3 id="accessing-h2-through-the-h2-console">Accessing H2 through the H2 Console</h3>
+<p>Let’s access H2 through the H2 Console</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%203%20-%20JX%20Java%20-%20Inserting%20Deleting%20and%20Updating%20Data%20using%20CRUD%20Operations%20including%20generating%20Seed%20Data/assets/JX-SP11-M3-07.gif" alt="Accessing H2 through its console"></p>
+<p>Steps:</p>
+<ul>
+<li>The application must be running!!!</li>
+<li>Surf to http://localhost:2019/h2-console</li>
+<li>The sign on screen should default fine.
+<ul>
+<li>Saved Settings: <code class="highlighter-rouge">Generic H2 (Embedded)</code>
+</li>
+<li>Setting Name: <code class="highlighter-rouge">Generic H2 (Embedded)</code>
+</li>
+<li>Drive Class: <code class="highlighter-rouge">org.h2.Driver</code>
+</li>
+<li>JDBC URL: <code class="highlighter-rouge">jdbc:h2:mem:testdb</code>
+</li>
+<li>User Name: <code class="highlighter-rouge">sa</code>
+</li>
+<li>Passord: <empty></empty>
+</li>
+</ul>
+</li>
+<li>Once connected you are presented with a list of the database elements and a blank box. Inside the black box, you can enter any valid SQL commands to run against the database.
+<ul>
+<li>To Execute that SQL, click the <code class="highlighter-rouge">Run</code> button</li>
+<li>To start over, click the <code class="highlighter-rouge">Clear</code> button</li>
+</ul>
+</li>
+</ul>
+<h3 id="accessing-h2-through-intellij">Accessing H2 through IntelliJ</h3>
+<p>Let’s access H2 through IntelliJ. This is primarily done in order to display a graphic representation of the database. All the database graphs you see in this course were done following this method.</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%203%20-%20JX%20Java%20-%20Inserting%20Deleting%20and%20Updating%20Data%20using%20CRUD%20Operations%20including%20generating%20Seed%20Data/assets/JX-SP11-M3-06.gif" alt="Accessing H2 through IntelliJ"></p>
+<p>Steps:</p>
+<ul>
+<li>The application must be running!!!</li>
+<li>In IntelliJ with your project open, open the right side tab <code class="highlighter-rouge">Databases</code>
+</li>
+<li>From the source (<code class="highlighter-rouge">+</code>) button, add a new data source
+<ul>
+<li>Select from the <code class="highlighter-rouge">Datasource</code> list <code class="highlighter-rouge">H2</code>
+<ul>
+<li>Complete the requested information:
+<ul>
+<li>Host: localhost</li>
+<li>Port: 9092</li>
+<li>User: sa</li>
+<li>Password: <empty></empty>
+</li>
+<li>Save: Forever</li>
+<li>Database: mem:testdb</li>
+</ul>
+</li>
+<li>Then click Apply OK</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="displaying-h2-diagram">Displaying H2 Diagram</h3>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%203%20-%20JX%20Java%20-%20Inserting%20Deleting%20and%20Updating%20Data%20using%20CRUD%20Operations%20including%20generating%20Seed%20Data/assets/JX-SP11-M3-08.gif" alt="Accessing H2 Diagram"></p>
+<p>Steps to display the database diagram</p>
+<ul>
+<li>Expand the jdbc:h2:tcp://localhost:9092/mem:testdb</li>
+<li>Expand TESTDB</li>
+<li>Expand schemas</li>
+<li>Expand PUBLIC</li>
+<li>Expand tables
+<ul>
+<li>You can now see your tables!</li>
+</ul>
+</li>
+<li>Right click on Public</li>
+<li>From the Context Menu, select Diagrams -&gt; Show Visualization</li>
+<li>A diagram of your database appears in a file in IntelliJ</li>
+<li>The arrow pointing out of the right angle allows you to save the diagram</li>
+</ul>
+<p>Yes, you can do other functions through IntelliJ against an H2 database. However for the purposes of this class, we will mainly access H2 through its console.</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://www.baeldung.com/spring-boot-h2-database" target="blank_">Baeldung</a><br> Baeldung Spring Boot H2 Database</li>
+<li>
+<a href="https://www.h2database.com/html/main.html" target="blank_">Homepage for the H2 Database</a><br> Homepage for the H2 Database</li>
+</ul>
+<hr>
+<h2>
+<a id="guided-project" class="anchor" href="#guided-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Guided Project</h2>
+<h3>Crudy Restaurants Initial</h3>
+<p>Using restaurants with menus as our model, we explore CRUD operations related to model data. We will start with the crudyrestaurants_initial application found in the repo</p>
+<a target="_blank" href="https://github.com/LambdaSchool/java-crudyrestaurants.git">GitHub Repo</a>
+<hr>
+<h2 class="display-4">
+<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
+<ul class="list-group">
+<li class="list-group-item">
+<h5><a target="_blank" href="https://github.com/LambdaSchool/java-orders.git">Java Modeling Orders</a></h5>
+<p>This is part 1 of a 3 part series. In the first part you are tasked with setting up the database model in a Java Spring Application.</p>
+</li>
+</ul>
+<h2 class="display-4">
+<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
+<h3 class="display-5">Class Recordings</h3>
+<p class="lead">You can use class recordings to help you master the material.</p>
+<div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<strong><a target="_blank" href="https://youtu.be/sRbsyfO54SI">Java Spring Database Modeling for WEB33 with John Mitchell</a></strong>
+<p>Abbreviated class due to Labor Day Holiday</p>
+</li>
+<li class="list-group-item">
+<a href="/archive/WEB4Java/module/recb0OVmRrJzqhH4D">All previous recordings</a>
+</li>
+</ul>
+</div>
+<h3 class="display-5">Demonstrate Mastery</h3>
+<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
+<ul>
+<li>Objective challenge:
+</li>
+<li>Guided Project: Crudy Restaurants Initial</li>
+<li>Project: Java Modeling Orders</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80850900-4');
+</script>
+<script type="text/javascript">
+  function getDomain() {
+    const domainName = window.location.hostname.split('.')[1];
+    return `${domainName}.com`;
+  }
+</script>
+<script src="" integrity="" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
+<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+  SimpleJekyllSearch.init({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    dataSource: '/search.json',
+    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Java - Spring Database Creation Including Seed Data">{title}</a></li>',
+    noResultsText: '',
+    limit: 10,
+    fuzzy: true,
+  })
+</script>
+<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
+  if (window.attachEvent) {
+    window.attachEvent('onload', verifySignedIn);
+  } else {
+    if (window.onload) {
+      var currentOnLoadFn = window.onload;
+      var newOnLoadFn = function (evt) {
+        currentOnLoadFn(evt);
+        verifySignedIn();
+      };
+      window.onload = newOnLoadFn;
+    } else {
+      window.onload = verifySignedIn;
+    }
+  }
+
+  function verifySignedIn() {
+    if (isPagePublic()) {
+      return showPageContents();
+    }
+
+    window.__user = null;
+    isSignedIn().then((user) => {
+      window.__user = user;
+
+      if (!user.signedIn) {
+        redirectToSignIn();
+      } else if (!user.student && !window.__openToAdmissions) {
+        showUnauthorizedMessage();
+      } else {
+        showPageContents();
+      }
+    });
+  }
+
+  function isPagePublic() {
+    const openCourses = [
+      'and-pre',
+      'ds-pre',
+      'fsw-pre',
+      'help',
+      'ios-pre',
+    ];
+
+    const openPages = [
+      'cs-and',
+      'cs-fsw',
+      'cs-ios',
+      'cr',
+      'ds',
+      'jx',
+      'p4s',
+      'ux',
+    ];
+
+    const pathParts = window.location.pathname.split('/');
+    const courseName = pathParts[1];
+    const pageName = pathParts[pathParts.length - 1];
+
+    return openCourses.includes(courseName) || openPages.includes(pageName);
+  }
+
+  function isSignedIn() {
+    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
+
+    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
+
+    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
+      .then((response) => response.text())
+      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
+      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
+      .catch((error) => {});
+  }
+
+  function redirectToSignIn() {
+    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+    const redirectMessage = document.querySelector('#redirect-message');
+    redirectMessage.style.display = "block";
+    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+    window.location = signInUrl;
+  }
+
+  function showPageContents() {
+    document.querySelector('#content-wrapper').style.visibility = 'visible';
+  }
+
+  function showUnauthorizedMessage() {
+    document.querySelector('#unauthorized-message').style.display = 'block';
+  }
+
+  function getAuthBaseUrl() {
+    const domain = getDomain();
+    const authBaseUrl = `https://auth.${domain}`;
+    return authBaseUrl;
+  }
+</script><script src="/assets/js/docs.min.js"></script><script>
+  var MathJax = {
+    tex: {
+      inlineMath: [['$$', '$$'], ['\[', '\])']]
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax span": {
+          color: "#000000"
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script>
+  handleExternalLinks();
+
+  function handleExternalLinks() {
+    const domain = getDomain();
+    const links = document.querySelectorAll('a');
+    return links.forEach((link) => {
+      if (!link.host.includes(domain)) link.target = '_blank';
+    })
+  };
+</script>
+</div>
+</body>
+</html>

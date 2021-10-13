@@ -1,0 +1,970 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Intended as a home for Lambda School curriculum.">
+<meta name="author" content="">
+<meta name="generator" content="Jekyll v3.8.0">
+<title>Advanced Form Management · Lambda School</title>
+
+<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+  analytics.page();
+  }}();
+</script>
+
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#a0001e">
+</head>
+<body>
+<noscript>Please enable JavaScript to view this page.</noscript>
+<div id="redirect-message" style="display: none;">
+You must be logged in to view this page.
+</div>
+<div id="unauthorized-message" style="display: none;">
+You must be a Lambda School student to view this page.
+</div>
+<div id="content-wrapper" style="visibility: hidden;">
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container">
+<span class="skiplink-text">Skip to main content</span>
+</div>
+</a>
+<div class="mobile-menu">
+<div class="m-drop">
+<div class="mobile-row">
+<div class="header-row" style="padding: 3px 7px">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
+</svg></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+</button>
+</div>
+</div>
+<div class="nav-row">
+<div class="results-container">
+<ul id="results-container" class="dropdown list-group"></ul>
+</div>
+<div id="mobile-course-menu" class="collapse nav-row">
+<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+<nav class="bd-links">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web Annex</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recfwZvI7QhMa7xbG">
+1.&nbsp;&nbsp;User Interface and Git
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recl0IyzS2Vl89lZa/">
+User Interface
+</a>
+</li>
+<li>
+<a href="/webannex/module/rect59e95N6OSvoCd/">
+Git for Web Development
+</a>
+</li>
+<li>
+<a href="/webannex/module/recGvXyWT6AvGtMHR/">
+User Interface II
+</a>
+</li>
+<li>
+<a href="/webannex/module/recaVbBZhh8BTyMdM/">
+User Interface III
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recIXiQgpgMdJ81ms">
+2.&nbsp;&nbsp;Advanced CSS
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recuDrqSGpWcepCMs/">
+Responsive Design I
+</a>
+</li>
+<li>
+<a href="/webannex/module/recE3IqPtDxaVI0DW/">
+Responsive Design II
+</a>
+</li>
+<li>
+<a href="/webannex/module/reculyBhIYkuoBRqh/">
+Preprocessing I
+</a>
+</li>
+<li>
+<a href="/webannex/module/rec1hRu3bO6L0uxn2/">
+Preprocessing II
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recclZwJxMU8kUngT">
+3.&nbsp;&nbsp;JavaScript Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recCT3KJYTIRYwQMh/">
+JavaScript I
+</a>
+</li>
+<li>
+<a href="/webannex/module/rec1oaBmEoSilO2yf/">
+JavaScript II
+</a>
+</li>
+<li>
+<a href="/webannex/module/rec0AWuNLezbpit7m/">
+Prototypes and Inheritance
+</a>
+</li>
+<li>
+<a href="/webannex/module/recyS588eOvVUKAMc/">
+Classes
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recRT8JKvbTiGaosk">
+4.&nbsp;&nbsp;Single Page Applications
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
+React Router I
+</a>
+</li>
+<li>
+<a href="/webannex/module/recYkF1FDilIedmwX/">
+React Router II
+</a>
+</li>
+<li>
+<a href="/webannex/module/rect081xiYT2cfxGF/">
+Form Management
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/webannex/module/recKK5C7wV0WiECfr/">
+Advanced Form Management
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recozTHaHJe6L1ThN">
+5.&nbsp;&nbsp;Authentication and Testing
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recQD9lnhqWEFh6g4/">
+Introduction to Authentication
+</a>
+</li>
+<li>
+<a href="/webannex/module/recvIPgHwxF194c7q/">
+Using Sessions and Cookies
+</a>
+</li>
+<li>
+<a href="/webannex/module/reciCHdNjavSKaaLt/">
+Using JSON Web Tokens (JWT)
+</a>
+</li>
+<li>
+<a href="/webannex/module/reciXdxRA8zXJXDID/">
+Testing the Back End
+</a>
+</li>
+</ul>
+</div>
+<hr>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-container">
+<div class="sidebar-container bd-sidebar">
+<div class="docs-sidebar">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
+<ul id="results-container" class="dropdown list-group"></ul>
+<nav class="bd-links collapse" id="bd-docs-nav">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web Annex</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recfwZvI7QhMa7xbG">
+1.&nbsp;&nbsp;User Interface and Git
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recl0IyzS2Vl89lZa/">
+User Interface
+</a>
+</li>
+<li>
+<a href="/webannex/module/rect59e95N6OSvoCd/">
+Git for Web Development
+</a>
+</li>
+<li>
+<a href="/webannex/module/recGvXyWT6AvGtMHR/">
+User Interface II
+</a>
+</li>
+<li>
+<a href="/webannex/module/recaVbBZhh8BTyMdM/">
+User Interface III
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recIXiQgpgMdJ81ms">
+2.&nbsp;&nbsp;Advanced CSS
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recuDrqSGpWcepCMs/">
+Responsive Design I
+</a>
+</li>
+<li>
+<a href="/webannex/module/recE3IqPtDxaVI0DW/">
+Responsive Design II
+</a>
+</li>
+<li>
+ <a href="/webannex/module/reculyBhIYkuoBRqh/">
+Preprocessing I
+</a>
+</li>
+<li>
+<a href="/webannex/module/rec1hRu3bO6L0uxn2/">
+Preprocessing II
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recclZwJxMU8kUngT">
+3.&nbsp;&nbsp;JavaScript Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recCT3KJYTIRYwQMh/">
+JavaScript I
+</a>
+</li>
+<li>
+<a href="/webannex/module/rec1oaBmEoSilO2yf/">
+JavaScript II
+</a>
+</li>
+<li>
+<a href="/webannex/module/rec0AWuNLezbpit7m/">
+Prototypes and Inheritance
+</a>
+</li>
+<li>
+<a href="/webannex/module/recyS588eOvVUKAMc/">
+Classes
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recRT8JKvbTiGaosk">
+4.&nbsp;&nbsp;Single Page Applications
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
+React Router I
+</a>
+</li>
+<li>
+<a href="/webannex/module/recYkF1FDilIedmwX/">
+React Router II
+</a>
+</li>
+<li>
+<a href="/webannex/module/rect081xiYT2cfxGF/">
+Form Management
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/webannex/module/recKK5C7wV0WiECfr/">
+Advanced Form Management
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recozTHaHJe6L1ThN">
+5.&nbsp;&nbsp;Authentication and Testing
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recQD9lnhqWEFh6g4/">
+Introduction to Authentication
+</a>
+</li>
+<li>
+<a href="/webannex/module/recvIPgHwxF194c7q/">
+Using Sessions and Cookies
+</a>
+</li>
+<li>
+<a href="/webannex/module/reciCHdNjavSKaaLt/">
+Using JSON Web Tokens (JWT)
+</a>
+</li>
+<li>
+<a href="/webannex/module/reciXdxRA8zXJXDID/">
+Testing the Back End
+</a>
+</li>
+</ul>
+</div>
+<hr>
+
+</nav>
+</div>
+</div>
+<main class="content-container flex-wrapper" role="main">
+<div class="sticky-nav">
+<div class="sprint-nav">
+<ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+</ul>
+</div>
+
+</div>
+<div class="wrapper limit-width">
+<div class="flex-wrapper">
+<div class="limit-width">
+<div class="jumbotron">
+<h1 class="bd-title" id="content">Advanced Form Management</h1>
+<span class="lead">
+<p class="bd-lead"></p>
+</span>
+<strong>At the end of this module, you should be able to:</strong>
+<ul>
+<li>control forms and form inputs (checkbox, dropdown) in custom forms</li>
+<li>validate user input in forms</li>
+<li>make POST requests to pass data collected from a form to a database</li>
+</ul>
+</div>
+<div class="alert alert-warning" role="alert">
+<h4>Pro Tip</h4>
+<p>When talking about your journey, don’t focus on things you don’t know yet, focus on what you’ve learned and how quickly.</p>
+</div>
+<h2 class="display-4">
+<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
+<p class="lead">Review each preclass resource before class.</p>
+<div class="preclass">
+<ul class="list-group list-group-flush">
+</ul>
+</div>
+<h2 class="display-4">
+<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
+<h4 class="mark mb-3 p-2">Learn to control forms and form inputs (checkbox, dropdown) in custom forms</h4>
+<p>Forms can have many types of inputs, including: radio buttons, check boxes, passwords, file uploads, and more. We want to be able to include all types of inputs in forms to ensure we’re collecting the best data possible.</p>
+<h5>Overview</h5>
+<p>Until this point we’ve been working primarily with text inputs. Of course, forms can have many types of inputs, including: radio buttons, check boxes, passwords, file uploads, and more. You can view a full list of form input types <a href="https://www.w3schools.com/html/html_form_input_types.asp">here</a>.</p>
+<p>Some of input types provide an additional challenge when trying to control forms.</p>
+<h3 id="checkboxes">Checkboxes</h3>
+<h4 id="set-default">Set-default</h4>
+<p>Just like with text inputs you can change the default values of checkboxes from not checked to <code class="highlighter-rouge">checked</code>. Similarly you can specify a value that</p>
+<p>In the example below the box would be checked by default like so: <input type="checkbox" name="nameOfChoice" value="1" checked></p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">checkbox</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">nameOfChoice</span><span class="dl">"</span> <span class="nx">value</span><span class="o">=</span><span class="dl">"</span><span class="s2">1</span><span class="dl">"</span> <span class="nx">checked</span><span class="o">&gt;</span>
+</code></pre></div></div>
+<p>Without the <code class="highlighter-rouge">checked</code> argument, it would look more like this: <input type="checkbox" name="nameOfChoice" value="yes"></p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">checkbox</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">nameOfChoice</span><span class="dl">"</span> <span class="nx">value</span><span class="o">=</span><span class="dl">"</span><span class="s2">yes</span><span class="dl">"</span><span class="o">&gt;</span>
+</code></pre></div></div>
+<p>Here we also changed the value from the number <code class="highlighter-rouge">1</code> to the string <code class="highlighter-rouge">yes</code>, but that doesn’t actually change anything for the user, it simply specifies what should be added to the form object.</p>
+<h4 id="control-inputs">Control Inputs</h4>
+<p>That brings us to our next point, controlling inputs. Controlling inputs for checkboxes, buttons, and other non-text fields can be funky. If you want non-default values when a field is checked you need to specify them in form setup and this often requires some additional logic.</p>
+<p>The following example would create a checkbox that, when checked, would equal <code class="highlighter-rouge">true</code> and would <code class="highlighter-rouge">handleInputChange</code> like you learned earlier. We will learn to control the state when we talk about form validation.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">label</span><span class="o">&gt;</span>
+    <span class="nx">Check</span> <span class="nx">This</span> <span class="nx">Box</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="nx">input</span>
+        <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">isGoing</span><span class="dl">"</span>
+        <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">checkbox</span><span class="dl">"</span>
+        <span class="nx">checked</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span>
+        <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">handleInputChange</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/label</span><span class="err">&gt;
+</span></code></pre></div></div>
+<h3 id="dropdown">Dropdown</h3>
+<p>Dropdown menus are really important for gathering mass data because they insure data quality. This is done with the <code class="highlighter-rouge">&lt;select&gt;</code> element. Between the <code class="highlighter-rouge">&lt;select&gt;</code> tags, you’ll place all of the options you want to have in the dropdown menu.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">form</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">select</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">friends</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">friends</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">option</span> <span class="nx">value</span><span class="o">=</span><span class="dl">"</span><span class="s2">Ross</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">option</span> <span class="nx">value</span><span class="o">=</span><span class="dl">"</span><span class="s2">Rachel</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">option</span> <span class="nx">value</span><span class="o">=</span><span class="dl">"</span><span class="s2">Monica</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">option</span> <span class="nx">value</span><span class="o">=</span><span class="dl">"</span><span class="s2">Phoebe</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">option</span> <span class="nx">value</span><span class="o">=</span><span class="dl">"</span><span class="s2">Chandler</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">option</span> <span class="nx">value</span><span class="o">=</span><span class="dl">"</span><span class="s2">Joey</span><span class="dl">"</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="sr">/select</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/form</span><span class="err">&gt;
+</span></code></pre></div></div>
+<h5>Follow Along</h5>
+<p>Let’s build out a form to gather user information with radio buttons, a checklist, and a dropdown. These are some common data types you might work with in your time as a web developer.</p>
+<ol>
+<li>
+<strong>Set up form.</strong> Using our knowledge from the “form management” module, we’ll first set up a basic form with a single text input, Name.</li>
+</ol>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="p">{</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span><span class="p">)}</span>
+      <span class="o">&lt;</span><span class="nx">form</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">label</span><span class="o">&gt;</span>
+          <span class="nx">Name</span><span class="p">:</span>
+          <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">event</span> <span class="o">=&gt;</span> <span class="nx">handleChange</span><span class="p">(</span><span class="nx">event</span><span class="p">)}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="sr">/label</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onSubmit</span><span class="o">=</span><span class="p">{()</span> <span class="o">=&gt;</span> <span class="nx">handleSubmit</span><span class="p">()}</span><span class="o">&gt;</span><span class="nx">Submit</span><span class="o">!&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/form</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</code></pre></div></div>
+<ol>
+<li>
+<strong>Add Radio Buttons</strong>. Next, we’ll add radio buttons. If we wanted to gather categorical data, like an age range, we might use radio buttons. To make radio buttons all we need to do is add <code class="highlighter-rouge">input</code> elements with the type <code class="highlighter-rouge">"radio"</code>. These are, by default, inline elements, so they’ll render nicely in a row.</li>
+</ol>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span> <span class="nx">Age</span> <span class="nx">Range</span><span class="p">:</span> <span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="nx">label</span><span class="o">&gt;</span>
+            <span class="mi">13</span><span class="o">-</span><span class="mi">18</span>
+            <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">radio</span><span class="dl">"</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">event</span> <span class="o">=&gt;</span> <span class="nx">handleChange</span><span class="p">(</span><span class="nx">event</span><span class="p">)}</span> <span class="sr">/</span><span class="err">&gt;
+</span>            <span class="mi">19</span><span class="o">-</span><span class="mi">24</span>
+            <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">radio</span><span class="dl">"</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">event</span> <span class="o">=&gt;</span> <span class="nx">handleChange</span><span class="p">(</span><span class="nx">event</span><span class="p">)}</span> <span class="sr">/</span><span class="err">&gt;
+</span>            <span class="mi">25</span><span class="o">-</span><span class="mi">39</span>
+            <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">radio</span><span class="dl">"</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">event</span> <span class="o">=&gt;</span> <span class="nx">handleChange</span><span class="p">(</span><span class="nx">event</span><span class="p">)}</span> <span class="sr">/</span><span class="err">&gt;
+</span>            <span class="mi">40</span><span class="o">+</span>
+            <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">radio</span><span class="dl">"</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">event</span> <span class="o">=&gt;</span> <span class="nx">handleChange</span><span class="p">(</span><span class="nx">event</span><span class="p">)}</span> <span class="sr">/</span><span class="err">&gt;
+</span>            <span class="o">&lt;</span><span class="sr">/label</span><span class="err">&gt;
+</span></code></pre></div></div>
+<ol>
+<li>
+<strong>Add Dropdown</strong>. Another way to gather categorical data is through a dropdown. Let’s add one here to ask which state the user lives in. For illustration purposes, we’ll only add 5 states, but you could easily use an array and <code class="highlighter-rouge">.map</code> method to add all 50 states.</li>
+</ol>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">form</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">select</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">states</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">states&gt;
+    &lt;option value=</span><span class="dl">"</span><span class="nx">Alabama</span><span class="dl">"</span><span class="s2"> /&gt;
+    &lt;option value=</span><span class="dl">"</span><span class="nx">Alaska</span><span class="dl">"</span><span class="s2"> /&gt;
+    &lt;option value=</span><span class="dl">"</span><span class="nx">Arizona</span><span class="dl">"</span><span class="s2"> /&gt;
+    &lt;option value=</span><span class="dl">"</span><span class="nx">Arkansas</span><span class="dl">"</span><span class="s2"> /&gt;
+    &lt;option value=</span><span class="dl">"</span><span class="nx">Colorado</span><span class="dl">"</span><span class="s2"> /&gt;
+  &lt;/select&gt;
+&lt;/form&gt;
+</span></code></pre></div></div>
+<ol>
+<li>
+<strong>Add a checklist.</strong> Last but not least let’s play around with a checklist. Checklists are a great way to gather boolean data. For these we simply change the input value to <code class="highlighter-rouge">"checkbox"</code>. We also need to consider what a check means and set up our form accordingly. In the example below, when the box is checked we update the state of “RSVP” to “yes”,</li>
+</ol>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">label</span><span class="o">&gt;</span>
+    <span class="nx">RSVP</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="nx">input</span>
+        <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">isGoing</span><span class="dl">"</span>
+        <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">checkbox</span><span class="dl">"</span>
+        <span class="nx">checked</span><span class="o">=</span><span class="p">{</span><span class="kc">false</span><span class="p">}</span>
+        <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">handleInputChange</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/label</span><span class="err">&gt;
+</span></code></pre></div></div>
+<h5>Challenge</h5>
+<p>Add a non-text field to a project from the form management lessons.</p>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to validate user input in forms</h4>
+<p>As our users start typing into our beautiful form we’ve created, they will very often type in the wrong data into the wrong field. Or maybe they will not format the data correctly (think setting up strong passwords, or even typing in a phone number or email). We want to give our users the best user experience by giving them informed feedback when they’ve filled out our form incorrectly. This is done with form validation.</p>
+<h5>Overview</h5>
+<p>You know when you try to make your password “password” and the form tells you to chose a stronger password? That’s called validation. There are many ways to validate input before you submit the form to a server or other service and they’re all really useful for insuring the quality of data.</p>
+<p>One common strategy is to compare the input string to a regular expression model of expected characters and handle the input based on the results of the comparison.</p>
+<p>Another popular method is to have a library such as <code class="highlighter-rouge">Yup</code> handle the validation for us - yup has built in methods to deal with email addresses, passwords, strings, numbers, and more. You can read the full documentation <a href="https://github.com/jquense/yup">here</a>.</p>
+<h3 id="validating-a-string">Validating a String</h3>
+<p>Before we move into the follow along tutorial, lets look at how we could use Yup to validate if an input was a string. This is in a lot of ways the “Hello World” of form validation.</p>
+<p>First, you’ll need to install yup with <code class="highlighter-rouge">npm install --save yup</code>.</p>
+<p>Then, we simply declare a schema with <code class="highlighter-rouge">let schema = yup.string();</code> and test our schema on a new line with <code class="highlighter-rouge">await schema.isValid('hello world');</code>. This would return “true” since ‘hello world’ is a string.</p>
+<h3 id="validating-a-form">Validating a Form</h3>
+<p>Form validation is slightly more complicated but it follows the same logical pattern. First we declare a schema, then we validate data.</p>
+<p>In a forms app, the schema defines what the form looks like. It is kind of like a form outline, telling yup what the existing fields are and how they should be validated. We’ll walk through this process below.</p>
+<p>You can always chose to use additional helper libraries, like Formik, to validate forms, but for learning purposes it is best to understand the validation process with just Yup.</p>
+<h5>Follow Along</h5>
+<p>We’ll start with a Yup login form consisting of an email and password field.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="c1">// Basic submit event handler and console.log to confirm form submitted</span>
+  <span class="kd">const</span> <span class="nx">formSubmit</span> <span class="o">=</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">submitted</span><span class="dl">"</span><span class="p">);</span>
+  <span class="p">};</span>
+
+<span class="c1">// Create state for the form values. We will want to update state later on, but for now... empty strings!</span>
+  <span class="kd">const</span> <span class="p">[</span><span class="nx">formState</span><span class="p">,</span> <span class="nx">setFormState</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">({</span>
+    <span class="na">name</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+    <span class="na">email</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+    <span class="na">website</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+    <span class="na">password</span><span class="p">:</span> <span class="dl">""</span>
+  <span class="p">});</span>
+
+<span class="c1">// Define form elements: email, password and terms/conditions</span>
+
+<span class="kd">function</span> <span class="nx">LoginForm</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">form</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">label</span> <span class="nx">htmlFor</span><span class="o">=</span><span class="dl">"</span><span class="s2">emailInput</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="nx">Name</span>
+        <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">emailInput</span><span class="dl">"</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">email</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">email</span><span class="dl">"</span> <span class="nx">placeholder</span><span class="o">=</span><span class="dl">"</span><span class="s2">Email</span><span class="dl">"</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="sr">/label</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">label</span> <span class="nx">htmlFor</span><span class="o">=</span><span class="dl">"</span><span class="s2">passwordInput</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="nx">Password</span>
+        <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">passwordInput</span><span class="dl">"</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">password</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">password</span><span class="dl">"</span> <span class="nx">placeholder</span><span class="o">=</span><span class="dl">"</span><span class="s2">Password</span><span class="dl">"</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="sr">/label</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">label</span> <span class="nx">htmlFor</span><span class="o">=</span><span class="dl">"</span><span class="s2">termsInput</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="nx">Do</span> <span class="nx">you</span> <span class="nx">agree</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">terms</span> <span class="nx">and</span> <span class="nx">conditions</span><span class="p">?</span>
+        <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">termsInput</span><span class="dl">"</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">checkbox</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">terms</span><span class="dl">"</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="sr">/label</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">button</span><span class="o">&gt;</span><span class="nx">Submit</span><span class="o">!&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/form</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+
+</code></pre></div></div>
+<p>To start the validation process, add Yup as a dependency and import it into the component file. In the command line we’ll type:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">--save</span> yup
+</code></pre></div></div>
+<p>and in our file:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">Yup</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">yup</span><span class="dl">"</span><span class="p">;</span>
+<span class="c1">// You may see this as (import Yup from 'yup') in some tutorials, the above method seems less buggy</span>
+</code></pre></div></div>
+<p>Next we will define our schema - which is basically a description of what each named field is supposed to look like so that Yup can pass or fail the input. Give it a shape of all the elements in your form. Depending on what you’re trying to validate you give it strings, checkboxes, etc. That might look like so:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">formSchema</span> <span class="o">=</span> <span class="nx">Yup</span><span class="p">.</span><span class="nx">object</span><span class="p">().</span><span class="nx">shape</span><span class="p">({</span>
+  <span class="na">email</span><span class="p">:</span> <span class="nx">Yup</span>
+    <span class="p">.</span><span class="nx">string</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">email</span><span class="p">(</span><span class="dl">"</span><span class="s2">Must be a valid email address.</span><span class="dl">"</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">required</span><span class="p">(</span><span class="dl">"</span><span class="s2">Must include email address.</span><span class="dl">"</span><span class="p">),</span>
+  <span class="na">password</span><span class="p">:</span> <span class="nx">Yup</span>
+    <span class="p">.</span><span class="nx">string</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Passwords must be at least 6 characters long.</span><span class="dl">"</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">required</span><span class="p">(</span><span class="dl">"</span><span class="s2">Password is Required</span><span class="dl">"</span><span class="p">)</span>
+  <span class="na">terms</span><span class="p">:</span> <span class="nx">Yup</span>
+    <span class="p">.</span><span class="nx">boolean</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">oneOf</span><span class="p">([</span><span class="kc">true</span><span class="p">],</span> <span class="dl">"</span><span class="s2">You must accept Terms and Conditions</span><span class="dl">"</span><span class="p">)</span>
+    <span class="c1">// required isn't required for checkboxes.</span>
+<span class="p">});</span>
+</code></pre></div></div>
+<p>The <code class="highlighter-rouge">formSchema</code> is a lot like a <code class="highlighter-rouge">propType</code> definition because you need to tell Yup what shape the data is supposed to take.</p>
+<p>The customization part is pretty straightforward. For the <code class="highlighter-rouge">email</code> field, Yup is looking for a string that looks like an email-pattern, and you need to have this field (it’s <code class="highlighter-rouge">required</code>).</p>
+<p>The <code class="highlighter-rouge">password</code> schema shows that you expect a string with a minimum of 6 characters. Additionally, the user shouldn’t be able to submit the form without a password.</p>
+<p>There are tons of options available in a schema. Look up how to use this powerful tool <a href="https://github.com/jquense/yup">here</a>.</p>
+<p>Next up, we’ll create state for the form values. Just like earlier, this is the initial state values for each input in the form.</p>
+<p>Next up, state for error messages.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">// State for the error messages</span>
+  <span class="kd">const</span> <span class="p">[</span><span class="nx">errors</span><span class="p">,</span> <span class="nx">setErrors</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">({</span>
+    <span class="na">email</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+    <span class="na">password</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+    <span class="na">terms</span><span class="p">:</span> <span class="dl">""</span>
+  <span class="p">});</span>
+</code></pre></div></div>
+<p>We’re going to change the state of the button so that when we’re filling out the form it won’t be able to submit until the validation passes. The forms will submit even if the validation is failing, we’re using the button’s state to disable the button. Ultimately though, the form state still controls wither or not the form can be submitted.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="cm">/* Each time the form value state is updated, check to see if it is valid per our schema. 
+  This will allow us to enable/disable the submit button.*/</span>
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="cm">/* We pass the entire state into the entire schema, no need to use reach here. 
+    We want to make sure it is all valid before we allow a user to submit
+    isValid comes from Yup directly */</span>
+    <span class="nx">formSchema</span><span class="p">.</span><span class="nx">isValid</span><span class="p">(</span><span class="nx">formState</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">valid</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">setButtonDisabled</span><span class="p">(</span><span class="o">!</span><span class="nx">valid</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">},</span> <span class="p">[</span><span class="nx">formState</span><span class="p">]);</span>
+</code></pre></div></div>
+<p>The last thing we need to do before validating the form is set up an event handler called <code class="highlighter-rouge">inputChange</code> and pass in the event parameter. React uses it’s own event system (known as a “synthetic event”). These events are meant to look like normal DOM events, and in the majority of cases we can use them in the same way. However, there are some small inconsistencies. One of those differences is the fact that we can not use the React event object in an asynchronous way on its own. If you plan on using the event object in a callback or a promise resolution you will need to call <code class="highlighter-rouge">.persist()</code> on your event object before you use it. If you are interested in learning more about why this is the case (it’s actually performance related and a good thing!) you can read about it <a href="https://reactjs.org/docs/events.html#event-pooling">here</a>. Otherwise, just remember to use event.persist() and you will be good.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">const</span> <span class="nx">inputChange</span> <span class="o">=</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="cm">/* e.persist allows us to use the synthetic event in an async manner.
+    We need to be able to use it after the form validation */</span>
+    <span class="nx">e</span><span class="p">.</span><span class="nx">persist</span><span class="p">();</span>
+</code></pre></div></div>
+<p>Finally, lets set up our validation. This is probably the trickiest part of form validation. Here, our synthetic event handler holding the forms input data will be tested against our schema from before. Then, we’ll use some conditional logic with <code class="highlighter-rouge">.then</code> and <code class="highlighter-rouge">.catch</code> to display error messages or not, and to change the state.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">// yup.reach will allow us to "reach" into the schema and test only one part.</span>
+    <span class="c1">// We give reach the schema as the first argument, and the key we want to test as the second.</span>
+    <span class="nx">yup</span>
+      <span class="p">.</span><span class="nx">reach</span><span class="p">(</span><span class="nx">formSchema</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span>
+      <span class="c1">//we can then run validate using the value</span>
+      <span class="p">.</span><span class="nx">validate</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+      <span class="c1">// if the validation is successful, we can clear the error message</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">valid</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">setErrors</span><span class="p">({</span>
+          <span class="p">...</span><span class="nx">errors</span><span class="p">,</span>
+          <span class="p">[</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">name</span><span class="p">]:</span> <span class="dl">""</span>
+        <span class="p">});</span>
+      <span class="p">})</span>
+      <span class="cm">/* if the validation is unsuccessful, we can set the error message to the message 
+        returned from yup (that we created in our schema) */</span>
+      <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">setErrors</span><span class="p">({</span>
+          <span class="p">...</span><span class="nx">errors</span><span class="p">,</span>
+          <span class="p">[</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">name</span><span class="p">]:</span> <span class="nx">err</span><span class="p">.</span><span class="nx">errors</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="p">});</span>
+      <span class="p">});</span>
+
+    <span class="c1">// Wether or not our validation was successful, we will still set the state to the new value as the user is typing</span>
+    <span class="nx">setFormState</span><span class="p">({</span>
+      <span class="p">...</span><span class="nx">formState</span><span class="p">,</span>
+      <span class="p">[</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">name</span><span class="p">]:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span>
+    <span class="p">});</span>
+  <span class="p">};</span>
+</code></pre></div></div>
+<p>When validation isn’t successful we need to display an error message to the user, letting them know how to fix the problem. For an email that is less than 6 characters, for example, we might want to display “Email must be more than 6 characters.” For this, we’ll <strong>return to our form HTML</strong> and add error messages. Note that the conditional logic below is implemented with the ES6 ternary operator syntax, where a condition is listed with a <code class="highlighter-rouge">?</code> and we use <code class="highlighter-rouge">:</code> to separate the conditions like: <code class="highlighter-rouge">condition ? exprIfTrue : exprIfFalse</code>. You can read more about ternary operators <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">here</a>.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">function</span> <span class="nx">LoginForm</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">form</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">label</span> <span class="nx">htmlFor</span><span class="o">=</span><span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">email</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">email</span><span class="dl">"</span> <span class="nx">placeholder</span><span class="o">=</span><span class="dl">"</span><span class="s2">Email</span><span class="dl">"</span> <span class="o">/&gt;</span>
+      <span class="sr">/</span><span class="err">&gt;
+</span>            <span class="p">{</span><span class="nx">errors</span><span class="p">.</span><span class="nx">email</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">?</span> <span class="p">(</span><span class="o">&lt;</span><span class="nx">p</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">errors</span><span class="p">.</span><span class="nx">email</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/p&gt;</span><span class="se">)</span><span class="sr"> : null</span><span class="err">}
+</span>      <span class="o">&lt;</span><span class="nx">label</span> <span class="nx">htmlFor</span><span class="o">=</span><span class="dl">"</span><span class="s2">password</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">password</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">password</span><span class="dl">"</span> <span class="nx">placeholder</span><span class="o">=</span><span class="dl">"</span><span class="s2">Password</span><span class="dl">"</span> <span class="o">/&gt;</span>
+      <span class="p">{</span><span class="nx">errors</span><span class="p">.</span><span class="nx">password</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">6</span> <span class="p">?</span> <span class="p">(</span><span class="o">&lt;</span><span class="nx">p</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">errors</span><span class="p">.</span><span class="nx">email</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/p&gt;</span><span class="se">)</span><span class="sr"> : null</span><span class="err">}
+</span>       <span class="o">&lt;</span><span class="nx">label</span> <span class="nx">htmlFor</span><span class="o">=</span><span class="dl">"</span><span class="s2">terms</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="nx">Do</span> <span class="nx">you</span> <span class="nx">agree</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">terms</span> <span class="nx">and</span> <span class="nx">conditions</span><span class="p">?</span>
+      <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">checkbox</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">button</span><span class="o">&gt;</span><span class="nx">Submit</span><span class="o">!&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>      <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/form</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Next, we will show you how to actually DO something with this beautiful form data in the form of a POST request!</p>
+<h5>Challenge</h5>
+<p>Add validation to any test field from your Form Management module guided project or challenges.</p>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to make POST requests to pass data collected from a form to a database</h4>
+<p>Making elegant and excellent forms is an important skill as a developer, but we have to do something with our data once our users submit it to us. Typically, this is handled by submitting the data from the form to a database. This allows us to persist our data and access it later for use in the application to make our users’ experience better.</p>
+<h5>Overview</h5>
+<p>When our client applications need to work with data from a server and database, we transmit that data back-and-forth using <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a>. This is a protocol that allows communication between web browsers and web servers.</p>
+<p>You’ve previously learned how to use a <code class="highlighter-rouge">GET</code> request, but we’re going to take it a step further today by submitting data to a web server. Within the HTTP protocol, a <code class="highlighter-rouge">POST</code> request is a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">HTTP Request Method</a>. To be precise, it is the method that allows us to “post” (or create) information on a web server. When a user makes a <code class="highlighter-rouge">POST</code> request, they are adding data to the server’s database.</p>
+<p>We’ll look at some examples of how to make a <code class="highlighter-rouge">POST</code> request by extending the functionality of the form that we built above.</p>
+<p>To make our <code class="highlighter-rouge">POST</code> request to our database, we’re going to bring in <a href="https://www.npmjs.com/package/axios">axios</a>, a promise-based library that makes it easy for us to transmit data to-and-from our web server.</p>
+<p>First, we need to install our <code class="highlighter-rouge">axios</code> dependency. We can do that using npm:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>axios
+</code></pre></div></div>
+<p>Now we can write a post request anywhere in our component. Let’s look at the code we’ll write to do this.</p>
+<p>First, here’s what an <code class="highlighter-rouge">axios</code> call looks like for <code class="highlighter-rouge">POST</code> request:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">sentData</span> <span class="o">=</span> <span class="p">{</span> <span class="na">data</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Hello World!</span><span class="dl">"</span> <span class="p">};</span>
+
+<span class="nx">axios</span>
+  <span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://yourdatabaseurlgoeshere.com</span><span class="dl">"</span><span class="p">,</span> <span class="nx">sentData</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span> <span class="c1">// Data was created successfully and logs to console</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span> <span class="c1">// There was an error creating the data and logs to console</span>
+  <span class="p">});</span>
+</code></pre></div></div>
+<p>Notice that we are calling the <code class="highlighter-rouge">axios</code> library but using a <code class="highlighter-rouge">.post()</code> call instead of a <code class="highlighter-rouge">.get()</code> after it. We then follow that up with a URL passed in as an argument. Unlike the <code class="highlighter-rouge">.get()</code> requests that you’ve done before, we also pass in the data that we want to send to our web server as the second argument. In this example, the data that we’re sending is our <code class="highlighter-rouge">sentData</code> variable, which is an object. This would be sent to our web server.</p>
+<p>The promise created by <code class="highlighter-rouge">axios</code> will then resolve into a successful response or reject with an error. We’re using <code class="highlighter-rouge">console.log()</code>s here, but you will typically write logic inside of <code class="highlighter-rouge">.then()</code> and <code class="highlighter-rouge">.catch()</code> that may include:</p>
+<ol>
+<li>Setting data into state in your component</li>
+<li>Alerting the user to an error</li>
+<li>Use the new data to create side effects in your component(s) that modify the interface for your user in some way</li>
+</ol>
+<p>For instance, a <code class="highlighter-rouge">POST</code> request, such as the one above, might return a response (or <code class="highlighter-rouge">res</code>) like the following:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="nl">error</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nx">data</span><span class="p">:</span> <span class="p">{</span> <span class="nl">data</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Hello World!</span><span class="dl">"</span> <span class="p">},</span>
+  <span class="nx">message</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Your data was successfully created.</span><span class="dl">"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>This is just a rough example, and every server works differently. You will need to initially <code class="highlighter-rouge">console.log()</code> the server’s response to find out what kind of data you’re receiving back in your response. This is super important - always console log the server’s response!</p>
+<h5>Follow Along</h5>
+<p>Let’s take a look at how we would integrate this <code class="highlighter-rouge">POST</code> request into our Yup form. In particular, notice what we’re doing in our <code class="highlighter-rouge">handleSubmit</code> function down towards the bottom:</p>
+<ol>
+<li>
+<strong>Create a new state called <code class="highlighter-rouge">setPost</code></strong>. This will be where we’re going to store data on a valid form submit. Once we have the data we’ll work to <code class="highlighter-rouge">console.log</code> it and display it to the screen.</li>
+</ol>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">// new state to set our post request too. So we can console.log and see it.</span>
+  <span class="kd">const</span> <span class="p">[</span><span class="nx">post</span><span class="p">,</span> <span class="nx">setPost</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">([]);</span>
+
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">formSchema</span><span class="p">.</span><span class="nx">isValid</span><span class="p">(</span><span class="nx">formState</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">valid</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="c1">// console.log(valid);</span>
+      <span class="nx">setButtonDisabled</span><span class="p">(</span><span class="o">!</span><span class="nx">valid</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">},</span> <span class="p">[</span><span class="nx">formState</span><span class="p">]);</span>
+</code></pre></div></div>
+<ol>
+<li>
+<strong>Post to a database from <code class="highlighter-rouge">req, res</code></strong>. Inside of our form submit event handler, we’re going to add a <code class="highlighter-rouge">post</code> request with <code class="highlighter-rouge">axios</code> and update formState. Once form state is filled out, this posts all of the input information to <code class="highlighter-rouge">setPost</code>.</li>
+</ol>
+<p>For all of our examples together we are going to make use of the <code class="highlighter-rouge">reqres</code> API. This API allows us to make real POST requests to a real server and get real responses. Until you learn to set up your own backend in Unit 4, this will be a powerful development tool. The post to <code class="highlighter-rouge">https://reqres.in/api/users</code> accomplishes that.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// this handles what happens when we submit the form. We want to prevent the default</span>
+  <span class="c1">//form submission from the browser and control what happens when we submit.</span>
+  <span class="kd">const</span> <span class="nx">formSubmit</span> <span class="o">=</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">submitted!</span><span class="dl">"</span><span class="p">);</span>
+    <span class="nx">axios</span>
+      <span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://reqres.in/api/users</span><span class="dl">"</span><span class="p">,</span> <span class="nx">formState</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">setPost</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span> <span class="c1">// get just the form data from the REST api</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">success</span><span class="dl">"</span><span class="p">,</span> <span class="nx">res</span><span class="p">);</span>
+      <span class="p">})</span>
+      <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">response</span><span class="p">));</span>
+  <span class="p">};</span>
+</code></pre></div></div>
+<ol>
+<li>
+<strong>Display Data</strong>. For our purposes, we’ll just display data to the DOM, instead of doing something with it on a server. For that we will use <code class="highlighter-rouge">JSON.stringify</code> to display our data in both the DOM and the console.</li>
+</ol>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* displaying our post request data */</span>
+      <span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">post</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="mi">2</span><span class="p">)}</span><span class="o">&lt;</span><span class="sr">/pre</span><span class="err">&gt;
+</span></code></pre></div></div>
+<p>In this example, our axios call to <code class="highlighter-rouge">https://reqres.in/api/users</code> now runs whenever we submit the form and run the <code class="highlighter-rouge">handleSubmit</code> function. Our form now takes in user data and, when the user clicks the “submit” button, it will <code class="highlighter-rouge">POST</code> the user’s data to the webserver.</p>
+<p>This <code class="highlighter-rouge">POST</code> functionality will be reused innumerable times throughout your developer journey, so it will pay to get a handle on how you do post requests now. For further review, feel free to read through the official documentation from <a href="https://github.com/axios/axios">axios</a>.</p>
+<h5>Challenge</h5>
+<p>Go review your <code class="highlighter-rouge">GET</code> requests in previous homework assignments and think about how you convert them over to a <code class="highlighter-rouge">POST</code> request. What code would you change? How would you send your data over HTTP once you’ve converted them? What code do you need to re-write to make this happen? How do your new <code class="highlighter-rouge">POST</code> requests differ from your old <code class="highlighter-rouge">GET</code> requests?</p>
+<hr>
+<h2 class="display-4">
+<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
+<ul class="list-group">
+<li class="list-group-item">
+<h5><a target="_blank" href="https://github.com/LambdaSchool/User-Onboarding">User Onboarding</a></h5>
+<p>Create a form to allow new users to sign up for your service.</p>
+</li>
+</ul>
+<h2 class="display-4">
+<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
+<h3 class="display-5">Class Recordings</h3>
+<p class="lead">You can use class recordings to help you master the material.</p>
+<div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<strong><a target="_blank" href="https://youtu.be/Awa4TsDfTgM">Advanced Form Management for WEBPT21 w/ Emily Seibert</a></strong>
+<p>Advanced Form Management</p>
+</li>
+<li class="list-group-item">
+<a href="/archive/FSW/module/recKK5C7wV0WiECfr">All previous recordings</a>
+</li>
+</ul>
+</div>
+<h3 class="display-5">Demonstrate Mastery</h3>
+<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
+<ul>
+<li>Objective challenge: <p>Add a non-text field to a project from the form management lessons.</p>
+</li>
+<li>Objective challenge: <p>Add validation to any test field from your Form Management module guided project or challenges.</p>
+</li>
+<li>Objective challenge: <p>Go review your <code class="highlighter-rouge">GET</code> requests in previous homework assignments and think about how you convert them over to a <code class="highlighter-rouge">POST</code> request. What code would you change? How would you send your data over HTTP once you’ve converted them? What code do you need to re-write to make this happen? How do your new <code class="highlighter-rouge">POST</code> requests differ from your old <code class="highlighter-rouge">GET</code> requests?</p>
+</li>
+<li>Project: User Onboarding</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80850900-4');
+</script>
+<script type="text/javascript">
+  function getDomain() {
+    const domainName = window.location.hostname.split('.')[1];
+    return `${domainName}.com`;
+  }
+</script>
+<script src="" integrity="" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
+<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+  SimpleJekyllSearch.init({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    dataSource: '/search.json',
+    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Advanced Form Management">{title}</a></li>',
+    noResultsText: '',
+    limit: 10,
+    fuzzy: true,
+  })
+</script>
+<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
+  if (window.attachEvent) {
+    window.attachEvent('onload', verifySignedIn);
+  } else {
+    if (window.onload) {
+      var currentOnLoadFn = window.onload;
+      var newOnLoadFn = function (evt) {
+        currentOnLoadFn(evt);
+        verifySignedIn();
+      };
+      window.onload = newOnLoadFn;
+    } else {
+      window.onload = verifySignedIn;
+    }
+  }
+
+  function verifySignedIn() {
+    if (isPagePublic()) {
+      return showPageContents();
+    }
+
+    window.__user = null;
+    isSignedIn().then((user) => {
+      window.__user = user;
+
+      if (!user.signedIn) {
+        redirectToSignIn();
+      } else if (!user.student && !window.__openToAdmissions) {
+        showUnauthorizedMessage();
+      } else {
+        showPageContents();
+      }
+    });
+  }
+
+  function isPagePublic() {
+    const openCourses = [
+      'and-pre',
+      'ds-pre',
+      'fsw-pre',
+      'help',
+      'ios-pre',
+    ];
+
+    const openPages = [
+      'cs-and',
+      'cs-fsw',
+      'cs-ios',
+      'cr',
+      'ds',
+      'jx',
+      'p4s',
+      'ux',
+    ];
+
+    const pathParts = window.location.pathname.split('/');
+    const courseName = pathParts[1];
+    const pageName = pathParts[pathParts.length - 1];
+
+    return openCourses.includes(courseName) || openPages.includes(pageName);
+  }
+
+  function isSignedIn() {
+    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
+
+    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
+
+    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
+      .then((response) => response.text())
+      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
+      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
+      .catch((error) => {});
+  }
+
+  function redirectToSignIn() {
+    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+    const redirectMessage = document.querySelector('#redirect-message');
+    redirectMessage.style.display = "block";
+    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+    window.location = signInUrl;
+  }
+
+  function showPageContents() {
+    document.querySelector('#content-wrapper').style.visibility = 'visible';
+  }
+
+  function showUnauthorizedMessage() {
+    document.querySelector('#unauthorized-message').style.display = 'block';
+  }
+
+  function getAuthBaseUrl() {
+    const domain = getDomain();
+    const authBaseUrl = `https://auth.${domain}`;
+    return authBaseUrl;
+  }
+</script><script src="/assets/js/docs.min.js"></script><script>
+  var MathJax = {
+    tex: {
+      inlineMath: [['$$', '$$'], ['\[', '\])']]
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax span": {
+          color: "#000000"
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script>
+  handleExternalLinks();
+
+  function handleExternalLinks() {
+    const domain = getDomain();
+    const links = document.querySelectorAll('a');
+    return links.forEach((link) => {
+      if (!link.host.includes(domain)) link.target = '_blank';
+    })
+  };
+</script>
+</div>
+</body>
+</html>

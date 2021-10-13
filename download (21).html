@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Intended as a home for Lambda School curriculum.">
+<meta name="author" content="">
+<meta name="generator" content="Jekyll v3.8.0">
+<title>Composing React Components and Passing Data Via Props · Lambda School</title>
+
+<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+  analytics.page();
+  }}();
+</script>
+
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#a0001e">
+</head>
+<body>
+<noscript>Please enable JavaScript to view this page.</noscript>
+<div id="redirect-message" style="display: none;">
+You must be logged in to view this page.
+</div>
+<div id="unauthorized-message" style="display: none;">
+You must be a Lambda School student to view this page.
+</div>
+<div id="content-wrapper" >
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container">
+<span class="skiplink-text">Skip to main content</span>
+</div>
+</a>
+<div class="mobile-menu">
+<div class="m-drop">
+<div class="mobile-row">
+<div class="header-row" style="padding: 3px 7px">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
+</svg></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+</button>
+</div>
+</div>
+<div class="nav-row">
+<div class="results-container">
+<ul id="results-container" class="dropdown list-group"></ul>
+</div>
+<div id="mobile-course-menu" class="collapse nav-row">
+<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+<nav class="bd-links">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web Applications I</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web2/sprint/recPSZMPrmESUYo2C">
+1.&nbsp;&nbsp;Applied JavaScript
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web2/module/rectn5PUU5ubcQkPu/">
+DOM I
+</a>
+</li>
+<li>
+<a href="/web2/module/recJWv3RIfa4NFXbn/">
+DOM II
+</a>
+</li>
+<li>
+<a href="/web2/module/rec847sNXZX9CVDNl/">
+Components I
+</a>
+</li>
+<li>
+<a href="/web2/module/recd6kDKS6eMapSRq/">
+Components II
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web2/sprint/recYL2HDPPpkDmGEm">
+2.&nbsp;&nbsp;Intro to React
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web2/module/recZau7hH8vzww14N/">
+React Components and Component State
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/web2/module/recgzSGQtp2HYwgSR/">
+Composing React Components and Passing Data Via Props
+</a>
+</li>
+<li>
+<a href="/web2/module/recKe8PW6ZMwjL1Qg/">
+Component Side Effects
+</a>
+</li>
+<li>
+<a href="/web2/module/recNDoSqyUw3eq1y3/">
+Advanced Styling Techniques
+</a>
+</li>
+</ul>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web2/sprint/recH2pYM3qVavZTRN">
+3.&nbsp;&nbsp;Single Page Applications
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web2/module/recd7jGy7tfVkcFlX/">
+React Router
+</a>
+</li>
+<li>
+<a href="/web2/module/rect081xiYT2cfxGF/">
+Form Management
+</a>
+</li>
+<li>
+<a href="/web2/module/recKK5C7wV0WiECfr/">
+Advanced Form Management
+</a>
+</li>
+<li>
+<a href="/web2/module/recduYpjgZBQaQM8X/">
+cypress.io
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web2/sprint/recwKyMueNtoTTmUD">
+4.&nbsp;&nbsp;WEB Unit 2 Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-container">
+<div class="sidebar-container bd-sidebar">
+<div class="docs-sidebar">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
+<ul id="results-container" class="dropdown list-group"></ul>
+<nav class="bd-links collapse" id="bd-docs-nav">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web Applications I</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web2/sprint/recPSZMPrmESUYo2C">
+1.&nbsp;&nbsp;Applied JavaScript
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web2/module/rectn5PUU5ubcQkPu/">
+DOM I
+</a>
+</li>
+<li>
+<a href="/web2/module/recJWv3RIfa4NFXbn/">
+DOM II
+</a>
+</li>
+<li>
+<a href="/web2/module/rec847sNXZX9CVDNl/">
+Components I
+</a>
+</li>
+<li>
+<a href="/web2/module/recd6kDKS6eMapSRq/">
+Components II
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web2/sprint/recYL2HDPPpkDmGEm">
+2.&nbsp;&nbsp;Intro to React
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web2/module/recZau7hH8vzww14N/">
+React Components and Component State
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/web2/module/recgzSGQtp2HYwgSR/">
+Composing React Components and Passing Data Via Props
+</a>
+</li>
+<li>
+<a href="/web2/module/recKe8PW6ZMwjL1Qg/">
+Component Side Effects
+</a>
+</li>
+<li>
+<a href="/web2/module/recNDoSqyUw3eq1y3/">
+Advanced Styling Techniques
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web2/sprint/recH2pYM3qVavZTRN">
+3.&nbsp;&nbsp;Single Page Applications
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web2/module/recd7jGy7tfVkcFlX/">
+React Router
+</a>
+</li>
+<li>
+<a href="/web2/module/rect081xiYT2cfxGF/">
+Form Management
+</a>
+</li>
+<li>
+<a href="/web2/module/recKK5C7wV0WiECfr/">
+Advanced Form Management
+</a>
+</li>
+
+<li>
+<a href="/web2/module/recduYpjgZBQaQM8X/">
+cypress.io
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web2/sprint/recwKyMueNtoTTmUD">
+4.&nbsp;&nbsp;WEB Unit 2 Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<main class="content-container flex-wrapper" role="main">
+<div class="sticky-nav">
+<div class="sprint-nav">
+<ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+</ul>
+</div>
+
+</div>
+<div class="wrapper limit-width">
+<div class="flex-wrapper">
+<div class="limit-width">
+<div class="jumbotron">
+<h1 class="bd-title" id="content">Composing React Components and Passing Data Via Props</h1>
+<span class="lead">
+<p class="bd-lead"></p>
+<p>As you build bigger applications, you’ll want to start splitting up your app into smaller pieces so that it is easier to work on and maintain. These small pieces you will build are called components. Components will need to share state, so we will learn how to do this with a helper object called <code class="highlighter-rouge">props</code>.</p>
+</span>
+<strong>At the end of this module, you should be able to:</strong>
+<ul>
+<li>use JavaScript modules to export and import components</li>
+<li>describe props and how data flows in a React application</li>
+<li>demonstrate the ability to compose React components to build out a UI</li>
+<li>pass props as dynamic data to a React component</li>
+</ul>
+</div>
+<div class="alert alert-warning" role="alert">
+<h4>Pro Tip</h4>
+<p>All things in moderation, including moderation.</p>
+</div>
+<h2 class="display-4">
+<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
+<p class="lead">Review each preclass resource before class.</p>
+<div class="preclass">
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EOuwkNt-MCU" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZBzHw78nzQM" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+ <div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5lzKaiC8ask" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PDLixDiT-BA" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+</ul>
+</div>
+<h2 class="display-4">
+<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
+<h4 class="mark mb-3 p-2">Learn to use JavaScript modules to export and import components</h4>
+<p>At this point in the curriculum you are familiar with several concepts for addressing problems with specificity and context. Just as closure and scope describe what information can be reached within a function or block of code, modules are a pattern that describes the process for accessing information from one file to another. Modules act as a sort of barrier to our code, and results in the programs we write having greater value. The practices used today are highly effective, and still in their infancy. The following section will discuss past methods for passing JavaScript files, and the huge leap forward we’ve undergone with the latest ES6 version of JS Modules.</p>
+<h5>Overview</h5>
+<p>When JavaScript was first introduced, inserting it into a web application meant writing the code inside of a script tag inside of an HTML file. The script ran sequentially, that is, from top to bottom. Back then, if you wanted to use the same code in another project, you had to copy and paste it. There were also performance issues - namely, functions and variables were all global - if you weren’t careful, you could quickly see the trouble with declarations holding unexpected values. Eventually, including a <code class="highlighter-rouge">&lt;src&gt;</code> attribute did allow for more reusability, but it was still dependant on order and still globally scoped.</p>
+<p>Then, a little over ten years ago, developers used module patterns like IIFE (Immediately Invoked Function Expression, pronounced ‘iffy’). This function runs as soon as it is defined. Take the seemingly normal looking code below. On closer inspection, you’ll notice the enclosing parentheses wrapping the anonymous function, as well as another set of calling parentheses, which results in the immediate execution of the code. While this keeps the global space tidy and grants privacy to any inner variables, it’s somewhat fragile and none too eloquent.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">//lexically enclosed function statement</span>
+<span class="p">})();</span>
+</code></pre></div></div>
+<p>You can read more about the history of programming modules and IIFE <a href="https://medium.com/javascript-in-plain-english/https-medium-com-javascript-in-plain-english-stop-feeling-iffy-about-using-an-iife-7b0292aba174">here</a></p>
+<h3 id="server-side-js">Server side JS</h3>
+<p>The release of Node.js in 2009 meant that JavaScript could now execute outside of the browser. With the adoption of a common JavaScript specified standard library known as CommonJS, we now have defined terms for sending data to and from our file systems. These advances were a complete game-changer for JavaScript developers, but all still relied heavily on third-party bundlers and transpilers to address common issues. Tools like webpack and rollup would compile packs of modules and assign any missing dependencies before sending them off to the browser. Transpilers such as Babel handle translating source code for the browser and convert the latest features of ES6 (any not supported in the browser) into compatible ES5. While handy, all of these programs require downloading, updating, and configuring.</p>
+<h3 id="js-modules-ecmascript-modules">JS modules (ECMAScript modules)</h3>
+<p>This brings us to today. The first standardized syntax for using modules in JavaScript. Where past methods relied on specific functions or third-party libraries, with the latest version of JS, we can now export functions, data, components from our files by merely prefixing the <code class="highlighter-rouge">export</code> keyword. Then, when we want to bring such features into our file, we use the <code class="highlighter-rouge">import</code> keyword, the name of the exported item, and specify where it’s located. And that’s basically it. No dependencies or configurations, everything is ready to go right out of the box.</p>
+<h5>Follow Along</h5>
+<p>Let’s go through some examples. If you open a new codesandbox and create a few different files, you can try this out.</p>
+<p><em><code class="highlighter-rouge">export</code> exports a single named function that can now be imported into another module using the import keyword</em></p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">emphasize</span> <span class="o">=</span> <span class="nx">str</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">str</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p><em>When <code class="highlighter-rouge">export default</code> is specified (either inline or at the end of the file) the declaration that follows is exported by default and additional modules will need to be exported (and imported) by name.</em></p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">emphasize</span> <span class="o">=</span> <span class="nx">str</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">str</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">emphasize</span><span class="p">;</span>
+</code></pre></div></div>
+<p>Multiple items exported from one module can then either be imported into separate modules or can all be extracted for use with object destructuring in the import declaration (see Import examples below).</p>
+<p>When set up properly, this pattern is incredibly efficient; the majority of errors being syntactical, or from renaming or changing your file structure. Another advantage of modules is that top-level variables do not pollute the global object. In addition to connecting our project files, bringing in a library or an external component to our project is a matter of downloading it with our CLI and then directly importing it to our file. Fonts, loaders, middleware, pretty much anything you need. We won’t go into any detail about any of these libraries right now but refer to the docs for download commands and directions for implementation. For now, let’s take a better look at the import and export line syntax.</p>
+<p>Importing a file/module starts with declaring the <code class="highlighter-rouge">import</code> keyword followed by the name of the import, then the <code class="highlighter-rouge">from</code> keyword followed by the <code class="highlighter-rouge">module specifier</code>. The module specifier usually is a file path or an npm module name. We will be working with file paths today.</p>
+<p>Import examples</p>
+<ul>
+<li>A single named export</li>
+</ul>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">a</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./directory/fileName</span><span class="dl">'</span>
+</code></pre></div></div>
+<ul>
+<li>Multiple named exports</li>
+</ul>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">item1</span><span class="p">,</span> <span class="nx">item2</span><span class="p">,</span> <span class="nx">item3</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./directory/items.js</span><span class="dl">'</span>
+</code></pre></div></div>
+<ul>
+<li>Exported as default</li>
+</ul>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">Component</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./folderName/Component.js</span><span class="dl">'</span>
+</code></pre></div></div>
+<p><strong>File path specification</strong></p>
+<p>The prefixing ‘./’ on the file URL points to a unique location of your file system. It indicates the file for import is exported elsewhere in the current directory. When the file is read, the loader knows where it is located in the directory tree. Adding an additional dot (‘../’) to the path will indicate a location one directory higher. Use the table below to reference quick file location indicators.</p>
+<table>
+<thead>
+<tr>
+<th>File Location</th>
+<th>Path prefix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Current Directory</td>
+<td>./</td>
+</tr>
+<tr>
+<td>Parent Directory</td>
+<td>../</td>
+</tr>
+<tr>
+<td>Parent of Parent Dir</td>
+<td>../../</td>
+</tr>
+</tbody>
+</table>
+<h5>Challenge</h5>
+<p>Using the codesandbox you’ve been trying this out in, make a React component in one file that is exported as the default export, and see if you can import it and render it in the <code class="highlighter-rouge">App</code> component. This is a good chance to try it out on your own before we do it together later.</p>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to describe props and how data flows in a React application</h4>
+<p>Understanding how data flows throughout a React app is a crucial aspect of the development process when using the React library. While other frameworks often rely on multi-directional data flow, in React we utilize a top to bottom strategy when passing data. You know about state data and how to implement it into an application using the state hook. Now we’re going take a look at what we can do with that data and how we use it to build reliable and reusable UI components.</p>
+<h5>Overview</h5>
+<h3 id="what-are-props">What are props?</h3>
+<p>When we want to pass information held on state inside one component to another component, we pass them as <strong>props</strong>. We’ll learn plenty about the how and why of props, but for now, the important thing to remember is that we never make changes to props data - props are read-only. This helps ensure that our data flow remains clean and organized. This way, we know exactly where changes are made to our application. And if something goes wrong, we can find the issue and fix it. Imagine an application with data changes occurring in every file. How easy would it be to understand how it worked, and how long would it take to locate a problem with the code?</p>
+<h3 id="managing-state-and-props-within-components">Managing state and props within components</h3>
+<p>A stateful component is one that holds state data, either as an object placed inside the constructor function, or a function component that includes the <code class="highlighter-rouge">.useState</code> function made available in the React v16.8 release (the one with hooks). We’ll be learning about function components for now; you’ll see class components later in the curriculum.</p>
+<p>When data comes into our application, it is loaded and stored on state, either in a centralized component specifically for state management, or a component rendering other components. When data is consumed in multiple components, it is probably best to centralize that data in state in a top-level component. Other data that is specific to a certain component can live locally, just inside that component. Components rendered in a stateful component can receive state data via a props attribute. Here, it can be sent down on the props object to the child component, and there we can access it just like we would with most any other object. However, if we decide we want to make any change to our data <strong>we do not</strong> change the prop data itself. Instead, we send back what changes we should make to our state holding component; often, stored changes are sent back up to the parent container as enclosed information in a called function. You’ll learn plenty more about sending data in the coming days and weeks. For now, let’s take a closer look at class components and function components, and how they differ for holding state.</p>
+<h5>Follow Along</h5>
+<p>Take the following example of data we’ll be passing, a simple user object holding two key/value pairs.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Hubert</span><span class="dl">"</span><span class="p">,</span> <span class="na">age</span><span class="p">:</span> <span class="mi">27</span> <span class="p">};</span>
+</code></pre></div></div>
+<p>Next, we save our user object to a state variable using the state hook you learned in the previous lesson. Then, we declare a named prop object inside the JSX in our return statement and set it equal to the state variable. The naming convention may appear confusing at first glance, but try to understand which ‘user’ name is the props object, and which is referencing the state variable. It makes sense for them to have the same name because the data is identical. That said, their intended use is not. Once data is set as props data, it is no longer state data and should never be mutated. If you wish to change the value of the props data, it must be done using the provided setUser function.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">App</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">[</span><span class="nx">user</span><span class="p">,</span> <span class="nx">setUser</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">({</span> <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Hubert</span><span class="dl">"</span><span class="p">,</span> <span class="na">age</span><span class="p">:</span> <span class="mi">27</span> <span class="p">});</span>
+
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">UserInfo</span> <span class="nx">user</span><span class="o">=</span><span class="p">{</span><span class="nx">user</span><span class="p">}</span> <span class="sr">/&gt;</span><span class="err">;
+</span><span class="p">};</span>
+</code></pre></div></div>
+<p>Below, the function component UserInfo receives the state variable as props from its parent component. The props are passed in as an object argument and then sent down as a named “props” object to the child component (of UserInfo) seen later as DisplayName.</p>
+<p>When the props data is passed as a JSX attribute on DisplayName, it is set to a variable and passed inside curly braces as object data. The named variable is now set as an object (containing our user data) on our props object and is now reachable from inside the component.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">UserInfo</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">DisplayName</span> <span class="nx">user</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">user</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>DisplayName receives the props object as an argument and returns a React element where we pass the selected data to display by first referencing props -&gt; then our named props object -&gt; then the attribute name of the data we want to display; in this case “Hubert”.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">DisplayName</span> <span class="o">=</span> <span class="nx">props</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="nx">my</span> <span class="nx">name</span> <span class="nx">is</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="p">}.</span><span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>The above code block will render “Hello, my name is Hubert”</p>
+<p>So why do we pass information around in this way? A few reasons are listed below.</p>
+<ul>
+<li>
+<strong>Control.</strong> As we learned with modules, when we break our components down into smaller functions, we gain greater control over what we display and how it works. By keeping state in one of a few select components and passing as props, we minimize the risk of making unintended changes to our state data.</li>
+<li>
+<strong>Readability.</strong> Separate files are easy to keep in order, and make it easier for other developers to read through our code, know where our state is held, and where it’s being sent. The easier your code is to read and understand, the more likely someone is to ask you write more it for them.</li>
+<li>
+<strong>Maintenance.</strong> If we want to make changes, we can find components quickly, and working in files that only manage one or two different aspects of our application is a much easier task than scrolling through hundreds of lines of code! Also, this way, we can isolate any problems that come up and debug faster.</li>
+<li>
+<strong>Reusability.</strong> This is huge! Now we have reusable components, and they can render any data that we pass through, so long as it matches to type on our object. And with a few modifications, we render additional data if we added to our object. Or we could even pass in an array of hundreds of objects and render the information contained on each one. This would only require a few additional lines of code.</li>
+</ul>
+<h5>Challenge</h5>
+<p>Create a new component to render the user’s age and pass it to UserInfo.</p>
+<p>Stretch goal - Replace the single user object with an array containing several user objects with name and age properties, and any other information you would like to display. Use a map function to iterate over the props data in UserInfo and return a single DisplayUser component. Pass the iterated object data to each newly created component and render the data dynamically in your JSX.</p>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to demonstrate the ability to compose React components to build out a UI</h4>
+<p>Let’s think about the Facebook web application for a minute. How many things on our facebook pages could be thought of as reusable? Do buttons look the same? How about thumbnail images? Well you can bet that facebook isn’t writing a component for every single button they use. By learning how to build out components for reusability, you will really be able to tap into the power of ReactJS for building scalable web applications.</p>
+<h5>Overview</h5>
+<p>Now that we know all about functional components and how to pass arguments (props) through to those components and render those props data to the screen using JSX, we’re going to learn all about nesting components that may rely on one or another prop value from a parent component.﻿</p>
+<p>Let’s take a look at the following code example and learn how we can achieve this idea of nesting components:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">App</span> <span class="o">=</span> <span class="nx">props</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="nx">world</span> <span class="k">from</span><span class="p">,</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h2</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">h4</span><span class="o">&gt;</span><span class="nx">My</span> <span class="nx">best</span> <span class="nx">friend</span> <span class="k">in</span> <span class="k">this</span> <span class="nx">world</span> <span class="na">is</span><span class="p">:</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">bestFriend</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h4</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">My</span> <span class="nx">favorite</span> <span class="nx">book</span> <span class="na">is</span><span class="p">:</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">favoriteBook</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>This component is doing some simple rendering of DOM elements. It only relies on 3 props, so it’s not super sophisticated, but it makes for some cumbersome programming. Meaning, here we essentially have a component nested inside of another component. So lets start by breaking out the inner DOM elements that’s purpose is to render the <code class="highlighter-rouge">best-friend</code> data into it’s own component.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">BestFriend</span> <span class="o">=</span> <span class="nx">props</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h4</span><span class="o">&gt;</span><span class="nx">My</span> <span class="nx">best</span> <span class="nx">friend</span> <span class="k">in</span> <span class="k">this</span> <span class="nx">world</span> <span class="na">is</span><span class="p">:</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">bestFriend</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h4</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">My</span> <span class="nx">favorite</span> <span class="nx">book</span> <span class="na">is</span><span class="p">:</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">favoriteBook</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>While this is good, we really should make it so that <code class="highlighter-rouge">BestFriend</code> can be reused and nested. Now, when we use this component inside of our <code class="highlighter-rouge">App</code> component, we can pass data to it as props.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">App</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">BestFriend</span> <span class="nx">bestFriend</span><span class="o">=</span><span class="dl">"</span><span class="s2">Homer Hickam</span><span class="dl">"</span> <span class="nx">favoriteBook</span><span class="o">=</span><span class="dl">"</span><span class="s2">October Sky</span><span class="dl">"</span><span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>      <span class="p">);</span>
+    <span class="p">};</span>
+</code></pre></div></div>
+<p>Now our component looks a little cleaner. But we can take it one step further. Notice that our <code class="highlighter-rouge">&lt;p/&gt;</code> tag could also be (if we so wanted) it’s very own component. For demonstration purposes of why this is neat, we’ll go ahead and make it happen.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">Book</span> <span class="o">=</span> <span class="nx">props</span> <span class="o">=&gt;</span> <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">My</span> <span class="nx">favorite</span> <span class="nx">book</span> <span class="nx">is</span><span class="p">:</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">favoriteBook</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/p&gt;</span><span class="err">;
+</span></code></pre></div></div>
+<p>And to use it nested within the <code class="highlighter-rouge">BestFriend</code> component</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">BestFriend</span> <span class="o">=</span> <span class="nx">props</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h4</span><span class="o">&gt;</span><span class="nx">My</span> <span class="nx">best</span> <span class="nx">friends</span> <span class="k">in</span> <span class="k">this</span> <span class="nx">world</span> <span class="na">is</span><span class="p">:</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">bestFriend</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h4</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">Book</span> <span class="nx">favoriteBook</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">favoriteBook</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>Now things are getting a little ridiculous, but this demonstration shows that react can pass props down as far as you’d like. We recommend not nesting components super deep because, in the long run, this can cause issues when attempting to work with the props that you’re passing down as well.</p>
+<h5>Follow Along</h5>
+<p>Now let’s build a few container components that each render their children and grandchildren. Let’s build out an ancestry tree that shows off the generations of the Simpsons.</p>
+<p>Here is our data set:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">simpsonData</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Orville Simpson</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">spouse</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Yuma Hickman</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">children</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Abraham Simpson</span><span class="dl">"</span><span class="p">,</span>
+      <span class="na">spouse</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Mona</span><span class="dl">"</span><span class="p">,</span>
+      <span class="na">children</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Homer Simpson</span><span class="dl">"</span><span class="p">,</span>
+          <span class="na">spouse</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Marge Bouvier</span><span class="dl">"</span><span class="p">,</span>
+          <span class="na">children</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Bart Simpson</span><span class="dl">"</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+              <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Lisa Simpson</span><span class="dl">"</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+              <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Maggie Simpson</span><span class="dl">"</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>Let’s start by building out our <code class="highlighter-rouge">Parent Component</code>. Luckily our Parent components will be pretty straightforward.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">Parent</span> <span class="o">=</span> <span class="nx">props</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="na">Parent</span><span class="p">:</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">;
+</span><span class="p">};</span>
+</code></pre></div></div>
+<p>Now that we have our data and component, we can mount up this component inside of a container component.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">Parent</span> <span class="nx">name</span><span class="o">=</span><span class="p">{</span><span class="nx">simpsonData</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">name</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span></code></pre></div></div>
+<p>Should mount an <code class="highlighter-rouge">h1</code> with <code class="highlighter-rouge">Abraham Simpson's</code> name printed to the screen. Now let’s tweak our Parent component to be able to conditionally mount a child component if a <code class="highlighter-rouge">child</code> prop is on the <code class="highlighter-rouge">props object</code>. To achieve this we’ll need a <code class="highlighter-rouge">Ternary Operator</code> that checks if the <code class="highlighter-rouge">child</code> prop is defined. If it is, we want to mount a <code class="highlighter-rouge">Child</code> component; if not, we want to mount <code class="highlighter-rouge">null</code>.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">Parent</span> <span class="o">=</span> <span class="nx">props</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="na">Parent</span><span class="p">:</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>      <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">child</span> <span class="p">?</span> <span class="o">&lt;</span><span class="nx">Child</span> <span class="nx">name</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">child</span><span class="p">}</span> <span class="sr">/&gt; : null</span><span class="err">}
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>Now we have to build out our child component so that we can properly use this one.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">Child</span> <span class="o">=</span> <span class="nx">props</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="na">Child</span><span class="p">:</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h2</span><span class="err">&gt;
+</span>      <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">grandChild</span> <span class="p">?</span> <span class="o">&lt;</span><span class="nx">GrandChild</span> <span class="nx">name</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">grandChild</span><span class="p">}</span> <span class="sr">/&gt; : null</span><span class="err">}
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>Notice we have the same behavior here as we did in the Parent. We’ll mount a <code class="highlighter-rouge">&lt;GrandChild /&gt;</code> component if the correct prop exists. So now we need to build out <code class="highlighter-rouge">GrandChild</code>.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">GrandChild</span> <span class="o">=</span> <span class="nx">props</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h3</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h3</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>So now that everything is put together let’s see how we can mount all these components up correctly.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">Parent</span>
+  <span class="nx">name</span><span class="o">=</span><span class="p">{</span><span class="nx">simpsonData</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">name</span><span class="p">}</span>
+  <span class="nx">child</span><span class="o">=</span><span class="p">{</span><span class="nx">simpsonData</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">children</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">name</span><span class="p">}</span>
+  <span class="nx">grandChild</span><span class="o">=</span><span class="p">{</span><span class="nx">simpsonData</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">children</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">children</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">name</span><span class="p">}</span>
+<span class="sr">/</span><span class="err">&gt;
+</span></code></pre></div></div>
+<p>Ok, so our data set isn’t the greatest, and the way this app works is entirely stringent upon specific data formatting, but it gets the idea across.</p>
+<p>Your goal now is to try and extend this to <code class="highlighter-rouge">GreatGreatGrandchild</code> to be able to render out <code class="highlighter-rouge">Bart, Lisa, and Maggie</code> to the screen!</p>
+<p>A good place to start would be right <a href="https://codesandbox.io/embed/pwkl9zr140">here</a>.</p>
+<p>You can use CodeSandbox to build Live ReactJS applications. I recommend logging in through their Github OAuth portal. Have fun!</p>
+<h5>Challenge</h5>
+<p>Create an object that represents a generational tree of your family similar to the <code class="highlighter-rouge">Simpsons Object</code> found in our follow along example. Keep it simple. Build out a few nested components that demonstrate the ability to pass data and conditionally render components if certain props are available.</p>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to pass props as dynamic data to a React component</h4>
+<p>So far all the data we’ve passed has been static, that is data that doesn’t change. If we want our React app to actually react to anything, we need to start thinking about passing dynamic data.</p>
+<h5>Overview</h5>
+<p>We’re going to build a button component that, when clicked, returns a button and renders a new app component. The button component will have an array of colors represented by string hex values that we can use to describe our dynamic data. We’ll need to pass our state variable from app down via props to our button component. Also, we need to pass along a function that takes in an array and calls our setter function. While hooks make it easy to bring this functionality directly into any component, we’ll build this app and pass it for demonstrative purposes. In case you want to build additional components, you’ll be all set to go ahead and update their color as well. Let’s begin.</p>
+<p>Since we’ll be using hooks, the first thing we need to is import the <code class="highlighter-rouge">useState</code> function to our file as named import.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</code></pre></div></div>
+<p>Next call <code class="highlighter-rouge">useState</code> at the top of your app function component and set its value to a destructed array containing the state variable and its setter function, in this example, color and setColor, respectively. Set the default value to the hex value for the color ‘white’. Then render our soon to be built Button component inside App and pass it our state variable as props.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">[</span><span class="nx">color</span><span class="p">,</span> <span class="nx">setColor</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="dl">"</span><span class="s2">#FFFFFF</span><span class="dl">"</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Button</span> <span class="nx">color</span><span class="o">=</span><span class="p">{</span><span class="nx">color</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Now let’s write the function that our button will accept. We’ll name this function <code class="highlighter-rouge">changeColor</code> and have it take an array as its parameter. In our function statement, we call setColor and pass our array parameter using bracket notation to select a random index of the data given in the array dynamically. You probably recognize most of the code, but all that matters is it evaluates to random whole number from 0 to the max-index of the given array. Don’t forget to pass the function to button component as props; otherwise, it won’t be there when you try to access it.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">[</span><span class="nx">color</span><span class="p">,</span> <span class="nx">setColor</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="dl">"</span><span class="s2">#FFFFFF</span><span class="dl">"</span><span class="p">);</span>
+
+  <span class="kd">const</span> <span class="nx">changeColor</span> <span class="o">=</span> <span class="nx">array</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setColor</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span><span class="p">)]);</span>
+  <span class="p">};</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Button</span> <span class="nx">color</span><span class="o">=</span><span class="p">{</span><span class="nx">color</span><span class="p">}</span> <span class="nx">changeColor</span><span class="o">=</span><span class="p">{</span><span class="nx">changeColor</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Alright, now all we need is the button. We’ll go ahead and build it in the same file to keep things simple. Below our app component declares the button function component. While it’s accessible anywhere in the file, we want to also place our array of colors inside of <code class="highlighter-rouge">Button</code> in case we decide to put it in its own file later. Next, return a <code class="highlighter-rouge">&lt;button&gt;</code> element and give a <code class="highlighter-rouge">style</code> and <code class="highlighter-rouge">onClick</code> attribute. Here is where we’ll pass our, now dynamic, props. In the <code class="highlighter-rouge">style</code> tag set <code class="highlighter-rouge">background</code> to <code class="highlighter-rouge">props.color</code> to represent our state value back in App. Set the <code class="highlighter-rouge">onClick</code> attribute to an anonymous arrow function that returns <code class="highlighter-rouge">props.changeColor()</code> and pass in our colors array as an argument.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">Button</span> <span class="o">=</span> <span class="nx">props</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">colors</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="dl">"</span><span class="s2">#FFBAAA</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">#27576B</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">#D47F6A</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">#AA7539</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">#003D19</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">#6E91A1</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">#552D00</span><span class="dl">"</span>
+  <span class="p">];</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">button</span>
+      <span class="nx">style</span><span class="o">=</span><span class="p">{{</span> <span class="na">background</span><span class="p">:</span> <span class="nx">props</span><span class="p">.</span><span class="nx">color</span><span class="p">,</span> <span class="na">height</span><span class="p">:</span> <span class="dl">"</span><span class="s2">50px</span><span class="dl">"</span><span class="p">,</span> <span class="na">width</span><span class="p">:</span> <span class="dl">"</span><span class="s2">200px</span><span class="dl">"</span> <span class="p">}}</span>
+      <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">changeColor</span><span class="p">(</span><span class="nx">colors</span><span class="p">)}</span>
+    <span class="o">&gt;</span>
+      <span class="nx">Click</span> <span class="nx">Me</span><span class="o">!</span>
+    <span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>Now click away and watch the magic happen! The button is now dynamic because our setter function can set the color variable the button receives. Now, this might not be the most practical example, and you may not spend your career building buttons that randomly change color (although dark mode <em>is</em> pretty great), but think about the processes that led us here. We use functions, variables, and an array of data. What else could you do with these things to make changes to components? What changes could you make to the existing so instead of random color, the user can cycle through the array in order? The point is, once you have the patterns down, you’re really just writing Javascript.</p>
+<hr>
+<h2 class="display-4">
+<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
+<ul class="list-group">
+<li class="list-group-item">
+<h5><a target="_blank" href="https://github.com/LambdaSchool/React-Components-Insta-Clone">React Components Instagram Clone</a></h5>
+<p>Use what you have learned the last two days to create multiple components, update state, pass data via props, and put it all together to create a Instagram clone.</p>
+</li>
+</ul>
+
+<h2 class="display-4">
+<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
+<h3 class="display-5">Class Recordings</h3>
+<p class="lead">You can use class recordings to help you master the material.</p>
+<div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<strong><a target="_blank" href="https://youtu.be/r8NChRR2HUY">Composing React Components and Passing Data Via Props for WebPT22 w/Keiran Kozlowski</a></strong>
+<p>As you build bigger applications, you’ll want to start splitting up your app into smaller pieces so that it is easier to work on and maintain. These small pieces you will build are called components. Components will need to share state, so we will learn how to do this with a helper object called props.</p>
+</li>
+<li class="list-group-item">
+<a href="/archive/FSW/module/recgzSGQtp2HYwgSR">All previous recordings</a>
+</li>
+</ul>
+</div>
+<h3 class="display-5">Demonstrate Mastery</h3>
+<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
+<ul>
+<li>Objective challenge: <p>Using the codesandbox you’ve been trying this out in, make a React component in one file that is exported as the default export, and see if you can import it and render it in the <code class="highlighter-rouge">App</code> component. This is a good chance to try it out on your own before we do it together later.</p>
+</li>
+<li>Objective challenge: <p>Create a new component to render the user’s age and pass it to UserInfo.</p>
+<p>Stretch goal - Replace the single user object with an array containing several user objects with name and age properties, and any other information you would like to display. Use a map function to iterate over the props data in UserInfo and return a single DisplayUser component. Pass the iterated object data to each newly created component and render the data dynamically in your JSX.</p>
+</li>
+<li>Objective challenge: <p>Create an object that represents a generational tree of your family similar to the <code class="highlighter-rouge">Simpsons Object</code> found in our follow along example. Keep it simple. Build out a few nested components that demonstrate the ability to pass data and conditionally render components if certain props are available.</p>
+</li>
+<li>Project: React Components Instagram Clone</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80850900-4');
+</script>
+<script type="text/javascript">
+  function getDomain() {
+    const domainName = window.location.hostname.split('.')[1];
+    return `${domainName}.com`;
+  }
+</script>
+<script src="" integrity="" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
+<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+  SimpleJekyllSearch.init({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    dataSource: '/search.json',
+    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Composing React Components and Passing Data Via Props">{title}</a></li>',
+    noResultsText: '',
+    limit: 10,
+    fuzzy: true,
+  })
+</script>
+<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
+  if (window.attachEvent) {
+    window.attachEvent('onload', verifySignedIn);
+  } else {
+    if (window.onload) {
+      var currentOnLoadFn = window.onload;
+      var newOnLoadFn = function (evt) {
+        currentOnLoadFn(evt);
+        verifySignedIn();
+      };
+      window.onload = newOnLoadFn;
+    } else {
+      window.onload = verifySignedIn;
+    }
+  }
+
+  function verifySignedIn() {
+    if (isPagePublic()) {
+      return showPageContents();
+    }
+
+    window.__user = null;
+    isSignedIn().then((user) => {
+      window.__user = user;
+
+      if (!user.signedIn) {
+        redirectToSignIn();
+      } else if (!user.student && !window.__openToAdmissions) {
+        showUnauthorizedMessage();
+      } else {
+        showPageContents();
+      }
+    });
+  }
+
+  function isPagePublic() {
+    const openCourses = [
+      'and-pre',
+      'ds-pre',
+      'fsw-pre',
+      'help',
+      'ios-pre',
+    ];
+
+    const openPages = [
+      'cs-and',
+      'cs-fsw',
+      'cs-ios',
+      'cr',
+      'ds',
+      'jx',
+      'p4s',
+      'ux',
+    ];
+
+    const pathParts = window.location.pathname.split('/');
+    const courseName = pathParts[1];
+    const pageName = pathParts[pathParts.length - 1];
+
+    return openCourses.includes(courseName) || openPages.includes(pageName);
+  }
+
+  function isSignedIn() {
+    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
+
+    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
+
+    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
+      .then((response) => response.text())
+      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
+      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
+      .catch((error) => {});
+  }
+
+  function redirectToSignIn() {
+    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+    const redirectMessage = document.querySelector('#redirect-message');
+    redirectMessage.style.display = "block";
+    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+    window.location = signInUrl;
+  }
+
+  function showPageContents() {
+    document.querySelector('#content-wrapper').style.visibility = 'visible';
+  }
+
+  function showUnauthorizedMessage() {
+    document.querySelector('#unauthorized-message').style.display = 'block';
+  }
+
+  function getAuthBaseUrl() {
+    const domain = getDomain();
+    const authBaseUrl = `https://auth.${domain}`;
+    return authBaseUrl;
+  }
+</script><script src="/assets/js/docs.min.js"></script><script>
+  var MathJax = {
+    tex: {
+      inlineMath: [['$$', '$$'], ['\[', '\])']]
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax span": {
+          color: "#000000"
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script>
+  handleExternalLinks();
+
+  function handleExternalLinks() {
+    const domain = getDomain();
+    const links = document.querySelectorAll('a');
+    return links.forEach((link) => {
+      if (!link.host.includes(domain)) link.target = '_blank';
+    })
+  };
+</script>
+</div>
+</body>
+</html>

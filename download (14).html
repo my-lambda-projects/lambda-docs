@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Intended as a home for Lambda School curriculum.">
+<meta name="author" content="">
+<meta name="generator" content="Jekyll v3.8.0">
+<title>Prototypes and Inheritance · Lambda School</title>
+
+<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+  analytics.page();
+  }}();
+</script>
+
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#a0001e">
+</head>
+<body>
+<noscript>Please enable JavaScript to view this page.</noscript>
+<div id="redirect-message" style="display: none;">
+You must be logged in to view this page.
+</div>
+<div id="unauthorized-message" style="display: none;">
+You must be a Lambda School student to view this page.
+</div>
+<div id="content-wrapper" >
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container">
+<span class="skiplink-text">Skip to main content</span>
+</div>
+</a>
+<div class="mobile-menu">
+<div class="m-drop">
+<div class="mobile-row">
+<div class="header-row" style="padding: 3px 7px">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
+</svg></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+</button>
+</div>
+</div>
+<div class="nav-row">
+<div class="results-container">
+<ul id="results-container" class="dropdown list-group"></ul>
+</div>
+<div id="mobile-course-menu" class="collapse nav-row">
+<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+<nav class="bd-links">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web Fundamentals</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/rec2neAvlo6zM07qc">
+1.&nbsp;&nbsp;User Interface and Git
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web1/module/recl0IyzS2Vl89lZa/">
+User Interface
+</a>
+</li>
+<li>
+<a href="/web1/module/rect59e95N6OSvoCd/">
+Git for Web Development
+</a>
+</li>
+<li>
+<a href="/web1/module/rec6KMj0W3ukhYeWv/">
+Intro CSS
+</a>
+</li>
+<li>
+<a href="/web1/module/recYyDfYS2UmsvquL/">
+CSS Layouts
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/recYAgtervk7WilBW">
+2.&nbsp;&nbsp;Advanced CSS and Intro JavaScript
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web1/module/recUPpx89Z2uWzkzU/">
+Responsive Design
+</a>
+</li>
+<li>
+<a href="/web1/module/recPmaqIfzn9NMPLY/">
+Intro to JavaScript
+</a>
+</li>
+<li>
+<a href="/web1/module/recXRqGjyTS6uDzSA/">
+Arrays
+</a>
+</li>
+<li>
+<a href="/web1/module/recQV3tKcEDXa840D/">
+Objects
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/recIS8D2e4nTRGCLT">
+3.&nbsp;&nbsp;JavaScript Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web1/module/recrBjfZ9mBasSPpa/">
+Scope and Closure
+</a>
+</li>
+<li>
+<a href="/web1/module/recNilLQDqhqvPuNk/">
+Advanced Array Methods
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/web1/module/rec0AWuNLezbpit7m/">
+Prototypes and Inheritance
+</a>
+</li>
+<li>
+<a href="/web1/module/recyS588eOvVUKAMc/">
+Classes
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/rec2di8phTBw15e4E">
+4.&nbsp;&nbsp;WEB Unit 1 Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-container">
+<div class="sidebar-container bd-sidebar">
+<div class="docs-sidebar">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
+<ul id="results-container" class="dropdown list-group"></ul>
+<nav class="bd-links collapse" id="bd-docs-nav">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web Fundamentals</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/rec2neAvlo6zM07qc">
+1.&nbsp;&nbsp;User Interface and Git
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web1/module/recl0IyzS2Vl89lZa/">
+User Interface
+</a>
+</li>
+<li>
+<a href="/web1/module/rect59e95N6OSvoCd/">
+Git for Web Development
+</a>
+</li>
+<li>
+<a href="/web1/module/rec6KMj0W3ukhYeWv/">
+Intro CSS
+</a>
+</li>
+<li>
+<a href="/web1/module/recYyDfYS2UmsvquL/">
+CSS Layouts
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/recYAgtervk7WilBW">
+2.&nbsp;&nbsp;Advanced CSS and Intro JavaScript
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web1/module/recUPpx89Z2uWzkzU/">
+Responsive Design
+</a>
+</li>
+<li>
+<a href="/web1/module/recPmaqIfzn9NMPLY/">
+Intro to JavaScript
+</a>
+</li>
+<li>
+<a href="/web1/module/recXRqGjyTS6uDzSA/">
+Arrays
+</a>
+</li>
+<li>
+<a href="/web1/module/recQV3tKcEDXa840D/">
+Objects
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/recIS8D2e4nTRGCLT">
+3.&nbsp;&nbsp;JavaScript Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web1/module/recrBjfZ9mBasSPpa/">
+Scope and Closure
+</a>
+</li>
+<li>
+<a href="/web1/module/recNilLQDqhqvPuNk/">
+Advanced Array Methods
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/web1/module/rec0AWuNLezbpit7m/">
+Prototypes and Inheritance
+</a>
+</li>
+ <li>
+<a href="/web1/module/recyS588eOvVUKAMc/">
+Classes
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/rec2di8phTBw15e4E">
+4.&nbsp;&nbsp;WEB Unit 1 Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<main class="content-container flex-wrapper" role="main">
+<div class="sticky-nav">
+<div class="sprint-nav">
+<ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+</ul>
+</div>
+
+</div>
+<div class="wrapper limit-width">
+<div class="flex-wrapper">
+<div class="limit-width">
+<div class="jumbotron">
+<h1 class="bd-title" id="content">Prototypes and Inheritance</h1>
+<span class="lead">
+<p class="bd-lead"></p>
+<p>This lesson introduces us to the <code class="highlighter-rouge">this</code> keyword and it’s many uses. After we learn about <code class="highlighter-rouge">this</code> we are prepared to discuss prototypes in JavaScript and explore how they are in every aspect of JavaScript.</p>
+</span>
+<strong>At the end of this module, you should be able to:</strong>
+<ul>
+<li>explain the four principles of the 'this' keyword and demonstrate each explanation with an example of their uses</li>
+<li> describe, and use prototypes, constructor functions the new keyword, and pseudo-classical inheritance to build a small object based video game</li>
+</ul>
+</div>
+<div class="alert alert-warning" role="alert">
+<h4>Pro Tip</h4>
+<p>Code is easy, people are hard.</p>
+</div>
+<h2 class="display-4">
+<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
+<p class="lead">Review each preclass resource before class.</p>
+<div class="preclass">
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/RivFFKFbpXo" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5jjDXm-f0SI" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<a target="_blank" href="https://youtu.be/zE9iro4r918">WTF is `this`</a>
+<p>Tyler McGinnis breaks down this</p>
+</li>
+</ul>
+</div>
+<h2 class="display-4">
+<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
+<h4 class="mark mb-3 p-2">Learn to explain the four principles of the 'this' keyword and demonstrate each explanation with an example of their uses</h4>
+<p>Because JavaScript is both an Object Oriented and Functional Programming language, it has some very interesting concepts built into it.</p>
+<p>The this keyword is a very important part of the JavaScript language. Understanding its use cases and having the ability to use it properly will shape your understanding of the language and one of the commonly misused features.</p>
+<p>To understand <code class="highlighter-rouge">this</code> you can consider the following bullet points.</p>
+<ul>
+<li>You can think of this, as a Pointer to an object.
+<em>For example</em>: you can use the this keyword to reference an object without having to refer to that object’s name.</li>
+</ul>
+<h5>Overview</h5>
+<p>Think about the ‘this’ keyword as it pertains to it’s uses in the English language. Let’s imagine for a second that your friend has invited you over to his/her house for dinner, and abruptly mentions: “I don’t like this.” What are you going to do as a host? Well, you might look at your friend to discover that he/she is pointing at something; you might look around the room and find that your cat is scratching at your friend’s leg. The idea here is that it is impossible to know what your friend doesn’t like without some context.</p>
+<p>This example is the same as the ‘this’ keyword. It is impossible to know what ‘this’ points to, without some execution context, or knowledge of where a function is being called.</p>
+<p>The first place to start with the <code class="highlighter-rouge">this</code> keyword is to understand where a function is called. If you know the function’s context, you may be able to deduce what the ‘this’ keyword is pointing to.</p>
+<p>There are four rules to this discovery. They all concern an object’s bounds. Remember, JavaScript has global objects (or execution context) that exist wherever JavaScript lives. In the browser, this is called <code class="highlighter-rouge">window</code>, and in node it’s called <code class="highlighter-rouge">global/console</code>. Either way, JavaScript lives inside of a context. Go ahead and try this out in your Chrome web browser.</p>
+<p>Open up your console and type in <code class="highlighter-rouge">window</code> and see what you get. The <strong>giant</strong> object that prints is JavaScript. Chrome has an engine built-in that can run that object and execute features of the JavaScript internally.</p>
+<h3 id="principle-1-windowglobal-object-binding">Principle 1: <strong>Window/Global Object Binding</strong>
+</h3>
+<ul>
+<li>When in the global scope, the value of “this” will be the window/console Object;</li>
+</ul>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">sayName</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nx">name</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">sayName</span><span class="p">(</span><span class="dl">"</span><span class="s2">D'Artagnan</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+<h3 id="principle-2-implicit-binding">Principle 2: <strong>Implicit Binding</strong>
+</h3>
+<ul>
+<li>Whenever a preceding dot calls a function, the object before the dot is this.</li>
+</ul>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">myObj</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">greeting</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Hello</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">sayHello</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">greeting</span><span class="p">}</span><span class="s2"> my name is </span><span class="p">${</span><span class="nx">name</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+<span class="nx">myObj</span><span class="p">.</span><span class="nx">sayHello</span><span class="p">(</span><span class="dl">'</span><span class="s1">Ryan</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+<p>This principle is one of the most commonly used applications of the <code class="highlighter-rouge">this</code> keyword. Here is another example for use to play with.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">sayNameFunc</span> <span class="o">=</span> <span class="nx">obj</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">obj</span><span class="p">.</span><span class="nx">sayName</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Hello my name is </span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+  <span class="p">};</span>
+<span class="p">};</span>
+<span class="kd">const</span> <span class="nx">me</span> <span class="o">=</span> <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Ryan</span><span class="dl">'</span> <span class="p">};</span>
+<span class="kd">const</span> <span class="nx">you</span> <span class="o">=</span> <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Freddy</span><span class="dl">'</span> <span class="p">};</span>
+<span class="nx">sayNameFunc</span><span class="p">(</span><span class="nx">me</span><span class="p">);</span>
+<span class="nx">sayNameFunc</span><span class="p">(</span><span class="nx">you</span><span class="p">);</span>
+
+<span class="c1">// Invoke Methods on our objects</span>
+<span class="nx">me</span><span class="p">.</span><span class="nx">sayName</span><span class="p">();</span>
+<span class="nx">you</span><span class="p">.</span><span class="nx">sayName</span><span class="p">();</span>
+</code></pre></div></div>
+<p>In this previous example, You see that we have a function that receives an object as an argument. Depending on the object being passed in, we get a different context for <code class="highlighter-rouge">this</code>, so when we log out the <code class="highlighter-rouge">this</code> keyword, we get a different object each time it’s run.</p>
+<h3 id="principle-3-new-binding">Principle 3: <strong>New binding</strong>
+</h3>
+<ul>
+<li>Whenever we use a constructor function, <code class="highlighter-rouge">this</code> refers to the specific instance of the object that is created and returned by the constructor function.</li>
+</ul>
+<p>This principle is a doozy because we have to learn about <code class="highlighter-rouge">constructor functions</code> here. Don’t worry if a lot of this stuff goes over your head, be a sponge right now. Absorb as much of this as you can, and we cover <code class="highlighter-rouge">constructors</code> in-depth tomorrow.</p>
+<p>Simply put, A constructor function is a function that returns an object. It’s an object creator. We use them a lot in JavaScript, and they lend themselves to a paradigm called object-oriented programming. The function <code class="highlighter-rouge">CordialPerson</code> will create an object for us. When we call the function, we have to use the <code class="highlighter-rouge">new</code> keyword.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">CordialPerson</span><span class="p">(</span><span class="nx">greeter</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">greeting</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Hello </span><span class="dl">'</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">greeter</span> <span class="o">=</span> <span class="nx">greeter</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">speak</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">greeting</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">greeter</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">jerry</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CordialPerson</span><span class="p">(</span><span class="dl">'</span><span class="s1">Newman</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">newman</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CordialPerson</span><span class="p">(</span><span class="dl">'</span><span class="s1">Jerry</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">jerry</span><span class="p">.</span><span class="nx">speak</span><span class="p">();</span>
+<span class="nx">newman</span><span class="p">.</span><span class="nx">speak</span><span class="p">();</span>
+</code></pre></div></div>
+<h3 id="principle-4-explicit-binding">Principle 4: <strong>Explicit binding</strong>
+</h3>
+<p>Whenever we use JavaScript’s call or apply method, <code class="highlighter-rouge">this</code> is explicitly defined.</p>
+<p>We can override how we set <code class="highlighter-rouge">CordialPerson</code> constructor objects by taking the object-oriented approach. We do so by calling them explicitly with new functions, <code class="highlighter-rouge">.call</code> and <code class="highlighter-rouge">.apply</code></p>
+<p>jerry.speak.call(newman);
+newman.speak.apply(jerry);</p>
+<h5>Follow Along</h5>
+<p>Let’s build out a couple of <code class="highlighter-rouge">constructor</code> <code class="highlighter-rouge">classes</code> to show you how <code class="highlighter-rouge">this</code> can be applied in the <code class="highlighter-rouge">classical</code> sense.</p>
+
+<h5>Challenge</h5>
+<p>Complete this simple repl.it assignment:
+https://repl.it/@dfrehner1/Practice-Explicit-binding</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://wesbos.com/arrow-function-no-no/" target="blank_">When not to use arrow functions</a><br> The arrow function is great in most cases but there are times we should not use it. This article from Wes Bos explains in great detail when NOT to use an arrow function.</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to describe, and use prototypes, constructor functions the new keyword, and pseudo-classical inheritance to build a small object based video game</h4>
+<p>The object Prototype system in JavaScript is one of the most commonly used (under the hood) features of the language. If it is used properly it can be very powerful. Understanding the prototype and how we can use constructor functions to create objects are foundational to OOP in JavaScript. Understanding these deeply, will help one understand the class keyword, which is seen throughout the majority of our React curriculum.</p>
+<p>OOP is not a paradigm unique to JavaScript, in fact, the name JavaScript comes from the Java language where <code class="highlighter-rouge">classes</code> and <code class="highlighter-rouge">objects</code> are used all of the time. OOP is common in many languages and is still very popular and has its uses in JavaScript.</p>
+<h5>Overview</h5>
+<p>All objects in JavaScript have a <code class="highlighter-rouge">prototype</code> property by default. This property is used as an object to attach methods and other properties that can be delegated down to other <code class="highlighter-rouge">child</code> functions/objects.</p>
+<p>The constructor function is a way we can build objects.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Animal</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">object</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Take the code above into consideration. Notice that <code class="highlighter-rouge">Animal</code> is capitalized. This is by convention only. It has nothing to do with syntax, but this is how I tell another JS developer, “I’m writing a constructor here.”</p>
+<p>A constructor function “constructs” objects. You can think of it as a template. The function itself needs to take in an object literal of some sort so that it can map that object literal’s properties to a new object that will be returned once instantiated.</p>
+<p>Lots of big words there, but here is what that all means:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">attributes</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">attributes</span><span class="p">.</span><span class="nx">age</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">attributes</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">homeTown</span> <span class="o">=</span> <span class="nx">attributes</span><span class="p">.</span><span class="nx">homeTown</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">speak</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">`Hello, my name is </span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Now that we have created our constructor function as a template for object creation, we get the chance to use this function to create objects.</p>
+<p>We call <code class="highlighter-rouge">Person</code> with the <code class="highlighter-rouge">new</code> keyword, and we feed it an object literal that will map to those attributes specified in the <code class="highlighter-rouge">Person</code> block. A note on the new keyword:</p>
+<ul>
+<li>When <code class="highlighter-rouge">new</code> is called, the <code class="highlighter-rouge">constructor function</code> can essentially create a context for a <code class="highlighter-rouge">this</code> object. Then what gets returned from that <code class="highlighter-rouge">constructor function</code> is that particular <code class="highlighter-rouge">this</code> object with the new properties added to it.</li>
+</ul>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">fred</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">({</span>
+  <span class="na">age</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Fred</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">homeTown</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Bedrock</span><span class="dl">'</span>
+<span class="p">});</span>
+</code></pre></div></div>
+<p><code class="highlighter-rouge">console.log(fred);</code>
+<code class="highlighter-rouge">console.log(fred.speak());</code></p>
+<p>Copy and paste the Person constructor as well as the newly created fred object into google chrome’s console, and you will see the following:</p>
+<p><img src="https://ibin.co/3o4Qgv7pVoeR.png" alt="Fred"></p>
+<p>Look at the image above, and you will see that <code class="highlighter-rouge">speak</code> was inherited from the Person object! This showcases that we are using inheritance and introduces how we use prototypes in JavaScript.</p>
+<h3 id="prototype">Prototype</h3>
+<p>The prototype is the mechanism by which all JavaScript objects inherit from one another. You can think of the prototype as an object that objects use to hold onto values that can be passed down to other objects. We use it all the time in inheritance.</p>
+<p>The example above is great; however all we’re doing is creating a single object with the specified attributes in the constructor. We could use this object to create multiple objects over and over, which is helpful. Where this comes in handy is when we have special instances of a parent object or child objects that need to know about particular methods, attributes, or properties.</p>
+<p>Let’s refactor the constructor function <code class="highlighter-rouge">Person</code> and remove the <code class="highlighter-rouge">speak</code> function from the object. After <code class="highlighter-rouge">speak</code> has been removed, we will introduce a new <code class="highlighter-rouge">speak</code> property on <code class="highlighter-rouge">Person</code> using <code class="highlighter-rouge">Person.prototype</code>.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">attributes</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">attributes</span><span class="p">.</span><span class="nx">age</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">attributes</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">homeTown</span> <span class="o">=</span> <span class="nx">attributes</span><span class="p">.</span><span class="nx">homeTown</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Person.prototype.speak = function () {
+  return `Hello, my name is ${this.name}`;
+};
+</code></pre></div></div>
+<p>Now that we have added the <code class="highlighter-rouge">speak</code> function to the prototype of <code class="highlighter-rouge">Person</code>, it will no longer be on the object <code class="highlighter-rouge">fred</code>. The <code class="highlighter-rouge">Person</code> prototype wholly owns <code class="highlighter-rouge">speak</code>. <code class="highlighter-rouge">Person</code> is now able to pass down <code class="highlighter-rouge">speak</code> to each instance of <code class="highlighter-rouge">Person</code> without creating a new property on any new objects.</p>
+<p><img src="https://ibin.co/w800/3o4SA5WLlTVV.png" alt="fred__proto__"></p>
+<p>You will notice when we log the <code class="highlighter-rouge">fred</code> object out in the console, we see this <code class="highlighter-rouge">__proto__</code> thing. <code class="highlighter-rouge">__proto__</code> is helpful for us to see inheritance in the browser’s specific JavaScript engine.</p>
+<p>Let’s look at how inheritance works with prototypes. Here we create a <code class="highlighter-rouge">Child</code> constructor. Notice we are using the call() method to bind <code class="highlighter-rouge">this</code> to <code class="highlighter-rouge">Person</code>.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Child</span><span class="p">(</span><span class="nx">childAttributes</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">Person</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">childAttributes</span><span class="p">);</span> <span class="c1">// binding this to Person</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">isChild</span> <span class="o">=</span> <span class="nx">childAttributes</span><span class="p">.</span><span class="nx">isChild</span><span class="p">;</span> <span class="c1">// this will be a special attribute to Child</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>The problem with <code class="highlighter-rouge">Child</code> is that it doesn’t necessarily know about the Person prototype yet. We have to manually tell <code class="highlighter-rouge">Child</code> about <code class="highlighter-rouge">Person</code> using <code class="highlighter-rouge">Object.create()</code>.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Child</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span>
+</code></pre></div></div>
+<p>We now have linked the Person prototype together with the Child prototype. Eventually, we’ll get this linking for free with the <code class="highlighter-rouge">class</code> keyword, but seeing <code class="highlighter-rouge">Object.create()</code> is good because it demonstrates how the <code class="highlighter-rouge">class</code> keyword works under the hood.</p>
+<p>Now that we have created a <code class="highlighter-rouge">Child</code> constructor, let’s introduce Pebbles to the family:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">pebbles</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Child</span><span class="p">({</span>
+  <span class="na">age</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Pebbles</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">homeTown</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Bedrock</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">});</span>
+</code></pre></div></div>
+<p>It’s important to note that we aren’t inheriting <code class="highlighter-rouge">pebbles</code> from <code class="highlighter-rouge">fred</code>. We are using the prototype’s inheritance from the <code class="highlighter-rouge">Child</code> constructor to access our `Person’ properties.</p>
+<p>Now we can call <code class="highlighter-rouge">pebbles.speak()</code> and see what happens.</p>
+<p><code class="highlighter-rouge">Hello, my name is Pebbles</code></p>
+<p>We just used inheritance from the <code class="highlighter-rouge">Person</code> prototype to use <code class="highlighter-rouge">pebbles.speak</code>. Take a moment to think about that!</p>
+<p>To further illustrate how detached <code class="highlighter-rouge">pebbles</code> and <code class="highlighter-rouge">fred</code> are, let’s add a special method to the <code class="highlighter-rouge">Child</code> prototype, that <code class="highlighter-rouge">fred</code> won’t have access to. Make sure this method is under the <code class="highlighter-rouge">Object.create()</code>, or it won’t work correctly.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Child</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">checkIfChild</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">isChild</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`My name is </span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2"> and I am a child object`</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<h5>Follow Along</h5>
+<p>Now! Let us dive deep into some object creation together. We’re going to be creating a <code class="highlighter-rouge">Fruit</code> constructor function that can build all instances of fruit. Our constructor should have four properties to create our objects.</p>
+<ul>
+<li>type</li>
+<li>name</li>
+<li>isRipe</li>
+<li>calories</li>
+</ul>
+<p>After those properties, our object should have two prototype methods added to it.</p>
+<ul>
+<li>calculateCalories - which logs the number of calories in a specified fruit * 100</li>
+<li>shipped - which takes in a <code class="highlighter-rouge">destination</code> and logs out <code class="highlighter-rouge">the fruit's name was shipped to destination</code>
+</li>
+</ul>
+<p>Our code should look something like this:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Fruit</span><span class="p">(</span><span class="nx">attrs</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="nx">attrs</span><span class="p">.</span><span class="nx">type</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">attrs</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">isRipe</span> <span class="o">=</span> <span class="nx">attrs</span><span class="p">.</span><span class="nx">isRipe</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">calories</span> <span class="o">=</span> <span class="nx">attrs</span><span class="p">.</span><span class="nx">calories</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">Fruit</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">shipped</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">destination</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Shipping </span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2"> to </span><span class="p">${</span><span class="nx">destination</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">Fruit</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">calculateCals</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Calories in </span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2"> are </span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">calories</span> <span class="o">*</span> <span class="mi">200</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>Now we’re going to create a child constructor called <code class="highlighter-rouge">Banana</code>. Banana should have a special attribute on it called <code class="highlighter-rouge">doMonkeysLikeIt</code> this will be a boolean. We won’t necessarily care if monkeys like any other fruits, so this will be just <code class="highlighter-rouge">Banana</code> specific.</p>
+<p>Banana’s prototype needs to be set to Fruit’s prototype. Our code should look something like this:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Banana</span><span class="p">(</span><span class="nx">bananaAttrs</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">Fruit</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">bananaAttrs</span><span class="p">);</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">doMonkeysLikeIt</span> <span class="o">=</span> <span class="nx">bananaAttrs</span><span class="p">.</span><span class="nx">doMonkeysLikeIt</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Now to ‘inherit’ the prototype methods from the <code class="highlighter-rouge">Fruit's</code> prototype, we need to use this clunky line of code.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Banana</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">Fruit</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span><span class="s2">```
+</span></code></pre></div></div>
+<p>Now we’re going to want to add a method to our <code class="highlighter-rouge">Banana's</code> prototype called <code class="highlighter-rouge">checkIfMonkeysLikeIt</code> that will log out if the monkeys like bananas.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Banana</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">checkIfMonkeysLikeIt</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">doMonkeysLikeIt</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p><strong>NOTE</strong> This function will only belong to instances of <code class="highlighter-rouge">Banana</code>.. and NOT instances of <code class="highlighter-rouge">Fruit</code>;</p>
+<p>Ok, now that we have our <code class="highlighter-rouge">Banana</code> constructor and it is leveraging the power of the <code class="highlighter-rouge">Fruit</code> parent. Let’s create a Kiwi constructor and add a special attribute to it called <code class="highlighter-rouge">isFuzzy</code>.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Kiwi</span><span class="p">(</span><span class="nx">kiwiAttrs</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">Fruit</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">kiwiAttrs</span><span class="p">);</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">isFuzzy</span> <span class="o">=</span> <span class="nx">kiwiwAttrs</span><span class="p">.</span><span class="nx">isFuzzy</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>And then add a prototype method to kiwi called <code class="highlighter-rouge">checkIfFuzzy</code>;</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Kiwi</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">checkIfFuzzy</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">isFuzzy</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>Finally let’s create some objects from our constructor functions:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">newBanana</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Banana</span><span class="p">({</span>
+  <span class="na">doMonkeysLikeIt</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Tree</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Banana</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">isRipe</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="na">calories</span><span class="p">:</span> <span class="mf">0.1</span>
+<span class="p">});</span>
+
+<span class="kd">const</span> <span class="nx">newKiwi</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Kiwi</span><span class="p">({</span>
+  <span class="na">isFuzzy</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Tree</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Kiwi</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">isRipe</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="na">calories</span><span class="p">:</span> <span class="mf">0.7</span>
+<span class="p">});</span>
+</code></pre></div></div>
+<p>And check if things are all linked up properly.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">newKiwi</span><span class="p">.</span><span class="nx">shipped</span><span class="p">(</span><span class="dl">'</span><span class="s1">Alaska</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">newBanana</span><span class="p">.</span><span class="nx">shipped</span><span class="p">(</span><span class="dl">'</span><span class="s1">Colorado</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">newBanana</span><span class="p">.</span><span class="nx">checkIfMonkeysLikeIt</span><span class="p">();</span> <span class="c1">// returns true</span>
+<span class="nx">newKiwi</span><span class="p">.</span><span class="nx">checkIfMonkeysLikeIt</span><span class="p">();</span> <span class="c1">// won't work</span>
+<span class="nx">newKiwi</span><span class="p">.</span><span class="nx">checkIfFuzzy</span><span class="p">();</span> <span class="c1">// returns true</span>
+<span class="nx">newBanana</span><span class="p">.</span><span class="nx">checkIfFuzzy</span><span class="p">();</span> <span class="c1">// won't work</span>
+<span class="nx">newBanana</span><span class="p">.</span><span class="nx">calculateCals</span><span class="p">();</span>
+<span class="nx">newKiwi</span><span class="p">.</span><span class="nx">calculateCals</span><span class="p">();</span>
+</code></pre></div></div>
+<p><a href="https://codepen.io/lambdaschool/pen/vQOLGO">Link to Codepen From Video</a></p>
+<h5>Challenge</h5>
+<p>Work through this prototypes challenge by studying two constructors and filling in the missing pieces: <a href="https://codepen.io/lambdaschool/pen/GXdXYX">Prototypes Challenge</a>.</p>
+<hr>
+<h2 class="display-4">
+<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
+<ul class="list-group">
+<li class="list-group-item">
+<h5><a target="_blank" href="https://github.com/LambdaSchool/JS-Exercise-Prototype">Prototypes and Inheritance Project</a></h5>
+<p>Today we take a break from the usual Git flow and tackle our project using Code Sandbox. Make sure to sign up for an account!</p>
+</li>
+</ul>
+<h2 class="display-4">
+<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
+<h3 class="display-5">Class Recordings</h3>
+<p class="lead">You can use class recordings to help you master the material.</p>
+<div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<strong><a target="_blank" href="https://youtu.be/NMGeAfpIxN8">Prototypes and Inheritance for Web35 w/ Brit Hemming</a></strong>
+<p>Prototypes and Inheritance</p>
+</li>
+<li class="list-group-item">
+<a href="/archive/FSW/module/rec0AWuNLezbpit7m">All previous recordings</a>
+</li>
+</ul>
+</div>
+<h3 class="display-5">Demonstrate Mastery</h3>
+<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
+<ul>
+<li>Objective challenge: <p>Complete this simple repl.it assignment:
+https://repl.it/@dfrehner1/Practice-Explicit-binding</p>
+</li>
+<li>Objective challenge: <p>Work through this prototypes challenge by studying two constructors and filling in the missing pieces: <a href="https://codepen.io/lambdaschool/pen/GXdXYX">Prototypes Challenge</a>.</p>
+</li>
+<li>Project: Prototypes and Inheritance Project</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80850900-4');
+</script>
+<script type="text/javascript">
+  function getDomain() {
+    const domainName = window.location.hostname.split('.')[1];
+    return `${domainName}.com`;
+  }
+</script>
+<script src="" integrity="" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
+<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+  SimpleJekyllSearch.init({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    dataSource: '/search.json',
+    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Prototypes and Inheritance">{title}</a></li>',
+    noResultsText: '',
+    limit: 10,
+    fuzzy: true,
+  })
+</script>
+<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
+  if (window.attachEvent) {
+    window.attachEvent('onload', verifySignedIn);
+  } else {
+    if (window.onload) {
+      var currentOnLoadFn = window.onload;
+      var newOnLoadFn = function (evt) {
+        currentOnLoadFn(evt);
+        verifySignedIn();
+      };
+      window.onload = newOnLoadFn;
+    } else {
+      window.onload = verifySignedIn;
+    }
+  }
+
+  function verifySignedIn() {
+    if (isPagePublic()) {
+      return showPageContents();
+    }
+
+    window.__user = null;
+    isSignedIn().then((user) => {
+      window.__user = user;
+
+      if (!user.signedIn) {
+        redirectToSignIn();
+      } else if (!user.student && !window.__openToAdmissions) {
+        showUnauthorizedMessage();
+      } else {
+        showPageContents();
+      }
+    });
+  }
+
+  function isPagePublic() {
+    const openCourses = [
+      'and-pre',
+      'ds-pre',
+      'fsw-pre',
+      'help',
+      'ios-pre',
+    ];
+
+    const openPages = [
+      'cs-and',
+      'cs-fsw',
+      'cs-ios',
+      'cr',
+      'ds',
+      'jx',
+      'p4s',
+      'ux',
+    ];
+
+    const pathParts = window.location.pathname.split('/');
+    const courseName = pathParts[1];
+    const pageName = pathParts[pathParts.length - 1];
+
+    return openCourses.includes(courseName) || openPages.includes(pageName);
+  }
+
+  function isSignedIn() {
+    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
+
+    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
+
+    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
+      .then((response) => response.text())
+      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
+      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
+      .catch((error) => {});
+  }
+
+  function redirectToSignIn() {
+    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+    const redirectMessage = document.querySelector('#redirect-message');
+    redirectMessage.style.display = "block";
+    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+    window.location = signInUrl;
+  }
+
+  function showPageContents() {
+    document.querySelector('#content-wrapper').style.visibility = 'visible';
+  }
+
+  function showUnauthorizedMessage() {
+    document.querySelector('#unauthorized-message').style.display = 'block';
+  }
+
+  function getAuthBaseUrl() {
+    const domain = getDomain();
+    const authBaseUrl = `https://auth.${domain}`;
+    return authBaseUrl;
+  }
+</script><script src="/assets/js/docs.min.js"></script><script>
+  var MathJax = {
+    tex: {
+      inlineMath: [['$$', '$$'], ['\[', '\])']]
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax span": {
+          color: "#000000"
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script>
+  handleExternalLinks();
+
+  function handleExternalLinks() {
+    const domain = getDomain();
+    const links = document.querySelectorAll('a');
+    return links.forEach((link) => {
+      if (!link.host.includes(domain)) link.target = '_blank';
+    })
+  };
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,1103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Intended as a home for Lambda School curriculum.">
+  <meta name="author" content="">
+  <meta name="generator" content="Jekyll v3.8.0">
+  <title>Testing the Back End · Lambda School</title>
+
+  <link rel='stylesheet' integrity crossorigin='anonymous'
+    href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+  <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+  <link rel='stylesheet'
+    href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+  <link rel='stylesheet'
+    href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+  <script>
+    ( function ( i, s, o, g, r, a, m ) {
+      i[ 'GoogleAnalyticsObject' ] = r;
+      i[ r ] = i[ r ] || function () {
+        ( i[ r ].q = i[ r ].q || [] ).push( arguments )
+      }, i[ r ].l = 1 * new Date();
+      a = s.createElement( o ),
+        m = s.getElementsByTagName( o )[ 0 ];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore( a, m )
+    } )( window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga' );
+    ga( 'create', 'UA-122016605-1', 'learn.lambdaschool.com' );
+    ga( 'send', 'pageview' );
+  </script>
+
+  <script>
+    ! function () {
+      var analytics = window.analytics = window.analytics || [];
+      if ( !analytics.initialize )
+        if ( analytics.invoked ) window.console && console.error && console.error( "Segment snippet included twice." );
+        else {
+          analytics.invoked = !0;
+          analytics.methods = [ "trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset",
+            "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"
+          ];
+          analytics.factory = function ( t ) {
+            return function () {
+              var e = Array.prototype.slice.call( arguments );
+              e.unshift( t );
+              analytics.push( e );
+              return analytics
+            }
+          };
+          for ( var t = 0; t < analytics.methods.length; t++ ) {
+            var e = analytics.methods[ t ];
+            analytics[ e ] = analytics.factory( e )
+          }
+          analytics.load = function ( t, e ) {
+            var n = document.createElement( "script" );
+            n.type = "text/javascript";
+            n.async = !0;
+            n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
+            var a = document.getElementsByTagName( "script" )[ 0 ];
+            a.parentNode.insertBefore( n, a );
+            analytics._loadOptions = e
+          };
+          analytics.SNIPPET_VERSION = "4.1.0";
+          analytics.load( "BjKorwKrSvMamfNoGkBq9rISk7wF6QQX" );
+          analytics.page();
+        }
+    }();
+  </script>
+
+  <link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#a0001e">
+</head>
+
+<body>
+  <noscript>Please enable JavaScript to view this page.</noscript>
+  <div id="redirect-message" style="display: none;">
+    You must be logged in to view this page.
+  </div>
+  <div id="unauthorized-message" style="display: none;">
+    You must be a Lambda School student to view this page.
+  </div>
+  <div id="content-wrapper" style="visibility: hidden;">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+    <div class="mobile-menu">
+      <div class="m-drop">
+        <div class="mobile-row">
+          <div class="header-row" style="padding: 3px 7px">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg"
+                width="33" height="35" viewBox="0 0 33 35" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                  fill="#EC3944" />
+              </svg></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu"
+              aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
+                <title>Menu</title>
+                <path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                  d="M4 7h22M4 15h22M4 23h22"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="nav-row">
+          <div class="results-container">
+            <ul id="results-container" class="dropdown list-group"></ul>
+          </div>
+          <div id="mobile-course-menu" class="collapse nav-row">
+            <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+              <nav class="bd-links">
+                <div class="bd-toc-item">
+                  <h4 class="bd-toc-link">Web Annex</h4>
+                </div>
+
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/webannex/sprint/recfwZvI7QhMa7xbG">
+                    1.&nbsp;&nbsp;User Interface and Git
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/webannex/module/recl0IyzS2Vl89lZa/">
+                        User Interface
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/rect59e95N6OSvoCd/">
+                        Git for Web Development
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/recGvXyWT6AvGtMHR/">
+                        User Interface II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/recaVbBZhh8BTyMdM/">
+                        User Interface III
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/webannex/sprint/recIXiQgpgMdJ81ms">
+                    2.&nbsp;&nbsp;Advanced CSS
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/webannex/module/recuDrqSGpWcepCMs/">
+                        Responsive Design I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/recE3IqPtDxaVI0DW/">
+                        Responsive Design II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/reculyBhIYkuoBRqh/">
+                        Preprocessing I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/rec1hRu3bO6L0uxn2/">
+                        Preprocessing II
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/webannex/sprint/recclZwJxMU8kUngT">
+                    3.&nbsp;&nbsp;JavaScript Fundamentals
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/webannex/module/recCT3KJYTIRYwQMh/">
+                        JavaScript I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/rec1oaBmEoSilO2yf/">
+                        JavaScript II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/rec0AWuNLezbpit7m/">
+                        Prototypes and Inheritance
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/recyS588eOvVUKAMc/">
+                        Classes
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/webannex/sprint/recRT8JKvbTiGaosk">
+                    4.&nbsp;&nbsp;Single Page Applications
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
+                        React Router I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/recYkF1FDilIedmwX/">
+                        React Router II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/rect081xiYT2cfxGF/">
+                        Form Management
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/recKK5C7wV0WiECfr/">
+                        Advanced Form Management
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/webannex/sprint/recozTHaHJe6L1ThN">
+                    5.&nbsp;&nbsp;Authentication and Testing
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/webannex/module/recQD9lnhqWEFh6g4/">
+                        Introduction to Authentication
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/recvIPgHwxF194c7q/">
+                        Using Sessions and Cookies
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/webannex/module/reciCHdNjavSKaaLt/">
+                        Using JSON Web Tokens (JWT)
+                      </a>
+                    </li>
+                    <li class="active bd-sidenav-active">
+                      <a href="/webannex/module/reciXdxRA8zXJXDID/">
+                        Testing the Back End
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <hr>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="sidebar-container bd-sidebar">
+        <div class="docs-sidebar">
+          <a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197"
+              fill="#ec3944">
+              <g>
+                <path
+                  d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z">
+                </path>
+                <path
+                  d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z">
+                </path>
+                <path
+                  d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z">
+                </path>
+                <path
+                  d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z">
+                </path>
+                <path
+                  d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z">
+                </path>
+                <path
+                  d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z">
+                </path>
+              </g>
+              <path
+                d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z">
+              </path>
+            </svg></a>
+          <ul id="results-container" class="dropdown list-group"></ul>
+          <nav class="bd-links collapse" id="bd-docs-nav">
+            <div class="bd-toc-item">
+              <h4 class="bd-toc-link">Web Annex</h4>
+            </div>
+
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/webannex/sprint/recfwZvI7QhMa7xbG">
+                1.&nbsp;&nbsp;User Interface and Git
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/webannex/module/recl0IyzS2Vl89lZa/">
+                    User Interface
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/rect59e95N6OSvoCd/">
+                    Git for Web Development
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/recGvXyWT6AvGtMHR/">
+                    User Interface II
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/recaVbBZhh8BTyMdM/">
+                    User Interface III
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/webannex/sprint/recIXiQgpgMdJ81ms">
+                2.&nbsp;&nbsp;Advanced CSS
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/webannex/module/recuDrqSGpWcepCMs/">
+                    Responsive Design I
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/recE3IqPtDxaVI0DW/">
+                    Responsive Design II
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/reculyBhIYkuoBRqh/">
+                    Preprocessing I
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/rec1hRu3bO6L0uxn2/">
+                    Preprocessing II
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/webannex/sprint/recclZwJxMU8kUngT">
+                3.&nbsp;&nbsp;JavaScript Fundamentals
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/webannex/module/recCT3KJYTIRYwQMh/">
+                    JavaScript I
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/rec1oaBmEoSilO2yf/">
+                    JavaScript II
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/rec0AWuNLezbpit7m/">
+                    Prototypes and Inheritance
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/recyS588eOvVUKAMc/">
+                    Classes
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/webannex/sprint/recRT8JKvbTiGaosk">
+                4.&nbsp;&nbsp;Single Page Applications
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
+                    React Router I
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/recYkF1FDilIedmwX/">
+                    React Router II
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/rect081xiYT2cfxGF/">
+                    Form Management
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/recKK5C7wV0WiECfr/">
+                    Advanced Form Management
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/webannex/sprint/recozTHaHJe6L1ThN">
+                5.&nbsp;&nbsp;Authentication and Testing
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/webannex/module/recQD9lnhqWEFh6g4/">
+                    Introduction to Authentication
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/webannex/module/recvIPgHwxF194c7q/">
+                    Using Sessions and Cookies
+                  </a>
+                </li>
+                <li>
+                  <a href="/webannex/module/reciCHdNjavSKaaLt/">
+                    Using JSON Web Tokens (JWT)
+                  </a>
+                </li>
+                <li class="active bd-sidenav-active">
+                  <a href="/webannex/module/reciXdxRA8zXJXDID/">
+                    Testing the Back End
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </nav>
+        </div>
+      </div>
+      <main class="content-container flex-wrapper" role="main">
+        <div class="sticky-nav">
+          <div class="sprint-nav">
+            <ul class="section-nav">
+              <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+              <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+              <li class="toc-entry toc-h2"><a href="#guided-project">Guided Project</a></li>
+              <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+              <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="wrapper limit-width">
+          <div class="flex-wrapper">
+            <div class="limit-width">
+              <div class="jumbotron">
+                <h1 class="bd-title" id="content">Testing the Back End</h1>
+                <span class="lead">
+                  <p class="bd-lead"></p>
+                  <p>In this module, we learn how to add automated tests to an API.</p>
+                </span>
+                <strong>At the end of this module, you should be able to:</strong>
+                <ul>
+                  <li>test Web API Endpoints</li>
+                  <li>test Data Access Code</li>
+                </ul>
+              </div>
+              <div class="alert alert-warning" role="alert">
+                <h4>Pro Tip</h4>
+                <p>The more you know, the more you know you don’t know.</p>
+              </div>
+              <h2 class="display-4">
+                <a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Prepare</h2>
+              <p class="lead">Review each preclass resource before class.</p>
+              <div class="preclass">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Hxzh6DaZnWk"
+                        frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5V0sWOqTw2I"
+                        frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <h2 class="display-4">
+                <a id="learn" class="anchor" href="#learn" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Learn</h2>
+              <h4 class="mark mb-3 p-2">Learn to test Web API Endpoints</h4>
+              <p>When building a Web API using <em>Express</em>, we use <em>unit testing</em> to test the application
+                logic and <em>integration testing</em> to test the <em>route handlers</em> and <em>middleware</em>.</p>
+              <p>We write tests to verify that the API endpoints return the expected values and HTTP status codes. We
+                also write tests to make sure that we’re returning the data using the right format (HTML, XML, JSON) and
+                several other things.</p>
+              <h5>Overview</h5>
+              <p>The tests we write for endpoints are called <em>integration tests</em> because they test how different
+                parts of the system work together. This is different from the <em>unit tests</em> we use to verify the
+                correctness of one part of the system in isolation.</p>
+              <p>We’ll use a <code class="highlighter-rouge">npm</code> module called <a
+                  href="https://github.com/visionmedia/supertest">supertest</a> that makes it easier to write tests for
+                Node.js HTTP servers. We can use <code class="highlighter-rouge">supertest</code> to load an instance of
+                our server, send requests to the different endpoints, and make assertions about the responses.</p>
+              <p>We could use <code class="highlighter-rouge">supertest</code> to verify that making a <code
+                  class="highlighter-rouge">POST</code> request to a particular endpoint returns a <code
+                  class="highlighter-rouge">201</code> HTTP status code after successfully creating a <em>resource</em>
+                or, that it returns a <code class="highlighter-rouge">500</code> code if the server ran into an error
+                while processing the request. Writing such a test may look like this:</p>
+              <ol>
+                <li>Save a reference to the server.</li>
+                <li>Use <code class="highlighter-rouge">supertest</code> to make a POST request passing correct data
+                  inside the body.</li>
+                <li>Check that the server responds with status code 201.</li>
+              </ol>
+              <p>Writing such a test verifies that all <em>middleware</em>, including the <em>route handler</em> is
+                working as intended.</p>
+              <h5>Follow Along</h5>
+              <p>Please follow along as we configure our testing environment, write a simple endpoint, and the
+                corresponding tests for it.</p>
+              <p>Create a folder and configure our testing environment.</p>
+              <ul>
+                <li>Create a new folder and <code class="highlighter-rouge">cd</code> into it.</li>
+                <li>Type <code class="highlighter-rouge">git init</code> to initialize a git repository to help
+                  <em>jest</em> detect changes.</li>
+                <li>Initialize it with a <code class="highlighter-rouge">package.json</code> by running <code
+                    class="highlighter-rouge">npm init -y</code> in our terminal.</li>
+                <li>Use <code class="highlighter-rouge">npm</code> to add <code class="highlighter-rouge">express</code>
+                  as a regular dependency and <code class="highlighter-rouge">jest</code> and <code
+                    class="highlighter-rouge">supertest</code> as <strong>development dependencies</strong>.</li>
+                <li>Add a <em>test</em> script inside <code class="highlighter-rouge">package.json</code> that runs our
+                  tests: <code class="highlighter-rouge">"test": "jest --watch --verbose"</code>.</li>
+                <li>
+                  <p>Configure <em>jest</em> to run in <em>node mode</em> since we’ll be running in <em>Node.js</em>.
+                  </p>
+                  <ul>
+                    <li>inside <code class="highlighter-rouge">package.json</code> add a property called <code
+                        class="highlighter-rouge">jest</code> and configure it like this:</li>
+                  </ul>
+                  <div class="language-json highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code><span class="nl">"jest"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"testEnvironment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"node"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <p>We have all we need to start working on our API. Begin by adding a file that holds tests for our
+                server, call it <code class="highlighter-rouge">server.spec.js</code> and add the following code.</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="cm">/*
+- when making a GET request to the `/` endpoint 
+  the API should respond with status code 200 
+  and the following JSON object: `{ api: 'running' }`.
+*/</span>
+<span class="kd">const</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">supertest</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// calling it "request" is a common practice</span>
+
+<span class="kd">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./server.js</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// this is our first red, file doesn't exist yet</span>
+
+<span class="nx">describe</span><span class="p">(</span><span class="dl">'</span><span class="s1">server.js</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// http calls made with supertest return promises, we can use async/await if desired</span>
+  <span class="nx">describe</span><span class="p">(</span><span class="dl">'</span><span class="s1">index route</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">it</span><span class="p">(</span><span class="dl">'</span><span class="s1">should return an OK status code from the index route</span><span class="dl">'</span><span class="p">,</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">expectedStatusCode</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>
+
+      <span class="c1">// do a get request to our api (server.js) and inspect the response</span>
+      <span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">request</span><span class="p">(</span><span class="nx">server</span><span class="p">).</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">);</span>
+
+      <span class="nx">expect</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="p">).</span><span class="nx">toEqual</span><span class="p">(</span><span class="nx">expectedStatusCode</span><span class="p">);</span>
+
+      <span class="c1">// same test using promise .then() instead of async/await</span>
+      <span class="c1">// let response;</span>
+      <span class="c1">// return request(server).get('/').then(res =&gt; {</span>
+      <span class="c1">//   response = res;</span>
+
+      <span class="c1">//   expect(response.status).toEqual(expectedStatusCode);</span>
+      <span class="c1">// })</span>
+    <span class="p">});</span>
+
+    <span class="nx">it</span><span class="p">(</span><span class="dl">'</span><span class="s1">should return a JSON object from the index route</span><span class="dl">'</span><span class="p">,</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">expectedBody</span> <span class="o">=</span> <span class="p">{</span> <span class="na">api</span><span class="p">:</span> <span class="dl">'</span><span class="s1">running</span><span class="dl">'</span> <span class="p">};</span>
+
+      <span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">request</span><span class="p">(</span><span class="nx">server</span><span class="p">).</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">);</span>
+
+      <span class="nx">expect</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">).</span><span class="nx">toEqual</span><span class="p">(</span><span class="nx">expectedBody</span><span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="nx">it</span><span class="p">(</span><span class="dl">'</span><span class="s1">should return a JSON object from the index route</span><span class="dl">'</span><span class="p">,</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">request</span><span class="p">(</span><span class="nx">server</span><span class="p">).</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">);</span>
+
+      <span class="nx">expect</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">type</span><span class="p">).</span><span class="nx">toEqual</span><span class="p">(</span><span class="dl">'</span><span class="s1">application/json</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre>
+                </div>
+              </div>
+              <p>In this code, we consider three questions commonly tested for our endpoints:</p>
+              <ul>
+                <li>Does it return the correct status code for the input provided?</li>
+                <li>Does it return the data in the expected format?</li>
+                <li>Does the data returned, if any, have the right content?</li>
+              </ul>
+              <p>We are listing them all at once, but you will write one <em>test case</em> at a time and complete any
+                required <em>refactoring</em> before writing the next test.</p>
+              <p>When testing your endpoints, start with those three tests and then move on to write tests that are
+                unique for the system you’re building. The <em>payroll</em> endpoints for an accounting system, for
+                example, require different tests than those for an <em>accounts payable</em> module. <strong>There is no
+                  one size fit’s all when it comes to testing</strong>. Each system will have its own set of
+                requirements that all require verification.</p>
+              <p>Create the <code class="highlighter-rouge">server.js</code> file and add the following code to make the
+                tests pass:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+
+<span class="nx">server</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span> <span class="na">api</span><span class="p">:</span> <span class="dl">'</span><span class="s1">running</span><span class="dl">'</span> <span class="p">});</span>
+<span class="p">});</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">server</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Notice we are not starting the server with <code class="highlighter-rouge">server.listen(port)</code>,
+                This is a common pattern. We separate the server implementation from the code that <em>runs</em> the
+                server. If we start listening for requests in this file, then every time a test runs, it will start a
+                new instance of the API using the specified port and run into an <em>“address (meaning the port number)
+                  in use”</em> error. Using this technique, we avoid those types of errors and decouple two different
+                concerns: 1) building a server and 2) using a server to listen for requests.</p>
+              <h5>Challenge</h5>
+              <p>Use TDD to implement a <code class="highlighter-rouge">/sing</code> endpoint that returns the string “I
+                believe I can fly, I believe I can test an A-P-I!”.</p>
+              <h5>Dig Deeper</h5>
+              <ul>
+                <li>
+                  <a href="https://kentcdodds.com/blog/unit-vs-integration-vs-e2e-tests" target="blank_">Types of
+                    Tests</a><br> </li>
+                <li>
+                  <a href="https://github.com/LambdaSchool/Server-Testing" target="blank_">Server Testing</a><br> The
+                  full assignment for Server testing</li>
+              </ul>
+              <hr>
+              <h4 class="mark mb-3 p-2">Learn to test Data Access Code</h4>
+              <p>Most Web APIs include a data store, often a database of some kind. It is
+                recommended to test the code that interacts with the database to prevent defects
+                and reduce the risk of <em>regressions</em>.</p>
+              <h5>Overview</h5>
+              <p>To test the data access, we’ll write <em>end to end</em> tests. These types of tests run slower because
+                they perform operations and run queries against an actual database that is similar to the one used in
+                production.</p>
+              <p>To avoid polluting the development database, we’ll use a separate database for testing. One advantage
+                of using a dedicated testing database is that we can add and remove records without affecting the data
+                in the development or staging databases.</p>
+              <p>Next, we’ll walk through setting up our API to switch to the testing database based on an
+                <em>environment variable</em>, including how to set a different value for that environment value only
+                when running tests.</p>
+              <h5>Follow Along</h5>
+              <h3 id="using-cross-env">Using cross-env</h3>
+              <p>Setting and using environment variables is different for windows and POSIX (Mac, Linux, Unix) Operating
+                Systems. We can use <a href="https://www.npmjs.com/package/cross-env">cross-env</a>, an npm module that
+                deals with the OS inconsistencies and provides a uniform way of setting environment variables across all
+                platforms.</p>
+              <p>Open <code class="highlighter-rouge">package.json</code> and look at the <code
+                  class="highlighter-rouge">test</code> script. It uses <code class="highlighter-rouge">cross-env</code>
+                to set an environment variable with the key <code class="highlighter-rouge">DB_ENV</code> and the value:
+                <em>testing</em>.</p>
+              <div class="language-json highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="nl">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cross-env DB_ENV=testing jest --watch"</span><span class="w">
+</span></code></pre>
+                </div>
+              </div>
+              <p>This environment variable is available to the API as <code
+                  class="highlighter-rouge">process.env.DB_ENV</code>. The sample code provided uses it inside <code
+                  class="highlighter-rouge">./data/dbConfig.js</code> to choose which configuration object to use for
+                the <code class="highlighter-rouge">knex</code> connection.</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c1">// ./data/dbConfig.js</span>
+<span class="kd">const</span> <span class="nx">knex</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">knex</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">../knexfile.js</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="c1">// if the environment variable is not set, default to 'development'</span>
+<span class="c1">// this variable is only set when running the "test" npm script using npm run test</span>
+<span class="kd">const</span> <span class="nx">dbEnv</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">DB_ENV</span> <span class="o">||</span> <span class="dl">'</span><span class="s1">development</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="c1">// the value of dbEnv will be either 'development' or 'testing'</span>
+<span class="c1">// we pass it within brackets to select the corresponding configuration</span>
+<span class="c1">// from knexfile.js</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">knex</span><span class="p">(</span><span class="nx">config</span><span class="p">[</span><span class="nx">dbEnv</span><span class="p">]);</span>
+</code></pre>
+                </div>
+              </div>
+              <p>To make this work, <code class="highlighter-rouge">knexfile.js</code> has a dedicated configuration key
+                for
+                <em>testing</em>.</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c1">// ./knexfile.js</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">development</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">client</span><span class="p">:</span> <span class="dl">'</span><span class="s1">sqlite3</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">connection</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./data/hobbits.db3</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="na">useNullAsDefault</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">migrations</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">directory</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./data/migrations</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="na">seeds</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">directory</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./data/seeds</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+  <span class="na">testing</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">client</span><span class="p">:</span> <span class="dl">'</span><span class="s1">sqlite3</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">connection</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./data/test.db3</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="na">useNullAsDefault</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">migrations</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">directory</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./data/migrations</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="na">seeds</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">directory</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./data/seeds</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+</code></pre>
+                </div>
+              </div>
+              <h3 id="using-different-environments-for-knex-migrations-and-seeding">Using Different Environments for
+                Knex Migrations and Seeding</h3>
+              <p>Different databases have different configuration objects defined within <code
+                  class="highlighter-rouge">knexfile.js</code>. To specify which environment to target during
+                <em>migrations</em> and <em>seeding</em> use the <code class="highlighter-rouge">--env</code>
+                command-line argument.</p>
+              <p>To run migrations against the <em>testing</em> database, use the following command.</p>
+              <div class="language-bash highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>npx knex migrate:latest <span class="nt">--env</span><span class="o">=</span>testing
+</code></pre>
+                </div>
+              </div>
+              <p>To run seeds against the <em>testing</em> database, use the following command.</p>
+              <div class="language-bash highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>npx knex seed:run <span class="nt">--env</span><span class="o">=</span>testing
+</code></pre>
+                </div>
+              </div>
+              <h3 id="write-end-to-end-tests-that-involve-the-database">Write End to End Tests that Involve the Database
+              </h3>
+              <p>To test the data access code, execute the data access and then verify that the database was updated
+                correctly.</p>
+              <p>In this example, the data access code has an <code class="highlighter-rouge">.insert()</code> method.
+                Let’s see how to test it.</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c1">// our connection to the database</span>
+<span class="kd">const</span> <span class="nx">db</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">../data/dbConfig.js</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="c1">// the data access file we are testing</span>
+<span class="kd">const</span> <span class="nx">Hobbits</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./hobbitsModel.js</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">describe</span><span class="p">(</span><span class="dl">'</span><span class="s1">hobbits model</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">describe</span><span class="p">(</span><span class="dl">'</span><span class="s1">insert()</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// this example uses async/await to make it easier to read and understand</span>
+    <span class="nx">it</span><span class="p">(</span><span class="dl">'</span><span class="s1">should insert the provided hobbits into the db</span><span class="dl">'</span><span class="p">,</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="c1">// this code expects that the table is empty, we'll handle that below</span>
+      <span class="c1">// add data to the test database using the data access file</span>
+      <span class="k">await</span> <span class="nx">Hobbits</span><span class="p">.</span><span class="nx">insert</span><span class="p">({</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">gaffer</span><span class="dl">'</span> <span class="p">});</span>
+      <span class="k">await</span> <span class="nx">Hobbits</span><span class="p">.</span><span class="nx">insert</span><span class="p">({</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">sam</span><span class="dl">'</span> <span class="p">});</span>
+
+      <span class="c1">// read data from the table</span>
+      <span class="kd">const</span> <span class="nx">hobbits</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">db</span><span class="p">(</span><span class="dl">'</span><span class="s1">hobbits</span><span class="dl">'</span><span class="p">);</span>
+
+      <span class="c1">// verify that there are now two records inserted</span>
+      <span class="nx">expect</span><span class="p">(</span><span class="nx">hobbits</span><span class="p">).</span><span class="nx">toHaveLength</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre>
+                </div>
+              </div>
+              <p>To guarantee that the tables are cleared before running each test, add the following code before the
+                test cases.</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="nx">beforeEach</span><span class="p">(</span><span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// this function executes and clears out the table before each test</span>
+  <span class="k">await</span> <span class="nx">db</span><span class="p">(</span><span class="dl">'</span><span class="s1">hobbits</span><span class="dl">'</span><span class="p">).</span><span class="nx">truncate</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Implement code to make the tests pass.</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c1">// ./hobbits/hobbitsModel.js</span>
+<span class="k">async</span> <span class="kd">function</span> <span class="nx">insert</span><span class="p">(</span><span class="nx">hobbit</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// the second parameter here is of other databases, SQLite returns the id by default</span>
+  <span class="kd">const</span> <span class="p">[</span><span class="nx">id</span><span class="p">]</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">db</span><span class="p">(</span><span class="dl">'</span><span class="s1">hobbits</span><span class="dl">'</span><span class="p">).</span><span class="nx">insert</span><span class="p">(</span><span class="nx">hobbit</span><span class="p">,</span> <span class="dl">'</span><span class="s1">id</span><span class="dl">'</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="nx">db</span><span class="p">(</span><span class="dl">'</span><span class="s1">hobbits</span><span class="dl">'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">where</span><span class="p">({</span> <span class="nx">id</span> <span class="p">})</span>
+    <span class="p">.</span><span class="nx">first</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre>
+                </div>
+              </div>
+              <p>This tests only checks that there are two records added to the table, even if those records were there
+                at the beginning.</p>
+              <p>Let’s add another test to make sure that the record is making it to the database and that the <code
+                  class="highlighter-rouge">.insert()</code> method returns the newly inserted hobbit.</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c1">// note we're checking one hobbit at a time</span>
+<span class="nx">it</span><span class="p">(</span><span class="dl">'</span><span class="s1">should insert the provided hobbit into the db</span><span class="dl">'</span><span class="p">,</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">hobbit</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">Hobbits</span><span class="p">.</span><span class="nx">insert</span><span class="p">({</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">gaffer</span><span class="dl">'</span> <span class="p">});</span>
+  <span class="nx">expect</span><span class="p">(</span><span class="nx">hobbit</span><span class="p">.</span><span class="nx">name</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="dl">'</span><span class="s1">gaffer</span><span class="dl">'</span><span class="p">);</span>
+
+  <span class="c1">// note how we're reusing the hobbit variable</span>
+  <span class="nx">hobbit</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">Hobbits</span><span class="p">.</span><span class="nx">insert</span><span class="p">({</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">sam</span><span class="dl">'</span> <span class="p">});</span>
+  <span class="nx">expect</span><span class="p">(</span><span class="nx">hobbit</span><span class="p">.</span><span class="nx">name</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="dl">'</span><span class="s1">sam</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+                </div>
+              </div>
+              <h5>Challenge</h5>
+              <ul>
+                <li>Write the commands to run migrations and seeds using the “production” configuration for knex.</li>
+                <li>Write two tests for one of the projects from past modules of this sprint.</li>
+              </ul>
+              <hr>
+              <h2>
+                <a id="guided-project" class="anchor" href="#guided-project" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Guided Project</h2>
+              <h3>Node Server Testing Guided</h3>
+              <p>Guided Project for Node Server Testing</p>
+              <a target="_blank" href="https://github.com/LambdaSchool/node-server-testing-guided">GitHub Repo</a>
+              <hr>
+              <h2 class="display-4">
+                <a id="project" class="anchor" href="#project" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Project</h2>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <h5><a target="_blank" href="https://github.com/LambdaSchool/node-server-testing-challenge">Node
+                      Server Testing Challenge</a></h5>
+                  <p>Challenge for Node Server Testing Module</p>
+                </li>
+              </ul>
+              <h2 class="display-4">
+                <a id="review" class="anchor" href="#review" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Review</h2>
+              <h3 class="display-5">Class Recordings</h3>
+              <p class="lead">You can use class recordings to help you master the material.</p>
+              <div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <strong><a target="_blank" href="https://youtu.be/HvFOtG35rUM">Testing the Back End for Web PT 18
+                        w/Jason Maurer</a></strong>
+                    <p>In this module, we learn how to add automated tests to an API. At the end of this module, you
+                      should be able to: test Web API Endpoints test Data Access Code</p>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="/archive/FSW/module/reciXdxRA8zXJXDID">All previous recordings</a>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="display-5">Demonstrate Mastery</h3>
+              <p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the
+                following:</p>
+              <ul>
+                <li>Objective challenge: <p>Use TDD to implement a <code class="highlighter-rouge">/sing</code> endpoint
+                    that returns the string “I believe I can fly, I believe I can test an A-P-I!”.</p>
+                </li>
+                <li>Objective challenge: <ul>
+                    <li>Write the commands to run migrations and seeds using the “production” configuration for knex.
+                    </li>
+                    <li>Write two tests for one of the projects from past modules of this sprint.</li>
+                  </ul>
+                </li>
+                <li>Guided Project: Node Server Testing Guided</li>
+                <li>Project: Node Server Testing Challenge</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push( arguments );
+      }
+      gtag( 'js', new Date() );
+
+      gtag( 'config', 'UA-80850900-4' );
+    </script>
+    <script type="text/javascript">
+      function getDomain() {
+        const domainName = window.location.hostname.split( '.' )[ 1 ];
+        return `${domainName}.com`;
+      }
+    </script>
+    <script src="" integrity="" crossorigin="anonymous"></script>
+    <script>
+      window.jQuery || document.write( '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>' )
+    </script>
+    <script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script>
+    <script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
+    <script src="/assets/js/activate.js"></script>
+    <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      SimpleJekyllSearch.init( {
+        searchInput: document.getElementById( 'search-input' ),
+        resultsContainer: document.getElementById( 'results-container' ),
+        dataSource: '/search.json',
+        searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Testing the Back End">{title}</a></li>',
+        noResultsText: '',
+        limit: 10,
+        fuzzy: true,
+      } )
+    </script>
+    <script src="/assets/js/mermaid.min.js"></script>
+    <script type="text/javascript">
+      if ( window.attachEvent ) {
+        window.attachEvent( 'onload', verifySignedIn );
+      } else {
+        if ( window.onload ) {
+          var currentOnLoadFn = window.onload;
+          var newOnLoadFn = function ( evt ) {
+            currentOnLoadFn( evt );
+            verifySignedIn();
+          };
+          window.onload = newOnLoadFn;
+        } else {
+          window.onload = verifySignedIn;
+        }
+      }
+
+      function verifySignedIn() {
+        if ( isPagePublic() ) {
+          return showPageContents();
+        }
+
+        window.__user = null;
+        isSignedIn().then( ( user ) => {
+          window.__user = user;
+
+          if ( !user.signedIn ) {
+            redirectToSignIn();
+          } else if ( !user.student && !window.__openToAdmissions ) {
+            showUnauthorizedMessage();
+          } else {
+            showPageContents();
+          }
+        } );
+      }
+
+      function isPagePublic() {
+        const openCourses = [
+          'and-pre',
+          'ds-pre',
+          'fsw-pre',
+          'help',
+          'ios-pre',
+        ];
+
+        const openPages = [
+          'cs-and',
+          'cs-fsw',
+          'cs-ios',
+          'cr',
+          'ds',
+          'jx',
+          'p4s',
+          'ux',
+        ];
+
+        const pathParts = window.location.pathname.split( '/' );
+        const courseName = pathParts[ 1 ];
+        const pageName = pathParts[ pathParts.length - 1 ];
+
+        return openCourses.includes( courseName ) || openPages.includes( pageName );
+      }
+
+      function isSignedIn() {
+        const isDeployPreview = window.location.hostname.startsWith( 'deploy-preview' ) && window.location.hostname
+          .endsWith( 'netlify.com' );
+
+        if ( isDeployPreview ) return Promise.resolve( {
+          signedIn: true,
+          student: true
+        } );
+
+        return fetch( `${getAuthBaseUrl()}/whoami`, {
+            credentials: 'include'
+          } )
+          .then( ( response ) => response.text() )
+          .then( ( userAsText ) => userAsText ? JSON.parse( userAsText ) : null )
+          .then( ( userData ) => ( {
+            signedIn: Boolean( userData ),
+            student: Boolean( userData && userData.airtableId ),
+            id: userData ? userData.id : null,
+            email: userData ? userData.email : null
+          } ) )
+          .catch( ( error ) => {} );
+      }
+
+      function redirectToSignIn() {
+        const signInUrl =
+          `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+        const redirectMessage = document.querySelector( '#redirect-message' );
+        redirectMessage.style.display = "block";
+        redirectMessage.innerHTML =
+          `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+        window.location = signInUrl;
+      }
+
+      function showPageContents() {
+        document.querySelector( '#content-wrapper' ).style.visibility = 'visible';
+      }
+
+      function showUnauthorizedMessage() {
+        document.querySelector( '#unauthorized-message' ).style.display = 'block';
+      }
+
+      function getAuthBaseUrl() {
+        const domain = getDomain();
+        const authBaseUrl = `https://auth.${domain}`;
+        return authBaseUrl;
+      }
+    </script>
+    <script src="/assets/js/docs.min.js"></script>
+    <script>
+      var MathJax = {
+        tex: {
+          inlineMath: [
+            [ '$$', '$$' ],
+            [ '\[', '\])' ]
+          ]
+        },
+        "HTML-CSS": {
+          styles: {
+            ".MathJax span": {
+              color: "#000000"
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+    </script>
+    <script>
+      handleExternalLinks();
+
+      function handleExternalLinks() {
+        const domain = getDomain();
+        const links = document.querySelectorAll( 'a' );
+        return links.forEach( ( link ) => {
+          if ( !link.host.includes( domain ) ) link.target = '_blank';
+        } )
+      };
+    </script>
+  </div>
+</body>
+
+</html>

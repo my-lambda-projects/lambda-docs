@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Intended as a home for Lambda School curriculum.">
+<meta name="author" content="">
+<meta name="generator" content="Jekyll v3.8.0">
+<title>User Interface II · Lambda School</title>
+
+<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+  analytics.page();
+  }}();
+</script>
+
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#a0001e">
+</head>
+<body>
+<noscript>Please enable JavaScript to view this page.</noscript>
+<div id="redirect-message" style="display: none;">
+You must be logged in to view this page.
+</div>
+<div id="unauthorized-message" style="display: none;">
+You must be a Lambda School student to view this page.
+</div>
+<div id="content-wrapper" style="visibility: hidden;">
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container">
+<span class="skiplink-text">Skip to main content</span>
+</div>
+</a>
+<div class="mobile-menu">
+<div class="m-drop">
+<div class="mobile-row">
+<div class="header-row" style="padding: 3px 7px">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
+</svg></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+</button>
+</div>
+</div>
+<div class="nav-row">
+<div class="results-container">
+<ul id="results-container" class="dropdown list-group"></ul>
+</div>
+<div id="mobile-course-menu" class="collapse nav-row">
+<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+<nav class="bd-links">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web Annex</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recfwZvI7QhMa7xbG">
+1.&nbsp;&nbsp;User Interface and Git
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recl0IyzS2Vl89lZa/">
+User Interface
+</a>
+</li>
+<li>
+<a href="/webannex/module/rect59e95N6OSvoCd/">
+Git for Web Development
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/webannex/module/recGvXyWT6AvGtMHR/">
+User Interface II
+</a>
+</li>
+<li>
+<a href="/webannex/module/recaVbBZhh8BTyMdM/">
+User Interface III
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recIXiQgpgMdJ81ms">
+2.&nbsp;&nbsp;Advanced CSS
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recuDrqSGpWcepCMs/">
+Responsive Design I
+</a>
+</li>
+<li>
+<a href="/webannex/module/recE3IqPtDxaVI0DW/">
+Responsive Design II
+</a>
+</li>
+<li>
+<a href="/webannex/module/reculyBhIYkuoBRqh/">
+Preprocessing I
+</a>
+</li>
+<li>
+<a href="/webannex/module/rec1hRu3bO6L0uxn2/">
+Preprocessing II
+</a>
+</li>
+</ul>
+</div>
+ <div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recclZwJxMU8kUngT">
+3.&nbsp;&nbsp;JavaScript Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recCT3KJYTIRYwQMh/">
+JavaScript I
+</a>
+</li>
+<li>
+<a href="/webannex/module/rec1oaBmEoSilO2yf/">
+JavaScript II
+</a>
+</li>
+<li>
+<a href="/webannex/module/rec0AWuNLezbpit7m/">
+Prototypes and Inheritance
+</a>
+</li>
+<li>
+<a href="/webannex/module/recyS588eOvVUKAMc/">
+Classes
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recRT8JKvbTiGaosk">
+4.&nbsp;&nbsp;Single Page Applications
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
+React Router I
+</a>
+</li>
+<li>
+<a href="/webannex/module/recYkF1FDilIedmwX/">
+React Router II
+</a>
+</li>
+<li>
+<a href="/webannex/module/rect081xiYT2cfxGF/">
+Form Management
+</a>
+</li>
+<li>
+<a href="/webannex/module/recKK5C7wV0WiECfr/">
+Advanced Form Management
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recozTHaHJe6L1ThN">
+5.&nbsp;&nbsp;Authentication and Testing
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recQD9lnhqWEFh6g4/">
+Introduction to Authentication
+</a>
+</li>
+<li>
+<a href="/webannex/module/recvIPgHwxF194c7q/">
+Using Sessions and Cookies
+</a>
+</li>
+<li>
+<a href="/webannex/module/reciCHdNjavSKaaLt/">
+Using JSON Web Tokens (JWT)
+</a>
+</li>
+<li>
+<a href="/webannex/module/reciXdxRA8zXJXDID/">
+Testing the Back End
+</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-container">
+<div class="sidebar-container bd-sidebar">
+<div class="docs-sidebar">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
+<ul id="results-container" class="dropdown list-group"></ul>
+<nav class="bd-links collapse" id="bd-docs-nav">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web Annex</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recfwZvI7QhMa7xbG">
+1.&nbsp;&nbsp;User Interface and Git
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recl0IyzS2Vl89lZa/">
+User Interface
+</a>
+</li>
+<li>
+<a href="/webannex/module/rect59e95N6OSvoCd/">
+Git for Web Development
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/webannex/module/recGvXyWT6AvGtMHR/">
+User Interface II
+</a>
+</li>
+<li>
+<a href="/webannex/module/recaVbBZhh8BTyMdM/">
+User Interface III
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recIXiQgpgMdJ81ms">
+2.&nbsp;&nbsp;Advanced CSS
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recuDrqSGpWcepCMs/">
+Responsive Design I
+</a>
+</li>
+<li>
+<a href="/webannex/module/recE3IqPtDxaVI0DW/">
+Responsive Design II
+</a>
+</li>
+<li>
+<a href="/webannex/module/reculyBhIYkuoBRqh/">
+ Preprocessing I
+</a>
+</li>
+<li>
+<a href="/webannex/module/rec1hRu3bO6L0uxn2/">
+Preprocessing II
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recclZwJxMU8kUngT">
+3.&nbsp;&nbsp;JavaScript Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recCT3KJYTIRYwQMh/">
+JavaScript I
+</a>
+</li>
+<li>
+<a href="/webannex/module/rec1oaBmEoSilO2yf/">
+JavaScript II
+</a>
+</li>
+<li>
+<a href="/webannex/module/rec0AWuNLezbpit7m/">
+Prototypes and Inheritance
+</a>
+</li>
+<li>
+<a href="/webannex/module/recyS588eOvVUKAMc/">
+Classes
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recRT8JKvbTiGaosk">
+4.&nbsp;&nbsp;Single Page Applications
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
+React Router I
+</a>
+</li>
+<li>
+<a href="/webannex/module/recYkF1FDilIedmwX/">
+React Router II
+</a>
+</li>
+<li>
+<a href="/webannex/module/rect081xiYT2cfxGF/">
+Form Management
+</a>
+</li>
+<li>
+<a href="/webannex/module/recKK5C7wV0WiECfr/">
+Advanced Form Management
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recozTHaHJe6L1ThN">
+5.&nbsp;&nbsp;Authentication and Testing
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recQD9lnhqWEFh6g4/">
+Introduction to Authentication
+</a>
+</li>
+<li>
+<a href="/webannex/module/recvIPgHwxF194c7q/">
+Using Sessions and Cookies
+</a>
+</li>
+<li>
+<a href="/webannex/module/reciCHdNjavSKaaLt/">
+Using JSON Web Tokens (JWT)
+</a>
+</li>
+<li>
+<a href="/webannex/module/reciXdxRA8zXJXDID/">
+Testing the Back End
+</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<main class="content-container flex-wrapper" role="main">
+<div class="sticky-nav">
+<div class="sprint-nav">
+<ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+</ul>
+</div>
+
+</div>
+<div class="wrapper limit-width">
+<div class="flex-wrapper">
+<div class="limit-width">
+<div class="jumbotron">
+<h1 class="bd-title" id="content">User Interface II</h1>
+<span class="lead">
+<p class="bd-lead"></p>
+<p>Basic HTML and CSS are fundamental to any web site or web app on the internet. Being able to create layouts using CSS is the next progression on your journey to a full stack web developer. In this module we will cover CSS resets, box model layout, display types, and positioning.</p>
+</span>
+<strong>At the end of this module, you should be able to:</strong>
+<ul>
+<li>identify and use all properties in the box model</li>
+<li>use CSS display properties to build user interface</li>
+<li>implement a CSS reset and understand why it’s important for cross browser development</li>
+</ul>
+</div>
+<div class="alert alert-warning" role="alert">
+<h4>Pro Tip</h4>
+<p>Be on time. It’s a mark of respect not to keep others waiting.</p>
+</div>
+<h2 class="display-4">
+<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
+<p class="lead">Review each preclass resource before class.</p>
+<div class="preclass">
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0tUUFdkTybs" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0352NDaFNP8" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-TVGmd81Vow" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">CSS Box Model - MDN</a>
+<p>A brief overview of what the box model is and some of its properties.</p>
+</li>
+<li class="list-group-item">
+<a target="_blank" href="https://codepen.io/lambdaschool/pen/bxZNrX?editors=1100">Relative vs. Absolute playground.</a>
+<p>A simple code pen that allows you to see (and play with) the differences between absolute and relative positioning.</p>
+</li>
+<li class="list-group-item">
+<a target="_blank" href="https://meyerweb.com/eric/tools/css/reset/">Eric Meyer Reset</a>
+<p>One of the first main stream resets used in web development.</p>
+</li>
+</ul>
+</div>
+<h2 class="display-4">
+<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
+<h4 class="mark mb-3 p-2">Learn to identify and use all properties in the box model</h4>
+<p>The box model is a way we can position and layout HTML elements on a page using CSS. Being able to style elements using the box model is one of the most valuable skills you can learn when building user interfaces.</p>
+<h5>Overview</h5>
+<h3 id="the-box-model">The Box Model</h3>
+<p>Every element you see on a web page is really just an interpretation of a pixel on a screen. Those small pixels start to get bigger as we add content and style to them. The box model is our first look into the layout out those pixels using CSS. As the name suggests, we are working with boxes. Let’s define a box for our purposes as a HTML element with four sides. To visualize what this looks like, <a href="https://www.w3schools.com/css/css_boxmodel.asp">check out this link from W3Schools</a>.</p>
+<p>You will notice there are some interesting words like <code class="highlighter-rouge">margin</code>, <code class="highlighter-rouge">border</code>, <code class="highlighter-rouge">padding</code>, and <code class="highlighter-rouge">content</code>. These words make up the CSS properties that we use to layout HTML elements on a page.</p>
+<p>The box model allows us to layout the spacing and size of an individual HTML element.</p>
+<h3 id="content">Content</h3>
+<p>This is where text and images are rendered</p>
+<h3 id="padding">Padding</h3>
+<p>The space between the content and the border</p>
+<h3 id="border">Border</h3>
+<p>A border that we can style around the padding and content of a box</p>
+<h3 id="margin">Margin</h3>
+<p>The space between the border and everything else on a web page</p>
+<h5>Follow Along</h5>
+<h4 id="box-model-tutorial">Box Model Tutorial</h4>
+<p>Let’s dive into a single HTML element and explore how the box model works.</p>
+<p>Review this HTML:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box-example"</span><span class="nt">&gt;</span>
+  I am a box!
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<p>We will use the <code class="highlighter-rouge">.box-example</code> class to test out the box model properties. Before we get started with the box model, let’s give our soon-to-be box a background of gray:</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box-example</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">gray</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<h4 id="box-model-content-area">Box Model: Content Area</h4>
+<p>The first part of the box model we need to understand is the <code class="highlighter-rouge">content area</code>. In our HTML example, we currently have some text: <code class="highlighter-rouge">"I am a box!"</code>. This text is taking up space and adding to the <code class="highlighter-rouge">content area</code> of our HTML element.</p>
+<p>This is great but we can actual control the size of our content area by using <code class="highlighter-rouge">width</code> and <code class="highlighter-rouge">height</code>. Let’s add a <code class="highlighter-rouge">width</code> of <code class="highlighter-rouge">100px</code> and a <code class="highlighter-rouge">height</code> of <code class="highlighter-rouge">100px</code> to see what happens:</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box-example</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">gray</span><span class="p">;</span>
+
+  <span class="c">/* Box Model: Content Area */</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>We can see our gray box now matches our 100x100 dimensions. Let’s see how <code class="highlighter-rouge">padding</code> works with our <code class="highlighter-rouge">content area</code>.</p>
+<h4 id="box-model-padding">Box Model: Padding</h4>
+<p>Padding is the area between our content area and the border bounds of our box.</p>
+<p>Let’s add <code class="highlighter-rouge">20px</code> of padding to each side of our <code class="highlighter-rouge">.box-example</code> to see how this works:</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box-example</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">gray</span><span class="p">;</span>
+
+  <span class="c">/* Box Model: Content Area */</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+
+  <span class="c">/* Box Model: Padding */</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Notice that padding <strong>added</strong> <code class="highlighter-rouge">20px</code> to each side of our box! This can be an annoying side effect of using <code class="highlighter-rouge">padding</code> and we need to make sure we pay attention to how big our box is in case it doesn’t match up with our design.</p>
+<p>There are ways to avoid this resizing behavior by using <code class="highlighter-rouge">box-sizing: border-box</code> to constrain the <code class="highlighter-rouge">padding</code> inside the border’s boundaries set by our <code class="highlighter-rouge">width</code> and <code class="highlighter-rouge">height</code>.</p>
+<p>Go ahead and add <code class="highlighter-rouge">box-sizing: border-box</code> to our example and see how it impacts our box.</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box-example</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">gray</span><span class="p">;</span>
+
+  <span class="c">/* Box Model: Content Area */</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+
+  <span class="c">/* Box Model: Padding */</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Notice how our example now adds <code class="highlighter-rouge">padding</code> from the border’s edge <strong>in</strong> to the box. This allows you to have way more control across your web site.</p>
+<h3 id="box-model-border">Box Model: Border</h3>
+<p>The border sits between our padding and margin.</p>
+<p>Border is straight forward in its visualization but can be a little confusing with its syntax:</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box-example</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">gray</span><span class="p">;</span>
+
+  <span class="c">/* Box Model: Content Area */</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+
+  <span class="c">/* Box Model: Padding */</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+
+  <span class="c">/* Box Model: Border */</span>  
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>You can see that border has 3 values in it! These are shorthand so we don’t have to write 3 properties every time.</p>
+<ul>
+<li>The first value is the <code class="highlighter-rouge">border-width</code>
+</li>
+<li>The second value is the <code class="highlighter-rouge">border-style</code>
+</li>
+<li>The third value is the <code class="highlighter-rouge">border-color</code>
+</li>
+</ul>
+<p>Imagine writing that out every time!</p>
+<h4 id="box-model-margin">Box Model: Margin</h4>
+<p><code class="highlighter-rouge">Margin</code> is the white space surrounding our border. <code class="highlighter-rouge">Margin</code> allows us to create distance between our element and the rest of the page.</p>
+<p>Lets see how it works:</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box-example</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">gray</span><span class="p">;</span>
+
+  <span class="c">/* Box Model: Content Area */</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+
+  <span class="c">/* Box Model: Padding */</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+
+  <span class="c">/* Box Model: Border */</span>  
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+
+  <span class="c">/* Box Model: Margin */</span>  
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>We just added <code class="highlighter-rouge">20px</code> of <code class="highlighter-rouge">margin</code> to each side of our box. You have now explored each part of the box model!</p>
+<p><a href="https://codepen.io/lambdaschool/pen/qJbZaM?editors=1100">Click here to see the final tutorial code!</a></p>
+<h5>Challenge</h5>
+<p><a href="https://codepen.io/lambdaschool/pen/qJbZaM?editors=1100">Take the code from the tutorial</a> and add 4 new boxes. Update each box with unique box model values and see how they interact with each other.</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://css-tricks.com/box-sizing/" target="blank_">Box Sizing - Best practice and history</a><br> Box sizing directly impacts the box model and you need to know why it's there and how it impacts your user interfaces.</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to use CSS display properties to build user interface</h4>
+<p>The display property in CSS is another vital part of styling layout. Being able to understand the difference between <code class="highlighter-rouge">block</code> and <code class="highlighter-rouge">inline</code> is fundamental to user interface development. You can craft any website using <code class="highlighter-rouge">inline-block</code> and the other display values.</p>
+<h5>Overview</h5>
+<h3 id="css-display-property">CSS Display Property</h3>
+<p>We have learned about the box model but found it has some limitations in how we can render our elements to match a layout.</p>
+<p>We can leverage the CSS property <code class="highlighter-rouge">display</code> to render HTML elements as well as create simple layouts. Think of <code class="highlighter-rouge">display</code> as the visual representation of your HTML.</p>
+<p>There are <a href="https://www.w3schools.com/CSSref/pr_class_display.asp">many <code class="highlighter-rouge">display</code> values available to us</a>. We will focus on several <code class="highlighter-rouge">display</code> values that lend themselves to building simple layouts.</p>
+<h3 id="display-none"><code class="highlighter-rouge">display: none</code></h3>
+<p>When we use <code class="highlighter-rouge">display: none</code>, we are actually removing the HTML element from the page’s flow. This can be a powerful tool for layout when we need to temporarily remove content or toggle it off and on with JavaScript.</p>
+<h4 id="none-traits">
+<code class="highlighter-rouge">none</code> Traits</h4>
+<ul>
+<li>Removes element from the document</li>
+<li>Not to be confused with <code class="highlighter-rouge">visbility: hidden</code> which does not remove the element from the document</li>
+</ul>
+<h4 id="none-syntax">
+<code class="highlighter-rouge">none</code> Syntax</h4>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nc">.example</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+<h3 id="display-inline"><code class="highlighter-rouge">display: inline</code></h3>
+<p><code class="highlighter-rouge">inline</code> elements can be nested inside of other elements without disrupting the flow of content.</p>
+<p>Some example <code class="highlighter-rouge">inline</code> elements are <code class="highlighter-rouge">&lt;a&gt;</code> or <code class="highlighter-rouge">&lt;span&gt;</code>. Both the <code class="highlighter-rouge">&lt;a&gt;</code> and <code class="highlighter-rouge">&lt;span&gt;</code> elements are usually wrapped around content that won’t create a break in the page flow.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements#Elements">Click here for a list of elements that <code class="highlighter-rouge">display: inline</code> as their default property</a></p>
+<h4 id="inline-traits">
+<code class="highlighter-rouge">inline</code> Traits</h4>
+<ul>
+<li>
+<code class="highlighter-rouge">height</code> and <code class="highlighter-rouge">width</code> properties have no effect</li>
+<li>Only takes up as much space as its content</li>
+<li>
+<code class="highlighter-rouge">block</code> elements are not allowed to be nested inside <code class="highlighter-rouge">inline</code> elements</li>
+<li>Can use <code class="highlighter-rouge">vertical-align</code> to position vertically</li>
+<li>Can use <code class="highlighter-rouge">text-align</code> to position horizontally</li>
+</ul>
+<h4 id="inline-syntax">
+<code class="highlighter-rouge">inline</code> Syntax</h4>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nc">.example</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">inline</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+<h3 id="display-block"><code class="highlighter-rouge">display: block</code></h3>
+<p>Elements that are displayed as <code class="highlighter-rouge">block</code> will take up as much space as their parent element will allow. This behavior is great for some layout designs however, if you want to control a <code class="highlighter-rouge">block</code> elements’ size, you will need to employ both <code class="highlighter-rouge">width</code> or <code class="highlighter-rouge">height</code> depending on your needs.</p>
+<p><code class="highlighter-rouge">block</code> elements will break the flow of content on a new line. You will find that block elements are the backbone of most layouts and are vital to building any web page.</p>
+<p>Some example <code class="highlighter-rouge">block</code> elements are <code class="highlighter-rouge">&lt;div&gt;</code> or <code class="highlighter-rouge">&lt;p&gt;</code>. You can nest other <code class="highlighter-rouge">block</code> or <code class="highlighter-rouge">inline</code> elements inside of a <code class="highlighter-rouge">block</code> element.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements#Elements">Click here for a list of elements that <code class="highlighter-rouge">display: block</code> as their default property</a></p>
+<h4 id="block-traits">
+<code class="highlighter-rouge">block</code> Traits</h4>
+<ul>
+<li>Starts on a new line</li>
+<li>Takes up as much width as its parent element will allow</li>
+<li>Both <code class="highlighter-rouge">height</code> and <code class="highlighter-rouge">width</code> can be used to adjust sizing of the element</li>
+<li>Can nest both <code class="highlighter-rouge">inline</code> and <code class="highlighter-rouge">block</code> elements</li>
+<li>Can use <code class="highlighter-rouge">margin: auto</code> to center horizontally</li>
+<li>Vertical centering can be tricky without the flex box module. <a href="https://css-tricks.com/centering-css-complete-guide/">Click this link for an amazing guide on centering anything</a>.</li>
+</ul>
+<h4 id="block-syntax">
+<code class="highlighter-rouge">block</code> Syntax</h4>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nc">.example</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+<h3 id="display-inline-block"><code class="highlighter-rouge">display: inline-block</code></h3>
+<p>Sometimes we don’t want a <code class="highlighter-rouge">block</code> element’s abrupt behavior in our layouts but we also want the control it can provide with <code class="highlighter-rouge">width</code> and <code class="highlighter-rouge">height</code>.</p>
+<p>That is exactly what <code class="highlighter-rouge">inline-block</code> accomplishes. An element that has <code class="highlighter-rouge">inline-block</code> applied to it has the default behavior of an <code class="highlighter-rouge">inline</code> element with the added bonus of controlling the size using <code class="highlighter-rouge">width</code> and <code class="highlighter-rouge">height</code>!</p>
+<h4 id="inline-block-traits">
+<code class="highlighter-rouge">inline-block</code> Traits</h4>
+<ul>
+<li>Inline behavior allows for elements to stack next to each other</li>
+<li>Both <code class="highlighter-rouge">width</code> and <code class="highlighter-rouge">height</code> can be used to control the size of the element</li>
+</ul>
+<h4 id="inline-block-syntax">
+<code class="highlighter-rouge">inline-block</code> Syntax</h4>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nc">.example</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+<h3 id="use-display-for-layout">Use Display For Layout</h3>
+<p>Now that we have a better understanding of what the display property can do, let’s take a look at how we can employ it for layout.</p>
+<p>We know that <code class="highlighter-rouge">display: block</code> takes up as much horizontal space as its parent’s element. What if we wanted to get two block level elements to stack next to each other? We can utilize the hybrid <code class="highlighter-rouge">display: inline-block</code> to accomplish this.</p>
+<p>Take a look at this HTML:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;header&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Sweet Eats Bakery<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;nav&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Muffins<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Cookies<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Catering<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
+</code></pre></div></div>
+<p>In its current form without CSS we can see that there is a <code class="highlighter-rouge">block</code> level <code class="highlighter-rouge">&lt;header&gt;</code> containing two more <code class="highlighter-rouge">block</code> level elements. That means the <code class="highlighter-rouge">&lt;h1&gt;</code> and <code class="highlighter-rouge">&lt;nav&gt;</code> aren’t going to cooporate in our layout.</p>
+<p>We will need to utilize our <code class="highlighter-rouge">inline-block</code> skills here. Review this CSS:</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">header</span> <span class="nt">h1</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">header</span> <span class="nt">nav</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Notice we overwrote both default <code class="highlighter-rouge">display</code> values. The updated <code class="highlighter-rouge">inline-block</code> will allow our <code class="highlighter-rouge">&lt;h1&gt;</code> and <code class="highlighter-rouge">&lt;nav&gt;</code> to stack up horizontally because they are now being treated as <code class="highlighter-rouge">inline</code> elements that respect <code class="highlighter-rouge">width</code> and <code class="highlighter-rouge">height</code>.</p>
+<p>At this point it’s now a matter of using the <code class="highlighter-rouge">box-model</code> to push elements around where we want them. This layout approach pales in comparison with the <code class="highlighter-rouge">flex box module</code> but it’s great to get a solid understanding of for older browsers.</p>
+<h5>Follow Along</h5>
+<p>Follow the instructions found here to explore several display property values:
+<a href="https://codepen.io/lambdaschool/pen/oabLjN">Click me to go to the tutorial</a></p>
+<h5>Challenge</h5>
+<p>Go to your favorite website and use the developer tools to update various elements on the page. Explore each of the following display property values:</p>
+<ul>
+<li>none</li>
+<li>block</li>
+<li>inline</li>
+<li>inline-block</li>
+</ul>
+<p>Stretch yourself by using other display properties we haven’t discussed yet by <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">clicking here</a>.</p>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to implement a CSS reset and understand why it’s important for cross browser development</h4>
+<p>CSS resets allow development teams to have a consistent rendering experience across multiple browsers. Resets are common in the web development industry and although they may not be right every situation, knowing about them and how they are used it critical to most projects.</p>
+<h5>Overview</h5>
+<h3 id="what-is-a-css-reset">What is a CSS Reset?</h3>
+<p>A CSS reset is when a developer will remove all default styling provided by browsers. Usually, a CSS reset will set all box model and font properties to 0 or inherit.</p>
+<p>Example code from Eric Meyer’s popular CSS reset:</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nt">html</span><span class="o">,</span> <span class="nt">body</span><span class="o">,</span> <span class="nt">div</span><span class="o">,</span> <span class="nt">span</span><span class="o">,</span> <span class="nt">applet</span><span class="o">,</span> <span class="nt">object</span><span class="o">,</span> <span class="nt">iframe</span><span class="o">,</span>  
+<span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">h5</span><span class="o">,</span> <span class="nt">h6</span><span class="o">,</span> <span class="nt">p</span><span class="o">,</span> <span class="nt">blockquote</span><span class="o">,</span> <span class="nt">pre</span><span class="o">,</span>  
+<span class="nt">a</span><span class="o">,</span> <span class="nt">abbr</span><span class="o">,</span> <span class="nt">acronym</span><span class="o">,</span> <span class="nt">address</span><span class="o">,</span> <span class="nt">big</span><span class="o">,</span> <span class="nt">cite</span><span class="o">,</span> <span class="nt">code</span><span class="o">,</span>  
+<span class="nt">del</span><span class="o">,</span> <span class="nt">dfn</span><span class="o">,</span> <span class="nt">em</span><span class="o">,</span> <span class="nt">img</span><span class="o">,</span> <span class="nt">ins</span><span class="o">,</span> <span class="nt">kbd</span><span class="o">,</span> <span class="nt">q</span><span class="o">,</span> <span class="nt">s</span><span class="o">,</span> <span class="nt">samp</span><span class="o">,</span>  
+<span class="nt">small</span><span class="o">,</span> <span class="nt">strike</span><span class="o">,</span> <span class="nt">strong</span><span class="o">,</span> <span class="nt">sub</span><span class="o">,</span> <span class="nt">sup</span><span class="o">,</span> <span class="nt">tt</span><span class="o">,</span> <span class="nt">var</span><span class="o">,</span>  
+<span class="nt">b</span><span class="o">,</span> <span class="nt">u</span><span class="o">,</span> <span class="nt">i</span><span class="o">,</span> <span class="nt">center</span><span class="o">,</span>  
+<span class="nt">dl</span><span class="o">,</span> <span class="nt">dt</span><span class="o">,</span> <span class="nt">dd</span><span class="o">,</span> <span class="nt">ol</span><span class="o">,</span> <span class="nt">ul</span><span class="o">,</span> <span class="nt">li</span><span class="o">,</span>  
+<span class="nt">fieldset</span><span class="o">,</span> <span class="nt">form</span><span class="o">,</span> <span class="nt">label</span><span class="o">,</span> <span class="nt">legend</span><span class="o">,</span>  
+<span class="nt">table</span><span class="o">,</span> <span class="nt">caption</span><span class="o">,</span> <span class="nt">tbody</span><span class="o">,</span> <span class="nt">tfoot</span><span class="o">,</span> <span class="nt">thead</span><span class="o">,</span> <span class="nt">tr</span><span class="o">,</span> <span class="nt">th</span><span class="o">,</span> <span class="nt">td</span><span class="o">,</span>  
+<span class="nt">article</span><span class="o">,</span> <span class="nt">aside</span><span class="o">,</span> <span class="nt">canvas</span><span class="o">,</span> <span class="nt">details</span><span class="o">,</span> <span class="nt">embed</span><span class="o">,</span>  
+<span class="nt">figure</span><span class="o">,</span> <span class="nt">figcaption</span><span class="o">,</span> <span class="nt">footer</span><span class="o">,</span> <span class="nt">header</span><span class="o">,</span> <span class="nt">hgroup</span><span class="o">,</span>  
+<span class="nt">menu</span><span class="o">,</span> <span class="nt">nav</span><span class="o">,</span> <span class="nt">output</span><span class="o">,</span> <span class="nt">ruby</span><span class="o">,</span> <span class="nt">section</span><span class="o">,</span> <span class="nt">summary</span><span class="o">,</span>  
+<span class="nt">time</span><span class="o">,</span> <span class="nt">mark</span><span class="o">,</span> <span class="nt">audio</span><span class="o">,</span> <span class="nt">video</span> <span class="p">{</span>  
+<span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>  
+<span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>  
+<span class="nl">border</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>  
+<span class="nl">font-size</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>  
+<span class="nl">font</span><span class="p">:</span> <span class="nb">inherit</span><span class="p">;</span>  
+<span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">baseline</span><span class="p">;</span>  
+<span class="p">}</span>
+
+</code></pre></div></div>
+<p>This type of reset is beginner-friendly because it forces you to create your own styles from scratch.</p>
+<h3 id="alternative-resets">Alternative Resets</h3>
+<p>There are other more tailored resets that companies will use that are very specific to their needs. Some companies will incorporate their own style guides into a reset so that all new developers joining the company are aligned from the beginning.</p>
+<p>A popular alternative to just setting everything to zero is called Normalize. Normalize focuses on only fixing the cross browser problems and adding your own styles. The focus here is to utilize the positive sides of default browser styles. If you would like to learn more about normalize it would be to your advantage as many companies use this to build their projects.</p>
+<p>Link to normalize: https://necolas.github.io/normalize.css/</p>
+<h3 id="implementation">Implementation</h3>
+<p>Because resets knock out most default styling from the browser, you will want to place your reset code at the top of your CSS page. If you put the reset at the bottom of your page, it will knock out all your styles due the cascade of CSS.</p>
+<p>If you choose to use a CSS reset, make it your first priority to use it at the top of your CSS files when starting a project, otherwise it will be more of a headache than a help.</p>
+<h5>Follow Along</h5>
+<h3 id="css-reset-in-action">CSS Reset In Action</h3>
+<p>The best way to see a reset in action is to use existing code with default settings in it. Then, add a reset to see the difference. Follow these instructions to see how impactful a reset it:</p>
+<ul>
+<li>Open this codepen: https://codepen.io/lambdaschool/pen/bjWbrx?editors=1000</li>
+<li>Go to Eric Meyer’s reset page: https://meyerweb.com/eric/tools/css/reset/</li>
+<li>Copy and paste the CSS reset code</li>
+<li>Paste the code in the CSS section of the codepen you have open</li>
+<li>Observe the huge changes that just occurred</li>
+</ul>
+<p>Notice how your code is now looking lifeless. This is pretty jarring at first, but it gives us an opportunity now style these tags the way the designer wants without being worried about cross browser issues.</p>
+<h5>Challenge</h5>
+<h3 id="see-the-difference-reset-vs-normalize">See The Difference: Reset vs Normalize</h3>
+<p>Use this codepen: https://codepen.io/lambdaschool/pen/bjWbrx?editors=1000</p>
+<p>Implement the eric meyer reset and take note of how much changed. Then implement normalize instead of the eric meyer reset. Notice the subtle but important differences. Make a list of changes you see between the two approaches by inspecting the code in your web developer tools and looking at the CSS properties on each element.</p>
+<hr>
+<h2 class="display-4">
+<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
+<ul class="list-group">
+<li class="list-group-item">
+<h5><a target="_blank" href="https://github.com/LambdaSchool/User-Interface">User Interface Project: Great Idea Web Page</a></h5>
+<p>You will build a web page based off a design file provided to you. This project has two challenges:</p>
+<ol>
+<li>Build the web page using inline-block layout techniques</li>
+</ol>
+<p>This 30 minute walkthrough has been very helpful if you’re a first time user of git and and IDE: https://youtu.be/iEYHqj9rT0Y</p>
+</li>
+</ul>
+<h2 class="display-4">
+<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
+<h3 class="display-5">Class Recordings</h3>
+<p class="lead">You can use class recordings to help you master the material.</p>
+<div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<strong><a target="_blank" href="https://youtu.be/0cFz6FD86AY">User Interface II for WebPT17 w/ Pace Ellsworth</a></strong>
+<p>User Interface II lecture with Pace!</p>
+</li>
+<li class="list-group-item">
+<a href="/archive/FSW/module/recGvXyWT6AvGtMHR">All previous recordings</a>
+</li>
+</ul>
+</div>
+<h3 class="display-5">Demonstrate Mastery</h3>
+<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
+<ul>
+<li>Objective challenge: <p><a href="https://codepen.io/lambdaschool/pen/qJbZaM?editors=1100">Take the code from the tutorial</a> and add 4 new boxes. Update each box with unique box model values and see how they interact with each other.</p>
+</li>
+<li>Objective challenge: <p>Go to your favorite website and use the developer tools to update various elements on the page. Explore each of the following display property values:</p>
+<ul>
+<li>none</li>
+<li>block</li>
+<li>inline</li>
+<li>inline-block</li>
+</ul>
+<p>Stretch yourself by using other display properties we haven’t discussed yet by <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">clicking here</a>.</p>
+</li>
+<li>Objective challenge: <h3 id="see-the-difference-reset-vs-normalize">See The Difference: Reset vs Normalize</h3>
+<p>Use this codepen: https://codepen.io/lambdaschool/pen/bjWbrx?editors=1000</p>
+<p>Implement the eric meyer reset and take note of how much changed. Then implement normalize instead of the eric meyer reset. Notice the subtle but important differences. Make a list of changes you see between the two approaches by inspecting the code in your web developer tools and looking at the CSS properties on each element.</p>
+</li>
+<li>Project: User Interface Project: Great Idea Web Page</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80850900-4');
+</script>
+<script type="text/javascript">
+  function getDomain() {
+    const domainName = window.location.hostname.split('.')[1];
+    return `${domainName}.com`;
+  }
+</script>
+<script src="" integrity="" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
+<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+  SimpleJekyllSearch.init({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    dataSource: '/search.json',
+    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="User Interface II">{title}</a></li>',
+    noResultsText: '',
+    limit: 10,
+    fuzzy: true,
+  })
+</script>
+<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
+  if (window.attachEvent) {
+    window.attachEvent('onload', verifySignedIn);
+  } else {
+    if (window.onload) {
+      var currentOnLoadFn = window.onload;
+      var newOnLoadFn = function (evt) {
+        currentOnLoadFn(evt);
+        verifySignedIn();
+      };
+      window.onload = newOnLoadFn;
+    } else {
+      window.onload = verifySignedIn;
+    }
+  }
+
+  function verifySignedIn() {
+    if (isPagePublic()) {
+      return showPageContents();
+    }
+
+    window.__user = null;
+    isSignedIn().then((user) => {
+      window.__user = user;
+
+      if (!user.signedIn) {
+        redirectToSignIn();
+      } else if (!user.student && !window.__openToAdmissions) {
+        showUnauthorizedMessage();
+      } else {
+        showPageContents();
+      }
+    });
+  }
+
+  function isPagePublic() {
+    const openCourses = [
+      'and-pre',
+      'ds-pre',
+      'fsw-pre',
+      'help',
+      'ios-pre',
+    ];
+
+    const openPages = [
+      'cs-and',
+      'cs-fsw',
+      'cs-ios',
+      'cr',
+      'ds',
+      'jx',
+      'p4s',
+      'ux',
+    ];
+
+    const pathParts = window.location.pathname.split('/');
+    const courseName = pathParts[1];
+    const pageName = pathParts[pathParts.length - 1];
+
+    return openCourses.includes(courseName) || openPages.includes(pageName);
+  }
+
+  function isSignedIn() {
+    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
+
+    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
+
+    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
+      .then((response) => response.text())
+      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
+      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
+      .catch((error) => {});
+  }
+
+  function redirectToSignIn() {
+    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+    const redirectMessage = document.querySelector('#redirect-message');
+    redirectMessage.style.display = "block";
+    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+    window.location = signInUrl;
+  }
+
+  function showPageContents() {
+    document.querySelector('#content-wrapper').style.visibility = 'visible';
+  }
+
+  function showUnauthorizedMessage() {
+    document.querySelector('#unauthorized-message').style.display = 'block';
+  }
+
+  function getAuthBaseUrl() {
+    const domain = getDomain();
+    const authBaseUrl = `https://auth.${domain}`;
+    return authBaseUrl;
+  }
+</script><script src="/assets/js/docs.min.js"></script><script>
+  var MathJax = {
+    tex: {
+      inlineMath: [['$$', '$$'], ['\[', '\])']]
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax span": {
+          color: "#000000"
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script>
+  handleExternalLinks();
+
+  function handleExternalLinks() {
+    const domain = getDomain();
+    const links = document.querySelectorAll('a');
+    return links.forEach((link) => {
+      if (!link.host.includes(domain)) link.target = '_blank';
+    })
+  };
+</script>
+</div>
+</body>
+</html>

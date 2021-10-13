@@ -1,0 +1,3189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Intended as a home for Lambda School curriculum.">
+<meta name="author" content="">
+<meta name="generator" content="Jekyll v3.8.0">
+<title>Java - Intro to Maven, Spring, and Tomcat Using REST API · Lambda School</title>
+
+<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+  analytics.page();
+  }}();
+</script>
+
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#a0001e">
+</head>
+<body>
+<noscript>Please enable JavaScript to view this page.</noscript>
+<div id="redirect-message" style="display: none;">
+You must be logged in to view this page.
+</div>
+<div id="unauthorized-message" style="display: none;">
+You must be a Lambda School student to view this page.
+</div>
+<div id="content-wrapper" style="visibility: hidden;">
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container">
+<span class="skiplink-text">Skip to main content</span>
+</div>
+</a>
+<div class="mobile-menu">
+<div class="m-drop">
+<div class="mobile-row">
+<div class="header-row" style="padding: 3px 7px">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
+</svg></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+</button>
+</div>
+</div>
+<div class="nav-row">
+<div class="results-container">
+<ul id="results-container" class="dropdown list-group"></ul>
+</div>
+<div id="mobile-course-menu" class="collapse nav-row">
+<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+<nav class="bd-links">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web API: Java</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recnLDyTtONLTMiFJ">
+1.&nbsp;&nbsp;Java Precourse Information
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recfnUAvFbeyIAHib/">
+Welcome to Java Spring
+</a>
+</li>
+<li>
+<a href="/web4java/module/recjH0lMflsFIVzDM/">
+Java Spring Course Table of Contents
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recoJ4ZqNQWX3cy6E">
+2.&nbsp;&nbsp;Java Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recAGVTYNZyJbEFpu/">
+Java - JDK and Java Classes
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec6Hrk77HupYeoN5/">
+Java Interfaces, Abstract Classes, Lambda Expression
+</a>
+</li>
+<li>
+<a href="/web4java/module/recyJ663TrxVgpqY9/">
+Java - RDBMS and SQL Basics
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/web4java/module/recqtftA9E98qpbak/">
+Java - Intro to Maven, Spring, and Tomcat Using REST API
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recRVUSWQEtosl0Cz">
+3.&nbsp;&nbsp;RDBMS and Intro to APIs
+</a>
+<ul class="nav bd-sidenav">
+
+
+<li>
+<a href="/web4java/module/recb0OVmRrJzqhH4D/">
+Java - Spring Database Creation Including Seed Data
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec3THcdjv8BumGCt/">
+Java - Read Data using CRUD Operations
+</a>
+</li>
+<li>
+<a href="/web4java/module/recJihkiNn2KH2nEW/">
+Java - Inserting Deleting and Updating Data using CRUD Operations
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec2oQCFWOVShtxIx/">
+Java - Data Modeling and Auditing Fields with custom querying
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recSqm5AAEkJcIl3p">
+4.&nbsp;&nbsp;Java Frameworks
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/rec3E1WYDyoiEF1e3/">
+Java - Exception Handling
+</a>
+</li>
+<li>
+<a href="/web4java/module/rececDV2OMIUcY2eH/">
+Java - User Authentication
+</a>
+</li>
+<li>
+<a href="/web4java/module/recDboXln5wm4aKJt/">
+Java - Automated Testing
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec7pCiBPzI4DkAJT/">
+Java - Java Deployment and Best Practices
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recC5dhR9menaROwx">
+5.&nbsp;&nbsp;WEB Unit 4 Java Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-container">
+<div class="sidebar-container bd-sidebar">
+<div class="docs-sidebar">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
+<ul id="results-container" class="dropdown list-group"></ul>
+<nav class="bd-links collapse" id="bd-docs-nav">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web API: Java</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recnLDyTtONLTMiFJ">
+1.&nbsp;&nbsp;Java Precourse Information
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recfnUAvFbeyIAHib/">
+Welcome to Java Spring
+</a>
+</li>
+<li>
+<a href="/web4java/module/recjH0lMflsFIVzDM/">
+Java Spring Course Table of Contents
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recoJ4ZqNQWX3cy6E">
+2.&nbsp;&nbsp;Java Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recAGVTYNZyJbEFpu/">
+Java - JDK and Java Classes
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec6Hrk77HupYeoN5/">
+Java Interfaces, Abstract Classes, Lambda Expression
+</a>
+</li>
+<li>
+<a href="/web4java/module/recyJ663TrxVgpqY9/">
+Java - RDBMS and SQL Basics
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/web4java/module/recqtftA9E98qpbak/">
+Java - Intro to Maven, Spring, and Tomcat Using REST API
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recRVUSWQEtosl0Cz">
+ 3.&nbsp;&nbsp;RDBMS and Intro to APIs
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recb0OVmRrJzqhH4D/">
+Java - Spring Database Creation Including Seed Data
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec3THcdjv8BumGCt/">
+Java - Read Data using CRUD Operations
+</a>
+</li>
+<li>
+<a href="/web4java/module/recJihkiNn2KH2nEW/">
+Java - Inserting Deleting and Updating Data using CRUD Operations
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec2oQCFWOVShtxIx/">
+Java - Data Modeling and Auditing Fields with custom querying
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recSqm5AAEkJcIl3p">
+4.&nbsp;&nbsp;Java Frameworks
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/rec3E1WYDyoiEF1e3/">
+Java - Exception Handling
+</a>
+</li>
+<li>
+<a href="/web4java/module/rececDV2OMIUcY2eH/">
+Java - User Authentication
+</a>
+</li>
+<li>
+<a href="/web4java/module/recDboXln5wm4aKJt/">
+Java - Automated Testing
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec7pCiBPzI4DkAJT/">
+Java - Java Deployment and Best Practices
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recC5dhR9menaROwx">
+5.&nbsp;&nbsp;WEB Unit 4 Java Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<main class="content-container flex-wrapper" role="main">
+<div class="sticky-nav">
+<div class="sprint-nav">
+<ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+<li class="toc-entry toc-h2"><a href="#guided-project">Guided Project</a></li>
+<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+</ul>
+</div>
+
+</div>
+<div class="wrapper limit-width">
+<div class="flex-wrapper">
+<div class="limit-width">
+<div class="jumbotron">
+<h1 class="bd-title" id="content">Java - Intro to Maven, Spring, and Tomcat Using REST API</h1>
+ <span class="lead">
+<p class="bd-lead"></p>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<p><a id="IntelliJ_and_REST_API"></a></p>
+</span>
+<strong>At the end of this module, you should be able to:</strong>
+<ul>
+<li>use IntelliJ in the following areas: application creation, code entry, and code execution</li>
+<li>download, commit and branch source control repositories</li>
+<li>explain the uses of and differences between Maven, Spring, and Tomcat</li>
+<li>build a REST service using Spring Boot</li>
+<li>use and implement inversion of control and dependency injection with Spring</li>
+<li>implement Beans throughout the Beans’ lifecycle controlling the Beans using annotations</li>
+<li>produce a complete application following the Maven Phases</li>
+<li>use Postman to manually test Web APIs</li>
+<li>create Spring Boot Applications with IntelliJ Community Edition (*** OPTIONAL ***)</li>
+<li>use tips and tricks of IntelliJ to improve programming efficiency (*** OPTIONAL ***)</li>
+</ul>
+</div>
+<div class="alert alert-warning" role="alert">
+<h4>Pro Tip</h4>
+<p>Celebrate wrong answers, because that means someone’s about to learn!</p>
+</div>
+<h2 class="display-4">
+<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
+<p class="lead">Review each preclass resource before class.</p>
+<div class="preclass">
+<ul class="list-group list-group-flush">
+</ul>
+</div>
+<h2 class="display-4">
+<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
+<h4 class="mark mb-3 p-2">Learn to use IntelliJ in the following areas: application creation, code entry, and code execution</h4>
+<p><a id="IntelliJ_Overview"></a></p>
+<h5>Overview</h5>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+<li>JetBrains IntelliJ IDEA IDE</li>
+</ul>
+<h3 id="whats-in-a-name">What’s in a name</h3>
+<p>Most of the time, Java development is done using an Integrated Development Environment (IDE). The most popular one is JetBrains’ IntelliJ Idea IDE. This IDE comes in two versions:</p>
+<ul>
+<li>Free community version</li>
+<li>a commercial Ultimate Version available through your GitHub Student Pack.
+<ul>
+<li>provides smooth integration with the Spring Framework so we will be using the Ultimate Version!</li>
+</ul>
+</li>
+</ul>
+<p>In the industry, this IDE goes by two different names: <strong>Idea</strong> and my preference <strong>IntelliJ</strong>. When doing web searches to find information about this IDE, try searching using both terms. I usually start with IntelliJ and if I don’t find what I need, I then try Idea! For example, I would search in the following order:</p>
+<ul>
+<li>intellij code completion</li>
+<li>idea code completion</li>
+<li>jetbrains code completion (as a last resort!)</li>
+</ul>
+<h5>Follow Along</h5>
+<h3 id="using-intellij">Using IntelliJ</h3>
+<p>This is meant to be a quick over of how to use IntelliJ Idea Ultimate Education. Many new terms are mentioned here. They will be explained as the day goes along.</p>
+<h4 id="create-a-new-application">Create a new application</h4>
+<p>When you first launch IntelliJ, you are presented with an opening screen</p>
+<ul>
+<li>On the left panel are previously opened projects if any
+<ul>
+<li>To reopen the project, simple click on it</li>
+<li>To remove previous open projects, hover over a project and click on the X that appears in the corner by the project’s name</li>
+</ul>
+</li>
+<li>On the right are your options to do things other than open an old project
+<ul>
+<li>Normally you will use <code class="highlighter-rouge">Open</code> to open a saved project that is not currently on the previously opened list</li>
+<li>Here we are using <code class="highlighter-rouge">Create New Project</code> to create a new project</li>
+<li>Towards the bottom is a pull down that lets you configure the IntelliJ IDE</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-01.png" alt="IntelliJ Launch Screen"></p>
+<ul>
+<li>Click on Create New Project and enter the new project wizard
+<ul>
+<li>The next screen allows you to pick what system you want to use in your application. For our purposes we pick Spring Initializr to create a backend API System.</li>
+<li>You also pick which Software Development Kit (SDK) you wish to use. I am going with version 11.0.5
+<ul>
+<li>Remember SDK is the generic name of the Java Development Kit (JDK)</li>
+</ul>
+</li>
+<li>Click Next to move to the next screen</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-02.png" alt="IntelliJ Pick System"></p>
+<ul>
+<li>On the next screen we set up Project Metadata
+<ul>
+<li>Group:
+<ul>
+<li>for school I use <code class="highlighter-rouge">com.lambdaschool.com</code>
+</li>
+<li>for personal projects, I use my preferred username <code class="highlighter-rouge">local.jrmmba</code>
+</li>
+</ul>
+</li>
+<li>Artifact - name of project. For this example we will call it <code class="highlighter-rouge">hellospring</code>
+<ul>
+<li>Must be done in lowercase.</li>
+<li>No uppercase allowed</li>
+<li>No spaces or special characters allowed</li>
+</ul>
+</li>
+<li>Type - we are using Maven as our application manager so we will select <code class="highlighter-rouge">Maven Project</code>
+</li>
+<li>Language - we are programming in <code class="highlighter-rouge">Java</code>
+</li>
+<li>Java Version - I am using version <code class="highlighter-rouge">11</code> and so picked that one</li>
+<li>Version - completely up to you. I will normally leave this as the default</li>
+<li>Name - normally the same as the artifact but can accept spaces and other characters</li>
+<li>Description - completely up to you. I will normally leave this as the default</li>
+<li>Package - should default to a combination of the Group and Artifact</li>
+<li>Click Next to move to the next screen</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-03.png" alt="IntelliJ Project Metadata"></p>
+<ul>
+<li>On the next screen we pick our dependencies that will be used by Spring Boot:
+<ul>
+<li>Pick the current released version of Spring Boot</li>
+<li>Search for the dependencies you want in the search box</li>
+<li>For this project we will need
+<ul>
+<li>Web</li>
+<li>Devtools</li>
+</ul>
+</li>
+<li>There are many, many to pick from - we will learn more about this as the course goes on</li>
+<li>If you add one by mistake, click the X next to the name in the Selected Dependencies panel</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-04.gif" alt="IntelliJ Dependencies"></p>
+<ul>
+<li>The last screen allows us to say where to save the project
+<ul>
+<li>I usually allow the project name to default to the project’s name</li>
+<li>For project location, pick a work folder (mine is <code class="highlighter-rouge">jxwork</code>) and create a new folder under that work folder to house your project and all its many files</li>
+<li>Seldom do we use the More Settings option</li>
+<li>Click Finish to move on</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-05.png" alt="IntelliJ Finish"></p>
+<ul>
+<li>Allow the project to be created
+<ul>
+<li>If you ever get the warning, “Maven projects need to be imported”, ALWAYS select Enable Auto-Import!</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-06.png" alt="IntelliJ AutoImport"></p>
+<h4 id="folder-layout">Folder layout</h4>
+<p>You’ll find the following files in the newly created application. Look in the Project Window Pane, expanding the directories as necessary.</p>
+<ul>
+<li>External libraries
+<ul>
+<li>JDK Files</li>
+<li>Dependencies used by Maven</li>
+</ul>
+</li>
+<li>IntelliJ and Maven Files
+<ul>
+<li>.idea folder
+<ul>
+<li>Contains configurations specific to this application for IntelliJ, also called Idea</li>
+</ul>
+</li>
+<li>.mvn folder
+<ul>
+<li>Contains the Maven wrapper which is the application manager being used by the application</li>
+</ul>
+</li>
+<li>.gitignore
+<ul>
+<li>A standard gitignore file generated by IntelliJ.</li>
+<li>Not a file we will use. We create our own gitignore file.</li>
+</ul>
+</li>
+<li>hellospring.iml</li>
+<li>HELP.md
+<ul>
+<li>Markdown file with links to
+<ul>
+<li>Maven Documentation</li>
+<li>Spring Documentation</li>
+<li>REST API descriptions</li>
+<li>Spend some time looking at these! Good stuff.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>mvnw
+<ul>
+<li>Needed for Maven so just leave alone</li>
+</ul>
+</li>
+<li>mvnm.cmd
+<ul>
+<li>Needed for Maven so just leave alone</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Our Application - This is where we do our most work
+<ul>
+<li>pom.xml
+<ul>
+<li>The configuration file for Maven</li>
+</ul>
+</li>
+<li>src
+<ul>
+<li>Where we write our application
+<ul>
+<li>main - the code for our application</li>
+<li>test - where we write our integration and unit tests</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-07.png" alt="IntelliJ File Structure"></p>
+<p>We are going to build an API system. This means that for a user to see the output, they will have to surf to a website, called an endpoint. Surfing to that endpoint triggers a Java method to run which ultimately returns something to the user’s browser.</p>
+<h4 id="create-a-new-package">Create a new package</h4>
+<p>We organize our code into packages. Code that performs similar functions goes together in package. Let’s create two packages called <code class="highlighter-rouge">models</code> and <code class="highlighter-rouge">controllers</code>.</p>
+<p>We are working inside the following folder structure:</p>
+<ul>
+<li>src
+<ul>
+<li>main
+<ul>
+<li>java
+<ul>
+<li>com
+<ul>
+<li>lambdaschool
+<ul>
+<li>hellospring</li>
+</ul>
+ </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>For each new package, Right Click on the “main” package name - in our case hellospring:</p>
+<ul>
+<li>Select <code class="highlighter-rouge">New</code>
+<ul>
+<li>Select <code class="highlighter-rouge">Package</code>
+<ul>
+<li>Enter the name of the package at the end of <code class="highlighter-rouge">com.lambaschool.hellospring.</code>
+</li>
+<li>This will make a “sub-package” of <code class="highlighter-rouge">hellospring</code>!</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-08.gif" alt="IntelliJ packages"></p>
+<h4 id="create-a-new-class">Create a new class</h4>
+<p>Like methods are grouped in classes inside each package. Let’s create two new classes called <code class="highlighter-rouge">Hello</code> under <code class="highlighter-rouge">models</code> and a class called <code class="highlighter-rouge">HelloController</code> under <code class="highlighter-rouge">controllers</code>.</p>
+<ul>
+<li>For each new class, Right Click on the package name
+<ul>
+<li>Select <code class="highlighter-rouge">New</code>
+<ul>
+<li>Select <code class="highlighter-rouge">Java Class</code>
+<ul>
+<li>Leave the type selected as Class</li>
+<li>Enter the name of the class - remember classes start with a capital letter</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>This creates a code structure for the Class</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-09.gif" alt="IntelliJ Classes"></p>
+<h4 id="generate-getter-and-setter">Generate Getter and Setter</h4>
+<p>Enter the following code into the <code class="highlighter-rouge">model.Hello</code> class:</p>
+<pre><code class="language-JAVA">{
+    String message;
+
+}
+</code></pre>
+<p>The <code class="highlighter-rouge">Hello</code> class now contains a field. We can automatically generate Getters and Setters for our fields.</p>
+<ul>
+<li>Right click in the code where you want to put the Getters and Setters
+<ul>
+<li>Generate
+<ul>
+<li>Getter and Setter
+<ul>
+<li>Make sure the fields are highlighted and click Ok</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-10.gif" alt="IntelliJ Getter and Setter"></p>
+<h4 id="generate-constructors">Generate Constructors</h4>
+<p>Let’s automatically generate a constructor that sets the message field:</p>
+<ul>
+<li>Right click in the code where you want to put the constructor
+<ul>
+<li>Generate
+<ul>
+<li>Constructor
+<ul>
+<li>Make sure the fields you want to set in the constructor, if any, are highlighted</li>
+<li>Click ok</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-11.gif" alt="IntelliJ Constructor"></p>
+<h4 id="automatic-import-of-imports">Automatic import of imports</h4>
+<p>Let’s enter some code, in the <code class="highlighter-rouge">controllers.HelloController</code> class. To see descriptions of each line of code, expand the commented code section.</p>
+<p>Notice when you enter code that requires an import, for example <code class="highlighter-rouge">@RestController</code>, that import is automatically added by IntelliJ. Sometimes IntelliJ is unsure which import you want, and you have to either pick the import from a list or manually enter it.</p>
+<pre><code class="language-JAVA">package com.lambdaschool.hellospring.controllers;
+
+import com.lambdaschool.hellospring.models.Hello;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloController
+{
+    @GetMapping("/hellospring/{msg}")
+    public ResponseEntity&lt;?&gt; getMessage(@PathVariable String msg)
+    {
+        Hello myMsg = new Hello(msg);
+        return new ResponseEntity&lt;&gt;(myMsg, HttpStatus.OK);
+    }
+}
+</code></pre>
+<p>And yes this code looks different. Controllers are the intersection between the web and Java. The use of annotations or <code class="highlighter-rouge">@&lt;commands&gt;</code> is very prevalent. We will look at each annotation as we go through the course.</p>
+<details>
+<summary>commented code</summary>
+<pre><code class="language-JAVA">
+
+// The package line is added automatically when the class is created
+package com.lambdaschool.hellospring.controllers;
+
+// These imports are added automatically when the command that requires is typed in
+import com.lambdaschool.hellospring.models.Hello;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+// the following Spring Annotation identifies this class as a class
+// containing routes, endpoints for our API application
+@RestController
+public class HelloController
+{
+    // the following Spring Annotation identifies this method
+    // as a Get in our API application.
+    // The route take a path variable
+    @GetMapping("/hellospring/{msg}")
+
+    // getMessage is the first method that appears after the @GetMapping annotation
+    // so it is the method that will be executed when the route /hellospring/{msg} is used
+    //
+    // our methods for routes normally return a ResponseEntity&gt;.
+    // the &gt; says we will determine the class of this ResponseEntity later
+    //
+    // The @PathVariable annotation ties the path variable from the route
+    // to the Java Variable msg
+    public ResponseEntity&lt;?&gt; getMessage(@PathVariable String msg)
+    {
+        Hello myMsg = new Hello(msg);
+
+        // we return a ResponseEntity with a body of the object myMsg
+        // and an HTTP Status of OK
+        return new ResponseEntity&lt;&gt;(myMsg, HttpStatus.OK);
+    }
+}
+</code></pre>
+</details>
+<h4 id="execute-program">Execute program</h4>
+<p>To run this application, click on the green triangle in the upper right hand corner.</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-12.png" alt="IntelliJ Execute"></p>
+<p>This is a Spring Boot Application. Logging information will appear in the console but to see output you will need to surf to the endpoint.</p>
+<p><a href="http://localhost:8080/hellospring/John">http://localhost:8080/hellospring/John</a></p>
+<p>Gives the output:</p>
+<pre><code class="language-JSON">{
+    "message": "Hello John"
+}
+</code></pre>
+<p>We have written out first Java Spring Application. Keep studying to figure out what we just did!</p>
+<h5>Dig Deeper</h5>
+<ul>
+
+<li>
+<a href="https://www.jetbrains.com/idea/documentation/" target="blank_">JetBrains</a><br> JetBrains IntelliJ IDEA IDE</li>
+<li>
+<a href="https://www.tutorialspoint.com/intellij_idea/index.htm" target="blank_">IntelliJ Tutorial</a><br> IntelliJ Idea Tutorial</li>
+<li>
+<a href="https://docs.oracle.com/javase/tutorial/java/generics/wildcards.html" target="blank_">Wildcards</a><br> Oracle's Wildcard Tutorial</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to download, commit and branch source control repositories</h4>
+<p><a id="IntelliJ_and_GitHub"></a></p>
+<h5>Overview</h5>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+<li>JetBrains IntelliJ IDEA IDE</li>
+<li>GitHub</li>
+</ul>
+<p>You can use GitHub through the console or through IntelliJ itself. Let’s look at both!</p>
+<p>Note that both are adapted from <a href="https://github.com/atbenedict/Lambda-Git-Flow-for-Dummies/blob/master/README.md">The Lambda School Git Flow</a> so hopefully you are familiar with the process.</p>
+<p>We will be working through these steps using as a sample repository <code class="highlighter-rouge">java-catsanddogs</code> found at: <a href="https://github.com/LambdaSchool/java-catsanddogs.git">https://github.com/LambdaSchool/java-catsanddogs.git</a>.</p>
+<h5>Follow Along</h5>
+<h3 id="github-through-the-console">GitHub through the console</h3>
+<ul>
+<li>
+<p>Through the GitHub website, fork the repository <a href="https://github.com/LambdaSchool/java-catsanddogs.git">https://github.com/LambdaSchool/java-catsanddogs.git</a> to create <strong>YOUR OWN</strong> version of the repo.</p>
+</li>
+<li>
+<p>For Lambda School Projects, add your TL as a collaborator</p>
+<p><strong>on GitHub:</strong><br>
+<em><code class="highlighter-rouge">Settings</code></em> -&gt; <em><code class="highlighter-rouge">Collaborators</code></em> -&gt; <em><code class="highlighter-rouge">Add Collaborator</code> (use your TL’s handle)</em>&lt;/br&gt;
+<em>(I’d suggest grabbing the invite tag and DM it to your TL on Slack at this point)</em></p>
+</li>
+<li>
+<p>Clone <strong>YOUR</strong> Repo</p>
+<p><strong>back on your machine:</strong><br>
+<code class="highlighter-rouge">git clone &lt;your-repo-address&gt;</code></p>
+</li>
+<li>
+<p>Create a branch (the one you are going to be working on)</p>
+<p><code class="highlighter-rouge">cd &lt;repo directory&gt;</code>&lt;/br&gt;
+<code class="highlighter-rouge">git checkout -b 'firstname-lastname'</code></p>
+</li>
+<li>
+<p>Push your new branch up to GitHub and make all future pushes to that branch</p>
+<p><code class="highlighter-rouge">git push -u origin firstname-lastname</code></p>
+</li>
+<li>
+<p>Make some changes to the code</p>
+<ul>
+<li>Select Open from the IntelliJ Welcome Screen</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-git-01.png" alt="IntelliJ Open"></p>
+<ul>
+<li>Navigate to your local repo. Note I am using the columns view to show from where I am opening the application</li>
+<li>Expand your repo name</li>
+<li>Expand the folder containing your application</li>
+<li>Note that with Java Spring applications, opening the wrong folder is a common issue. Only When you see the <code class="highlighter-rouge">src</code> folder and the <code class="highlighter-rouge">pom.xml</code> file,
+<ul>
+<li>DO NOT SELECT ANY FILES</li>
+<li>Click <code class="highlighter-rouge">Open</code>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-git-02.png" alt="IntelliJ Open"></p>
+<ul>
+<li>
+<p>Your code should open as normal (this might take a while).</p>
+</li>
+<li>
+<p>For this example I am going to make the name of the cat always be returned in uppercase. So, in the models.Cat.java change the <code class="highlighter-rouge">catname</code> setter to the following:</p>
+</li>
+</ul>
+<pre><code class="language-JAVA">    public String getCatname()
+    {
+        return catname.toUpperCase();
+    }
+</code></pre>
+<ul>
+<li>Continue committing and pushing your changes to your local repo</li>
+</ul>
+<pre><code class="language-BASH">git add .
+git commit -m "Why this change"
+git push
+</code></pre>
+<ul>
+<li>I like to be completely out of IntelliJ when I do a push to GitHub. That way I know all of my changes have been saved</li>
+<li>
+<p>Remember the pushes have to be done from the repo root directory, the directory containing the README.md file!</p>
+</li>
+<li>
+<p>When you are ready to submit your project:</p>
+<p><strong>on GitHub:</strong><br>
+<code class="highlighter-rouge">Compare &amp; Pull Request</code> -&gt;
+<code class="highlighter-rouge">Base: YOUR MASTER</code> (Not the Lambda Master) compare fork: <strong><code class="highlighter-rouge">YOUR FORK</code></strong></p>
+</li>
+<li>
+<p>Add your TL as a reviewer on the Pull Request</p>
+<p>On the <em>‘<code class="highlighter-rouge">Open a Pull Request</code>‘</em> page click on <em><code class="highlighter-rouge">Reviewers</code></em>. If your TL has accepted your invite, then you should be able to select them here. If not, then they haven’t accepted the invite, and you will have to check back later…</p>
+</li>
+<li>
+<strong>Your TL</strong> will merge the work into <strong>YOUR</strong> Master fork when they have reviewed and approved it.</li>
+</ul>
+<h3 id="github-through-intellij">GitHub through IntelliJ</h3>
+<ul>
+<li>One time only, you need to connect IntelliJ to your GitHub account. You do this from the welcome screen
+<ul>
+<li>Configure -&gt; Preferences
+<ul>
+<li>Preferences for New Projects
+<ul>
+<li>Version Control
+<ul>
+<li>GitHub
+<ul>
+<li>Add Account
+<ul>
+<li>Sign in to GitHub using your account info</li>
+<li>You should see your picture and account info appear in the window</li>
+</ul>
+</li>
+<li>Click OK</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-git-04.png" alt="IntelliJ GitHub"></p>
+<ul>
+<li>
+<p>For each project</p>
+</li>
+<li>
+<p>Through the GitHub website, fork the repository <a href="https://github.com/LambdaSchool/java-catsanddogs.git">https://github.com/LambdaSchool/java-catsanddogs.git</a> to create <strong>YOUR OWN</strong> version of the repo</p>
+</li>
+<li>
+<p>For Lambda School Projects, add your TL as a collaborator</p>
+<p><strong>on GitHub:</strong><br>
+<em><code class="highlighter-rouge">Settings</code></em> -&gt; <em><code class="highlighter-rouge">Collaborators</code></em> -&gt; <em><code class="highlighter-rouge">Add Collaborator</code> (use your TL’s handle)</em>&lt;/br&gt;
+<em>(I’d suggest grabbing the invite tag and DM it to your TL on Slack at this point)</em></p>
+</li>
+<li>
+<p>Copy the link as if you are going to clone the repo from the console</p>
+</li>
+<li>
+<p>From IntelliJ, select Get From Version Control</p>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-git-03.png" alt="IntelliJ Open Version Control"></p>
+<ul>
+<li>Clone <strong>YOUR</strong> Repo
+<ul>
+<li>Paste the link to <strong>your</strong> GitHub repo in the URL: box</li>
+<li>Set your directory where you want to save the cloned repo</li>
+<li>Click Clone</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-git-05.png" alt="IntelliJ Clone"></p>
+<ul>
+<li>You will be asked
+<ul>
+<li>
+<strong>Checkout from Version Control</strong>: Create an IntelliJ Project</li>
+<li>Select <strong>No</strong>
+</li>
+</ul>
+</li>
+<li>Now open the project like normal</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-git-01.png" alt="IntelliJ Open"></p>
+<ul>
+<li>Navigate to your local repo. Note I am using the columns view to show from where I am opening the application</li>
+<li>Expand your repo name</li>
+<li>Expand the folder containing your application</li>
+<li>Note that with Java Spring applications, opening the wrong folder is a common issue. Only When you see the <code class="highlighter-rouge">src</code> folder and the <code class="highlighter-rouge">pom.xml</code> file,
+<ul>
+<li>DO NOT SELECT ANY FILES</li>
+<li>Click <code class="highlighter-rouge">Open</code>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-git-02.png" alt="IntelliJ Open"></p>
+<ul>
+<li>
+<p>Your code should open as normal (this might take a while).</p>
+</li>
+<li>
+<p>Create a branch (the one you are going to be working on)</p>
+<ul>
+<li>Goto to pull down menu <code class="highlighter-rouge">VCS</code> -&gt; <code class="highlighter-rouge">VCS Operations Popup...</code>
+<ul>
+<li>From Popup menu, select 7. Branches</li>
+<li>Create a new branch named your firstname-lastname</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-git-06.gif" alt="IntelliJ Create a Branch"></p>
+<ul>
+<li>Push that branch to your GitHub repo
+<ul>
+<li>Goto to pull down menu <code class="highlighter-rouge">VCS</code> -&gt; <code class="highlighter-rouge">VCS Operations Popup...</code>
+<ul>
+<li>From Popup menu, select 8. Push</li>
+<li>Click Push</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-git-07.gif" alt="IntelliJ Push"></p>
+<ul>
+<li>
+<p>Make some changes to the code</p>
+<ul>
+<li>For this example I am going to make the name of the cat always be returned in uppercase. So in the models.Cat.java change the <code class="highlighter-rouge">catname</code> setter to the following</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-JAVA">    public String getCatname()
+    {
+        return catname.toUpperCase();
+    }
+</code></pre>
+<ul>
+<li>
+<p>I also added a class Rabbit but did not add it to the repo</p>
+</li>
+<li>Notice files appear in different colors
+<ul>
+<li>Red -&gt; file not added to repo</li>
+<li>Blue -&gt; file changed from what has been committed</li>
+<li>For a complete list see <a href="https://www.jetbrains.com/help/idea/file-status-highlights.html">https://www.jetbrains.com/help/idea/file-status-highlights.html</a>
+</li>
+</ul>
+</li>
+<li>Continue committing and pushing your changes to your local repo
+<ul>
+<li>Goto to pull down menu <code class="highlighter-rouge">VCS</code> -&gt; <code class="highlighter-rouge">Commit..</code>
+<ul>
+<li>Fill in a commit message</li>
+<li>Remember to include Unversioned Files as needed</li>
+<li>Click Commit</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-git-08.png" alt="IntelliJ Commit"></p>
+<ul>
+<li>Now push that commit to your GitHub repo
+<ul>
+<li>Goto to pull down menu <code class="highlighter-rouge">VCS</code> -&gt; <code class="highlighter-rouge">VCS Operations Popup...</code>
+<ul>
+<li>From Popup menu, select 8. Push</li>
+<li>Click Push</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Note that if you wish to update the README.md, you can open it separately <code class="highlighter-rouge">File</code> -&gt; <code class="highlighter-rouge">Open</code> -&gt; <code class="highlighter-rouge">README.md</code>. It will then be included in your commits.</p>
+</li>
+<li>
+<p>When you are ready to submit your project, I recommended exiting out of IntelliJ completely, going to the GitHub website and following this process</p>
+<p><strong>on GitHub:</strong><br>
+<code class="highlighter-rouge">Compare &amp; Pull Request</code> -&gt;
+<code class="highlighter-rouge">Base: YOUR MASTER</code> (Not the Lambda Master) compare fork: <strong><code class="highlighter-rouge">YOUR FORK</code></strong></p>
+</li>
+<li>
+<p>Add your TL as a reviewer on the Pull Request</p>
+<p>On the <em>‘<code class="highlighter-rouge">Open a Pull Request</code>‘</em> page click on <em><code class="highlighter-rouge">Reviewers</code></em>. If your TL has accepted your invite, then you should be able to select them here. If not, then they haven’t accepted the invite, and come back later…</p>
+</li>
+<li>
+<strong>Your TL</strong> will merge the work into <strong>YOUR</strong> Master fork when they have reviewed and approved it.</li>
+</ul>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://www.jetbrains.com/help/idea/version-control-integration.html" target="blank_">Version Control in IntelliJ</a><br> Version Control in IntelliJ from JetBrains</li>
+<li>
+<a href="https://github.com/atbenedict/Lambda-Git-Flow-for-Dummies/blob/master/README.md" target="blank_">Lambda Git Flow in GitHub</a><br> The Lambda School Git Flow: GitHub document</li>
+<li>
+<a href="https://www.notion.so/GitFlow-step-by-step-a764163309754e23b1b9c4077b1653cc" target="blank_">Lambda Git Flow in Notion</a><br> The Lambda School Git Flow: Notion document</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to explain the uses of and differences between Maven, Spring, and Tomcat</h4>
+<p><a id="Maven_Spring_Tomcat"></a></p>
+<h5>Overview</h5>
+<ul>
+<li>See the Github Repository <a href="https://github.com/LambdaSchool/catsanddogs.git">https://github.com/LambdaSchool/catsanddogs.git</a> for the code used in the objective.</li>
+</ul>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+ <li>JetBrains IntelliJ IDEA IDE</li>
+<li>Postman</li>
+</ul>
+<h3 id="maven">Maven</h3>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/novideo.png" alt="Video Lecture"></p>
+<p>Maven “is a software project management and comprehension tool.” For more information, see <a href="https://maven.apache.org">https://maven.apache.org</a></p>
+<h4 id="defined">Defined</h4>
+<p>Maven is</p>
+<ul>
+<li>Abbreviated using <code class="highlighter-rouge">mvn</code>
+</li>
+<li>Yiddish Word meaning accumulator of knowledge</li>
+<li>Tool used for building and managing Java-base projects</li>
+<li>An application, dependency, library manager. Similar to yarn and npm in the JavaScript world.</li>
+<li>The framework, or tool, that allows us to make enterprise wide applications in Java that have multiple developers contributing</li>
+<li>Maven does have a main competitor, Gradle.
+<ul>
+<li>Gradle is widely used in the Kotlin, Android world.</li>
+<li>We had to pick one. We have decided to use Maven.
+<ul>
+<li>Our hiring partners did not seem to have a preference</li>
+<li>You instructor is most familiar with Maven</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="goals">Goals</h4>
+<p>The underlying Goals of Maven, or any application manager, are:</p>
+<ul>
+<li>Making the build process easier</li>
+<li>Providing a uniform build system</li>
+<li>Providing quality project information</li>
+<li>Providing Guidelines for best practices development</li>
+<li>Allowing transparent migration to new features</li>
+</ul>
+<h4 id="repositories">Repositories</h4>
+<p>One of Maven’s main functions is to manage repositories.</p>
+<ul>
+<li>
+<p>Repositories are libraries that extend Java</p>
+</li>
+<li>
+<p>Repositories are also referred to as dependencies in Maven’s configuration file</p>
+</li>
+<li>
+<p>Maven configurations are handled in a POM.XML configuration file.</p>
+<ul>
+<li>Stands for POM Project Object Model</li>
+<li>The POM file is referred to as the <strong>fundamental unit of work</strong> in Maven.</li>
+<li>This is where you
+<ul>
+<li>configure the versions of frameworks to use</li>
+<li>list which repositories, dependencies, you plan to use</li>
+<li>connect Spring Framework to Maven.</li>
+</ul>
+</li>
+<li>You can find new dependencies to add on the <a href="https://mvnrepository.com">MVNRepository Website</a>
+<ul>
+<li>Great site to see available dependencies</li>
+<li>Gives you information on versions and how to include the dependencies in your POM files</li>
+<li>To find out what the dependency does and how to use it, you will need to do some additional searches</li>
+</ul>
+</li>
+<li>Expand this to see a sample POM.XML file with comments on what is going on</li>
+</ul>
+</li>
+</ul>
+<details><summary>POM.XML</summary>
+<pre><code class="language-XML">
+
+
+
+
+
+
+
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelversion>4.0.0</modelversion>
+    <parent>
+
+        
+        <groupid>org.springframework.boot</groupid>
+        <artifactid>spring-boot-starter-parent</artifactid>
+        <version>2.2.4.RELEASE</version>
+        <relativepath></relativepath> 
+    </parent>
+
+        
+        <groupid>com.lambdaschool</groupid>
+
+    
+    <artifactid>catsanddogs</artifactid>
+
+    
+    <version>0.0.1-SNAPSHOT</version>
+
+    
+    <name>catsanddogs</name>
+
+    
+    <description>Demo project for Spring Boot</description>
+
+    
+    <properties>
+        <java.version>11</java.version>
+    </properties>
+
+    
+    <dependencies>
+
+        
+        <dependency>
+            <groupid>org.springframework.boot</groupid>
+            <artifactid>spring-boot-starter-data-jpa</artifactid>
+        </dependency>
+
+        
+        <dependency>
+            <groupid>org.springframework.boot</groupid>
+            <artifactid>spring-boot-starter-web</artifactid>
+        </dependency>
+
+        
+        <dependency>
+            <groupid>org.springframework.boot</groupid>
+            <artifactid>spring-boot-devtools</artifactid>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+
+        
+        <dependency>
+            <groupid>com.h2database</groupid>
+            <artifactid>h2</artifactid>
+            
+
+        </dependency>
+
+        
+        <dependency>
+            <groupid>org.springframework.boot</groupid>
+            <artifactid>spring-boot-starter-test</artifactid>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupid>org.junit.vintage</groupid>
+                    <artifactid>junit-vintage-engine</artifactid>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        
+        <plugins>
+            <plugin>
+                <groupid>org.springframework.boot</groupid>
+                <artifactid>spring-boot-maven-plugin</artifactid>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+</code></pre>
+</details>
+<ul>
+<li>To add a new dependency, follow these steps as an example
+<ul>
+<li>Find the dependency on MVNRepository
+<ul>
+<li>Surf to <a href="https://mvnrepository.com">https://mvnrepository.com</a>
+</li>
+<li>Search for <code class="highlighter-rouge">apache commons pool</code>
+</li>
+<li>Click the link that says Apache Commons Pool</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-mvn-01.png" alt="Apache Commons Pool"></p>
+<ul>
+<li>The default tab is the one you want, and you want to use the latest version that does not have some like beta, alpha, prerelease in its version number. Also the version number background should be white, not filled in with some color.</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-mvn-02.png" alt="Pick Version"></p>
+<ul>
+<li>Under the Maven tab you will find the code you need to copy into your POM file in order to use this dependency.</li>
+<li>Often times you can search to the group id website and find good information about the dependency. In this case the group id is <code class="highlighter-rouge">org.apache.commons</code>, so surf to <a href="https://commons.apache.org/">http://commons.apache.org/</a> to find out more information about this dependency!</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-mvn-03.png" alt="The Code"></p>
+<ul>
+<li>Normally repositories are stored locally on your computer
+<ul>
+<li>Located in your home directory or local files under a directory called <code class="highlighter-rouge">.m2</code>
+<ul>
+<li>This is normally a hidden directory. So to find it, hidden directories must be shown</li>
+</ul>
+</li>
+<li>Sometimes, your local repositories become corrupt and need to be refreshed
+<ul>
+<li>First try to reimport you Maven repositories
+<ul>
+<li>In an IntelliJ project,
+<ul>
+<li>Right click on the POM.XML file
+<ul>
+<li>Go to the context menu <code class="highlighter-rouge">Maven</code> -&gt; <code class="highlighter-rouge">Reimport</code>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>If that does not work, you can force the repositories to refresh by
+<ul>
+<li>exiting IntelliJ</li>
+<li>deleting the directories under <code class="highlighter-rouge">.m2/repository</code>
+<ul>
+<li>Note that if you believe only certain repositories are corrupted, you can delete just their subfolder.</li>
+<li>Load up a project in IntelliJ. This will force the repositories to be downloaded again.</li>
+<li>This can take a looonnnggg time!!! Be patient</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="plugins">Plugins</h4>
+<p>Besides repositories, Maven also manages Plugins. We saw one automatically added to the POM.XML file linking Maven and the Spring Framework. We also use a Plugin when we deploy to a cloud based system.</p>
+<p>Note that you can find plugin information on <a href="https://mvnrepository.com/search?q=plugin">MVNRepository Plugins</a></p>
+<h3 id="spring-framework">Spring Framework</h3>
+<p>One of the best descriptions of Spring is from Wikipedia and can be found at <a href="https://en.wikipedia.org/wiki/Spring_Framework">https://en.wikipedia.org/wiki/Spring_Framework</a>!</p>
+<h4 id="defined-1">Defined</h4>
+<p>Spring is an application framework concentrating on Inversion of Controller. For our purposes, Spring Framework provides libraries that allows for building web applications on top of Java</p>
+<ul>
+<li>Spring handles the plumbing, foundations, of the web application so we can concentrate on what makes our application unique</li>
+<li>Inversion of Controller is when your application receives the flow of control - how the application manages state, figures out what to run when - from a generic framework, like Spring! Spring handles the standard web flow of the application so we can concentrate on what makes our application unique</li>
+</ul>
+<h4 id="projects">Projects</h4>
+<p>Spring does much, much more than just web development. Spring provides several different modules, operations:</p>
+<ul>
+<li>Microservices</li>
+<li>Reactive</li>
+<li>Cloud</li>
+<li>Web apps</li>
+<li>Serverless</li>
+<li>Event Driven</li>
+<li>Batch</li>
+<li>Find out more about each one of these at <a href="https://spring.io/why-spring">https://spring.io/why-spring</a>
+</li>
+</ul>
+<p>Spring is broken into multiple projects:</p>
+<ul>
+<li>Spring Boot (we use this one often)</li>
+<li>Spring Framework (we use this one often)</li>
+<li>Spring Cloud Data Flow</li>
+<li>Spring Cloud</li>
+<li>Spring Data (we use this one often)</li>
+<li>Spring Integration</li>
+<li>Spring Batch</li>
+<li>Spring Security (we use this one often)</li>
+<li>Spring HATEOAS</li>
+<li>Spring Rest Docs</li>
+<li>Spring AMQP</li>
+<li>Spring Mobile</li>
+<li>Spring for Android</li>
+<li>Spring Web Flow</li>
+<li>Spring Web Services (we use this one often)</li>
+<li>Spring LDAP</li>
+<li>Spring Session</li>
+<li>Spring Shell</li>
+<li>Spring FLO</li>
+<li>Spring Kafka</li>
+<li>Spring State machine</li>
+<li>Spring IO Platform</li>
+<li>Spring Scala</li>
+<li>Find out more about each of these projects at <a href="https://spring.io/projects">https://spring.io/projects</a>
+</li>
+</ul>
+<p>We invoke Spring through:</p>
+<ul>
+<li>Including the dependencies in the Maven POM.XML file</li>
+<li>Using annotations in our code by invoking Spring Inversion of Controller
+<ul>
+<li>For example adding the annotation <code class="highlighter-rouge">@RestController</code> to say that a class will contain rest endpoints</li>
+</ul>
+</li>
+</ul>
+<details><summary>Expand to see code that has Spring annotations - @Commands</summary>
+<pre><code class="language-JAVA">
+
+package com.lambdaschool.catsanddogs.controllers;
+
+import com.lambdaschool.catsanddogs.repositories.CatRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController //Spring Annotation to bring in web plumbing for Rest Endpoints
+public class CatController
+{
+    @Autowired //Spring Annotation to set up a connection to Spring Data
+    private CatRepository catRepos;
+
+    @GetMapping(value = "/cats", produces = {"application/json"}) //Spring Annotation to set up web plumbing for HTTP Method Get
+    public ResponseEntity&lt;?&gt; findAllCats()
+    {
+        return new ResponseEntity&lt;&gt;(catRepos.findAll(), HttpStatus.OK);
+    }
+}
+
+</code></pre>
+</details>
+<h4 id="spring-boot">Spring Boot</h4>
+<p>Spring Boot is a special project of Spring. You can read more about it at <a href="https://spring.io/projects/spring-boot">https://spring.io/projects/spring-boot</a>.</p>
+<p>The purpose of Spring Boot is to make it easier to create stand-alone, production grade Spring Application. Spring Boot provides automatic configurations of the Spring Framework, helping us create applications that “just work”. We can concentrate on what makes our applications unique, while Spring Boot provides standard configurations for how the web works in general.</p>
+<p>Spring does this magic through <strong>Convention over Configuration</strong>. Most web applications work the same way just handling different data. So the idea behind convention over configuration is that inside of nit-picking each configuration detail, we can set up conventions or model sets of configurations that work just fine in most cases. We allow Spring Boot to make many of our configuration decisions for us, not only simplifying our work but unifying all Spring Boot applications. We are then just concerned with customizing what makes are application unique.</p>
+<p>We take advantage of certain features of Spring Boot to simplify our development process. These include:</p>
+<ul>
+<li>Create stand alone Spring applications</li>
+<li>Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files)</li>
+<li>Provide opinionated ‘starter’ dependencies to simplify your build configuration</li>
+<li>Automatically configures Spring and 3rd party libraries whenever possible</li>
+<li>Provide production ready features such as metrics, health checks and externalized configuration</li>
+</ul>
+<p>We will see how we use Spring throughout the rest of the course!</p>
+<p>Throughout the course, this link will become a must read! <a href="https://www.baeldung.com/spring-interview-questions">Baeldung: Top Spring Framework Interview Questions</a></p>
+<h3 id="tomcat">Tomcat</h3>
+<p>A Web API application must run under a Web Server. The Web Server is responsible for handling network traffic and routing requests to the correct application. Most of the time we embed a web server application in our Java applications. We use the web server Tomcat.</p>
+<ul>
+<li><a href="https://tomcat.apache.org/">http://tomcat.apache.org/</a></li>
+<li>Pure Java HTTP web server environment in which Java code can run</li>
+<li>Connects the HTTP requests to the Java code</li>
+</ul>
+<p>Note: we will discuss later how to use a stand alone version of Tomcat with our Spring Applications. For now, normally all we need to do is configure Tomcat’s listening Port. We do this through the <code class="highlighter-rouge">application.properties</code> file. This file is located in our project under:</p>
+<ul>
+<li>src
+<ul>
+<li>main
+<ul>
+<li>resources</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>To configure the listening port, we add the following line:</p>
+<pre><code class="language-TEXT">server.port=${PORT:2019}
+</code></pre>
+<p>The line says if an environment variable <code class="highlighter-rouge">PORT</code> exists, use its value to determine the listening port of Tomcat, otherwise use <code class="highlighter-rouge">2019</code>. 2019 can be changed to your favorite listening port.</p>
+<ul>
+<li>By default, Tomcat will be listening on port 8080, so without this line added to application.properties the listening port is 8080</li>
+<li>Only one application can be using a listening port at a given time.</li>
+<li>See <a href="https://whatismyipaddress.com/port">https://whatismyipaddress.com/port</a> for more on listening ports.</li>
+</ul>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://maven.apache.org/pom.html" target="blank_">Maven</a><br> Apache Maven POM Reference</li>
+<li>
+<a href="https://mvnrepository.com" target="blank_">Maven</a><br> Maven Repository</li>
+<li>
+<a href="https://spring.io/GUIdes/gs/maven/" target="blank_">Maven</a><br> Spring IO - Building Java Projects with Maven</li>
+<li>
+<a href="https://javabrains.io/topics/spring/" target="blank_">Spring</a><br> Javabrains - Spring Framework</li>
+<li>
+<a href="https://www.udemy.com/course/spring-boot-complete-GUIde-from-development-to-deployment/" target="blank_">Spring</a><br> Spring Boot : Complete GUIde from development to deployment Udemy (free)</li>
+ <li>
+<a href="https://www.vogella.com/tutorials/SpringBoot/article.html" target="blank_">Spring</a><br> Vogella - Spring Boot - Tutorial</li>
+<li>
+<a href="https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html" target="blank_">Spring Application Properties</a><br> Application Properties</li>
+<li>
+<a href="https://stackoverflow.com/questions/34845990/spring-use-one-application-properties-for-production-and-another-for-debug" target="blank_">Spring Application Properties</a><br> Spring Use One application.properties for production and another for debug</li>
+<li>
+<a href="http://www.springboottutorial.com/spring-boot-vs-spring-mvc-vs-spring" target="blank_">Spring and Other Options</a><br> Spring Boot vs Spring MVC vs Spring - How do they compare?</li>
+<li>
+<a href="https://dzone.com/articles/microservices-quarkus-vs-spring-boot" target="blank_">Spring and Other Options</a><br> Microservices: Quarkus vs. Spring Boot</li>
+<li>
+<a href="https://medium.com/@walkingtreetech/spring-boot-vs-micronaut-the-battle-unleashed-2682354a88e9" target="blank_">Spring and Other Options</a><br> Spring Boot vs Micronaut — The battle unleashed</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to build a REST service using Spring Boot</h4>
+<h5>Overview</h5>
+<ul>
+<li>See the Github Repository <a href="https://github.com/LambdaSchool/catsanddogs.git">https://github.com/LambdaSchool/catsanddogs.git</a>tt for the code used in the objective.</li>
+</ul>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+<li>JetBrains IntelliJ IDEA IDE</li>
+<li>Postman</li>
+</ul>
+<p>You studied REST APIs in previous units. Here we will concentrate on how to use the Spring Framework in regards to developing REST APIs. If you wish to read a brief review of REST API concepts, keep going. Otherwise skip to the header <strong>So how do we build this</strong></p>
+<hr>
+<p><a id="REST_Review"></a></p>
+<h3 id="rest-api-summary">REST API Summary</h3>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/novideo.png" alt="Video Lecture"></p>
+<h3 id="what-are-web-apis">What are Web APIs</h3>
+<p>REST API is one of many Web APIs</p>
+<ul>
+<li>API stands for <strong>A</strong>pplication <strong>P</strong>rogramming <strong>I</strong>nterface</li>
+<li>APIs are used to expose data and business logic safely and conveniently
+<ul>
+<li>This is done through endpoints or routes
+<ul>
+<li>A <strong>route</strong> is the address surfed to initiate a request = localhost:8080/dogs</li>
+<li>An <strong>endpoint</strong> is a route plus the HTTP method you wish to use = GET localhost:8080/dogs</li>
+<li>A <strong>resource</strong> is a data object</li>
+</ul>
+</li>
+<li>Endpoints / routes are accessed through URI / URL
+<ul>
+<li>URI Uniform Resource Identifier
+<ul>
+<li>Contains just location localhost:8080/dogs</li>
+</ul>
+</li>
+<li>URL Uniform Resource Locator
+<ul>
+<li>Contains location and protocol http://localhost:8080/dogs</li>
+</ul>
+</li>
+<li>Although in practice the two terms are often used interchangeably</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Three main Web APIs are popular in the Java Spring World. Here we are discussing REST API.
+<ul>
+<li>
+<strong>REST</strong> for more information see <a href="https://restfulapi.net/">https://restfulapi.net/</a>//</li>
+<li>
+<strong>SOAP</strong> for more information see <a href="https://www.guru99.com/soap-simple-object-access-protocol.html">https://www.guru99.com/soap-simple-object-access-protocol.html</a>ll</li>
+<li>
+<strong>GraphQL</strong> for more information see <a href="https://graphql.org/">https://graphql.org/</a>//</li>
+</ul>
+</li>
+</ul>
+<h3 id="what-is-rest-api">What is Rest API</h3>
+<p>REST stands for <strong>Re</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer</p>
+<ul>
+<li>
+<p>Has two separate applications, a Client and a Server</p>
+<ul>
+<li>In this class we are concentrating on the Server Application</li>
+<li>Having both allows for a clear separation of duties and independent development
+<ul>
+<li>In this class we will be developing backend systems (servers) using a generic frontend system (client) to access the backends</li>
+</ul>
+</li>
+<li>Client - Requests and Displays Data, called a frontend application</li>
+<li>Server - maintains the data, called a backend application</li>
+</ul>
+</li>
+<li>
+<p>Stateless</p>
+<ul>
+<li>Server remembers nothing but the data</li>
+<li>All information for a request comes from the client</li>
+</ul>
+</li>
+<li>
+<p>Layered System</p>
+<ul>
+<li>Allows for Gateways, Routers, Firewalls, Caching Serving, any number of networking devices</li>
+<li>Client does not need to directly access the server and can route through all those devices</li>
+</ul>
+</li>
+<li>
+<p>Technology Independent with a Uniform Interface between client and server regardless of the technical stack used</p>
+</li>
+<li>
+<p>First proposed by Roy Thomas Fielding. See his dissertation for more information <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm</a>mm</p>
+</li>
+</ul>
+<h3 id="http-messages">HTTP Messages</h3>
+<p>To initiate a transaction a client sends a <strong>Request</strong> which is made up of</p>
+<ul>
+<li>A route</li>
+<li>A Method</li>
+<li>Headers</li>
+<li>The data or body</li>
+</ul>
+<p>To respond to a Request from a client, a server sends a <strong>Response</strong> which is made up of</p>
+<ul>
+<li>Headers</li>
+<li>The data or body</li>
+<li>includes a HTTP Response Status Code
+<ul>
+<li>For a list of these codes, see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP response status codes</a>
+</li>
+</ul>
+</li>
+</ul>
+<p>The body of a Request or Response contains data in the form of JSON Objects. We will see how these are used in practice throughout the rest of the course.</p>
+<ul>
+<li>
+<strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation</li>
+<li>Syntax for storing and exchanging data</li>
+<li>It is a compromise between human and machine readability</li>
+<li>Attribute-Value pairs
+<ul>
+<li>Attribute is the name given in “quotes”, Value is any number of data types</li>
+</ul>
+</li>
+<li>This is an example JSON Object. Phone numbers in this Object are given through a JSON List</li>
+</ul>
+<pre><code class="language-JSON">{
+  "firstName": "John",
+  "lastName": "Smith",
+  "isAlive": true,
+  "age": 27,
+  "address": {
+    "streetAddress": "21 2nd Street",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10021-3100"
+  },
+  "phoneNumbers": [
+    {
+      "type": "home",
+      "number": "212 555-1234"
+    },
+    {
+      "type": "office",
+      "number": "646 555-4567"
+    },
+    {
+      "type": "mobile",
+      "number": "123 456-7890"
+    }
+  ],
+  "children": [],
+  "spouse": null
+}
+</code></pre>
+<h3 id="crud-and-http-methods">CRUD and HTTP Methods</h3>
+<p><strong>CRUD</strong> is an acronym for the four basic functions that are preformed on persistent data</p>
+<ul>
+<li>
+<p>Persistent Data: State of data that outlives the process that creates it and/or data that is saved.</p>
+</li>
+<li>
+<p>State then is</p>
+<ul>
+<li>Remembered information</li>
+<li>The current values of the data or object</li>
+<li>The values of the fields in an object give it its State. Change the fields, Change the state.</li>
+</ul>
+</li>
+<li>
+<p>The Four Basic Functions that make up CRUD then are</p>
+<ul>
+<li>
+<strong><em>C</em></strong> reate new data</li>
+<li>
+<strong><em>R</em></strong> ead existing data</li>
+<li>
+<strong><em>U</em></strong> pdate existing data</li>
+<li>
+<strong><em>D</em></strong> elete data</li>
+</ul>
+</li>
+</ul>
+<p>In REST we implement these CRUD functions through HTTP Methods.</p>
+<ul>
+<li>HTTP Methods guide us on what we want to do with our Request: Do we want to get data, delete data, post data?</li>
+<li>Several HTTP Methods exist (see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">HTTP request methods</a>)</li>
+<li>
+<p>The ones used for CRUD operations are:</p>
+<table>
+<thead>
+<tr>
+<th>CRUD</th>
+<th>HTTP Methods</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CREATE</td>
+<td>POST</td>
+<td>Throw back to the old bulletin board days when we posted a new message to the board</td>
+</tr>
+<tr>
+<td>READ</td>
+<td>GET</td>
+<td>Just get me the data</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>PUT</td>
+<td>Put my updated message on the bulletin board. This completely replaces the resource with new information coming in from the request. This requires the entire resource to be sent with the request - information being update and information that is being left the same</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>PATCH</td>
+<td>Just update the resource with the given information. Only the new, updated information is sent, and not the entire resource.</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>DELETE</td>
+<td>Look the names match finally - deletes the resource!</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="richardsons-maturity-model">Richardson’s Maturity Model</h3>
+<p>Not all REST API models are created equal. Many categorizing systems exists to show how closely a given REST API model is to the “Gold Standard”, full implemented model. Few production models reach this stage. The Richardson’s Maturity Model is one such popular categorization system for REST APIs.</p>
+<ul>
+<li>Level 0
+<ul>
+<li>Any system that uses HTTP or HTTPS.</li>
+</ul>
+</li>
+<li>Level 1
+<ul>
+<li>Adds in use of Resources.</li>
+<li>Instead of requesting everything from a single service endpoint, we now include resources in our requests.</li>
+</ul>
+</li>
+<li>Level 2
+<ul>
+<li>Makes Proper use of HTTP Methods or Verbs.</li>
+<li>Most systems stop at this level.</li>
+<li>Our class projects stop at this level.</li>
+</ul>
+</li>
+<li>Level 3
+<ul>
+<li>Provides links to areas the client might want to use next</li>
+<li>HATEOAS <strong>H</strong>ypermedia <strong>A</strong>s <strong>T</strong>he <strong>E</strong>ngine <strong>O</strong>f <strong>A</strong>pplication <strong>S</strong>tate</li>
+<li>The gold standard for Rest APIs</li>
+<li>Very few reach this level</li>
+</ul>
+</li>
+</ul>
+<p>The GitHub API is a good example of a production system that reaches level 3. For example, if I surf to my GitHub account: <a href="https://api.github.com/users/jrmmba8314">https://api.github.com/users/jrmmba8314</a>44, the following JSON object is returned. Notice all the extra URLs about where I might want to surf next:</p>
+<pre><code class="language-JSON">{
+    "login": "jrmmba8314",
+    "id": 35783485,
+    "node_id": "MDQ6VXNlcjM1NzgzNDg1",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/35783485?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jrmmba8314",
+    "html_url": "https://github.com/jrmmba8314",
+    "followers_url": "https://api.github.com/users/jrmmba8314/followers",
+    "following_url": "https://api.github.com/users/jrmmba8314/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jrmmba8314/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jrmmba8314/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jrmmba8314/subscriptions",
+    "organizations_url": "https://api.github.com/users/jrmmba8314/orgs",
+    "repos_url": "https://api.github.com/users/jrmmba8314/repos",
+    "events_url": "https://api.github.com/users/jrmmba8314/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jrmmba8314/received_events",
+    "type": "User",
+    "site_admin": false,
+    "name": "John Mitchell",
+    "company": "Lambda School",
+    "blog": "",
+    "location": "Port Angeles, Washington",
+    "email": null,
+    "hireable": true,
+    "bio": null,
+    "public_repos": 11,
+    "public_gists": 0,
+    "followers": 24,
+    "following": 2,
+    "created_at": "2018-01-24T21:53:25Z",
+    "updated_at": "2020-02-26T22:32:48Z"
+}
+</code></pre>
+<p>A good description of this model can be found at <a href="https://martinfowler.com/articles/richardsonMaturityModel.html">Richardson Maturity Model by Martin Fowler</a></p>
+<hr>
+<p><a id="REST_Services_using_Java_Spring"></a></p>
+<h3 id="so-how-do-we-build-this">So how do we build this</h3>
+<h3 id="dependencies">Dependencies</h3>
+<p>When we build a Java Spring CRUD Application, we must add certain dependencies to it. These external libraries will be added using the GUI interface inside of IntelliJ. For a standard application we would add the following dependencies:</p>
+<ul>
+<li>Spring Boot DevTools
+<ul>
+<li>Makes development life easier. Adds automatic restarting when code changes and allows for some remote debugging.</li>
+<li>See <a href="https://www.baeldung.com/spring-boot-devtools">https://www.baeldung.com/spring-boot-devtools</a>s for more information.</li>
+</ul>
+</li>
+<li>Spring Web
+<ul>
+<li>Allows you to build RESTFul web service using an embedded Apache Tomcat webserver container.</li>
+</ul>
+</li>
+<li>Spring Data JPA
+<ul>
+<li>Using the Java Persistence API which uses Spring Data and Hibernate, works with data in databases.</li>
+</ul>
+</li>
+<li>H2 Database
+<ul>
+<li>Allows the application to use the in memory database H2.</li>
+<li>See <a href="https://www.baeldung.com/spring-boot-h2-database">https://www.baeldung.com/spring-boot-h2-database</a>e for more information</li>
+<li>when we add H2, we need to comment out the scope for H2 in the pom.xml file. This is needed to configure H2 database console and make H2 available in IntelliJ. We need H2 not only at runtime but also at compile time.</li>
+</ul>
+</li>
+</ul>
+<h3 id="applicationproperties">application.properties</h3>
+<p>Spring Applications make use of a application.properties file. This file allows you to control the configuration of the application including</p>
+<ul>
+<li>how seed data is handled</li>
+<li>how links are handled</li>
+<li>important web sources, paths, and ports</li>
+<li>databases</li>
+<li>among many other items</li>
+</ul>
+<h3 id="application-layout">Application Layout</h3>
+<ul>
+<li>Normally in Java Spring applications, classes are grouped in packages by the function they perform. Normally each model gets its own class per function.</li>
+</ul>
+<p>Under the main package of the application you may find the following subpackages</p>
+<ul>
+<li>
+<code class="highlighter-rouge">config</code> - Contains all the classes related to configurations.</li>
+<li>
+<code class="highlighter-rouge">controllers</code> - Contains the access points, endpoints, that can be used by clients.</li>
+<li>
+<code class="highlighter-rouge">models</code> - Contains the layouts of all data used in the application. This included persistent data that is saved to a database, and non-persistent data used only during application execution.</li>
+<li>
+<code class="highlighter-rouge">repositories</code> - Contains the links between the database and the application. Typically contains one class for each persistent, database, model. This is often called DAO - data access objects</li>
+<li>
+<code class="highlighter-rouge">services</code> - Contains the services that are used to retrieve and manipulate data in the application. Contains the contract stating what each client can do with the data in the application. The majority of the work of the application resides in this package.</li>
+<li>Each subpackage contains its own unique set of classes using their own unique annotations.</li>
+</ul>
+<h3 id="flow-of-a-crud-application">Flow of a CRUD Application</h3>
+<p>Take a look at the general layout of a Java Spring REST API CRUD Application! Please see the Github Repository <a href="https://github.com/LambdaSchool/java-catanddogs.git">https://github.com/LambdaSchool/java-catsanddogs.git</a>t. This shows a full application and how all ties together in an IntelliJ application.</p>
+<p>Request -&gt; Host -&gt; Tomcat -&gt; Spring -&gt; Controller -&gt; Service (if used) -&gt; Repository -&gt; Model -&gt; and back up the chain!</p>
+<ol>
+<li>A client sends a request. A request contains the URL of the endpoint and perhaps a body containing data.</li>
+<li>The request is sent to the correct server, host, via networking protocols.</li>
+<li>On the host, the request is sent to the application listening on the given port, in this case our embedded Tomcat Webserver.</li>
+<li>The Tomcat Webserver sends the request to the correct application.</li>
+<li>In the application Spring takes over.</li>
+<li>Spring uses the endpoint to find the correct controller looking in classes with the @RestController annotation.</li>
+<li>Spring then finds the correct method to execute using the @GetMapping annotation, among other annotations.</li>
+<li>The method then is executed, calling the service. Some basic systems bypass the service and use the repositories directly.</li>
+<li>The service gets the requested date from the model using the repository.</li>
+<li>The service manipulates the data and returns it to the controller method.</li>
+<li>The controller sends the data back to the client through the network.</li>
+</ol>
+<h3 id="note-about-path-variables-vs-parameters">Note about Path Variables vs Parameters</h3>
+<p>In the web environment we have several ways of getting information from one application to another. Two ways we send information from one application to another on a web link are Path Variables and Parameters.</p>
+<h4 id="path-variables">Path Variables</h4>
+<p>Path Variables actually change the endpoint that is being sent. They become part of the route itself. So for example to find a specific dog you could have routes:</p>
+<ul>
+<li>/dogs/name/dottie</li>
+<li>/dogs/name/ginger</li>
+<li>/dogs/name/mojo</li>
+<li>/dogs/name/{findname} - the general way of writing this!
+<ul>
+<li>The {findname} is a variable meaning put something here in the variables place</li>
+</ul>
+</li>
+</ul>
+<p>This is the preferred method for REST APIs.</p>
+<p>So in the code below we’ll see something like this for handling the route. Do notice the name of the path variable <code class="highlighter-rouge">findname</code> follows throughout the code. The Java parameter is attached to the path variable using the <code class="highlighter-rouge">@PathVariable</code> annotation and by using the same name. Having the path variable the same name as the Java parameter is not a coincidence, it is required!</p>
+<p>If we have more than one path variable, we know which path variable goes with which Java parameter because they have the same name. Also note that we cannot have a default value for our Path Variable. Since the path variable itself is part of the route, we must provide it.</p>
+<pre><code class="language-JAVA">@RestController
+public class DogController
+{
+    @Autowired
+    private DogRepository dogRepos;
+
+    @GetMapping(value = "/dogs/name/{findname}", produces = {"application/json"})
+    public ResponseEntity&lt;?&gt; findADogs(@PathVariable String findname)
+    {
+        return new ResponseEntity&lt;&gt;(dogRepos.findByName(findname), HttpStatus.OK);
+    }
+}
+</code></pre>
+<h4 id="parameters">Parameters</h4>
+<p>Parameters are add-ons to the endpoint. We add them to the url using a <code class="highlighter-rouge">?</code> followed by the parameter name, then an equal signs <code class="highlighter-rouge">=</code>, then the value of the parameter.</p>
+<ul>
+<li>/dogs/name?name=dottie</li>
+<li>/dogs/name?name=ginger</li>
+<li>/dogs/name?name=mojo</li>
+<li>/dogs/name - no parameter value given</li>
+</ul>
+<p>In the code we have handle this using the <code class="highlighter-rouge">@RequestParam</code>. Note that the parameter is not required, if we add the option <code class="highlighter-rouge">required = false,</code>. It does not need the same name as the Java parameter. We seldom use these as REST prefers the Path Variables.</p>
+<pre><code class="language-JAVA">@RestController
+public class DogController
+{
+    @Autowired
+    private DogRepository dogRepos;
+
+    @GetMapping(value = "/dogs/name", produces = {"application/json"})
+    public ResponseEntity&lt;?&gt; findADogs(@RequestParam(name = "findname", required = false) String theName)
+    {
+        return new ResponseEntity&lt;&gt;(dogRepos.findByName(findname), HttpStatus.OK);
+    }
+}
+</code></pre>
+<h5>Follow Along</h5>
+<p>Let’s create a CRUD application! We are using the IntelliJ IDE to create our applications. To create a Spring Boot application in IntelliJ, follow these steps</p>
+<ul>
+<li>Follow the New Project wizard to create the application
+<ul>
+<li>Create the project with the Spring Framework using Spring Initializr</li>
+<li>For Spring Initializr Project Settings
+<ul>
+<li>Group: com.lambdaschool</li>
+<li>Artifact: catsanddogs</li>
+<li>Type: Maven Project</li>
+<li>Language: Java</li>
+<li>Packaging: Jar</li>
+<li>Java Version: 14</li>
+<li>Version: 0.0.1-SNAPSHOT</li>
+<li>Name: catsanddogs</li>
+<li>Description: Demo project for Spring Book</li>
+<li>Package: com.lambdaschool.catsanddogs</li>
+</ul>
+</li>
+<li>For Dependencies
+<ul>
+<li>Change Spring Boot to 2.2.8 (we are not ready for 2.3.+)</li>
+<li>Selected Dependencies should be:
+<ul>
+<li>Spring Boot DevTools</li>
+<li>Spring Web</li>
+<li>Spring Data JPA</li>
+<li>H2 Database</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>New Project
+<ul>
+<li>Project Name: catsanddogs</li>
+<li>Pick a folder that is right for you but make sure inside that folder you are saving to a subfolder <code class="highlighter-rouge">catsanddogs</code>. I used to the folder <code class="highlighter-rouge">~/jxwork/catsanddogs</code>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>If a popup appears asking, select to make this a Maven Project.</li>
+<li>If a popup appears asking, select to autoimport Maven dependencies.</li>
+</ul>
+<h5 id="configure-the-application">Configure the application</h5>
+<ul>
+<li>In the <code class="highlighter-rouge">POM.XML</code> file, comment out the scope for H2</li>
+</ul>
+<pre><code class="language-XML">        &lt;dependency&gt;
+            &lt;groupId&gt;com.h2database&lt;/groupId&gt;
+            &lt;artifactId&gt;h2&lt;/artifactId&gt;
+&lt;!--            &lt;scope&gt;runtime&lt;/scope&gt;--&gt;
+        &lt;/dependency&gt;
+</code></pre>
+<ul>
+<li>Now add these lines to the <code class="highlighter-rouge">application.properties</code> found under main/resources. The comments are there so you know what each line means.</li>
+</ul>
+<pre><code class="language-TEXT">### Configurations useful for working with H2
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+#
+### We set a port that is not frequently used
+server.port=${PORT:2019}
+#
+### Feature that determines what happens when no accessors are found for a type
+### (and there are no annotations to indicate it is meant to be serialized).
+spring.jackson.serialization.fail-on-empty-beans=false
+#
+### keeps a transaction inside of the same entity manager
+### This property register an EntityManager to the current thread,
+### so you will have the same EntityManager until the web request is finished.
+spring.jpa.open-in-view=true
+#
+### What do with the schema
+### drop n create table again, good for testing
+spring.jpa.hibernate.ddl-auto=create
+spring.datasource.initialization-mode=always
+#
+### Good for production!
+### spring.jpa.hibernate.ddl-auto=update
+### spring.datasource.initialization-mode=never
+</code></pre>
+<h5 id="creating-the-application-structure">Creating the application structure</h5>
+<ul>
+<li>First, let’s create each of the needed subpackages. Under the main package (<code class="highlighter-rouge">src/main/java/com.lambdaschool.sampleemps</code>), create the following subpackages
+<ul>
+<li>config</li>
+<li>controllers</li>
+<li>models</li>
+<li>repositories</li>
+<li>services</li>
+</ul>
+</li>
+</ul>
+<p>Now let’s enter some of the code</p>
+<ul>
+<li>Under the subpackage <code class="highlighter-rouge">config</code>
+<ul>
+<li>Create the class <code class="highlighter-rouge">H2ServerConfiguration</code>
+</li>
+<li>Enter the following code in that class</li>
+<li>Entering the comments is optional</li>
+<li>Try not entering the imports. Let IntelliJ do that for you</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-JAVA">package com.lambdaschool.sampleemps.config;
+
+import org.h2.tools.Server;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import java.sql.SQLException;
+
+/**
+ * Configures H2 access through the JetBrains IntelliJ IDEA IDE.
+ * &lt;p&gt;
+ * Adapted from https://techdev.io/en/developer-blog/querying-the-embedded-h2-database-of-a-spring-boot-application
+ * necessary for using the database tool built into intellij
+ */
+@Configuration
+public class H2ServerConfiguration
+{
+
+    /**
+     * TCP port for remote connections, default 9092.
+     */
+    @Value("${h2.tcp.port:9092}")
+    private String h2TcpPort;
+
+    /**
+     * Web port, default 8082.
+     */
+    @Value("${h2.web.port:8082}")
+    private String h2WebPort;
+
+    /**
+     * TCP connection to connect with SQL clients to the embedded h2 database.
+     * &lt;p&gt;
+     * Connect to "jdbc:h2:tcp://localhost:9092/mem:testdb", username "sa", password empty.
+     *
+     * @return The created TcpServer needed to access H2.
+     * @throws SQLException If the server cannot be created.
+     */
+    @Bean
+    @ConditionalOnExpression("${h2.tcp.enabled:true}")
+    public Server h2TcpServer() throws
+        SQLException
+    {
+        return Server.createTcpServer("-tcp",
+            "-tcpAllowOthers",
+            "-tcpPort",
+            h2TcpPort)
+            .start();
+    }
+
+    /**
+     * Web console for the embedded h2 database.
+     * &lt;p&gt;
+     * Go to http://localhost:8082 and connect to the database "jdbc:h2:mem:testdb", username "sa", password empty.
+     *
+     * @return The created web server needed to access H2.
+     * @throws SQLException If the server cannot be created.
+     */
+    @Bean
+    @ConditionalOnExpression("${h2.web.enabled:true}")
+    public Server h2WebServer() throws
+        SQLException
+    {
+        return Server.createWebServer("-web",
+            "-webAllowOthers",
+            "-webPort",
+            h2WebPort)
+            .start();
+    }
+}
+</code></pre>
+<ul>
+<li>Under the subpackage <code class="highlighter-rouge">controllers</code>
+<ul>
+<li>Create the class <code class="highlighter-rouge">CatController</code>
+</li>
+<li>Enter the following code in that class</li>
+<li>Entering the comments is optional</li>
+<li>Try not entering the imports. Let IntelliJ do that for you</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-JAVA">package com.lambdaschool.catsanddogs.controllers;
+
+import com.lambdaschool.catsanddogs.repositories.CatRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+// This is where we say this class contains REST endpoints.
+// Being a "controller" this controls what Java method gets invoked when an endpoint to called by a client.
+//
+// Since the CatController class is annotated with a Spring Annotation, it becomes a Bean, a Java class managed by Spring
+@RestController
+public class CatController
+{
+    // This annotation automatically connects the resource Cat to this controller and thus these endpoints.
+    @Autowired
+    private CatRepository catRepos;
+
+    // This sets up a route call /cats. By saying "produces = ", the annotation also sets that the body of any response will be in JSON format.
+    // The HTTP method connected with this route is GET
+    // A response is returned to the client.
+    // The response includes all of the cats in the database
+    // The response includes an HTTP Status Code of OK
+    @GetMapping(value = "/cats", produces = {"application/json"})
+    public ResponseEntity&lt;?&gt; findAllCats()
+    {
+        return new ResponseEntity&lt;&gt;(catRepos.findAll(), HttpStatus.OK);
+    }
+}
+</code></pre>
+<ul>
+<li>Under the subpackage <code class="highlighter-rouge">models</code>
+<ul>
+<li>Create the class <code class="highlighter-rouge">Cat</code>
+</li>
+<li>Enter the following code in that class</li>
+<li>Entering the comments is optional</li>
+<li>Try not entering the imports. Let IntelliJ do that for you</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-JAVA">
+package com.lambdaschool.catsanddogs.models;
+
+// Note that Java Spring provides its own implementation of javax
+import javax.persistence.*;
+
+// This annotation says that Cat is a Bean and will be managed by Spring
+// Entity says that this is a class whose objects will be saved in a database
+@Entity
+
+// Table annotation gives the name to use for the table in the database where the object data will be saved
+// It is customary to give the table an explicit name like this.
+// Notice how the table is plural and the class is singular. Another common practice.
+@Table(name = "cats")
+public class Cat
+{
+    // In a database setting, each object must have a unique "primary key"
+    // The Id annotation marks which field will serve as the primary key
+    // The GeneratedValue annotation directs the database on how to generate a primary key.
+    // a Strategy of GenerationType.AUTO tells the database to generate a primary key as best the database sees fit.
+    // Note the annotations affect the field immediantly following the annotations.
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    long catid;
+
+    // The column annotation allows for modifications to the field that get reflected in the database,
+    // in this case all catnames must be unique across all cat objects and each object must have a catname.
+    // Note the annotation affects the field immediantly following the annotation!
+    @Column(unique = true, nullable = false)
+    String catname;
+
+    // Spring Data requires the default constructor, regardless of any other constructors made available.
+    public Cat()
+    {
+    }
+
+    // Spring uses the getters to return data to the client
+    public long getCatid()
+    {
+        return catid;
+    }
+
+    // Spring uses the setters to set the data in the object
+    public void setCatid(long catid)
+    {
+        this.catid = catid;
+    }
+
+    public String getCatname()
+    {
+        return catname;
+    }
+
+    public void setCatname(String catname)
+    {
+        this.catname = catname;
+    }
+}
+</code></pre>
+<ul>
+<li>Under the subpackage <code class="highlighter-rouge">repositories</code>
+<ul>
+<li>Create the interface <code class="highlighter-rouge">public interface CatRepository extends CrudRepository&lt;Cat, Long&gt;</code>
+</li>
+<li>Enter the following code in that class</li>
+<li>Entering the comments is optional</li>
+<li>Try not entering the imports. Let IntelliJ do that for you</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-JAVA">package com.lambdaschool.catsanddogs.repositories;
+
+import com.lambdaschool.catsanddogs.models.Cat;
+import org.springframework.data.repository.CrudRepository;
+
+public interface CatRepository extends CrudRepository&lt;Cat, Long&gt;
+{
+}
+</code></pre>
+<ul>
+<li>Under the same folder where application.properties is located, add the following SQL file. It must be named <code class="highlighter-rouge">data.sql</code> for it to work with Spring Boot!</li>
+</ul>
+<pre><code class="language-SQL">DELETE
+FROM CATS;
+
+INSERT INTO CATS (catid, catname)
+        VALUES (1, 'Tiger');
+
+alter sequence hibernate_sequence restart with 15;
+</code></pre>
+<p>We are not entering code under a service subpackage just yet. You have now written a complete Java Spring WEB API application. Run the application and try surfing to the endpoint http://localhost:2019/cats.</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://spring.io/guides/gs/rest-service/" target="blank_">Building a Restful Web Service</a><br> Spring IO - Building a Restful Web Service</li>
+<li>
+<a href="https://spring.io/guides/tutorials/rest/" target="blank_">Building Rest Services with Spring</a><br> Spring IO - Building REST services with Spring</li>
+<li>
+<a href="https://www.baeldung.com/spring-boot-sqlite" target="blank_">Spring and SQLite</a><br> Baeldung Spring Boot with SQLite</li>
+<li>
+<a href="https://restful.io/" target="blank_">REST APIs: Articles</a><br> Rest Web API articles</li>
+
+<li>
+<a href="https://www.tutorialspoint.com/http/http_methods.htm" target="blank_">REST APIs: HTTP Methods</a><br> TutorialsPoint HTTP Methods</li>
+<li>
+<a href="https://explore.postman.com/" target="blank_">REST APIs: Public APIs</a><br> Directory of Public APIs</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to use and implement inversion of control and dependency injection with Spring</h4>
+<p><a id="Dependency_Injection"></a></p>
+<h5>Overview</h5>
+<p>Let’s start by defining some terms:</p>
+<ul>
+<li>
+<strong>Dependency</strong> - When one class relies on another. A class is dependent on another class, for example.</li>
+<li>
+<strong>Dependency Injection</strong> - An object delegates the responsibility for instantiating and managing its dependencies to some other object. This other object injects the dependencies into the original object. This other object also is responsible for how those dependencies are created and operate. The original object just uses the dependencies based on agreed protocols and interfaces.</li>
+<li>
+<strong>Framework</strong> vs <strong>Library</strong> -
+<ul>
+<li>A <strong>library</strong> provides a series of methods, operations, that your code can call as needed. With a library your code is responsible for maintaining the flow of operation.</li>
+<li>A <strong>Framework</strong> uses an abstract design, a flow of operations where you can plug in your own code as desired. You could use the framework as is or make it unique to your situation by supplementing your own code within the framework. The framework is responsible for maintaining the flow of operations.</li>
+</ul>
+</li>
+<li>
+<strong>Inversion of Control</strong> - Thus a framework is normally using inversion of control. You give control of your application over to the framework and through dependency injection, add your unique code to the framework. You are not longer in control, the framework is.</li>
+</ul>
+<p>In our case, Spring takes over the flow of our applications and we just code what makes our application unique. You will hear me often say, “Spring handles that”. Spring handles all the basics, the plumbing, the foundation, of a web application allowing us to just concentrate on what makes our application unique. We use annotations to inject into the Spring Framework our unique code. Spring does its thing, using our code where needed.</p>
+<p>Let’s look at types of Dependency Injections.</p>
+<h3 id="hard-coded-dependencies">Hard Coded Dependencies</h3>
+<p>The class decides on which implementation to use. This is coded directly in the class. The makes it difficult to change the hard coded dependency and makes unit tests almost impossible.</p>
+<pre><code class="language-JAVA">service = new ExampleService();
+</code></pre>
+<h3 id="constructor-injection">Constructor Injection</h3>
+<p>Dependencies are provided through the constructor:</p>
+<pre><code class="language-JAVA">// Constructor
+public class Client
+{
+    private Service service;
+
+    // Constructor
+    public Client (Service service)
+    {
+        // save the reference to the passed-in service inside this client
+        this.service = service;
+    }
+}
+</code></pre>
+<h3 id="setter-or-field-injection">Setter or Field Injection</h3>
+<p>A setter method is used to inject the dependency or in as is often the case in our code <code class="highlighter-rouge">@autowired</code> used to inject a dependency through a field:</p>
+<pre><code class="language-JAVA">// Setter method
+public void setService(Service service)
+{
+    // save the reference to the passed-in service inside this client
+    this.service = service;
+}
+</code></pre>
+<h3 id="interface-or-method-injection">Interface or method Injection</h3>
+<p>An interface provides a method that accepts a dependency:</p>
+<pre><code class="language-JAVA">// Service setter interface
+public interface ServiceSetter
+{
+    void setService setService(Service service);
+}
+
+// Client class
+public class Client implements ServiceSetter
+{
+    // internal reference to the service used by this client
+    private Service service;
+
+    // Set the service that this client is to use.
+    @Override
+    public void setService(Service service)
+    {
+        this.service = service;
+    }
+}
+</code></pre>
+<h3 id="inversion-of-control-example">Inversion of Control Example</h3>
+<p>Traditionally we would code this:</p>
+<pre><code class="language-JAVA">public class ServerFacade
+{
+    public &lt;K, V&gt; V respondToRequest(K request)
+    {
+        if (businessLayer.validateRequest(request))
+        {
+            Data data = DAO.getData(request);
+            return Aspect.convertData(data);
+        }
+        return null;
+    }
+}
+</code></pre>
+<p>With Inversion of Control we let the framework handle the data aspect operations:</p>
+<pre><code class="language-JAVA">public class ServerFacade
+{
+    public &lt;K, V&gt; V respondToRequest(K request, DAO dao)
+    {
+        return dao.getData(request);
+    }
+}
+</code></pre>
+<h3 id="another-example-of-inversion-of-control---the-games-we-play">Another example of Inversion of Control -&gt; The Games We Play</h3>
+<h4 id="board-games">Board Games</h4>
+<p>We are in control.</p>
+<ul>
+<li>A player takes a turn.</li>
+<li>Everything stops until another turn is taken.</li>
+</ul>
+<p>We, the players, determine the pace of the game. We are in control of the flow of the game! -&gt; Normal Programming Paradigm.</p>
+<h4 id="video-games">Video Games</h4>
+<p>The Game is in control. Game play happens through a game cycle:</p>
+<ul>
+<li>Game cycle gathers inputs</li>
+<li>Game cycle processes inputs</li>
+<li>Game cycle responses to inputs</li>
+</ul>
+<p>Game play happens whether or not we as the player do anything. Thus control is inverted. The Game is control, not us. -&gt; Inversion of Control!</p>
+<p>To get involved in the game cycle, we inject our own player’s movements. -&gt; Dependency Injection!</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://howtodoinjava.com/spring-core/spring-ioc-vs-di/" target="blank_">Inversion of Control vs Dependency Injection</a><br> Spring – Inversion of Control vs Dependency Injection</li>
+<li>
+<a href="https://www.linkedin.com/pulse/what-dependency-inversion-plain-english-anatoly-volkhover" target="blank_">What is Dependency Inversion?</a><br> What is Dependency Inversion? (in plain English)</li>
+<li>
+<a href="https://martinfowler.com/bliki/InversionOfControl.html" target="blank_">Inversion of Control</a><br> Martin Fowler on Inversion of Control</li>
+<li>
+<a href="https://martinfowler.com/articles/injection.html" target="blank_">Dependency Injection</a><br> Martin Fowler on Dependency Injection</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to implement Beans throughout the Beans’ lifecycle controlling the Beans using annotations</h4>
+<p><a id="Bean_Lifecycle"></a></p>
+<h5>Overview</h5>
+<ul>
+<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-catsanddogs.git">https://github.com/LambdaSchool/java-catsanddogs.git</a> for the code used in the objective.</li>
+</ul>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+<li>JetBrains IntelliJ IDEA IDE</li>
+<li>Postman</li>
+</ul>
+<h3 id="defined">Defined</h3>
+<p>I like chocolate covered Java Beans but that is a different type of bean…</p>
+<p>What kind of <strong><em>bean</em></strong> are we talking about? A bean is a class managed by Spring. Specifically according to the official documentation: “In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container.”</p>
+<p>What is the <strong><em>Spring IoC container</em></strong>? This is the core of the Spring Framework. The container creates objects, wires them together, configures them and manages each object’s (called beans) lifecycle. The Framework uses dependency injection to manage its beans.</p>
+<p>So what are other classes, those not managed by Spring called? <strong><em>POJOs</em></strong>. <strong>P</strong>lain <strong>O</strong>ld <strong>J</strong>ava <strong>O</strong>bjects. So prior to adding in the Spring Framework, we have been working with POJOs. Now we are working with POJOs and Beans!</p>
+<h3 id="the-lifecycle">The Lifecycle</h3>
+<p>Most of the time, we simply allow Spring to handle the lifecycle of a bean and we do not get involved. But what is this lifecycle of a bean and how do we get involved if needed? Note that each phase of the lifecycle has a standard method that must run but then has a method that we can customize if desired.</p>
+<ol>
+<li>Instantiate the bean object</li>
+<li>Populate the properties of the bean. Set its state.</li>
+<li>Set the bean’s name so Spring knows what to call it</li>
+<li>Make the bean factory aware of this new bean</li>
+<li>Execute JDK’s post construct methods</li>
+<li>Initialize the bean interface after properties are set</li>
+<li>Execute any custom initialize method</li>
+<li>Execute any post initialization processes</li>
+<li><strong><em>Do the work of the bean</em></strong></li>
+<li>On Spring container shutdown</li>
+<li>Execute JDK’s pre destroy methods</li>
+<li>Destroy the bean</li>
+<li>Run any custom destroy method</li>
+<li>Bye bye bean!</li>
+</ol>
+<p>The following diagram is taken from <a href="https://examples.javacodegeeks.com/enterprise-java/spring/spring-bean-life-cycle-example/">Java Code Geeks Spring Bean Life Cycle Example</a> a good site for further study of the bean life cycle.</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-bean-01.png" alt="Bean Life Cycle"></p>
+<h3 id="common-bean-annotations">Common Bean Annotations</h3>
+<p>Putting these annotations before the class definition makes that class a bean:</p>
+<ul>
+<li>@ComponentScan</li>
+<li>@Component</li>
+<li>@Repository</li>
+<li>@Service</li>
+<li>@Controller</li>
+<li>@RestController</li>
+<li>@Configuration</li>
+<li>@Bean</li>
+<li>@Entity - a special case that creates a Spring Hibernate Bean</li>
+</ul>
+<h3 id="autowired">Autowired</h3>
+<p>We will use the <code class="highlighter-rouge">@autowired</code> annotation often in our beans and POJOs. This annotation marks a constructor, field, or setter method to be autowired by Spring’s dependency injection. This marks it as something for automatic dependency injection allowing for beans to be created with minimal configuration. The annotation can also automatically match an interface to an implementation.</p>
+<p>Note that IntelliJ might give a warning if you are trying to autowire a field. IntelliJ usually suggests a way to include the field in the constructor. There is a debate in the industry on what is best. Obviously I lean toward <code class="highlighter-rouge">@autowired</code>. I believe the tradeoffs are worth the hassle later on. However I certainly understand some of the arguments against it. One such argument is that if a dependency is actually required by a class, as is normally the case when autowiring a field, why not explicitly say that by using a constructor.</p>
+<p>Another argument is that using autowired increases the difficulty of writing pure unit tests. If you are autowiring in a dependency then you don’t have a pure unit test, you are relying on another dependency. Each dependency you rely on requires you to mock that dependency, further increasing the difficulty of your tests.</p>
+<p>For more on the argument of autowired vs not see <a href="https://medium.com/@lmonkiewicz/the-curse-of-autowired-eb7f1e560032">Medium: The curse of @Autowired</a>. In the end, the choice is yours, or more precisely your company’s!</p>
+<h5>Challenge</h5>
+<p>Your task is to open the Github Repository <a href="https://github.com/LambdaSchool/java-catsanddogs.git">https://github.com/LambdaSchool/java-catsanddogs.git</a>. Look for the annotations that make up the Beans for this application. Also, inside IntelliJ, at the bottom of the screen is a tab <strong>Spring</strong>. Open that tab and explore!</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://howtodoinjava.com/spring-core/different-spring-ioc-containers/" target="blank_">IoC Containers</a><br> Spring - IoC Containers</li>
+<li>
+<a href="https://www.concretepage.com/spring/spring-bean-life-cycle-tutorial" target="blank_">Spring Bean Lifecycle</a><br> Concrete Page - Spring Bean Lifecycle</li>
+<li>
+<a href="https://www.tutorialspoint.com/spring/spring_bean_definition.htm" target="blank_">Bean Definition</a><br> TutorialsPoint Spring - Bean Definition</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to produce a complete application following the Maven Phases</h4>
+<p><a id="Maven_Phases"></a></p>
+<h5>Overview</h5>
+<ul>
+<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-catsanddogs.git">https://github.com/LambdaSchool/java-catsanddogs.git</a> for the code used in the objective.</li>
+</ul>
+<h4 id="software-needed">Software Needed</h4>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+<li>JetBrains IntelliJ IDEA IDE</li>
+<li>Postman</li>
+</ul>
+<h3 id="overview">Overview</h3>
+<h4 id="accessing-maven">Accessing Maven</h4>
+<p>The pom.xml file is where we configure Maven. To access Maven within IntelliJ, open the side bar tab <code class="highlighter-rouge">Maven</code>.</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-mvn-04.png" alt="Maven Tab"></p>
+<h4 id="dependencies">Dependencies</h4>
+<p>Maven manages dependencies for us. You can see the dependencies used in an application by expanding the Dependencies group. You can further expand individual dependencies to learn more about that dependency. Sometimes a library is included in multiple dependencies. Maven takes care to just load the library once. You can see this by noticing that some libraries are greyed out as omitted for duplicate.</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-mvn-05.png" alt="Dependencies"></p>
+<p>If you right click on the Dependency, you can download the source code and documentation for the Dependency. These are often fun to explore.</p>
+<p>If you right click on the application name and select <code class="highlighter-rouge">Show Dependencies...</code> from the context popup menu, you get a graphical representation of the dependencies used in your application.</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-mvn-06.png" alt="Dependencies View"></p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/catsanddogs.png" alt="Dependencies View"></p>
+<h4 id="phases">Phases</h4>
+<p>Maven works through a series of build phases. You can see these under the Lifecycle group. These are the phases in the Lifecycle of an application. The are generally ordered in the order you want to use them. Until we deploy our applications to the cloud, we do not use the Maven phases directly, relying on IntelliJ to handle those for us. However, it is good to know they are available and what they mean.</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-mvn-07.png" alt="Maven Phases"></p>
+<table>
+<thead>
+<tr>
+<th>phase</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clean</td>
+<td>removes all built, compiled code from the target directory, thus allowing us to start over anew the build process</td>
+</tr>
+<tr>
+<td>validate</td>
+<td>validates that the project is correct and all necessary information is available to build the application</td>
+</tr>
+<tr>
+<td>compile</td>
+<td>compiles the source code of the project</td>
+</tr>
+<tr>
+<td>test</td>
+<td>tests the compiled code using a suitable unit testing framework. These tests should not require the code to be packaged or deployed. In other words, run the automated unit tests</td>
+</tr>
+<tr>
+<td>package</td>
+<td>takes the compiled code and packages it into a distributable format such as JAR or WAR</td>
+</tr>
+<tr>
+<td>verify</td>
+<td>runs any integration tests Maven finds in the project</td>
+</tr>
+<tr>
+<td>install</td>
+<td>install the package in the local repository for use as a dependency in other local projects</td>
+</tr>
+<tr>
+<td>site</td>
+<td>generates site documentation for you application. See note below</td>
+</tr>
+<tr>
+<td>deploy</td>
+<td>done in the build environment and copies the final package to a remote repository, or the cloud, for sharing with other developers and projects</td>
+</tr>
+</tbody>
+</table>
+<p>Note:</p>
+<ul>
+<li>Site generates many, many files. You can a sample output of the site phase by looking at the GitHub repository <a href="https://github.com/LambdaSchool/java-catsanddogs.git">java-catsanddogs</a> under the folder <code class="highlighter-rouge">catsanddogs</code> -&gt; <code class="highlighter-rouge">target</code> -&gt; <code class="highlighter-rouge">site</code>
+</li>
+<li>Many phases bundle other phases with them. For example, by default deploy runs test and verify before deploying. IntelliJ has an option to turn this off if desired. More will be discussed when we discuss deploying to the cloud!</li>
+</ul>
+<h5>Challenge</h5>
+<p>Your task is to open the Github Repository <a href="https://github.com/LambdaSchool/java-catsanddogs.git">https://github.com/LambdaSchool/java-catsanddogs.git</a>, go to the Maven tab and explore!</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference" target="blank_">Maven Lifecycles</a><br> Maven Lifecycles</li>
+<li>
+<a href="https://www.jetbrains.com/help/idea/maven-projects-tool-window.html" target="blank_">IntelliJ and Maven</a><br> IntelliJ and the Maven Tool Windows</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to use Postman to manually test Web APIs</h4>
+<p><a id="Postman"></a></p>
+<h5>Overview</h5>
+<ul>
+<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-catsanddogs.git">https://github.com/LambdaSchool/java-catsanddogs.git</a> for the code used in the objective.</li>
+</ul>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+<li>JetBrains IntelliJ IDEA IDE</li>
+<li>Postman</li>
+</ul>
+<p><strong>Postman</strong> is a very popular tool used to manually test APIs. It comes loaded with a lot of useful features that make testing APIs very easy and painless.</p>
+<p>Testing APIs is different from testing websites or web applications. To test the latter, a web browser is sufficient, but for APIs, we need to be able to make POST/PUT/PATCH/DELETE requests and even modify the request headers.</p>
+<p>For testing, we will use a tool called Postman. Postman, and other tools, which allow full control when making API requests. We can easily change the HTTP Method used, add JSON data to the body, add form data, add headers, examine the response, and more.</p>
+<p>Post if a full featured, generic API frontend system. So, in the case of Postman you can do a lot more, but we’ll limit our discussion the basics needed to test APIs by passing test data and examining we’re getting the expected response.</p>
+<p>Installation of Postman is discussed in the objective about installing software for this Sprint. Here we discuss Using Postman.</p>
+<h5>Follow Along</h5>
+<p>Let’s look at some basic uses of Postman. Throughout the course, when we need more functionality with Postman, we will introduce it at that time.</p>
+<p>Postman is a frontend client. That means we need a backend system, sometimes called an <strong>API</strong>. For reading data, we will use the java-catsanddogs Github Repository. If you have not already, clone this repository. Now let’s open it in IntelliJ</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-git-01.png" alt="IntelliJ Open"></p>
+<ul>
+<li>Navigate to your local repo. Note I am using the columns view to show from where I am opening the application</li>
+<li>Expand your repo name</li>
+<li>Expand the folder containing your application</li>
+<li>Note that with Java Spring applications, opening the wrong folder is a common issue. Only When you see the <code class="highlighter-rouge">src</code> folder and the <code class="highlighter-rouge">pom.xml</code> file,
+<ul>
+<li>DO NOT SELECT ANY FILES</li>
+<li>Click <code class="highlighter-rouge">Open</code>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-git-02.png" alt="IntelliJ Open"></p>
+<ul>
+<li>Your code should open as normal (this might take a while).</li>
+</ul>
+<p>Now to run the application, click on the green triangle <img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/runtriangle.png" alt="green triangle"> in the toolbar at the top of the window</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/runIntelliJ.png" alt="IntelliJ Run"></p>
+<p>Nothing fancy will happen! You will see log information in the console of IntelliJ. Your application will keep running until you stop it. That is the nature of these API applications. They are always running.</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/logIntelliJ.png" alt="IntelliJ log"></p>
+<p>For now leave your application running. When we are ready to stop the application, you click on the red stop square <img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/redstop.png" alt="red square"> in the toolbar at the top of the windows</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/stopIntelliJ.png" alt="IntelliJ Stop"></p>
+<p>With the application running, we are now ready for <strong>Postman</strong>. Click on the Postman Icon on your computer <img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/postman.png" alt="Postman Icon"></p>
+<p>After exiting any Welcome Screens or Tips Popups, you are presented with a blank Postman window. You may need to add a blank tab. You do this by clicking on the + sign in the tabs</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/postmanopen.png" alt="Postman Opening Screen"></p>
+<p>We are going to do a HTTP Method <code class="highlighter-rouge">GET</code> using the url <code class="highlighter-rouge">http://localhost:8080/cats</code>. If you don’t know what these mean, no worries, they are reviewed in a later objective. For now just follow along.</p>
+<p>You have a pull down menu in Postman where you can select the HTTP Method you want to use. We will be picking <code class="highlighter-rouge">GET</code>.</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/postmanmethod.png" alt="Postman HTTP Method"></p>
+<p>You have an address bar in Postman where you type the url you want to use. We will be using <code class="highlighter-rouge">http://localhost:8080/cats</code></p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/postmanurl.png" alt="Postman address bar"></p>
+<p>Now click on <img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/postmansendicon.png" alt="Postman send icon"></p>
+<p>You will see “output” in the window at the bottom of Postman. Normally this output will be JSON objects. That is what you see in our example. Make sure the Body table is selected</p>
+<pre><code class="language-JSON">[
+    {
+        "catid": 4,
+        "catname": "Tiger"
+    }
+]
+</code></pre>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/postmanoutput.png" alt="Postman Output"></p>
+<p>That is all! You can now use Postman to read data from an API.</p>
+<h5>Challenge</h5>
+<p>Let’s try one on your own. Using a <code class="highlighter-rouge">GET</code>, read data from the URL <code class="highlighter-rouge">http://localhost:8080/dogs</code>. You should get the following data in your output window:</p>
+<pre><code class="language-JSON"> [
+    {
+        "dogid": 1,
+        "dogname": "Dottie"
+    },
+    {
+        "dogid": 2,
+        "dogname": "Ginger"
+    },
+    {
+        "dogid": 3,
+        "dogname": "Mojo"
+    }
+]
+</code></pre>
+<p>Good job! You may stop your CatAndDog API for now!</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://www.postman.com/" target="blank_">Postman Homepage</a><br> Postman Homepage</li>
+<li>
+<a href="https://learning.postman.com/" target="blank_">Postman Learning Center</a><br> Postman Learning Center</li>
+<li>
+<a href="https://insomnia.rest/" target="blank_">Insomnia</a><br> Popular Postman Competitor - Insomnia</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to create Spring Boot Applications with IntelliJ Community Edition (*** OPTIONAL ***)</h4>
+<p><a id="Spring_with_IntelliJ_Community_Edition"></a></p>
+<h5>Overview</h5>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+<li>JetBrains IntelliJ IDEA IDE</li>
+<li>Postman</li>
+</ul>
+<p>What happens when your IntelliJ Ultimate Edition expires? The main reason we use the Ultimate Edition is because of its integration with Spring, which is very helpful. However we can still create a Spring Boot Application outside of IntelliJ and then import that application into IntelliJ. You will notice a few other minor issues in the Community Edition but nothing that cannot be overcome.</p>
+<h5>Follow Along</h5>
+<p>To create that Spring Boot Application:</p>
+<ul>
+<li>Surf to the Spring Initializr Home Page <a href="https://start.spring.io">https://start.spring.io</a>
+<ul>
+<li>For Project - Select <code class="highlighter-rouge">Maven Project</code>
+</li>
+<li>For Language - Select <code class="highlighter-rouge">Java</code>
+</li>
+<li>For Spring Boot - Select <code class="highlighter-rouge">2.2.4</code> (the version we used in class)</li>
+<li>Project Metadata
+<ul>
+<li>Group: <code class="highlighter-rouge">com.lambdaschool</code>
+</li>
+<li>Artifact: <code class="highlighter-rouge">helloSpring</code>
+</li>
+<li>Expand Options
+<ul>
+<li>Name: should default to <code class="highlighter-rouge">helloSpring</code>
+</li>
+<li>Description: <code class="highlighter-rouge">Hello Spring Sample Program</code>
+</li>
+<li>Package name: should default to <code class="highlighter-rouge">com.lambdaschool.helloSpring</code>
+</li>
+<li>Packaging: <code class="highlighter-rouge">Jar</code>
+</li>
+<li>Java: <code class="highlighter-rouge">11</code>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij_ce_1.png" alt="Spring Initializr"></p>
+<ul>
+<li>Now we need to add dependencies
+<ul>
+<li>add the dependencies you need by searching for them a picking the correct option
+<ul>
+<li>Search for web to get Spring Web</li>
+<li>Search for devtools to get Spring Boot DevTools</li>
+<li>among others</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Now click on <code class="highlighter-rouge">Generate</code> and download a zipped file containing your initial application!</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij_ce_2.gif" alt="Spring Initializr"></p>
+<ul>
+<li>
+<p>Extract the file where it is most useful to you.</p>
+</li>
+<li>
+<p>Open the application in IntelliJ like a normal application</p>
+<ul>
+<li>Give IntelliJ a few moments to get everything set up.</li>
+<li>You should now see your familiar file structure and are ready to create your next great Spring Boot Application!</li>
+</ul>
+</li>
+</ul>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://start.spring.io" target="blank_">Spring Initializr</a><br> Spring Initializr</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to use tips and tricks of IntelliJ to improve programming efficiency (*** OPTIONAL ***)</h4>
+<p><a id="IntelliJ_Tips_and_Tricks"></a></p>
+<h5>Overview</h5>
+<h4 id="software-needed">Software Needed</h4>
+<ul>
+<li>Java Development Kit (JDK) - at least version 11</li>
+<li>JetBrains IntelliJ IDEA IDE</li>
+</ul>
+<h3 id="i-do">I do</h3>
+<p>IntelliJ is a very powerful Integrated Development Environment (IDE). I encourage you to experiment with its many different functions. Here, I show you how to use a few of my favorite functions!</p>
+
+<h5>Follow Along</h5>
+<h3 id="tips-and-tricks">Tips and Tricks</h3>
+<p><a id="live_templates"></a></p>
+<h3 id="use-of-live-templates">Use of live templates</h3>
+<ul>
+<li>
+<p>Notice how I can type <code class="highlighter-rouge">sout</code> and press the <code class="highlighter-rouge">&lt;TAB&gt;</code> key. <code class="highlighter-rouge">System.out.println();</code> is automatically added into the code. IntelliJ contains many such short cuts.</p>
+</li>
+<li>
+<p>type <code class="highlighter-rouge">main</code> and press the <code class="highlighter-rouge">&lt;TAB&gt;</code> key.</p>
+</li>
+</ul>
+<pre><code class="language-JAVA">public static void main(String[] args){
+
+}
+</code></pre>
+<p>is automatically entered.</p>
+<ul>
+<li>type <code class="highlighter-rouge">fori</code> and press the <code class="highlighter-rouge">&lt;TAB&gt;</code> key.</li>
+</ul>
+<pre><code class="language-JAVA">for (int i = 0; i &lt; ; i++) {
+
+}
+</code></pre>
+<p>is automatically added into the code.</p>
+<p>For a complete list see <a href="https://www.jetbrains.com/help/idea/using-live-templates.html">https://www.jetbrains.com/help/idea/using-live-templates.html</a>l</p>
+<p><a id="force_import"></a></p>
+<h3 id="force-an-import">Force an import</h3>
+<p>If you find that IntelliJ did not automatically add a needed import, say you pasted in some code requiring imports, you can forcefully add the import. Three good methods exist.</p>
+<h4 id="manually-enter-the-import">Manually enter the import</h4>
+<p>If you know the import that is missing, you could just type it in at the top of the class that needs the import.</p>
+<h4 id="use-the-key-command-to-get-a-list-of-imports">Use the key command to get a list of imports</h4>
+<p>If you hover over the code that is missing an import, IntelliJ will present you some instructions on what to do. You could use a keyboard shortcut to enter the import - IntelliJ will show the appropriate keyboard shortcut for you operating system. You could also select the import from the menu IntelliJ presents in the popup notice.</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-tt-06.gif" alt="Import from shortcut"></p>
+<h4 id="trick-intellij-into-reloading">Trick IntelliJ into reloading</h4>
+<p>My favorite way of doing this is to trick IntelliJ into reloading the import. I do this by deleting the last letter of the code that needs the import, enter the letter again and then pick the needed import from the IntelliJ provided list.</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-tt-07.gif" alt="Tick IntelliJ"></p>
+<p><a id="code_reformat"></a></p>
+<h3 id="use-of-code-reformat-including-customization">Use of code reformat including customization</h3>
+<h4 id="customize-your-auto-code-reformatting">Customize your auto code reformatting</h4>
+<ul>
+<li>From the Welcome Screen
+<ul>
+<li>Select <code class="highlighter-rouge">Configure</code> -&gt; <code class="highlighter-rouge">Preferences</code>
+<ul>
+<li>Then expand <code class="highlighter-rouge">Editor</code> -&gt; <code class="highlighter-rouge">Code Style</code> -&gt; <code class="highlighter-rouge">Java</code>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>In the middle panel, you can change code style. In the right panel, you see the affects of that change
+<ul>
+<li>Some changes give you a popup list to choose format</li>
+<li>Some changes give you a check mark turning off or on the option</li>
+</ul>
+</li>
+<li>At the top are different tabs, categories, of things you can change</li>
+<li>Play with this - best way to figure out what each option does is to try it out!</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-tt-08.png" alt="Customize Code Format"></p>
+<h4 id="share-your-customized-auto-code-reformatting">Share your customized auto code reformatting</h4>
+<p>One way to make sure all developers are using the same coding style is to share your coding style formats with others. Actually you can share all of your IntelliJ configures with other developers.</p>
+<ul>
+<li>From the Welcome Screen
+<ul>
+<li>Select <code class="highlighter-rouge">Configure</code> -&gt; <code class="highlighter-rouge">Export Settings</code>
+</li>
+<li>From the check list, pick which settings you wish to export</li>
+<li>Pick where you wish to save the settings and click OK</li>
+</ul>
+</li>
+</ul>
+<p>To import settings from someone else</p>
+<ul>
+<li>From the Welcome Screen
+<ul>
+<li>Select <code class="highlighter-rouge">Configure</code> -&gt; <code class="highlighter-rouge">Import Settings</code>
+</li>
+<li>Pick the file you want to import</li>
+<li>From the check list, pick which settings you wish to import</li>
+<li>Click OK and enjoy your new settings!</li>
+<li>Yes, you will have to restart IntelliJ for these settings to take affect.</li>
+</ul>
+</li>
+</ul>
+<p>I also use this technique to move my settings from one computer to another as I have IntelliJ running on multiple computers!</p>
+<h4 id="auto-format-your-code">Auto format your code</h4>
+<ul>
+<li>To reformat the code in the class you are currently working on, you can use the pull down menu <code class="highlighter-rouge">Code</code> -&gt; <code class="highlighter-rouge">Reformat Code</code>
+</li>
+<li>To remove unused imports in the class you currently working on, you can use the pull down menu <code class="highlighter-rouge">Code</code> -&gt; <code class="highlighter-rouge">Optimize Imports</code>
+</li>
+<li>To reformat the code in your entire project, and remove used imports in the process
+<ul>
+<li>Right click on <code class="highlighter-rouge">src</code>
+<ul>
+<li>From the context popup menu, select <code class="highlighter-rouge">Reformat code</code>. Normally I like to have checked the following leaving the rest unchecked
+<ul>
+<li>Include subdirectories</li>
+<li>Optimize imports</li>
+</ul>
+</li>
+<li>Click <code class="highlighter-rouge">Run</code>, wait a moment. Now all your code is in the format you prefer!</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><a id="renaming_things"></a></p>
+<h3 id="rename">Rename</h3>
+<p>Never directly rename something; always use Refactor</p>
+<h4 id="rename-a-field">Rename a field</h4>
+<p>Rename <code class="highlighter-rouge">message</code> to something shorter - <code class="highlighter-rouge">msg</code>. Notice how by using code refactor, everywhere we have used <code class="highlighter-rouge">message</code>, it get automatically changed to <code class="highlighter-rouge">msg</code>. This change could even happen over classes and packages if need.</p>
+<p>Your beginning code</p>
+<pre><code class="language-JAVA">public class Hello
+{
+    String message;
+
+    public Hello(String message)
+    {
+        this.message = "Hello " + message;
+    }
+
+    public String getMessage()
+    {
+        return message;
+    }
+
+    public void setMessage(String message)
+    {
+        this.message = message;
+    }
+}
+</code></pre>
+<ul>
+<li>Right click on the field message
+<ul>
+<li>Goto Refactor, Rename…
+<ul>
+<li>type <code class="highlighter-rouge">msg</code>
+</li>
+<li>Press Return</li>
+<li>You are prompted if you want to change
+<ul>
+<li>Answer Yes!</li>
+<li>Click Ok</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>You are left with the following refactored code</p>
+<pre><code class="language-JAVA">public class Hello
+{
+    String msg;
+
+    public Hello(String message)
+    {
+        this.msg = "Hello " + message;
+    }
+
+    public String getMsg()
+    {
+        return msg;
+    }
+
+    public void setMsg(String msg)
+    {
+        this.msg = msg;
+    }
+}
+</code></pre>
+<h4 id="rename-a-class">Rename a class</h4>
+<p>If a class name gets changed without changing the underlying file name, you get a situation where you can expand the class making it look like the class has multiple files associated with it. See the following screen</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-tt-01.png" alt="Class and file name different"></p>
+<p>Remember that a class name has to match its file name! Follow the steps below to rename the class name.</p>
+<ul>
+<li>Right click on the class name - on the class name in the code. Not the file name!
+<ul>
+<li>Goto Refactor, Rename…
+<ul>
+<li>type the new name</li>
+<li>Press Return</li>
+</ul>
+</li>
+<li>This will rename the class and the underlying file, if needed.</li>
+</ul>
+</li>
+</ul>
+<h4 id="rename-a-package">Rename a package</h4>
+<p>If you need to rename a package, you must keep the package name and directory the same. So to rename a package</p>
+<ul>
+<li>Right click on the package name
+<ul>
+<li>Goto Refactor, Rename…</li>
+<li>When asked will be asked to pick
+<ul>
+<li>Rename directory</li>
+<li><strong>Rename package</strong></li>
+<li>We almost always pick <strong>Rename package</strong>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="rename-an-application">Rename an application</h4>
+<p>Renaming an application has many steps. In order to completely rename the application, you MUST follow all steps.</p>
+<p>As an example I am going to rename an application called <code class="highlighter-rouge">catsanddogs</code> to one called <code class="highlighter-rouge">pets</code></p>
+<ul>
+<li>Address the Project Name:
+<ul>
+<li>From the menu <code class="highlighter-rouge">File</code> -&gt; <code class="highlighter-rouge">Project Structure</code>, select the <code class="highlighter-rouge">Project</code> group under <code class="highlighter-rouge">Project Settings</code>.
+<ul>
+<li>Change the <code class="highlighter-rouge">Project name:</code>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-tt-02.png" alt="Change Project Name"></p>
+<ul>
+<li>Inside the POM.XML file, change the artifactId and name</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-tt-03.png" alt="Change POM file"></p>
+<ul>
+<li>Rename the project.
+<ul>
+<li>Right click on the project name.</li>
+<li>From the popup context menu, select Refactor -&gt; Rename…</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-tt-04.png" alt="Change Project"></p>
+<ul>
+<li>
+<p>Now rename the packages and classes under both <code class="highlighter-rouge">src</code> and <code class="highlighter-rouge">test</code>. If all goes well, when you rename <code class="highlighter-rouge">src</code>, <code class="highlighter-rouge">test</code> will follow. However that does not always happen so be sure to check!</p>
+</li>
+<li>
+<p>The application is now renamed. One issue is that you probably want to rename the underlying directory of the application as well. Although IntelliJ provides ways to do this, I personally like to rename the directories using the operating. So exit out of IntelliJ and rename your directories as appropriate!</p>
+</li>
+</ul>
+<p><a id="compare_things"></a></p>
+<h3 id="file-directory-compare-using-intellij">File, Directory compare using IntelliJ</h3>
+<h4 id="comparing-files-in-directories">Comparing Files in Directories</h4>
+<ul>
+<li><a href="https://www.jetbrains.com/help/idea/comparing-files-and-folders.html">For more info click here for Comparing files, folders and text sources</a></li>
+</ul>
+<p>Open the project that you might want to change. This is considered our main project. If you are just doing comparisons without changes, which one you open does not really matter.</p>
+<p>For an example, I am using a GitHub repo that is used in a future module.</p>
+<p><a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git</a>t</p>
+<p>I am going to compare the <code class="highlighter-rouge">src/main</code> directories from the <code class="highlighter-rouge">sampleemps_create_delete_update</code> and <code class="highlighter-rouge">sampleemps_data_modeling</code> applications</p>
+<p>So starting with the <code class="highlighter-rouge">sampleemps_create_delete_update</code> open, let’s open sampleemps_data_mod and compare</p>
+<ul>
+<li>Right click on the folder you wish to compare.</li>
+<li>Goto <code class="highlighter-rouge">Compare With...</code>
+</li>
+<li>Select the folder you wish to compare</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%204%20-%20JX%20Java%20-%20Intro%20to%20Maven%2C%20Spring%2C%20and%20Tomcat%20Using%20REST%20API/assets/JX-10-M4-intellij-tt-09.gif" alt="Comparing Folders"></p>
+<p>Notice that when we are comparing files, you get some clues as to what is where files differ:</p>
+<ul>
+<li>A blue -&gt; New files on Left</li>
+<li>A green &lt;- New files on right</li>
+<li>A red ≠ Files different. So in files
+<ul>
+<li>Differences highlighted in green and blue</li>
+</ul>
+</li>
+</ul>
+<p>You can turn these on or off using the toolbar buttons. Best advice to play around with the compare tools for a few minutes and get familiar with it. I use it often! This is the official help file link for the compare tool!</p>
+<ul>
+<li><a href="https://www.jetbrains.com/help/idea/2019.3/differences-viewer-for-folders.html?utm_campaign=IU&amp;utm_content=2019.3&amp;utm_medium=link&amp;utm_source=product">IntelliJ Help File: Differences viewer for folders</a></li>
+</ul>
+<p>Note: you can compare singles files as well. Instead of right clicking on a folder, right click on the single file you wish to compare!</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://www.jetbrains.com/idea/documentation/" target="blank_">JetBrains IDE</a><br> JetBrains IntelliJ IDEA IDE</li>
+<li>
+<a href="https://www.tutorialspoint.com/intellij_idea/index.htm" target="blank_">IntelliJ Idea Tutorial</a><br> IntelliJ Idea Tutorial</li>
+<li>
+<a href="https://www.jetbrains.com/help/idea/pro-tips.html" target="blank_">Pro Tips</a><br> JetBrains IntelliJ Pro Tips</li>
+</ul>
+<hr>
+<h2>
+<a id="guided-project" class="anchor" href="#guided-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Guided Project</h2>
+<h3>java-webemployees</h3>
+<p>We recreate our first Java project using REST APIs.</p>
+<a target="_blank" href="https://github.com/LambdaSchool/java-webemployees.git">GitHub Repo</a>
+<hr>
+<h2 class="display-4">
+<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
+<ul class="list-group">
+<li class="list-group-item">
+<h5><a target="_blank" href="https://github.com/LambdaSchool/java-countries">Java Country Search</a></h5>
+<p>The countries of the world have many different defining attributes including land size, population, and median age. Below is a list of countries to include in your data. As most people do their research using websites, we are going to create webservices to help search this data. We will be returning JSON objects. Nothing fancy for now!</p>
+</li>
+</ul>
+<h2 class="display-4">
+<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
+<h3 class="display-5">Class Recordings</h3>
+<p class="lead">You can use class recordings to help you master the material.</p>
+<div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<strong><a target="_blank" href="https://youtu.be/BQArq0wR7Zc">Java IntelliJ Maven Spring for WEB33 with John Mitchell</a></strong>
+</li>
+<li class="list-group-item">
+<a href="/archive/WEB4Java/module/recqtftA9E98qpbak">All previous recordings</a>
+</li>
+</ul>
+</div>
+<h3 class="display-5">Demonstrate Mastery</h3>
+<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
+<ul>
+<li>Objective challenge: <p>Your task is to open the Github Repository <a href="https://github.com/LambdaSchool/java-catsanddogs.git">https://github.com/LambdaSchool/java-catsanddogs.git</a>. Look for the annotations that make up the Beans for this application. Also, inside IntelliJ, at the bottom of the screen is a tab <strong>Spring</strong>. Open that tab and explore!</p>
+</li>
+<li>Objective challenge: <p>Your task is to open the Github Repository <a href="https://github.com/LambdaSchool/java-catsanddogs.git">https://github.com/LambdaSchool/java-catsanddogs.git</a>, go to the Maven tab and explore!</p>
+</li>
+<li>Objective challenge: <p>Let’s try one on your own. Using a <code class="highlighter-rouge">GET</code>, read data from the URL <code class="highlighter-rouge">http://localhost:8080/dogs</code>. You should get the following data in your output window:</p>
+<pre><code class="language-JSON"> [
+    {
+        "dogid": 1,
+        "dogname": "Dottie"
+    },
+    {
+        "dogid": 2,
+        "dogname": "Ginger"
+    },
+    {
+        "dogid": 3,
+        "dogname": "Mojo"
+    }
+]
+</code></pre>
+<p>Good job! You may stop your CatAndDog API for now!</p>
+</li>
+<li>Guided Project: java-webemployees</li>
+<li>Project: Java Country Search</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80850900-4');
+</script>
+<script type="text/javascript">
+  function getDomain() {
+    const domainName = window.location.hostname.split('.')[1];
+    return `${domainName}.com`;
+  }
+</script>
+<script src="" integrity="" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
+<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+  SimpleJekyllSearch.init({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    dataSource: '/search.json',
+    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Java - Intro to Maven, Spring, and Tomcat Using REST API">{title}</a></li>',
+    noResultsText: '',
+    limit: 10,
+    fuzzy: true,
+  })
+</script>
+<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
+  if (window.attachEvent) {
+    window.attachEvent('onload', verifySignedIn);
+  } else {
+    if (window.onload) {
+      var currentOnLoadFn = window.onload;
+      var newOnLoadFn = function (evt) {
+        currentOnLoadFn(evt);
+        verifySignedIn();
+      };
+      window.onload = newOnLoadFn;
+    } else {
+      window.onload = verifySignedIn;
+    }
+  }
+
+  function verifySignedIn() {
+    if (isPagePublic()) {
+      return showPageContents();
+    }
+
+    window.__user = null;
+    isSignedIn().then((user) => {
+      window.__user = user;
+
+      if (!user.signedIn) {
+        redirectToSignIn();
+      } else if (!user.student && !window.__openToAdmissions) {
+        showUnauthorizedMessage();
+      } else {
+        showPageContents();
+      }
+    });
+  }
+
+  function isPagePublic() {
+    const openCourses = [
+      'and-pre',
+      'ds-pre',
+      'fsw-pre',
+      'help',
+      'ios-pre',
+    ];
+
+    const openPages = [
+      'cs-and',
+      'cs-fsw',
+      'cs-ios',
+      'cr',
+      'ds',
+      'jx',
+      'p4s',
+      'ux',
+    ];
+
+    const pathParts = window.location.pathname.split('/');
+    const courseName = pathParts[1];
+    const pageName = pathParts[pathParts.length - 1];
+
+    return openCourses.includes(courseName) || openPages.includes(pageName);
+  }
+
+  function isSignedIn() {
+    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
+
+    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
+
+    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
+      .then((response) => response.text())
+      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
+      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
+      .catch((error) => {});
+  }
+
+  function redirectToSignIn() {
+    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+    const redirectMessage = document.querySelector('#redirect-message');
+    redirectMessage.style.display = "block";
+    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+    window.location = signInUrl;
+  }
+
+  function showPageContents() {
+    document.querySelector('#content-wrapper').style.visibility = 'visible';
+  }
+
+  function showUnauthorizedMessage() {
+    document.querySelector('#unauthorized-message').style.display = 'block';
+  }
+
+  function getAuthBaseUrl() {
+    const domain = getDomain();
+    const authBaseUrl = `https://auth.${domain}`;
+    return authBaseUrl;
+  }
+</script><script src="/assets/js/docs.min.js"></script><script>
+  var MathJax = {
+    tex: {
+      inlineMath: [['$$', '$$'], ['\[', '\])']]
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax span": {
+          color: "#000000"
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script>
+  handleExternalLinks();
+
+  function handleExternalLinks() {
+    const domain = getDomain();
+    const links = document.querySelectorAll('a');
+    return links.forEach((link) => {
+      if (!link.host.includes(domain)) link.target = '_blank';
+    })
+  };
+</script>
+</div>
+</body>
+</html>

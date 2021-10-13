@@ -1,0 +1,1108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Intended as a home for Lambda School curriculum.">
+<meta name="author" content="">
+<meta name="generator" content="Jekyll v3.8.0">
+<title>Data Modeling · Lambda School</title>
+
+<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+  analytics.page();
+  }}();
+</script>
+
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#a0001e">
+</head>
+<body>
+<noscript>Please enable JavaScript to view this page.</noscript>
+<div id="redirect-message" style="display: none;">
+You must be logged in to view this page.
+</div>
+<div id="unauthorized-message" style="display: none;">
+You must be a Lambda School student to view this page.
+</div>
+<div id="content-wrapper" >
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container">
+<span class="skiplink-text">Skip to main content</span>
+</div>
+</a>
+<div class="mobile-menu">
+<div class="m-drop">
+<div class="mobile-row">
+<div class="header-row" style="padding: 3px 7px">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
+</svg></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+</button>
+</div>
+</div>
+<div class="nav-row">
+<div class="results-container">
+<ul id="results-container" class="dropdown list-group"></ul>
+</div>
+<div id="mobile-course-menu" class="collapse nav-row">
+<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+<nav class="bd-links">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web API: Node</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4node/sprint/reckzQd7ZgiFY5ok5">
+1.&nbsp;&nbsp;Build a Web API
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4node/module/recZiPP8Oyg1WlHxT/">
+Introduction to Node.js and Express
+</a>
+</li>
+<li>
+<a href="/web4node/module/recBjiSulq0PYLCIj/">
+Server-Side Routing with Express
+</a>
+</li>
+<li>
+<a href="/web4node/module/recCJjYFEz0i5O5p5/">
+Express Middleware
+</a>
+</li>
+<li>
+<a href="/web4node/module/recs9QOkOAtZhsjc4/">
+Web Deployment and Best Practices
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4node/sprint/receFLR7MpwQXesIN">
+2.&nbsp;&nbsp;Adding Data Persistence
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4node/module/recFG7SqlSCAB8iU7/">
+Introduction to Relational Databases
+</a>
+</li>
+<li>
+<a href="/web4node/module/recIbfNn9xRhLTOv4/">
+Database Schema Design
+</a>
+</li>
+<li>
+<a href="/web4node/module/recw2ezN22yjehidj/">
+Multi-Table Queries
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/web4node/module/rec5J23yAIdjmFbgP/">
+Data Modeling
+</a>
+</li>
+ </ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4node/sprint/recGqGeZ7n75vZivn">
+3.&nbsp;&nbsp;Authentication and Testing
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4node/module/recQD9lnhqWEFh6g4/">
+Introduction to Authentication
+</a>
+</li>
+<li>
+<a href="/web4node/module/reciCHdNjavSKaaLt/">
+Using JSON Web Tokens (JWT)
+</a>
+</li>
+<li>
+<a href="/web4node/module/recd26oZ3GBNHh3Na/">
+WEB Unit Testing
+</a>
+</li>
+<li>
+<a href="/web4node/module/reciXdxRA8zXJXDID/">
+Testing the Back End
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4node/sprint/recWkcWui91eG1s8q">
+4.&nbsp;&nbsp;WEB Unit 4 Node Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-container">
+<div class="sidebar-container bd-sidebar">
+<div class="docs-sidebar">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
+<ul id="results-container" class="dropdown list-group"></ul>
+<nav class="bd-links collapse" id="bd-docs-nav">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web API: Node</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4node/sprint/reckzQd7ZgiFY5ok5">
+1.&nbsp;&nbsp;Build a Web API
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4node/module/recZiPP8Oyg1WlHxT/">
+Introduction to Node.js and Express
+</a>
+</li>
+<li>
+<a href="/web4node/module/recBjiSulq0PYLCIj/">
+Server-Side Routing with Express
+</a>
+</li>
+<li>
+<a href="/web4node/module/recCJjYFEz0i5O5p5/">
+Express Middleware
+</a>
+</li>
+<li>
+<a href="/web4node/module/recs9QOkOAtZhsjc4/">
+Web Deployment and Best Practices
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4node/sprint/receFLR7MpwQXesIN">
+2.&nbsp;&nbsp;Adding Data Persistence
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4node/module/recFG7SqlSCAB8iU7/">
+Introduction to Relational Databases
+</a>
+</li>
+<li>
+<a href="/web4node/module/recIbfNn9xRhLTOv4/">
+Database Schema Design
+</a>
+</li>
+<li>
+<a href="/web4node/module/recw2ezN22yjehidj/">
+Multi-Table Queries
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/web4node/module/rec5J23yAIdjmFbgP/">
+Data Modeling
+</a>
+</li>
+</ul>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4node/sprint/recGqGeZ7n75vZivn">
+3.&nbsp;&nbsp;Authentication and Testing
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4node/module/recQD9lnhqWEFh6g4/">
+Introduction to Authentication
+</a>
+</li>
+<li>
+<a href="/web4node/module/reciCHdNjavSKaaLt/">
+Using JSON Web Tokens (JWT)
+</a>
+</li>
+<li>
+<a href="/web4node/module/recd26oZ3GBNHh3Na/">
+WEB Unit Testing
+</a>
+</li>
+<li>
+<a href="/web4node/module/reciXdxRA8zXJXDID/">
+Testing the Back End
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4node/sprint/recWkcWui91eG1s8q">
+4.&nbsp;&nbsp;WEB Unit 4 Node Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<main class="content-container flex-wrapper" role="main">
+<div class="sticky-nav">
+<div class="sprint-nav">
+<ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+<li class="toc-entry toc-h2"><a href="#guided-project">Guided Project</a></li>
+<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+</ul>
+</div>
+
+</div>
+<div class="wrapper limit-width">
+<div class="flex-wrapper">
+<div class="limit-width">
+<div class="jumbotron">
+<h1 class="bd-title" id="content">Data Modeling</h1>
+<span class="lead">
+<p class="bd-lead"></p>
+<p>A data model is an abstraction of the information a system needs to fulfill it’s purpose.</p>
+<p>When designing a data model we go from high level Entities to low level database schemas. The lower we get the more detailed the model needs to be. We’ll work at the physical database design level in order to learn how to create database objects, but always working towards the high level entities.</p>
+<p>On this lecture we we’ll cover:</p>
+<ul>
+<li>Normalizing the model.</li>
+<li>One to many relationships.</li>
+<li>Many to many relationships.</li>
+<li>One to one relationships.</li>
+<li>Creating multi table schemas in knex</li>
+</ul>
+</span>
+<strong>At the end of this module, you should be able to:</strong>
+<ul>
+<li>explain data normalization</li>
+<li>explain different table relationships</li>
+<li>create table relationships using Knex</li>
+</ul>
+</div>
+<div class="alert alert-warning" role="alert">
+<h4>Pro Tip</h4>
+<p>Life is a marathon, not a sprint.</p>
+</div>
+<h2 class="display-4">
+<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
+<p class="lead">Review each preclass resource before class.</p>
+<div class="preclass">
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/TUsoTNch95w" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-Bau_Ed18Og" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9kP0CVOwP_Y" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<a target="_blank" href="https://www.essentialsql.com/get-ready-to-learn-sql-database-normalization-explained-in-simple-english/">Database Normalization Explained in Simple English</a>
+</li>
+<li class="list-group-item">
+<a target="_blank" href="https://gerardnico.com/data/modeling/one-to-one">one to one relationships</a>
+</li>
+</ul>
+</div>
+<h2 class="display-4">
+<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
+<h4 class="mark mb-3 p-2">Learn to explain data normalization</h4>
+<p>The relational database model is different from the object model we use in our JavaScript code. In JavaScript we can add arrays or nested objects to our entities. A client can have multiple address embedded as an array. But that same relationship in a relational model could result in data repetition and other <em>anomalies</em>.</p>
+<p>In this section we’ll learn the basic principles of <code class="highlighter-rouge">data normalization</code> and how to recognize a denormalized table.</p>
+<h5>Overview</h5>
+<p><code class="highlighter-rouge">Normalization</code> is the process of designing or refactoring database tables for maximum consistency and minimum redundancy.</p>
+<p>With objects, we’re used to <em>denormalized</em> data, stored with ease of use and speed in mind. Non-normalized tables are considered ineffective in relational databases.</p>
+<h5>Follow Along</h5>
+<p><strong>Data normalization</strong> is a deep topic in database design. To begin thinking about it, we’ll explore a few basic guidelines and some data examples that violate these rules.</p>
+<h3 id="normalization-guidelines">Normalization Guidelines</h3>
+<ul>
+<li>Each record has a primary key.</li>
+<li>No fields are repeated.</li>
+<li>All fields relate directly to the key data.</li>
+<li>Each field entry contains a single data point.</li>
+<li>There are no redundant entries.</li>
+</ul>
+<h3 id="denormalized-data">Denormalized Data</h3>
+<table>
+<thead>
+<tr>
+<th>farm_name</th>
+<th>animal1</th>
+<th>animal2</th>
+<th>animal3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Beech Ranch</td>
+<td>pigs</td>
+<td>chickens</td>
+<td>goats</td>
+</tr>
+<tr>
+<td>Morton Farms</td>
+<td>horses</td>
+<td>chickens</td>
+<td>cows</td>
+</tr>
+</tbody>
+</table>
+<p>This table has two issues. There is no proper id field (as multiple farms may have the same name), and multiple fields are representing the same type of data: animals.</p>
+<table>
+<thead>
+<tr>
+<th>farm_id</th>
+<th>farm_name</th>
+<th>animals</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Beech Ranch</td>
+<td>pigs, chickens, goats</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Morton Farms</td>
+<td>horses, chickens, cows</td>
+</tr>
+</tbody>
+</table>
+<p>While we have now eliminated the first two issues, we now have multiple entries in one field, separated by commas. This isn’t good either, as its another example of denormalization. There is no “array” data type in a relational database, so each field must contain only one data point.</p>
+<table>
+<thead>
+<tr>
+<th>animal_id</th>
+<th>animal</th>
+<th>farm_name</th>
+<th>ann_revenue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>pig</td>
+<td>Beech Ranch</td>
+<td>65000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>chicken</td>
+<td>Beech Ranch</td>
+<td>65000</td>
+</tr>
+<tr>
+<td>3</td>
+<td>goat</td>
+<td>Beech Ranch</td>
+<td>65000</td>
+</tr>
+</tbody>
+</table>
+<p>Now we’ve solved the multiple fields issue, but we created repeating data (the farm field), which is also an example of denormalization. As well, we can see that if we were tracking additional ranch information (such as annual revenue), that field is only vaguely related to the animal information.</p>
+<p><strong>When these issues begin arising in your schema design, it means that you should separate information into two or more tables.</strong></p>
+<h3 id="anomalies">Anomalies</h3>
+<p>Obeying the above guidelines prevent <strong>anomalies</strong> in your database when inserting, updating, or deleting. For example, imagine if the revenue of Beech Ranch changed. With our denormalized schema, it may get updated in some records but not others:</p>
+<table>
+<thead>
+<tr>
+<th>animal_id</th>
+<th>animal</th>
+<th>farm_name</th>
+<th>ann_revenue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>pig</td>
+<td>Beech Ranch</td>
+<td>45000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>chicken</td>
+<td>Beech Ranch</td>
+<td>65000</td>
+</tr>
+<tr>
+<td>3</td>
+<td>goat</td>
+<td>Beech Ranch</td>
+<td>65000</td>
+</tr>
+</tbody>
+</table>
+<p>Similarly, if Beech Ranch shut down, there would be three (if not more) records that needed to be deleted to remove a single farm.</p>
+<p>Thus a denormalized table opens the door for contradictory, confusing, and unusable data.</p>
+<h5>Challenge</h5>
+<p>What issues does the following table have?</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>city</th>
+<th style="text-align: center">state</th>
+<th>powers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>John Doe</td>
+<td>Miami</td>
+<td style="text-align: center">FL</td>
+<td>none</td>
+</tr>
+<tr>
+<td>Jane Doe</td>
+<td>Miami</td>
+<td style="text-align: center">FL</td>
+<td>none</td>
+</tr>
+<tr>
+<td>Frank Castle</td>
+<td>New York</td>
+<td style="text-align: center">NY</td>
+<td>kidnapping, extortion</td>
+</tr>
+<tr>
+<td>Tony Stark</td>
+<td>New York</td>
+<td style="text-align: center">NY</td>
+<td>wealth</td>
+</tr>
+<tr>
+<td>Peter Parker</td>
+<td>New York</td>
+<td style="text-align: center">NY</td>
+<td>spider-sense, webbing</td>
+</tr>
+</tbody>
+</table>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://en.wikipedia.org/wiki/Database_normalization" target="blank_">Database Normalization (Wikipedia)</a><br> Database normalization is the process of structuring a relational database in accordance with a series of so-called normal forms in order to reduce data redundancy and improve data integrity.</li>
+<li>
+<a href="https://support.microsoft.com/en-us/help/283878/description-of-the-database-normalization-basics" target="blank_">Description of the database normalization basics</a><br> </li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to explain different table relationships</h4>
+<p>When modeling the data for our systems we’ll start noticing the relationships that exist between our entities. Those relationships need to be added to our resulting model.</p>
+<p>The way we model the relationship between our entities will influence how easy (or difficult) querying data will be.</p>
+<h5>Overview</h5>
+<p>There are three types of relationships:</p>
+<ul>
+<li>One to one.</li>
+<li>One to many.</li>
+<li>Many to many.</li>
+</ul>
+<p>Determining how data is related can provide a set of guidelines for table representation and guides the use of foreign keys to connect said tables.</p>
+<h5>Follow Along</h5>
+<h3 id="one-to-one-relationships">One to One Relationships</h3>
+<p>Imagine we are storing the financial projections for a series of farms.</p>
+<p>We may wish to attach fields like farm name, address, description, projected revenue, and projected expenses. We could divide these fields into two categories: information related to the farm directly (name, address, description) and information related to the financial projections (revenue, expenses).</p>
+<p>We would say that <code class="highlighter-rouge">farms</code> and <code class="highlighter-rouge">projections</code> have a <strong>one-to-one</strong> relationship. This is to say that every farm has exactly one projection, and every project corresponds to exactly one farm.</p>
+<p>This data can be represented in two tables: <code class="highlighter-rouge">farms</code> and <code class="highlighter-rouge">projections</code></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>farm_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Beech Ranch</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Morton Farms</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>farm_id</th>
+<th>revenue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>65000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>105000</td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="highlighter-rouge">farm_id</code> is the foreign key that links <code class="highlighter-rouge">farms</code> and <code class="highlighter-rouge">projections</code> together.</p>
+<p>Notes about one-to-one relationships:</p>
+<ul>
+<li>The foreign key should always have a <code class="highlighter-rouge">unique</code> constraint to prevent duplicate entries. In the example above, we wouldn’t want to allow multiple projections records for one farm.</li>
+<li>The foreign key can be in either table. For example, we may have had a <code class="highlighter-rouge">projection_id</code> in the <code class="highlighter-rouge">farms</code> table instead. A good rule of thumb is to put the foreign key in whichever table is more auxiliary to the other.</li>
+<li>You can represent one-to-one data in a single table <em>without</em> creating anomalies. However, it is sometimes prudent to use two tables as shown above to keep separate concerns in separate tables.</li>
+</ul>
+<h3 id="one-to-many-relationships">One to Many Relationships</h3>
+<p>Now imagine, we are storing the full-time ranchers employed at each farm. In this case, each rancher would only work at one farm however, each farm may have multiple ranchers.</p>
+<p>This is called a <strong>one-to-many</strong> relationship.</p>
+<p>This is the most common type of relationship between entities. Some other examples:</p>
+<ul>
+<li>One <code class="highlighter-rouge">customer</code> can have many <code class="highlighter-rouge">orders</code>.</li>
+<li>One <code class="highlighter-rouge">user</code> can have many <code class="highlighter-rouge">posts</code>.</li>
+<li>One <code class="highlighter-rouge">post</code> can have many <code class="highlighter-rouge">comments</code>.</li>
+</ul>
+<p>Manage this type of relationship by adding a foreign key on the “many” table of the relationship that points to the primary key on the “one” table. Consider the <code class="highlighter-rouge">farms</code> and <code class="highlighter-rouge">ranchers</code> tables.</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>farm_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Beech Ranch</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Morton Farms</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>rancher_name</th>
+<th>farm_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>John Doe</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Jane Doe</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Jim Done</td>
+<td>2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Jay Dow</td>
+<td>2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Jen Dunn</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>In a many-to-many relationship, the foreign key (in this case <code class="highlighter-rouge">farm_id</code>) should <em>not</em> be unique.</p>
+<h3 id="many-to-many-relationships">Many to Many Relationships</h3>
+<p>If we want to track animals on a farm as well, we must explore the <strong>many-to-many</strong> relationship. A farm has multiple animals, and multiple of each type of animal is present at multiple different farms.</p>
+<p>Some other examples:</p>
+<ul>
+<li>an <code class="highlighter-rouge">order</code> can have many <code class="highlighter-rouge">products</code> and the same <code class="highlighter-rouge">product</code> will appear in many <code class="highlighter-rouge">orders</code>.</li>
+<li>a <code class="highlighter-rouge">book</code> can have more than one <code class="highlighter-rouge">author</code>, and an <code class="highlighter-rouge">author</code> can write more than one <code class="highlighter-rouge">book</code>.</li>
+</ul>
+<p>To model this relationship, we need to introduce an <strong>intermediary table</strong> that holds foreign keys that reference the primary key on the related tables. We now have a <code class="highlighter-rouge">farms</code>, <code class="highlighter-rouge">animals</code>, and <code class="highlighter-rouge">farm_animals</code> table.</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>farm_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Beech Ranch</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Morton Farms</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>animal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>pig</td>
+</tr>
+<tr>
+<td>2</td>
+<td>chicken</td>
+</tr>
+<tr>
+<td>3</td>
+<td>goat</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>farm_id</th>
+<th>animal_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>While each foreign key on the intermediary table is not unique, the combinations of keys should be unique.</p>
+<h5>Challenge</h5>
+<p>Model the relationship for addresses where:</p>
+<ul>
+<li>an address has the street address, the city, state and zip code.</li>
+<li>a state can have several cities.</li>
+<li>a city belongs to only one state.</li>
+</ul>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://gerardnico.com/data/modeling/many-to-many" target="blank_">many to many relationships</a><br> </li>
+<li>
+<a href="https://gerardnico.com/data/modeling/one-to-many" target="blank_">one to many relationships</a><br> </li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to create table relationships using Knex</h4>
+<p>To put our data modeling skills to practical use, we need to be able to build a multi table schema using knex.</p>
+<h5>Overview</h5>
+<p>The Knex query builder library also allows us to create multi-table schemas include foreign keys. However, there are a few extra things to keep in mind when designing a multi-table schema, such as using the correct order when creating tables, dropping tables, seeding data, and removing data.</p>
+<p>We have to consider the way that <code class="highlighter-rouge">delete</code> and <code class="highlighter-rouge">updates</code> through our API will impact related data.</p>
+<h5>Follow Along</h5>
+<h3 id="foreign-key-setup">Foreign Key Setup</h3>
+<p>In Knex, foreign key restrictions don’t automatically work. Whenever using foreign keys in your schema, add the following code to your <code class="highlighter-rouge">knexfile</code>. This will prevent users from entering bad data into a foreign key column.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">development</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nl">client</span><span class="p">:</span> <span class="dl">'</span><span class="s1">sqlite3</span><span class="dl">'</span><span class="p">,</span>
+  <span class="nx">useNullAsDefault</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> 
+  <span class="nx">connection</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./data/database.db3</span><span class="dl">'</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="c1">// needed when using foreign keys</span>
+  <span class="nx">pool</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">afterCreate</span><span class="p">:</span> <span class="p">(</span><span class="nx">conn</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="c1">// runs after a connection is made to the sqlite engine</span>
+      <span class="nx">conn</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="dl">'</span><span class="s1">PRAGMA foreign_keys = ON</span><span class="dl">'</span><span class="p">,</span> <span class="nx">done</span><span class="p">);</span> <span class="c1">// turn on FK enforcement</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">},</span>
+</code></pre></div></div>
+<h3 id="migrations">Migrations</h3>
+<p>Let’s look at how we might track our <code class="highlighter-rouge">farms</code> and <code class="highlighter-rouge">ranchers</code> using Knex. In our migration file’s <code class="highlighter-rouge">up</code> function, we would want to create two tables:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">exports</span><span class="p">.</span><span class="nx">up</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">knex</span><span class="p">,</span> <span class="nb">Promise</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">knex</span><span class="p">.</span><span class="nx">schema</span>
+    <span class="p">.</span><span class="nx">createTable</span><span class="p">(</span><span class="dl">'</span><span class="s1">farms</span><span class="dl">'</span><span class="p">,</span> <span class="nx">tbl</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">tbl</span><span class="p">.</span><span class="nx">increments</span><span class="p">();</span>
+      <span class="nx">tbl</span><span class="p">.</span><span class="nx">string</span><span class="p">(</span><span class="dl">'</span><span class="s1">farm_name</span><span class="dl">'</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">notNullable</span><span class="p">();</span>
+    <span class="p">})</span>
+    <span class="c1">// we can chain together createTable</span>
+    <span class="p">.</span><span class="nx">createTable</span><span class="p">(</span><span class="dl">'</span><span class="s1">ranchers</span><span class="dl">'</span><span class="p">,</span> <span class="nx">tbl</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">tbl</span><span class="p">.</span><span class="nx">increments</span><span class="p">();</span>
+      <span class="nx">tbl</span><span class="p">.</span><span class="nx">string</span><span class="p">(</span><span class="dl">'</span><span class="s1">rancher_name</span><span class="dl">'</span><span class="p">,</span> <span class="mi">128</span><span class="p">);</span>
+      <span class="nx">tbl</span><span class="p">.</span><span class="nx">integer</span><span class="p">(</span><span class="dl">'</span><span class="s1">farm_id</span><span class="dl">'</span><span class="p">)</span>
+        <span class="c1">// forces integer to be positive</span>
+        <span class="p">.</span><span class="nx">unsigned</span><span class="p">()</span>
+        <span class="p">.</span><span class="nx">notNullable</span><span class="p">()</span>
+        <span class="p">.</span><span class="nx">references</span><span class="p">(</span><span class="dl">'</span><span class="s1">id</span><span class="dl">'</span><span class="p">)</span>
+        <span class="c1">// this table must exist already</span>
+        <span class="p">.</span><span class="nx">inTable</span><span class="p">(</span><span class="dl">'</span><span class="s1">farms</span><span class="dl">'</span><span class="p">)</span>
+    <span class="p">})</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>Note that the foreign key can only be created <em>after</em> the reference table.</p>
+<p>In the down function, the opposite is true. We always want to drop a table with a foreign key <em>before</em> dropping the table it references.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">exports</span><span class="p">.</span><span class="nx">down</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">knex</span><span class="p">,</span> <span class="nb">Promise</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// drop in the opposite order</span>
+  <span class="k">return</span> <span class="nx">knex</span><span class="p">.</span><span class="nx">schema</span>
+    <span class="p">.</span><span class="nx">dropTableIfExists</span><span class="p">(</span><span class="dl">'</span><span class="s1">ranchers</span><span class="dl">'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">dropTableIfExists</span><span class="p">(</span><span class="dl">'</span><span class="s1">farms</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>In the case of a many-to-many relationship, the syntax for creating an intermediary table is identical, except for one additional piece. We need a way to make sure our combination of foreign keys is unique.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">.</span><span class="nx">createTable</span><span class="p">(</span><span class="dl">'</span><span class="s1">farm_animals</span><span class="dl">'</span><span class="p">,</span> <span class="nx">tbl</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">tbl</span><span class="p">.</span><span class="nx">integer</span><span class="p">(</span><span class="dl">'</span><span class="s1">farm_id</span><span class="dl">'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">unsigned</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">notNullable</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">references</span><span class="p">(</span><span class="dl">'</span><span class="s1">id</span><span class="dl">'</span><span class="p">)</span>
+    <span class="c1">// this table must exist already</span>
+    <span class="p">.</span><span class="nx">inTable</span><span class="p">(</span><span class="dl">'</span><span class="s1">farms</span><span class="dl">'</span><span class="p">)</span>
+  <span class="nx">tbl</span><span class="p">.</span><span class="nx">integer</span><span class="p">(</span><span class="dl">'</span><span class="s1">animal_id</span><span class="dl">'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">unsigned</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">notNullable</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">references</span><span class="p">(</span><span class="dl">'</span><span class="s1">id</span><span class="dl">'</span><span class="p">)</span>
+    <span class="c1">// this table must exist already</span>
+    <span class="p">.</span><span class="nx">inTable</span><span class="p">(</span><span class="dl">'</span><span class="s1">animals</span><span class="dl">'</span><span class="p">)</span>
+
+  <span class="c1">// the combination of the two keys becomes our primary key</span>
+  <span class="c1">// will enforce unique combinations of ids</span>
+  <span class="nx">tbl</span><span class="p">.</span><span class="nx">primary</span><span class="p">([</span><span class="dl">'</span><span class="s1">farm_id</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">animal_id</span><span class="dl">'</span><span class="p">]);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+<h3 id="seeds">Seeds</h3>
+<p>Order is also a concern when seeding. We want to create seeds in the <strong>same</strong> order we created our tables. In other words, don’t create a seed with a foreign key, until that reference record exists.</p>
+<p>In our example, make sure to write the <code class="highlighter-rouge">01-farms</code> seed file and then the <code class="highlighter-rouge">02-ranchers</code> seed file.</p>
+<p>However, we run into a problem with truncating our seeds, because we want to truncate <code class="highlighter-rouge">02-ranchers</code> <em>before</em> <code class="highlighter-rouge">01-farms</code>. A library called <code class="highlighter-rouge">knex-cleaner</code> provides an easy solution for us.</p>
+<p>Run <code class="highlighter-rouge">knex seed:make 00-cleanup</code> and <code class="highlighter-rouge">npm install knex-cleaner</code>. Inside the cleanup seed, use the following code.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">cleaner</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">knex-cleaner</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">seed</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">knex</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">cleaner</span><span class="p">.</span><span class="nx">clean</span><span class="p">(</span><span class="nx">knex</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">mode</span><span class="p">:</span> <span class="dl">'</span><span class="s1">truncate</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// resets ids</span>
+    <span class="na">ignoreTables</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">knex_migrations</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">knex_migrations_lock</span><span class="dl">'</span><span class="p">],</span> <span class="c1">// don't empty migration tables</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>This removes all tables (excluding the two tables that track migrations) in the correct order before any seed files run.</p>
+<h3 id="cascading">Cascading</h3>
+<p>If a user attempt to delete a record that is referenced by another record (such as attempting to delete <code class="highlighter-rouge">Morton Ranch</code> when entries in our <code class="highlighter-rouge">ranchers</code> table reference that record), by default, the database will block the action. The same thing can happen when updating a record when a foreign key reference.</p>
+<p>If we want that to override this default, we can delete or update with <strong>cascade</strong>. With cascade, deleting a record also deletes all referencing records, we can set that up in our schema.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">.</span><span class="nx">createTable</span><span class="p">(</span><span class="dl">'</span><span class="s1">ranchers</span><span class="dl">'</span><span class="p">,</span> <span class="nx">tbl</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">tbl</span><span class="p">.</span><span class="nx">increments</span><span class="p">();</span>
+    <span class="nx">tbl</span><span class="p">.</span><span class="nx">string</span><span class="p">(</span><span class="dl">'</span><span class="s1">rancher_name</span><span class="dl">'</span><span class="p">,</span> <span class="mi">128</span><span class="p">);</span>
+    <span class="nx">tbl</span><span class="p">.</span><span class="nx">integer</span><span class="p">(</span><span class="dl">'</span><span class="s1">farm_id</span><span class="dl">'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">unsigned</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">notNullable</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">references</span><span class="p">(</span><span class="dl">'</span><span class="s1">id</span><span class="dl">'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">inTable</span><span class="p">(</span><span class="dl">'</span><span class="s1">farms</span><span class="dl">'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">onUpdate</span><span class="p">(</span><span class="dl">'</span><span class="s1">CASCADE</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">.</span><span class="nx">onDelete</span><span class="p">(</span><span class="dl">'</span><span class="s1">CASCADE</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></div></div>
+<h5>Challenge</h5>
+<p>Write the migration file to create a table to track users and posts.</p>
+<hr>
+<h2>
+<a id="guided-project" class="anchor" href="#guided-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Guided Project</h2>
+<h3>Node DB 4 Guided Project</h3>
+<a target="_blank" href="https://github.com/LambdaSchool/node-db4-guided">GitHub Repo</a>
+<hr>
+<h2 class="display-4">
+<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
+<ul class="list-group">
+<li class="list-group-item">
+<h5><a target="_blank" href="https://github.com/LambdaSchool/node-db4-challenge">Node DB4 Challenge</a></h5>
+</li>
+</ul>
+<h2 class="display-4">
+<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
+<h3 class="display-5">Class Recordings</h3>
+<p class="lead">You can use class recordings to help you master the material.</p>
+<div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<strong><a target="_blank" href="https://youtu.be/DNCEdN3P2Rg">Data Modeling for Web PT 18 w/Jason Maurer</a></strong>
+<p>A data model is an abstraction of the information a system needs to fulfill it’s purpose. When designing a data model we go from high level Entities to low level database schemas. The lower we get the more detailed the model needs to be. We’ll work at the physical database design level in order to learn how to create database objects, but always working towards the high level entities. On this lecture we we’ll cover: Normalizing the model. One to many relationships. Many to many relationships. One to one relationships. Creating multi table schemas in knex At the end of this module, you should be able to: explain data normalization explain different table relationships create table relationships using Knex</p>
+</li>
+<li class="list-group-item">
+<a href="/archive/FSW/module/rec5J23yAIdjmFbgP">All previous recordings</a>
+</li>
+</ul>
+</div>
+<h3 class="display-5">Demonstrate Mastery</h3>
+<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
+<ul>
+<li>Objective challenge: <p>What issues does the following table have?</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>city</th>
+<th style="text-align: center">state</th>
+<th>powers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>John Doe</td>
+<td>Miami</td>
+<td style="text-align: center">FL</td>
+<td>none</td>
+</tr>
+<tr>
+<td>Jane Doe</td>
+<td>Miami</td>
+<td style="text-align: center">FL</td>
+<td>none</td>
+</tr>
+<tr>
+<td>Frank Castle</td>
+<td>New York</td>
+<td style="text-align: center">NY</td>
+<td>kidnapping, extortion</td>
+</tr>
+<tr>
+<td>Tony Stark</td>
+<td>New York</td>
+<td style="text-align: center">NY</td>
+<td>wealth</td>
+</tr>
+<tr>
+<td>Peter Parker</td>
+<td>New York</td>
+<td style="text-align: center">NY</td>
+<td>spider-sense, webbing</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>Objective challenge: <p>Model the relationship for addresses where:</p>
+<ul>
+<li>an address has the street address, the city, state and zip code.</li>
+<li>a state can have several cities.</li>
+<li>a city belongs to only one state.</li>
+</ul>
+</li>
+<li>Objective challenge: <p>Write the migration file to create a table to track users and posts.</p>
+</li>
+<li>Guided Project: Node DB 4 Guided Project</li>
+<li>Project: Node DB4 Challenge</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80850900-4');
+</script>
+<script type="text/javascript">
+  function getDomain() {
+    const domainName = window.location.hostname.split('.')[1];
+    return `${domainName}.com`;
+  }
+</script>
+<script src="" integrity="" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
+<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+  SimpleJekyllSearch.init({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    dataSource: '/search.json',
+    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Data Modeling">{title}</a></li>',
+    noResultsText: '',
+    limit: 10,
+    fuzzy: true,
+  })
+</script>
+<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
+  if (window.attachEvent) {
+    window.attachEvent('onload', verifySignedIn);
+  } else {
+    if (window.onload) {
+      var currentOnLoadFn = window.onload;
+      var newOnLoadFn = function (evt) {
+        currentOnLoadFn(evt);
+        verifySignedIn();
+      };
+      window.onload = newOnLoadFn;
+    } else {
+      window.onload = verifySignedIn;
+    }
+  }
+
+  function verifySignedIn() {
+    if (isPagePublic()) {
+      return showPageContents();
+    }
+
+    window.__user = null;
+    isSignedIn().then((user) => {
+      window.__user = user;
+
+      if (!user.signedIn) {
+        redirectToSignIn();
+      } else if (!user.student && !window.__openToAdmissions) {
+        showUnauthorizedMessage();
+      } else {
+        showPageContents();
+      }
+    });
+  }
+
+  function isPagePublic() {
+    const openCourses = [
+      'and-pre',
+      'ds-pre',
+      'fsw-pre',
+      'help',
+      'ios-pre',
+    ];
+
+    const openPages = [
+      'cs-and',
+      'cs-fsw',
+      'cs-ios',
+      'cr',
+      'ds',
+      'jx',
+      'p4s',
+      'ux',
+    ];
+
+    const pathParts = window.location.pathname.split('/');
+    const courseName = pathParts[1];
+    const pageName = pathParts[pathParts.length - 1];
+
+    return openCourses.includes(courseName) || openPages.includes(pageName);
+  }
+
+  function isSignedIn() {
+    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
+
+    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
+
+    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
+      .then((response) => response.text())
+      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
+      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
+      .catch((error) => {});
+  }
+
+  function redirectToSignIn() {
+    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+    const redirectMessage = document.querySelector('#redirect-message');
+    redirectMessage.style.display = "block";
+    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+    window.location = signInUrl;
+  }
+
+  function showPageContents() {
+    document.querySelector('#content-wrapper').style.visibility = 'visible';
+  }
+
+  function showUnauthorizedMessage() {
+    document.querySelector('#unauthorized-message').style.display = 'block';
+  }
+
+  function getAuthBaseUrl() {
+    const domain = getDomain();
+    const authBaseUrl = `https://auth.${domain}`;
+    return authBaseUrl;
+  }
+</script><script src="/assets/js/docs.min.js"></script><script>
+  var MathJax = {
+    tex: {
+      inlineMath: [['$$', '$$'], ['\[', '\])']]
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax span": {
+          color: "#000000"
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script>
+  handleExternalLinks();
+
+  function handleExternalLinks() {
+    const domain = getDomain();
+    const links = document.querySelectorAll('a');
+    return links.forEach((link) => {
+      if (!link.host.includes(domain)) link.target = '_blank';
+    })
+  };
+</script>
+</div>
+</body>
+</html>

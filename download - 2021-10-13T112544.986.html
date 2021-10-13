@@ -1,0 +1,1300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Intended as a home for Lambda School curriculum.">
+<meta name="author" content="">
+<meta name="generator" content="Jekyll v3.8.0">
+<title>Graphs I · Lambda School</title>
+
+<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+  analytics.page();
+  }}();
+</script>
+
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#a0001e">
+</head>
+<body>
+<noscript>Please enable JavaScript to view this page.</noscript>
+<div id="redirect-message" style="display: none;">
+You must be logged in to view this page.
+</div>
+<div id="unauthorized-message" style="display: none;">
+You must be a Lambda School student to view this page.
+</div>
+<div id="content-wrapper" style="visibility: hidden;">
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container">
+<span class="skiplink-text">Skip to main content</span>
+</div>
+</a>
+<div class="mobile-menu">
+<div class="m-drop">
+<div class="mobile-row">
+<div class="header-row" style="padding: 3px 7px">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
+</svg></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+</button>
+</div>
+</div>
+<div class="nav-row">
+<div class="results-container">
+<ul id="results-container" class="dropdown list-group"></ul>
+</div>
+<div id="mobile-course-menu" class="collapse nav-row">
+<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+<nav class="bd-links">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Computer Science Legacy</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/recd4D4w3QrigPqUF">
+1.&nbsp;&nbsp;Intro to Python and OOP
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/cs/module/recay2erzDlYUPSeO/">
+Introduction to Python I
+</a>
+</li>
+<li>
+<a href="/cs/module/recwpe3Y9TVWrGT8L/">
+Introduction to Python II
+</a>
+</li>
+<li>
+<a href="/cs/module/reca7NYptklr7F403/">
+Introduction to Python III
+</a>
+</li>
+<li>
+<a href="/cs/module/recc3eWphKVYd0oHT/">
+Introduction to Python IV
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/recR4gHcvD21ziR9a">
+2.&nbsp;&nbsp;Data Structures
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/cs/module/rec3MaMAY78iDm7ax/">
+Data Structures I
+</a>
+</li>
+<li>
+<a href="/cs/module/recMcvOrFw5BWUku3/">
+Data Structures II
+</a>
+</li>
+<li>
+<a href="/cs/module/recx53S3pYfDfvFDm/">
+Data Structures III
+</a>
+</li>
+<li>
+<a href="/cs/module/recHdwPne4Xt3A7lk/">
+Data Structures IV
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/recd9grrKlURJ453N">
+3.&nbsp;&nbsp;Algorithms
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/cs/module/reck76SPX26beGSqE/">
+Iterative Sorting
+</a>
+</li>
+<li>
+<a href="/cs/module/reccRh9h6ccXghfA4/">
+Recursive Sorting
+</a>
+</li>
+<li>
+<a href="/cs/module/recrCuZQMVI6LvxhD/">
+A First-Pass Solution
+</a>
+</li>
+<li>
+<a href="/cs/module/recsvJCzPlM2X63ZX/">
+Writing Better Solutions
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/recvDjRQEq49uoWsU">
+4.&nbsp;&nbsp;CS Unit 1 Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/recAr3gdL8U57eho1">
+5.&nbsp;&nbsp;Hash Tables
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/cs/module/recSwIvbSV630gdVk/">
+Hash Tables I
+</a>
+</li>
+<li>
+<a href="/cs/module/recHzCwboKBLBB0Re/">
+Hash Tables II
+</a>
+</li>
+<li>
+<a href="/cs/module/recsEDFseukQWg92c/">
+Hash Tables III & IV
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/rec7U9K7OCL5ihj0t">
+6.&nbsp;&nbsp;Graphs
+</a>
+<ul class="nav bd-sidenav">
+
+<li class="active bd-sidenav-active">
+<a href="/cs/module/recBMbHtb8AOXq3UL/">
+Graphs I
+</a>
+</li>
+<li>
+<a href="/cs/module/recZL2m6Gx7B4dU3G/">
+Graphs II
+</a>
+</li>
+<li>
+<a href="/cs/module/reck4RVWsg82eiYPZ/">
+Graphs III
+</a>
+</li>
+<li>
+<a href="/cs/module/recoGWlBHjuJxkL1y/">
+Graphs IV
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/recndTnO1V8oDbBPb">
+7.&nbsp;&nbsp;Computer Architecture
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/cs/module/recsuJbrrFgbFUCRX/">
+Computer Architecture: Basics, Number Bases
+</a>
+</li>
+<li>
+<a href="/cs/module/rec2NHr4Eyib7XdED/">
+Computer Architecture: Bitwise Operations
+</a>
+</li>
+<li>
+<a href="/cs/module/recvQUkzz23NTj20G/">
+Computer Architecture: The System Stack
+</a>
+</li>
+<li>
+<a href="/cs/module/recGPVAdvQcmopSIO/">
+Computer Architecture: Subroutines, CALL/RET
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/reco0t22NdXmr8VyL">
+8.&nbsp;&nbsp;CS Unit 2 Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-container">
+<div class="sidebar-container bd-sidebar">
+<div class="docs-sidebar">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
+<ul id="results-container" class="dropdown list-group"></ul>
+<nav class="bd-links collapse" id="bd-docs-nav">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Computer Science Legacy</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/recd4D4w3QrigPqUF">
+1.&nbsp;&nbsp;Intro to Python and OOP
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/cs/module/recay2erzDlYUPSeO/">
+Introduction to Python I
+</a>
+</li>
+<li>
+<a href="/cs/module/recwpe3Y9TVWrGT8L/">
+Introduction to Python II
+</a>
+</li>
+<li>
+<a href="/cs/module/reca7NYptklr7F403/">
+Introduction to Python III
+</a>
+</li>
+<li>
+<a href="/cs/module/recc3eWphKVYd0oHT/">
+Introduction to Python IV
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/recR4gHcvD21ziR9a">
+2.&nbsp;&nbsp;Data Structures
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/cs/module/rec3MaMAY78iDm7ax/">
+Data Structures I
+</a>
+</li>
+<li>
+<a href="/cs/module/recMcvOrFw5BWUku3/">
+Data Structures II
+</a>
+</li>
+<li>
+<a href="/cs/module/recx53S3pYfDfvFDm/">
+Data Structures III
+</a>
+</li>
+<li>
+<a href="/cs/module/recHdwPne4Xt3A7lk/">
+Data Structures IV
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/recd9grrKlURJ453N">
+3.&nbsp;&nbsp;Algorithms
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/cs/module/reck76SPX26beGSqE/">
+Iterative Sorting
+</a>
+</li>
+<li>
+<a href="/cs/module/reccRh9h6ccXghfA4/">
+Recursive Sorting
+</a>
+</li>
+<li>
+<a href="/cs/module/recrCuZQMVI6LvxhD/">
+A First-Pass Solution
+</a>
+</li>
+<li>
+<a href="/cs/module/recsvJCzPlM2X63ZX/">
+Writing Better Solutions
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/recvDjRQEq49uoWsU">
+4.&nbsp;&nbsp;CS Unit 1 Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/recAr3gdL8U57eho1">
+5.&nbsp;&nbsp;Hash Tables
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/cs/module/recSwIvbSV630gdVk/">
+Hash Tables I
+</a>
+</li>
+<li>
+<a href="/cs/module/recHzCwboKBLBB0Re/">
+Hash Tables II
+</a>
+</li>
+<li>
+<a href="/cs/module/recsEDFseukQWg92c/">
+Hash Tables III & IV
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/rec7U9K7OCL5ihj0t">
+6.&nbsp;&nbsp;Graphs
+</a>
+<ul class="nav bd-sidenav">
+
+<li class="active bd-sidenav-active">
+<a href="/cs/module/recBMbHtb8AOXq3UL/">
+Graphs I
+</a>
+</li>
+<li>
+<a href="/cs/module/recZL2m6Gx7B4dU3G/">
+Graphs II
+</a>
+</li>
+<li>
+<a href="/cs/module/reck4RVWsg82eiYPZ/">
+Graphs III
+</a>
+</li>
+<li>
+<a href="/cs/module/recoGWlBHjuJxkL1y/">
+Graphs IV
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/recndTnO1V8oDbBPb">
+7.&nbsp;&nbsp;Computer Architecture
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/cs/module/recsuJbrrFgbFUCRX/">
+Computer Architecture: Basics, Number Bases
+</a>
+</li>
+<li>
+<a href="/cs/module/rec2NHr4Eyib7XdED/">
+Computer Architecture: Bitwise Operations
+</a>
+</li>
+<li>
+<a href="/cs/module/recvQUkzz23NTj20G/">
+Computer Architecture: The System Stack
+</a>
+</li>
+<li>
+<a href="/cs/module/recGPVAdvQcmopSIO/">
+Computer Architecture: Subroutines, CALL/RET
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/cs/sprint/reco0t22NdXmr8VyL">
+8.&nbsp;&nbsp;CS Unit 2 Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<main class="content-container flex-wrapper" role="main">
+<div class="sticky-nav">
+<div class="sprint-nav">
+<ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+<li class="toc-entry toc-h2"><a href="#guided-project">Guided Project</a></li>
+<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+</ul>
+</div>
+
+</div>
+<div class="wrapper limit-width">
+<div class="flex-wrapper">
+<div class="limit-width">
+<div class="jumbotron">
+<h1 class="bd-title" id="content">Graphs I</h1>
+<span class="lead">
+<p class="bd-lead"></p>
+<p>Day 1: Overview and introduction to graphs, graph representations, BFS, DFS</p>
+<ul>
+<li>Project - Implement BFS and DFS, returning a path from the starting node to the end node</li>
+</ul>
+</span>
+<strong>At the end of this module, you should be able to:</strong>
+<ul>
+<li>describe what a graph is, explain its components, provide examples of its useful applications, and draw each of the different graph types</li>
+<li>represent a graph as an adjacency list and an adjacency matrix and compare and contrast the respective representations</li>
+<li>represent a breadth-first-search of a graph in pseudo-code and recall common applications for its use</li>
+<li>represent a depth-first-search of a graph in pseudo-code and recall common applications for its use</li>
+</ul>
+</div>
+<div class="alert alert-warning" role="alert">
+<h4>Pro Tip</h4>
+<p>Read error messages carefully - computers are always right (from the state they have).</p>
+</div>
+<h2 class="display-4">
+<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
+<p class="lead">Review each preclass resource before class.</p>
+<div class="preclass">
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Etva3hOjGMU" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<a target="_blank" href="https://medium.com/basecs/a-gentle-introduction-to-graph-theory-77969829ead8">Article: A Gentle Introduction to Graph Theory</a>
+</li>
+</ul>
+</div>
+<h2 class="display-4">
+<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
+<h4 class="mark mb-3 p-2">Learn to describe what a graph is, explain its components, provide examples of its useful applications, and draw each of the different graph types</h4>
+<p>We see countless networks in our day-to-day lives. When trying to describe networks or sets of connected objects, computer scientists often use graphs.  A graph is a set of linked data, represented by vertices and edges. The requirements for linking vertices are very lenient. This allows us to use graphs to describe and examine many unique scenarios.</p>
+ <h5>Overview</h5>
+<h3 id="what-are-graphs">What Are Graphs</h3>
+<p>Graphs are collections of related data. They’re like trees, except connections can be made from any node to any other node, even forming loops. By this definition, <em>all trees are graphs, but not all graphs are trees.</em></p>
+<h3 id="components-of-graphs">Components of Graphs</h3>
+<p><img src="https://i.imgur.com/Eb2SkhH.jpg" alt="graph-data-structure.002"></p>
+<p>We call the nodes in a graph <strong>vertexes</strong> (or <strong>vertices</strong> or <strong>verts</strong>), and we call the connections between the verts <strong>edges</strong>.</p>
+<p>An edge denotes a relationship or linkage between the two verts.</p>
+<h3 id="what-graphs-represent">What Graphs Represent</h3>
+<p>Graphs can represent any kind of multi-way relational data.</p>
+<p>A graph could show a collection of cities and their linking roads.</p>
+<p>It could show a collection of computers on a network.</p>
+<p>It could show a population of people who know each other and <a href="https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon">Kevin
+Bacon</a>.</p>
+<p>It could represent trade relationships between nations.</p>
+<p>It could represent the money owed in an ongoing poker night amongst friends.</p>
+<p>And so on.</p>
+<h3 id="types-of-graphs">Types of Graphs</h3>
+<h4 id="directed-and-undirected-graphs">Directed and Undirected Graphs</h4>
+<p>The nature of the relationship that is being represented is what determines if a directed or undirected graph should be used. If the relationship could be described as “one way”, then a directed graph makes the most sense. For example, representing the owing of money to others (debt) with a directed graph would make sense.</p>
+<p><img src="https://i.imgur.com/vfwRrDR.jpg" alt="directed-graph.001"></p>
+<p>Directed graphs can also be bidirectional. For example, road maps are directed since all roads are one-way, however most streets consist of roads in both directions.</p>
+<p><img src="https://i.imgur.com/m8mA3go.jpg" alt="bidirectional-directed-graph.001"></p>
+<p>If the nature of the relationship is a mutual exchange, then an undirected graph makes the most sense. For example, we could use an undirected graph to represent users who have exchanged money at some point in the past. Since an “exchange” relationship is always mutual, an <strong>undirected</strong> graph makes the most sense here.</p>
+<p><img src="https://i.imgur.com/SJN06wj.jpg" alt="undirected-graph.001"></p>
+<h4 id="cyclic-and-acyclic-graphs">Cyclic and Acyclic Graphs</h4>
+<p>If you can form a cycle (for example, follow the edges and arrive again at an already-visited vert), the graph is <strong>cyclic</strong>. For example, in the image below, you can start at B and then follow the edges to C, E, D, and then back to B (which you’ve already visited).</p>
+<p><img src="https://i.imgur.com/XvMDal0.jpg" alt="cyclic-graph.001"></p>
+<p><em>Note: any undirected graph is automatically cyclic since you can always travel back across the same edge.</em></p>
+<p>If you cannot form a cycle (for example, you cannot arrive at an already-visited vert by following the edges), we call the graph <strong>acyclic</strong>. In the example below, no matter which vert you start at, you cannot follow edges in such a way that you can arrive at an already-visited vert.</p>
+<p><img src="https://i.imgur.com/LXAm7mv.jpg" alt="acyclic-graph.001"></p>
+<h4 id="weighted-graphs">Weighted Graphs</h4>
+<p><strong>Weighted graphs</strong> have values associated with the edges. We call the specific values assigned to each edge <strong>weights</strong>.</p>
+<p><img src="https://i.imgur.com/rjMjqk3.jpg" alt="weighted-graph.001"></p>
+<p>The weights represent different data in different graphs. In a graph representing road segments, the weights might represent the length of the road. The higher the total weight of a route on the graph, the longer the trip is. The weights can help decide which particular route we should choose when comparing all routes.</p>
+<p>We can further modify weights. For example, if you were building a graph to represent a map for bicycle routes, we could give roads with bad car traffic or very steep inclines unnaturally large weights. That way a routing algorithm would be unlikely to take them. (This is how Google Maps avoids freeways when you ask it for walking directions.)</p>
+<p><em>Note: <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Djikstra’s Algorithm</a> is a graph search variant that accounts for edge weights.</em></p>
+<h4 id="directed-acyclic-graphs-dags">Directed Acyclic Graphs (DAGs)</h4>
+<p>A <strong>directed acyclic graph (DAG)</strong> is a directed graph with no cycles. In other words, we can order a DAG’s vertices linearly in such a way that every edge is directed from earlier to later in the sequence.</p>
+<p><img src="https://i.imgur.com/nqhM7uz.jpg" alt="directed-acyclic.001"></p>
+<p>A DAG has several applications. DAGs can modely many different kinds of information. Below is a short list of possible applications:</p>
+<ul>
+<li>A spreadsheet where a vertex represents each cell and an edge for where one cell’s formula uses another cell’s value.</li>
+<li>The milestones and activities of largescale projects where a topological ordering can help optimize the schedule of the projects to use as little time as possible.</li>
+<li>Collections of events and their influence on each other like family trees or version histories.</li>
+</ul>
+<p>It is also notable that git uses a DAG to represent commits. A commit can have a child commit, or more than one child commit (in the case of a branch). A child could come from one parent commit, or from two (in the case of a merge). But there’s no way to go back and form a repeating loop in the git commit hierarchy.</p>
+<h5>Follow Along</h5>
+<p>Before, you draw graphs on your own, let’s draw some graphs together. For each graph, we will have a description.</p>
+<h3 id="exercise-1">Exercise 1</h3>
+<p><em>Draw an undirected graph of 8 verts.</em></p>
+<p>Remember from our definitions above that an undirected graph has edges that are bidirectional. So, we can draw 8 verts and then connect them with solid lines (not arrows) any way we see fit.</p>
+<p><img src="https://i.imgur.com/midD3Xd.jpg" alt="we-do-exercise-1.001"></p>
+<h3 id="exercise-2">Exercise 2</h3>
+<p><em>Draw a directed graph of 7 verts.</em></p>
+<p>A directed graph has at least one edge that is <em>not</em> bidirectional. So, again, we can draw our 7 verts and then connect them with edges. This time, we just need to make sure that one of the edges is an arrow pointing in only one direction.</p>
+<p><img src="https://i.imgur.com/8pCoehA.jpg" alt="we-do-exercise-2.001"></p>
+<h3 id="exercise-3">Exercise 3</h3>
+<p><em>Draw a cyclic directed graph of 5 verts.</em></p>
+<p>This drawing will be similar to one for Exercise 2 because it is a directed graph. However, in this graph we also need to ensure that it has at least one cycle. Remember that a cycle is when you can follow the graph’s edges and arrive at a vertices that you’ve already visited.</p>
+<p>To draw this graph, we will draw our five verts, and then draw our edges making sure that we create at least one cycle.</p>
+<p><img src="https://i.imgur.com/JBOurPn.jpg" alt="we-do-exercise-3.001"></p>
+<h3 id="exercise-4">Exercise 4</h3>
+<p><em>Draw a directed acyclic graph (DAG) of 8 verts.</em></p>
+<p>Again, this graph will be directed. The difference is that it will be acyclic—we can order a DAG’s vertices linearly in such a way that every edge is directed from earlier to later in the sequence.</p>
+<p>For this graph, we will draw our 8 verts in a line from left to right. Then, we will draw our edges making sure that the edges always point from left to right (earlier to later in the sequence).</p>
+<p><img src="https://i.imgur.com/MNLZooH.jpg" alt="we-do-exercise-4.001"></p>
+<h5>Challenge</h5>
+<p>Do the following on your own.</p>
+<p>Draw one graph for each of the descriptions below:</p>
+<ol>
+<li>Undirected graph of 4 verts.</li>
+<li>Directed graph of 5 verts.</li>
+<li>Cyclic directed graph of 6 verts.</li>
+<li>DAG of 7 verts.</li>
+</ol>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to represent a graph as an adjacency list and an adjacency matrix and compare and contrast the respective representations</h4>
+<h5>Overview</h5>
+<h3 id="graph-representations">Graph Representations</h3>
+<p>Two common ways to represent graphs in code are <strong>adjacency lists</strong> and <strong>adjacency matrices</strong>. Both of these options have strengths and weaknesses. When deciding on a graph implementation, it’s important to understand what type of data you will store and what operations you will need to run on the graph.</p>
+<p>Below is an example of how we would represent a graph with an adjacency matrix and an adjacency list. Notice how we represent the relationship between verts C and D when using each type.</p>
+<p><img src="https://i.imgur.com/siGmq8X.jpg" alt="graph-representations.001"></p>
+<h4 id="adjacency-list">Adjacency List</h4>
+<p>In an adjacency list, the graph stores a list of vertices. For each vertex, it stores a list of each connected vertex.</p>
+<p><img src="https://i.imgur.com/GiStmNh.jpg" alt="graph-example.001"></p>
+<p>Below is a representation of the graph above in Python:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Graph</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="p">{</span>
+                            <span class="s">"A"</span><span class="p">:</span> <span class="p">{</span><span class="s">"B"</span><span class="p">},</span>
+                            <span class="s">"B"</span><span class="p">:</span> <span class="p">{</span><span class="s">"C"</span><span class="p">,</span> <span class="s">"D"</span><span class="p">},</span>
+                            <span class="s">"C"</span><span class="p">:</span> <span class="p">{</span><span class="s">"E"</span><span class="p">},</span>
+                            <span class="s">"D"</span><span class="p">:</span> <span class="p">{</span><span class="s">"F"</span><span class="p">,</span> <span class="s">"G"</span><span class="p">},</span>
+                            <span class="s">"E"</span><span class="p">:</span> <span class="p">{</span><span class="s">"C"</span><span class="p">},</span>
+                            <span class="s">"F"</span><span class="p">:</span> <span class="p">{</span><span class="s">"C"</span><span class="p">},</span>
+                            <span class="s">"G"</span><span class="p">:</span> <span class="p">{</span><span class="s">"A"</span><span class="p">,</span> <span class="s">"F"</span><span class="p">}</span>
+                        <span class="p">}</span>
+</code></pre></div></div>
+<p>Notice that this adjacency <em>list</em> doesn’t use any lists. The <code class="highlighter-rouge">vertices</code> collection is a <code class="highlighter-rouge">dictionary</code> which lets us access each collection of edges in O(1) constant time. Because the edges are contained in a <code class="highlighter-rouge">set</code> we can check for the existence of edges in O(1) constant time.</p>
+<h4 id="adjacency-matrix">Adjacency Matrix</h4>
+<p><img src="https://i.imgur.com/GiStmNh.jpg" alt="graph-example.001"></p>
+<p>Here is the representation of the graph above in an adjacency matrix:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Graph</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">edges</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                      <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                      <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                      <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+                      <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                      <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                      <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span>
+</code></pre></div></div>
+<p>We represent this matrix as a two-dimensional array–a list of lists. With this implementation, we get the benefit of built-in edge weights. <code class="highlighter-rouge">0</code> denotes no relationship, but any other value that is present represents an edge label or edge weight. The drawback is that we do not have a built-in association between the vertex values and their index.</p>
+<p>In practice, implementing both the adjacency list and adjacency matrix would contain more information by including <code class="highlighter-rouge">Vertex</code> and <code class="highlighter-rouge">Edge</code> classes.</p>
+<h3 id="tradeoffs">Tradeoffs</h3>
+<p>Adjacency matrices and adjacency lists have strengths and weaknesses. Let’s explore their tradeoffs by comparing their attributes and the efficiency of operations.</p>
+<p>In all the following examples, we are using the following shorthand to denote the properties of the graph:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center">Shorthand</th>
+<th style="text-align: left">Property</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center">V</td>
+<td style="text-align: left">Total number of vertices in the graph</td>
+</tr>
+<tr>
+<td style="text-align: center">E</td>
+<td style="text-align: left">Total number of edges in the graph</td>
+</tr>
+<tr>
+<td style="text-align: center">e</td>
+<td style="text-align: left">Average number of edges per vertex</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="space-complexity">Space Complexity</h4>
+<h5 id="adjacency-matrix-1">Adjacency Matrix</h5>
+<p><em>Complexity</em>: <code class="highlighter-rouge">O(V^2)</code> space</p>
+<p>Consider a dense graph where each vertex points to each other vertex. Here, the total number of edges will approach V^2. This means that regardless of whether you choose an adjacency list or an adjacency matrix, both will have a comparable space complexity. However, dictionaries and sets are less space efficient than lists. So, for dense graphs (graphs with a high average number of edges per vertex), the adjacency matrix is more efficient because it uses lists instead of dictionaries and sets.</p>
+<h5 id="adjacency-list-1">Adjacency List</h5>
+<p><em>Complexity</em>: <code class="highlighter-rouge">O(V+E)</code> space</p>
+<p>Consider a sparse graph with 100 vertices and only one edge. An adjacency list would have to store all 100 vertices but only needs to keep track of that single edge. The adjacency matrix would need to store 100x100=10,000 connections, even though all but one would be 0.</p>
+<p><em>Takeaway: The worst case storage of an adjacency lists occurs when the graph is dense. In this case, the matrix and list representation have the same complexity (<code class="highlighter-rouge">O(V^2)</code>). However, for the general case, the list representation is usually more desirable. Also, since finding a vertex’s neighbors is a common task, and adjacency lists make this operation easier, adjacency lists are most often used to represent graphs.</em></p>
+<hr>
+<h4 id="add-vertex">Add Vertex</h4>
+<h5 id="adjacency-matrix-2">Adjacency Matrix</h5>
+<p><em>Complexity</em>: <code class="highlighter-rouge">O(V)</code> time</p>
+<p>For an adjacency matrix, we would need to add a new value to the end of each existing row, then add a new row at the end.</p>
+<pre><code class="language-Python">for v in self.edges:
+  self.edges[v].append(0)
+v.append([0] * len(self.edges + 1))
+</code></pre>
+<p>Remember that with Python lists, appending to the end of a list is <code class="highlighter-rouge">O(1)</code> because of over-allocation of memory but can be <code class="highlighter-rouge">O(n)</code> when the over-allocated memory fills up. When this occurs, adding the vertex can be <code class="highlighter-rouge">O(V^2)</code>.</p>
+<h5 id="adjacency-list-2">Adjacency List</h5>
+<p><em>Complexity</em>: <code class="highlighter-rouge">O(1)</code> time</p>
+<p>Adding a vertex is simple in an adjacency list:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="bp">self</span><span class="o">.</span><span class="n">vertices</span><span class="p">[</span><span class="s">"H"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+</code></pre></div></div>
+<p>Adding a new key to a dictionary is a constant-time operation.</p>
+<p><em>Takeaway: Adding vertices is very inefficient for adjacency matrices but very efficient for adjacency lists.</em></p>
+<hr>
+<h4 id="remove-vertex">Remove Vertex</h4>
+<h5 id="adjacency-matrix-3">Adjacency Matrix</h5>
+<p><em>Complexity</em>: <code class="highlighter-rouge">O(V^2)</code></p>
+<p>Removing vertices is inefficient in both representations. In an adjacency matrix, we need to remove the removed vertex’s row, then remove that column from each other row. Removing an element from a list requires moving everything after that element over by one slot which takes an average of V/2 operations. Since we need to do that for every single row in our matrix, that results in a V^2 time complexity. We need to reduce the index of each vertex after our removed index by 1 as well which doesn’t add to our quadratic time complexity, but adds extra operations.</p>
+<h5 id="adjacency-list-3">Adjacency List</h5>
+<p><em>Complexity</em>: <code class="highlighter-rouge">O(V)</code></p>
+<p>For an adjacency list, we need to visit each vertex and remove all edges pointing to our removed vertex. Removing elements from sets and dictionaries is a O(1) operation, so this results in an overall O(V) time complexity.</p>
+<p><em>Takeaway: Removing vertices is inefficient in both adjacency matrices and lists but more efficient in lists.</em></p>
+<hr>
+<h4 id="add-edge">Add Edge</h4>
+<h5 id="adjacency-matrix-4">Adjacency Matrix</h5>
+<p><em>Complexity</em>: <code class="highlighter-rouge">O(1)</code></p>
+<p>Adding an edge in an adjacency matrix is simple:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="bp">self</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="n">v1</span><span class="p">][</span><span class="n">v2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></div>
+<h5 id="adjacency-list-4">Adjacency List</h5>
+<p><em>Complexity</em>: <code class="highlighter-rouge">O(1)</code></p>
+<p>Adding an edge in an adjacency list is simple:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="bp">self</span><span class="o">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Both are constant-time operations.</p>
+<p><em>Takeaway: Adding edges to both adjacency matrices and lists is very efficient.</em></p>
+<hr>
+<h4 id="remove-edge">Remove Edge</h4>
+<h5 id="adjacency-matrix-5">Adjacency Matrix</h5>
+<p><em>Complexity</em>: <code class="highlighter-rouge">O(1)</code></p>
+<p>Removing an edge from an adjacency matrix is simple:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="bp">self</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="n">v1</span><span class="p">][</span><span class="n">v2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</code></pre></div></div>
+<h5 id="adjacency-list-5">Adjacency List</h5>
+<p><em>Complexity</em>: <code class="highlighter-rouge">O(1)</code></p>
+<p>Removing an edge from an adjacency list is simple:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="bp">self</span><span class="o">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Both are constant-time operations.</p>
+<p><em>Takeaway: Removing edges from both adjacency matrices and lists is very efficient.</em></p>
+<hr>
+<h4 id="find-edge">Find Edge</h4>
+<h5 id="adjacency-matrix-6">Adjacency Matrix</h5>
+<p><em>Complexity</em>: <code class="highlighter-rouge">O(1)</code></p>
+<p>Finding an edge in an adjacency matrix is simple:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="n">v1</span><span class="p">][</span><span class="n">v2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span>
+</code></pre></div></div>
+<h5 id="adjacency-list-6">Adjacency List</h5>
+<p><em>Complexity</em>: <code class="highlighter-rouge">O(1)</code></p>
+<p>Finding an edge in an adjacency list is simple:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">return</span> <span class="n">v2</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">]</span>
+</code></pre></div></div>
+<p>Both are constant-time operations.</p>
+<p><em>Takeaway: Finding edges in both adjacency matrices and lists is very efficient.</em></p>
+<hr>
+<h4 id="get-all-edges-from-vertex">Get All Edges from Vertex</h4>
+<p>There are several commands you can use if you want to know all the edges originating from a particular vertex.</p>
+<h5 id="adjacency-matrix-7">Adjacency Matrix</h5>
+<p><em>Complexity</em>: <code class="highlighter-rouge">O(V)</code></p>
+<p>In an adjacency matrix, this is complicated. You would need to iterate through the entire row and populate a list based on the results:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">v_edges</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">v2</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="n">v</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="n">v2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">v_edges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span>
+<span class="k">return</span> <span class="n">v_edges</span>
+</code></pre></div></div>
+<h5 id="adjacency-list-7">Adjacency List</h5>
+<p><em>Complexity</em>: <code class="highlighter-rouge">O(1)</code></p>
+<p>With an adjacency list, this is as simple as returning the value from the vertex dictionary:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">vertex</span><span class="p">[</span><span class="n">v</span><span class="p">]</span>
+</code></pre></div></div>
+<p><em>Takeaway: Fetching all edges is less efficient in an adjacency matrix than an adjacency listd.</em></p>
+<hr>
+<h4 id="summary">Summary</h4>
+<p>Let’s summarize all this complexity information in a table:</p>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th><strong>Space</strong></th>
+<th><strong>Add Vert</strong></th>
+<th><strong>Remove Vert</strong></th>
+<th><strong>Add Edge</strong></th>
+<th><strong>Remove Edge</strong></th>
+<th><strong>Find Edge</strong></th>
+<th><strong>Get All Edges</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Matrix</strong></td>
+<td><code class="highlighter-rouge">O(V^2)</code></td>
+<td><code class="highlighter-rouge">O(V)</code></td>
+<td><code class="highlighter-rouge">O(V^2)</code></td>
+<td><code class="highlighter-rouge">O(1)</code></td>
+<td><code class="highlighter-rouge">O(1)</code></td>
+<td><code class="highlighter-rouge">O(1)</code></td>
+<td><code class="highlighter-rouge">O(V)</code></td>
+</tr>
+<tr>
+<td><strong>List</strong></td>
+<td><code class="highlighter-rouge">O(V+E)</code></td>
+<td><code class="highlighter-rouge">O(1)</code></td>
+<td><code class="highlighter-rouge">O(V)</code></td>
+<td><code class="highlighter-rouge">O(1)</code></td>
+<td><code class="highlighter-rouge">O(1)</code></td>
+<td><code class="highlighter-rouge">O(1)</code></td>
+<td><code class="highlighter-rouge">O(1)</code></td>
+</tr>
+</tbody>
+</table>
+<p>In most practical use-cases, an adjacency list will be a better choice for representing a graph. However, it is also important that you be familiar with the matrix representation. Why? Because there are some dense graphs or weighted graphs that could have better space efficiency when represented by a matrix.</p>
+<h5>Follow Along</h5>
+<p><img src="https://i.imgur.com/yi1P4AF.jpg" alt="we-do-graph-example.001"></p>
+<p>Together, we will now use the graph shown in the picture above and represent it in both an adjacency list and an adjacency matrix.</p>
+<h3 id="adjacency-list">Adjacency List</h3>
+<p>First, the adjacency list:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Graph</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="p">{</span>
+                            <span class="s">"A"</span><span class="p">:</span> <span class="p">{</span><span class="s">"B"</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
+                            <span class="s">"B"</span><span class="p">:</span> <span class="p">{</span><span class="s">"C"</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s">"D"</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span>
+                            <span class="s">"C"</span><span class="p">:</span> <span class="p">{},</span>
+                            <span class="s">"D"</span><span class="p">:</span> <span class="p">{},</span>
+                            <span class="s">"E"</span><span class="p">:</span> <span class="p">{</span><span class="s">"D"</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+                        <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>The difference between this implementation and the previous adjacency list that we used is that this represenation allows our edges to have weights.</p>
+<h3 id="adjacency-matrix">Adjacency Matrix</h3>
+<p>Now, we need to implement an adjacency matrix. Remember, that one benefit of the matrix is how easy it is to represent edge weights:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Graph</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">edges</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                      <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                      <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                      <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                      <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span>
+</code></pre></div></div>
+<h5>Challenge</h5>
+<p><img src="https://i.imgur.com/cJ6lekM.jpg" alt="graph-you-do-example.001"></p>
+<ol>
+<li>Using the graph shown in the picture above, write python code to represent the graph in an adjacency list.</li>
+<li>Using the same graph you used for the first exercise, write python code to represent the graph in an adjacency matrix.</li>
+<li>Write a paragraph that compares and contrasts the efficiency of your different representations.</li>
+</ol>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to represent a breadth-first-search of a graph in pseudo-code and recall common applications for its use</h4>
+<h5>Overview</h5>
+<p>One method we can use when searching a graph is a <strong>breadth first search</strong> (BFS). This sorting algorithm explores the graph outward in rings of increasing distance from the starting vertex.</p>
+<p>The algorithm never attempts to explore a vert it has already explored or is currently exploring.</p>
+<p>For example, when starting from the upper left, the numbers on this graph show a vertex visitation order in a BFS:</p>
+<p><img src="https://i.imgur.com/1LPnOAX.jpg" alt="breadth-first-search-visit-order.001"></p>
+<p>We followed the edges represented with thicker black arrows. We did not follow the edges represented with thinner grey arrows because we already visited their destination nodes.</p>
+<p>The exact order will vary depending on which branches get taken first and which vertex is the starting vertex.</p>
+<p><em>Note: it’s important to know the distincition between a breadth-first search and a breadth-first traversal. A breadth-first traversal is when you visit each vertex in breadth-first order and do something during the traversal. A breadth-first search is when you search through vertexes in breadth-first order until you find the target vertex. A breadth-first search usually returns the shortest path from the starting vertex to the target vertex once the target is found.</em></p>
+<h3 id="applications-of-bfs">Applications of BFS</h3>
+<ul>
+<li>Pathfinding, Routing</li>
+<li>Find neighbor nodes in a P2P network like BitTorrent</li>
+<li>Web crawlers</li>
+<li>Finding people <code class="highlighter-rouge">n</code> connections away on a social network</li>
+<li>Find neighboring locations on graph</li>
+<li>Broadcasting in a network</li>
+<li>Cycle detection in a graph</li>
+<li>Finding <a href="https://en.wikipedia.org/wiki/Connected_component_(graph_theory)">Connected Components</a>
+</li>
+<li>Solving several theoretical graph problems</li>
+</ul>
+<h3 id="coloring-vertexes">Coloring Vertexes</h3>
+<p>As we explore the graph, it is useful to color verts as we arrive at them and as we leave them behind as “already searched”.</p>
+<p>Unvisited verts are white, verts whose neighbors are being explored are gray, and verts with no unexplored neighbors are black.</p>
+<h3 id="keeping-track-of-what-we-need-to-explore">Keeping Track of What We Need to Explore</h3>
+<p>In a BFS, it’s useful to track which nodes we need to follow up on. For example, in the diagram above, when we get to node 2, we know that we also need to explore nodes 3 and 4.</p>
+<p>We can track that by adding neighbors to a <em>queue</em> (which remember is first in, first out), and then explore the verts in the queue one by one.</p>
+<h5>Follow Along</h5>
+<h3 id="pseudo-code-for-bfs">Pseudo-code for BFS</h3>
+<p>Let’s explore some pseudo-code that shows a basic implementation of a breadth-first-search of a graph. Make sure you can read the pseudo-code and understand what each line is doing before moving on.</p>
+<pre><code class="language-pseudo-code">BFS(graph, startVert):
+    for v of graph.vertexes:
+        v.color = white
+
+    startVert.color = gray
+        queue.enqueue(startVert)
+
+    while !queue.isEmpty():
+        u = queue[0]  // Peek at head of the queue, but do not dequeue!
+
+        for v of u.neighbors:
+            if v.color == white:
+                v.color = gray
+                queue.enqueue(v)
+
+        queue.dequeue()
+        u.color = black
+</code></pre>
+<p>You can see that we start with a graph and the vertex we will start on. The very first thing we do is go through each of the vertexes in the graph and mark them with the color white. This means that at the outset, we mark all the verts as unvisited.</p>
+<p>Next, we mark the starting vert as gray. This means we are exploring the starting verts’ neighbors. We also enqueue the starting vert which means it will be the first vert we look at once we enter the while loop.</p>
+<p>The condition we check at the outset of each while loop is if the queue is <strong>not</strong> empty. If it is not empty, we peek at the first item in the queue by storing it in a variable.</p>
+<p>Then, we loop through each of that vert’s neighbors and:
+- We check if it is unvisited (the color white).
+- If it is unvisited, we mark it as gray (meaning we will explore its neighbors).
+- We enqueue the vert.</p>
+<p>Next, we dequeue the current vert we’ve been exploring and mark that vert as black (marking it as visited).</p>
+<p>We continue on with this process until we have explored all the verts in the graph.</p>
+<h5>Challenge</h5>
+<p>On your own, complete the following tasks:</p>
+<ol>
+<li>Spend a few minutes researching to find a unique use-case of a breadth-first-search that we did not mention in the list above.</li>
+<li>
+<p>Using the graph represented below, draw a picture of the graph and label each of the verts to show the correct vertex visitation order for a breadth-first-search starting with vertex <code class="highlighter-rouge">"I"</code>.</p>
+<div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> <span class="k">class</span> <span class="nc">Graph</span><span class="p">:</span>
+     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="p">{</span>
+                             <span class="s">"A"</span><span class="p">:</span> <span class="p">{</span><span class="s">"B"</span><span class="p">,</span> <span class="s">"C"</span><span class="p">,</span> <span class="s">"D"</span><span class="p">},</span>
+                             <span class="s">"B"</span><span class="p">:</span> <span class="p">{},</span>
+                             <span class="s">"C"</span><span class="p">:</span> <span class="p">{</span><span class="s">"E"</span><span class="p">,</span> <span class="s">"F"</span><span class="p">},</span>
+                             <span class="s">"D"</span><span class="p">:</span> <span class="p">{</span><span class="s">"G"</span><span class="p">},</span>
+                             <span class="s">"E"</span><span class="p">:</span> <span class="p">{</span><span class="s">"G"</span><span class="p">},</span>
+                             <span class="s">"F"</span><span class="p">:</span> <span class="p">{</span><span class="s">"J"</span><span class="p">},</span>
+                             <span class="s">"G"</span><span class="p">:</span> <span class="p">{},</span>
+                             <span class="s">"H"</span><span class="p">:</span> <span class="p">{</span><span class="s">"C"</span><span class="p">,</span> <span class="s">"J"</span><span class="p">,</span> <span class="s">"K"</span><span class="p">},</span>
+                             <span class="s">"I"</span><span class="p">:</span> <span class="p">{</span><span class="s">"D"</span><span class="p">,</span> <span class="s">"E"</span><span class="p">,</span> <span class="s">"H"</span><span class="p">},</span>
+                             <span class="s">"J"</span><span class="p">:</span> <span class="p">{</span><span class="s">"L"</span><span class="p">},</span>
+                             <span class="s">"K"</span><span class="p">:</span> <span class="p">{</span><span class="s">"C"</span><span class="p">},</span>
+                             <span class="s">"L"</span><span class="p">:</span> <span class="p">{</span><span class="s">"M"</span><span class="p">},</span>
+                             <span class="s">"M"</span><span class="p">:</span> <span class="p">{},</span>
+                             <span class="s">"N"</span><span class="p">:</span> <span class="p">{</span><span class="s">"H"</span><span class="p">,</span> <span class="s">"K"</span><span class="p">,</span> <span class="s">"M"</span><span class="p">}</span>
+                         <span class="p">}</span>
+</code></pre></div> </div>
+</li>
+<li>Besides marking verts with colors as in the pseudo-code example above, how else could you track the verts we have already visited?</li>
+</ol>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to represent a depth-first-search of a graph in pseudo-code and recall common applications for its use</h4>
+<h5>Overview</h5>
+<p>Another method we can use when searching a graph is a <strong>depth first search</strong> (DFS). This searching algorithm <em>“dives”</em> <em>“down”</em> the graph as far as it can before backtracking and exploring another branch.</p>
+<p>The algorithm never attempts to explore a vert it has already explored or is in the process of exploring.</p>
+<p>For example, when starting from the upper left, the numbers on this graph show a vertex visitation order in a DFS:</p>
+<p><img src="https://i.imgur.com/VVTC9Yx.jpg" alt="depth-first-search-visit-order.001"></p>
+<p>We followed the edges represented with thicker black arrows. We did not follow the edges represented with thinner grey arrows because we already visited their destination nodes.</p>
+<p>The exact order will vary depending on which branches get taken first and which vertex is the starting vertex.</p>
+<h3 id="applications-of-dfs">Applications of DFS</h3>
+<p>DFS is often the preferred method or exploring a graph <em>if we want to ensure we visit every node in the graph</em>. As an example, let’s say that we have a graph that represents all the friendships in the entire world. We want to find a path between two known people <code class="highlighter-rouge">Andy</code> and <code class="highlighter-rouge">Sarah</code>. If we used a depth-first search in this scenario we could end up extremely far away from <code class="highlighter-rouge">Andy</code> while still not finding a path to <code class="highlighter-rouge">Sarah</code>. Using a DFS, we will eventually find the path, but it won’t find the shortest path and it will also likely take a long time.</p>
+<p>So, this is an example of where a DFS <em>would not work well</em>. What about a good use case for DFS. Here are a few examples:</p>
+<ul>
+<li>Finding <a href="https://en.wikipedia.org/wiki/Minimum_spanning_tree">Minimum Spanning Trees</a> of weighted graphs</li>
+<li>Path finding</li>
+<li>Detecting cycles in graphs</li>
+<li>
+<a href="https://en.wikipedia.org/wiki/Topological_sorting">Topological sorting</a>, useful for scheduling sequences of dependent jobs</li>
+<li>Solving and generating mazes</li>
+</ul>
+<h3 id="coloring-vertexes">Coloring Vertexes</h3>
+<p>Again, as we explore the graph, it is useful to color verts as we arrive at them and as we leave them behind as “already searched”.</p>
+<p>Unvisited verts are white, verts whose neighbors are being explored are gray, and verts with no unexplored neighbors are black.</p>
+<h3 id="recursion">Recursion</h3>
+<p>Since DFS will pursue leads in the graph as far as it can, and then “back up” to an earlier branch point to explore that way, recursion is a good approach to help “remember” where we left off.</p>
+<p>Looking at it with pseudo-code to make the recursion more clear:</p>
+<pre><code class="language-pseudo-code">explore(graph) {
+    visit(this_vert);
+    explore(remaining_graph);
+}
+</code></pre>
+<h5>Follow Along</h5>
+<h3 id="pseudo-code-for-dfs">Pseudo-code for DFS</h3>
+<p>Let’s explore some pseudo-code that shows a basic implementation of a depth-first-search of a graph. Make sure you can read the pseudo-code and understand what each line is doing before moving on.</p>
+<pre><code class="language-pseudo-code">DFS(graph):
+    for v of graph.verts:
+        v.color = white
+        v.parent = null
+
+    for v of graph.verts:
+        if v.color == white:
+            DFS_visit(v)
+
+DFS_visit(v):
+    v.color = gray
+
+    for neighbor of v.adjacent_nodes:
+        if neighbor.color == white:
+            neighbor.parent = v
+            DFS_visit(neighbor)
+
+    v.color = black
+</code></pre>
+<p>You can see that we have two functions in our pseudo-code above. The first function, <code class="highlighter-rouge">DFS()</code> takes the graph as a parameter and marks all the verts as unvisited (white). It also sets the parent of each vert to <code class="highlighter-rouge">null</code>. The next loop in this function visits each vert in the graph and if it is unvisited, then it passes that vert into our second function <code class="highlighter-rouge">DFS_visit()</code>.</p>
+<p><code class="highlighter-rouge">DFS_visit()</code> starts out by marking the vert as gray (in the process of being explored). Then, it loops through all of its unvisited neighbors. In that loop, it sets the parent and then makes a recursive call to the <code class="highlighter-rouge">DFS_visit()</code>. Once it’s done exploring all the neighbors, it marks the vert as black (visited).</p>
+<h5>Challenge</h5>
+<p>On your own, complete the following tasks:</p>
+<ol>
+<li>Spend a few minutes researching to find a unique use-case of a breadth-first-search that we did not mention in the list above.</li>
+<li>
+<p>Using the graph represented below, draw a picture of the graph and label each of the verts to show the correct vertex visitation order for a depth-first-search starting with vertex <code class="highlighter-rouge">"I"</code>.</p>
+<div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> <span class="k">class</span> <span class="nc">Graph</span><span class="p">:</span>
+     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="p">{</span>
+                             <span class="s">"A"</span><span class="p">:</span> <span class="p">{</span><span class="s">"B"</span><span class="p">,</span> <span class="s">"C"</span><span class="p">,</span> <span class="s">"D"</span><span class="p">},</span>
+                             <span class="s">"B"</span><span class="p">:</span> <span class="p">{},</span>
+                             <span class="s">"C"</span><span class="p">:</span> <span class="p">{</span><span class="s">"E"</span><span class="p">,</span> <span class="s">"F"</span><span class="p">},</span>
+                             <span class="s">"D"</span><span class="p">:</span> <span class="p">{</span><span class="s">"G"</span><span class="p">},</span>
+                             <span class="s">"E"</span><span class="p">:</span> <span class="p">{</span><span class="s">"G"</span><span class="p">},</span>
+                             <span class="s">"F"</span><span class="p">:</span> <span class="p">{</span><span class="s">"J"</span><span class="p">},</span>
+                             <span class="s">"G"</span><span class="p">:</span> <span class="p">{},</span>
+                             <span class="s">"H"</span><span class="p">:</span> <span class="p">{</span><span class="s">"C"</span><span class="p">,</span> <span class="s">"J"</span><span class="p">,</span> <span class="s">"K"</span><span class="p">},</span>
+                             <span class="s">"I"</span><span class="p">:</span> <span class="p">{</span><span class="s">"D"</span><span class="p">,</span> <span class="s">"E"</span><span class="p">,</span> <span class="s">"H"</span><span class="p">},</span>
+                             <span class="s">"J"</span><span class="p">:</span> <span class="p">{</span><span class="s">"L"</span><span class="p">},</span>
+                             <span class="s">"K"</span><span class="p">:</span> <span class="p">{</span><span class="s">"C"</span><span class="p">},</span>
+                             <span class="s">"L"</span><span class="p">:</span> <span class="p">{</span><span class="s">"M"</span><span class="p">},</span>
+                             <span class="s">"M"</span><span class="p">:</span> <span class="p">{},</span>
+                             <span class="s">"N"</span><span class="p">:</span> <span class="p">{</span><span class="s">"H"</span><span class="p">,</span> <span class="s">"K"</span><span class="p">,</span> <span class="s">"M"</span><span class="p">}</span>
+                         <span class="p">}</span>
+</code></pre></div> </div>
+</li>
+</ol>
+<hr>
+<h2>
+<a id="guided-project" class="anchor" href="#guided-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Guided Project</h2>
+<h3>Graphs 1</h3>
+<p>Implement a Graph using a adjacency list and adjacency matrix</p>
+<a target="_blank" href="https://github.com/LambdaSchool/Graphs">GitHub Repo</a>
+<hr>
+<h2 class="display-4">
+<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
+<ul class="list-group">
+<li class="list-group-item">
+<h5><a target="_blank" href="https://github.com/LambdaSchool/Graphs">Graphs</a></h5>
+<h3 id="part-1-graph-vertex-edge-classes">Part 1: Graph, Vertex, Edge Classes</h3>
+<p>In the file <code class="highlighter-rouge">graph.py</code>, implement a <code class="highlighter-rouge">Graph</code> class that supports the API expected
+by <code class="highlighter-rouge">draw.py</code>. In particular, this means there should be a field <code class="highlighter-rouge">vertices</code> that
+contains a dictionary mapping vertex labels to edges. For example:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+    <span class="s">'0'</span><span class="p">:</span> <span class="p">{</span><span class="s">'1'</span><span class="p">,</span> <span class="s">'3'</span><span class="p">},</span>
+    <span class="s">'1'</span><span class="p">:</span> <span class="p">{</span><span class="s">'0'</span><span class="p">},</span>
+    <span class="s">'2'</span><span class="p">:</span> <span class="nb">set</span><span class="p">(),</span>
+    <span class="s">'3'</span><span class="p">:</span> <span class="p">{</span><span class="s">'0'</span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>This represents a graph with four vertices and two total (bidirectional) edges.
+The vertex <code class="highlighter-rouge">'2'</code> has no edges, while <code class="highlighter-rouge">'0'</code> is connected to both <code class="highlighter-rouge">'1'</code> and <code class="highlighter-rouge">'3'</code>.</p>
+<p>You should also create <code class="highlighter-rouge">add_vertex</code> and <code class="highlighter-rouge">add_edge</code> methods that add the
+specified entities to the graph. To test your implementation, instantiate an
+empty graph and then try to run the following:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">graph</span> <span class="o">=</span> <span class="n">Graph</span><span class="p">()</span>  <span class="c1"># Instantiate your graph
+</span><span class="n">graph</span><span class="o">.</span><span class="n">add_vertex</span><span class="p">(</span><span class="s">'0'</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">add_vertex</span><span class="p">(</span><span class="s">'1'</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">add_vertex</span><span class="p">(</span><span class="s">'2'</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">add_vertex</span><span class="p">(</span><span class="s">'3'</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s">'0'</span><span class="p">,</span> <span class="s">'1'</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s">'0'</span><span class="p">,</span> <span class="s">'3'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">graph</span><span class="o">.</span><span class="n">vertices</span><span class="p">)</span>
+</code></pre></div></div>
+<p>You should see something like the first example. As a stretch goal, add checks
+to your graph to ensure that edges to nonexistent vertices are rejected.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Continuing from previous example
+</span><span class="n">graph</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s">'0'</span><span class="p">,</span> <span class="s">'4'</span><span class="p">)</span>  <span class="c1"># No '4' vertex, should raise an Exception!
+</span></code></pre></div></div>
+<h3 id="part-2-implement-breadth-first-traversal">Part 2: Implement Breadth-First Traversal</h3>
+<p>Write a function within your Graph class that takes takes a starting node as an argument, then performs BFT. Your function should print the resulting nodes in the order they were visited.</p>
+<h3 id="part-3-implement-depth-first-traversal-with-a-stack">Part 3: Implement Depth-First Traversal with a Stack</h3>
+<p>Write a function within your Graph class that takes takes a starting node as an argument, then performs DFT. Your function should print the resulting nodes in the order they were visited.</p>
+<h3 id="part-35-implement-depth-first-traversal-using-recursion">Part 3.5: Implement Depth-First Traversal using Recursion</h3>
+<p>Write a function within your Graph class that takes takes a starting node as an argument, then performs DFT using recursion. Your function should print the resulting nodes in the order they were visited.</p>
+<h3 id="part-4-implement-breadth-first-search">Part 4: Implement Breadth-First Search</h3>
+<p>Write a function within your Graph class that takes takes a starting node and a destination node as an argument, then performs BFS. Your function should return the shortest path from the start node to the destination node.</p>
+<h3 id="part-5-implement-depth-first-search">Part 5: Implement Depth-First Search</h3>
+<p>Write a function within your Graph class that takes takes a starting node and a destination node as an argument, then performs DFS. Your function should return a valid path (not necessarily the shortest) from the start node to the destination node.</p>
+</li>
+</ul>
+<h2 class="display-4">
+<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
+<h3 class="display-5">Class Recordings</h3>
+<p class="lead">You can use class recordings to help you master the material.</p>
+<div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<strong><a target="_blank" href="https://youtu.be/-NXqrVZmbRk">CSPT15 Graphs I with Tom Tarpey</a></strong>
+<p>Lecture recording</p>
+</li>
+<li class="list-group-item">
+<a href="/archive/CS/module/recBMbHtb8AOXq3UL">All previous recordings</a>
+</li>
+</ul>
+</div>
+<h3 class="display-5">Demonstrate Mastery</h3>
+<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
+<ul>
+<li>Objective challenge: <p>Do the following on your own.</p>
+<p>Draw one graph for each of the descriptions below:</p>
+<ol>
+<li>Undirected graph of 4 verts.</li>
+<li>Directed graph of 5 verts.</li>
+<li>Cyclic directed graph of 6 verts.</li>
+<li>DAG of 7 verts.</li>
+</ol>
+</li>
+
+<li>Objective challenge: <p><img src="https://i.imgur.com/cJ6lekM.jpg" alt="graph-you-do-example.001"></p>
+<ol>
+<li>Using the graph shown in the picture above, write python code to represent the graph in an adjacency list.</li>
+<li>Using the same graph you used for the first exercise, write python code to represent the graph in an adjacency matrix.</li>
+<li>Write a paragraph that compares and contrasts the efficiency of your different representations.</li>
+</ol>
+</li>
+<li>Objective challenge: <p>On your own, complete the following tasks:</p>
+<ol>
+<li>Spend a few minutes researching to find a unique use-case of a breadth-first-search that we did not mention in the list above.</li>
+<li>
+<p>Using the graph represented below, draw a picture of the graph and label each of the verts to show the correct vertex visitation order for a breadth-first-search starting with vertex <code class="highlighter-rouge">"I"</code>.</p>
+<div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> <span class="k">class</span> <span class="nc">Graph</span><span class="p">:</span>
+     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="p">{</span>
+                             <span class="s">"A"</span><span class="p">:</span> <span class="p">{</span><span class="s">"B"</span><span class="p">,</span> <span class="s">"C"</span><span class="p">,</span> <span class="s">"D"</span><span class="p">},</span>
+                             <span class="s">"B"</span><span class="p">:</span> <span class="p">{},</span>
+                             <span class="s">"C"</span><span class="p">:</span> <span class="p">{</span><span class="s">"E"</span><span class="p">,</span> <span class="s">"F"</span><span class="p">},</span>
+                             <span class="s">"D"</span><span class="p">:</span> <span class="p">{</span><span class="s">"G"</span><span class="p">},</span>
+                             <span class="s">"E"</span><span class="p">:</span> <span class="p">{</span><span class="s">"G"</span><span class="p">},</span>
+                             <span class="s">"F"</span><span class="p">:</span> <span class="p">{</span><span class="s">"J"</span><span class="p">},</span>
+                             <span class="s">"G"</span><span class="p">:</span> <span class="p">{},</span>
+                             <span class="s">"H"</span><span class="p">:</span> <span class="p">{</span><span class="s">"C"</span><span class="p">,</span> <span class="s">"J"</span><span class="p">,</span> <span class="s">"K"</span><span class="p">},</span>
+                             <span class="s">"I"</span><span class="p">:</span> <span class="p">{</span><span class="s">"D"</span><span class="p">,</span> <span class="s">"E"</span><span class="p">,</span> <span class="s">"H"</span><span class="p">},</span>
+                             <span class="s">"J"</span><span class="p">:</span> <span class="p">{</span><span class="s">"L"</span><span class="p">},</span>
+                             <span class="s">"K"</span><span class="p">:</span> <span class="p">{</span><span class="s">"C"</span><span class="p">},</span>
+                             <span class="s">"L"</span><span class="p">:</span> <span class="p">{</span><span class="s">"M"</span><span class="p">},</span>
+                             <span class="s">"M"</span><span class="p">:</span> <span class="p">{},</span>
+                             <span class="s">"N"</span><span class="p">:</span> <span class="p">{</span><span class="s">"H"</span><span class="p">,</span> <span class="s">"K"</span><span class="p">,</span> <span class="s">"M"</span><span class="p">}</span>
+                         <span class="p">}</span>
+</code></pre></div> </div>
+</li>
+<li>Besides marking verts with colors as in the pseudo-code example above, how else could you track the verts we have already visited?</li>
+</ol>
+</li>
+<li>Objective challenge: <p>On your own, complete the following tasks:</p>
+<ol>
+<li>Spend a few minutes researching to find a unique use-case of a breadth-first-search that we did not mention in the list above.</li>
+<li>
+<p>Using the graph represented below, draw a picture of the graph and label each of the verts to show the correct vertex visitation order for a depth-first-search starting with vertex <code class="highlighter-rouge">"I"</code>.</p>
+<div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> <span class="k">class</span> <span class="nc">Graph</span><span class="p">:</span>
+     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="p">{</span>
+                             <span class="s">"A"</span><span class="p">:</span> <span class="p">{</span><span class="s">"B"</span><span class="p">,</span> <span class="s">"C"</span><span class="p">,</span> <span class="s">"D"</span><span class="p">},</span>
+                             <span class="s">"B"</span><span class="p">:</span> <span class="p">{},</span>
+                             <span class="s">"C"</span><span class="p">:</span> <span class="p">{</span><span class="s">"E"</span><span class="p">,</span> <span class="s">"F"</span><span class="p">},</span>
+                             <span class="s">"D"</span><span class="p">:</span> <span class="p">{</span><span class="s">"G"</span><span class="p">},</span>
+                             <span class="s">"E"</span><span class="p">:</span> <span class="p">{</span><span class="s">"G"</span><span class="p">},</span>
+                             <span class="s">"F"</span><span class="p">:</span> <span class="p">{</span><span class="s">"J"</span><span class="p">},</span>
+                             <span class="s">"G"</span><span class="p">:</span> <span class="p">{},</span>
+                             <span class="s">"H"</span><span class="p">:</span> <span class="p">{</span><span class="s">"C"</span><span class="p">,</span> <span class="s">"J"</span><span class="p">,</span> <span class="s">"K"</span><span class="p">},</span>
+                             <span class="s">"I"</span><span class="p">:</span> <span class="p">{</span><span class="s">"D"</span><span class="p">,</span> <span class="s">"E"</span><span class="p">,</span> <span class="s">"H"</span><span class="p">},</span>
+                             <span class="s">"J"</span><span class="p">:</span> <span class="p">{</span><span class="s">"L"</span><span class="p">},</span>
+                             <span class="s">"K"</span><span class="p">:</span> <span class="p">{</span><span class="s">"C"</span><span class="p">},</span>
+                             <span class="s">"L"</span><span class="p">:</span> <span class="p">{</span><span class="s">"M"</span><span class="p">},</span>
+                             <span class="s">"M"</span><span class="p">:</span> <span class="p">{},</span>
+                             <span class="s">"N"</span><span class="p">:</span> <span class="p">{</span><span class="s">"H"</span><span class="p">,</span> <span class="s">"K"</span><span class="p">,</span> <span class="s">"M"</span><span class="p">}</span>
+                         <span class="p">}</span>
+</code></pre></div> </div>
+</li>
+</ol>
+</li>
+<li>Guided Project: Graphs 1</li>
+<li>Project: Graphs</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80850900-4');
+</script>
+<script type="text/javascript">
+  function getDomain() {
+    const domainName = window.location.hostname.split('.')[1];
+    return `${domainName}.com`;
+  }
+</script>
+<script src="" integrity="" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
+<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+  SimpleJekyllSearch.init({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    dataSource: '/search.json',
+    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Graphs I">{title}</a></li>',
+    noResultsText: '',
+    limit: 10,
+    fuzzy: true,
+  })
+</script>
+<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
+  if (window.attachEvent) {
+    window.attachEvent('onload', verifySignedIn);
+  } else {
+    if (window.onload) {
+      var currentOnLoadFn = window.onload;
+      var newOnLoadFn = function (evt) {
+        currentOnLoadFn(evt);
+        verifySignedIn();
+      };
+      window.onload = newOnLoadFn;
+    } else {
+      window.onload = verifySignedIn;
+    }
+  }
+
+  function verifySignedIn() {
+    if (isPagePublic()) {
+      return showPageContents();
+    }
+
+    window.__user = null;
+    isSignedIn().then((user) => {
+      window.__user = user;
+
+      if (!user.signedIn) {
+        redirectToSignIn();
+      } else if (!user.student && !window.__openToAdmissions) {
+        showUnauthorizedMessage();
+      } else {
+        showPageContents();
+      }
+    });
+  }
+
+  function isPagePublic() {
+    const openCourses = [
+      'and-pre',
+      'ds-pre',
+      'fsw-pre',
+      'help',
+      'ios-pre',
+    ];
+
+    const openPages = [
+      'cs-and',
+      'cs-fsw',
+      'cs-ios',
+      'cr',
+      'ds',
+      'jx',
+      'p4s',
+      'ux',
+    ];
+
+    const pathParts = window.location.pathname.split('/');
+    const courseName = pathParts[1];
+    const pageName = pathParts[pathParts.length - 1];
+
+    return openCourses.includes(courseName) || openPages.includes(pageName);
+  }
+
+  function isSignedIn() {
+    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
+
+    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
+
+    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
+      .then((response) => response.text())
+      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
+      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
+      .catch((error) => {});
+  }
+
+  function redirectToSignIn() {
+    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+    const redirectMessage = document.querySelector('#redirect-message');
+    redirectMessage.style.display = "block";
+    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+    window.location = signInUrl;
+  }
+
+  function showPageContents() {
+    document.querySelector('#content-wrapper').style.visibility = 'visible';
+  }
+
+  function showUnauthorizedMessage() {
+    document.querySelector('#unauthorized-message').style.display = 'block';
+  }
+
+  function getAuthBaseUrl() {
+    const domain = getDomain();
+    const authBaseUrl = `https://auth.${domain}`;
+    return authBaseUrl;
+  }
+</script><script src="/assets/js/docs.min.js"></script><script>
+  var MathJax = {
+    tex: {
+      inlineMath: [['$$', '$$'], ['\[', '\])']]
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax span": {
+          color: "#000000"
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script>
+  handleExternalLinks();
+
+  function handleExternalLinks() {
+    const domain = getDomain();
+    const links = document.querySelectorAll('a');
+    return links.forEach((link) => {
+      if (!link.host.includes(domain)) link.target = '_blank';
+    })
+  };
+</script>
+</div>
+</body>
+</html>

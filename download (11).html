@@ -1,0 +1,1190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Intended as a home for Lambda School curriculum.">
+<meta name="author" content="">
+<meta name="generator" content="Jekyll v3.8.0">
+<title>Intro to JavaScript · Lambda School</title>
+
+<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+  analytics.page();
+  }}();
+</script>
+
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#a0001e">
+</head>
+<body>
+<noscript>Please enable JavaScript to view this page.</noscript>
+<div id="redirect-message" style="display: none;">
+You must be logged in to view this page.
+</div>
+<div id="unauthorized-message" style="display: none;">
+You must be a Lambda School student to view this page.
+</div>
+<div id="content-wrapper" >
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container">
+<span class="skiplink-text">Skip to main content</span>
+</div>
+</a>
+<div class="mobile-menu">
+<div class="m-drop">
+<div class="mobile-row">
+<div class="header-row" style="padding: 3px 7px">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
+</svg></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+</button>
+</div>
+</div>
+<div class="nav-row">
+<div class="results-container">
+<ul id="results-container" class="dropdown list-group"></ul>
+</div>
+<div id="mobile-course-menu" class="collapse nav-row">
+<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+<nav class="bd-links">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web Fundamentals</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/rec2neAvlo6zM07qc">
+1.&nbsp;&nbsp;User Interface and Git
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web1/module/recl0IyzS2Vl89lZa/">
+User Interface
+</a>
+</li>
+<li>
+<a href="/web1/module/rect59e95N6OSvoCd/">
+Git for Web Development
+</a>
+</li>
+<li>
+<a href="/web1/module/rec6KMj0W3ukhYeWv/">
+Intro CSS
+</a>
+</li>
+<li>
+<a href="/web1/module/recYyDfYS2UmsvquL/">
+CSS Layouts
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/recYAgtervk7WilBW">
+2.&nbsp;&nbsp;Advanced CSS and Intro JavaScript
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web1/module/recUPpx89Z2uWzkzU/">
+Responsive Design
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/web1/module/recPmaqIfzn9NMPLY/">
+Intro to JavaScript
+</a>
+</li>
+<li>
+<a href="/web1/module/recXRqGjyTS6uDzSA/">
+Arrays
+</a>
+</li>
+<li>
+<a href="/web1/module/recQV3tKcEDXa840D/">
+Objects
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/recIS8D2e4nTRGCLT">
+3.&nbsp;&nbsp;JavaScript Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web1/module/recrBjfZ9mBasSPpa/">
+Scope and Closure
+</a>
+</li>
+<li>
+<a href="/web1/module/recNilLQDqhqvPuNk/">
+Advanced Array Methods
+</a>
+</li>
+<li>
+<a href="/web1/module/rec0AWuNLezbpit7m/">
+Prototypes and Inheritance
+</a>
+</li>
+<li>
+<a href="/web1/module/recyS588eOvVUKAMc/">
+Classes
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/rec2di8phTBw15e4E">
+4.&nbsp;&nbsp;WEB Unit 1 Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-container">
+<div class="sidebar-container bd-sidebar">
+<div class="docs-sidebar">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
+<ul id="results-container" class="dropdown list-group"></ul>
+<nav class="bd-links collapse" id="bd-docs-nav">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web Fundamentals</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/rec2neAvlo6zM07qc">
+1.&nbsp;&nbsp;User Interface and Git
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web1/module/recl0IyzS2Vl89lZa/">
+User Interface
+</a>
+</li>
+<li>
+<a href="/web1/module/rect59e95N6OSvoCd/">
+Git for Web Development
+</a>
+</li>
+<li>
+<a href="/web1/module/rec6KMj0W3ukhYeWv/">
+Intro CSS
+</a>
+</li>
+<li>
+<a href="/web1/module/recYyDfYS2UmsvquL/">
+CSS Layouts
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/recYAgtervk7WilBW">
+2.&nbsp;&nbsp;Advanced CSS and Intro JavaScript
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web1/module/recUPpx89Z2uWzkzU/">
+Responsive Design
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/web1/module/recPmaqIfzn9NMPLY/">
+Intro to JavaScript
+</a>
+</li>
+<li>
+<a href="/web1/module/recXRqGjyTS6uDzSA/">
+Arrays
+</a>
+</li>
+<li>
+<a href="/web1/module/recQV3tKcEDXa840D/">
+Objects
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/recIS8D2e4nTRGCLT">
+3.&nbsp;&nbsp;JavaScript Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web1/module/recrBjfZ9mBasSPpa/">
+Scope and Closure
+</a>
+</li>
+<li>
+<a href="/web1/module/recNilLQDqhqvPuNk/">
+Advanced Array Methods
+</a>
+</li>
+<li>
+<a href="/web1/module/rec0AWuNLezbpit7m/">
+Prototypes and Inheritance
+</a>
+</li>
+<li>
+<a href="/web1/module/recyS588eOvVUKAMc/">
+Classes
+ </a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web1/sprint/rec2di8phTBw15e4E">
+4.&nbsp;&nbsp;WEB Unit 1 Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<main class="content-container flex-wrapper" role="main">
+<div class="sticky-nav">
+<div class="sprint-nav">
+<ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+</ul>
+</div>
+
+</div>
+<div class="wrapper limit-width">
+<div class="flex-wrapper">
+<div class="limit-width">
+<div class="jumbotron">
+<h1 class="bd-title" id="content">Intro to JavaScript</h1>
+<span class="lead">
+<p class="bd-lead"></p>
+<p>JavaScript is the backbone of interactive web pages. This module will tackle basic syntax and logic in JavaScript including variables, math, conditionals, loops, and functions. These building blocks will inform the rest of your career as a web developer.</p>
+</span>
+<strong>At the end of this module, you should be able to:</strong>
+<ul>
+<li>understand what Javascript is and explain its use in web development</li>
+<li>explain global object in JavaScript and be able to use the Math object</li>
+<li>write control flow using if/else statements</li>
+<li>write a basic for loop and while loop</li>
+<li>understand JavaScript functions, why we use them, and be able to write correct function syntax</li>
+<li>write and call functions using arguments, parameters and the return statement</li>
+</ul>
+</div>
+<div class="alert alert-warning" role="alert">
+<h4>Pro Tip</h4>
+<p>If you are going to copy/paste text from an email, be sure to do so without formatting or else: convert the text to “normal” and be sure the text color is “black”</p>
+</div>
+<h2 class="display-4">
+<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
+<p class="lead">Review each preclass resource before class.</p>
+<div class="preclass">
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LCXNKChpc1Y" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OqcOOGYCh5Q" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_HzPrfu4vaE" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UdgNsEdJg2g" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_phdtwNAAIw" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Gam0D-ythdE" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+</ul>
+</div>
+<h2 class="display-4">
+<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
+<h4 class="mark mb-3 p-2">Learn to understand what Javascript is and explain its use in web development</h4>
+<p>JavaScript is the third of the major building blocks of a web page. Without it, we wouldn’t have the dynamic content and usability we expect from modern websites. We will now learn what it is (and isn’t) and how it is used, not only on the web but in all of its applications.</p>
+<h5>Overview</h5>
+<h3 id="what-is-javascript-and-why-do-we-use-it">What is JavaScript and why do we use it?</h3>
+<p>JavaScript is a programming language that was first created in 1994 as a way to add functionality and interactivity to a website. If we think back to our analogy of a web page as a house, we will remember that we said that JavaScript is the electricity, plumbing, and gas. It is what makes the web page “run”. JavaScript was originally designed to be used purely on the front end as a way for web developers to add functionality to their web pages, and in its early days, it did just that. Recently, the introduction of the “V8 engine” by Google has improved the speed and functionality of JS. That led to the development and release of exciting new front end JavaScript frameworks and eventually Node.js, a way to run JavaScript on a server (back end). This new development has led to a resurgence of JavaScript. Now, JavaScript is one of the world’s most widely-used programming languages. We can find JavaScript used on the front end, back end, mobile, Internet of Things (IoT), game development, and really anywhere a traditional programming language would be used. Though there are later versions, we will be focusing on and using JavaScript ES6 in this course because it is the most widely applicable.</p>
+<h4 id="javascript-vs-java-and-other-languages">JavaScript vs Java (and other languages)</h4>
+<p>Keep in mind, JavaScript is not the same as Java. Although they share similar names (this was, unfortunately, considered a good thing by JavaScript’s early pioneers) that is where the similarities end.</p>
+<p>The creators of JavaScript wanted to borrow concepts from other programming languages, such as Scheme, Java, and C. Those of you with backgrounds in other languages may see things that look very familiar, mainly the use of classes and Object-Oriented Programming (OOP) architecture. Keep in mind that JavaScript is not a “true” OOP language and many things you may be familiar with from another language won’t work with JavaScript.</p>
+<p>JavaScript is considered a ‘loosely’ typed language, in which types do exist, but they are not enforced. You do not have to declare a type when creating a variable or an array, for instance.</p>
+<h4 id="how-to-run-javascript">How to ‘run’ JavaScript</h4>
+<p>For this class, we are going to use a special code sandbox program just like we did with the last lesson (CodePen), called <a href="https://www.repl.it">repl.it</a>. This will allow us to write and edit our code and run it right in our browser window to see a real-time read-out.</p>
+<p>While this is one way to run your JavaScript, most JavaScript is run from a file with the extension of <code class="highlighter-rouge">.js</code> (e.g., <code class="highlighter-rouge">fileName.js</code>) and loaded into your browser via the <code class="highlighter-rouge">script</code> tag in your HTML.</p>
+<p>JavaScript, being the de-facto language of the Internet, can also be run directly within an Internet browser. In fact, you can write all of the JavaScript you want and watch it run in real-time right in your browser by pressing F12 (for Windows), or Cmd+option+J (for Mac) (for Google Chrome). This will open up your <em>console</em> (we will learn more about the console later).</p>
+<p><img src="https://i.imgur.com/Q1dilaw.gif" alt="console"></p>
+<h3 id="hello-world">Hello World</h3>
+<p>Hello World is traditionally used to introduce programmers to a new language. The origins of this date back to one of the first computer languages, C, where printing the phrase “hello world” was a major victory.</p>
+<p>In JavaScript, printing “Hello, World!” requires just one line of code. Before you move on, try this example to write your first program!</p>
+<iframe height="400px" width="100%" src="https://repl.it/@sunjieming/Hello-World?lite=true" scrolling="yes" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<h3 id="variables">Variables</h3>
+<p>At the heart of JavaScript are variables. A variable is a way to store, change and use data in code. To explain this concept, consider your favorite webpage: maybe it’s instagram, maybe an online game. More than likely, there are lots of changing pieces on these pages - instagram has likes and usernames, a video game has character selection, game score, and many more - every one of those changing bits of data is stored in a variable. The variable called <code class="highlighter-rouge">score</code>, for example, starts with <code class="highlighter-rouge">0</code>, and changes every time you gather points in the game.</p>
+<p>Similarly, you might create a variable called <code class="highlighter-rouge">greet</code> and store the value “Hello World” to further simplify your program above to <code class="highlighter-rouge">console.log(greet)</code>.</p>
+<p>The syntax to create a variable is first the keyword, a space, the name we are giving the variable, an equal sign, the value we are assigning the variable, and then a semicolon. (A note for those with previous programming knowledge: JavaScript is a loosely-typed language, which means that a variable can be set, and reset, to any type. We do not need to declare its type when creating the variable.)</p>
+<p>There are <em>three</em> keywords used to declare variables -<code class="highlighter-rouge">var</code>, <code class="highlighter-rouge">let</code>, and <code class="highlighter-rouge">const</code>. Each keyword comes with slightly different use cases, mostly based around what happens when you change the value of the variable. Some examples of syntax are below.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">firstName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">John</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">lastName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Smith</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">favoriteFood</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Taco</span><span class="dl">'</span><span class="p">;</span>
+</code></pre></div></div>
+<h4 id="var">var</h4>
+<p><code class="highlighter-rouge">var</code> is the ES5 way of declaring a variable. This is a generic variable keyword. Variables created with var can be changed without causing errors. While that sounds like a good thing at first, using <code class="highlighter-rouge">var</code> too often might lead to buggy code.</p>
+<p>Note in the example below that once you declare the variable, you can change it without having to declare again. This is true with all variable keywords.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">firstName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Alice</span><span class="dl">'</span><span class="p">;</span>
+<span class="nx">firstName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Bob</span><span class="dl">'</span><span class="p">;</span>		<span class="c1">// &lt;- this would be fine</span>
+</code></pre></div></div>
+<p>If <code class="highlighter-rouge">var</code> is commonly regarded as bad programming practice, what should we use?</p>
+<h4 id="const">const</h4>
+<p>A <code class="highlighter-rouge">const</code> variable is a variable that cannot be changed later in the code. It’s short for “constant”. In our example above “Bob” could not be changed to “Alice” and would throw an error.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">firstName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Alice</span><span class="dl">'</span>
+<span class="nx">firstName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Bob</span><span class="dl">'</span>		 <span class="c1">// &lt;- this would cause an error</span>
+</code></pre></div></div>
+<p>This fixes the bug issue, but we know that sometimes variables do need to change - like, the score of a game. Is there a better solution?</p>
+<h4 id="let">let</h4>
+<p>Enter <code class="highlighter-rouge">let</code>. <code class="highlighter-rouge">let</code> is a new ES6 variable keyword. This will assign a variable much like <code class="highlighter-rouge">var</code>, but with a little bit different behavior. Most notably, it differs by creating “block level scope”. For our purposes at the moment, <code class="highlighter-rouge">let</code> and <code class="highlighter-rouge">var</code> function almost exactly the same. When we get to writing functions and loops, we can start to use <code class="highlighter-rouge">let</code> to our advantage.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">firstName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Alice</span><span class="dl">'</span><span class="p">;</span>
+<span class="nx">firstName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Bob</span><span class="dl">'</span><span class="p">;</span>
+</code></pre></div></div>
+<p>To recap:</p>
+<ul>
+<li>
+<code class="highlighter-rouge">var</code> can be re-assigned and changed.</li>
+<li>
+<code class="highlighter-rouge">let</code> can be re-assigned but not changed.</li>
+<li>
+<code class="highlighter-rouge">const</code> cannot be re-assigned nor changed.</li>
+</ul>
+<p>Because these three keywords achieve the same thing (storing data in memory and assigning that data a ‘key’ that can be used for access) but behave very differently, there are places in this world for all three. And of course, as with everything, there are some other intricacies to learn about the <code class="highlighter-rouge">let</code> <code class="highlighter-rouge">const</code> and <code class="highlighter-rouge">var</code> keywords that we didn’t cover here today.</p>
+<p><strong>Lambda School Rule of Thumb</strong> When defining/declaring variables <em>use const until you can’t, then use let</em>.</p>
+<p>We <strong>highly</strong> recommend researching the differences between <code class="highlighter-rouge">var</code>, <code class="highlighter-rouge">let</code> and <code class="highlighter-rouge">const</code> in terms of their scoping rules as well. We’ll cover more on this later on when talking about function vs. block scoping. But for now, I’ll point you towards the <strong>Dig Deeper</strong> section’s link, <strong>How let and const are scoped in JavaScript</strong>, for some further understanding here.</p>
+<h3 id="primitive-data-types-string-number-boolean">Primitive Data Types (String, Number, Boolean)</h3>
+<p>Primitive data types, also known as basic data types are the simplest data types in JavaScript. They’re sort of like primary colors in that all other data types (which we will learn about in later lessons) are made of these types.</p>
+<h4 id="strings">Strings</h4>
+<p>Strings are blocks of text. They will always be defined with quotation marks around them, either single or double. Any text with quotes around it (even numbers) are strings.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">dog</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">fido</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">2</span><span class="dl">'</span><span class="p">;</span>
+</code></pre></div></div>
+<h4 id="numbers">Numbers</h4>
+<p>Numbers are just that, numbers. Numbers do NOT have quotes around them. They can be negative as well. JavaScript does have a limitation on the size of a number (+/- 9007199254740991), but only very rarely will that limitation come up.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">answer</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">negative</span> <span class="o">=</span> <span class="o">-</span><span class="mi">13</span><span class="p">;</span>
+</code></pre></div></div>
+<h4 id="booleans">Booleans</h4>
+<p>Booleans are an important relic from the origins of computer science. It is a dichotomous concept that powers binary code, still the very core of computers. You may have seen binary code in the past (e.g., 0001 0110…). That is Boolean logic. The only booleans in JavaScript are <code class="highlighter-rouge">true</code> and <code class="highlighter-rouge">false</code>, traditionally written in lowercase letters. These variables are useful when you need to employ some kind of dichotomous (or “yes”/”no”) logic in your code.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">iLoveJavascript</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">isThisaString</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</code></pre></div></div>
+<p>Note that while Booleans look like strings, the lack of <code class="highlighter-rouge">'</code> around the words indicates that the variable is a boolean and it will work differently under the hood.</p>
+<h3 id="undefined-and-null">Undefined and Null</h3>
+<p>There are a couple of JavaScript objects that don’t really fit into any type. Those are the values <code class="highlighter-rouge">undefined</code> and <code class="highlighter-rouge">null</code>. You will get <code class="highlighter-rouge">undefined</code> when you are looking for a variable that does not have a value yet. <code class="highlighter-rouge">undefined</code> simply means what you are asking for does not exist.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">unkownVar</span><span class="p">);</span> <span class="c1">// undefined</span>
+</code></pre></div></div>
+<p><code class="highlighter-rouge">null</code> is an object that we, the developers, set when we want to tell other developers that the item they are looking for exists, but there is no value associated with it. While <code class="highlighter-rouge">undefined</code> is set by the JavaScript language, <code class="highlighter-rouge">null</code> is set by the developer. If you ever receive <code class="highlighter-rouge">null</code>, it means that another developer has set that value to <code class="highlighter-rouge">null</code>.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">phoneNumber</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">123-456-7890</span><span class="dl">'</span><span class="p">;</span>
+<span class="nx">phoneNumber</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+<span class="nx">phoneNumber</span><span class="p">;</span> <span class="c1">// null</span>
+</code></pre></div></div>
+<p>One last thing to note, neither <code class="highlighter-rouge">undefined</code> nor <code class="highlighter-rouge">null</code> are strings. They are written just as they are without quotes around them, like a Boolean.</p>
+<h5>Follow Along</h5>
+<iframe height="400px" width="100%" src="https://repl.it/@sunjieming/Declare-Variables?lite=true" scrolling="yes" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p>Declare a variable called ‘name’ with the var keyword. Give it the value of your name. The code below will console.log your variables. Don’t touch this code!</p>
+<p>To declare a variable with var we first use the <code class="highlighter-rouge">var</code> keyword, followed by the name of our variable, <code class="highlighter-rouge">name</code>, and finally the value, <code class="highlighter-rouge">Alice</code></p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Alice</span><span class="dl">'</span><span class="p">;</span>
+</code></pre></div></div>
+<p>Declare a variable called ‘food’ with the let keyword. Give it the value of your favorite food. Declaring a variable with let works similarly to <code class="highlighter-rouge">var</code>, all we need to do is change the keyword to <code class="highlighter-rouge">let</code>. Remember that this will allow for mutability, but will show a warning when you try to change the value.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">food</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Pizza</span><span class="dl">'</span><span class="p">;</span>
+</code></pre></div></div>
+<p>Declare a variable called birthMonth with the const keyword. Give it the value of your birth month (i.e. January or February). Const doesn’t allow for mutability, and much like you can’t change your birth month, you can’t change the value of this variable declared with <code class="highlighter-rouge">const</code>.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">birthMonth</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">February</span><span class="dl">'</span><span class="p">;</span>
+</code></pre></div></div>
+<h5>Challenge</h5>
+<p>It’s time to check your knowledge with a <a href="https://codepen.io/lambdaschool/pen/zLydNr">Variables Challenge</a>. There is a solution link at the bottom of the codepen to check your work.</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://www.youtube.com/watch?v=EOlgY__Ml0c" target="blank_">Variables - Lambda Video</a><br> </li>
+<li>
+<a href="https://wesbos.com/javascript-scoping/" target="blank_">How to Use Variables in JavaScript</a><br> </li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to explain global object in JavaScript and be able to use the Math object</h4>
+<p>Global objects are pre-written code available to us in JavaScript. They extend the functionality of the language. It is important to learn what these objects are, and how to use them.</p>
+<h5>Overview</h5>
+<h3 id="math-operators">Math Operators</h3>
+<p>Calculators were the first major computer function. In JavaScript, we have built-in math operators that work exactly as they do on your calculator.</p>
+<h4 id="standard-operators">Standard Operators</h4>
+<p>JavaScript can preform any standard operations - addition (<code class="highlighter-rouge">+</code>), subtraction (<code class="highlighter-rouge">-</code>), multiplication (<code class="highlighter-rouge">*</code>), and division (<code class="highlighter-rouge">/</code>) on integers and strings. There are dozens of practical applications of this, mathematical operations being just the beginning.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// returns 2</span>
+<span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// returns 4</span>
+<span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// returns 0</span>
+<span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// returns 1</span>
+
+<span class="kd">const</span> <span class="nx">num1</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="kd">const</span> <span class="nx">num2</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="nx">num1</span> <span class="o">+</span> <span class="nx">num2</span> <span class="c1">// returns 4</span>
+
+<span class="kd">const</span> <span class="nx">string1</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">My name is</span><span class="dl">'</span>
+<span class="kd">const</span> <span class="nx">string2</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Bob</span><span class="dl">'</span>
+
+<span class="nx">string1</span> <span class="o">+</span> <span class="nx">string2</span> <span class="c1">// returns 'My name is Bob'</span>
+</code></pre></div></div>
+<h3>%</h3>
+<p>Something you may not have seen before is the <em>modulo operator</em> (%). This math operator will divide two numbers (integers or floats) and return only the remainder. For example, <code class="highlighter-rouge">10 / 3</code> is 3 with a remainder of 1, so <code class="highlighter-rouge">10 % 3</code> (read as ‘10 mod 3’) will return <code class="highlighter-rouge">1</code> .</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">21</span> <span class="o">%</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// returns 1</span>
+<span class="mi">21</span> <span class="o">%</span> <span class="mi">6</span><span class="p">;</span> <span class="c1">// returns 3</span>
+<span class="mi">21</span> <span class="o">%</span> <span class="mi">7</span><span class="p">;</span> <span class="c1">// returns 0</span>
+</code></pre></div></div>
+<h3 id="mathpow">Math.pow</h3>
+<p>We can use the <code class="highlighter-rouge">pow</code> method on <code class="highlighter-rouge">Math</code> to return a number raised to an exponent. It will take two numbers. The first is the base and the second is the power. For example, <code class="highlighter-rouge">Math.pow(5,2)</code> calculates 5 squared, which is 25. See some more examples below:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1">// returns 4</span>
+<span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1">// returns 9</span>
+<span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="c1">// returns 27</span>
+</code></pre></div></div>
+<h3 id="mathround-mathfloor-mathceil">Math.round, Math.floor, Math.ceil</h3>
+<p><code class="highlighter-rouge">Math</code> also has methods that will round numbers for us. <code class="highlighter-rouge">.round</code> will round a number to the nearest whole number. <code class="highlighter-rouge">.floor</code> will always round a number down to the nearest whole number. <code class="highlighter-rouge">.ceil</code> will always round up to the nearest whole number.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="mf">6.5</span><span class="p">)</span> <span class="c1">// returns 7</span>
+<span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="mf">6.45</span><span class="p">)</span> <span class="c1">// returns 6</span>
+<span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="mf">6.999</span><span class="p">)</span> <span class="c1">// returns 6</span>
+<span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="mf">6.0001</span><span class="p">)</span> <span class="c1">// returns 7</span>
+</code></pre></div></div>
+<h3 id="truthiness">Truthiness</h3>
+<p>In these lessons, we have talked a lot about the Boolean values, <code class="highlighter-rouge">true</code> and <code class="highlighter-rouge">false</code>. When using an <code class="highlighter-rouge">if</code> statement or other statements that expect a Boolean value (such as the <code class="highlighter-rouge">!</code>, NOT), if the expression given is not a Boolean value, JavaScript will do something called type coercion and transform whatever it is given into a Boolean value. This is known as “truthy” and “falsey” - yes, seriously. Every data type has some truthiness to it. Here are some examples:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// items that are interpreted as true</span>
+<span class="kc">true</span>
+<span class="mi">1</span>
+<span class="dl">'</span><span class="s1"> </span><span class="dl">'</span>
+<span class="p">[]</span> <span class="c1">// an array, you'll learn more about this later</span>
+<span class="p">{}</span> <span class="c1">// an object, you'll learn more about this later</span>
+<span class="kd">function</span><span class="p">()</span> <span class="p">{}</span>
+
+<span class="c1">// items that are interpreted as false</span>
+<span class="kc">false</span>
+<span class="mi">0</span>
+<span class="kc">undefined</span>
+<span class="kc">null</span>
+<span class="dl">''</span>
+</code></pre></div></div>
+<h3 id="comparison-operators">Comparison Operators</h3>
+<p>JavaScript has a number of comparison and logical operators, (<code class="highlighter-rouge">&gt;</code> <code class="highlighter-rouge">&gt;=</code> <code class="highlighter-rouge">&lt;</code> <code class="highlighter-rouge">&lt;=</code> <code class="highlighter-rouge">===</code> <code class="highlighter-rouge">!==</code>). These operators work just as they would in math: greater than, less than, greater than or equal to, and all the rest. We use these operators to evaluate two expressions. As the computer runs the code, the operator will return either a <code class="highlighter-rouge">true</code> (if the statement is true) or a <code class="highlighter-rouge">false</code> (if the statement is not true).</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">;</span>     <span class="c1">// false</span>
+<span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span>     <span class="c1">// true</span>
+<span class="mi">10</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">;</span>  <span class="c1">// true</span>
+<span class="mi">100</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// false</span>
+</code></pre></div></div>
+<p>The “triple equals” sign ( <code class="highlighter-rouge">===</code> ) must not be confused with a single equal sign (which indicates assigning a value to a variable). The triple equal will compare everything about the two items, including type, and return if they are exactly equal or not.
+(Something to note: there is also a “double equals” ( <code class="highlighter-rouge">==</code> ) sign which will compare two items, but it allows type coercion so a string and an integer can be considered equal (<code class="highlighter-rouge">1 == '1' // true</code>). Due to this, it is considered bad practice to use the double equal sign. We would like to see you always using the triple equal sign, and you will always see us using it.)</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">1</span> <span class="o">===</span> <span class="mi">1</span><span class="p">;</span>          <span class="c1">// true</span>
+<span class="mi">1</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">1</span><span class="dl">'</span><span class="p">;</span>        <span class="c1">// false</span>
+<span class="dl">'</span><span class="s1">cat</span><span class="dl">'</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">cat</span><span class="dl">'</span><span class="p">;</span>  <span class="c1">// true</span>
+<span class="dl">'</span><span class="s1">cat</span><span class="dl">'</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">Cat</span><span class="dl">'</span><span class="p">;</span>  <span class="c1">// false</span>
+</code></pre></div></div>
+<p>The last comparison operator we would like to introduce you to has two parts to it.</p>
+<p>First is the “NOT” (<code class="highlighter-rouge">!</code>). When you see this it will mean that we are asking the opposite of the expression (we will revisit the NOT operator later in this lesson).</p>
+<p>With that in mind, we can introduce the “not equals” ( <code class="highlighter-rouge">!==</code> ) sign. This will return true if the items are NOT equal to each other, in any way. This, like the triple equal sign, takes type into account.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">1</span> <span class="o">!==</span> <span class="mi">1</span><span class="p">;</span>          <span class="c1">// false</span>
+<span class="mi">1</span> <span class="o">!==</span> <span class="dl">'</span><span class="s1">1</span><span class="dl">'</span><span class="p">;</span>        <span class="c1">// true</span>
+<span class="dl">'</span><span class="s1">cat</span><span class="dl">'</span> <span class="o">!==</span> <span class="dl">'</span><span class="s1">cat</span><span class="dl">'</span><span class="p">;</span>  <span class="c1">// false</span>
+<span class="dl">'</span><span class="s1">cat</span><span class="dl">'</span> <span class="o">!==</span> <span class="dl">'</span><span class="s1">Cat</span><span class="dl">'</span><span class="p">;</span>  <span class="c1">// true</span>
+</code></pre></div></div>
+<h3 id="logical-operators">Logical Operators</h3>
+<p>We can also combine two equality expressions and ask if either of them are true, both of them are true, or neither of them is true. To do this we will use Logical Operators.</p>
+<h4 id="-1"><code class="highlighter-rouge">&amp;&amp;</code></h4>
+<p>The first logical operator we will look at is the “AND” operator. It is written with two ampersands (&amp;&amp;). This will evaluate both expressions and will return true if BOTH expressions are true. If one (or both) of them is false, then this operator will return false.
+For example, <code class="highlighter-rouge">(100 &gt; 10 &amp;&amp; 10 === 10)</code> will return true because both statements are true, but <code class="highlighter-rouge">(10 === 9 &amp;&amp; 10 &gt; 9)</code> will return false because one statement is false.</p>
+<h4 id="-2"><code class="highlighter-rouge">||</code></h4>
+<table>
+<tbody>
+<tr>
+<td>Next up is the “OR” operator. It is written with two vertical bars (</td>
+<td> </td>
+<td>). This operator will check two expressions and return true if either one is true. It will return false only if BOTH expressions are false. As you’d expect a line where both parts are true would return true. Like so:</td>
+</tr>
+</tbody>
+</table>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="mi">100</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="o">||</span> <span class="mi">10</span> <span class="o">===</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">//true</span>
+</code></pre></div></div>
+<p>Similarly this line where only one expression is accurate, would return true. Like this:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="mi">10</span> <span class="o">===</span> <span class="mi">9</span> <span class="o">||</span> <span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">9</span><span class="p">)</span> <span class="c1">//true</span>
+</code></pre></div></div>
+<p>If both expressions are false, like this, then the result will be false.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="mi">10</span> <span class="o">===</span> <span class="mi">9</span> <span class="o">||</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">9</span><span class="p">)</span> <span class="c1">//false</span>
+</code></pre></div></div>
+<h4 id="-3"><code class="highlighter-rouge">!</code></h4>
+<p>The last logical operator is the “NOT” operator. It is written as a single exclamation mark (<code class="highlighter-rouge">!</code>). We saw this operator earlier when determining equality (<code class="highlighter-rouge">!==</code>). As before, the NOT operator will return the opposite Boolean value of what is passed to it.</p>
+<p>In this first case, since the opposite of false is true, <code class="highlighter-rouge">(!false)</code> would return true.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="o">!</span><span class="kc">false</span><span class="p">)</span> <span class="c1">// true</span>
+</code></pre></div></div>
+<p>Similarly since 1 is equal to 1 and this statement is true, <code class="highlighter-rouge">!(1===1)</code> would return false thanks to the <code class="highlighter-rouge">!</code> operator.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="mi">1</span> <span class="o">===</span> <span class="mi">1</span><span class="p">))</span> <span class="c1">// false</span>
+</code></pre></div></div>
+<h4 id="notes-about-logical-operators">Notes About Logical Operators</h4>
+<p>A couple things to note about logical operators.</p>
+<ul>
+<li>
+<p>The expressions are evaluated in order, and the computer will skip any redundant expressions. In an <code class="highlighter-rouge">&amp;&amp;</code> statement, if the first expression is <code class="highlighter-rouge">false</code>, the second expression will not be evaluated because BOTH expressions need to be <code class="highlighter-rouge">true</code>. Same for the <code class="highlighter-rouge">||</code> statement. If the first expression is <code class="highlighter-rouge">true</code>, the second will not be evaluated because there only needs to be one <code class="highlighter-rouge">true</code> statement to fulfill the requirements of the operator.</p>
+</li>
+<li>
+<p>Use parentheses. As we saw in the second <code class="highlighter-rouge">!</code> operator example, we used parentheses to evaluate what was inside of the parentheses FIRST, then applied the <code class="highlighter-rouge">!</code> operator. We can wrap ANY expression in parentheses and it will be evaluated before evaluating the expression as a whole.</p>
+</li>
+</ul>
+<h5>Follow Along</h5>
+<p>You may have tried the following riddle on your friend as a kid. Using our knowledge of variables and math we’re going to create a console application to return a person’s birthday starting with just the number <code class="highlighter-rouge">7</code>. The steps we need to take are as follows.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Enter the number 7
+Multiply by the month of your birth
+Subtract 1
+Multiply by 13
+Add the day of your birth
+Add 3
+Multiply by 11
+Subtract the month of your birth
+Subtract the day of your birth
+Divide by 10
+Add 11
+Divide by 100
+</code></pre></div></div>
+<iframe height="400px" width="100%" src="https://repl.it/@sunjieming/Math?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p>We’ll walk through the example for someone born on February 22. First, we need to create our magical number variable. We’ll use <code class="highlighter-rouge">let</code> so that this can be easily changed.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">magicalNumber</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+</code></pre></div></div>
+<p>Now, we test the riddle. For every calculation we will need to change the value of <code class="highlighter-rouge">magicalNumber</code> and preform the riddle step.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Multiply by the month of your birth</span>
+<span class="nx">magicalNumber</span> <span class="o">=</span> <span class="nx">magicalNumber</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="c1">// Subtract 1</span>
+<span class="nx">magicalNumber</span> <span class="o">=</span> <span class="nx">magicalNumber</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="c1">// Multiply by 13</span>
+<span class="nx">magicalNumber</span> <span class="o">=</span> <span class="nx">magicalNumber</span> <span class="o">*</span> <span class="mi">13</span>
+<span class="c1">// Add the day of your birth</span>
+<span class="nx">magicalNumber</span> <span class="o">=</span> <span class="nx">magicalNumber</span> <span class="o">+</span> <span class="mi">22</span>
+<span class="c1">// Add 3</span>
+<span class="nx">magicalNumber</span> <span class="o">=</span> <span class="nx">magicalNumber</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="c1">// Multiply by 11</span>
+<span class="nx">magicalNumber</span> <span class="o">=</span> <span class="nx">magicalNumber</span> <span class="o">*</span> <span class="mi">11</span>
+<span class="c1">// Subtract the month of your birth</span>
+<span class="nx">magicalNumber</span> <span class="o">=</span> <span class="nx">magicalNumber</span> <span class="o">-</span> <span class="mi">2</span>
+<span class="c1">// Subtract the day of your birth</span>
+<span class="nx">magicalNumber</span> <span class="o">=</span> <span class="nx">magicalNumber</span> <span class="o">-</span> <span class="mi">22</span>
+<span class="c1">// Divide by 10</span>
+<span class="nx">magicalNumber</span> <span class="o">=</span> <span class="nx">magicalNumber</span> <span class="o">/</span> <span class="mi">10</span>
+<span class="c1">// Add 11</span>
+<span class="nx">magicalNumber</span> <span class="o">=</span> <span class="nx">magicalNumber</span> <span class="o">+</span> <span class="mi">11</span>
+<span class="c1">// Divide by 100</span>
+<span class="nx">magicalNumber</span> <span class="o">=</span> <span class="nx">magicalNumber</span> <span class="o">/</span> <span class="mi">100</span>
+</code></pre></div></div>
+<p>Finally, let’s <code class="highlighter-rouge">console.log</code> our magical number and see if it returns <code class="highlighter-rouge">2.22</code> as expected. If our calculations are correct, this should work for any birthday!</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">magicalNumber</span><span class="p">)</span>
+</code></pre></div></div>
+<p>To make this application more useful, you could create a variable called <code class="highlighter-rouge">birthMonth</code> and another called <code class="highlighter-rouge">birthYear</code> and let the program run on its on.</p>
+<h5>Challenge</h5>
+<p>Check your knowledge with a short <a href="https://codepen.io/lambdaschool/pen/xxbvoLx">math challenge</a>.</p>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to write control flow using if/else statements</h4>
+<h5>Overview</h5>
+<h3 id="control-flow">Control Flow</h3>
+<p>Often times, as a computer is reading and executing our code, we want code to run only if something is true or not. For example, add one point to the variable <code class="highlighter-rouge">score</code> <strong>if</strong> the character touches a coin. This is known as control flow or conditional logic. Control flow means that not all code on the screen is executed in order, or at all. We will learn to use some basic control flow today, and will dive deeper into it in our next lesson.</p>
+<p>Let’s say you wanted to write a simple script to check whether someone is a legal driver. You could use conditional logic to print a <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code> boolean.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@sunjieming/Conditionals?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p>Here we are taking a number (age) and checking to see if the statement is true. The statement 16 &gt; 15 is true, so our code will return <code class="highlighter-rouge">true</code>. If it is not, it will skip that chunk of code and return <code class="highlighter-rouge">false</code>.</p>
+<p><strong>Check For Understanding:</strong> Change the value of <code class="highlighter-rouge">age</code> above so that the code will return <code class="highlighter-rouge">false</code>.</p>
+<p>We just learned about the <code class="highlighter-rouge">if</code> operator. We can use <code class="highlighter-rouge">if</code> to check and see <strong>if</strong> an expression is true. If it is, JavaScript will run some code. If it is not, JavaScript will skip the code and keep running the program.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">===</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">The expression is true!</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// since 1 + 1 does equal 2, JavaScript will console.log ("The expression is true!")</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">===</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">The expression is true!</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// since 1 + 1 does NOT equal 2, JavaScript will NOT console.log ("The expression is true!")</span>
+</code></pre></div></div>
+<p>To add on to <code class="highlighter-rouge">if</code>, we can also use the <code class="highlighter-rouge">else</code> and <code class="highlighter-rouge">else if</code> statements. These statements must be used only after <code class="highlighter-rouge">if</code> has been used. These statements will be evaluated <strong>if</strong> the initial <code class="highlighter-rouge">if</code> returns false. We can think of the <code class="highlighter-rouge">else if</code> as another <code class="highlighter-rouge">if</code> statement that has been chained (we can have as many else if statements we want). Only one <code class="highlighter-rouge">if</code> or <code class="highlighter-rouge">else if</code> statement code block will be run. If at any time a statement evaluates to true, that code will be run and the rest will be skipped:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">===</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">This will be skipped!</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// since 1 + 1 is NOT 3, this will be skipped</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">===</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">This code will be run.</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// since 1 + 1 is equal to 2, this will be run</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 1 - 1 IS 0, however, the previous if statement was already true, so this will be skipped</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">This code will NOT be run.</span><span class="dl">'</span><span class="p">);</span> 
+<span class="p">}</span>
+</code></pre></div></div>
+<p>The else statement will always come at the end of an if-else if chain, and will act as a default. If <em>none</em> of the expressions returned true, the else code block will be run no matter what. If any of the previous if or else if expressions are true, the else statement code block will not be run.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">===</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">This will be skipped!</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// since 1 + 1 is NOT 3, this will be skipped</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">===</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">This code will NOT be run</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// since 1 + 1 is NOT 3, this will be skipped</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">This code will be run</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// since the above were skipped, this will run</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<h4 id="why-use-else-if">Why use else-if?</h4>
+<p>You may be thinking to yourself, “Why not just use a bunch of different if statements? Why use else-if? That is a valid question, and sometimes that is the right approach to take. It is up to you to decide which is the right approach. Remember, when using a block of conditionals, only ONE of the statements will be run, even if there are multiple statements that are true. The same can not be said for multiple if statements; they will run if true regardless of statements before and after. Take this example:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">age</span> <span class="o">=</span> <span class="mi">21</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">age</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">older than 20!</span><span class="dl">'</span><span class="p">);</span> 
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">age</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">older than 15!</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">younger than 15!</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>In the above example only <code class="highlighter-rouge">older than 20!</code> will be logged even though both the if statement and else if statement were true.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">age</span> <span class="o">=</span> <span class="mi">21</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">age</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">older than 20!</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">age</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">older than 15!</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">age</span> <span class="o">&lt;=</span> <span class="mi">15</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">younger than 15!</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>In the above example the first and second if statements would be logged because both of them are true.</p>
+<p>As you can see, it will be up to you to decide if you want to have multiple actions based on your data or just one action.</p>
+<h5>Follow Along</h5>
+<p><strong>Note:</strong> the following example will span several lessons, we suggest forking the repl.it below and saving your work as you go along. As always, you can also code along in the repl.it here.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@sunjieming/coinFlip-I?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p>Let’s create an algorithm to flip a coin and <code class="highlighter-rouge">console.log()</code> “heads” or “tails.” To do this, we’ll generate a random <code class="highlighter-rouge">0</code> or <code class="highlighter-rouge">1</code> and write a conditional <code class="highlighter-rouge">if</code> statement to return the <code class="highlighter-rouge">heads</code> or <code class="highlighter-rouge">tails</code> reading.</p>
+<p>First lets set up a variable called <code class="highlighter-rouge">coinFlip</code> and give it a randomly assigned <code class="highlighter-rouge">0</code> or <code class="highlighter-rouge">1</code> value. To do this we need to use two methods of the <code class="highlighter-rouge">Math</code> object - <code class="highlighter-rouge">Math.round()</code> and <code class="highlighter-rouge">Math.random()</code>. <code class="highlighter-rouge">Math.random()</code> generates a random number between 0 and 1, and <code class="highlighter-rouge">Math.round()</code> rounds that decimal to the nearest whole number.</p>
+<p>In the syntax below, Javascript <em>first</em> reads <code class="highlighter-rouge">Math.random()</code> and generates a random number, for example, 0.56324. Then it reads <code class="highlighter-rouge">Math.round()</code> and applies it to the random number, giving an integer, in this example, a <code class="highlighter-rouge">1</code>.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">coinFlip</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">());</span>
+</code></pre></div></div>
+<p>Add this to your repl.it and console.log() <code class="highlighter-rouge">coinFlip</code> a few times to make sure you’re getting a mix of <code class="highlighter-rouge">0</code>s and <code class="highlighter-rouge">1</code>s.</p>
+<p>Next up, we’ll add our conditional logic. Since we already have a randomly generated 0 or 1, we can set up an <strong>if/else</strong> statement where <code class="highlighter-rouge">1</code> represents <code class="highlighter-rouge">"Heads"</code> and <code class="highlighter-rouge">0</code> represents <code class="highlighter-rouge">"Tails"</code>.</p>
+<p>We’ll write this statement using the syntax we learned above, such that <strong>if</strong> <code class="highlighter-rouge">coinFlip</code> is equal to <code class="highlighter-rouge">1</code>, we will console.log <code class="highlighter-rouge">"Heads"</code>. Otherwise (<strong>else</strong>), we can assume <code class="highlighter-rouge">coinFlip</code> must be <code class="highlighter-rouge">0</code> and console.log <code class="highlighter-rouge">"Tails"</code>.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">coinFlip</span> <span class="o">===</span> <span class="mi">1</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Heads</span><span class="dl">"</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span><span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Tails</span><span class="dl">"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>We now have a fully functional coin flipping algorithm! Congratulations. You can view and run the solution code in the pen below. We’ll continue to add to this over the next few objectives.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@sunjieming/coinFlip-II?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p>````</p>
+<h5>Challenge</h5>
+<p>Check your knowledge with the <a href="https://codepen.io/lambdaschool/pen/bGNXPxK?editors=0010">conditionals challenge</a>.</p>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to write a basic for loop and while loop</h4>
+<p>Loops are fundamental to “DRY” programming and allow you, the developer, to run a chunk of code repeatedly. Understand basic loops and the native <code class="highlighter-rouge">for</code> loop implementation in JavaScript.</p>
+<h5>Overview</h5>
+<h3 id="loops">Loops</h3>
+<p>Most software runs on loops, evaluating expressions over and over again until it either returns what we are looking for, or hits a certain number of loops. JavaScript has two looping expressions built into it and today we will look at the first one, the “for” loop.</p>
+<h3 id="for-loops">
+<code class="highlighter-rouge">for</code> Loops</h3>
+<p>Imagine you wanted to console.log() the phrase <code class="highlighter-rouge">hello, world!</code> 5 times. With your current knowledge that would look something like this. This is just for illustration, please, never code like this.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello, world!</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello, world!</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello, world!</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello, world!</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello, world!</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+<p>In general, you should almost <strong>never</strong> have to copy and paste chunks of code. Not only is it a bad programming practice, it is time consuming, and it leads to errors. Consider, for example, how much work it would be if you wanted to change “world” to someone’s name. So how would you console.log() <code class="highlighter-rouge">hello, world!</code> five times? Using <code class="highlighter-rouge">for</code> loops! With a <code class="highlighter-rouge">for</code> loop, the above example could be reduced to the following.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="c1">// | declare a var | conditional expression | increment var|</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello, world!</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><code class="highlighter-rouge">for</code> loops are useful anytime you need to run the same block of code a certain number of times. Imagine you go to the store and want to buy 10 avocados. Instead of scanning each avocado one by one, the cashier will add the cost of one avocado to your total <strong>for</strong> each avocado you buy. In other words, <strong>for</strong> each avocado, add <code class="highlighter-rouge">cost</code>. This would result in adding <code class="highlighter-rouge">cost</code> 10 times.</p>
+<p><code class="highlighter-rouge">for</code> loops have a unique syntax, similar to the <code class="highlighter-rouge">if</code> statement, but slightly more complex. First, we have the <code class="highlighter-rouge">for</code> keyword, followed by parentheses, and then open and close braces. Within the parentheses, we will need three things. First, we must declare a variable (usually <code class="highlighter-rouge">i</code>) as a starting point. Then, we will have a conditional expression. The loop will continue happening until this statement is <code class="highlighter-rouge">false</code>. Third, we will increment our variable, telling the loop a pattern to follow. Usually, the increment will be <code class="highlighter-rouge">i++</code>, meaning increase <code class="highlighter-rouge">i</code> by 1 every time the loop runs. All three of these statements are separated by a semicolon.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span>      <span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span>                 <span class="p">;</span> <span class="nx">i</span><span class="o">++</span>          <span class="p">)</span> <span class="p">{</span>
+<span class="c1">//  | declare a var | conditional expression | increment var|</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>In this example, we see that we initially set our <code class="highlighter-rouge">counter</code> variable (<code class="highlighter-rouge">i</code>) to 0. The loop will run and each time it gets to the end, it will increase the counter by one. The for loop will then evaluate the conditional expression. If it is <code class="highlighter-rouge">true</code>, it will run again, but if it is <code class="highlighter-rouge">false</code> it will stop running. Therefore, the return of the example above would be the following:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@sunjieming/For-Loops?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p><strong>Check For Understanding:</strong> Edit the code above to return 1,2,3,4,5,6,7,8,9,10 (each on a new line is fine).</p>
+<h3 id="the--operator">The ++ operator</h3>
+<p>We saw in the last two examples the <code class="highlighter-rouge">++</code> operator. This is JavaScript shorthand for “Set the value of the variable to its current value plus one”. There are a few more of these variable math/assignment shorthand expressions. We will visit them in upcoming lessons.</p>
+<h3 id="while-loops">While loops</h3>
+<p>While loops are similar to for loops in that they make it easy to repeat some action for a desired amount of time. Just like for loops, they will run so long as a condition is met. The key difference here is that you don’t need to declare an incrementing variable when you declare a while loop.</p>
+<p>Syntactically, while loops look like this. Note that the example below is what we call an “infinite loop” because the condition will never be false.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="p">(</span><span class="nx">i</span> <span class="o">===</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">i is true</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Most practical example of loops will use some kind of “counter”, an outside variable that will be affected by what’s inside the loop. A more practical example of a while loop, using a counter, might look like:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">count</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">count</span><span class="p">);</span>
+    <span class="nx">count</span> <span class="o">+=</span><span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>The return of this loop would be 11 because the loop would add 2 every time it runs, until the value is greater than 10.</p>
+<h3 id="infinite-loops">Infinite Loops</h3>
+<p>As mentioned, it is possible to write a loop such that it never ends. This is what we call an “Infinite Loop” and it will break your program. Take for example this loop:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Because our conditional expression will ALWAYS be <code class="highlighter-rouge">true</code> (<code class="highlighter-rouge">i</code> will never be less than 0) this loop will essentially run forever. This will break your program, and may crash your web browser, or computer.</p>
+<h5>Follow Along</h5>
+<p>Let’s wrap our heads/tails program in a loop to allow a user to play more than one time.</p>
+<p>We’ll start where we left off with the conditional. Its actually fairly simple to add loop functionality. We’re going to wrap this whole chunk of code inside a for loop.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@sunjieming/coinFlip-II?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p>To do so we’ll utilize the same syntax from above, and for now we’ll tell the loop to run five times. We’ll start by declaring the <code class="highlighter-rouge">for</code> keyword, then setting our initial value to <code class="highlighter-rouge">0</code> (<code class="highlighter-rouge">let i = 0</code>). We want the loop to run until <code class="highlighter-rouge">i</code> is equal to <code class="highlighter-rouge">5</code>, <code class="highlighter-rouge">i &lt; 5</code>, and to add <code class="highlighter-rouge">1</code> to <code class="highlighter-rouge">i</code> every time the loop runs.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>         <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span>          <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="c1">//   start at 0   | loop until 5   | add one every time</span>
+</code></pre></div></div>
+<p>As you might imagine, we can now change the number of coinFlips to preform by changing the conditional expression above, so <code class="highlighter-rouge">i &lt; 5</code> could change to <code class="highlighter-rouge">i &lt; 10</code> and our coin would be flipped 10 times.</p>
+<p>Its important to note that the variable needs to go inside of the loop so that it is randomly generated each time the loop runs. Otherwise, <code class="highlighter-rouge">coinFlip</code> would be declared outside of the loop and our end result would be 5 <code class="highlighter-rouge">heads</code> or 5 <code class="highlighter-rouge">tails</code>. Go ahead and try moving the variable around to see what we mean.</p>
+<p>With this seemingly simple MVP, you could go on to add a lot of functionality to this program, including user interaction through <code class="highlighter-rouge">window.prompt()</code> or by integrating HTML. Again, you can view and run the solution code in the pen below.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@sunjieming/coinFlip-III?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<h5>Challenge</h5>
+<p>Check your knowledge with a short <a href="https://codepen.io/lambdaschool/pen/BaNBBpN?editors=0012">loops challenge</a></p>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to understand JavaScript functions, why we use them, and be able to write correct function syntax</h4>
+<h5>Overview</h5>
+<h3 id="introduction-to-functions">Introduction to Functions</h3>
+<p>Functions allow you, the developer, to repeat sections of code with just a single line. Consider, for a second, you want to “program” a robot to bake you cookies. A practical program, because you’d have cookies all the time! Code, without functions, might include steps like <code class="highlighter-rouge">addFlour</code>, <code class="highlighter-rouge">addEggs</code>, <code class="highlighter-rouge">addChocolateChips</code>, <code class="highlighter-rouge">preheatOven</code>, <code class="highlighter-rouge">bake</code>. A function could collect these steps into a container called <code class="highlighter-rouge">bakeCookies()</code>. Then, running <code class="highlighter-rouge">bakeCookies()</code> would produce the same, delicious result as the individual steps.</p>
+<p>We mentioned earlier that you never want to copy and paste code, this is not only true when you want to repeat one single action, but also when you want to repeat a whole chunk of actions. In the case of the latter, we use functions.</p>
+<p>We can think of functions as small computer programs. Functions allow us to write code that will be used over and over again, keeping our code <code class="highlighter-rouge">DRY</code> (“<strong>D</strong>on’t <strong>R</strong>epeat <strong>Y</strong>ourself!”).</p>
+<p>Before we dive into syntax, study the following example and predict the output.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">myFunc</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">this is my function!</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="nx">myFunc</span><span class="p">()</span>
+</code></pre></div></div>
+<p>If you guessed that the output would be <code class="highlighter-rouge">this is my function</code>, congratulations - you are correct! Once you’ve declared a function, like <code class="highlighter-rouge">myFunc</code> it can be used over and over again to give the same, predictable result.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@sunjieming/Functions?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p><strong>Check For Understanding:</strong> Edit the code above to <code class="highlighter-rouge">console.log()</code> “Hello, World!” when <code class="highlighter-rouge">myFunc()</code> is called.</p>
+<h3 id="function-syntax">Function Syntax</h3>
+<p>Just like we used <code class="highlighter-rouge">const</code>, <code class="highlighter-rouge">let</code>, and <code class="highlighter-rouge">var</code> to declare variables, we use the keyword <code class="highlighter-rouge">function</code> to declare functions.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">myFunc</span><span class="p">()</span> <span class="p">{</span>
+<span class="c1">// tasks go here</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>The <code class="highlighter-rouge">function</code> keyword tells whatever is running your program that what follows is a function and to treat it as such. After that comes the name - we like to give functions names that describe what they do, like <code class="highlighter-rouge">logsHello</code>. Then comes an open and a close parentheses, <code class="highlighter-rouge">()</code>. And finally, open and close brackets. In between these brackets is where all of our function code will go.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">logsHello</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">logsHello</span><span class="p">();</span>
+</code></pre></div></div>
+<p>In this example, we declare a function <code class="highlighter-rouge">logsHello</code> and set it up to <code class="highlighter-rouge">console.log</code> <code class="highlighter-rouge">'hello'</code>.</p>
+<p>In order to run this function, we need to write or invoke its name with the parentheses after it, <code class="highlighter-rouge">logsHello()</code>. This is the syntax to run (aka. call) a function. A function always needs parentheses to run.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@sunjieming/Functions-2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p><strong>Check For Understanding:</strong> The function syntax above is correct, but nothing shows up when the program is run! Add a line of code so that the console displays <code class="highlighter-rouge">hello</code>.</p>
+<h4 id="function-declaration-hoisting">Function Declaration Hoisting</h4>
+<p>JavaScript utilizes a two-pass compiler when executing lines of code that we write. This means that anytime we run JavaScript in the browser, the browser will take two passes over our code. The first pass builds up references to all of our code, declaring variables and functions and the like. The second pass applies values to the references that were found, thus actually running the code.</p>
+<p>Function declarations are defined in the first pass. The compiler is made aware of the function declaration and adds it to the top of the execution order for your code. This concept of putting a function higher in the execution order for later use is known as hoisting.</p>
+<p>What does this mean for you? It means that function declarations can be invoked <em>before</em> they are defined! Let’s take a look at an example:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This code is valid above the definition!</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span> <span class="c1">// 6 </span>
+
+<span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">){</span> 
+ <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">);</span>
+<span class="p">}</span> 
+</code></pre></div></div>
+<p>This is odd behavior to developers new to JavaScript. It can be used as a feature or introduce bugs if not understood properly. Be aware that hoisting applies to function declarations and not function expressions or arrow functions.</p>
+<h3 id="function-expressions">Function Expressions</h3>
+<p>Now that we have a better understanding of how basic function syntax works, we can push even further into another type of function, a function expression.</p>
+<p>Function expressions have unique differences when compared against function declarations:</p>
+<ul>
+<li>A variable is used to store the function for later use</li>
+<li>Anonymous functions are used</li>
+<li>Function expressions are not hoisted. They can only be invoked after a definition has been placed in the execution stack.</li>
+</ul>
+<p>Example of a function expression:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">){</span>
+ <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">);</span>
+<span class="p">}</span> 
+<span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="c1">// 6</span>
+</code></pre></div></div>
+<p>Notice the function doesn’t actually have a name. This is what we refer to as an <em>anonymous function</em>. Because we are using a <code class="highlighter-rouge">const</code> named <code class="highlighter-rouge">add</code> we don’t need to name our function anything. We can simply execute the function when <code class="highlighter-rouge">add</code> is referenced by invocation.</p>
+<p>Why do this and not use a function declaration? Because we have more control over our code now. We will discuss this in greater detail later on with scope and closure. For now, just know that arrow functions make code more concise.</p>
+<h3 id="arrow-function-expressions">Arrow Function Expressions</h3>
+<p>Arrow functions are fancy looking function expressions with a major feature removed, the <code class="highlighter-rouge">function</code> keyword. We won’t focus on why this is important right now, Instead, we will start getting used to seeing the syntax of what an arrow function looks like:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// function expression syntax</span>
+<span class="c1">// const add = function(a,b) { </span>
+<span class="c1">//  console.log a + b;</span>
+<span class="c1">// } </span>
+
+<span class="c1">// arrow function expression syntax</span>
+<span class="kd">const</span> <span class="nx">add</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> 
+ <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">);</span>
+<span class="p">}</span> 
+<span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="c1">// 6 </span>
+</code></pre></div></div>
+<p>You will notice that we removed the <code class="highlighter-rouge">function</code> keyword in front of our parameters and then added a <code class="highlighter-rouge">=&gt;</code> token behind the parameters. This is a pretty straightforward conversion!</p>
+<p>Syntactically, we didn’t remove much, we lost a few characters in the word <code class="highlighter-rouge">function</code> and gained a <code class="highlighter-rouge">=&gt;</code>. However, there are many sub-rules for syntax with arrow functions. Those sub-rules can create extremely streamlined syntax. This line of code is a good example.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// streamlined arrow syntax</span>
+<span class="kd">const</span> <span class="nx">add</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">);</span> 
+
+<span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span> <span class="c1">// 6 </span>
+</code></pre></div></div>
+<p>Wow, there are a lot of abstractions occurring there! We do not need our <code class="highlighter-rouge">{}</code> because they are redundant in the rules of arrow functions. You haven’t seen <code class="highlighter-rouge">return</code> statements yet, but they too, are not needed in arrow functions.</p>
+<p>It’s fun to see how slim we can get, but a word of caution: stick with the simple conversion first and slowly step into using other syntactical sugar approaches as you progress.</p>
+<p>Often, developers will go too far with syntactical sugar, and the code becomes very hard to read. Arrow function expressions are great to use with array methods, for example, but may not be a great choice in a lot of other places.</p>
+<h4 id="when-not-to-use-arrow-functions">When Not To Use Arrow Functions</h4>
+<p>There is a time and place for arrow functions. Here is a list of times you should not be using them:</p>
+<ul>
+<li>Event handlers (Unless they are inside a class constructor!)</li>
+<li>Object methods</li>
+<li>Prototype methods</li>
+<li>Anytime you need to use arguments Object</li>
+</ul>
+<h5>Follow Along</h5>
+<p>Let’s return to our coin flip game to create a function <code class="highlighter-rouge">flip()</code> that will run our code with a single line.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@sunjieming/coinFlip-III?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p>Just like with loops, all we need to do is add another layer of functionality here, so we’ll wrap a function declaration around all the code we already have.</p>
+<p>We need to declare the function with the keyword <code class="highlighter-rouge">function</code>, then name it with <code class="highlighter-rouge">name</code> + <code class="highlighter-rouge">()</code>, so here we can write <code class="highlighter-rouge">function name()</code> and wrap the whole function in curly brackets (<code class="highlighter-rouge">{}</code>) like so.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">flip</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// coin flip algorithm goes here</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>When this process is successfully completed, a single line of code (<code class="highlighter-rouge">flip()</code>) will run our coin flip game! As usual, view and run solution code below.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@sunjieming/coinFlip-IV?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<h5>Challenge</h5>
+<p>Check your knowledge with the <a href="https://codepen.io/lambdaschool/pen/VwLwdQE?editors=0012">functions challenge.</a></p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="" target="blank_">Function Basics - Lambda Video</a><br> https://www.youtube.com/watch?v=A3osW_wRH0U</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to write and call functions using arguments, parameters and the return statement</h4>
+<p>Parameters and arguments allow us to pass data into functions and use this data within the function. In this objective, we will learn the difference between the two and how to use them.</p>
+<h5>Overview</h5>
+<h3 id="passing-data-into-functions">Passing Data into Functions</h3>
+<p>Let’s return to our cookie example. Pretend that you want your robot to bake different <em>types</em> of cookies. Do you need to write a new function for every cookie? Not at all. Instead, you could add a parameter, or variable, called <code class="highlighter-rouge">recipe</code> and call <code class="highlighter-rouge">bakeCookies('pecan')</code> or <code class="highlighter-rouge">bakeCookies('chocolateChunk')</code>.</p>
+<p>Parameters are how functions accept changing data. Consider the example below.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span><span class="nx">num1</span> <span class="o">+</span> <span class="nx">num2</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1">// returns 4</span>
+<span class="nx">add</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="c1">// returns 9</span>
+</code></pre></div></div>
+<p>We can declare variables called <code class="highlighter-rouge">parameters</code> (num1 and num2 in the example above) that represent data we will use when calling the function. This is similar to algebra. <code class="highlighter-rouge">X + Y = Z</code> would be a pretty meaningless equation, but once we substitute <em>real numbers</em> for <code class="highlighter-rouge">X</code> and <code class="highlighter-rouge">Y</code>, we can easily solve for <code class="highlighter-rouge">Z</code>. Here, <code class="highlighter-rouge">X</code> and <code class="highlighter-rouge">Y</code> are analogous to parameters, and the <em>real numbers</em> to <code class="highlighter-rouge">arguments</code>.</p>
+<p>We’ll dive into details about both parameters and arguments in this section, but the differences can be summarized as follows.</p>
+<ul>
+<li>Function parameters are the names listed in the function’s definition.</li>
+<li>Function arguments are the real values passed to the function.</li>
+<li>Parameters are initialized to the values of the arguments supplied.</li>
+</ul>
+<h4 id="parameters">Parameters</h4>
+<p>As illustrated above, a function parameter will represent the data we pass into a function, for use in the function. Essentially when we write a function we assign the data variable names, even without knowing what the data will be. We set these <code class="highlighter-rouge">variables</code> inside of the parentheses when we write the function. There is no limit to the amount of parameters we can include in a function, but each variable name must be separated by a comma. We can then use these <code class="highlighter-rouge">variables</code> within our function just as we would any other variable.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">myFunc</span><span class="p">(</span> <span class="nx">parameter1</span><span class="p">,</span> <span class="nx">parameter2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// We can use parameter1 and parameter2 in this function just like a variable</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<h4 id="arguments">Arguments</h4>
+<p>Once we have our parameters set up in our function, we can now pass data into the function. In order to do this, we will put each piece of data inside the the parentheses we write when we call the function. We call these pieces of data <code class="highlighter-rouge">arguments</code>. <code class="highlighter-rouge">arguments</code> can be ANY data type (string, number, Boolean, object, array, even other functions!). Unlike other languages, JavaScript does not require us to set the data type when we write the function, although you should make an effort to understand what type of data will be coming into the function (and if you are using pre-built functions, you should know what data type that function expects).</p>
+<p>To use an argument, just put the data in the function call parentheses like so:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">logsName</span><span class="p">(</span><span class="nx">name</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">logsName</span><span class="p">(</span><span class="dl">'</span><span class="s1">Dan</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// returns Dan</span>
+<span class="nx">logsName</span><span class="p">(</span><span class="dl">'</span><span class="s1">Diandra</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// returns Diandra</span>
+</code></pre></div></div>
+<p>If you have more than one parameter, you will use more than one argument:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">logsSchool</span><span class="p">(</span> <span class="nx">School</span><span class="p">,</span> <span class="nx">descriptor</span> <span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">School</span><span class="p">}</span><span class="s2"> </span><span class="p">${</span><span class="nx">descriptor</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">logsSchool</span><span class="p">(</span><span class="dl">'</span><span class="s1">Lambda</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">is Awesome!</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// logs Lambda is Awesome!</span>
+</code></pre></div></div>
+<p>Arguments will always line up with parameters in order, so the first argument will be the first parameter, and so on.</p>
+<p>If an argument is not given for a parameter, the parameter will be equal to <code class="highlighter-rouge">undefined</code>.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@sunjieming/Arguments-and-Parameters?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p><strong>Check For Understanding:</strong> Call <code class="highlighter-rouge">logsPerson</code> to return a greeting with your name, city, and favorite color <em>without</em> changing the function itself.</p>
+<h4 id="the-return-statement">The <code class="highlighter-rouge">return</code> Statement</h4>
+<p>We will not always want to <code class="highlighter-rouge">console.log()</code> everything that comes out of a function. Most likely we will want to return something for use in other operations. The only way for us to use data that is local to a function is with the keyword <code class="highlighter-rouge">return</code>. <code class="highlighter-rouge">return</code>, essentially, lets data escape a function. Nothing other than what is returned can be accessed outside of the function. <code class="highlighter-rouge">return</code> is always the last thing in a function because when the function hits a return statement, the function immediately stops everything else that it is doing.</p>
+<p>We can also assign the value of a return statement to another variable, and we will now have access to the data returned from the function.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">addTwoNumbers</span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kd">const</span> <span class="nx">sum</span> <span class="o">=</span> <span class="nx">num1</span> <span class="o">+</span> <span class="nx">num2</span><span class="p">;</span>
+   <span class="k">return</span> <span class="nx">sum</span><span class="p">;</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">This will never be reached</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">newSum</span> <span class="o">=</span> <span class="nx">addTwoNumbers</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">addTwoNumbers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">));</span> <span class="c1">//returns 3</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sum</span><span class="p">);</span> <span class="c1">// returns undefined - sum exists only inside the function</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">newSum</span><span class="p">);</span> <span class="c1">// returns 3 - value is held in newSum</span>
+</code></pre></div></div>
+<ul>
+<li>Note: We will never be able to have access to the actual variable created in the function. We will only have access to the data that variable was assigned to.</li>
+</ul>
+<iframe height="400px" width="100%" src="https://repl.it/@sunjieming/Return-Statement?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p><strong>Check For Understanding:</strong> Declare a variable to save Alice’s lottoTicket autoresponse and another to save Bob’s lottoTicket autoresponse.</p>
+<h5>Follow Along</h5>
+<p>When we left our coin flip game, it flipped the coin 5 times, according to the conditional expression in our <code class="highlighter-rouge">for</code> loop.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@sunjieming/coinFlip-IV?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p>To allow our users to flip the coin a variable number of times we can use a parameter, <code class="highlighter-rouge">repeat</code>.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">flip</span><span class="p">(</span><span class="nx">repeat</span><span class="p">){</span>
+    <span class="c1">// add parameter </span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>We will reference <code class="highlighter-rouge">repeat</code> into our conditional expression which will cause the loop to run a variable number of times.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">flip</span><span class="p">(</span><span class="nx">repeat</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">repeat</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// use parameter as conditional expression</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>When we run the function, we’ll substitute the variable <code class="highlighter-rouge">repeat</code> for a number. For example, substituting <code class="highlighter-rouge">repeat</code> for 10, would flip the coin 10 times.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">flip</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="c1">// &lt;- will flip coin 10 times</span>
+</code></pre></div></div>
+<p>Our final product will look something like this. Play around with the <code class="highlighter-rouge">repeat</code> argument here until you can clearly explain how the argument changes the functions output.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@sunjieming/coinFlip-V?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<h5>Challenge</h5>
+<p>Check your knowledge with the <a href="https://codepen.io/lambdaschool/pen/GRJRGxa?editors=0001">arguments and parameters challenge</a>.</p>
+<hr>
+<h2 class="display-4">
+<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
+<ul class="list-group">
+<li class="list-group-item">
+<h5><a target="_blank" href="https://github.com/LambdaSchool/Introduction-to-JavaScript">Intro to JavaScript</a></h5>
+
+</li>
+</ul>
+<h2 class="display-4">
+<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
+<h3 class="display-5">Class Recordings</h3>
+<p class="lead">You can use class recordings to help you master the material.</p>
+<div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<strong><a target="_blank" href="https://youtu.be/98yrB_HjcmE">Intro To Javascript for WebPT22 w/Nathan Braun</a></strong>
+<p>JavaScript is the backbone of interactive web pages. This module will tackle basic syntax and logic in JavaScript including variables, math, conditionals, loops, and functions. These building blocks will inform the rest of your career as a web developer.</p>
+</li>
+<li class="list-group-item">
+<a href="/archive/WEB1/module/recPmaqIfzn9NMPLY">All previous recordings</a>
+</li>
+</ul>
+</div>
+<h3 class="display-5">Demonstrate Mastery</h3>
+<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
+<ul>
+<li>Objective challenge: <p>It’s time to check your knowledge with a <a href="https://codepen.io/lambdaschool/pen/zLydNr">Variables Challenge</a>. There is a solution link at the bottom of the codepen to check your work.</p>
+</li>
+<li>Objective challenge: <p>Check your knowledge with a short <a href="https://codepen.io/lambdaschool/pen/xxbvoLx">math challenge</a>.</p>
+</li>
+<li>Objective challenge: <p>Check your knowledge with the <a href="https://codepen.io/lambdaschool/pen/bGNXPxK?editors=0010">conditionals challenge</a>.</p>
+</li>
+<li>Objective challenge: <p>Check your knowledge with a short <a href="https://codepen.io/lambdaschool/pen/BaNBBpN?editors=0012">loops challenge</a></p>
+</li>
+<li>Objective challenge: <p>Check your knowledge with the <a href="https://codepen.io/lambdaschool/pen/VwLwdQE?editors=0012">functions challenge.</a></p>
+</li>
+<li>Objective challenge: <p>Check your knowledge with the <a href="https://codepen.io/lambdaschool/pen/GRJRGxa?editors=0001">arguments and parameters challenge</a>.</p>
+</li>
+<li>Project: Intro to JavaScript</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80850900-4');
+</script>
+<script type="text/javascript">
+  function getDomain() {
+    const domainName = window.location.hostname.split('.')[1];
+    return `${domainName}.com`;
+  }
+</script>
+<script src="" integrity="" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
+<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+  SimpleJekyllSearch.init({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    dataSource: '/search.json',
+    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Intro to JavaScript">{title}</a></li>',
+    noResultsText: '',
+    limit: 10,
+    fuzzy: true,
+  })
+</script>
+<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
+  if (window.attachEvent) {
+    window.attachEvent('onload', verifySignedIn);
+  } else {
+    if (window.onload) {
+      var currentOnLoadFn = window.onload;
+      var newOnLoadFn = function (evt) {
+        currentOnLoadFn(evt);
+        verifySignedIn();
+      };
+      window.onload = newOnLoadFn;
+    } else {
+      window.onload = verifySignedIn;
+    }
+  }
+
+  function verifySignedIn() {
+    if (isPagePublic()) {
+      return showPageContents();
+    }
+
+    window.__user = null;
+    isSignedIn().then((user) => {
+      window.__user = user;
+
+      if (!user.signedIn) {
+        redirectToSignIn();
+      } else if (!user.student && !window.__openToAdmissions) {
+        showUnauthorizedMessage();
+      } else {
+        showPageContents();
+      }
+    });
+  }
+
+  function isPagePublic() {
+    const openCourses = [
+      'and-pre',
+      'ds-pre',
+      'fsw-pre',
+      'help',
+      'ios-pre',
+    ];
+
+    const openPages = [
+      'cs-and',
+      'cs-fsw',
+      'cs-ios',
+      'cr',
+      'ds',
+      'jx',
+      'p4s',
+      'ux',
+    ];
+
+    const pathParts = window.location.pathname.split('/');
+    const courseName = pathParts[1];
+    const pageName = pathParts[pathParts.length - 1];
+
+    return openCourses.includes(courseName) || openPages.includes(pageName);
+  }
+
+  function isSignedIn() {
+    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
+
+    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
+
+    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
+      .then((response) => response.text())
+      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
+      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
+      .catch((error) => {});
+  }
+
+  function redirectToSignIn() {
+    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+    const redirectMessage = document.querySelector('#redirect-message');
+    redirectMessage.style.display = "block";
+    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+    window.location = signInUrl;
+  }
+
+  function showPageContents() {
+    document.querySelector('#content-wrapper').style.visibility = 'visible';
+  }
+
+  function showUnauthorizedMessage() {
+    document.querySelector('#unauthorized-message').style.display = 'block';
+  }
+
+  function getAuthBaseUrl() {
+    const domain = getDomain();
+    const authBaseUrl = `https://auth.${domain}`;
+    return authBaseUrl;
+  }
+</script><script src="/assets/js/docs.min.js"></script><script>
+  var MathJax = {
+    tex: {
+      inlineMath: [['$$', '$$'], ['\[', '\])']]
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax span": {
+          color: "#000000"
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script>
+  handleExternalLinks();
+
+  function handleExternalLinks() {
+    const domain = getDomain();
+    const links = document.querySelectorAll('a');
+    return links.forEach((link) => {
+      if (!link.host.includes(domain)) link.target = '_blank';
+    })
+  };
+</script>
+</div>
+</body>
+</html>

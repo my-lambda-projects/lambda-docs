@@ -1,0 +1,1829 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Intended as a home for Lambda School curriculum.">
+  <meta name="author" content="">
+  <meta name="generator" content="Jekyll v3.8.0">
+  <title>Iterative Sorting · Lambda School</title>
+
+  <link rel='stylesheet' integrity crossorigin='anonymous'
+    href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+  <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+  <link rel='stylesheet'
+    href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+  <link rel='stylesheet'
+    href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+  <script>
+    ( function ( i, s, o, g, r, a, m ) {
+      i[ 'GoogleAnalyticsObject' ] = r;
+      i[ r ] = i[ r ] || function () {
+        ( i[ r ].q = i[ r ].q || [] ).push( arguments )
+      }, i[ r ].l = 1 * new Date();
+      a = s.createElement( o ),
+        m = s.getElementsByTagName( o )[ 0 ];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore( a, m )
+    } )( window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga' );
+    ga( 'create', 'UA-122016605-1', 'learn.lambdaschool.com' );
+    ga( 'send', 'pageview' );
+  </script>
+
+  <script>
+    ! function () {
+      var analytics = window.analytics = window.analytics || [];
+      if ( !analytics.initialize )
+        if ( analytics.invoked ) window.console && console.error && console.error( "Segment snippet included twice." );
+        else {
+          analytics.invoked = !0;
+          analytics.methods = [ "trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset",
+            "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"
+          ];
+          analytics.factory = function ( t ) {
+            return function () {
+              var e = Array.prototype.slice.call( arguments );
+              e.unshift( t );
+              analytics.push( e );
+              return analytics
+            }
+          };
+          for ( var t = 0; t < analytics.methods.length; t++ ) {
+            var e = analytics.methods[ t ];
+            analytics[ e ] = analytics.factory( e )
+          }
+          analytics.load = function ( t, e ) {
+            var n = document.createElement( "script" );
+            n.type = "text/javascript";
+            n.async = !0;
+            n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
+            var a = document.getElementsByTagName( "script" )[ 0 ];
+            a.parentNode.insertBefore( n, a );
+            analytics._loadOptions = e
+          };
+          analytics.SNIPPET_VERSION = "4.1.0";
+          analytics.load( "BjKorwKrSvMamfNoGkBq9rISk7wF6QQX" );
+          analytics.page();
+        }
+    }();
+  </script>
+
+  <link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#a0001e">
+</head>
+
+<body>
+  <noscript>Please enable JavaScript to view this page.</noscript>
+  <div id="redirect-message" style="display: none;">
+    You must be logged in to view this page.
+  </div>
+  <div id="unauthorized-message" style="display: none;">
+    You must be a Lambda School student to view this page.
+  </div>
+  <div id="content-wrapper" style="visibility: hidden;">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+    <div class="mobile-menu">
+      <div class="m-drop">
+        <div class="mobile-row">
+          <div class="header-row" style="padding: 3px 7px">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg"
+                width="33" height="35" viewBox="0 0 33 35" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                  fill="#EC3944" />
+              </svg></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu"
+              aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
+                <title>Menu</title>
+                <path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                  d="M4 7h22M4 15h22M4 23h22"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="nav-row">
+          <div class="results-container">
+            <ul id="results-container" class="dropdown list-group"></ul>
+          </div>
+          <div id="mobile-course-menu" class="collapse nav-row">
+            <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+              <nav class="bd-links">
+                <div class="bd-toc-item">
+                  <h4 class="bd-toc-link">Computer Science Legacy</h4>
+                </div>
+
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recd4D4w3QrigPqUF">
+                    1.&nbsp;&nbsp;Intro to Python and OOP
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/recay2erzDlYUPSeO/">
+                        Introduction to Python I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recwpe3Y9TVWrGT8L/">
+                        Introduction to Python II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/reca7NYptklr7F403/">
+                        Introduction to Python III
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recc3eWphKVYd0oHT/">
+                        Introduction to Python IV
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recR4gHcvD21ziR9a">
+                    2.&nbsp;&nbsp;Data Structures
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/rec3MaMAY78iDm7ax/">
+                        Data Structures I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recMcvOrFw5BWUku3/">
+                        Data Structures II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recx53S3pYfDfvFDm/">
+                        Data Structures III
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recHdwPne4Xt3A7lk/">
+                        Data Structures IV
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recd9grrKlURJ453N">
+                    3.&nbsp;&nbsp;Algorithms
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li class="active bd-sidenav-active">
+                      <a href="/cs/module/reck76SPX26beGSqE/">
+                        Iterative Sorting
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/reccRh9h6ccXghfA4/">
+                        Recursive Sorting
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recrCuZQMVI6LvxhD/">
+                        A First-Pass Solution
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recsvJCzPlM2X63ZX/">
+                        Writing Better Solutions
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recvDjRQEq49uoWsU">
+                    4.&nbsp;&nbsp;CS Unit 1 Build
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recAr3gdL8U57eho1">
+                    5.&nbsp;&nbsp;Hash Tables
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/recSwIvbSV630gdVk/">
+                        Hash Tables I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recHzCwboKBLBB0Re/">
+                        Hash Tables II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recsEDFseukQWg92c/">
+                        Hash Tables III & IV
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/rec7U9K7OCL5ihj0t">
+                    6.&nbsp;&nbsp;Graphs
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/recBMbHtb8AOXq3UL/">
+                        Graphs I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recZL2m6Gx7B4dU3G/">
+                        Graphs II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/reck4RVWsg82eiYPZ/">
+                        Graphs III
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recoGWlBHjuJxkL1y/">
+                        Graphs IV
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recndTnO1V8oDbBPb">
+                    7.&nbsp;&nbsp;Computer Architecture
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/recsuJbrrFgbFUCRX/">
+                        Computer Architecture: Basics, Number Bases
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/rec2NHr4Eyib7XdED/">
+                        Computer Architecture: Bitwise Operations
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recvQUkzz23NTj20G/">
+                        Computer Architecture: The System Stack
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recGPVAdvQcmopSIO/">
+                        Computer Architecture: Subroutines, CALL/RET
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/reco0t22NdXmr8VyL">
+                    8.&nbsp;&nbsp;CS Unit 2 Build
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                  </ul>
+                </div>
+                <hr>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="sidebar-container bd-sidebar">
+        <div class="docs-sidebar">
+          <a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197"
+              fill="#ec3944">
+              <g>
+                <path
+                  d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z">
+                </path>
+                <path
+                  d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z">
+                </path>
+                <path
+                  d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z">
+                </path>
+                <path
+                  d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z">
+                </path>
+                <path
+                  d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z">
+                </path>
+                <path
+                  d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z">
+                </path>
+              </g>
+              <path
+                d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z">
+              </path>
+            </svg></a>
+          <ul id="results-container" class="dropdown list-group"></ul>
+          <nav class="bd-links collapse" id="bd-docs-nav">
+            <div class="bd-toc-item">
+              <h4 class="bd-toc-link">Computer Science Legacy</h4>
+            </div>
+
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recd4D4w3QrigPqUF">
+                1.&nbsp;&nbsp;Intro to Python and OOP
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/recay2erzDlYUPSeO/">
+                    Introduction to Python I
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recwpe3Y9TVWrGT8L/">
+                    Introduction to Python II
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/reca7NYptklr7F403/">
+                    Introduction to Python III
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recc3eWphKVYd0oHT/">
+                    Introduction to Python IV
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recR4gHcvD21ziR9a">
+                2.&nbsp;&nbsp;Data Structures
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/rec3MaMAY78iDm7ax/">
+                    Data Structures I
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recMcvOrFw5BWUku3/">
+                    Data Structures II
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recx53S3pYfDfvFDm/">
+                    Data Structures III
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recHdwPne4Xt3A7lk/">
+                    Data Structures IV
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recd9grrKlURJ453N">
+                3.&nbsp;&nbsp;Algorithms
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li class="active bd-sidenav-active">
+                  <a href="/cs/module/reck76SPX26beGSqE/">
+                    Iterative Sorting
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/reccRh9h6ccXghfA4/">
+                    Recursive Sorting
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recrCuZQMVI6LvxhD/">
+                    A First-Pass Solution
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recsvJCzPlM2X63ZX/">
+                    Writing Better Solutions
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recvDjRQEq49uoWsU">
+                4.&nbsp;&nbsp;CS Unit 1 Build
+              </a>
+              <ul class="nav bd-sidenav">
+
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recAr3gdL8U57eho1">
+                5.&nbsp;&nbsp;Hash Tables
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/recSwIvbSV630gdVk/">
+                    Hash Tables I
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recHzCwboKBLBB0Re/">
+                    Hash Tables II
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recsEDFseukQWg92c/">
+                    Hash Tables III & IV
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/rec7U9K7OCL5ihj0t">
+                6.&nbsp;&nbsp;Graphs
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/recBMbHtb8AOXq3UL/">
+                    Graphs I
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recZL2m6Gx7B4dU3G/">
+                    Graphs II
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/reck4RVWsg82eiYPZ/">
+                    Graphs III
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recoGWlBHjuJxkL1y/">
+                    Graphs IV
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recndTnO1V8oDbBPb">
+                7.&nbsp;&nbsp;Computer Architecture
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/recsuJbrrFgbFUCRX/">
+                    Computer Architecture: Basics, Number Bases
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/rec2NHr4Eyib7XdED/">
+                    Computer Architecture: Bitwise Operations
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recvQUkzz23NTj20G/">
+                    Computer Architecture: The System Stack
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recGPVAdvQcmopSIO/">
+                    Computer Architecture: Subroutines, CALL/RET
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/reco0t22NdXmr8VyL">
+                8.&nbsp;&nbsp;CS Unit 2 Build
+              </a>
+              <ul class="nav bd-sidenav">
+
+              </ul>
+            </div>
+            <hr>
+          </nav>
+        </div>
+      </div>
+      <main class="content-container flex-wrapper" role="main">
+        <div class="sticky-nav">
+          <div class="sprint-nav">
+            <ul class="section-nav">
+              <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+              <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+              <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+              <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="wrapper limit-width">
+          <div class="flex-wrapper">
+            <div class="limit-width">
+              <div class="jumbotron">
+                <h1 class="bd-title" id="content">Iterative Sorting</h1>
+                <span class="lead">
+                  <p class="bd-lead"></p>
+                </span>
+                <strong>At the end of this module, you should be able to:</strong>
+                <ul>
+                  <li>define what runtime complexity is, differentiate between various classifications and categorize
+                    the performance of an algorithm using Big O notation</li>
+                  <li>describe the differences between Linear and Binary Searching algorithms</li>
+                  <li>distinguish when to use, classify the performance, and implement code to conduct classic iterative
+                    sorting algorithms</li>
+                </ul>
+              </div>
+              <div class="alert alert-warning" role="alert">
+                <h4>Pro Tip</h4>
+                <p>Keep in mind that anything you put on social media reflects your brand. Consider what is important
+                  for you to say and for other people to hear you say, and use this to shape a social media presence
+                  that is both professional and authentic to you.</p>
+              </div>
+              <h2 class="display-4">
+                <a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Prepare</h2>
+              <p class="lead">Review each preclass resource before class.</p>
+              <div class="preclass">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rEx9E_Oq8xg"
+                        frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/a1oLy-ft8o8"
+                        frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/u-CBHEhllHg"
+                        frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <h2 class="display-4">
+                <a id="learn" class="anchor" href="#learn" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Learn</h2>
+              <h4 class="mark mb-3 p-2">Learn to define what runtime complexity is, differentiate between various
+                classifications and categorize the performance of an algorithm using Big O notation</h4>
+              <h5>Overview</h5>
+              <h3 id="what-is-an-algorithm">What is an algorithm?</h3>
+              <p>An algorithm is a set of instructions for accomplishing a task. Because of this broad definition, we
+                could call every piece of code an algorithm.</p>
+              <h3 id="how-do-we-measure-how-good-an-algorithm-is">How do we measure how “good” an algorithm is?</h3>
+              <p>After coming up with a first-pass solution to a problem, we need to measure how “good” our solution is.
+                Will it stand up to the test of millions of users? Is it fast enough that our users will be blown away
+                by how quickly they get their results? Or will torturously slow speeds cause lag that drives them all
+                away?</p>
+              <p>When given a choice between different algorithms, we want to choose the most efficient algorithm
+                (considering both <em>time</em> and <em>space</em> efficiency depending on our needs).</p>
+              <p><em>Note: It is common for your first solution to work with a few items or users, but break as you add
+                  more. Making sure solutions scale is something that all developers must remain vigilant about.</em>
+              </p>
+              <h3 id="what-is-big-o-notation">What is Big O notation?</h3>
+              <p>We need a way to talk about efficiency (number of operations in the worst case) in a more general
+                sense.</p>
+              <p>Big O notation is a way of describing the rate of change in the execution speed of an algorithm when
+                the data size increases. It is the agreed-upon terminology we use to describe how long an algorithm
+                takes to run. It is a way of comparing different algorithm’s efficiencies.</p>
+              <p>The specific terms of Big O notation describe how fast the runtime grows (relative to the size of the
+                input) with a focus on when the input gets extremely large.</p>
+              <p>Why do we focus on the growth of runtime versus exact runtime? The exact runtime is dependent on the
+                specific computer that is running the algorithm, so we cannot compare efficiencies that way. By focusing
+                on the general growth, we can avoid the differences in exact runtime between machines and environments.
+              </p>
+              <p>We also talk about runtime relative to the input size because we need to express our speed in terms of
+                <em>something</em>. So we show the speed of the algorithm in terms of the input size. That way, we can
+                see how the speed reacts as the input size grows.</p>
+              <p>We don’t care about speed when the input size is small. The differences in speed are likely to be
+                minimal when the input size is small. When the input size gets enormous, that is where we can see the
+                differences in efficiency between different algorithms.</p>
+              <h3 id="common-big-o-run-times">Common Big O run times</h3>
+              <p>Refer to the table below to see a list of the most common run times. The table is ordered from fastest
+                to slowest.</p>
+              <p><img src="https://tk-assets.lambdaschool.com/7e05ba4e-0889-4314-9db7-abaedc4e6d36_Untitled.png"
+                  alt="https://tk-assets.lambdaschool.com/7e05ba4e-0889-4314-9db7-abaedc4e6d36_Untitled.png"></p>
+              <p>Besides the table, it’s also essential to look at the curves of these different run times.</p>
+              <p><img src="https://tk-assets.lambdaschool.com/e4357b5f-1d63-44cd-b8a0-4957260ae9ec_Untitled1.png"
+                  alt="https://tk-assets.lambdaschool.com/e4357b5f-1d63-44cd-b8a0-4957260ae9ec_Untitled1.png"></p>
+              <p>Again, <code class="highlighter-rouge">n</code> represents the size of the data, and on the chart
+                above, <code class="highlighter-rouge">N</code> represents the number of operations. This visualization
+                should help illustrate why <code class="highlighter-rouge">O(1)</code> or <code
+                  class="highlighter-rouge">O(log n)</code> is the most desirable.</p>
+              <p><em>Note: Big O only matters for large data sets. An <code class="highlighter-rouge">O(n^3)</code>
+                  solution is adequate, as long as you can guarantee that your datasets will always be small.</em></p>
+              <h3 id="a-few-examples">A few examples</h3>
+              <p>Let’s look at a few different examples of Python functions that print something to the output. For each
+                of these, the input will be <code class="highlighter-rouge">items</code>.</p>
+              <h4 id="contanst-time-o1">Contanst Time <code class="highlighter-rouge">O(1)</code>
+              </h4>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">print_one_item</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Why is this constant time? Because no matter how large or small the input is (1,000,000 or 10), the
+                number of computations within the function is the same.</p>
+              <h4 id="linear-time-on">Linear Time <code class="highlighter-rouge">O(n)</code>
+              </h4>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">print_every_item</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Why is this classified as linear time? Because the speed of the algorithms increases at the same rate
+                as the input size. If <code class="highlighter-rouge">items</code> has ten items, then the function will
+                print ten times. If it has 10,000 items, then the function will print 10,000 times.</p>
+              <h4 id="quadratic-time-on2">Quadratic Time <code class="highlighter-rouge">O(n^2)</code>
+              </h4>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">print_pairs</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">item_one</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">item_two</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">item_one</span><span class="p">,</span> <span class="n">item_two</span><span class="p">)</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Why is this quadratic time? The clue is the nested for loops. These nested for loops mean that for each
+                item in <code class="highlighter-rouge">items</code> (the outer loop), we iterate through every item in
+                <code class="highlighter-rouge">items</code> (the inner loop). For an input size of <code
+                  class="highlighter-rouge">n</code>, we have to print <code class="highlighter-rouge">n</code> * <code
+                  class="highlighter-rouge">n</code> times or <code class="highlighter-rouge">n^2</code> times.</p>
+              <h3 id="what-about-constants">What about constants?</h3>
+              <p>What if we had a function like this?</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">do_a_bunch_of_stuff</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+    <span class="n">last_idx</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">items</span><span class="p">[</span><span class="n">last_idx</span><span class="p">])</span>
+
+    <span class="n">middle_idx</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="n">middle_idx</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">items</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+        <span class="n">idx</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2000</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+</code></pre>
+                </div>
+              </div>
+              <p><code class="highlighter-rouge">print(items[last_idx])</code> is constant time because it doesn’t
+                change as the input changes. So, that portion of the function is <code
+                  class="highlighter-rouge">O(1)</code>.</p>
+              <p>The while loop that prints up to the middle index is 1/2 of whatever the input size is; we can say that
+                portion of the function is <code class="highlighter-rouge">O(n/2)</code>.</p>
+              <p>The final portion will run 2000 times, no matter the size of the input.</p>
+              <p>So, putting it all together, we could say that the efficiency is <code class="highlighter-rouge">O(1 +
+                  n/2 + 2000)</code>. However, we don’t say this. We just describe this function as having linear time
+                <code class="highlighter-rouge">O(n)</code> because we drop all of the constants. Why do we cut all of
+                the constants? Because as the input size gets huge, adding 2000 or dividing by 2 has minimal effect on
+                the performance of the algorithm.</p>
+              <h3 id="most-significant-term">Most significant term</h3>
+              <p>Let’s consider the following function:</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">do_different_things</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">item_one</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">item_two</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">item_one</span><span class="p">,</span> <span class="n">item_two</span><span class="p">)</span>
+</code></pre>
+                </div>
+              </div>
+              <p>We could describe this function as <code class="highlighter-rouge">O(n + n^2)</code>; however, we only
+                need to keep the essential term, which is <code class="highlighter-rouge">n^2</code>, so this would be
+                <code class="highlighter-rouge">O(n^2)</code>. Why can we do this? Because as the input size (<code
+                  class="highlighter-rouge">n</code>) gets larger and larger, the less significant terms have less of an
+                effect, and only the most significant term is important.</p>
+              <h3 id="big-o-represents-the-worst-case">Big O represents the worst-case</h3>
+              <p>Let’s consider the following function:</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">search_for_thing</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">thing</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">item</span> <span class="o">==</span> <span class="n">thing</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">True</span>
+
+    <span class="k">return</span> <span class="bp">False</span>
+</code></pre>
+                </div>
+              </div>
+              <p>What would the result be if it just so happens that the <code class="highlighter-rouge">thing</code> we
+                are looking for in <code class="highlighter-rouge">items</code> is the very first item in the list? The
+                function would only have to look at one item in <code class="highlighter-rouge">items</code> before
+                returning. In this case, it would be <code class="highlighter-rouge">O(1)</code>. But, when we are
+                talking about the complexity of a function, we usually assume the “worst case”. What would the “worst
+                case” be? It would be if it were the last item in <code class="highlighter-rouge">items</code>. In that
+                case, we would have to look through all the <code class="highlighter-rouge">items</code>, and that
+                complexity would be <code class="highlighter-rouge">O(n)</code>.</p>
+              <p><em>Note: When talking about runtime complexity in casual conversation, engineers often blur the
+                  distinction between big theta and big O notation. In reality, these are two distinct ways of
+                  describing an algorithm. Big theta gives both an upper and a lower bound for the running time. Big O
+                  only gives an upper bound. Refer the following articles to dive deeper: <a
+                    href="https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/big-big-theta-notation">Big-Theta
+                    notation</a> and <a
+                    href="https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/big-o-notation">Big-O
+                    notation</a>.</em></p>
+              <h3 id="do-constants-ever-matter">Do constants ever matter?</h3>
+              <p>Complexity analysis with Big O notation is a valuable tool, and you should get in the habit of thinking
+                about the efficiency of the algorithms you write and use in your code. However, just because two
+                algorithms have the same Big O notation doesn’t mean they are equal.</p>
+              <p>Imagine you have a script that takes 1 hour to run. By improving the function, you can divide that
+                runtime by six, and now it only takes 10 minutes to run. With Big O notation, <code
+                  class="highlighter-rouge">O(n)</code> and <code class="highlighter-rouge">O(n/6)</code> can both be
+                written as <code class="highlighter-rouge">O(n)</code>, but that doesn’t mean it isn’t worth optimizing
+                the script to save 50 minutes every time the script runs.</p>
+              <p>That being said, there is a term you should become familiar with: <strong>premature
+                  optimization</strong> (<a href="https://xkcd.com/1691/">xkcd: Optimization</a>). Sometimes, you can
+                sacrifice readability or spend too much time on something to improve its efficiency. Depending on the
+                situation, it could be that having a finished product to iterate on is more important than maximally
+                efficient code. It is your job as a developer to know when spending time making your code more efficient
+                is necessary. You will always be making calculated tradeoffs between runtime, memory, development time,
+                readability, and maintainability. It takes time to develop the wisdom to strike the right balance
+                depending on the scenario.</p>
+              <h5>Follow Along</h5>
+              <p>Let’s look at some code snippets that exhibit some runtime classifications we’ll discuss in class.</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">*=</span> <span class="mi">2</span>
+</code></pre>
+                </div>
+              </div>
+              <p>First, let’s think about what the above function is doing. It’s printing <code
+                  class="highlighter-rouge">i</code>…but <code class="highlighter-rouge">i</code> is not being
+                incremented by 1, as we might usually see. It’s <em>doubled</em> every time we run the loop. So, for
+                example, if <code class="highlighter-rouge">n = 100</code>, then the final result would be…</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>1
+2
+4
+8
+16
+32
+64
+</code></pre>
+                </div>
+              </div>
+              <p>Or if <code class="highlighter-rouge">n = 10</code>, then we would print…</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>1
+2
+4
+8
+</code></pre>
+                </div>
+              </div>
+              <p>We can use the process of elimination to narrow down which runtime classification makes sense for this
+                algorithm. The number of times the loop runs seems to vary based on the value of <code
+                  class="highlighter-rouge">n</code>, so this is NOT O(1).</p>
+              <p>We can also see from the above examples that the number of times the loop runs is increasing
+                <em>slower</em> than the size of the input is increasing. <code class="highlighter-rouge">n</code> must
+                be <em>doubled</em> before the loop will run one more time. We can eliminate classifications such as O(n
+                log n), O(n^c), O(c^n), and O(n!).</p>
+              <p>The only two options left at this point are logarithmic and linear. Since the two rates of growth
+                (input, the number of operations) are not the same, <strong>this function must run in logarithmic
+                  time!</strong></p>
+              <h5>Challenge</h5>
+              <ol>
+                <li>Classify the run times of each of the following scenarios:</li>
+              </ol>
+              <p>A. You are searching for a specific name in a phone book (that is sorted alphabetically).
+                B. You meet someone, and they give you their phone number. You realize later that you forgot their name!
+                To match their number with a name, you look through a phone book until you find their phone number.</p>
+              <ol>
+                <li>Classify the runtimes of each of the following functions:</li>
+              </ol>
+              <p>A. Problem One</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">sq_root</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sq_root</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre>
+                </div>
+              </div>
+              <p>B. Problem Two</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">bar</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1463</span><span class="p">):</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">15</span><span class="p">):</span>
+                    <span class="nb">sum</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre>
+                </div>
+              </div>
+              <p>C. Problem Three</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">baz</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">midpoint</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">array</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">midpoint</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'hi'</span><span class="p">)</span>
+</code></pre>
+                </div>
+              </div>
+              <ol>
+                <li>Do both of these functions have the same runtime? <em>(Notice the difference between their
+                    inputs)</em>
+                </li>
+              </ol>
+              <p>A.</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">make_num_pairs</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">num_one</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">num_two</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">num_one</span><span class="p">,</span> <span class="n">num_two</span><span class="p">)</span>
+</code></pre>
+                </div>
+              </div>
+              <p>B.</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">make_item_pairs</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">item_one</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">item_two</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">item_one</span><span class="p">,</span> <span class="n">item_two</span><span class="p">)</span>
+</code></pre>
+                </div>
+              </div>
+              <hr>
+              <h4 class="mark mb-3 p-2">Learn to describe the differences between Linear and Binary Searching algorithms
+              </h4>
+              <h5>Overview</h5>
+              <h3 id="what-is-a-linear-search">What is a linear search?</h3>
+              <p>Suppose I am thinking of a number between <code class="highlighter-rouge">1</code> and <code
+                  class="highlighter-rouge">1000</code>. The object of the game is for you to guess the number I am
+                thinking of with as few guesses as possible. Every time you make a guess, I will tell you your guess is
+                either:</p>
+              <ul>
+                <li>“Too high.”</li>
+                <li>“Too low.”</li>
+                <li>“Correct.”</li>
+              </ul>
+              <p>What strategy for guessing would you choose? One strategy is to start with <code
+                  class="highlighter-rouge">1</code> and increase your guess by <code class="highlighter-rouge">1</code>
+                every time. Eventually, you are guaranteed to make a correct guess. However, imagine that I picked <code
+                  class="highlighter-rouge">1000</code>. It would take you <code class="highlighter-rouge">1000</code>
+                guesses (the maximum number given this strategy). Given this, this strategy doesn’t seem like it’s the
+                best one out there.</p>
+              <p>Another way to think about this technique and to see why it’s not so great is that you can only
+                eliminate one number with each subsequent guess. Can you think of a strategy that would eliminate (on
+                average) the highest number of possibilities with each guess?</p>
+              <p>It’s important to realize that with the number guessing game, the analogy is for a <em>sorted</em> list
+                of elements. There are times where a linear approach is the only way to go. For example, if the guessing
+                game was modified so that I only answered “Correct” or “Incorrect” after each guess, then the best
+                strategy would be to start at 1 and increment each guess by 1.</p>
+              <p>Another example where linear search would be required is imagine that you have a collection of ticket
+                stubs that were collected at the door of a theater. You want to know if the person who purchased seat
+                F16 showed up for the performance. The only way to find out (if the collection of stubs is unsorted), is
+                to check each ticket stub, one at a time, and to check every one of them.</p>
+              <h3 id="binary-search">Binary search</h3>
+              <p>Were you able to think of a better strategy? The best strategy is to eliminate half of the numbers with
+                each guess. We do that by guessing the middle number each time. Because after each guess you find out if
+                your guess was too low or too high, you can determine which half of the possibilities you can throw out.
+              </p>
+              <p>To understand why the middle is the best guess (on average), let’s consider the possibility that I
+                picked <code class="highlighter-rouge">800</code>. By guessing the middle number <code
+                  class="highlighter-rouge">500</code>, you eliminate five hundred guesses. You might think, but I
+                could’ve guessed <code class="highlighter-rouge">750</code> and eliminated <code
+                  class="highlighter-rouge">750</code> numbers, thus getting even closer to the correct answer much
+                quicker. However, consider the alternate scenario where I picked <code
+                  class="highlighter-rouge">200</code>. When you guess <code class="highlighter-rouge">750</code> this
+                time, you are actually further away from the correct guess and can only eliminate two hundred and fifty
+                possibilities. Thus, on average, you will eliminate the most possibilities by guessing the middle each
+                time.</p>
+              <p>So, again, continuing with the number guessing game, instead of starting with <code
+                  class="highlighter-rouge">1</code> and incrementing your guess by <code
+                  class="highlighter-rouge">1</code> each time, this time you start with a pick of <code
+                  class="highlighter-rouge">500</code>. Because I picked <code class="highlighter-rouge">1000</code>, I
+                now tell you, “Too low.” Because you know <code class="highlighter-rouge">500</code> is too low, you
+                eliminate <code class="highlighter-rouge">1-500</code> from the possibilities. You now know that the
+                possible guesses are <code class="highlighter-rouge">501-1000</code>. You need to choose the middle
+                again, so you choose <code class="highlighter-rouge">750</code>. Again, I say, “Too low.” You get rid of
+                <code class="highlighter-rouge">501-750</code> and <code class="highlighter-rouge">751-1000</code>
+                remain. Your next middle pick is <code class="highlighter-rouge">876</code> and again I say, “Too low.”
+                Your next middle pick is <code class="highlighter-rouge">938</code> and again I say, “Too low.” The rest
+                of your picks are summarized below:</p>
+              <ul>
+                <li>
+                  <code class="highlighter-rouge">969</code>. “Too low.”</li>
+                <li>
+                  <code class="highlighter-rouge">985</code>. “Too low.”</li>
+                <li>
+                  <code class="highlighter-rouge">993</code>. “Too low.”</li>
+                <li>
+                  <code class="highlighter-rouge">997</code>. “Too low.”</li>
+                <li>
+                  <code class="highlighter-rouge">999</code>. “Too low.”</li>
+                <li>
+                  <code class="highlighter-rouge">1000</code> “Correct.”</li>
+              </ul>
+              <p>If we count up the number of guesses we took, we get <code class="highlighter-rouge">10</code>. If we
+                used the simple linear search method, it would have taken us <code class="highlighter-rouge">1000</code>
+                guesses.</p>
+              <p><img
+                  src="https://tk-assets.lambdaschool.com/9544e798-7291-4b34-9f6f-2f999c4ab86a_Algorithms-Guessing-Game-Animation.gif"
+                  alt="https://tk-assets.lambdaschool.com/9544e798-7291-4b34-9f6f-2f999c4ab86a_Algorithms-Guessing-Game-Animation.gif">
+              </p>
+              <p><em>Note: A reminder that this binary search method <strong>only works if the data is already
+                    sorted</strong>.</em></p>
+              <h3 id="logarithms">Logarithms</h3>
+              <p>This situation where I’m halving the number of possibilities each time, mathematically, is considered a
+                logarithm. You probably forgot what a logarithm is if it has been a while since you studied math.
+                However, most of you haven’t forgotten what an exponent is. We will approach our understanding of
+                logarithms by understanding inverse relationships.</p>
+              <p><em>Note: for a quick refresher on logarithms, see <a href="https://youtu.be/Z5myJ8dg_rM">Intro to
+                    logarithms on Khan Academy</a>. For exponents, see <a href="https://youtu.be/XZRQhkii0h0">Intro to
+                    exponents on Khan Academy</a></em></p>
+              <p>Logarithms and exponents are related to each other in the same way that multiplication and division are
+                related to each other. They have an inverse relationship. For example <code class="highlighter-rouge">8
+                  * 2 = 16</code>. The inverse of this would be <code class="highlighter-rouge">16 / 2 = 8</code> or
+                <code class="highlighter-rouge">16 / 8 = 2</code>. Basically, you can use division to undo what you did
+                with multiplication.</p>
+              <p>It’s the same with exponents and logarithms. When we have <code class="highlighter-rouge">10^2 =
+                  100</code> , we are saying <code class="highlighter-rouge">10</code> multiplied by <em>itself</em>
+                <code class="highlighter-rouge">2</code> times equals <code class="highlighter-rouge">100</code>. The
+                inverse would be <code class="highlighter-rouge">log10(100) = 2</code>, or how many <code
+                  class="highlighter-rouge">10</code>s would we have to multiply to equal <code
+                  class="highlighter-rouge">100</code>. The answer is <code class="highlighter-rouge">2</code>.</p>
+              <p>Now we’ve been talking about halving numbers each time. This is <code
+                  class="highlighter-rouge">log2(n)</code>. Just like if we double numbers each time it’s <code
+                  class="highlighter-rouge">n^2</code>. Whenever we talk about logarithms in relation to describing the
+                runtime of an algorithm, we are talking about <code class="highlighter-rouge">log2(n)</code>.</p>
+              <p>When we talk about logarithms in computing, we almost always mean <code
+                  class="highlighter-rouge">log2()</code>. The reason for this is that computers operate on binary or a
+                base 2 number system.</p>
+              <h5>Follow Along</h5>
+              <p>Now, let’s write a binary search function in Python. We will write our function to expect a
+                <strong><em>sorted</em></strong> list of integers. If the item we are searching for is in the list, then
+                we will return the position that it holds in the list.</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">my_list</span><span class="p">):</span>
+    <span class="k">pass</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Now, when we first get the list, we need to set two different pointers. The first pointer <code
+                  class="highlighter-rouge">low</code>, will point to the first item in the list. The second pointer
+                <code class="highlighter-rouge">high</code>, will point to the last item in the list.</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">my_list</span><span class="p">):</span>
+    <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">high</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Now, we need to set up a loop that will continue while the <code class="highlighter-rouge">low</code>
+                pointer is less than or equal to the <code class="highlighter-rouge">high</code> pointer.</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">my_list</span><span class="p">):</span>
+    <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">high</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="k">while</span> <span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="p">:</span>
+        <span class="k">pass</span>
+</code></pre>
+                </div>
+              </div>
+              <p>The very first thing we need to do each loop is to get the middle index. We do that by averaging the
+                <code class="highlighter-rouge">low</code> pointer and <code class="highlighter-rouge">high</code>
+                pointer (rounding down). We do that by adding the <code class="highlighter-rouge">low</code> pointer to
+                the <code class="highlighter-rouge">high</code> pointer and dividing by <code
+                  class="highlighter-rouge">2</code> (using the floor division operator <code
+                  class="highlighter-rouge">//</code>).</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">my_list</span><span class="p">):</span>
+    <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">high</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="k">while</span> <span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="p">:</span>
+        <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+                <span class="k">pass</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Now, we need to use that middle index to retrieve the item with that index from our list.</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">my_list</span><span class="p">):</span>
+    <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">high</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="k">while</span> <span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="p">:</span>
+        <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+                <span class="n">guess</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">middle</span><span class="p">]</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Remember that now that we have our guess, there are three options.</p>
+              <ol>
+                <li>Our guess is correct</li>
+                <li>Our guess is too high</li>
+                <li>Our guess is too low</li>
+              </ol>
+              <p>We can set up that logic using if statements:</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">my_list</span><span class="p">,</span> <span class="n">search_item</span><span class="p">):</span>
+    <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">high</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="k">while</span> <span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="p">:</span>
+        <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+                <span class="n">guess</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">middle</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="n">search_item</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">if</span> <span class="n">guess</span> <span class="o">&gt;</span> <span class="n">search_item</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">pass</span>
+</code></pre>
+                </div>
+              </div>
+              <p>So, now we have our logic set up but we still need to write what happens for each statement. Well, if
+                our <code class="highlighter-rouge">guess</code> is equal to <code
+                  class="highlighter-rouge">search_item</code>, that means that the <code
+                  class="highlighter-rouge">middle</code> index is the correct index and we need to return that index.
+              </p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">my_list</span><span class="p">,</span> <span class="n">search_item</span><span class="p">):</span>
+    <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">high</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="k">while</span> <span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="p">:</span>
+        <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+                <span class="n">guess</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">middle</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="n">search_item</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">middle</span>
+        <span class="k">if</span> <span class="n">guess</span> <span class="o">&gt;</span> <span class="n">search_item</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">pass</span>
+</code></pre>
+                </div>
+              </div>
+              <p>If our <code class="highlighter-rouge">guess</code> is too high (greater than our <code
+                  class="highlighter-rouge">search_item</code>), then we need to change our <code
+                  class="highlighter-rouge">high</code> pointer so we reduce our list of possibilities by 1/2. Every
+                index at or above the current <code class="highlighter-rouge">middle</code> value cannot be the correct
+                answer. Therefore, we need to change our <code class="highlighter-rouge">high</code> pointer to the
+                index directly below the current <code class="highlighter-rouge">middle</code> value.</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">my_list</span><span class="p">,</span> <span class="n">search_item</span><span class="p">):</span>
+    <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">high</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="k">while</span> <span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="p">:</span>
+        <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+                <span class="n">guess</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">middle</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="n">search_item</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">middle</span>
+        <span class="k">if</span> <span class="n">guess</span> <span class="o">&gt;</span> <span class="n">search_item</span><span class="p">:</span>
+            <span class="n">high</span> <span class="o">=</span> <span class="n">middle</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">pass</span>
+</code></pre>
+                </div>
+              </div>
+              <p>The last possibility is that our guess was too low. Similar to the previous logic, all indices at or
+                below the middle cannot be correct. Therefore, we need to change our <code
+                  class="highlighter-rouge">low</code> pointer to be equal to the index directly after the current <code
+                  class="highlighter-rouge">middle</code> index.</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">my_list</span><span class="p">,</span> <span class="n">search_item</span><span class="p">):</span>
+    <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">high</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="k">while</span> <span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="p">:</span>
+        <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+                <span class="n">guess</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">middle</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="n">search_item</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">middle</span>
+        <span class="k">if</span> <span class="n">guess</span> <span class="o">&gt;</span> <span class="n">search_item</span><span class="p">:</span>
+            <span class="n">high</span> <span class="o">=</span> <span class="n">middle</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">low</span> <span class="o">=</span> <span class="n">middle</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre>
+                </div>
+              </div>
+              <p>This takes care of all the cases where the <code class="highlighter-rouge">search_item</code> exists in
+                the <code class="highlighter-rouge">my_list</code> that is passed in. What about if <code
+                  class="highlighter-rouge">my_list</code> does not contain the <code
+                  class="highlighter-rouge">search_item</code>? In that case, we will terminate the while loop without
+                returning from the function. When that happens, we should return the <code
+                  class="highlighter-rouge">None</code> value, which will tell the user of the function that the <code
+                  class="highlighter-rouge">search_item</code> was not found in the list that was passed in.</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">my_list</span><span class="p">,</span> <span class="n">search_item</span><span class="p">):</span>
+    <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">high</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="k">while</span> <span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="p">:</span>
+        <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+                <span class="n">guess</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">middle</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="n">search_item</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">middle</span>
+        <span class="k">if</span> <span class="n">guess</span> <span class="o">&gt;</span> <span class="n">search_item</span><span class="p">:</span>
+            <span class="n">high</span> <span class="o">=</span> <span class="n">middle</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">low</span> <span class="o">=</span> <span class="n">middle</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="bp">None</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Let’s test it out by copying the function definition into a Python interpreter and then using it on
+                some test data.</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>&gt;&gt;&gt; def binary_search(my_list, search_item):
+...     low = 0
+...     high = len(my_list) - 1
+...     while low &lt;= high:
+...         middle = (low + high) // 2
+...         guess = my_list[middle]
+...         if guess == search_item:
+...             return middle
+...         if guess &gt; search_item:
+...             high = middle - 1
+...         else:
+...             low = middle + 1
+...     return None
+...
+&gt;&gt;&gt; test_list = [2,4,7,8,9,10,12,34,45]
+&gt;&gt;&gt; binary_search(test_list, 7)
+2
+&gt;&gt;&gt; binary_search(test_list, 34)
+7
+&gt;&gt;&gt;
+</code></pre>
+                </div>
+              </div>
+              <p>It looks like we have a working <code class="highlighter-rouge">binary_search</code> function that we
+                coded in Python.</p>
+              <h5>Challenge</h5>
+              <ol>
+                <li>Suppose your app has 16,384 users that are stored in a database (the users are sorted
+                  alphabetically). Your app needs to search for a specific user and you use binary search. What’s the
+                  maximum number of steps it would take? <em>(Hint: using the logarithm operation is key.)</em>
+                </li>
+                <li>Time passes and now your app has <em>exactly double</em> the number of users. What’s the maximum
+                  number of steps now?</li>
+                <li>Try writing a Python function to perform a <strong><em>linear search</em></strong> on a set of data.
+                </li>
+                <li>Try writing your own Python function to perform a <strong><em>binary search</em></strong> on a set
+                  of data. This will help you remember and internalize this algorithm much better <em>if you do not
+                    refer to our example above</em> in the process of writing your own. Make sure to use
+                  <strong>UPER</strong> as you approach this problem.</li>
+                <li>Can you rewrite your binary search function so it uses <em>recursion</em>?</li>
+              </ol>
+              <hr>
+              <h4 class="mark mb-3 p-2">Learn to distinguish when to use, classify the performance, and implement code
+                to conduct classic iterative sorting algorithms</h4>
+              <h5>Overview</h5>
+              <p>Sorting is a common thing that we encounter in our everyday lives. When we need to sort something, each
+                of us chooses a strategy without even thinking about it.</p>
+              <p>Sorting is actually quite practical as well. Upon reflection, it becomes clear that most times things
+                are sorted, it is in order to make searching and finding a specific item easier. Think of how much
+                easier it is to find a book in a library due to the sorting system that is followed. <em>(For an
+                  interesting counterexample, here is an <a
+                    href="https://classic.qz.com/perfect-company-2/1172282/this-company-built-one-of-the-worlds-most-efficient-warehouses-by-embracing-chaos/">article</a>
+                  about the efficiency of randomness in Amazon warehouses.)</em></p>
+              <h3 id="selection-sort">Selection Sort</h3>
+              <h4 id="out-of-place-selection-sort">Out-of-place selection sort</h4>
+              <p>Let’s talk about an actual example. Imagine for a moment that you have a shelf of books and you would
+                like your books to be sorted on the shelf alphabetically by title. <em>How would you go about doing
+                  so?</em></p>
+              <p>The most natural way is to scan the books from left to right, looking for the book with the “lowest”
+                alphabetical title (following the standard alphabetical “ABC” order).</p>
+              <p><img src="https://tk-assets.lambdaschool.com/b72646a0-7d67-43be-8874-8760b99313fb_selection-sort-1.gif"
+                  alt="https://tk-assets.lambdaschool.com/b72646a0-7d67-43be-8874-8760b99313fb_selection-sort-1.gif">f
+              </p>
+              <p>Here, “Animal Farm” is the “lowest” and should go first in our sorted collection. Therefore, we take
+                that book from the shelf and place it all the way to the left as part of a new “collection of books”.
+              </p>
+              <p><img
+                  src="https://tk-assets.lambdaschool.com/0bd1e037-2449-47d5-aa22-f5ea88a7da1f_S2-Illustrations.0011.jpeg"
+                  alt="https://tk-assets.lambdaschool.com/0bd1e037-2449-47d5-aa22-f5ea88a7da1f_S2-Illustrations.0011.jpeg">g
+              </p>
+              <p>Now, we go through the original collection again, looking for the next book that has the “lowest”
+                alphabetical title. When we find it (“Charlotte’s Web” in this case), we place that book in our new
+                collection on the left. Notice that as we go through the original collection, we have to keep track of
+                which book is the lowest. That way, when we get to the end of the collection, we can go back and move
+                that book to the new sorted collection.</p>
+              <p><img src="https://tk-assets.lambdaschool.com/b5352159-aa59-4c20-b1bc-bf6c7241921a_S2-Illustrations.gif"
+                  alt="https://tk-assets.lambdaschool.com/b5352159-aa59-4c20-b1bc-bf6c7241921a_S2-Illustrations.gif">f
+              </p>
+              <p>We continue repeating this process until the original collection is empty. Notice that the new
+                collection on the left is sorted alphabetically.</p>
+              <p><img src="https://media.giphy.com/media/eNMIt2vUzTKYJD09YF/giphy.gif"
+                  alt="https://media.giphy.com/media/eNMIt2vUzTKYJD09YF/giphy.gif">f</p>
+              <h4 id="in-place-selection-sort">In-place selection sort</h4>
+              <p>The example that we went over above is called an “out-of-place” selection sort. This worked because we
+                had so much extra room on our shelf. But, what if you are trying to sort books and there is no extra
+                room on our shelf? For that, we need to sort our books “in-place”. That means instead of starting a new
+                collection of books, we need to swap books as we encounter them.</p>
+              <p><img
+                  src="https://tk-assets.lambdaschool.com/08d41ea3-5422-4289-8e1e-8da7180e519e_S2-Illustrationsasdfasdf.gif"
+                  alt="https://tk-assets.lambdaschool.com/08d41ea3-5422-4289-8e1e-8da7180e519e_S2-Illustrationsasdfasdf.gif">f
+              </p>
+              <p>So, we start by looking through each book from left to right, keeping track of the lowest book we find.
+                Once we find it, “Animal Farm” in this case, we swap the lowest book with the first position. Now the
+                first position has the lowest book. Next, we repeat this whole process but we start at the second
+                position and will swap the lowest book with the second position when we find it.</p>
+              <p><img
+                  src="https://tk-assets.lambdaschool.com/ba68d1c7-9081-4aea-a686-d71e6e10f275_S2-Illustrationssdfasdfasdfasdf.gif"
+                  alt="https://tk-assets.lambdaschool.com/ba68d1c7-9081-4aea-a686-d71e6e10f275_S2-Illustrationssdfasdfasdfasdf.gif">f
+              </p>
+              <p>During this loop, the book in the second position is already the “lowest” book and so no swapping takes
+                place.</p>
+              <p>Again, we repeat the process starting now at the third position. Each time we loop through we increment
+                our starting position by 1 until we get to the last position in the collection.</p>
+              <p><img src="https://media.giphy.com/media/QZtI5sqgFco9rXQ8Vi/giphy.gif"
+                  alt="https://media.giphy.com/media/QZtI5sqgFco9rXQ8Vi/giphy.gif">f</p>
+              <p>You can see that once we get to the last position in the collection, our collection is sorted. This was
+                an “in-place” selection sort.</p>
+              <h3 id="insertion-sort">Insertion Sort</h3>
+              <p>We will now look at another method for sorting a collection of items. This method is called
+                <strong>Insertion Sort</strong>.</p>
+              <p>Insertion sort is an efficient algorithm for sorting <strong><em>small amounts</em></strong> of data.
+                Insertion sort can be understood when you think about how most people sort a hand of playing cards.</p>
+              <p>When you sort cards, you start with an empty left hand and then take one card at a time from a pile of
+                cards that is face down on the table. With each card you pick up from the table, you insert it into the
+                correct position in the left hand. To do so, you compare the current card to each card already in the
+                left hand, starting at the rightmost card. If the current card is smaller, you swap positions. You keep
+                doing this while the current card is smaller than the card on the left. Once the current card is not
+                smaller than the card on the left, you can stop and then pick up a new card.</p>
+              <p><img src="https://media.giphy.com/media/jV0eGw64WOWDExAokV/giphy.gif"
+                  alt="https://media.giphy.com/media/jV0eGw64WOWDExAokV/giphy.gif">f</p>
+              <h4 id="complexity-analysis">Complexity Analysis</h4>
+              <p>Insertion sort runs in <code class="highlighter-rouge">O(n)</code> time in it’s best case (already
+                sorted), and <code class="highlighter-rouge">O(n^2)</code> in its worst and average cases.</p>
+              <p>If the collection is already sorted, the insertion sort algorithm will still have to go through each
+                item in the collection to make sure it is in the correct position.</p>
+              <p>The worst case would be if the collection was sorted in decreasing order. This would require us to do
+                the maximum number of iterations to shift items to the right and will be <code
+                  class="highlighter-rouge">O(n^2)</code>.</p>
+              <p>For the average case, the number of inner loops will not be the maximum but since constants don’t
+                matter, it will still be <code class="highlighter-rouge">O(n^2)</code>.</p>
+              <h3 id="bubble-sort">Bubble Sort</h3>
+              <p>Bubble sort is one of the simplest sorting algorithms. It is also very inefficient. This algorithm is
+                often one of the first ones that students learn because it is so simple and intuitive.</p>
+              <p>The Bubble Sort algorithm can be described in the following terms:</p>
+              <ol>
+                <li>Compare the first and second item of a collection. If the first item is bigger than the second item,
+                  swap the items.</li>
+                <li>Move to the next item. Now, we will compare the second item with the third item. If the second item
+                  is bigger than the third, swap the items.</li>
+                <li>Do this for every item until the end of the list.</li>
+                <li>Repeat steps 1-3 (decrementing “the end of the list” by 1 each time).</li>
+              </ol>
+              <p>To see a simple example, we will again look at how we would sort some playing cards.</p>
+              <p><img
+                  src="https://tk-assets.lambdaschool.com/916f17c0-5160-47f2-bf75-5e7eb1fa2321_Algorithms-Bubble-Sort-Animation.gif"
+                  alt="https://tk-assets.lambdaschool.com/916f17c0-5160-47f2-bf75-5e7eb1fa2321_Algorithms-Bubble-Sort-Animation.gif">
+              </p>
+              <p>Notice how in each subsequent pass, the largest item “bubbles up” to become the last item.</p>
+              <h4 id="complexity-analysis-1">Complexity Analysis</h4>
+              <p>Even if the list is already sorted, we still have to touch every item in the list. That means that the
+                best case has an <code class="highlighter-rouge">O(n)</code> runtime complexity (where only the outer
+                loop runs). In the worst case, the inner loop has to perform <code class="highlighter-rouge">1/2 *
+                  n</code> operations due to swapping every element. Remembering that we drop the constants in Big O
+                notation, this means that the entire algorithm’s complexity (inner loop and outer loop) can be
+                represented in Big O with <code class="highlighter-rouge">O(n * n)</code> or <code
+                  class="highlighter-rouge">O(n^2)</code>.</p>
+              <h5>Follow Along</h5>
+              <h3 id="writing-our-code-for-selection-sort">Writing our code for Selection Sort</h3>
+              <p>Now, that we’ve gone through non-code examples for three different classic iterative sorting
+                algorithms, let’s see what a selection sort looks like with actual Python code.</p>
+              <p>Let’s say we have a collection of integers that are unsorted and we need to sort them (using an
+                “in-place” selection sort).</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="n">our_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Let’s define our <code class="highlighter-rouge">selection_sort</code> function:</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">selection_sort</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+    <span class="c1"># Outer Loop
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">cur_index</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="n">smallest_index</span> <span class="o">=</span> <span class="n">cur_index</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cur_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">items</span><span class="p">[</span><span class="n">smallest_index</span><span class="p">]:</span>
+                <span class="n">smallest_index</span> <span class="o">=</span> <span class="n">j</span>
+
+        <span class="n">items</span><span class="p">[</span><span class="n">smallest_index</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">cur_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="n">cur_index</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">smallest_index</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">items</span>
+</code></pre>
+                </div>
+              </div>
+              <p>The code above follows the same logic that we followed when we were sorting our books “in-place”.</p>
+              <p>We start by setting up our outer loop with <code class="highlighter-rouge">for i in range(0, len(items)
+                  - 1):</code>. This is the loop that says we will go through each item in our collection, one at a
+                time.</p>
+              <p>Next we define what we do for each item in the collection. Remember with the books we had to go through
+                each book to the right of the current book and keep track of the book with the “lowest” title. To do
+                that in our code, we need to loop through all the items that come after the current index to find the
+                one with the lowest value. We do this with another for loop. With each item, we check if it is smaller
+                than the current smallest and replace the smallest index if so. At the end, before we increment our
+                outer loop, we swap the item that is located in the current index with the smallest item that we located
+                during our loop.</p>
+              <p>Let’s run our code in the terminal and make sure it works.</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>&gt;&gt;&gt; def selection_sort(items):
+...     # Outer Loop
+...     for i in range(0, len(items) - 1):
+...         cur_index = i
+...         smallest_index = cur_index
+...         for j in range(cur_index + 1, len(items)):
+...             if items[j] &lt; items[smallest_index]:
+...                 smallest_index = j
+...         items[smallest_index], items[cur_index] = items[cur_index], items[smallest_index]
+...     return items
+...
+&gt;&gt;&gt; our_numbers = [5, 9, 3, 6, 2, 1, 7, 8, 4]
+&gt;&gt;&gt; print(selection_sort(our_numbers))
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+&gt;&gt;&gt;
+</code></pre>
+                </div>
+              </div>
+              <h3 id="runtime-complexity">Runtime Complexity</h3>
+              <p>When you look at our algorithm, you’ll notice that we have an outer loop that has to go through each of
+                the items in our data. That means, that the big O of the outer loop is <code
+                  class="highlighter-rouge">O(n)</code>. But, we also have an inner loop. Now, with the inner loop we
+                don’t have to check all <code class="highlighter-rouge">n</code> elements each time. Each time the outer
+                loop increments, our inner loop decreases by 1. On average, we check a list that has 1/2 x <code
+                  class="highlighter-rouge">n</code> elements. This means that the runtime for the algorithm could be
+                represented as <code class="highlighter-rouge">O(n x 1/2 x n)</code>. But, in big O, we can often ignore
+                the constants. The constants don’t have enough of an effect on the shape of the curve on the graph. So,
+                the true big O of this algorithm is <code class="highlighter-rouge">O(n x n)</code> which is <code
+                  class="highlighter-rouge">O(n^2)</code>.</p>
+              <p>Selection sort is a neat algorithm that is very intuitive and can work well for tiny data sets, but it
+                is a very inefficient way to sort data.</p>
+              <h5>Challenge</h5>
+              <ol>
+                <li>
+                  <p>What will the contents of the array that is shown below look like after each pass of the
+                    <strong><em>Selection Sort</em></strong> algorithm?</p>
+                  <p><img src="https://tk-assets.lambdaschool.com/37acef2d-38c3-4479-a7db-582fa68943e1_Resources23.png"
+                      alt="https://tk-assets.lambdaschool.com/37acef2d-38c3-4479-a7db-582fa68943e1_Resources23.png"></p>
+                </li>
+                <li>
+                  <p>Define your own function that sorts the data “out-of-place” and mirrors the process we used for our
+                    “out-of-place” book sorting example. Compare this “out-of-place” selection sort to the “in-place”
+                    function that we defined together. What is different about it? Which version do you think is better
+                    and why?</p>
+                </li>
+                <li>
+                  <p>What will the contents of the <em>same</em> array look like after each pass of the
+                    <strong><em>Insertion Sort</em></strong> algorithm?</p>
+                  <p><img src="https://tk-assets.lambdaschool.com/37acef2d-38c3-4479-a7db-582fa68943e1_Resources23.png"
+                      alt="https://tk-assets.lambdaschool.com/37acef2d-38c3-4479-a7db-582fa68943e1_Resources23.png"></p>
+                </li>
+                <li>
+                  <p>You have the cards 2, 7, 3, 4, and 6. Write an algorithm in pseudo-code that arranges the cards in
+                    ascending order.</p>
+                </li>
+                <li>
+                  <p>What will the contents of the array below look like after each pass of the <strong><em>Bubble
+                        Sort</em></strong> algorithm?</p>
+                  <p><img src="https://tk-assets.lambdaschool.com/37acef2d-38c3-4479-a7db-582fa68943e1_Resources23.png"
+                      alt="https://tk-assets.lambdaschool.com/37acef2d-38c3-4479-a7db-582fa68943e1_Resources23.png"></p>
+                </li>
+                <li>
+                  <p>What would the following array look like after <strong><em>one iteration</em></strong> of Bubble
+                    Sort?</p>
+                  <div class="language-python highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code> <span class="n">my_arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+</code></pre>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+              <hr>
+              <h2 class="display-4">
+                <a id="project" class="anchor" href="#project" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Project</h2>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <h5><a target="_blank"
+                      href="https://github.com/LambdaSchool/cs-module-project-iterative-sorting">Iterative Sorting</a>
+                  </h5>
+                </li>
+              </ul>
+              <h2 class="display-4">
+                <a id="review" class="anchor" href="#review" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Review</h2>
+              <h3 class="display-5">Class Recordings</h3>
+              <p class="lead">You can use class recordings to help you master the material.</p>
+              <div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <strong><a target="_blank" href="https://youtu.be/fQzbIWow1SY">Iterative Sorting for CS35 w/ Sean
+                        Chen</a></strong>
+                    <p>Student should be able to define what runtime complexity is, differentiate between various
+                      classifications and categorize the performance of an algorithm using Big O notation</p>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="/archive/CS/module/reck76SPX26beGSqE">All previous recordings</a>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="display-5">Demonstrate Mastery</h3>
+              <p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the
+                following:</p>
+              <ul>
+                <li>Objective challenge: <ol>
+                    <li>Classify the run times of each of the following scenarios:</li>
+                  </ol>
+                  <p>A. You are searching for a specific name in a phone book (that is sorted alphabetically).
+                    B. You meet someone, and they give you their phone number. You realize later that you forgot their
+                    name! To match their number with a name, you look through a phone book until you find their phone
+                    number.</p>
+                  <ol>
+                    <li>Classify the runtimes of each of the following functions:</li>
+                  </ol>
+                  <p>A. Problem One</p>
+                  <div class="language-python highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">sq_root</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sq_root</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre>
+                    </div>
+                  </div>
+                  <p>B. Problem Two</p>
+                  <div class="language-python highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code><span class="k">def</span> <span class="nf">bar</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1463</span><span class="p">):</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">15</span><span class="p">):</span>
+                    <span class="nb">sum</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre>
+                    </div>
+                  </div>
+                  <p>C. Problem Three</p>
+                  <div class="language-python highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code><span class="k">def</span> <span class="nf">baz</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">midpoint</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">array</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">midpoint</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'hi'</span><span class="p">)</span>
+</code></pre>
+                    </div>
+                  </div>
+                  <ol>
+                    <li>Do both of these functions have the same runtime? <em>(Notice the difference between their
+                        inputs)</em>
+                    </li>
+                  </ol>
+                  <p>A.</p>
+                  <div class="language-python highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code><span class="k">def</span> <span class="nf">make_num_pairs</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">num_one</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">num_two</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">num_one</span><span class="p">,</span> <span class="n">num_two</span><span class="p">)</span>
+</code></pre>
+                    </div>
+                  </div>
+                  <p>B.</p>
+                  <div class="language-python highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code><span class="k">def</span> <span class="nf">make_item_pairs</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">item_one</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">item_two</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">item_one</span><span class="p">,</span> <span class="n">item_two</span><span class="p">)</span>
+</code></pre>
+                    </div>
+                  </div>
+                </li>
+                <li>Objective challenge: <ol>
+                    <li>Suppose your app has 16,384 users that are stored in a database (the users are sorted
+                      alphabetically). Your app needs to search for a specific user and you use binary search. What’s
+                      the maximum number of steps it would take? <em>(Hint: using the logarithm operation is key.)</em>
+                    </li>
+                    <li>Time passes and now your app has <em>exactly double</em> the number of users. What’s the maximum
+                      number of steps now?</li>
+                    <li>Try writing a Python function to perform a <strong><em>linear search</em></strong> on a set of
+                      data.</li>
+                    <li>Try writing your own Python function to perform a <strong><em>binary search</em></strong> on a
+                      set of data. This will help you remember and internalize this algorithm much better <em>if you do
+                        not refer to our example above</em> in the process of writing your own. Make sure to use
+                      <strong>UPER</strong> as you approach this problem.</li>
+                    <li>Can you rewrite your binary search function so it uses <em>recursion</em>?</li>
+                  </ol>
+                </li>
+                <li>Objective challenge: <ol>
+                    <li>
+                      <p>What will the contents of the array that is shown below look like after each pass of the
+                        <strong><em>Selection Sort</em></strong> algorithm?</p>
+                      <p><img
+                          src="https://tk-assets.lambdaschool.com/37acef2d-38c3-4479-a7db-582fa68943e1_Resources23.png"
+                          alt="https://tk-assets.lambdaschool.com/37acef2d-38c3-4479-a7db-582fa68943e1_Resources23.png">
+                      </p>
+                    </li>
+                    <li>
+                      <p>Define your own function that sorts the data “out-of-place” and mirrors the process we used for
+                        our “out-of-place” book sorting example. Compare this “out-of-place” selection sort to the
+                        “in-place” function that we defined together. What is different about it? Which version do you
+                        think is better and why?</p>
+                    </li>
+                    <li>
+                      <p>What will the contents of the <em>same</em> array look like after each pass of the
+                        <strong><em>Insertion Sort</em></strong> algorithm?</p>
+                      <p><img
+                          src="https://tk-assets.lambdaschool.com/37acef2d-38c3-4479-a7db-582fa68943e1_Resources23.png"
+                          alt="https://tk-assets.lambdaschool.com/37acef2d-38c3-4479-a7db-582fa68943e1_Resources23.png">
+                      </p>
+                    </li>
+                    <li>
+                      <p>You have the cards 2, 7, 3, 4, and 6. Write an algorithm in pseudo-code that arranges the cards
+                        in ascending order.</p>
+                    </li>
+                    <li>
+                      <p>What will the contents of the array below look like after each pass of the <strong><em>Bubble
+                            Sort</em></strong> algorithm?</p>
+                      <p><img
+                          src="https://tk-assets.lambdaschool.com/37acef2d-38c3-4479-a7db-582fa68943e1_Resources23.png"
+                          alt="https://tk-assets.lambdaschool.com/37acef2d-38c3-4479-a7db-582fa68943e1_Resources23.png">
+                      </p>
+                    </li>
+                    <li>
+                      <p>What would the following array look like after <strong><em>one iteration</em></strong> of
+                        Bubble Sort?</p>
+                      <div class="language-python highlighter-rouge">
+                        <div class="highlight">
+                          <pre class="highlight"><code> <span class="n">my_arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+</code></pre>
+                        </div>
+                      </div>
+                    </li>
+                  </ol>
+                </li>
+                <li>Project: Iterative Sorting</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push( arguments );
+      }
+      gtag( 'js', new Date() );
+
+      gtag( 'config', 'UA-80850900-4' );
+    </script>
+    <script type="text/javascript">
+      function getDomain() {
+        const domainName = window.location.hostname.split( '.' )[ 1 ];
+        return `${domainName}.com`;
+      }
+    </script>
+    <script src="" integrity="" crossorigin="anonymous"></script>
+    <script>
+      window.jQuery || document.write( '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>' )
+    </script>
+    <script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script>
+    <script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
+    <script src="/assets/js/activate.js"></script>
+    <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      SimpleJekyllSearch.init( {
+        searchInput: document.getElementById( 'search-input' ),
+        resultsContainer: document.getElementById( 'results-container' ),
+        dataSource: '/search.json',
+        searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Iterative Sorting">{title}</a></li>',
+        noResultsText: '',
+        limit: 10,
+        fuzzy: true,
+      } )
+    </script>
+    <script src="/assets/js/mermaid.min.js"></script>
+    <script type="text/javascript">
+      if ( window.attachEvent ) {
+        window.attachEvent( 'onload', verifySignedIn );
+      } else {
+        if ( window.onload ) {
+          var currentOnLoadFn = window.onload;
+          var newOnLoadFn = function ( evt ) {
+            currentOnLoadFn( evt );
+            verifySignedIn();
+          };
+          window.onload = newOnLoadFn;
+        } else {
+          window.onload = verifySignedIn;
+        }
+      }
+
+      function verifySignedIn() {
+        if ( isPagePublic() ) {
+          return showPageContents();
+        }
+
+        window.__user = null;
+        isSignedIn().then( ( user ) => {
+          window.__user = user;
+
+          if ( !user.signedIn ) {
+            redirectToSignIn();
+          } else if ( !user.student && !window.__openToAdmissions ) {
+            showUnauthorizedMessage();
+          } else {
+            showPageContents();
+          }
+        } );
+      }
+
+      function isPagePublic() {
+        const openCourses = [
+          'and-pre',
+          'ds-pre',
+          'fsw-pre',
+          'help',
+          'ios-pre',
+        ];
+
+        const openPages = [
+          'cs-and',
+          'cs-fsw',
+          'cs-ios',
+          'cr',
+          'ds',
+          'jx',
+          'p4s',
+          'ux',
+        ];
+
+        const pathParts = window.location.pathname.split( '/' );
+        const courseName = pathParts[ 1 ];
+        const pageName = pathParts[ pathParts.length - 1 ];
+
+        return openCourses.includes( courseName ) || openPages.includes( pageName );
+      }
+
+      function isSignedIn() {
+        const isDeployPreview = window.location.hostname.startsWith( 'deploy-preview' ) && window.location.hostname
+          .endsWith( 'netlify.com' );
+
+        if ( isDeployPreview ) return Promise.resolve( {
+          signedIn: true,
+          student: true
+        } );
+
+        return fetch( `${getAuthBaseUrl()}/whoami`, {
+            credentials: 'include'
+          } )
+          .then( ( response ) => response.text() )
+          .then( ( userAsText ) => userAsText ? JSON.parse( userAsText ) : null )
+          .then( ( userData ) => ( {
+            signedIn: Boolean( userData ),
+            student: Boolean( userData && userData.airtableId ),
+            id: userData ? userData.id : null,
+            email: userData ? userData.email : null
+          } ) )
+          .catch( ( error ) => {} );
+      }
+
+      function redirectToSignIn() {
+        const signInUrl =
+          `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+        const redirectMessage = document.querySelector( '#redirect-message' );
+        redirectMessage.style.display = "block";
+        redirectMessage.innerHTML =
+          `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+        window.location = signInUrl;
+      }
+
+      function showPageContents() {
+        document.querySelector( '#content-wrapper' ).style.visibility = 'visible';
+      }
+
+      function showUnauthorizedMessage() {
+        document.querySelector( '#unauthorized-message' ).style.display = 'block';
+      }
+
+      function getAuthBaseUrl() {
+        const domain = getDomain();
+        const authBaseUrl = `https://auth.${domain}`;
+        return authBaseUrl;
+      }
+    </script>
+    <script src="/assets/js/docs.min.js"></script>
+    <script>
+      var MathJax = {
+        tex: {
+          inlineMath: [
+            [ '$$', '$$' ],
+            [ '\[', '\])' ]
+          ]
+        },
+        "HTML-CSS": {
+          styles: {
+            ".MathJax span": {
+              color: "#000000"
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+    </script>
+    <script>
+      handleExternalLinks();
+
+      function handleExternalLinks() {
+        const domain = getDomain();
+        const links = document.querySelectorAll( 'a' );
+        return links.forEach( ( link ) => {
+          if ( !link.host.includes( domain ) ) link.target = '_blank';
+        } )
+      };
+    </script>
+  </div>
+</body>
+
+</html>

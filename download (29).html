@@ -1,0 +1,864 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Intended as a home for Lambda School curriculum.">
+<meta name="author" content="">
+<meta name="generator" content="Jekyll v3.8.0">
+<title>Class Components · Lambda School</title>
+
+<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+  analytics.page();
+  }}();
+</script>
+
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#a0001e">
+</head>
+<body>
+<noscript>Please enable JavaScript to view this page.</noscript>
+<div id="redirect-message" style="display: none;">
+You must be logged in to view this page.
+</div>
+<div id="unauthorized-message" style="display: none;">
+You must be a Lambda School student to view this page.
+</div>
+<div id="content-wrapper" >
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container">
+<span class="skiplink-text">Skip to main content</span>
+</div>
+</a>
+<div class="mobile-menu">
+<div class="m-drop">
+<div class="mobile-row">
+<div class="header-row" style="padding: 3px 7px">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
+</svg></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+</button>
+</div>
+</div>
+<div class="nav-row">
+<div class="results-container">
+<ul id="results-container" class="dropdown list-group"></ul>
+</div>
+<div id="mobile-course-menu" class="collapse nav-row">
+<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+<nav class="bd-links">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web Applications II</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web3/sprint/recq59MvEIZfUAohy">
+1.&nbsp;&nbsp;Advanced React
+</a>
+<ul class="nav bd-sidenav">
+
+<li class="active bd-sidenav-active">
+<a href="/web3/module/recnDKrWb24lgaziC/">
+Class Components
+</a>
+</li>
+<li>
+<a href="/web3/module/rec1DPoOZSmocXfak/">
+The React Lifecycle
+</a>
+</li>
+<li>
+<a href="/web3/module/recAxmnYmusEi8JuL/">
+Composing and Sharing Non-Visual Behavior
+</a>
+</li>
+<li>
+<a href="/web3/module/rechTQVfCg4p85Hoi/">
+Testing Web Applications
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web3/sprint/recukritK1B1pFrcM">
+2.&nbsp;&nbsp;Advanced State Management
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web3/module/rectpk6uIV3pCHJh8/">
+The Reducer Pattern
+</a>
+</li>
+<li>
+<a href="/web3/module/recba2NUdVmgKYyR3/">
+Redux
+</a>
+</li>
+<li>
+<a href="/web3/module/recSoiWNJzGURrXYh/">
+Async Redux
+</a>
+</li>
+<li>
+<a href="/web3/module/recByjgF7FwwH5Z7W/">
+Context API
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web3/sprint/recnhsJGy28gNi1K5">
+3.&nbsp;&nbsp;Advanced Web Applications
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web3/module/recS9H6qCj0dQe32B/">
+Testing React
+</a>
+</li>
+<li>
+<a href="/web3/module/recQlbCZf9tOVgiXC/">
+Client-Side Authentication
+</a>
+</li>
+<li>
+<a href="/web3/module/recupVjaAKPqbuk7Y/">
+HTTP / AJAX II
+</a>
+</li>
+<li>
+<a href="/web3/module/receOMvCB7dSyX5FL/">
+Deploying Web Apps
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web3/sprint/recVFiuMBzbcZllxC">
+4.&nbsp;&nbsp;WEB Unit 3 Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-container">
+<div class="sidebar-container bd-sidebar">
+<div class="docs-sidebar">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
+<ul id="results-container" class="dropdown list-group"></ul>
+<nav class="bd-links collapse" id="bd-docs-nav">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web Applications II</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web3/sprint/recq59MvEIZfUAohy">
+1.&nbsp;&nbsp;Advanced React
+</a>
+<ul class="nav bd-sidenav">
+
+<li class="active bd-sidenav-active">
+<a href="/web3/module/recnDKrWb24lgaziC/">
+Class Components
+</a>
+</li>
+<li>
+<a href="/web3/module/rec1DPoOZSmocXfak/">
+The React Lifecycle
+</a>
+</li>
+<li>
+<a href="/web3/module/recAxmnYmusEi8JuL/">
+Composing and Sharing Non-Visual Behavior
+</a>
+</li>
+<li>
+<a href="/web3/module/rechTQVfCg4p85Hoi/">
+Testing Web Applications
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web3/sprint/recukritK1B1pFrcM">
+2.&nbsp;&nbsp;Advanced State Management
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web3/module/rectpk6uIV3pCHJh8/">
+The Reducer Pattern
+</a>
+</li>
+<li>
+<a href="/web3/module/recba2NUdVmgKYyR3/">
+Redux
+</a>
+</li>
+<li>
+<a href="/web3/module/recSoiWNJzGURrXYh/">
+Async Redux
+</a>
+</li>
+<li>
+<a href="/web3/module/recByjgF7FwwH5Z7W/">
+Context API
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web3/sprint/recnhsJGy28gNi1K5">
+3.&nbsp;&nbsp;Advanced Web Applications
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web3/module/recS9H6qCj0dQe32B/">
+Testing React
+</a>
+</li>
+<li>
+<a href="/web3/module/recQlbCZf9tOVgiXC/">
+Client-Side Authentication
+</a>
+</li>
+<li>
+<a href="/web3/module/recupVjaAKPqbuk7Y/">
+HTTP / AJAX II
+</a>
+</li>
+<li>
+<a href="/web3/module/receOMvCB7dSyX5FL/">
+ Deploying Web Apps
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web3/sprint/recVFiuMBzbcZllxC">
+4.&nbsp;&nbsp;WEB Unit 3 Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<main class="content-container flex-wrapper" role="main">
+<div class="sticky-nav">
+<div class="sprint-nav">
+<ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+<li class="toc-entry toc-h2"><a href="#projects">Projects</a></li>
+<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+</ul>
+</div>
+
+</div>
+<div class="wrapper limit-width">
+<div class="flex-wrapper">
+<div class="limit-width">
+<div class="jumbotron">
+<h1 class="bd-title" id="content">Class Components</h1>
+<span class="lead">
+<p class="bd-lead"></p>
+<p>Today we will learn all about <code class="highlighter-rouge">classes</code> in React. We will use classes to build out our components. Class Components have been a big part of the React ecosystem because they brought a lot of functionality that we normally didn’t get with the React API when using function components. Now with hooks, that functionality is available in function components. However, a LOT of projects will still have class components in them, and we need to be prepared to work with classes when we see them.</p>
+</span>
+<strong>At the end of this module, you should be able to:</strong>
+<ul>
+<li>explain class components, and use a class component to render some state data to the DOM</li>
+<li>share data between components using state and props</li>
+<li>respond to events triggered by user interaction and handle user input via forms in React</li>
+</ul>
+</div>
+<div class="alert alert-warning" role="alert">
+<h4>Pro Tip</h4>
+<p>Good writing is good because it is easier to read.</p>
+</div>
+<h2 class="display-4">
+<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
+<p class="lead">Review each preclass resource before class.</p>
+<div class="preclass">
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/lksl2l5sVek" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qRPM_CWPRfM" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+ <div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/8SELYmSaRvA" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<a target="_blank" href="https://reactjs.org/docs/react-component.html">React.Component</a>
+<p>The documentation surrounding React.Component that we’ll be extending as our base class for class components</p>
+</li>
+<li class="list-group-item">
+<a target="_blank" href="https://reactjs.org/docs/events.html">React Synthetic Event</a>
+</li>
+</ul>
+</div>
+<h2 class="display-4">
+<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
+<h4 class="mark mb-3 p-2">Learn to explain class components, and use a class component to render some state data to the DOM</h4>
+<p>React comes with it a constructor class called <code class="highlighter-rouge">Component</code> that has some very special properties on it. This is a class like any other class that you’ve already become familiar with. React gives us a bunch of functionality through this single <code class="highlighter-rouge">base Component</code>. Using this is how we can scale out our static component based web pages to become fully functioning web-applications. To understand how to build out is fundamental and crucial for success when working with JS.</p>
+<h5>Overview</h5>
+<p>React gave us the idea of components as independent pieces of UI. And thus far, you have learned how to build out <code class="highlighter-rouge">functional components</code> for use in making multiple DOM elements. Now, we’re going to be learning about the <code class="highlighter-rouge">React.Component</code> base class that allows us to use some of the methods that the React team has curated to tap into what we call the <code class="highlighter-rouge">Component Lifecycle</code>. These methods (known as life cycle hooks <em>more on these to come</em>) give us control over how our components work, and if we’d like to use them, we have to build out a class component that <code class="highlighter-rouge">extends</code> the <code class="highlighter-rouge">React.Component</code> parent class. Any time you see a line of code that looks like the following, you’re using the React.Component parent class, and you have the ability to tap into these methods.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">FooComponent</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{}</span>
+</code></pre></div></div>
+<p>By creating components as classes, you can set up a data object that your component is concerned with. This is done using <code class="highlighter-rouge">state</code> and setting up that object on our constructor method. Once we have some data that we can render out to the DOM, we need a vehicle that will allow us to render that data. This is achieved with the JSX method <code class="highlighter-rouge">render()</code> from within the life-cycle hook. We’ll walk you through the steps below.</p>
+<p>Declare your <code class="highlighter-rouge">class component</code> by extending the <code class="highlighter-rouge">React.Component</code> parent class. <code class="highlighter-rouge">class FooComponent extends React.Component {}</code>.
+Use the <code class="highlighter-rouge">constructor</code> function to set up some state. <em>because we’re calling extends, we also need to call <code class="highlighter-rouge">super();</code> otherwise we won’t have access the <code class="highlighter-rouge">this</code></em>
+We need to render some sort of UI to the DOM. We do this by calling the life-cycle method <code class="highlighter-rouge">render</code>.</p>
+<p>I like to remember these steps by referencing one of my favorite bands: Creedence Clearwater Revival (CCR), which stands for class, constructor, and render/return.</p>
+<p>Declare your <em>class</em>, and extend the <code class="highlighter-rouge">React.Component</code> Base class.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">FooComponent</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+</code></pre></div></div>
+<ol>
+<li>Now we’ll set up our <em>constructor</em> and add state.</li>
+</ol>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">super</span><span class="p">();</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<ol>
+<li>
+<em>Render</em> some UI and <em>return</em> some <code class="highlighter-rouge">JSX.</code>
+</li>
+</ol>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="nx">I</span> <span class="nx">am</span> <span class="nx">Foo</span> <span class="nx">Component</span><span class="o">&lt;</span><span class="sr">/div&gt;</span><span class="err">;
+</span><span class="p">}</span>
+</code></pre></div></div>
+<p>Our final component should look like this.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">FooComponent</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span> 
+    <span class="k">super</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="p">}</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="nx">I</span> <span class="nx">am</span> <span class="nx">Foo</span> <span class="nx">Component</span><span class="o">&lt;</span><span class="sr">/div&gt;</span><span class="err">;
+</span>  <span class="p">}</span>
+<span class="p">}</span> 
+</code></pre></div></div>
+<p>Now that we have constructed a skeleton for our Class component, it can be a bit more dynamic. The way we’ll achieve this will be to use some data that we’ll pre-define as some information we’d like our component to display. We’ll then take that data and do this really cool thing called <code class="highlighter-rouge">interpolation</code> in order to present it to the DOM within some Text.</p>
+<p>Components built out extending the Base <code class="highlighter-rouge">React.Component</code> class come with a bunch of benefits directly from the React API. A list of the benefits to what we get out of the Component class can be found <a href="https://reactjs.org/docs/react-component.html#getsnapshotbeforeupdate">here</a>, in theReact documentation about class components. We will be discussing the <code class="highlighter-rouge">life-cycle</code> methods at another place in time, so don’t worry too much about those for now.</p>
+<p>For now, let’s focus on a component caring about its own state (data) and managing that state in a reactive way. The <code class="highlighter-rouge">state</code> object that we set up on our <code class="highlighter-rouge">constructor</code> has a very React-specific way of doing things. It allows us to drive our UI using data. Again, think about Facebook here. You see a LOT of data and interact with it all of the time when you’re using the Facebook app. Because of the way we work with social media today, we expect this data the UI to represent that data in close to real-time. This is one reason why React is really good and how reactivity can be achieved.</p>
+<h5>Follow Along</h5>
+<p>Let’s work together to build out a class component that prints a message to the screen using a few DOM elements. We will hold a message on state, and print that message to the screen by selecting it an assigning it to a DOM element. Then we will take it a step further and pass that message down to another component using props.</p>
+<p>Go ahead and navigate over to <a href="https://codesandbox.io/s/3xwzql38nm">this Codesandbox</a>, where we will write our React Code. CodeSandbox is an online editor that can be used to write React Code right away! I can’t emphasize how cool this really is. For now, you’ll just have to trust me.</p>
+<p>You’ll notice that we’re getting an error on this page. As we begin to define our app class, elements will start to come to life on for us. For now, let’s start by simply adding the class through CCR.</p>
+<p>When you’re done, your browser window should re-render without any errors. Your app class should look like this:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="p">}</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="nx">From</span> <span class="nx">App</span><span class="o">!&lt;</span><span class="sr">/div&gt;</span><span class="err">;
+</span>  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Now, let’s add a property to our state data. Define a <code class="highlighter-rouge">message</code> property on the state object.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span> 
+  <span class="na">message</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Hello from App State!!</span><span class="dl">"</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>Now that we have the message on our component’s state, we can use it through interpolation. In our render method, let’s change the message inside of <code class="highlighter-rouge">div</code> to reference the state object. Remember the <code class="highlighter-rouge">this</code> keyword when pointing to an object on the Class constructor.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/div&gt;</span><span class="err">;
+</span><span class="p">}</span>
+</code></pre></div></div>
+<p>Hooray! You’ve now built your first class component, and you’re ready to rock n’ roll.</p>
+<h5>Challenge</h5>
+<p>Let’s take the functionality of this class component that we built earlier and extend it just a little bit. Declare a <code class="highlighter-rouge">Functional Component</code> called <code class="highlighter-rouge">RenderMessage</code> inside <a href="https://codesandbox.io/s/103jkor46q">this CodeSandbox</a>.</p>
+<ul>
+<li>Make sure you declare your Props Object that will be passed into this component.</li>
+<li>Return a <code class="highlighter-rouge">div</code> who’s child is <code class="highlighter-rouge">props.message</code>
+</li>
+<li>Now inside of the <code class="highlighter-rouge">App</code> class pass in that <code class="highlighter-rouge">RenderMessage</code> component and pass down a message prop to <code class="highlighter-rouge">RenderMessage</code>. This message prop should be set equal to the message property on the state object.</li>
+<li>Once it’s all wired up properly you’ve done it!</li>
+</ul>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://www.andreasreiterer.at/web-development/react-functional-components/" target="blank_">Functional Components vs. Class Components</a><br> Learn when to use them, so when the time comes, you'll know!</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to share data between components using state and props</h4>
+<p>We know about state already, and we know how to nest components. Now we’re going to learn about how to share state with nested components using the react paradigm called props. Understanding how we link up data in a <code class="highlighter-rouge">uni-directional</code> (top to bottom) fashion will help you understand how react works generally.</p>
+<h5>Overview</h5>
+<p><a href="https://codesandbox.io/s/yk37ykmyrz">Here</a> is a link to the follow-along exercise from the video.</p>
+<p>React is useless if we can’t pass state around from one component to another. We use <code class="highlighter-rouge">state to props</code> to achieve functionality. Meaning that whatever is set on the state of one <code class="highlighter-rouge">Component</code> can be shared amongst all components by passing it down as props. Up until this point, we haven’t had a significant need for this approach, but as your applications grow, you most certainly will. Now that we understand reactivity, we need to understand this <code class="highlighter-rouge">parent child</code> relationship in React in order to work with state more effectively and fluidly.</p>
+<p>Because state is persistent as long as the component is on the screen, we can use it to hold on to memory for our application. Memory is any data that we pull in from a server, any edits from a submission form, or users interaction with your web page.</p>
+<p>Remember that state is just an object that lives on the <code class="highlighter-rouge">class component's</code> constructor. We can take this state and pass it around as props. This will another reason why React is so powerful. What’s great about this state object, is that when it changes, our component will re-render. We can also pass whatever data is found on this state object around as props to other components.</p>
+<p>Remember that props are read-only, and components can use props to display information to the screen. One other principle that is built into React is that when a component’s props are bound to the state of a parent component, the child component will re-render as well. This is again how we build out reactive data in react.</p>
+<p>Now that we know more about state let’s see how this works. We’ll have a component set up to pass some Props around to a <code class="highlighter-rouge">functional component</code>.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">welcomeMessage</span><span class="p">:</span> <span class="dl">'</span><span class="s1">world!</span><span class="dl">'</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">welcomeMessage</span><span class="p">}</span><span class="o">!&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Now let’s take this a step further and instead of rendering an <code class="highlighter-rouge">&lt;h1&gt;</code> lets actually put this message in another component and pass it through.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">WelcomeBanner</span> <span class="o">=</span> <span class="nx">props</span> <span class="o">=&gt;</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="o">!&lt;</span><span class="sr">/h1&gt;</span><span class="err">;
+</span></code></pre></div></div>
+<p>Now to pass this around properly, we need to re-factor our render function inside the <code class="highlighter-rouge">&lt;App /&gt;</code> component.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
+
+<span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">WelcomeBanner</span> <span class="nx">message</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">welcomeMessage</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">...</span>
+</code></pre></div></div>
+<p>There we have it; now we are sharing data between a component’s state and a component’s props. This means that when the state object changes, so too will the props. We’re going to combine that functionality in our follow along section.</p>
+<h5>Follow Along</h5>
+<p>Let’s build out a few components and put some concepts together there.</p>
+<ul>
+<li>We’re going to be updating some state on a parent component.</li>
+<li>That state will be wired up to a few other components as we pass the props around.</li>
+<li>We will also be passing around a few handler functions that help us update/delete our state.</li>
+</ul>
+<p>Lets set up a form component that we can use to update our message component from above.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">WelcomeBanner</span> <span class="o">=</span> <span class="nx">props</span> <span class="o">=&gt;</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="o">!&lt;</span><span class="sr">/h1&gt;</span><span class="err">;
+</span>
+<span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">welcomeMessage</span><span class="p">:</span> <span class="dl">'</span><span class="s1">world!</span><span class="dl">'</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">WelcomeBanner</span> <span class="nx">message</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">welcomeMessage</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Now let’s build a form component that can handle some data defined on state, below on the child components.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">FormComponent</span> <span class="o">=</span> <span class="nx">props</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">form</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">placeholder</span><span class="o">=</span><span class="dl">"</span><span class="s2">change state</span><span class="dl">"</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">updateStateMessage</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/form</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>We’re going to need to build out a change handler function on our <code class="highlighter-rouge">App</code> component that we can pass down to the form. We’ll have to define the prop as <code class="highlighter-rouge">updateStateMessage</code> in order to make our <code class="highlighter-rouge">onChange</code> event handler work out properly.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
+
+<span class="nx">messageChangeHandler</span> <span class="o">=</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="na">welcomeMessage</span><span class="p">:</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">});</span>
+<span class="p">};</span>
+
+<span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">WelcomeBanner</span> <span class="nx">message</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">welcomeMessage</span><span class="p">}</span> <span class="nx">updateStateMessage</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">updateStateMessage</span><span class="p">}</span><span class="sr">/</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+<span class="p">...</span>
+</code></pre></div></div>
+ <h5>Challenge</h5>
+<p>Using the following tools:</p>
+<ul>
+<li>Class component</li>
+<li>functional FormComponent, MessageComponent</li>
+<li>click, and change handlers</li>
+<li><code class="highlighter-rouge">setState</code></li>
+</ul>
+<p>Build out a form that will allow a user to handle data. You’ll need a button, input field, and some data-bound to a DOM element that displays what the user is submitting.</p>
+<p>When a user clicks submit, show the data that’s on state in an <code class="highlighter-rouge">alert</code> statement.</p>
+<p><strong>Stretch</strong> Loop over a list of items showing those items to the screen. (Can be a list of strings). When a user clicks submit, instead of logging the item, push an item into that list, and watch the magic happen.</p>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to respond to events triggered by user interaction and handle user input via forms in React</h4>
+<p>In Web development everything you do is based around the Document Object Model (DOM). The DOM has built into it an event loop that listens for changes across some part of the UI. To access that event loop in the Virtual DOM the react team put together what is called the Synthetic Event so that we can pretty much have access to all the events we would need to provide users with an interactive web application. Learn to harness the power of events in React and you’ll be set to build out React Web Applications.</p>
+<h5>Overview</h5>
+<p><a href="https://codesandbox.io/s/k0q2wwyj2o">Here</a> is the link to the codesandbox follow-along exercise from the video.</p>
+<p>Events in any programing language are unique to the language itself. When javascript runs in web browsers, it has a very eloquent way of handling events that are triggered by user interaction. This is one of the things that we, as web developers, should be most concerned with. How do we take in user input via forms and respond to clicks, mouse events, or scrolling? We will be learning how to respond to events within the React Ecosystem. Here is a statement straight from the <a href="https://reactjs.org/docs/handling-events.html">React Docs</a>.</p>
+<blockquote>
+<p>Handling events with React elements is very similar to handling events on DOM elements. There are some syntactic differences:</p>
+<ul>
+<li>React events are named using camelCase, rather than lowercase.</li>
+<li>With JSX you pass a function as the event handler, rather than a string.</li>
+</ul>
+</blockquote>
+<p>Now, let’s dive in and see what it is like to handle events in ReactJS.</p>
+<p>It is important to understand that React has it’s own “Synthetic Event” built into the API. This will mimic event handling as you’re already used to when it comes to the DOM. When we bind up click/change/mouseOver handlers to DOM elements, we usually do so on the element itself, or we select the DOM element using vanilla JS to target by ID and append some function handler to that element.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onclick</span><span class="o">=</span><span class="dl">"</span><span class="s2">getElementById('demo').innerHTML=Date()</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">What</span> <span class="nx">is</span> <span class="nx">the</span> <span class="nx">time</span><span class="p">?</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span></code></pre></div></div>
+<p>We see stuff like the above code example all of the time. Now the purpose of today’s exercises is to get us used to handling these types of events in the ReactJS ecosystem using Components/JSX and plain ol’ JavaScript function handlers. This is where React starts to get really fun. React provides what we call the <a href="https://reactjs.org/docs/events.html">Synthetic Event</a>, which is similar to the Event object in the DOM. This is how we interact with the DOM within the <code class="highlighter-rouge">React Virtual DOM</code> ecosystem.</p>
+<p>Let’s build a little button that we can click on to see what’s going on under the hood.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Button</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="c1">// we'll fill this in}&gt;Click Me&lt;/button&gt;;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>So we have a simple button component that will return some Button JSX to the screen and mount up a button. Notice the <code class="highlighter-rouge">onClick</code> prop we used for our button. It’s <code class="highlighter-rouge">camelCase</code>, which is different already from the standard <code class="highlighter-rouge">onClick</code> function that we normally would store as an attribute on a standard <code class="highlighter-rouge">button</code> element. This will be one of the major differences between React <code class="highlighter-rouge">Event Handling</code> and native <code class="highlighter-rouge">DOM event handling</code>.</p>
+<p>Now that we have our button, we’ll build a function handler that will allow us to interact with it. Let’s assume that this function handler was found on a class component, so we can just add it as a method on that class.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">clickHandler</span> <span class="o">=</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">);</span> <span class="c1">// this is the react Synthetic Event</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>The above code looks a lot like a typo, but inside of a class, this is valid JS. We’ll chat more about this at length later, but now we need to bind this function up to our JSX element and use it to log out of the React synthetic event.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Button</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">clickHandler</span> <span class="o">=</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">);</span> <span class="c1">// this is the react Synthetic Event</span>
+  <span class="p">};</span>
+
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">clickHandler</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Click</span> <span class="nx">Me</span><span class="o">&lt;</span><span class="sr">/button&gt;</span><span class="err">;
+</span>  <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+<p>Now we should see this on the screen, and when we click on it, we can see what the console is logging out for us.</p>
+<img src="https://tk-assets.lambdaschool.com/439c001d-9009-4454-8afc-4d18d19363ed_ScreenShot2018-07-23at3.21.03PM.png" alt="synthetic event handler console.log" style="width:500px;"></image>
+<p>You should also see a bunch of warnings in the console from the ReactAPI warning engine at this point as well. That’s ok; it’s just telling us there are things to be aware of when working with the event. For now, we can ignore the warnings are recognize that this synthetic event object looks a little bit different than the original object that we would see with the DOM. The key takeaway here is that components can talk to buttons on event dispatch. From now on, this is how you should deal with events.</p>
+<h5>Follow Along</h5>
+<p>Now, let’s build out a little Application that can handle some data that we pass through a few JSX elements.</p>
+<p>We’re going to build out some event handler functions for the following events across multiple elements:</p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">-</span> onClick 
+<span class="p">-</span> onDoubleClick 
+<span class="p">-</span> onMouseEnter 
+<span class="p">-</span> onChange
+</code></pre></div></div>
+<p>Build out a <code class="highlighter-rouge">singleClickHandler</code> function that will call <code class="highlighter-rouge">alert("Single Click!");</code></p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">singleClickHandler</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Single Click!</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+<p>And add it to the first Button in our App.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">singleClickHandler</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Click</span> <span class="nx">Handler</span> <span class="nx">Demo</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span></code></pre></div></div>
+<p>Lets do the same with a <code class="highlighter-rouge">doubleClickHandler</code> function, a <code class="highlighter-rouge">mouseEnterHandler</code> function and an <code class="highlighter-rouge">changeHandler</code> function.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">doubleClickHandler</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Double Clicked!</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nx">mouseEnterHandler</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Mouse Entered</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nx">changeHandler</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Item was changed</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">className=</span><span class="s">"App"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Hello Handlers<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Lets build out some handler functions.<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">onClick=</span><span class="s">{this.singleClickHandler}</span><span class="nt">&gt;</span>Click Handler Demo<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">onDoubleClick=</span><span class="s">{this.doubleClickHandler}</span><span class="nt">&gt;</span>
+      Double Click Handler
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">onMouseEnter=</span><span class="s">{this.mouseEnterHandler}</span><span class="nt">&gt;</span>Mouse Enter<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">onChange=</span><span class="s">{this.changeHandler}</span> <span class="na">placeholder=</span><span class="s">"Change my input"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<p>Play around with the events on the screen and see how things are interacting one with another.</p>
+<p>Let’s take a closer look at the input <code class="highlighter-rouge">changeHandler</code> for a min. Let’s pass in the synthetic event through the function body. One thing that is cool about an input field is that we can pull in the resources it uses off of the <code class="highlighter-rouge">event.target.value</code> property that is found on the Synthetic Event object that will be passed in.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">changeHandler</span> <span class="o">=</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="nx">alert</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+</code></pre></div></div>
+<p>So now, as we type, we can see what’s in the input field. Let’s take this a step further and set up a state object. Then use a new function <code class="highlighter-rouge">setState</code> to reset the state on that object. Add this <code class="highlighter-rouge">constructor to our class Component</code>.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">someValue</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+<p>Now change our change handler to look like this.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">changeHandler</span> <span class="o">=</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="na">someValue</span><span class="p">:</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">});</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>Great, setState will update our <code class="highlighter-rouge">someValue</code> property on our state object by simply typing in the input field. Let’s prove this by logging our state object inside the render function.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">);</span>
+<span class="p">...</span>
+</code></pre></div></div>
+<p>Check your console!</p>
+<p>https://codesandbox.io/s/rmnj2r1o0p Here is a working copy of what we achieved!</p>
+<h5>Challenge</h5>
+<p>Using this Code sandbox that we’ve been working in together, build out an app that holds a string item on the state object.</p>
+<ul>
+<li>Build out a function handler that can take in the edits from an <code class="highlighter-rouge">onChange event</code> and then use the <code class="highlighter-rouge">setState</code> function to set those items on state.</li>
+<li>You should have seen me do this already, so you may have to refer back to previous walk-throughs.</li>
+</ul>
+<hr>
+<h2 class="display-4">
+<a id="projects" class="anchor" href="#projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Projects</h2>
+<ul class="list-group">
+<li class="list-group-item">
+<h5><a target="_blank" href="https://github.com/LambdaSchool/React-Todo">React Todo</a></h5>
+</li>
+<li class="list-group-item">
+<h5><a target="_blank" href="https://github.com/LambdaSchool/React-Sorting-Hat">React-Sorting-Hat</a></h5>
+<p>Stretch assignment for those that have finished the Todo Project beyond MVP</p>
+</li>
+</ul>
+<h2 class="display-4">
+<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
+<h3 class="display-5">Class Recordings</h3>
+<p class="lead">You can use class recordings to help you master the material.</p>
+<div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<strong><a target="_blank" href="https://youtu.be/CDooIXMwS50">Class Components for Web35 w/ Warren Longmire</a></strong>
+<p>Class Components</p>
+</li>
+<li class="list-group-item">
+<a href="/archive/WEB3/module/recnDKrWb24lgaziC">All previous recordings</a>
+</li>
+</ul>
+</div>
+<h3 class="display-5">Demonstrate Mastery</h3>
+<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
+<ul>
+<li>Objective challenge: <p>Let’s take the functionality of this class component that we built earlier and extend it just a little bit. Declare a <code class="highlighter-rouge">Functional Component</code> called <code class="highlighter-rouge">RenderMessage</code> inside <a href="https://codesandbox.io/s/103jkor46q">this CodeSandbox</a>.</p>
+<ul>
+<li>Make sure you declare your Props Object that will be passed into this component.</li>
+<li>Return a <code class="highlighter-rouge">div</code> who’s child is <code class="highlighter-rouge">props.message</code>
+</li>
+<li>Now inside of the <code class="highlighter-rouge">App</code> class pass in that <code class="highlighter-rouge">RenderMessage</code> component and pass down a message prop to <code class="highlighter-rouge">RenderMessage</code>. This message prop should be set equal to the message property on the state object.</li>
+<li>Once it’s all wired up properly you’ve done it!</li>
+</ul>
+</li>
+<li>Objective challenge: <p>Using the following tools:</p>
+<ul>
+<li>Class component</li>
+<li>functional FormComponent, MessageComponent</li>
+<li>click, and change handlers</li>
+<li><code class="highlighter-rouge">setState</code></li>
+</ul>
+<p>Build out a form that will allow a user to handle data. You’ll need a button, input field, and some data-bound to a DOM element that displays what the user is submitting.</p>
+<p>When a user clicks submit, show the data that’s on state in an <code class="highlighter-rouge">alert</code> statement.</p>
+<p><strong>Stretch</strong> Loop over a list of items showing those items to the screen. (Can be a list of strings). When a user clicks submit, instead of logging the item, push an item into that list, and watch the magic happen.</p>
+</li>
+<li>Objective challenge: <p>Using this Code sandbox that we’ve been working in together, build out an app that holds a string item on the state object.</p>
+<ul>
+<li>Build out a function handler that can take in the edits from an <code class="highlighter-rouge">onChange event</code> and then use the <code class="highlighter-rouge">setState</code> function to set those items on state.</li>
+<li>You should have seen me do this already, so you may have to refer back to previous walk-throughs.</li>
+</ul>
+</li>
+<li>Project: React Todo</li>
+<li>Code Challenge: MergeSort</li>
+<li>Code Challenge: BreadthFirstSearch</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80850900-4');
+</script>
+<script type="text/javascript">
+  function getDomain() {
+    const domainName = window.location.hostname.split('.')[1];
+    return `${domainName}.com`;
+  }
+</script>
+<script src="" integrity="" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
+<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+  SimpleJekyllSearch.init({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    dataSource: '/search.json',
+    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Class Components">{title}</a></li>',
+    noResultsText: '',
+    limit: 10,
+    fuzzy: true,
+  })
+</script>
+<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
+  if (window.attachEvent) {
+    window.attachEvent('onload', verifySignedIn);
+  } else {
+    if (window.onload) {
+      var currentOnLoadFn = window.onload;
+      var newOnLoadFn = function (evt) {
+        currentOnLoadFn(evt);
+        verifySignedIn();
+      };
+      window.onload = newOnLoadFn;
+    } else {
+      window.onload = verifySignedIn;
+    }
+  }
+
+  function verifySignedIn() {
+    if (isPagePublic()) {
+      return showPageContents();
+    }
+
+    window.__user = null;
+    isSignedIn().then((user) => {
+      window.__user = user;
+
+      if (!user.signedIn) {
+        redirectToSignIn();
+      } else if (!user.student && !window.__openToAdmissions) {
+        showUnauthorizedMessage();
+      } else {
+        showPageContents();
+      }
+    });
+  }
+
+  function isPagePublic() {
+    const openCourses = [
+      'and-pre',
+      'ds-pre',
+      'fsw-pre',
+      'help',
+      'ios-pre',
+    ];
+
+    const openPages = [
+      'cs-and',
+      'cs-fsw',
+      'cs-ios',
+      'cr',
+      'ds',
+      'jx',
+      'p4s',
+      'ux',
+    ];
+
+    const pathParts = window.location.pathname.split('/');
+    const courseName = pathParts[1];
+    const pageName = pathParts[pathParts.length - 1];
+
+    return openCourses.includes(courseName) || openPages.includes(pageName);
+  }
+
+  function isSignedIn() {
+    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
+
+    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
+
+    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
+      .then((response) => response.text())
+      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
+      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
+      .catch((error) => {});
+  }
+
+  function redirectToSignIn() {
+    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+    const redirectMessage = document.querySelector('#redirect-message');
+    redirectMessage.style.display = "block";
+    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+    window.location = signInUrl;
+  }
+
+  function showPageContents() {
+    document.querySelector('#content-wrapper').style.visibility = 'visible';
+  }
+
+  function showUnauthorizedMessage() {
+    document.querySelector('#unauthorized-message').style.display = 'block';
+  }
+
+  function getAuthBaseUrl() {
+    const domain = getDomain();
+    const authBaseUrl = `https://auth.${domain}`;
+    return authBaseUrl;
+  }
+</script><script src="/assets/js/docs.min.js"></script><script>
+  var MathJax = {
+    tex: {
+      inlineMath: [['$$', '$$'], ['\[', '\])']]
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax span": {
+          color: "#000000"
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script>
+  handleExternalLinks();
+
+  function handleExternalLinks() {
+    const domain = getDomain();
+    const links = document.querySelectorAll('a');
+    return links.forEach((link) => {
+      if (!link.host.includes(domain)) link.target = '_blank';
+    })
+  };
+</script>
+</div>
+</body>
+</html>

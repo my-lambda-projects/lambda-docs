@@ -1,0 +1,1107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Intended as a home for Lambda School curriculum.">
+  <meta name="author" content="">
+  <meta name="generator" content="Jekyll v3.8.0">
+  <title>Hash Tables I · Lambda School</title>
+
+  <link rel='stylesheet' integrity crossorigin='anonymous'
+    href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+  <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+  <link rel='stylesheet'
+    href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+  <link rel='stylesheet'
+    href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+  <script>
+    ( function ( i, s, o, g, r, a, m ) {
+      i[ 'GoogleAnalyticsObject' ] = r;
+      i[ r ] = i[ r ] || function () {
+        ( i[ r ].q = i[ r ].q || [] ).push( arguments )
+      }, i[ r ].l = 1 * new Date();
+      a = s.createElement( o ),
+        m = s.getElementsByTagName( o )[ 0 ];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore( a, m )
+    } )( window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga' );
+    ga( 'create', 'UA-122016605-1', 'learn.lambdaschool.com' );
+    ga( 'send', 'pageview' );
+  </script>
+
+  <script>
+    ! function () {
+      var analytics = window.analytics = window.analytics || [];
+      if ( !analytics.initialize )
+        if ( analytics.invoked ) window.console && console.error && console.error( "Segment snippet included twice." );
+        else {
+          analytics.invoked = !0;
+          analytics.methods = [ "trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset",
+            "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"
+          ];
+          analytics.factory = function ( t ) {
+            return function () {
+              var e = Array.prototype.slice.call( arguments );
+              e.unshift( t );
+              analytics.push( e );
+              return analytics
+            }
+          };
+          for ( var t = 0; t < analytics.methods.length; t++ ) {
+            var e = analytics.methods[ t ];
+            analytics[ e ] = analytics.factory( e )
+          }
+          analytics.load = function ( t, e ) {
+            var n = document.createElement( "script" );
+            n.type = "text/javascript";
+            n.async = !0;
+            n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
+            var a = document.getElementsByTagName( "script" )[ 0 ];
+            a.parentNode.insertBefore( n, a );
+            analytics._loadOptions = e
+          };
+          analytics.SNIPPET_VERSION = "4.1.0";
+          analytics.load( "BjKorwKrSvMamfNoGkBq9rISk7wF6QQX" );
+          analytics.page();
+        }
+    }();
+  </script>
+
+  <link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#a0001e">
+</head>
+
+<body>
+  <noscript>Please enable JavaScript to view this page.</noscript>
+  <div id="redirect-message" style="display: none;">
+    You must be logged in to view this page.
+  </div>
+  <div id="unauthorized-message" style="display: none;">
+    You must be a Lambda School student to view this page.
+  </div>
+  <div id="content-wrapper" style="visibility: hidden;">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+    <div class="mobile-menu">
+      <div class="m-drop">
+        <div class="mobile-row">
+          <div class="header-row" style="padding: 3px 7px">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg"
+                width="33" height="35" viewBox="0 0 33 35" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                  fill="#EC3944" />
+              </svg></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu"
+              aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
+                <title>Menu</title>
+                <path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                  d="M4 7h22M4 15h22M4 23h22"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="nav-row">
+          <div class="results-container">
+            <ul id="results-container" class="dropdown list-group"></ul>
+          </div>
+          <div id="mobile-course-menu" class="collapse nav-row">
+            <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+              <nav class="bd-links">
+                <div class="bd-toc-item">
+                  <h4 class="bd-toc-link">Computer Science Legacy</h4>
+                </div>
+
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recd4D4w3QrigPqUF">
+                    1.&nbsp;&nbsp;Intro to Python and OOP
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/recay2erzDlYUPSeO/">
+                        Introduction to Python I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recwpe3Y9TVWrGT8L/">
+                        Introduction to Python II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/reca7NYptklr7F403/">
+                        Introduction to Python III
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recc3eWphKVYd0oHT/">
+                        Introduction to Python IV
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recR4gHcvD21ziR9a">
+                    2.&nbsp;&nbsp;Data Structures
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/rec3MaMAY78iDm7ax/">
+                        Data Structures I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recMcvOrFw5BWUku3/">
+                        Data Structures II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recx53S3pYfDfvFDm/">
+                        Data Structures III
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recHdwPne4Xt3A7lk/">
+                        Data Structures IV
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recd9grrKlURJ453N">
+                    3.&nbsp;&nbsp;Algorithms
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/reck76SPX26beGSqE/">
+                        Iterative Sorting
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/reccRh9h6ccXghfA4/">
+                        Recursive Sorting
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recrCuZQMVI6LvxhD/">
+                        A First-Pass Solution
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recsvJCzPlM2X63ZX/">
+                        Writing Better Solutions
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recvDjRQEq49uoWsU">
+                    4.&nbsp;&nbsp;CS Unit 1 Build
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recAr3gdL8U57eho1">
+                    5.&nbsp;&nbsp;Hash Tables
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li class="active bd-sidenav-active">
+                      <a href="/cs/module/recSwIvbSV630gdVk/">
+                        Hash Tables I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recHzCwboKBLBB0Re/">
+                        Hash Tables II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recsEDFseukQWg92c/">
+                        Hash Tables III & IV
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/rec7U9K7OCL5ihj0t">
+                    6.&nbsp;&nbsp;Graphs
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/recBMbHtb8AOXq3UL/">
+                        Graphs I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recZL2m6Gx7B4dU3G/">
+                        Graphs II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/reck4RVWsg82eiYPZ/">
+                        Graphs III
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recoGWlBHjuJxkL1y/">
+                        Graphs IV
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/recndTnO1V8oDbBPb">
+                    7.&nbsp;&nbsp;Computer Architecture
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                    <li>
+                      <a href="/cs/module/recsuJbrrFgbFUCRX/">
+                        Computer Architecture: Basics, Number Bases
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/rec2NHr4Eyib7XdED/">
+                        Computer Architecture: Bitwise Operations
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recvQUkzz23NTj20G/">
+                        Computer Architecture: The System Stack
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cs/module/recGPVAdvQcmopSIO/">
+                        Computer Architecture: Subroutines, CALL/RET
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/cs/sprint/reco0t22NdXmr8VyL">
+                    8.&nbsp;&nbsp;CS Unit 2 Build
+                  </a>
+                  <ul class="nav bd-sidenav">
+
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="sidebar-container bd-sidebar">
+        <div class="docs-sidebar">
+          <a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197"
+              fill="#ec3944">
+              <g>
+                <path
+                  d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z">
+                </path>
+                <path
+                  d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z">
+                </path>
+                <path
+                  d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z">
+                </path>
+                <path
+                  d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z">
+                </path>
+                <path
+                  d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z">
+                </path>
+                <path
+                  d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z">
+                </path>
+              </g>
+              <path
+                d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z">
+              </path>
+            </svg></a>
+          <ul id="results-container" class="dropdown list-group"></ul>
+          <nav class="bd-links collapse" id="bd-docs-nav">
+            <div class="bd-toc-item">
+              <h4 class="bd-toc-link">Computer Science Legacy</h4>
+            </div>
+
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recd4D4w3QrigPqUF">
+                1.&nbsp;&nbsp;Intro to Python and OOP
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/recay2erzDlYUPSeO/">
+                    Introduction to Python I
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recwpe3Y9TVWrGT8L/">
+                    Introduction to Python II
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/reca7NYptklr7F403/">
+                    Introduction to Python III
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recc3eWphKVYd0oHT/">
+                    Introduction to Python IV
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recR4gHcvD21ziR9a">
+                2.&nbsp;&nbsp;Data Structures
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/rec3MaMAY78iDm7ax/">
+                    Data Structures I
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recMcvOrFw5BWUku3/">
+                    Data Structures II
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recx53S3pYfDfvFDm/">
+                    Data Structures III
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recHdwPne4Xt3A7lk/">
+                    Data Structures IV
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recd9grrKlURJ453N">
+                3.&nbsp;&nbsp;Algorithms
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/reck76SPX26beGSqE/">
+                    Iterative Sorting
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/reccRh9h6ccXghfA4/">
+                    Recursive Sorting
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recrCuZQMVI6LvxhD/">
+                    A First-Pass Solution
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recsvJCzPlM2X63ZX/">
+                    Writing Better Solutions
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recvDjRQEq49uoWsU">
+                4.&nbsp;&nbsp;CS Unit 1 Build
+              </a>
+              <ul class="nav bd-sidenav">
+
+              </ul>
+            </div>
+
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recAr3gdL8U57eho1">
+                5.&nbsp;&nbsp;Hash Tables
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li class="active bd-sidenav-active">
+                  <a href="/cs/module/recSwIvbSV630gdVk/">
+                    Hash Tables I
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recHzCwboKBLBB0Re/">
+                    Hash Tables II
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recsEDFseukQWg92c/">
+                    Hash Tables III & IV
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/rec7U9K7OCL5ihj0t">
+                6.&nbsp;&nbsp;Graphs
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/recBMbHtb8AOXq3UL/">
+                    Graphs I
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recZL2m6Gx7B4dU3G/">
+                    Graphs II
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/reck4RVWsg82eiYPZ/">
+                    Graphs III
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recoGWlBHjuJxkL1y/">
+                    Graphs IV
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/recndTnO1V8oDbBPb">
+                7.&nbsp;&nbsp;Computer Architecture
+              </a>
+              <ul class="nav bd-sidenav">
+
+                <li>
+                  <a href="/cs/module/recsuJbrrFgbFUCRX/">
+                    Computer Architecture: Basics, Number Bases
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/rec2NHr4Eyib7XdED/">
+                    Computer Architecture: Bitwise Operations
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recvQUkzz23NTj20G/">
+                    Computer Architecture: The System Stack
+                  </a>
+                </li>
+                <li>
+                  <a href="/cs/module/recGPVAdvQcmopSIO/">
+                    Computer Architecture: Subroutines, CALL/RET
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/cs/sprint/reco0t22NdXmr8VyL">
+                8.&nbsp;&nbsp;CS Unit 2 Build
+              </a>
+              <ul class="nav bd-sidenav">
+
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <main class="content-container flex-wrapper" role="main">
+        <div class="sticky-nav">
+          <div class="sprint-nav">
+            <ul class="section-nav">
+              <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+              <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+              <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+              <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="wrapper limit-width">
+          <div class="flex-wrapper">
+            <div class="limit-width">
+              <div class="jumbotron">
+                <h1 class="bd-title" id="content">Hash Tables I</h1>
+                <span class="lead">
+                  <p class="bd-lead"></p>
+                </span>
+                <strong>At the end of this module, you should be able to:</strong>
+                <ul>
+                  <li>implement a hashing function, a hash table (without collision resolution), and describe its
+                    performance</li>
+                </ul>
+              </div>
+              <div class="alert alert-warning" role="alert">
+                <h4>Pro Tip</h4>
+                <p>If you have questions about how to do something, try to batch them so you only interrupt your manager
+                  once.</p>
+              </div>
+              <h2 class="display-4">
+                <a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Prepare</h2>
+              <p class="lead">Review each preclass resource before class.</p>
+              <div class="preclass">
+                <ul class="list-group list-group-flush">
+                </ul>
+              </div>
+              <h2 class="display-4">
+                <a id="learn" class="anchor" href="#learn" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Learn</h2>
+              <h4 class="mark mb-3 p-2">Learn to implement a hashing function, a hash table (without collision
+                resolution), and describe its performance</h4>
+              <h5>Overview</h5>
+              <p>Imagine you are a designer, and you want a quick way of remembering all the hex codes for your favorite
+                colors. If you had the colors (like <code class="highlighter-rouge">"aqua"</code>, <code
+                  class="highlighter-rouge">"beige"</code>, and <code class="highlighter-rouge">"chartreuse"</code>) in
+                an unsorted collection, you would have to start from the beginning and look through each item whenever
+                you needed to look up a color. This searching process would take linear time (<code
+                  class="highlighter-rouge">O(n)</code>). If you had the colors sorted alphabetically, you could do a
+                binary search, and that would take logarithmic time (<code class="highlighter-rouge">O(log n)</code>).
+              </p>
+              <p>The binary search method is pretty fast, but what if there was a way to retrieve the color you wanted
+                in constant time (<code class="highlighter-rouge">O(1)</code>).</p>
+              <p>In Python, a list of your colors would look like this:</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="p">[(</span><span class="s">"aqua"</span><span class="p">,</span> <span class="s">"#00FFFF"</span><span class="p">),</span> <span class="p">(</span><span class="s">"beige"</span><span class="p">,</span> <span class="s">"#F5F5DC"</span><span class="p">),</span> <span class="p">(</span><span class="s">"chartreuse"</span><span class="p">,</span> <span class="s">"#7FFF00"</span><span class="p">)]</span>
+</code></pre>
+                </div>
+              </div>
+              <p>As we said earlier, if this list of tuples was sorted alphabetically by the color name, we could use
+                binary search to get the hex color value of a color in logarithmic time (<code
+                  class="highlighter-rouge">O(log n)</code>). But, we want a data structure for our colors that give us
+                the ability to look up a color’s hex value in constant time (<code
+                  class="highlighter-rouge">O(1)</code>).</p>
+              <h3 id="hash-functions">Hash Functions</h3>
+              <p>A hash function is a function where the input is any data, and the output is a number.</p>
+              <p>So, in our case, we would want a hash function where I could input <code
+                  class="highlighter-rouge">"aqua"</code> and receive a number like <code
+                  class="highlighter-rouge">4</code> as the output.</p>
+              <p>The requirements for a hash function are:</p>
+              <ul>
+                <li>A hash function must be consistent (deterministic). Every time it receives the same input (like
+                  <code class="highlighter-rouge">"aqua"</code>), it must return the same output (like <code
+                    class="highlighter-rouge">4</code>). If it’s not deterministic, it is not a hash function.</li>
+                <li>Different input data should return different numbers. For example, if the input <code
+                    class="highlighter-rouge">"aqua"</code> returns <code class="highlighter-rouge">4</code>, then the
+                  input <code class="highlighter-rouge">"beige"</code> should <em>not</em> return <code
+                    class="highlighter-rouge">4</code>.</li>
+                <li>A hash function must return numbers that are within a specific range.</li>
+              </ul>
+              <p>The reason the hash function should return different numbers when given different input data is to
+                minimize collisions. (We provide more detail about collisions in a different objective.) When a hash
+                function maps each different input data to a different number, it is called a perfect hash function. In
+                practice, unless we know all the possible data inputs, we can’t create a perfect hash function.</p>
+              <h3 id="a-simple-hash-table">A Simple Hash Table</h3>
+              <p>What’s the point of a hashing function? How does a function that maps data to a number get us any
+                closer to a data structure with constant lookup time?</p>
+              <p>We can combine a hash function with an array to achieve this. Imagine that we know we have five colors
+                to store in our data structure. We can start with a list that has five empty slots.</p>
+              <p><img
+                  src="https://tk-assets.lambdaschool.com/bbdeb957-5905-4913-a52c-bf51585c36a5_S5-M1-O1-Empty-List.001.jpeg"
+                  alt="Empty List"></p>
+              <p>Now, we feed each of our colors into our hash function and use the number it returns as the list index
+                where we store the associated hex code.</p>
+              <p><img
+                  src="https://tk-assets.lambdaschool.com/8bfbb8e4-c167-4b3c-bbdd-c5974f3aedb8_S5-M1-O1-Hash-Table-Animation.gif"
+                  alt="Hash Table Animation"></p>
+              <p>Because the hash function is deterministic, if I want to look up the hex code associated with <code
+                  class="highlighter-rouge">"beige"</code>, I merely input <code
+                  class="highlighter-rouge">"beige"</code> into the hash function and get <code
+                  class="highlighter-rouge">4</code> back. Now, I access the value stored at index <code
+                  class="highlighter-rouge">4</code> of the list and get <code
+                  class="highlighter-rouge">"#F5F5DC"</code>.</p>
+              <p>When you combine a hash function with an array, you get a data structure called a hash table (also
+                known as a hash map or dictionary). In Python, hash tables are called dictionaries.</p>
+              <h5>Follow Along</h5>
+              <h5 id="a-naive-hashing-function">A Naive Hashing Function</h5>
+              <p>As we discussed above, hashing functions take an input (usually a string) and return an integer as the
+                output. To convert a string into an integer, hashing functions operate on the individual characters that
+                make up the string.</p>
+              <p>In Python, we can encode strings into their bytes representation with the <code
+                  class="highlighter-rouge">.encode()</code> method (read more <a
+                  href="https://docs.python.org/3/howto/unicode.html#converting-to-bytes">here</a>). Once encoded, an
+                integer represents each character.</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="n">bytes_representation</span> <span class="o">=</span> <span class="s">"hello"</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">byte</span> <span class="ow">in</span> <span class="n">bytes_representation</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">byte</span><span class="p">)</span>
+
+<span class="c1">### Print Output
+### 104
+### 101
+### 108
+### 108
+### 111
+</span></code></pre>
+                </div>
+              </div>
+              <p>Now that we’ve converted our string into a series of integers, we can manipulate those integers in some
+                way. For simplicity’s sake, we can use a simple accumulator pattern to get a sum of all the integer
+                values.</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="n">bytes_representation</span> <span class="o">=</span> <span class="s">"hello"</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+
+<span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">byte</span> <span class="ow">in</span> <span class="n">bytes_representation</span><span class="p">:</span>
+    <span class="nb">sum</span> <span class="o">+=</span> <span class="n">byte</span>
+
+<span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+
+<span class="c1">### Print Output
+### 532
+</span></code></pre>
+                </div>
+              </div>
+              <p>We now have code that can convert a string into an integer. We need to house this logic in a function
+                definition.</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">my_hashing_func</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
+    <span class="n">bytes_representation</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+
+    <span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">byte</span> <span class="ow">in</span> <span class="n">bytes_representation</span><span class="p">:</span>
+        <span class="nb">sum</span> <span class="o">+=</span> <span class="n">byte</span>
+
+    <span class="k">return</span> <span class="nb">sum</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Our hashing function still has a limitation. We need our hashing function to return integers within a
+                specific range. Remember, the purpose of our hashing function is to map our input data to an index value
+                on a list.</p>
+              <h5 id="modulo">Modulo</h5>
+              <p>The modulo operator returns the remainder of dividing the left-hand operand and the right-hand operand.
+                When the right-hand operand is greater than the left-hand operand, the modulo operator returns the value
+                of the left-hand operand.</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="mi">5</span> <span class="o">%</span> <span class="mi">2</span> <span class="c1"># 1
+</span><span class="mi">7</span> <span class="o">%</span> <span class="mi">4</span> <span class="c1"># 3
+</span><span class="mi">3</span> <span class="o">%</span> <span class="mi">6</span> <span class="c1"># 3
+</span><span class="mi">3</span> <span class="o">%</span> <span class="mi">7</span> <span class="c1"># 3
+</span></code></pre>
+                </div>
+              </div>
+              <p>We can use the modulo operator in our hashing function to ensure that the integer the function returns
+                is within a specific range.</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="n">original_bytes_sum</span> <span class="o">%</span> <span class="n">size_of_list</span>
+</code></pre>
+                </div>
+              </div>
+              <p>This operation ensures that the maximum return value is the last index in the list. Let’s modify our
+                function to include this operation.</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">my_hashing_func</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">list_size</span><span class="p">):</span>
+    <span class="n">bytes_representation</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+
+    <span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">byte</span> <span class="ow">in</span> <span class="n">bytes_representation</span><span class="p">:</span>
+        <span class="nb">sum</span> <span class="o">+=</span> <span class="n">byte</span>
+
+    <span class="k">return</span> <span class="nb">sum</span> <span class="o">%</span> <span class="n">list_size</span>
+</code></pre>
+                </div>
+              </div>
+              <h5 id="a-simple-hash-table">A Simple Hash Table</h5>
+              <p>Now, we have a working hashing function. We need to use it along with a list to store our color
+                information.</p>
+              <p>Here is the color information we would like to store in our hash table.</p>
+              <pre><code class="language-pseudocode">("aqua", "#00FFFF")
+("beige", "#F5F5DC")
+("chartreuse", "#7FFF00")
+("deepskyblue", "#00BFFF")
+("forestgreen", "#228B22")
+</code></pre>
+              <p>First, we need to initialize a list with five empty slots:</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="bp">None</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Now, we need to use our hashing function to map the color name strings to the correct index in the list
+                and then store the hex code value at that index. We can also retrieve the value using our hashing
+                function.</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="bp">None</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5</span>
+
+<span class="n">my_list</span><span class="p">[</span><span class="n">my_hashing_func</span><span class="p">(</span><span class="s">"aqua"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))]</span> <span class="o">=</span> <span class="s">"#00FFFF"</span> <span class="c1"># put value in list
+</span><span class="k">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="n">my_hashing_func</span><span class="p">(</span><span class="s">"aqua"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))])</span> <span class="c1"># get value from list
+</span>
+<span class="c1">### Print Output
+### #00FFFF
+</span></code></pre>
+                </div>
+              </div>
+              <h5 id="performance">Performance</h5>
+              <p>The simple hash table we just created does not handle collisions (again, we cover more about collisions
+                soon). It can search, insert, and delete all in constant time (<code
+                  class="highlighter-rouge">O(1)</code>).</p>
+              <p>Constant time does not mean that it happens instantaneously. It still takes time to run the
+                computations, of course. Constant time means that the computation takes the same amount of time
+                regardless of the size of the hash table. If your hash table has one element, it takes the same amount
+                of time to search for an item, as it would if your hash table had one trillion elements. The same is
+                true for insertions and deletions.</p>
+              <p>Why is this so? The reason is that we have the deterministic hashing function that tells us exactly
+                which list index holds the data. Whether we are searching, inserting, or deleting, we pass the key to
+                the hash function, and it returns the index where the associated value is stored (or should be stored).
+                Then we can use that index to retrieve, insert, or delete.</p>
+              <h5>Challenge</h5>
+              <ol>
+                <li>
+                  <p>Which of these hashing functions is deterministic? Why must a hashing function be deterministic?
+                  </p>
+                  <p>A.</p>
+                  <div class="language-python highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code> <span class="k">def</span> <span class="nf">my_hash</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
+     <span class="k">return</span> <span class="mi">1</span>
+</code></pre>
+                    </div>
+                  </div>
+                  <p>B.</p>
+                  <div class="language-python highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code> <span class="kn">import</span> <span class="nn">random</span>
+ <span class="k">def</span> <span class="nf">my_hash</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
+     <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+</code></pre>
+                    </div>
+                  </div>
+                  <p>C.</p>
+                  <div class="language-python highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code> <span class="k">def</span> <span class="nf">my_hash</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
+     <span class="c1"># next_empty returns the index of the next empty slot in the list
+</span>     <span class="k">return</span> <span class="n">next_empty</span><span class="p">()</span>
+</code></pre>
+                    </div>
+                  </div>
+                  <p>D.</p>
+                  <div class="language-python highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code> <span class="k">def</span> <span class="nf">my_hash</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
+     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</code></pre>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <p>Implement a simple hashing function but use a method different from summing the bytes as we did
+                    above.</p>
+                </li>
+                <li>
+                  <p>In what scenario would a hash table stop having constant time (<code
+                      class="highlighter-rouge">O(1)</code>) performance for search, insert, and delete operations?</p>
+                </li>
+              </ol>
+              <hr>
+              <h2 class="display-4">
+                <a id="project" class="anchor" href="#project" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Project</h2>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <h5><a target="_blank" href="https://github.com/LambdaSchool/cs-module-project-hash-tables">Hash
+                      Tables</a></h5>
+                  <p>Hash tables are arguably the single most important data structure known to mankind. Used to
+                    implement everything from objects in JavaScript and dictionaries in Python to Memcached over a
+                    distributed computer network, hash tables are beloved by programmers for providing key/value storage
+                    with constant big-O time complexity for insertion, deletion and search.</p>
+                </li>
+              </ul>
+              <h2 class="display-4">
+                <a id="review" class="anchor" href="#review" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Review</h2>
+              <h3 class="display-5">Class Recordings</h3>
+              <p class="lead">You can use class recordings to help you master the material.</p>
+              <div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <strong><a target="_blank" href="https://youtu.be/Cduqew4MBhg">Hash Tables I for CSPT12 w/ Tim
+                        Roy</a></strong>
+                    <p>Learn to implement a hashing function, a hash table (without collision resolution), and describe
+                      its performance</p>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="/archive/CS/module/recSwIvbSV630gdVk">All previous recordings</a>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="display-5">Demonstrate Mastery</h3>
+              <p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the
+                following:</p>
+              <ul>
+                <li>Objective challenge: <ol>
+                    <li>
+                      <p>Which of these hashing functions is deterministic? Why must a hashing function be
+                        deterministic?</p>
+                      <p>A.</p>
+                      <div class="language-python highlighter-rouge">
+                        <div class="highlight">
+                          <pre class="highlight"><code> <span class="k">def</span> <span class="nf">my_hash</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
+     <span class="k">return</span> <span class="mi">1</span>
+</code></pre>
+                        </div>
+                      </div>
+                      <p>B.</p>
+                      <div class="language-python highlighter-rouge">
+                        <div class="highlight">
+                          <pre class="highlight"><code> <span class="kn">import</span> <span class="nn">random</span>
+ <span class="k">def</span> <span class="nf">my_hash</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
+     <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+</code></pre>
+                        </div>
+                      </div>
+                      <p>C.</p>
+                      <div class="language-python highlighter-rouge">
+                        <div class="highlight">
+                          <pre class="highlight"><code> <span class="k">def</span> <span class="nf">my_hash</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
+     <span class="c1"># next_empty returns the index of the next empty slot in the list
+</span>     <span class="k">return</span> <span class="n">next_empty</span><span class="p">()</span>
+</code></pre>
+                        </div>
+                      </div>
+                      <p>D.</p>
+                      <div class="language-python highlighter-rouge">
+                        <div class="highlight">
+                          <pre class="highlight"><code> <span class="k">def</span> <span class="nf">my_hash</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
+     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</code></pre>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <p>Implement a simple hashing function but use a method different from summing the bytes as we did
+                        above.</p>
+                    </li>
+                    <li>
+                      <p>In what scenario would a hash table stop having constant time (<code
+                          class="highlighter-rouge">O(1)</code>) performance for search, insert, and delete operations?
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+                <li>Project: Hash Tables</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push( arguments );
+      }
+      gtag( 'js', new Date() );
+
+      gtag( 'config', 'UA-80850900-4' );
+    </script>
+    <script type="text/javascript">
+      function getDomain() {
+        const domainName = window.location.hostname.split( '.' )[ 1 ];
+        return `${domainName}.com`;
+      }
+    </script>
+    <script src="" integrity="" crossorigin="anonymous"></script>
+    <script>
+      window.jQuery || document.write( '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>' )
+    </script>
+    <script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script>
+    <script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
+    <script src="/assets/js/activate.js"></script>
+    <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      SimpleJekyllSearch.init( {
+        searchInput: document.getElementById( 'search-input' ),
+        resultsContainer: document.getElementById( 'results-container' ),
+        dataSource: '/search.json',
+        searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Hash Tables I">{title}</a></li>',
+        noResultsText: '',
+        limit: 10,
+        fuzzy: true,
+      } )
+    </script>
+    <script src="/assets/js/mermaid.min.js"></script>
+    <script type="text/javascript">
+      if ( window.attachEvent ) {
+        window.attachEvent( 'onload', verifySignedIn );
+      } else {
+        if ( window.onload ) {
+          var currentOnLoadFn = window.onload;
+          var newOnLoadFn = function ( evt ) {
+            currentOnLoadFn( evt );
+            verifySignedIn();
+          };
+          window.onload = newOnLoadFn;
+        } else {
+          window.onload = verifySignedIn;
+        }
+      }
+
+      function verifySignedIn() {
+        if ( isPagePublic() ) {
+          return showPageContents();
+        }
+
+        window.__user = null;
+        isSignedIn().then( ( user ) => {
+          window.__user = user;
+
+          if ( !user.signedIn ) {
+            redirectToSignIn();
+          } else if ( !user.student && !window.__openToAdmissions ) {
+            showUnauthorizedMessage();
+          } else {
+            showPageContents();
+          }
+        } );
+      }
+
+      function isPagePublic() {
+        const openCourses = [
+          'and-pre',
+          'ds-pre',
+          'fsw-pre',
+          'help',
+          'ios-pre',
+        ];
+
+        const openPages = [
+          'cs-and',
+          'cs-fsw',
+          'cs-ios',
+          'cr',
+          'ds',
+          'jx',
+          'p4s',
+          'ux',
+        ];
+
+        const pathParts = window.location.pathname.split( '/' );
+        const courseName = pathParts[ 1 ];
+        const pageName = pathParts[ pathParts.length - 1 ];
+
+        return openCourses.includes( courseName ) || openPages.includes( pageName );
+      }
+
+      function isSignedIn() {
+        const isDeployPreview = window.location.hostname.startsWith( 'deploy-preview' ) && window.location.hostname
+          .endsWith( 'netlify.com' );
+
+        if ( isDeployPreview ) return Promise.resolve( {
+          signedIn: true,
+          student: true
+        } );
+
+        return fetch( `${getAuthBaseUrl()}/whoami`, {
+            credentials: 'include'
+          } )
+          .then( ( response ) => response.text() )
+          .then( ( userAsText ) => userAsText ? JSON.parse( userAsText ) : null )
+          .then( ( userData ) => ( {
+            signedIn: Boolean( userData ),
+            student: Boolean( userData && userData.airtableId ),
+            id: userData ? userData.id : null,
+            email: userData ? userData.email : null
+          } ) )
+          .catch( ( error ) => {} );
+      }
+
+      function redirectToSignIn() {
+        const signInUrl =
+          `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+        const redirectMessage = document.querySelector( '#redirect-message' );
+        redirectMessage.style.display = "block";
+        redirectMessage.innerHTML =
+          `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+        window.location = signInUrl;
+      }
+
+      function showPageContents() {
+        document.querySelector( '#content-wrapper' ).style.visibility = 'visible';
+      }
+
+      function showUnauthorizedMessage() {
+        document.querySelector( '#unauthorized-message' ).style.display = 'block';
+      }
+
+      function getAuthBaseUrl() {
+        const domain = getDomain();
+        const authBaseUrl = `https://auth.${domain}`;
+        return authBaseUrl;
+      }
+    </script>
+    <script src="/assets/js/docs.min.js"></script>
+    <script>
+      var MathJax = {
+        tex: {
+          inlineMath: [
+            [ '$$', '$$' ],
+            [ '\[', '\])' ]
+          ]
+        },
+        "HTML-CSS": {
+          styles: {
+            ".MathJax span": {
+              color: "#000000"
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+    </script>
+    <script>
+      handleExternalLinks();
+
+      function handleExternalLinks() {
+        const domain = getDomain();
+        const links = document.querySelectorAll( 'a' );
+        return links.forEach( ( link ) => {
+          if ( !link.host.includes( domain ) ) link.target = '_blank';
+        } )
+      };
+    </script>
+  </div>
+</body>
+
+</html>

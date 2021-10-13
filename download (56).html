@@ -1,0 +1,3231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Intended as a home for Lambda School curriculum.">
+<meta name="author" content="">
+<meta name="generator" content="Jekyll v3.8.0">
+<title>Java - RDBMS and SQL Basics · Lambda School</title>
+
+<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+  analytics.page();
+  }}();
+</script>
+
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#a0001e">
+</head>
+<body>
+<noscript>Please enable JavaScript to view this page.</noscript>
+<div id="redirect-message" style="display: none;">
+You must be logged in to view this page.
+</div>
+<div id="unauthorized-message" style="display: none;">
+You must be a Lambda School student to view this page.
+</div>
+<div id="content-wrapper" style="visibility: hidden;">
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container">
+<span class="skiplink-text">Skip to main content</span>
+</div>
+</a>
+<div class="mobile-menu">
+<div class="m-drop">
+<div class="mobile-row">
+<div class="header-row" style="padding: 3px 7px">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
+</svg></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+</button>
+</div>
+</div>
+<div class="nav-row">
+<div class="results-container">
+<ul id="results-container" class="dropdown list-group"></ul>
+</div>
+<div id="mobile-course-menu" class="collapse nav-row">
+<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+<nav class="bd-links">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web API: Java</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recnLDyTtONLTMiFJ">
+1.&nbsp;&nbsp;Java Precourse Information
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recfnUAvFbeyIAHib/">
+Welcome to Java Spring
+</a>
+</li>
+<li>
+<a href="/web4java/module/recjH0lMflsFIVzDM/">
+Java Spring Course Table of Contents
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recoJ4ZqNQWX3cy6E">
+2.&nbsp;&nbsp;Java Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recAGVTYNZyJbEFpu/">
+Java - JDK and Java Classes
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec6Hrk77HupYeoN5/">
+Java Interfaces, Abstract Classes, Lambda Expression
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/web4java/module/recyJ663TrxVgpqY9/">
+Java - RDBMS and SQL Basics
+</a>
+</li>
+<li>
+<a href="/web4java/module/recqtftA9E98qpbak/">
+Java - Intro to Maven, Spring, and Tomcat Using REST API
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recRVUSWQEtosl0Cz">
+3.&nbsp;&nbsp;RDBMS and Intro to APIs
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+ <a href="/web4java/module/recb0OVmRrJzqhH4D/">
+Java - Spring Database Creation Including Seed Data
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec3THcdjv8BumGCt/">
+Java - Read Data using CRUD Operations
+</a>
+</li>
+<li>
+<a href="/web4java/module/recJihkiNn2KH2nEW/">
+Java - Inserting Deleting and Updating Data using CRUD Operations
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec2oQCFWOVShtxIx/">
+Java - Data Modeling and Auditing Fields with custom querying
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recSqm5AAEkJcIl3p">
+4.&nbsp;&nbsp;Java Frameworks
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/rec3E1WYDyoiEF1e3/">
+Java - Exception Handling
+</a>
+</li>
+<li>
+<a href="/web4java/module/rececDV2OMIUcY2eH/">
+Java - User Authentication
+</a>
+</li>
+<li>
+<a href="/web4java/module/recDboXln5wm4aKJt/">
+Java - Automated Testing
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec7pCiBPzI4DkAJT/">
+Java - Java Deployment and Best Practices
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recC5dhR9menaROwx">
+5.&nbsp;&nbsp;WEB Unit 4 Java Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-container">
+<div class="sidebar-container bd-sidebar">
+<div class="docs-sidebar">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
+<ul id="results-container" class="dropdown list-group"></ul>
+<nav class="bd-links collapse" id="bd-docs-nav">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web API: Java</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recnLDyTtONLTMiFJ">
+1.&nbsp;&nbsp;Java Precourse Information
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recfnUAvFbeyIAHib/">
+Welcome to Java Spring
+</a>
+</li>
+<li>
+<a href="/web4java/module/recjH0lMflsFIVzDM/">
+Java Spring Course Table of Contents
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recoJ4ZqNQWX3cy6E">
+2.&nbsp;&nbsp;Java Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recAGVTYNZyJbEFpu/">
+Java - JDK and Java Classes
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec6Hrk77HupYeoN5/">
+Java Interfaces, Abstract Classes, Lambda Expression
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/web4java/module/recyJ663TrxVgpqY9/">
+Java - RDBMS and SQL Basics
+</a>
+</li>
+<li>
+<a href="/web4java/module/recqtftA9E98qpbak/">
+Java - Intro to Maven, Spring, and Tomcat Using REST API
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recRVUSWQEtosl0Cz">
+3.&nbsp;&nbsp;RDBMS and Intro to APIs
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/recb0OVmRrJzqhH4D/">
+Java - Spring Database Creation Including Seed Data
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec3THcdjv8BumGCt/">
+Java - Read Data using CRUD Operations
+</a>
+</li>
+<li>
+<a href="/web4java/module/recJihkiNn2KH2nEW/">
+Java - Inserting Deleting and Updating Data using CRUD Operations
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec2oQCFWOVShtxIx/">
+Java - Data Modeling and Auditing Fields with custom querying
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recSqm5AAEkJcIl3p">
+4.&nbsp;&nbsp;Java Frameworks
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4java/module/rec3E1WYDyoiEF1e3/">
+Java - Exception Handling
+</a>
+</li>
+<li>
+<a href="/web4java/module/rececDV2OMIUcY2eH/">
+Java - User Authentication
+</a>
+</li>
+<li>
+<a href="/web4java/module/recDboXln5wm4aKJt/">
+Java - Automated Testing
+</a>
+</li>
+<li>
+<a href="/web4java/module/rec7pCiBPzI4DkAJT/">
+Java - Java Deployment and Best Practices
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4java/sprint/recC5dhR9menaROwx">
+5.&nbsp;&nbsp;WEB Unit 4 Java Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<main class="content-container flex-wrapper" role="main">
+<div class="sticky-nav">
+<div class="sprint-nav">
+<ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+<li class="toc-entry toc-h2"><a href="#guided-project">Guided Project</a></li>
+<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+</ul>
+</div>
+
+</div>
+<div class="wrapper limit-width">
+<div class="flex-wrapper">
+<div class="limit-width">
+<div class="jumbotron">
+<h1 class="bd-title" id="content">Java - RDBMS and SQL Basics</h1>
+<span class="lead">
+<p class="bd-lead"></p>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<p><a id="RDBMS_and_SQL"></a></p>
+</span>
+<strong>At the end of this module, you should be able to:</strong>
+<ul>
+<li>explain what a Relational Database is and its core components</li>
+<li>explain what SQL is and its advantages over other RDBMS</li>
+<li>query data from a single table</li>
+<li>query multiple tables data</li>
+<li>perform CRUD operations on an RDBMS using SQL</li>
+<li>open an existing database, or create a new one, while adding tables to a PostgreSQL database</li>
+<li>explain data normalization and normal forms while normalizing data to the 3rd Normal Form (3NF)</li>
+</ul>
+</div>
+<div class="alert alert-warning" role="alert">
+<h4>Pro Tip</h4>
+<p>When talking about your journey, don’t focus on things you don’t know yet, focus on what you’ve learned and how quickly.</p>
+</div>
+<h2 class="display-4">
+<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
+<p class="lead">Review each preclass resource before class.</p>
+<div class="preclass">
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cfajuXDXjko" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZwMMR5C8KiM" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/p1gVOn8jzwo" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5CGlHBeijL0" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+</ul>
+</div>
+<h2 class="display-4">
+<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
+<h4 class="mark mb-3 p-2">Learn to explain what a Relational Database is and its core components</h4>
+<p><a id="RDBMS"></a></p>
+<h5>Overview</h5>
+<p>Terms to know at the end of this objective:</p>
+<ul>
+<li>RDBMS</li>
+<li>Database</li>
+<li>Table (Relationship)</li>
+<li>Column (Attribute)</li>
+<li>Row (tuple)</li>
+<li>Primary Key</li>
+<li>Foreign key</li>
+<li>Index</li>
+<li>Query</li>
+<li>View</li>
+<li>Stored Procedure</li>
+<li>Triggers</li>
+</ul>
+<p>A Rest API Backend system consists of two main parts:</p>
+<ol>
+<li>A database to persistently store data and;</li>
+<li>An API application to access that stored data.</li>
+</ol>
+<p>Most of the work we do in class is related to building the API Application. This Module is related to the database. Each one of these should be able to stand alone. Different APIs could access your database. As we will see when we start testing and deploying our applications, our API will be able to access different databases.</p>
+<h3 id="structure">Structure</h3>
+<p>A RDBMS is a Relational Database Management System.</p>
+<ul>
+<li>Many types of databases exist
+<ul>
+<li>Relational - by far the most common so the one we study</li>
+<li>NoSQL - something to investigate on your own. See MongoDB</li>
+<li>Object Oriented - yes like Java is Object Oriented. These never really gained popularity</li>
+<li>Others depending on who you ask!</li>
+</ul>
+</li>
+</ul>
+<p>A RDBMS is a server that manages 1 or more databases. So for example, an RDBMS might manage:</p>
+<ul>
+<li>Dogs Database</li>
+<li>Cats Database</li>
+<li>Rabbits Database</li>
+</ul>
+<p>In the example above we saw 3 databases in our RDBMS. Sometimes, in fact, fairly often, we will see only 1 database per RDBMS. Even though that is common do not get lulled into believing databases are the same thing as database management systems. Think of the RDBMS as a server vs the databases as applications found on that server.</p>
+<p>Popular RDBMS include:</p>
+<ul>
+<li>PostgresSQL (the one we will be studying)</li>
+<li>MySQL</li>
+<li>SQLite</li>
+<li>Oracle</li>
+<li>MS SQL Server</li>
+</ul>
+<p>We interact mostly with the databases themselves, but that interaction is managed by the RDBMS.</p>
+<h3 id="the-database">The Database</h3>
+<p>A Database is a collection of data organized for easy retrieval and manipulation. A person who manages a database is called a Database Administrator (DBA).</p>
+<ul>
+<li>Relational Databases are a special type of database and are the most common.
+<ul>
+<li>Based off of Relational Algebra</li>
+<li>Contains a collections of tables, which contain columns and rows</li>
+<li>Accessed through SQL</li>
+</ul>
+</li>
+</ul>
+<h4 id="database-structure">Database Structure</h4>
+<p>Databases contain tables. A table is a collection of rows which contain columns. Below is a sample of a table called bunnies</p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>BarnBarn</td>
+<td>10.5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Cinnamon</td>
+<td>11.0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<strong>Columns</strong> are
+<ul>
+<li>in the example
+<ul>
+<li>Id</li>
+<li>Name</li>
+<li>weight</li>
+</ul>
+</li>
+<li>Each column represents a field or attribute that is common to all row, records.</li>
+<li>Columns should have a descriptive name and a data type appropriate for the attribute it represents.</li>
+</ul>
+</li>
+<li>
+<strong>Rows</strong> are
+<ul>
+<li>in the example
+<ul>
+<li><code class="highlighter-rouge">1 BarnBarn 10.5</code></li>
+<li><code class="highlighter-rouge">2 Cinnamon 11.0</code></li>
+</ul>
+</li>
+<li>Each row in a table represents one distinct record.</li>
+<li>Tables normally have more rows than columns</li>
+<li>
+<p>Tables have Primary Keys t”hat uniquely identify each row. The <code class="highlighter-rouge">id</code> field in the example.</p>
+</li>
+<li>The relationships with other tables are represented by <strong>Foreign Keys</strong>. That is when we include the primary key from another table in our table to show which rows are related to each other.</li>
+<li>For example assume we have a color table like below
+<ul>
+<li>
+<code class="highlighter-rouge">bunnyid</code> is a foreign key to the bunny table</li>
+<li>BarnBarn (bunnyid 1) has the colors white and brown</li>
+<li>Cinnamon (bunnyid 2) has the color brown.</li>
+<li>We get the names BarnBarn and Cinnamon by looking them up in the bunny table using the bunnyid</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>color</th>
+<th>bunnyid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>white</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>brown</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>brown</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>A note about terms and how Java, Databases and Relational Algebra are related. The chart below shows what terms are used for what in each discipline.</p>
+<table>
+<thead>
+<tr>
+<th>RDBMS</th>
+<th>Relational Algebra</th>
+<th>Java</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Table</td>
+<td>Relation</td>
+<td>Class</td>
+</tr>
+<tr>
+<td>Column</td>
+<td>Attribute</td>
+<td>Field</td>
+</tr>
+<tr>
+<td>Row</td>
+<td>Tuple</td>
+<td>Object</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<strong>Indexes</strong> are special database object used to speed up data searching.
+<ul>
+<li>If you normally do searches using a particular piece of data, you would normally index that data. How to index is very specific to the RDBMS or programming language, framework you are using.</li>
+<li>In most cases, we will allow Spring Data to generate indexes for us.</li>
+</ul>
+</li>
+<li>
+<strong>Views</strong> are special database objects that looks and feels like a table but do not store data. These are special queries that combine, filter, sort table data.
+<ul>
+<li>Note a query is simply a request for information from a database. Think of a GET in REST APIs</li>
+<li>can be queried like a table.</li>
+<li>can combine data from two or more tables.</li>
+<li>use to simplify data access</li>
+</ul>
+</li>
+<li>
+<strong>Stored Procedures</strong> or Functions are written in a form of SQL to perform a series of operations.
+<ul>
+<li>Stored in the database under a unique name and can be called like built in functions.</li>
+<li>Often used to perform data intensive operations and return only the result to clients.</li>
+</ul>
+</li>
+<li>
+<strong>Triggers</strong> are a special type of store procedure.
+<ul>
+<li>Executes automatically in response to events like inserting/updating/deleting data.</li>
+</ul>
+</li>
+</ul>
+<p>Lots of new terms here. You might want to scan through again. The rest of the course assumes you have familiarity with these terms! Before moving on, make sure sure you have PostgreSQL installed! You can find the installation instructions under the software installs for this sprint.</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://www.mongodb.com/blog/post/quick-start-java-and-mongodb--starting-and-setup" target="blank_">MongoDB and Java</a><br> MongoDB and Java</li>
+<li>
+<a href="https://www.guru99.com/dbms-tutorial.html" target="blank_">All Things RDBMS Related</a><br> All Things RDBMS Related from Guru99</li>
+<li>
+<a href="https://www.studytonight.com/dbms/overview-of-dbms.php" target="blank_">Study DBMS</a><br> Study Tonight Overview of DBMS</li>
+<li>
+<a href="https://en.wikipedia.org/wiki/Relational_database" target="blank_">Wikipedia</a><br> Wikipedia does have good explanations!</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to explain what SQL is and its advantages over other RDBMS</h4>
+<p><a id="SQL"></a></p>
+<h5>Overview</h5>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Web browser - Chrome, Safari, Opera, and Edge. Firefox is not supported</li>
+</ul>
+<h3 id="terms-and-concepts">Terms and Concepts</h3>
+<h4 id="what-is-sql">What is SQL?</h4>
+<p><strong>SQL</strong> stands for Structured Query Language. It is used to communicate with a database inside the RDBMS</p>
+<ul>
+<li>Advantages of SQL
+<ul>
+<li>High speed</li>
+<li>No coding needed</li>
+<li>Well defined standards – ISO and ANSI</li>
+<li>Portability</li>
+<li>Interactive language</li>
+<li>Multiple Data Views possible</li>
+</ul>
+</li>
+<li>SQL can be divided into different types:
+<ul>
+<li>DML (DATA MANIPULATION LANGUAGE)
+<ul>
+<li>SELECT, INSERT, UPDATE, DELETE</li>
+</ul>
+</li>
+<li>DDL (DATA DEFINITION LANGUAGE)
+<ul>
+<li>CREATE, ALTER, DROP</li>
+</ul>
+</li>
+<li>DCL (DATA CONTROL LANGUAGE)
+<ul>
+<li>GRANT, REVOKE</li>
+</ul>
+</li>
+<li>TCL (TRANSACTION CONTROL LANGUAGE)
+<ul>
+<li>BEGIN, TRAN, COMMIT, ROLLBACK</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Note: We will be using DML to query our data and DDL to manage the schema, or structure, of our tables.</p>
+<ul>
+<li>Some of the most common SQL statements or keywords
+<ul>
+<li>
+<code class="highlighter-rouge">SELECT</code> - extracts data from a database</li>
+<li>
+<code class="highlighter-rouge">UPDATE</code> - updates data in a database</li>
+<li>
+<code class="highlighter-rouge">DELETE</code> - deletes data from a database</li>
+<li>
+<code class="highlighter-rouge">INSERT INTO</code> - inserts new data into a database</li>
+<li>
+<code class="highlighter-rouge">CREATE DATABASE</code> - creates a new database</li>
+<li>
+<code class="highlighter-rouge">ALTER DATABASE</code> - modifies a database</li>
+<li>
+<code class="highlighter-rouge">CREATE TABLE</code> - creates a new table</li>
+<li>
+<code class="highlighter-rouge">ALTER TABLE</code> - modifies a table</li>
+<li>
+<code class="highlighter-rouge">DROP TABLE</code> - deletes a table</li>
+<li>
+<code class="highlighter-rouge">CREATE INDEX</code> - creates an index (search key)</li>
+<li>
+<code class="highlighter-rouge">DROP INDEX</code> - deletes an index</li>
+</ul>
+</li>
+</ul>
+<h3 id="examples-of-dml">Examples of DML</h3>
+<h4 id="overview-query-a-single-table">Overview Query a single table</h4>
+<p>Select all the rows with all their columns from a customer table:</p>
+<ul>
+<li>Notice the keywords <code class="highlighter-rouge">SELECT</code> and <code class="highlighter-rouge">FROM</code> are in uppercase and the data, table, name <code class="highlighter-rouge">customers</code> is lowercase. This is a common convention but SQL is generally case insensitive.</li>
+<li>
+<code class="highlighter-rouge">SELECT</code> tells us what columns we want
+<ul>
+<li>The <code class="highlighter-rouge">*</code> is a wild card in case meaning all available columns.</li>
+</ul>
+</li>
+<li>
+<code class="highlighter-rouge">FROM</code> tells us from which table to get the data</li>
+</ul>
+<pre><code class="language-SQL">SELECT *
+FROM customers
+</code></pre>
+<h4 id="overview-query-multiple-tables">Overview Query multiple tables</h4>
+<p>Join, combine, the orders and customer table based on the primary key for customer. Return the results ordered by customer’s first name and include only the columns order number, total amount, first name, and last name in the results</p>
+<ul>
+<li>SELECT tells us what columns we want
+<ul>
+<li>o.orderid - the order id column from the o table which is the orders table</li>
+<li>c.customername - the customer name column from the c table which is the customers table</li>
+<li>c.contactname - the contact name column from the c table which is the customers table</li>
+</ul>
+</li>
+<li>FROM tells us from which tables to get the data
+<ul>
+<li>orders which we give the alias o. Normally when we give a table an alias, or nickname to use elsewhere in the query, we use the first letter of the table.</li>
+<li>customers which we give the alias c.</li>
+</ul>
+</li>
+<li>ON tells us how are tables are related and on what columns the tables are to be joined, combined
+<ul>
+<li>o.CustomerId the foreign key to the customer table found in the orders table</li>
+<li>c.CustomerId the primary key of the customer table</li>
+<li>The columns do NOT have to have the same name but must be the same data type!</li>
+</ul>
+</li>
+<li>ORDER BY tells us how to order our returned data. By default the data is returned unordered. By default we cannot know what the order will be!
+<ul>
+<li>c.customername - order by the customername column in the c table which is the customers table</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-SQL">SELECT o.orderid, c.customername, c.contactname
+FROM orders o JOIN customers c
+ON o.customerid = c.customerid
+ORDER BY c.customername
+</code></pre>
+<h5>Follow Along</h5>
+<h3 id="a-single-table">A Single table</h3>
+<p>To practice with SQL, we are going to use a popular online SQL Editor - W3School’s Type-SQL Editor. Not only does W3Schools provide a good online editor, they also provide good explanations of SQL statements. So let’s try them out.</p>
+<ol>
+<li>Surf to the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a>
+</li>
+<li>Now enter the sql code below. For this one, it is already entered for you.</li>
+<li>Click on the green button that says <code class="highlighter-rouge">RUN SQL &gt;&gt;</code>
+</li>
+<li>Fix any errors and keep trying until you a list of customers in the Results panel.</li>
+<li>Stay on this page, we have more to try!</li>
+<li>You will learn more by typing in the SQL instead of copying and pasting!</li>
+</ol>
+<pre><code class="language-SQL">SELECT *
+FROM customers
+</code></pre>
+<h4 id="multiple-tables">Multiple tables</h4>
+<ul>
+<li>Surf to the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a>
+<ul>
+<li>You may already be there.</li>
+</ul>
+</li>
+<li>Now enter the sql code below and try it out!</li>
+</ul>
+<pre><code class="language-SQL">SELECT o.orderid, c.customername, c.contactname
+FROM orders o JOIN customers c
+ON o.customerid = c.customerid
+ORDER BY c.customername
+</code></pre>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="http://www.postgresqltutorial.com/" target="blank_">SQL Tutorial</a><br> THE Online PostgreSQL Tutorial</li>
+<li>
+<a href="http://pgexercises.com/" target="blank_">PostgreSQL Exercises</a><br> PostgreSQL Exercises</li>
+<li>
+<a href="https://sqlzoo.net/" target="blank_">SQL Tutorial</a><br> Another Good SQL Tutorial</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to query data from a single table</h4>
+<p><a id="Query_Single_Table"></a></p>
+<h5>Overview</h5>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Web browser - Chrome, Safari, Opera, or Edge. Firefox is not supported.</li>
+</ul>
+<p>Terms to know at the end of this objective</p>
+<ul>
+<li>Query</li>
+<li>SELECT</li>
+<li>FROM</li>
+<li>WHERE</li>
+<li>GROUP BY</li>
+<li>HAVING</li>
+<li>ORDER BY</li>
+<li>Alias</li>
+<li>Aggregate function</li>
+</ul>
+<h3 id="overview-a-basic-query">Overview A Basic Query</h3>
+<p>A <strong>Query</strong> is a way to request information for a database.</p>
+<pre><code class="language-SQL">SELECT &lt;selection&gt;
+FROM &lt;table name&gt;;
+</code></pre>
+<pre><code class="language-SQL">SELECT first_name, last_name, salary
+FROM workers;
+</code></pre>
+<ul>
+<li>
+<code class="highlighter-rouge">SELECT</code> tells us what columns we want. We list the column separated by a comma</li>
+<li>
+<code class="highlighter-rouge">FROM</code> tells us from which table to get the data</li>
+<li>
+<code class="highlighter-rouge">;</code> SQL statements typically end with a semicolon</li>
+<li>Conventionally SQL <em>keywords</em> are in uppercase while <em>data</em>, <em>tables</em>, and <em>columns</em>, are in lowercase. But not always. Case technically does not matter.</li>
+</ul>
+<h3 id="overview-extending-the-query">Overview Extending The Query</h3>
+<p>We can extend our basic query with clauses for the following:</p>
+<ul>
+<li>sorting, ordering, data</li>
+<li>filtering data</li>
+<li>aggregating data</li>
+<li>among other functions</li>
+</ul>
+<h4 id="overview-ordering-our-data">Overview Ordering our data</h4>
+<ul>
+<li>
+<code class="highlighter-rouge">SELECT</code> tells us what columns we want
+<ul>
+<li>The <code class="highlighter-rouge">*</code> is a wild card indicating selection of all available columns.</li>
+</ul>
+</li>
+<li>
+<code class="highlighter-rouge">ORDER BY</code> tells us in what order to return the data. Without it data is returned in an unknown order. The order is the order the RDBMS saved the data in the database. Thus the order is dependent upon how saving is done by the RDBMS and space available on the computer.
+<ul>
+<li>By default sorting is ascending. To sort descending, include the <code class="highlighter-rouge">DESC</code> key word after the column name</li>
+<li>Multilevel sorting is supported
+<ul>
+<li>Rows are sorted by the first column</li>
+<li>Then within the first column, ordered by the second column</li>
+</ul>
+</li>
+<li>You can reference columns by the number, that is the order in which they appear in the <code class="highlighter-rouge">SELECT</code> list
+<ul>
+<li>The first column in the list is 1</li>
+<li>The second column in the list is 2 and so on</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<code class="highlighter-rouge">;</code> SQL statements typically end with a semicolon</li>
+</ul>
+<h4 id="overview-filtering-our-data">Overview Filtering our data</h4>
+<p>Adding a <code class="highlighter-rouge">WHERE</code> clause allows us to filter out the data we do not want. The <code class="highlighter-rouge">WHERE</code> clause allows us to specify just the data we want to return.</p>
+<p>The <code class="highlighter-rouge">WHERE</code> clause is followed by any expression that returns a boolean, typically comparing column in the table to a constant or another column.</p>
+<p>We combine this <code class="highlighter-rouge">WHERE</code> clause with the <code class="highlighter-rouge">SELECT</code>, <code class="highlighter-rouge">FROM</code>, and <code class="highlighter-rouge">ORDER BY</code> clauses to produce complete queries.</p>
+<p>The <code class="highlighter-rouge">WHERE</code> recognizes <code class="highlighter-rouge">AND</code> to combine statement, <code class="highlighter-rouge">OR</code> to check one <em>or</em> the other, and <code class="highlighter-rouge">NOT</code> to reverse the output of the statement. For example</p>
+<pre><code class="language-SQL">SELECT *
+FROM workers
+WHERE salary &gt; 50000
+ORDER BY last_name;
+</code></pre>
+<p><code class="highlighter-rouge">SELECT *</code> selects all columns<br>
+<code class="highlighter-rouge">FROM workers</code> says select from the workers table<br>
+<code class="highlighter-rouge">WHERE salary &gt; 50000</code> include only those workers with salary over 50,000</p>
+<pre><code class="language-SQL">SELECT *
+FROM workers
+WHERE salary &gt; 50000 AND country = 'USA';
+</code></pre>
+<p><code class="highlighter-rouge">WHERE salary &gt; 50000 AND country = 'USA'</code> include only those workers with salary over 50,000 and in country USA</p>
+<h4 id="overview-aggregating-our-data">Overview Aggregating Our Data</h4>
+<p>SQL provides a number of aggregating functions, a way to get overall ideas about our data. For example:</p>
+<ul>
+<li>
+<code class="highlighter-rouge">COUNT(*)</code> - how many records fit our criteria</li>
+<li>
+<code class="highlighter-rouge">DISTINCT &lt;column name&gt;</code> - a unique list of the data in the columns provided</li>
+<li>
+<code class="highlighter-rouge">COUNT(DISTINCT &lt;column name&gt;)</code> - a count of the unique values in the column provided</li>
+<li>
+<code class="highlighter-rouge">AVG(&lt;column name&gt;)</code> - calculates the average of the values in the provided column</li>
+<li>
+<code class="highlighter-rouge">MIN(&lt;column name&gt;)</code> - gets the minimum value of the column provided. works with strings as well as numbers!</li>
+<li>
+<code class="highlighter-rouge">MAX(&lt;column name&gt;)</code> - gets the maximum value of the column provided. works with strings as well as numbers!</li>
+<li>
+<code class="highlighter-rouge">SUM(&lt;column name&gt;</code> - calculates the sum of the values in the provided column</li>
+<li>And of course you can combine the above with <code class="highlighter-rouge">SELECT</code>, <code class="highlighter-rouge">FROM</code>, <code class="highlighter-rouge">ORDER BY</code>, and <code class="highlighter-rouge">WHERE</code> to get a full picture of your data.</li>
+</ul>
+<h4 id="filtering-aggregated-data">Filtering Aggregated Data</h4>
+<p>Now let’s say I want a list of worker salaries where more than one worker makes that salary who are in the country USA. Order by the number of workers in that salary from most workers to least.</p>
+<ul>
+<li>In the query below, notice the required addition of the <code class="highlighter-rouge">HAVING</code> statement telling us by what aggregate function do we want to filter our data.
+<ul>
+<li>An <strong>aggregate function</strong> is a function that summarizes, or aggregates, data in order to get a better overview of the data</li>
+<li>
+<code class="highlighter-rouge">WHERE</code> filters by columns</li>
+<li>
+<code class="highlighter-rouge">HAVING</code> filters by aggregate functions</li>
+<li>You can have both in the SQL statement</li>
+</ul>
+</li>
+<li>To make the report headers more readable, we can put in an alias, or nickname, for our aggregate function. In this case I called it <code class="highlighter-rouge">numemps</code>
+<ul>
+<li>This alias idea works for all columns. In this query I am giving an alias of money to salary.</li>
+<li>Notice how I can use the alias in place of the actual column name in the query!</li>
+</ul>
+</li>
+<li>
+<p>Order of statements do matter (the code will not compile if not in the correct order), so in required ordered</p>
+<ul>
+<li>
+<code class="highlighter-rouge">SELECT</code> - what columns do we want</li>
+<li>
+<code class="highlighter-rouge">FROM</code> - table where to find the data</li>
+<li>
+<code class="highlighter-rouge">WHERE</code> - filter what data is returned from the table</li>
+<li>
+<code class="highlighter-rouge">GROUP</code> BY - on what column does the aggregate function operate</li>
+<li>
+<code class="highlighter-rouge">HAVING</code> - how to filter based off of the aggregate function</li>
+<li>
+<code class="highlighter-rouge">ORDER</code> BY - how to order the returned data</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-SQL">SELECT salary money, count(*) numemps
+FROM workers
+WHERE country = 'USA'
+GROUP BY money
+HAVING numemps &gt; 1
+ORDER BY numemps DESC;
+</code></pre>
+<h4 id="querying-tables-with-wildcards">Querying tables with Wildcards</h4>
+<p>Return all workers with names that include letters <code class="highlighter-rouge">jo</code> preceded by any number of characters and followed by a single character that is preceded by the letter n and any number of characters after that. The names “john”, “johnny”, and “jonathan” would all match.</p>
+<ul>
+<li>The <code class="highlighter-rouge">%</code> symbol is used to match multiple characters, a single character or no characters at all.</li>
+<li>the <code class="highlighter-rouge">_</code> (underscore) symbol is used to match exactly one character.</li>
+</ul>
+<p>The SQL then says:</p>
+<ul>
+<li>
+<code class="highlighter-rouge">SELECT</code> tells us what columns we want
+<ul>
+<li>The <code class="highlighter-rouge">*</code> is a wild card meaning all available columns.</li>
+</ul>
+</li>
+<li>
+<code class="highlighter-rouge">FROM</code> tells us from which table to get the data in our case <code class="highlighter-rouge">workers</code>
+</li>
+<li>
+<code class="highlighter-rouge">WHERE</code> tells us how to filter the data
+<ul>
+<li>
+<code class="highlighter-rouge">first_name</code> is the column, data, we are going to use to filter the data</li>
+<li>
+<code class="highlighter-rouge">like '%jo_n%’</code> is how we are going to filter the data</li>
+</ul>
+</li>
+<li>
+<code class="highlighter-rouge">;</code> SQL statements typically end with a semicolon</li>
+</ul>
+<pre><code class="language-SQL">SELECT *
+FROM workers
+WHERE first_name like '%jo_n%';
+</code></pre>
+<h5>Follow Along</h5>
+<h3 id="we-are-going-to-create-a-workers-table">We are going to create a workers table</h3>
+<ul>
+<li>Navigate to the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a>
+</li>
+<li>Clear any code in editor</li>
+<li>Now enter this SQL code to create the workers table</li>
+</ul>
+<pre><code class="language-SQL">CREATE TABLE workers
+(
+    first_name varchar(255),
+    last_name varchar(255),
+    salary int,
+    department varchar(255),
+    country varchar(255)
+)
+</code></pre>
+<ul>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to execute, run, your SQL statements!</li>
+</ul>
+<p>Results should be:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You have made changes to the database.
+</code></pre></div></div>
+<ul>
+<li>Enter the SQL code below to populate, put data into, “seed”, the workers table. This SQL you can copy and paste! This is Data Manipulation Language (DML) code</li>
+</ul>
+<pre><code class="language-SQL">INSERT INTO workers
+VALUES ('BarnBarn', 'Rabbit', 100000, 'MANAGEMENT', 'USA'),
+       ('Cinnabun',  'Rabbit', 100000, 'MANAGEMENT', 'USA'),
+       ('Ginger', 'Dog', 45000, 'SECURITY', 'CANADA'),
+       ('Dottie', 'Dog', 45000, 'HR', 'USA'),
+       ('Tiger', 'Cat', 150000, 'BOSS', 'USA');
+</code></pre>
+<ul>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to execute, run, your SQL statements!</li>
+</ul>
+<p>Results should be:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You have made changes to the database. Rows affected: 5
+</code></pre></div></div>
+<h3 id="now-lets-query-a-single-table">Now let’s query a single table</h3>
+<ul>
+<li>While still on the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a> with the workers table created, enter the following SQL</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to see your Results!</li>
+</ul>
+<pre><code class="language-SQL">SELECT first_name, last_name, salary
+FROM workers;
+</code></pre>
+<ul>
+<li>Keep trying until you get the following results!</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+<th>salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BarnBarn</td>
+<td>Rabbit</td>
+<td>100000</td>
+</tr>
+<tr>
+<td>Cinnabun</td>
+<td>Rabbit</td>
+<td>100000</td>
+</tr>
+<tr>
+<td>Ginger</td>
+<td>Dog</td>
+<td>45000</td>
+</tr>
+<tr>
+<td>Dottie</td>
+<td>Dog</td>
+<td>45000</td>
+</tr>
+<tr>
+<td>Tiger</td>
+<td>Cat</td>
+<td>150000</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ordering-our-data">Ordering our data</h3>
+<p>Select all columns from the workers table order by salary from largest to smallest. If workers have the same salary, then sort the workers by first name.</p>
+<ul>
+<li>While still on the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a> with the workers table created, enter the following SQL</li>
+<li>Notice the addition of the <code class="highlighter-rouge">ORDER BY</code> line</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to see your Results!</li>
+</ul>
+<pre><code class="language-SQL">SELECT *
+FROM workers
+ORDER BY salary DESC, first_name;
+</code></pre>
+<ul>
+<li>Keep trying until you get the following results!</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+<th>salary</th>
+<th>department</th>
+<th>country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tiger</td>
+<td>Cat</td>
+<td>150000</td>
+<td>BOSS</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>BarnBarn</td>
+<td>Rabbit</td>
+<td>100000</td>
+<td>MANAGEMENT</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>Cinnabun</td>
+<td>Rabbit</td>
+<td>100000</td>
+<td>MANAGEMENT</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>Dottie</td>
+<td>Dog</td>
+<td>45000</td>
+<td>HR</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>Ginger</td>
+<td>Dog</td>
+<td>45000</td>
+<td>SECURITY</td>
+<td>CANADA</td>
+</tr>
+</tbody>
+</table>
+<p>Select the <code class="highlighter-rouge">first_name</code>,<code class="highlighter-rouge"> last_name</code>, <code class="highlighter-rouge">salary</code>, and <code class="highlighter-rouge">department</code> columns from workers table order by department alphabetically. For workers in the same department, order by salary from largest to smallest.</p>
+<ul>
+<li>While still on the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a> with the workers table created, enter the following SQL</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to see your Results!</li>
+</ul>
+<pre><code class="language-SQL">SELECT name, salary, department
+FROM workers
+ORDER BY 3, 2 DESC;
+</code></pre>
+<ul>
+<li>Keep trying until you get the following results!</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+<th>salary</th>
+<th>department</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tiger</td>
+<td>Cat</td>
+<td>150000</td>
+<td>BOSS</td>
+</tr>
+<tr>
+<td>Dottie</td>
+<td>Dog</td>
+<td>45000</td>
+<td>HR</td>
+</tr>
+<tr>
+<td>BarnBarn</td>
+<td>Rabbit</td>
+<td>100000</td>
+<td>MANAGEMENT</td>
+</tr>
+<tr>
+<td>Cinnabun</td>
+<td>Rabbit</td>
+<td>100000</td>
+<td>MANAGEMENT</td>
+</tr>
+<tr>
+<td>Ginger</td>
+<td>Dog</td>
+<td>45000</td>
+<td>SECURITY</td>
+</tr>
+</tbody>
+</table>
+<h3 id="filtering-out-data">Filtering out data</h3>
+<p>Select all columns from the workers table where salary is greater than 50,000. Return the results ordered by workers last name.</p>
+<ul>
+<li>While still on the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a> with the workers table created, enter the following SQL</li>
+<li>Notice the addition of the <code class="highlighter-rouge">ORDER BY</code> line</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to see your Results!</li>
+</ul>
+<pre><code class="language-SQL">SELECT *
+FROM workers
+WHERE salary &gt; 50000
+ORDER BY last_name;
+</code></pre>
+<ul>
+<li>Keep trying until you get the following results!</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+<th>salary</th>
+<th>department</th>
+<th>country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tiger</td>
+<td>Cat</td>
+<td>150000</td>
+<td>BOSS</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>BarnBarn</td>
+<td>Rabbit</td>
+<td>100000</td>
+<td>MANAGEMENT</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>Cinnabun</td>
+<td>Rabbit</td>
+<td>100000</td>
+<td>MANAGEMENT</td>
+<td>USA</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>While still on the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a> with the workers table created, enter the following SQL</li>
+<li>Notice the use of <code class="highlighter-rouge">AND</code> on the <code class="highlighter-rouge">WHERE</code> line</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to see your Results!</li>
+</ul>
+<p>Select all columns from the workers table where salary is greater than 50,000 <em>and</em> the workers are in the country USA.</p>
+<pre><code class="language-SQL">SELECT *
+FROM workers
+WHERE salary &gt; 50000 AND country = 'USA';
+</code></pre>
+<ul>
+<li>Keep trying until you get the following results!</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+<th>salary</th>
+<th>department</th>
+<th>country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BarnBarn</td>
+<td>Rabbit</td>
+<td>100000</td>
+<td>MANAGEMENT</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>Cinnabun</td>
+<td>Rabbit</td>
+<td>100000</td>
+<td>MANAGEMENT</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>Tiger</td>
+<td>Cat</td>
+<td>150000</td>
+<td>BOSS</td>
+<td>USA</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aggregating-our-data">Aggregating Our Data</h3>
+<p>Get a distinct list of all departments from the workers table ordered by department</p>
+<ul>
+<li>While still on the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a> with the workers table created, enter the following SQL</li>
+<li>
+<p>Notice the addition of the <code class="highlighter-rouge">DISTINCT</code> keyword</p>
+</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to see your Results!</li>
+</ul>
+<pre><code class="language-SQL">SELECT DISTINCT department
+FROM workers
+ORDER BY department;
+</code></pre>
+<ul>
+<li>Keep trying until you get the following results!</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>department</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BOSS</td>
+</tr>
+<tr>
+<td>HR</td>
+</tr>
+<tr>
+<td>MANAGEMENT</td>
+</tr>
+<tr>
+<td>SECURITY</td>
+</tr>
+</tbody>
+</table>
+<p>Get a count of the distinct number of departments in the workers table</p>
+<ul>
+<li>While still on the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a> with the workers table created, enter the following SQL</li>
+<li>Notice the addition of <code class="highlighter-rouge">COUNT()</code>
+</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to see your Results!</li>
+</ul>
+<pre><code class="language-SQL">SELECT COUNT(DISTINCT department)
+FROM workers;
+</code></pre>
+<ul>
+<li>Keep trying until you get the following results!</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>COUNT(DISTINCT department)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>Produce a report that lists the unique salaries that employees earn and how many workers earn that salary.</p>
+<ul>
+<li>Notice the required addition of the <code class="highlighter-rouge">GROUP BY</code> statement telling us what column to group the data by. So the aggregate function count works on what column.</li>
+<li>
+<p>The column you are grouping by does NOT have to appear in the list of columns you are selecting. Normally it does though!</p>
+</li>
+<li>While still on the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a> with the workers table created, enter the following SQL</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to see your Results!</li>
+</ul>
+<pre><code class="language-SQL">SELECT salary, count(*)
+FROM workers
+GROUP BY salary;
+</code></pre>
+<ul>
+<li>Keep trying until you get the following results!</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>salary</th>
+<th>count(*)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>45000</td>
+<td>2</td>
+</tr>
+<tr>
+<td>100000</td>
+<td>2</td>
+</tr>
+<tr>
+<td>150000</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="filtering-aggregated-data">Filtering Aggregated Data</h3>
+<p>Now let’s say I want a list of worker salaries where more than one worker makes that salary who are in the country USA. Order by the number of workers in that salary from most workers to least.</p>
+<ul>
+<li>While still on the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a> with the workers table created, enter the following SQL</li>
+<li>Notice the <code class="highlighter-rouge">GROUP BY</code> and <code class="highlighter-rouge">HAVING</code> lines</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to see your Results!</li>
+</ul>
+<pre><code class="language-SQL">SELECT salary money, count(*) numemps
+FROM workers
+WHERE country = 'USA'
+GROUP BY money
+HAVING numemps &gt; 1
+ORDER BY numemps DESC;
+</code></pre>
+<ul>
+<li>Keep trying until you get the following resulst!</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>money</th>
+<th>numemps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100000</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>without using aliases we get this SQL query</p>
+<ul>
+<li>While still on the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a> with the workers table created, enter the following SQL</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to see your Results!</li>
+</ul>
+<pre><code class="language-SQL">SELECT salary, count(*)
+FROM workers
+WHERE country = 'USA'
+GROUP BY salary
+HAVING count(*) &gt; 1
+ORDER BY 2 DESC;
+</code></pre>
+<ul>
+<li>Keep trying until you get the following results!</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>salary</th>
+<th>count(*)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100000</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="querying-tables-with-wildcards">Querying tables with Wildcards</h3>
+<p>Return all workers with names that include letters <code class="highlighter-rouge">jo</code> preceded by any number of characters and followed by a single character that is preceded by the letter n and any number of characters after that. The names “john”, “johnny”, and “johnathan” would all match.</p>
+<ul>
+<li>While still on the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a> with the workers table created, enter the following SQL</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to see your Results!</li>
+</ul>
+<pre><code class="language-SQL">SELECT *
+FROM workers
+WHERE first_name like '%jo_n%';
+</code></pre>
+<ul>
+<li>Keep trying until you get the following results!</li>
+</ul>
+<p>No result.</p>
+<ul>
+<li>The addition of the keyword <code class="highlighter-rouge">NOT</code> means to filter out the data that does NOT match the criteria. The reverse of above!</li>
+<li>While still on the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a> with the workers table created, enter the following SQL</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to see your results!</li>
+</ul>
+<pre><code class="language-SQL">SELECT *
+FROM workers
+WHERE first_name NOT like '%jo_n%';
+</code></pre>
+<ul>
+<li>Keep trying until you get the following result!</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+<th>salary</th>
+<th>department</th>
+<th>country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BarnBarn</td>
+<td>Rabbit</td>
+<td>100000</td>
+<td>MANAGEMENT</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>Cinnabun</td>
+<td>Rabbit</td>
+<td>100000</td>
+<td>MANAGEMENT</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>Ginger</td>
+<td>Dog</td>
+<td>45000</td>
+<td>SECURITY</td>
+<td>CANADA</td>
+</tr>
+<tr>
+<td>Dottie</td>
+<td>Dog</td>
+<td>45000</td>
+<td>HR</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>Tiger</td>
+<td>Cat</td>
+<td>150000</td>
+<td>BOSS</td>
+<td>USA</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to query multiple tables data</h4>
+<p><a id="Query_Multiple_Tables"></a></p>
+<h5>Overview</h5>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Web browser - Chrome, Safari, Opera, and Edge. Firefox is not supported</li>
+</ul>
+<h3 id="joining-tables">Joining Tables</h3>
+<p>Terms to know at the end of this objective</p>
+<ul>
+<li>Joins</li>
+<li>Inner Join</li>
+<li>Outer Join</li>
+<li>Right Join</li>
+<li>Left Join</li>
+<li>Alias</li>
+</ul>
+<h3 id="join-types">
+<code class="highlighter-rouge">JOIN</code> Types</h3>
+<ul>
+<li>
+<p>A <code class="highlighter-rouge">JOIN</code> clause is used to combine rows from two or more tables, based on a related column between them.</p>
+</li>
+<li>
+<p>When joining tables you have to pick what type of join you want</p>
+<ul>
+<li>
+<strong>inner join</strong>, or the default join, means when you find the columns being matched in both tables
+<ul>
+<li>A customer id must exist in both tables before a row gets reported</li>
+</ul>
+</li>
+<li>
+<strong>left join</strong> means report all rows from the table on the left, the one right after the FROM statement, and only the rows from the other table where the columns match
+<ul>
+<li>All rows from the customers table get reported. If a row in the orders table has the same customer id as the one in the customers table then report the data from the orders table as well. If no row in the orders table matches the customer id in the customers table, leave the columns from the orders table NULL.</li>
+</ul>
+</li>
+<li>
+<strong>right join</strong> means report all rows from the table on the right, the table after the JOIN statement, and only the rows from the other table where the columns match
+<ul>
+<li>All rows from the orders table get reported. If a row in the customers table has the same customer id as the one in the orders table then report the data from the customers table as well. If no row in the customers table matches the customer id in the orders table, leave the columns from the customers table NULL.</li>
+</ul>
+</li>
+<li>
+<strong>full outer join</strong> means all rows from all tables are included.
+<ul>
+<li>All rows from the customers and orders tables are included. Where the customers id match, data from both tables is reported. If a customer id is not in either table, the data available is reported while the rest of the fields are left NULL.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The following picture is adapted from <a href="https://medium.com/@mahmethassan/sql-and-sql-injection-attack-6cae6850e308">Medium: “SQL” AND “SQL INJECTION ATTACK”</a></p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/sql_joins.png" alt="Join Images"></p>
+<h3 id="examples-of-join-sql-statements">Examples of JOIN SQL Statements</h3>
+<p>Select from the orders table order id and order date and from the customers table customer name</p>
+<ul>
+<li>joining the orders and customers tables ON the customerid in each table.</li>
+<li>INNER means to report only the rows for the tables where customerids match</li>
+</ul>
+<pre><code class="language-SQL">SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+</code></pre>
+<p>Return all customers including orders where present</p>
+<ul>
+<li>LEFT join pulls the records from the table after the FROM statement - the table listed to the left if all was listed on one line.</li>
+<li>Joining on the customerid columns in both tables</li>
+</ul>
+<pre><code class="language-SQL">SELECT customers.customerid, customers.customername, orders.orderid, orders.orderdate
+FROM customers
+LEFT JOIN orders
+ON customers.customerid=orders.customerid
+ORDER BY orders.orderid;
+</code></pre>
+<p>Return all rows from customers and orders table, matching data in a single row where appropriate.</p>
+<ul>
+<li>Notice that we can give aliases to the table names. Normally these aliases are the first letter of the table.
+<ul>
+<li>We can use these aliases anywhere we use columns!</li>
+<li>Once you alias a table you need to use the alias to reference the table throughout the query</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-SQL">SELECT c.customerid, c.customername, o.orderid, o.orderdate
+FROM customers c
+FULL OUTER JOIN orders o
+ON c.customerid=o.customerid
+ORDER BY o.orderid;
+</code></pre>
+<p>We can combine all the SQL statements together. Return all rows from customers and orders table, matching data in a single row where appropriate for orders that have a total amount greater than 100. Return the results ordered by customer name.</p>
+<pre><code class="language-SQL">SELECT *
+FROM Orders o
+FULL OUTER JOIN Customers c
+ON o.CustomerID=c.id
+WHERE o.TotalAmount &gt; 100.00
+ORDER BY c.CustomerName;
+</code></pre>
+<h5>Follow Along</h5>
+<p>Let’s try out a few JOIN statements.</p>
+<p>Select from the orders table order id and order date and from the customers table customer name</p>
+<ul>
+<li>joining the orders and customers tables ON the customerid in each table.</li>
+<li>
+<p>INNER means to report only the rows for the tables where customerids match</p>
+</li>
+<li>Surf to the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a>
+</li>
+<li>Clear any code in editor</li>
+<li>Now enter the sql code from below</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to execute, run, your SQL statements!</li>
+</ul>
+<pre><code class="language-SQL">SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+</code></pre>
+<ul>
+<li>Keep trying until you get the following results!</li>
+</ul>
+<p>Number of Records: 196</p>
+<table>
+<thead>
+<tr>
+<th>OrderID</th>
+<th>CustomerName</th>
+<th>OrderDate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10248</td>
+<td>Wilman Kala</td>
+<td>1996-07-04</td>
+</tr>
+<tr>
+<td>10249</td>
+<td>Tradição Hipermercados</td>
+<td>1996-07-05</td>
+</tr>
+<tr>
+<td>10250</td>
+<td>Hanari Carnes</td>
+<td>1996-07-08</td>
+</tr>
+<tr>
+<td>10251</td>
+<td>Victuailles en stock</td>
+<td>1996-07-08</td>
+</tr>
+<tr>
+<td>10252</td>
+<td>Suprêmes délices</td>
+<td>1996-07-09</td>
+</tr>
+<tr>
+<td>…</td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p>Now, return all customers including orders where present</p>
+<ul>
+<li>LEFT join pulls the records from the table after the FROM statement - the table listed to the left if all was listed on one line.</li>
+<li>Joining on the customerid columns in both tables</li>
+<li>Surf to the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a>
+</li>
+<li>Clear any code in editor</li>
+<li>Now enter the sql code from below</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to execute, run, your SQL statements!</li>
+</ul>
+<pre><code class="language-SQL">SELECT customers.customerid, customers.customername, orders.orderid, orders.orderdate
+FROM customers
+LEFT JOIN orders
+ON customers.customerid=orders.customerid
+ORDER BY orders.orderid;
+</code></pre>
+<ul>
+<li>Keep trying until you get the following results!</li>
+</ul>
+<p>Number of Records: 213</p>
+<table>
+<thead>
+<tr>
+<th>CustomerID</th>
+<th>CustomerName</th>
+<th>OrderID</th>
+<th>OrderDate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Alfreds Futterkiste</td>
+<td>null</td>
+<td>null</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Blauer See Delikatessen</td>
+<td>null</td>
+<td>null</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Cactus Comidas para llevar</td>
+<td>null</td>
+<td>null</td>
+</tr>
+<tr>
+<td>…</td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>90</td>
+<td>Wilman Kala</td>
+<td>10248</td>
+<td>1996-07-04</td>
+</tr>
+<tr>
+<td>81</td>
+<td>Tradição Hipermercados</td>
+<td>10249</td>
+<td>1996-07-05</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Hanari Carnes</td>
+<td>10250</td>
+<td>1996-07-08</td>
+</tr>
+<tr>
+<td>…</td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://en.wikipedia.org/wiki/Join_(SQL)" target="blank_">Wikipedia</a><br> Wikipedia on Joins</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to perform CRUD operations on an RDBMS using SQL</h4>
+<p><a id="CRUD_using_SQL"></a></p>
+<h5>Overview</h5>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>Web browser - Chrome, Safari, Opera, and Edge. Firefox is not support</li>
+</ul>
+<p>How do we manipulate data in SQL? This is the “DML” part of SQL - DML meaning data manipulation language. Let’s say we need to change an employee’s name, we need a new friend to our friend list, we need to delete a product from our shopping cart. All these are examples of when we need to manipulate data!</p>
+<ul>
+<li>CRUD
+<ul>
+<li>Create - <code class="highlighter-rouge">INSERT</code>
+</li>
+<li>Read - <code class="highlighter-rouge">SELECT</code>
+</li>
+<li>Update - <code class="highlighter-rouge">UPDATE</code>
+</li>
+<li>Delete - <code class="highlighter-rouge">DELETE</code>
+</li>
+</ul>
+</li>
+<li>Note that these are unrelated to HTTP methods. These were developed first!</li>
+</ul>
+<h3 id="create---insert">Create - INSERT</h3>
+<p>For <code class="highlighter-rouge">INSERT</code> we have a few choices</p>
+<p>Add a single record to a customers table giving the values in order of the column in the table. Use this method if you have values for all columns in the table. If you want to leave one or more columns null, pick the next method!</p>
+<pre><code class="language-SQL">INSERT INTO customers
+VALUES (9999, 'Lambda School', 'John Mitchell', '123 Main Street', 'Anywhere', '77777', 'USA');
+</code></pre>
+<p>Add multiple records to a customers table giving which columns will be added. Columns are listed in the same order in both the column list and the values. You do not have to list all columns. However, if a column is marked not NULL, you have to send it a value by including it in the column list and the value lists.</p>
+<pre><code class="language-SQL">INSERT INTO customers(customerid, customername, country)
+VALUES
+       (1111, 'Cinnabun', 'USA'),
+       (2222, 'Ginger', 'Canada'),
+       (3333, 'BarnBarn', 'USA');
+</code></pre>
+<p>Add records to a customers table using a subquery. A <strong>subquery</strong> is a regular, valid query that becomes embedded into another query.</p>
+<pre><code class="language-SQL">INSERT INTO customers (customerid, customername, country)
+    SELECT employeeid * 100, firstname, 'USA'
+    FROM   employees
+    WHERE  employeeid &gt; 5;
+</code></pre>
+<h3 id="read---select">Read - SELECT</h3>
+<p>We have looked at this in-depth in other objectives</p>
+<ul>
+<li><a href="Objective%202%20-%20SQL.md">Objective 2 - SQL</a></li>
+<li>
+<p><a href="Objective%20320-20Query20Single20Table.md">Objective 3 - Query Single Table</a></p>
+</li>
+<li>
+<code class="highlighter-rouge">SELECT</code> - what columns do we want</li>
+<li>
+<code class="highlighter-rouge">FROM</code> - table where to find the data</li>
+<li>
+<code class="highlighter-rouge">WHERE</code> - filter what data is returned from the table</li>
+<li>
+<code class="highlighter-rouge">GROUP</code> BY - on what column does the aggregate function operate</li>
+<li>
+<code class="highlighter-rouge">HAVING</code> - how to filter based off of the aggregate function</li>
+<li>
+<code class="highlighter-rouge">ORDER</code> BY - how to order the returned data</li>
+</ul>
+<pre><code class="language-SQL">SELECT &lt;columns&gt;
+FROM &lt;table&gt;
+WHERE &lt;filter&gt;
+GROUP BY &lt;aggregate functions&gt;
+HAVING &lt;aggregate functions filtering&gt;
+ORDER BY &lt;sort order&gt;;
+</code></pre>
+<h3 id="update---update">Update - UPDATE</h3>
+<p>Update the contact name and the city for where the customer’s primary key is 1</p>
+<ul>
+<li>
+<code class="highlighter-rouge">UPDATE</code> the table we are changing</li>
+<li>
+<code class="highlighter-rouge">SET</code> a list of columns that are going to be changed in the format of <code class="highlighter-rouge">column name = new value</code>
+</li>
+<li>
+<code class="highlighter-rouge">WHERE</code> says which rows are to be affected. An update will work without a WHERE line. However, that affects all rows in the table. Make sure that is what you want before running the UPDATE!</li>
+</ul>
+<pre><code class="language-SQL">UPDATE customers
+SET contactname = 'Alfred Schmidt', city= 'Frankfurt'
+WHERE customerid = 1;
+</code></pre>
+<p>Update the <code class="highlighter-rouge">primary_author</code> in <code class="highlighter-rouge">books</code> to match the name in the authors table where the book title is ‘The Hobbit’ and the author ids in each table match.</p>
+<ol>
+<li>Filter the books so we just have records with the book title The Hobbit</li>
+<li>inner join that set from books with the authors table matching on author’s id.</li>
+<li>In the subset, replace the books primary_author with the name of the author from the authors table.</li>
+</ol>
+<p>We can deduce from this that the name in the authors is correct for the book titled The Hobbit but is the author’s name is incorrect in the books table and so needs updating.</p>
+<pre><code class="language-SQL">UPDATE books
+SET    books.primary_author = authors.name
+FROM   books
+INNER JOIN authors
+ON books.author_id = authors.id
+WHERE books.title = 'The Hobbit'
+</code></pre>
+<h3 id="delete---delete">Delete - DELETE</h3>
+<p>Let’s say we wish to remove all data from the customers tables</p>
+<ul>
+<li>
+<code class="highlighter-rouge">DELETE</code> the keyword followed by NOTHING. No columns are given since the delete removes an entire row.</li>
+<li>
+<code class="highlighter-rouge">FROM</code> the table where rows are to be removed</li>
+</ul>
+<pre><code class="language-SQL">DELETE
+FROM customers;
+</code></pre>
+<p>Note that the command TRUNCATE does a similar job but is part of DDL, Data Definition Language, a different category of SQL.</p>
+<pre><code class="language-SQL">TRUNCATE TABLE Customers;
+</code></pre>
+<p>If we don’t want to delete all the rows in a tables, use a where clause!</p>
+<pre><code class="language-SQL">DELETE
+FROM customers
+WHERE customername='Alfreds Futterkiste';
+</code></pre>
+<h5>Follow Along</h5>
+<p>Let’s try out some of these statements.</p>
+<h3 id="create---insert">Create - INSERT</h3>
+<p>Add a single record to a customers table giving the values in order of the column in the table</p>
+<ul>
+<li>Surf to the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a>
+</li>
+<li>Clear any code in editor</li>
+<li>Now enter the sql code from below</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to execute, run, your SQL statements!</li>
+</ul>
+<p>No column names are given. Values must be listed in the order of the columns in the table and all columns from the table must be represented.</p>
+<pre><code class="language-SQL">INSERT INTO customers
+VALUES (9999, 'Lambda School', 'John Mitchell', '123 Main Street', 'Anywhere', '77777', 'USA');
+</code></pre>
+<ul>
+<li>You should get the result:</li>
+</ul>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You have made changes to the database. Rows affected: 1
+</code></pre></div></div>
+<p>Add multiple records to a customers table giving which columns will be added</p>
+<p>Columns are listed in the same order in both the column list and the values. You do not have list all columns. However if a column is marked not NULL, you have to send it a value by including it in the column list and the value lists.</p>
+<ul>
+<li>Surf to the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a>
+</li>
+<li>Clear any code in editor</li>
+<li>Now enter the SQL code from below</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to execute, run, your SQL statements!</li>
+</ul>
+<pre><code class="language-SQL">INSERT INTO customers(customerid, customername, country)
+VALUES
+       (1111, 'Cinnabun', 'USA'),
+       (2222, 'Ginger', 'Canada'),
+       (3333, 'BarnBarn', 'USA');
+</code></pre>
+<ul>
+<li>You should get the result:</li>
+</ul>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You have made changes to the database. Rows affected: 3
+</code></pre></div></div>
+<p>Add records to a customers table using a subquery</p>
+<p>Notice the subquery is just a valid query!</p>
+<ul>
+<li>Surf to the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a>
+</li>
+<li>Clear any code in editor</li>
+<li>Now enter the sql code from below</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to execute, run, your SQL statements!</li>
+</ul>
+<pre><code class="language-SQL">INSERT INTO customers (customerid, customername, country)
+    SELECT employeeid * 100, firstname, 'USA'
+    FROM   employees
+    WHERE  employeeid &gt; 5;
+</code></pre>
+<ul>
+<li>You should get the result:</li>
+</ul>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You have made changes to the database. Rows affected: 5
+</code></pre></div></div>
+<ul>
+<li>Try running the subquery as a stand alone <code class="highlighter-rouge">SELECT</code> query. You should get the following result:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>employeeid * 100</th>
+<th>FirstName</th>
+<th>‘USA’</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>600</td>
+<td>Michael</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>700</td>
+<td>Robert</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>800</td>
+<td>Laura</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>900</td>
+<td>Anne</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>Adam</td>
+<td>USA</td>
+</tr>
+</tbody>
+</table>
+<h3 id="update---update">Update - UPDATE</h3>
+<p>Update the contact name and the city for where the customer’s primary key is 1</p>
+<ul>
+<li>Surf to the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a>
+</li>
+<li>Clear any code in editor</li>
+<li>Now enter the sql code from below</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to execute, run, your SQL statements!</li>
+</ul>
+<pre><code class="language-SQL">UPDATE customers
+SET contactname = 'Alfred Schmidt', city= 'Frankfurt'
+WHERE customerid = 1;
+</code></pre>
+<ul>
+<li>You should get the result:</li>
+</ul>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You have made changes to the database. Rows affected: 1
+</code></pre></div></div>
+<ul>
+<li>Note you can run a <code class="highlighter-rouge">SELECT</code> query to verify that this works!</li>
+</ul>
+<p>What happens with no filter? All records contact names and cities are updated!</p>
+<pre><code class="language-SQL">UPDATE customers
+SET contactname = 'Alfred Schmidt', city= 'Frankfurt';
+</code></pre>
+<ul>
+<li>You should get the result:</li>
+</ul>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You have made changes to the database. Rows affected: 100
+</code></pre></div></div>
+<ul>
+<li>And now all of your customers contact names are Alfred Schmidt :-(</li>
+</ul>
+<h3 id="delete---delete">Delete - DELETE</h3>
+<p>Remove all data from the customer table</p>
+<ul>
+<li>Surf to the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a>
+</li>
+<li>Clear any code in editor</li>
+<li>Now enter the SQL code from below</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to execute, run, your SQL statements!</li>
+</ul>
+<pre><code class="language-SQL">DELETE
+FROM customers;
+</code></pre>
+<ul>
+<li>You should get the result:</li>
+</ul>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No result.
+</code></pre></div></div>
+<ul>
+<li>Now restore the database by clicking on the <code class="highlighter-rouge">Restore Database</code> button on the right of the screen</li>
+</ul>
+<p>Remove all data from the customer table where customer name = ‘Alfreds Futterkiste’</p>
+<p>We can combine all the elements of SQL filtering to remove just the data we want removed.</p>
+<ul>
+<li>Surf to the <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">W3Schools Try-SQL Editor</a>
+</li>
+<li>Clear any code in editor</li>
+<li>Now enter the SQL code from below</li>
+<li>Remember to click the green button <code class="highlighter-rouge">Run SQL &gt;&gt;</code> to execute, run, your SQL statements!</li>
+</ul>
+<pre><code class="language-SQL">DELETE
+FROM customers
+WHERE customername='Alfreds Futterkiste';
+</code></pre>
+<ul>
+<li>You should get the result:</li>
+</ul>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No result.
+</code></pre></div></div>
+<p>This is expected, as the record has been deleted!</p>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to open an existing database, or create a new one, while adding tables to a PostgreSQL database</h4>
+<p><a id="PostgreSQL"></a></p>
+<h5>Overview</h5>
+<h3 id="software-needed">Software Needed</h3>
+<ul>
+<li>PostgreSQL with pgAdmin</li>
+</ul>
+<h3 id="what-are-our-choices-for-rdbms">What are our choices for RDBMS?</h3>
+<p>The top 5 RDBMS (according to <a href="https://www.capterra.com/rdbms-software/">Capterra</a>)</p>
+<ul>
+<li>Amazon Relational Database</li>
+<li>Aurora from AWS</li>
+<li>SQL Server</li>
+<li>Oracle Database</li>
+<li>PostgreSQL</li>
+</ul>
+<p>We have chosen PostgreSQL because it is:</p>
+<ul>
+<li>The most popular free option</li>
+<li>Used by all tracks across Lambda School</li>
+<li>Compatible with the cloud service we use at Lambda School (Heroku)</li>
+</ul>
+<h3 id="whats-in-a-name">What’s in a name</h3>
+<ul>
+<li>
+<p>PostgreSQL</p>
+<ul>
+<li>Of course SQL comes from Structured Query Language, the programming language used to access RDBMS</li>
+<li>Postgres – This database was developed after, or POST, and as a replace for Ingres
+<ul>
+<li>Ingres – An older University of California, Berkeley project that spawned many database management systems including Sybase, MS SQL, Non-Stop SQL</li>
+</ul>
+</li>
+<li>This RDMBS is commonly called just “Postgres”. The original developer wanted it to be called PostgreSQL to emphasize that this is a RDBMS by adding SQL to the name. We can treat these names as interchangeable.</li>
+</ul>
+</li>
+</ul>
+<h3 id="accessing-postgressql">Accessing PostgresSQL</h3>
+<ul>
+<li>We can access PostgresSQL either using the postgres command line interface (CLI) or a graphical user interface (GUI). Several GUI choices exist. One of the more popular ones is pgAdmin and is the one we will be reviewing here.</li>
+<li>For this object, you will need PostgreSQL installed locally. You can find out how to install it from the Software Install instructions for this sprint.</li>
+</ul>
+<h5>Follow Along</h5>
+<h3 id="working-with-postgresql-cli">Working with PostgreSQL CLI</h3>
+<ul>
+<li>This is where the DDL, data definition language, comes into use</li>
+<li>
+<p>We are going to be using SQL commands to manage our database.</p>
+</li>
+<li>First we have to find the cli for PostgreSQL psql and change to that directory. Mine is located in the folder <code class="highlighter-rouge">/Library/PostgreSQL/12/bin so</code>
+</li>
+</ul>
+<pre><code class="language-BASH">cd /Library/PostgreSQL/12/bin
+</code></pre>
+<ul>
+<li>Now run psql</li>
+</ul>
+<pre><code class="language-SQL">./psql -U postgres
+</code></pre>
+<ul>
+<li>
+<code class="highlighter-rouge">postgres</code> is the default username for PostgreSQL</li>
+<li>You are prompted to enter the password for PostgreSQL. This is the password you created when you set up PostgreSQL. For many of us that will be <code class="highlighter-rouge">password</code>. You password may or may not be displayed on the screen.</li>
+<li>
+<p>you should a prompt similar to <code class="highlighter-rouge">postgres=#</code> meaning you are now running psql!</p>
+</li>
+<li>Let’s create a database</li>
+</ul>
+<pre><code class="language-SQL">CREATE DATABASE lambdaschool;
+</code></pre>
+<ul>
+<li>To list all databases on your server</li>
+</ul>
+<pre><code class="language-SQL">\l
+</code></pre>
+<ul>
+<li>Connect to, use, the database you just created</li>
+</ul>
+<pre><code class="language-SQL">\c lambdaschool
+</code></pre>
+<ul>
+<li>Create a table. We will create a table of humans with a primary key and a name. Then we created a table of pets with a primary key, a name, an age, and a foreign key to the pet’s human. Using the PostgreSQL CLI, enter the following.</li>
+</ul>
+<pre><code class="language-SQL">CREATE TABLE humans(
+   id serial PRIMARY KEY,
+   name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE pets(
+   petid serial PRIMARY KEY,
+   name VARCHAR(50) UNIQUE NOT NULL,
+   age integer,
+   humanid integer NOT NULL,
+   CONSTRAINT human_id_fkey FOREIGN KEY (humanid)
+      REFERENCES humans (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+);
+</code></pre>
+<ul>
+<li>Add a column type to pets. Using the PostgreSQL CLI, enter the following.</li>
+</ul>
+<pre><code class="language-SQL">ALTER TABLE pets ADD COLUMN breed VARCHAR(50);
+</code></pre>
+<ul>
+<li>To see a table’s schema and layout, use:</li>
+</ul>
+<pre><code class="language-SQL">\d pets
+</code></pre>
+<ul>
+<li>To remove all data from a table:</li>
+</ul>
+<pre><code class="language-SQL">TRUNCATE pets;
+</code></pre>
+<p><code class="highlighter-rouge">Humans</code> is involved in a foreign key relationship with <code class="highlighter-rouge">pets</code> so both must be truncated. You can remove all the <code class="highlighter-rouge">pets</code> without affecting the <code class="highlighter-rouge">humans</code> table. <code class="highlighter-rouge">Pets</code> has a key pointing to a row in the <code class="highlighter-rouge">humans</code> table. To remove a row in the <code class="highlighter-rouge">humans</code> table, no row in pets can have that human’s primary key as a foreign key.</p>
+<pre><code class="language-SQL">TRUNCATE humans CASCADE;
+</code></pre>
+<ul>
+<li>To get rid, drop, a table completely, This deletes the foreign key from pets as well.</li>
+</ul>
+<pre><code class="language-SQL">DROP TABLE humans CASCADE;
+</code></pre>
+<pre><code class="language-SQL">DROP TABLE pets;
+</code></pre>
+<h3 id="working-with-postgresql-gui">Working with PostgreSQL GUI</h3>
+<p>Let’s do a similar process as with the CLI but we’ll use pgAdmin</p>
+<ul>
+<li>Launch pgAdmin. pgAdmin was installed when you installed PostgreSQL!</li>
+</ul>
+<p>Click on the icon.
+<img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdminIcon.png" alt="pgAdmin Icon">
+This will load a web browse and launch pgAdmin.</p>
+<ul>
+<li>
+<p>Now sign on. For most of us our master password will be <code class="highlighter-rouge">password</code>. <code class="highlighter-rouge">Password</code> was the suggested password I used in the installation instructions</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-01-login.png" alt="pgAdmin Login"></p>
+</li>
+<li>
+<p>Expand Server to see what servers, are being managed by your pgAdmin. Your list will vary! These are aliases to PostgreSQL servers</p>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-02-databases.png" alt="Server on Server"></p>
+</li>
+<li>
+<p>Create a new server by</p>
+</li>
+<li>Right click on Server and Select Create &gt;
+<ul>
+<li>On the General table Name your server <code class="highlighter-rouge">LambdaSchoolLocal</code>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-03-general.png" alt="General Tab"></p>
+</li>
+<li>On the connection table
+<ul>
+<li>give your host as <code class="highlighter-rouge">localhost</code> meaning your machine</li>
+<li>enter your username for most of us will be is <code class="highlighter-rouge">postgres</code>
+</li>
+<li>enter your password for most of us will be <code class="highlighter-rouge">password</code>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-04-connection.png" alt="Connection Tab"></p>
+</li>
+<li>
+<p>Click <code class="highlighter-rouge">Save</code> to create the server</p>
+</li>
+<li>Right click on the newly created server <code class="highlighter-rouge">LambdaSchoolLocal</code>, Goto Create &gt;, Select Database…
+<ul>
+<li>On the General table, in the Database field, enter <code class="highlighter-rouge">guiLambdaSchool</code>
+</li>
+<li>Click <code class="highlighter-rouge">Save</code> to create the database</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-05-create.png" alt="Create Database"></p>
+</li>
+<li>To see the databases in the LambdaSchoolLocal Server
+<ul>
+<li>Make sure LambdaSchoolLocal is expanded</li>
+<li>Expand Databases. Your list will vary.</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-06-database-list.png" alt="List Databases"></p>
+</li>
+<li>To create a table
+<ul>
+<li>Expand guidLambdaSchool under Databases
+<ul>
+<li>Expand Schemas
+<ul>
+<li>You will have just one Schema called Public</li>
+<li>Right Click on Tables, Select Create &gt;, click on Table</li>
+<li>Give the table the name <code class="highlighter-rouge">humans</code>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-07-table.png" alt="Naming Database"></p>
+<ul>
+<li>Select the Columns Tab
+<ul>
+<li>Enter the column information for each column.
+<ul>
+<li>To begin entering the column info, add a new column by clicking on the + sign</li>
+<li>To edit the column info
+<ul>
+<li>Click in the text box under name and enter <code class="highlighter-rouge">id</code>
+</li>
+<li>From the data type, select <code class="highlighter-rouge">integer</code>
+</li>
+<li>Say yes this is the primary key</li>
+</ul>
+</li>
+<li>Add another new column by clicking on the + sign</li>
+<li>To edit the column info
+<ul>
+<li>Click in the text box under name and enter <code class="highlighter-rouge">name</code>
+</li>
+<li>From the data type, select <code class="highlighter-rouge">character varying[]</code>
+</li>
+<li>Under Length enter <code class="highlighter-rouge">50</code>
+</li>
+</ul>
+</li>
+<li>Click <code class="highlighter-rouge">Save</code> when done</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-08-humans-columns.png" alt="Humans Columns"></p>
+<ul>
+<li>Following the same steps as above, Let’s create another table called pets
+<ul>
+<li>DO NOT CLICK <code class="highlighter-rouge">Save</code> yet!!!</li>
+<li>Enter the following column information:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Data type</th>
+<th>Length</th>
+<th>Precision</th>
+<th>Not NULL?</th>
+<th>Primary key?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td> </td>
+<td> </td>
+<td>NO</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>name</td>
+<td>character varying[]</td>
+<td>50</td>
+<td> </td>
+<td>Yes</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>age</td>
+<td>integer</td>
+<td> </td>
+<td> </td>
+<td>NO</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>humanoid</td>
+<td>integer</td>
+<td> </td>
+<td> </td>
+<td>Yes</td>
+<td>NO</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-09-pets-columns.png" alt="Pets Columns"></p>
+<ul>
+<li>Select the Constraints Tab
+<ul>
+<li>Select the <code class="highlighter-rouge">Foreign Key</code> tab
+<ul>
+<li>Add a new constraint by click on the + sign
+<ul>
+<li>Now click on the edit icon <img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/editicon.jpg" alt="edit icon"> to add the necessary info</li>
+<li>Give it a name of <code class="highlighter-rouge">human_fk</code>
+</li>
+<li>Follow the GIF below to enter the remaining information
+<ul>
+<li>Name: human_fk</li>
+<li>Columns
+<ul>
+<li>Local column: <code class="highlighter-rouge">id</code>
+</li>
+<li>References: <code class="highlighter-rouge">public_humans</code>
+</li>
+<li>Referencing: <code class="highlighter-rouge">id</code>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+ <li>After setting up the constraint, don’t forget to click on the + sign to actually add the constraint!</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-10-fk.gif" alt="Foreign Key Details"></p>
+<ul>
+<li>And finally, enter the unique constraints by selecting the constraints tab
+<ul>
+<li>Select the <code class="highlighter-rouge">Unique</code> tab
+<ul>
+<li>Add a new constraint by click on the + sign
+<ul>
+<li>Now click on the edit icon <img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/editicon.jpg" alt="edit icon"> to add the necessary info</li>
+<li>Give it a name of <code class="highlighter-rouge">name_unique</code>
+</li>
+<li>Follow the GIF below to enter the remaining information
+<ul>
+<li>Definitions -&gt; Columns: <code class="highlighter-rouge">name</code>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-11-unique.gif" alt="Foreign Key Details"></p>
+<ul>
+<li>Now both tables are created. To modify the tables:
+<ul>
+<li>Right click on the table name</li>
+<li>Select <code class="highlighter-rouge">Properties...</code> from the pop-up menu</li>
+<li>You are now back at the standard windows you used to create the tables!</li>
+</ul>
+</li>
+<li>To query a database using pgAdmin, you use the Query Tool.
+<ul>
+<li>To access the Query Tool, have selected a database to query.
+<ul>
+<li>Then go to the dropdown menu <code class="highlighter-rouge">Tools -&gt; Query Tool</code>
+</li>
+<li>Alternatively you can click on the lightning bolt <img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/lightning-bolt-icon.png" alt="lightning bolt icon"> icon</li>
+</ul>
+</li>
+<li>Either way you get the following screen</li>
+<li>SQL is entered in the large text box!</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-12-sql.png" alt="SQL Query"></p>
+</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to explain data normalization and normal forms while normalizing data to the 3rd Normal Form (3NF)</h4>
+<p><a id="DB_Normal_Forms"></a></p>
+<h5>Overview</h5>
+<p>How to design your database is an important concept. Usually, we are given a “blob” of data and have to organize it for efficient retrieval and manipulation. This process of organizing the data by creating tables and establishing relationships between the table, done correctly, is called data normalization. Let’s look at what that means.</p>
+<p>The goals of data normalization are to:</p>
+<ul>
+<li>Protect data both through security and integrity
+<ul>
+<li>Putting like data in a table allows you to give access to that table only without having to share all the data.</li>
+</ul>
+</li>
+<li>Eliminate redundancy
+<ul>
+<li>Redundant data consumes extra space and takes extra time to retrieve</li>
+<li>With redundant, duplicated, data if the copies do not match how do you know which version is correct?</li>
+</ul>
+</li>
+<li>Eliminate inconsistent dependencies
+<ul>
+<li>Data should be found in appropriate tables
+<ul>
+<li>Don’t put employees’ salaries in customer tables</li>
+</ul>
+</li>
+<li>Data should be easy to find</li>
+</ul>
+</li>
+<li>Minimize redesign when expanding the data structures</li>
+</ul>
+<p>To normalize data, that is to take the blob of data we are given and convert to something useful, we work the data into a series of “normal forms”. Depending on who you ask, there are 5 or more normal forms. In practice, though, almost all databases stop at the third normal form, often written as 3NF. Let’s take a blob of data and run it through the normal forms, discussing the goal of each normal form along the way.</p>
+<ul>
+<li>UNF (unnormalized form)
+<ul>
+<li>This is our blob of data</li>
+</ul>
+</li>
+</ul>
+<h3 id="original-data-table">Original Data Table</h3>
+<table>
+<thead>
+<tr>
+<th>First name</th>
+<th>Last Name</th>
+<th>Full Name</th>
+<th>email</th>
+<th>company name</th>
+<th>company tax id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>John</td>
+<td>Mitchell</td>
+<td>John Mitchell</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="80eaefe8eec0ece1ede2e4e1f3e3e8efefecaee3efed">[email&#160;protected]</a>,</td>
+<td>Lambda School</td>
+<td>99-999999</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="701a021d1d1211301f05041c1f1f1b5e131f1d">[email&#160;protected]</a>,</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="204a524d4d42411813111460474d41494c0e434f4d">[email&#160;protected]</a></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>Steve</td>
+<td>Green</td>
+<td>Steve Green</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c0b3b4a5b6a580a5ada1a9aceeacafa3a1ac">[email&#160;protected]</a></td>
+<td>Home</td>
+<td>88-888888</td>
+</tr>
+<tr>
+<td>Amy</td>
+<td>Found</td>
+<td>Amy Found</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="adccc0d4edc8c0ccc4c183c1c2ceccc1">[email&#160;protected]</a></td>
+<td>A Perfect Company</td>
+<td>77-777777</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d1b0b7bea4bfb591b9bebcb4ffb4bcb0b8bd">[email&#160;protected]</a></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>BarnBarn</td>
+<td>Rabbit</td>
+<td>BarnBarn Rabbit</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="046665766a6665766a446c6b74772a686b676568">[email&#160;protected]</a></td>
+<td>Lambda School</td>
+<td>99-999999</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>Home</td>
+<td>88-888888</td>
+</tr>
+</tbody>
+</table>
+<p>Supervisor
+| Full Name | location |
+|—————–|———-|
+| Amy Found | condo |
+| BarnBarn Rabbit | hutch |</p>
+<ul>
+<li>1NF (first normal form)
+<ul>
+<li>Goals include
+<ul>
+<li>Eliminating repeating groups in individual tables
+<ul>
+<li>No Title1, Title2, Title3</li>
+</ul>
+</li>
+<li>Identify set of related data with a primary key</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1nf---email-broken-into-separate-rows">1NF - Email broken into separate rows</h3>
+<p>Person Table</p>
+<table>
+<thead>
+<tr>
+<th>Person Id</th>
+<th>First name</th>
+<th>Last Name</th>
+<th>Full Name</th>
+<th>company name</th>
+<th>company tax id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>Mitchell</td>
+<td>John Mitchell</td>
+<td>Lambda School</td>
+<td>99-999999</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Steve</td>
+<td>Green</td>
+<td>Steve Green</td>
+<td>Home</td>
+<td>88-888888</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Amy</td>
+<td>Found</td>
+<td>Amy Found</td>
+<td>A Perfect Company</td>
+<td>77-777777</td>
+</tr>
+<tr>
+<td>4</td>
+<td>BarnBarn</td>
+<td>Rabbit</td>
+<td>BarnBarn Rabbit</td>
+<td>Lambda School</td>
+<td>99-999999</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>Home</td>
+<td>88-888888</td>
+</tr>
+</tbody>
+</table>
+<p>Email Table</p>
+<table>
+<thead>
+<tr>
+<th>Email id</th>
+<th>Person id</th>
+<th>email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="83e9ecebedc3efe2eee1e7e2f0e0ebececefade0ecee">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6a00180707080b2a051f1e0605050144090507">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="92f8e0fffff0f3aaa1a3a6d2f5fff3fbfebcf1fdff">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>2</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e49790819281a48189858d88ca888b878588">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>3</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0a6b67734a6f676b6366246665696b66">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>3</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dcbdbab3a9b2b89cb4b3b1b9f2b9b1bdb5b0">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>4</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="107271627e7271627e50787f60633e7c7f73717c">[email&#160;protected]</a></td>
+</tr>
+</tbody>
+</table>
+<p>Supervisor</p>
+<table>
+<thead>
+<tr>
+<th>Supervisor Id</th>
+<th>Full Name</th>
+<th>location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Amy Found</td>
+<td>condo</td>
+</tr>
+<tr>
+<td>2</td>
+<td>BarnBarn Rabbit</td>
+<td>hutch</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>2NF (second normal form)</li>
+<li>Separate tables for set of values that apply to multiple records
+<ul>
+<li>Do not store address for a person in customers, orders, shipping, etc.</li>
+</ul>
+</li>
+<li>Use a foreign key to reference that data
+<ul>
+<li>Store data once. Use keys to reference the data</li>
+</ul>
+</li>
+</ul>
+<h3 id="2nf---company-tax-id-is-moved-to-company-table-with-a-join-table">2NF - Company Tax Id is moved to company table with a join table</h3>
+<p>Person Table</p>
+<table>
+<thead>
+<tr>
+<th>Person Id</th>
+<th>First name</th>
+<th>Last Name</th>
+<th>Full Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>Mitchell</td>
+<td>John Mitchell</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Steve</td>
+<td>Green</td>
+<td>Steve Green</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Amy</td>
+<td>Found</td>
+<td>Amy Found</td>
+</tr>
+<tr>
+<td>4</td>
+<td>BarnBarn</td>
+<td>Rabbit</td>
+<td>BarnBarn Rabbit</td>
+</tr>
+</tbody>
+</table>
+<p>PersonCompany Table</p>
+<table>
+<thead>
+<tr>
+<th>Person Id</th>
+<th>Company Id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Company Table</p>
+<table>
+<thead>
+<tr>
+<th>Company Id</th>
+<th>Company Name</th>
+<th>Company Tax Id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Lambda School</td>
+<td>99-999999</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Home</td>
+<td>88-888888</td>
+</tr>
+<tr>
+<td>3</td>
+<td>A Perfect Company</td>
+<td>77-777777</td>
+</tr>
+</tbody>
+</table>
+<p>Email Table</p>
+<table>
+<thead>
+<tr>
+<th>Email id</th>
+<th>Person id</th>
+<th>email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e882878086a88489858a8c899b8b80878784c68b8785">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1379617e7e7172537c66677f7c7c783d707c7e">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9df7eff0f0fffca5aeaca9ddfaf0fcf4f1b3fef2f0">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>2</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="17646372617257727a767e7b397b7874767b">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>3</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ed8c8094ad88808c8481c381828e8c81">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>3</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c5a4a3aab0aba185adaaa8a0eba0a8a4aca9">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>4</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f79596859995968599b79f988784d99b9894969b">[email&#160;protected]</a></td>
+</tr>
+</tbody>
+</table>
+<p>Supervisor</p>
+<table>
+<thead>
+<tr>
+<th>Supervisor Id</th>
+<th>Full Name</th>
+<th>location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Amy Found</td>
+<td>condo</td>
+</tr>
+<tr>
+<td>2</td>
+<td>BarnBarn Rabbit</td>
+<td>hutch</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>3NF (third normal form)</p>
+<ul>
+<li>No derived fields</li>
+<li>Eliminate fields that do not depend on the key</li>
+<li>In an employees tables, do not store the name of departments. If a department has no employees, there is no where to store the department name. Store the department name in a separate table and use foreign keys to reference it.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3nf---derived-column-full-name-is-removed-supervisors-name-is-referenced">3NF - Derived column Full Name is removed. Supervisor’s name is referenced</h3>
+<p>Person Table</p>
+<table>
+<thead>
+<tr>
+<th>Person Id</th>
+<th>First name</th>
+<th>Last Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>Mitchell</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Steve</td>
+<td>Green</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Amy</td>
+<td>Found</td>
+</tr>
+<tr>
+<td>4</td>
+<td>BarnBarn</td>
+<td>Rabbit</td>
+</tr>
+</tbody>
+</table>
+<p>PersonCompany Table</p>
+<table>
+<thead>
+<tr>
+<th>Person Id</th>
+<th>Company Id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Company Table</p>
+<table>
+<thead>
+<tr>
+<th>Company Id</th>
+<th>Company Name</th>
+<th>Company Tax Id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Lambda School</td>
+<td>99-999999</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Home</td>
+<td>88-888888</td>
+</tr>
+<tr>
+<td>3</td>
+<td>A Perfect Company</td>
+<td>77-777777</td>
+</tr>
+</tbody>
+</table>
+<p>Email Table</p>
+<table>
+<thead>
+<tr>
+<th>Email id</th>
+<th>Person id</th>
+<th>email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="573d383f39173b363a35333624343f38383b7934383a">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="412b332c2c2320012e34352d2e2e2a6f222e2c">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="39534b54545b58010a080d795e54585055175a5654">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>2</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9cefe8f9eaf9dcf9f1fdf5f0b2f0f3fffdf0">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>3</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d5b4b8ac95b0b8b4bcb9fbb9bab6b4b9">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>3</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5d3c3b322833391d353230387338303c3431">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>4</td>
+<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e48685968a8685968aa48c8b9497ca888b878588">[email&#160;protected]</a></td>
+</tr>
+</tbody>
+</table>
+<p>Supervisor</p>
+<table>
+<thead>
+<tr>
+<th>Supervisor Id</th>
+<th>Person Id</th>
+<th>location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>condo</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4</td>
+<td>hutch</td>
+</tr>
+</tbody>
+</table>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://support.microsoft.com/en-us/help/283878/description-of-the-database-normalization-basics" target="blank_">The Basic</a><br> Description of the database normalization basics</li>
+<li>
+<a href="https://www.youtube.com/user/dicomgreen" target="blank_">DB Youtube Channel</a><br> YouTube channel on Database Design</li>
+<li>
+<a href="https://youtu.be/ZBgXb66Ckz0" target="blank_">DB Youtube Channel Specific Video</a><br> Logical Logical Database Design and E-R Diagrams</li>
+<li>
+<a href="https://youtu.be/SnZDfD8AVkw" target="blank_">DB Youtube Channel Specific Video</a><br> Physical Database Design</li>
+<li>
+<a href="https://www.dbdesigner.net/" target="blank_">On-Line DB Design Tool</a><br> Good On-line design tool to help with Data Normalization</li>
+</ul>
+<hr>
+<h2>
+<a id="guided-project" class="anchor" href="#guided-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Guided Project</h2>
+<h3>java-rdbms</h3>
+<p>An introduction to RDBMS and SQL using the Northwind.db database and PostgreSQL</p>
+<a target="_blank" href="https://github.com/LambdaSchool/java-rdbms.git">GitHub Repo</a>
+<hr>
+<h2 class="display-4">
+<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
+<ul class="list-group">
+<li class="list-group-item">
+<h5><a target="_blank" href="https://github.com/LambdaSchool/java-sql.git">Java SQL</a></h5>
+<p>Answer the following data queries. Keep track of the SQL you write by pasting it into this document under its appropriate header below. You will be submitting that through the regular fork, change, pull process.</p>
+</li>
+</ul>
+<h2 class="display-4">
+<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
+<h3 class="display-5">Class Recordings</h3>
+<p class="lead">You can use class recordings to help you master the material.</p>
+<div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<strong><a target="_blank" href="https://youtu.be/olmywDuo93I">RDBMS for WEB32 with John Mitchell</a></strong>
+</li>
+<li class="list-group-item">
+<a href="/archive/WEB4Java/module/recyJ663TrxVgpqY9">All previous recordings</a>
+</li>
+</ul>
+</div>
+<h3 class="display-5">Demonstrate Mastery</h3>
+<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
+<ul>
+<li>Guided Project: java-rdbms</li>
+<li>Project: Java SQL</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80850900-4');
+</script>
+<script type="text/javascript">
+  function getDomain() {
+    const domainName = window.location.hostname.split('.')[1];
+    return `${domainName}.com`;
+  }
+</script>
+<script src="" integrity="" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
+<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+  SimpleJekyllSearch.init({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    dataSource: '/search.json',
+    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Java - RDBMS and SQL Basics">{title}</a></li>',
+    noResultsText: '',
+    limit: 10,
+    fuzzy: true,
+  })
+</script>
+<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
+  if (window.attachEvent) {
+    window.attachEvent('onload', verifySignedIn);
+  } else {
+    if (window.onload) {
+      var currentOnLoadFn = window.onload;
+      var newOnLoadFn = function (evt) {
+        currentOnLoadFn(evt);
+        verifySignedIn();
+      };
+      window.onload = newOnLoadFn;
+    } else {
+      window.onload = verifySignedIn;
+    }
+  }
+
+  function verifySignedIn() {
+    if (isPagePublic()) {
+      return showPageContents();
+    }
+
+    window.__user = null;
+    isSignedIn().then((user) => {
+      window.__user = user;
+
+      if (!user.signedIn) {
+        redirectToSignIn();
+      } else if (!user.student && !window.__openToAdmissions) {
+        showUnauthorizedMessage();
+      } else {
+        showPageContents();
+      }
+    });
+  }
+
+  function isPagePublic() {
+    const openCourses = [
+      'and-pre',
+      'ds-pre',
+      'fsw-pre',
+      'help',
+      'ios-pre',
+    ];
+
+    const openPages = [
+      'cs-and',
+      'cs-fsw',
+      'cs-ios',
+      'cr',
+      'ds',
+      'jx',
+      'p4s',
+      'ux',
+    ];
+
+    const pathParts = window.location.pathname.split('/');
+    const courseName = pathParts[1];
+    const pageName = pathParts[pathParts.length - 1];
+
+    return openCourses.includes(courseName) || openPages.includes(pageName);
+  }
+
+  function isSignedIn() {
+    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
+
+    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
+
+    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
+      .then((response) => response.text())
+      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
+      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
+      .catch((error) => {});
+  }
+
+  function redirectToSignIn() {
+    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+    const redirectMessage = document.querySelector('#redirect-message');
+    redirectMessage.style.display = "block";
+    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+    window.location = signInUrl;
+  }
+
+  function showPageContents() {
+    document.querySelector('#content-wrapper').style.visibility = 'visible';
+  }
+
+  function showUnauthorizedMessage() {
+    document.querySelector('#unauthorized-message').style.display = 'block';
+  }
+
+  function getAuthBaseUrl() {
+    const domain = getDomain();
+    const authBaseUrl = `https://auth.${domain}`;
+    return authBaseUrl;
+  }
+</script><script src="/assets/js/docs.min.js"></script><script>
+  var MathJax = {
+    tex: {
+      inlineMath: [['$$', '$$'], ['\[', '\])']]
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax span": {
+          color: "#000000"
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script>
+  handleExternalLinks();
+
+  function handleExternalLinks() {
+    const domain = getDomain();
+    const links = document.querySelectorAll('a');
+    return links.forEach((link) => {
+      if (!link.host.includes(domain)) link.target = '_blank';
+    })
+  };
+</script>
+</div>
+</body>
+</html>

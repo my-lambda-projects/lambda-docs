@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Intended as a home for Lambda School curriculum.">
+<meta name="author" content="">
+<meta name="generator" content="Jekyll v3.8.0">
+<title>Database Schema Design · Lambda School</title>
+
+<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+  analytics.page();
+  }}();
+</script>
+
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#a0001e">
+</head>
+<body>
+<noscript>Please enable JavaScript to view this page.</noscript>
+<div id="redirect-message" style="display: none;">
+You must be logged in to view this page.
+</div>
+<div id="unauthorized-message" style="display: none;">
+You must be a Lambda School student to view this page.
+</div>
+<div id="content-wrapper" >
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container">
+<span class="skiplink-text">Skip to main content</span>
+</div>
+</a>
+<div class="mobile-menu">
+<div class="m-drop">
+<div class="mobile-row">
+<div class="header-row" style="padding: 3px 7px">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
+</svg></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+</button>
+</div>
+</div>
+<div class="nav-row">
+<div class="results-container">
+<ul id="results-container" class="dropdown list-group"></ul>
+</div>
+<div id="mobile-course-menu" class="collapse nav-row">
+<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+<nav class="bd-links">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web API: Node</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4node/sprint/reckzQd7ZgiFY5ok5">
+1.&nbsp;&nbsp;Build a Web API
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4node/module/recZiPP8Oyg1WlHxT/">
+Introduction to Node.js and Express
+</a>
+</li>
+<li>
+<a href="/web4node/module/recBjiSulq0PYLCIj/">
+Server-Side Routing with Express
+</a>
+</li>
+<li>
+<a href="/web4node/module/recCJjYFEz0i5O5p5/">
+Express Middleware
+</a>
+</li>
+<li>
+<a href="/web4node/module/recs9QOkOAtZhsjc4/">
+Web Deployment and Best Practices
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4node/sprint/receFLR7MpwQXesIN">
+2.&nbsp;&nbsp;Adding Data Persistence
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4node/module/recFG7SqlSCAB8iU7/">
+Introduction to Relational Databases
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/web4node/module/recIbfNn9xRhLTOv4/">
+Database Schema Design
+</a>
+</li>
+<li>
+<a href="/web4node/module/recw2ezN22yjehidj/">
+Multi-Table Queries
+</a>
+</li>
+<li>
+<a href="/web4node/module/rec5J23yAIdjmFbgP/">
+Data Modeling
+</a>
+</li>
+
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4node/sprint/recGqGeZ7n75vZivn">
+3.&nbsp;&nbsp;Authentication and Testing
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4node/module/recQD9lnhqWEFh6g4/">
+Introduction to Authentication
+</a>
+</li>
+<li>
+<a href="/web4node/module/reciCHdNjavSKaaLt/">
+Using JSON Web Tokens (JWT)
+</a>
+</li>
+<li>
+<a href="/web4node/module/recd26oZ3GBNHh3Na/">
+WEB Unit Testing
+</a>
+</li>
+<li>
+<a href="/web4node/module/reciXdxRA8zXJXDID/">
+Testing the Back End
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4node/sprint/recWkcWui91eG1s8q">
+4.&nbsp;&nbsp;WEB Unit 4 Node Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-container">
+<div class="sidebar-container bd-sidebar">
+<div class="docs-sidebar">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
+<ul id="results-container" class="dropdown list-group"></ul>
+<nav class="bd-links collapse" id="bd-docs-nav">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web API: Node</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4node/sprint/reckzQd7ZgiFY5ok5">
+1.&nbsp;&nbsp;Build a Web API
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4node/module/recZiPP8Oyg1WlHxT/">
+Introduction to Node.js and Express
+</a>
+</li>
+<li>
+<a href="/web4node/module/recBjiSulq0PYLCIj/">
+Server-Side Routing with Express
+</a>
+</li>
+<li>
+<a href="/web4node/module/recCJjYFEz0i5O5p5/">
+Express Middleware
+</a>
+</li>
+<li>
+<a href="/web4node/module/recs9QOkOAtZhsjc4/">
+Web Deployment and Best Practices
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4node/sprint/receFLR7MpwQXesIN">
+2.&nbsp;&nbsp;Adding Data Persistence
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4node/module/recFG7SqlSCAB8iU7/">
+Introduction to Relational Databases
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="/web4node/module/recIbfNn9xRhLTOv4/">
+Database Schema Design
+</a>
+</li>
+<li>
+<a href="/web4node/module/recw2ezN22yjehidj/">
+Multi-Table Queries
+</a>
+</li>
+<li>
+<a href="/web4node/module/rec5J23yAIdjmFbgP/">
+Data Modeling
+</a>
+</li>
+</ul>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4node/sprint/recGqGeZ7n75vZivn">
+3.&nbsp;&nbsp;Authentication and Testing
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/web4node/module/recQD9lnhqWEFh6g4/">
+Introduction to Authentication
+</a>
+</li>
+<li>
+<a href="/web4node/module/reciCHdNjavSKaaLt/">
+Using JSON Web Tokens (JWT)
+</a>
+</li>
+<li>
+<a href="/web4node/module/recd26oZ3GBNHh3Na/">
+WEB Unit Testing
+</a>
+</li>
+<li>
+<a href="/web4node/module/reciXdxRA8zXJXDID/">
+Testing the Back End
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/web4node/sprint/recWkcWui91eG1s8q">
+4.&nbsp;&nbsp;WEB Unit 4 Node Build
+</a>
+<ul class="nav bd-sidenav">
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<main class="content-container flex-wrapper" role="main">
+<div class="sticky-nav">
+<div class="sprint-nav">
+<ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+<li class="toc-entry toc-h2"><a href="#guided-project">Guided Project</a></li>
+<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+</ul>
+</div>
+
+</div>
+<div class="wrapper limit-width">
+<div class="flex-wrapper">
+<div class="limit-width">
+<div class="jumbotron">
+<h1 class="bd-title" id="content">Database Schema Design</h1>
+<span class="lead">
+<p class="bd-lead"></p>
+<p>In this module we’ll learn how to create schemas using both SQLite Studio and Knex.</p>
+<p>On this lecture we will cover the following topics:</p>
+<ul>
+<li>Database Management Systems (DBMS)</li>
+<li>SQLite studio</li>
+<li>Primary keys</li>
+<li>Data Types and Column Constraints</li>
+<li>Knex CLI</li>
+<li>Migrations</li>
+<li>Seeds</li>
+</ul>
+</span>
+<strong>At the end of this module, you should be able to:</strong>
+<ul>
+<li>use SQLite Studio on an existing database</li>
+<li>explain what is a database schema</li>
+<li>create and use knex migrations</li>
+<li>create and use knex seeds</li>
+</ul>
+</div>
+<div class="alert alert-warning" role="alert">
+<h4>Pro Tip</h4>
+<p>Be on time. It’s a mark of respect not to keep others waiting.</p>
+</div>
+<h2 class="display-4">
+<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
+<p class="lead">Review each preclass resource before class.</p>
+<div class="preclass">
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/8BwFOpLpzoE" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GASfty6-KsE" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/21Vpcup6LwM" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tZJUXxYFScU" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<a target="_blank" href="https://knexjs.org/">Knex</a>
+</li>
+</ul>
+</div>
+<h2 class="display-4">
+<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
+<h4 class="mark mb-3 p-2">Learn to use SQLite Studio on an existing database</h4>
+<p>Query builders like Knex.js allow developers to write modular javascript code to execute SQL commands and thus interact with the database</p>
+<h5>Overview</h5>
+<p>SQLlite Studio is an application that allows us to create, open, view, and modify SQLite databases. To fully understand what SQLite Studio is and how it works, we must also understand the concept of the Database Management Systems (DBMS).</p>
+<h5>Follow Along</h5>
+<h3 id="what-is-a-dbms">What is a DBMS?</h3>
+<p>To manage digital databases we use specialized software called <strong>D</strong>ata<strong>B</strong>ase <strong>M</strong>anagement <strong>S</strong>ystems (DBMS). These systems typically run on servers and are managed by <strong>D</strong>ata<strong>B</strong>ase <strong>A</strong>dministrators (DBAs).</p>
+<p>In less technical terms, we need a type of software that will allow us to create, access, and generally manage our databases. In the world of relational databases, we specifically use Relational Database Mangement Systems (RDBMs). Some examples are Postgres, SQLite, MySQL, and Oracle.</p>
+<p>Choosing a DBMS determines everything from how you set up your database, to where and how the data is stored, to what SQL commands you can use. Most systems share the core of the SQL language that you’ve already learned.</p>
+<p>In other words, you can expect <code class="highlighter-rouge">SELECT</code>, <code class="highlighter-rouge">UPDATE</code>, <code class="highlighter-rouge">INSERT</code>, <code class="highlighter-rouge">WHERE</code> , and the like to be the same across all DBMSs, but the subtleties of the language may vary.</p>
+<h3 id="what-is-sqlite">What is SQLite?</h3>
+<p><strong>SQLite</strong> is the DBMS we primarily use at Lambda. As the name suggests, it is a more lightweight system and thus easier to get set up than some others.</p>
+<p>SQLite allows us to store databases as single files. Many of the challenges and guided projects in Lambda have a <code class="highlighter-rouge">.db3</code> extension. That is the database.</p>
+<p>SQLite is <em>not a database</em> (like relational, graph, or document are databases) but rather <em>a database management system</em>.</p>
+<h3 id="opening-an-existing-database-in-sqlite-studio">Opening an existing database in SQLite Studio</h3>
+<p>One useful visual interface we might use with a SQLite database is called <strong>SQLite Studio</strong>. <a href="https://sqlitestudio.pl/">Install SQLITE Studio here.</a></p>
+<p>Once installed, we can use SQLite Studio to open any <code class="highlighter-rouge">.db3</code> file from a previous lesson. We may view the tables, view the data, and even make changes to the database.</p>
+<p>For a more detailed look at SQLite Studio, follow along in the video above.</p>
+<h5>Challenge</h5>
+<p>Use SQLite Studio to open a database from a previous challenge. Confirm that the data displayed in SQLite Studio matches the data from the server in a <code class="highlighter-rouge">GET</code> request.</p>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to explain what is a database schema</h4>
+<p>In this module we’ll learn about schema design and column constraints.</p>
+<h5>Overview</h5>
+<p>A <strong>database schema</strong> is the shape of our database. It defines what tables we’ll have, which columns should exist within the tables and any restrictions on each column.</p>
+<p>A well-designed database schema keeps the data well organized and can help ensure high-quality data.</p>
+<p>Note that while schema design is usually left to Database Administrators (DBAs), understanding schema helps when designing APIs and database logic. And in a smaller team, this step may fall on the developer.</p>
+<h5>Follow Along</h5>
+<p>For a look at schema design in SQLite Studio, follow along in the video above.</p>
+<p>When designing a single table, we need to ask three things:</p>
+<ul>
+<li>What fields (or columns) are present?</li>
+<li>What type of data do we expect for each field?</li>
+<li>Are there other restrictions needed for each column?</li>
+</ul>
+<p>Looking at the following schema diagram for an <code class="highlighter-rouge">accounts</code> table, we can the answer to each other those questions:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left">field</th>
+<th style="text-align: left">data type</th>
+<th style="text-align: left">metadata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left">id</td>
+<td style="text-align: left">unsigned integer</td>
+<td style="text-align: left">primary key, auto-increments, generated by database</td>
+</tr>
+<tr>
+<td style="text-align: left">name</td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">required, unique</td>
+</tr>
+<tr>
+<td style="text-align: left">budget</td>
+<td style="text-align: left">numeric</td>
+<td style="text-align: left">required</td>
+</tr>
+</tbody>
+</table>
+<h3 id="table-fields">Table Fields</h3>
+<p>Choosing which fields to include in a table is relatively straight forward. What information needs to be tracked regarding this resource? In the real world, this is determined by the intended use of the product or app.</p>
+<p>However, this is one requirement every table should satisfy: a <strong>primary key</strong>. A primary key is a way to identify each entry in the database uniquely. It is most often represented as a auto-incrementing integer called <code class="highlighter-rouge">id</code> or <code class="highlighter-rouge">[tablename]Id</code>.</p>
+<h3 id="datatypes">Datatypes</h3>
+<p>Each field must also have a specified datatype. The datatype available depends on our DBMS. Some supported datatype in SQLite include:</p>
+<ul>
+<li>
+<strong>Null:</strong> Missing or unknown information.</li>
+<li>
+<strong>Integer:</strong> Whole numbers.</li>
+<li>
+<strong>Real:</strong> Any number, including decimals.</li>
+<li>
+<strong>Text:</strong> Character data.</li>
+<li>
+<strong>*Blob:</strong> a large binary object that can be used to store miscellaneous data.</li>
+</ul>
+<p>Any data inserted into the table must match the datatypes determined in schema design.</p>
+<h3 id="constraints">Constraints</h3>
+<p>Beyond datatypes, we may add additional <strong>constraints</strong> on each field. Some examples include:</p>
+<ul>
+<li>
+<strong>Not Null:</strong> The field cannot be left empty</li>
+<li>
+<strong>Unique:</strong> No two records can have the same value in this field</li>
+<li>
+<strong>Primary key:</strong> - Indicates this field is the primary key. Both the not null and unique constraints will be enforced.</li>
+<li>
+<strong>Default:</strong> - Sets a default value if none is provided.</li>
+</ul>
+<p>As with data types, any data that does not satisfy the schema constraints will be rejected from the database.</p>
+<h3 id="multi-table-design">Multi-Table Design</h3>
+<p>Another critical component of schema design is to understand how different tables relate to each other. This will be covered in later lesson.</p>
+<h5>Challenge</h5>
+<p>Create a new database and a design single table using SQLite Studio.</p>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to create and use knex migrations</h4>
+<p>In this module we’ll learn about the knex command line tool and how to use it for knex migrations.</p>
+<h5>Overview</h5>
+<p>Knex provides a <strong>schema builder</strong>, which allows us to write code to design our database schema. However, beyond thinking about columns and constraints, we must also consider updates.</p>
+<p>When a schema needs to be updated, a developer must feel confident that the changes go into effect everywhere. This means schema updates on the developer’s local machine, on any testing or staging versions, on the production database, and then on any other developer’s local machines. This is where <strong>migrations</strong> come into play.</p>
+<p>A <code class="highlighter-rouge">database migration</code> describes changes made to the structure of a database. Migrations include things like adding new objects, adding new tables, and modifying existing objects or tables.</p>
+<h5>Follow Along</h5>
+<h3 id="knex-cli">Knex Cli</h3>
+<p>To use migrations (and to make Knex setup easier), we need to use <strong>knex cli</strong>. Install knex globally with <code class="highlighter-rouge">npm install -g knex</code>.</p>
+<p>This allows you to use Knex commands within any repo that has <code class="highlighter-rouge">knex</code> as a local dependency. If you have any issues with this global install, you can use the <code class="highlighter-rouge">npx knex</code> command instead.</p>
+<h3 id="initializing-knex">Initializing Knex</h3>
+<p>To start, add the <code class="highlighter-rouge">knex</code> and <code class="highlighter-rouge">sqlite3</code> libraries to your repository.</p>
+<p><code class="highlighter-rouge">npm install knex sqlite3</code></p>
+<p>We’ve seen how to use manually create a config object to get started with Knex, but the best practice is to use the following command:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">knex</span> <span class="nx">init</span>
+</code></pre></div></div>
+<p>Or, if Knex isn’t globally installed:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">npx</span> <span class="nx">knex</span> <span class="nx">init</span>
+</code></pre></div></div>
+<p>This command will generate a file in your root folder called <code class="highlighter-rouge">knexfile.js</code>. It will be auto populated with three config objects, based on different environments. We can delete all except for the development object.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+
+  <span class="na">development</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">client</span><span class="p">:</span> <span class="dl">'</span><span class="s1">sqlite3</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">connection</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./dev.sqlite3</span><span class="dl">'</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+<span class="p">};</span>
+</code></pre></div></div>
+<p>We’ll need to update the location (or desired location) of the database as well as add the <code class="highlighter-rouge">useNullAsDefault</code> option. The latter option prevents crashes when working with <code class="highlighter-rouge">sqlite3</code>.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+
+  <span class="na">development</span><span class="p">:</span> <span class="p">{</span>
+    <span class="c1">// our DBMS driver</span>
+    <span class="na">client</span><span class="p">:</span> <span class="dl">'</span><span class="s1">sqlite3</span><span class="dl">'</span><span class="p">,</span>
+    <span class="c1">// the location of our db</span>
+    <span class="na">connection</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./data/database_file.db3</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="c1">// necessary when using sqlite3</span>
+    <span class="na">useNullAsDefault</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">}</span>
+
+<span class="p">};</span>
+</code></pre></div></div>
+<p>Now, wherever we configure our database, we may use the following syntax instead of hardcoding in a config object.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">knex</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">knex</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">../knexfile.js</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="c1">// we must select the development object from our knexfile</span>
+<span class="kd">const</span> <span class="nx">db</span> <span class="o">=</span> <span class="nx">knex</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">development</span><span class="p">);</span>
+
+<span class="c1">// export for use in codebase</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">db</span><span class="p">;</span>
+</code></pre></div></div>
+<h3 id="knex-migrations">Knex Migrations</h3>
+<p>Once our <code class="highlighter-rouge">knexfile</code> is set up, we can begin creating <strong>migrations</strong>. Though it’s not required, we are going to add an <code class="highlighter-rouge">addition</code> option to the config object to specify a directory for the migration files.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">development</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">client</span><span class="p">:</span> <span class="dl">'</span><span class="s1">sqlite3</span><span class="dl">'</span><span class="p">,</span>
+    <span class="nx">connection</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nl">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./data/produce.db3</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nx">useNullAsDefault</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="c1">// generates migration files in a data/migrations/ folder</span>
+    <span class="nx">migrations</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nl">directory</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./data/migrations</span><span class="dl">'</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+<p>We can generate a new migration with the following command:</p>
+<p><code class="highlighter-rouge">knex migrate:make [migration-name]</code></p>
+<p>If we needed to create an accounts table, we might run:</p>
+<p><code class="highlighter-rouge">knex migrate:make create-accounts</code></p>
+<p>Note that inside <code class="highlighter-rouge">data/migrations/</code> a new file has appeared. Migrations have a timestamp in their filenames automatically. Wither you like this or not, <strong>do not edit migration names.</strong></p>
+<p>The migration file should have both an <code class="highlighter-rouge">up</code> and a <code class="highlighter-rouge">down</code> function. Within the <code class="highlighter-rouge">up</code> function, we write the ended database changes. Within the <code class="highlighter-rouge">down</code> function, we write the code to undo the <code class="highlighter-rouge">up</code> functions. This allows us to undo any changes made to the schema if necessary.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">exports</span><span class="p">.</span><span class="nx">up</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">knex</span><span class="p">,</span> <span class="nb">Promise</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// don't forget the return statement</span>
+  <span class="k">return</span> <span class="nx">knex</span><span class="p">.</span><span class="nx">schema</span><span class="p">.</span><span class="nx">createTable</span><span class="p">(</span><span class="dl">'</span><span class="s1">accounts</span><span class="dl">'</span><span class="p">,</span> <span class="nx">tbl</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// creates a primary key called id</span>
+    <span class="nx">tbl</span><span class="p">.</span><span class="nx">increments</span><span class="p">();</span>
+    <span class="c1">// creates a text field called name which is both required and unique</span>
+    <span class="nx">tbl</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="dl">'</span><span class="s1">name</span><span class="dl">'</span><span class="p">,</span> <span class="mi">128</span><span class="p">).</span><span class="nx">unique</span><span class="p">().</span><span class="nx">notNullable</span><span class="p">();</span>
+    <span class="c1">// creates a numeric field called budget which is required</span>
+    <span class="nx">tbl</span><span class="p">.</span><span class="nx">decimal</span><span class="p">(</span><span class="dl">'</span><span class="s1">budget</span><span class="dl">'</span><span class="p">).</span><span class="nx">notNullable</span><span class="p">();</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">down</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">knex</span><span class="p">,</span> <span class="nb">Promise</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// drops the entire table</span>
+  <span class="k">return</span> <span class="nx">knex</span><span class="p">.</span><span class="nx">schema</span><span class="p">.</span><span class="nx">dropTableIfExists</span><span class="p">(</span><span class="dl">'</span><span class="s1">accounts</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>References for these methods are found in the <strong>schema builder</strong> section of the <a href="https://knexjs.org/">Knex docs</a>.</p>
+<p>At this point, the table is <strong>not</strong> yet created. To run this (and any other) migrations, use the command:</p>
+<p><code class="highlighter-rouge">knex migrate:latest</code></p>
+<p>Note if the database does not exist, this command will auto-generate one. We can use SQLite Studio to confirm that the accounts table has been created.</p>
+<h4 id="changes-and-rollbacks">Changes and Rollbacks</h4>
+<p>If later down the road, we realize you need to update your schema, you shouldn’t edit the migration file. Instead, you will want to create a new migration with the command:</p>
+<p><code class="highlighter-rouge">knex migrate:make accounts-schema-update</code></p>
+<p>Once we’ve written our updates into this file we save and close with:</p>
+<p><code class="highlighter-rouge">knex migrate:latest</code></p>
+<p>If we migrate our database and then quickly realize something isn’t right, we can edit the migration file. However, first, we need to <strong>rolllback</strong> (or undo) our last migration with:</p>
+<p><code class="highlighter-rouge">knex migrate:rollback</code></p>
+<p>Finally, we are free to rerun that file with <code class="highlighter-rouge">knex migrate</code> latest.</p>
+<p><strong>NOTE</strong>: A rollback should not be used to edit an old migration file once that file has accepted into a main branch. However, an entire team may use a rollback to return to a previous version of a database.</p>
+<h5>Challenge</h5>
+<p>Use Knex migrations to create a products table with the following columns:</p>
+<ul>
+<li>id: make this the primary key.</li>
+<li>name: should be a string that is unique.</li>
+<li>price: should be a number.</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to create and use knex seeds</h4>
+<p>In this module we’ll learn how to create and run knex seeds.</p>
+<h5>Overview</h5>
+<p>Often we want to pre-populate our database with sample data for testing. <strong>Seeds</strong> allow us to add and reset sample data easily.</p>
+<h5>Follow Along</h5>
+<p>The Knex command-line tool offers a way to <strong>seed</strong> our database; in other words, pre-populate our tables.</p>
+<p>Similarly to migrations, we want to customize where our seed files are generated using our <code class="highlighter-rouge">knexfile</code></p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">development</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">client</span><span class="p">:</span> <span class="dl">'</span><span class="s1">sqlite3</span><span class="dl">'</span><span class="p">,</span>
+    <span class="nx">connection</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nl">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./data/produce.db3</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nx">useNullAsDefault</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="c1">// generates migration files in a data/migrations/ folder</span>
+    <span class="nx">migrations</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nl">directory</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./data/migrations</span><span class="dl">'</span>
+    <span class="p">},</span>
+    <span class="nx">seeds</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nl">directory</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./data/seeds</span><span class="dl">'</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+<p>To create a seed run: <code class="highlighter-rouge">knex seed:make 001-seedName</code></p>
+<p>Numbering is a good idea because Knex doesn’t attach a timestamp to the name like migrate does. Adding numbers to the file name, we can control the order in which they run.</p>
+<p>We want to create seeds for our accounts table:</p>
+<p><code class="highlighter-rouge">knex seed:make 001-accounts</code></p>
+<p>A file will appear in the designated seed folder.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">exports</span><span class="p">.</span><span class="nx">seed</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">knex</span><span class="p">,</span> <span class="nb">Promise</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// we want to remove all data before seeding</span>
+  <span class="c1">// truncate will reset the primary key each time</span>
+  <span class="k">return</span> <span class="nx">knex</span><span class="p">(</span><span class="dl">'</span><span class="s1">accounts</span><span class="dl">'</span><span class="p">).</span><span class="nx">truncate</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+      <span class="c1">// add data into insert</span>
+      <span class="k">return</span> <span class="nx">knex</span><span class="p">(</span><span class="dl">'</span><span class="s1">accounts</span><span class="dl">'</span><span class="p">).</span><span class="nx">insert</span><span class="p">([</span>
+        <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Stephenson</span><span class="dl">'</span><span class="p">,</span> <span class="na">budget</span><span class="p">:</span> <span class="mi">10000</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Gordon &amp; Gale</span><span class="dl">'</span><span class="p">,</span> <span class="na">budget</span><span class="p">:</span> <span class="mi">40400</span> <span class="p">},</span>
+      <span class="p">]);</span>
+    <span class="p">});</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>Run the seed files by typing:</p>
+<p><code class="highlighter-rouge">knex seed:run</code></p>
+<p>You can now use SQLite Studio to confirm that the accounts table has two entries.</p>
+<h5>Challenge</h5>
+<p>Create sample data for an existing database table using seeds.</p>
+<hr>
+<h2>
+<a id="guided-project" class="anchor" href="#guided-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Guided Project</h2>
+<h3>Node DB 2 Guided Project</h3>
+<a target="_blank" href="https://github.com/LambdaSchool/node-db2-guided">GitHub Repo</a>
+<hr>
+<h2 class="display-4">
+<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
+<ul class="list-group">
+<li class="list-group-item">
+<h5><a target="_blank" href="https://github.com/LambdaSchool/node-db2-project">Node DB 2 Project</a></h5>
+<p>Afternoon project starter for Node DB 2 Module</p>
+</li>
+</ul>
+<h2 class="display-4">
+<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
+<h3 class="display-5">Class Recordings</h3>
+<p class="lead">You can use class recordings to help you master the material.</p>
+<div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<strong><a target="_blank" href="https://youtu.be/sa6AEByzM_0">Database Schema Design for Web PT 18 w/Jason Maurer</a></strong>
+<p>In this module we’ll learn how to create schemas using both SQLite Studio and Knex. On this lecture we will cover the following topics: Database Management Systems (DBMS) SQLite studio Primary keys Data Types and Column Constraints Knex CLI Migrations Seeds At the end of this module, you should be able to: use SQLite Studio on an existing database explain what is a database schema create and use knex migrations create and use knex seeds</p>
+</li>
+<li class="list-group-item">
+<a href="/archive/FSW/module/recIbfNn9xRhLTOv4">All previous recordings</a>
+</li>
+</ul>
+</div>
+<h3 class="display-5">Demonstrate Mastery</h3>
+<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
+<ul>
+<li>Objective challenge: <p>Use SQLite Studio to open a database from a previous challenge. Confirm that the data displayed in SQLite Studio matches the data from the server in a <code class="highlighter-rouge">GET</code> request.</p>
+</li>
+<li>Objective challenge: <p>Create a new database and a design single table using SQLite Studio.</p>
+</li>
+<li>Objective challenge: <p>Use Knex migrations to create a products table with the following columns:</p>
+<ul>
+<li>id: make this the primary key.</li>
+<li>name: should be a string that is unique.</li>
+<li>price: should be a number.</li>
+</ul>
+</li>
+<li>Objective challenge: <p>Create sample data for an existing database table using seeds.</p>
+</li>
+<li>Guided Project: Node DB 2 Guided Project</li>
+<li>Project: Node DB 2 Project</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80850900-4');
+</script>
+<script type="text/javascript">
+  function getDomain() {
+    const domainName = window.location.hostname.split('.')[1];
+    return `${domainName}.com`;
+  }
+</script>
+<script src="" integrity="" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
+<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+  SimpleJekyllSearch.init({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    dataSource: '/search.json',
+    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Database Schema Design">{title}</a></li>',
+    noResultsText: '',
+    limit: 10,
+    fuzzy: true,
+  })
+</script>
+<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
+  if (window.attachEvent) {
+    window.attachEvent('onload', verifySignedIn);
+  } else {
+    if (window.onload) {
+      var currentOnLoadFn = window.onload;
+      var newOnLoadFn = function (evt) {
+        currentOnLoadFn(evt);
+        verifySignedIn();
+      };
+      window.onload = newOnLoadFn;
+    } else {
+      window.onload = verifySignedIn;
+    }
+  }
+
+  function verifySignedIn() {
+    if (isPagePublic()) {
+      return showPageContents();
+    }
+
+    window.__user = null;
+    isSignedIn().then((user) => {
+      window.__user = user;
+
+      if (!user.signedIn) {
+        redirectToSignIn();
+      } else if (!user.student && !window.__openToAdmissions) {
+        showUnauthorizedMessage();
+      } else {
+        showPageContents();
+      }
+    });
+  }
+
+  function isPagePublic() {
+    const openCourses = [
+      'and-pre',
+      'ds-pre',
+      'fsw-pre',
+      'help',
+      'ios-pre',
+    ];
+
+    const openPages = [
+      'cs-and',
+      'cs-fsw',
+      'cs-ios',
+      'cr',
+      'ds',
+      'jx',
+      'p4s',
+      'ux',
+    ];
+
+    const pathParts = window.location.pathname.split('/');
+    const courseName = pathParts[1];
+    const pageName = pathParts[pathParts.length - 1];
+
+    return openCourses.includes(courseName) || openPages.includes(pageName);
+  }
+
+  function isSignedIn() {
+    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
+
+    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
+
+    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
+      .then((response) => response.text())
+      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
+      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
+      .catch((error) => {});
+  }
+
+  function redirectToSignIn() {
+    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+    const redirectMessage = document.querySelector('#redirect-message');
+    redirectMessage.style.display = "block";
+    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+    window.location = signInUrl;
+  }
+
+  function showPageContents() {
+    document.querySelector('#content-wrapper').style.visibility = 'visible';
+  }
+
+  function showUnauthorizedMessage() {
+    document.querySelector('#unauthorized-message').style.display = 'block';
+  }
+
+  function getAuthBaseUrl() {
+    const domain = getDomain();
+    const authBaseUrl = `https://auth.${domain}`;
+    return authBaseUrl;
+  }
+</script><script src="/assets/js/docs.min.js"></script><script>
+  var MathJax = {
+    tex: {
+      inlineMath: [['$$', '$$'], ['\[', '\])']]
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax span": {
+          color: "#000000"
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script>
+  handleExternalLinks();
+
+  function handleExternalLinks() {
+    const domain = getDomain();
+    const links = document.querySelectorAll('a');
+    return links.forEach((link) => {
+      if (!link.host.includes(domain)) link.target = '_blank';
+    })
+  };
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,1006 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Intended as a home for Lambda School curriculum.">
+<meta name="author" content="">
+<meta name="generator" content="Jekyll v3.8.0">
+<title>Introduction to Authentication · Lambda School</title>
+
+<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+
+<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+  analytics.page();
+  }}();
+</script>
+
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#a0001e">
+</head>
+<body>
+<noscript>Please enable JavaScript to view this page.</noscript>
+<div id="redirect-message" style="display: none;">
+You must be logged in to view this page.
+</div>
+<div id="unauthorized-message" style="display: none;">
+You must be a Lambda School student to view this page.
+</div>
+<div id="content-wrapper" style="visibility: hidden;">
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container">
+<span class="skiplink-text">Skip to main content</span>
+</div>
+</a>
+<div class="mobile-menu">
+<div class="m-drop">
+<div class="mobile-row">
+<div class="header-row" style="padding: 3px 7px">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
+</svg></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+</button>
+</div>
+</div>
+<div class="nav-row">
+<div class="results-container">
+<ul id="results-container" class="dropdown list-group"></ul>
+</div>
+<div id="mobile-course-menu" class="collapse nav-row">
+<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+<nav class="bd-links">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web Annex</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recfwZvI7QhMa7xbG">
+1.&nbsp;&nbsp;User Interface and Git
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recl0IyzS2Vl89lZa/">
+User Interface
+</a>
+</li>
+<li>
+<a href="/webannex/module/rect59e95N6OSvoCd/">
+Git for Web Development
+</a>
+</li>
+<li>
+<a href="/webannex/module/recGvXyWT6AvGtMHR/">
+User Interface II
+</a>
+</li>
+<li>
+<a href="/webannex/module/recaVbBZhh8BTyMdM/">
+User Interface III
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recIXiQgpgMdJ81ms">
+2.&nbsp;&nbsp;Advanced CSS
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recuDrqSGpWcepCMs/">
+Responsive Design I
+</a>
+</li>
+<li>
+<a href="/webannex/module/recE3IqPtDxaVI0DW/">
+Responsive Design II
+</a>
+</li>
+<li>
+<a href="/webannex/module/reculyBhIYkuoBRqh/">
+Preprocessing I
+</a>
+</li>
+<li>
+<a href="/webannex/module/rec1hRu3bO6L0uxn2/">
+Preprocessing II
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recclZwJxMU8kUngT">
+3.&nbsp;&nbsp;JavaScript Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recCT3KJYTIRYwQMh/">
+JavaScript I
+</a>
+</li>
+<li>
+<a href="/webannex/module/rec1oaBmEoSilO2yf/">
+JavaScript II
+</a>
+</li>
+<li>
+<a href="/webannex/module/rec0AWuNLezbpit7m/">
+Prototypes and Inheritance
+</a>
+</li>
+<li>
+<a href="/webannex/module/recyS588eOvVUKAMc/">
+Classes
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recRT8JKvbTiGaosk">
+4.&nbsp;&nbsp;Single Page Applications
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
+React Router I
+</a>
+</li>
+<li>
+<a href="/webannex/module/recYkF1FDilIedmwX/">
+React Router II
+</a>
+</li>
+<li>
+<a href="/webannex/module/rect081xiYT2cfxGF/">
+Form Management
+</a>
+</li>
+<li>
+<a href="/webannex/module/recKK5C7wV0WiECfr/">
+Advanced Form Management
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recozTHaHJe6L1ThN">
+5.&nbsp;&nbsp;Authentication and Testing
+</a>
+<ul class="nav bd-sidenav">
+
+<li class="active bd-sidenav-active">
+<a href="/webannex/module/recQD9lnhqWEFh6g4/">
+Introduction to Authentication
+</a>
+</li>
+<li>
+<a href="/webannex/module/recvIPgHwxF194c7q/">
+Using Sessions and Cookies
+</a>
+</li>
+<li>
+<a href="/webannex/module/reciCHdNjavSKaaLt/">
+Using JSON Web Tokens (JWT)
+</a>
+</li>
+<li>
+<a href="/webannex/module/reciXdxRA8zXJXDID/">
+Testing the Back End
+</a>
+</li>
+</ul>
+</div>
+<hr>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-container">
+<div class="sidebar-container bd-sidebar">
+<div class="docs-sidebar">
+<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
+<ul id="results-container" class="dropdown list-group"></ul>
+<nav class="bd-links collapse" id="bd-docs-nav">
+<div class="bd-toc-item">
+<h4 class="bd-toc-link">Web Annex</h4>
+</div>
+
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recfwZvI7QhMa7xbG">
+1.&nbsp;&nbsp;User Interface and Git
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recl0IyzS2Vl89lZa/">
+User Interface
+</a>
+</li>
+<li>
+<a href="/webannex/module/rect59e95N6OSvoCd/">
+Git for Web Development
+</a>
+</li>
+<li>
+<a href="/webannex/module/recGvXyWT6AvGtMHR/">
+User Interface II
+</a>
+</li>
+<li>
+<a href="/webannex/module/recaVbBZhh8BTyMdM/">
+User Interface III
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recIXiQgpgMdJ81ms">
+2.&nbsp;&nbsp;Advanced CSS
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recuDrqSGpWcepCMs/">
+Responsive Design I
+</a>
+</li>
+<li>
+<a href="/webannex/module/recE3IqPtDxaVI0DW/">
+Responsive Design II
+</a>
+</li>
+<li>
+<a href="/webannex/module/reculyBhIYkuoBRqh/">
+ Preprocessing I
+</a>
+</li>
+<li>
+<a href="/webannex/module/rec1hRu3bO6L0uxn2/">
+Preprocessing II
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recclZwJxMU8kUngT">
+3.&nbsp;&nbsp;JavaScript Fundamentals
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/recCT3KJYTIRYwQMh/">
+JavaScript I
+</a>
+</li>
+<li>
+<a href="/webannex/module/rec1oaBmEoSilO2yf/">
+JavaScript II
+</a>
+</li>
+<li>
+<a href="/webannex/module/rec0AWuNLezbpit7m/">
+Prototypes and Inheritance
+</a>
+</li>
+<li>
+<a href="/webannex/module/recyS588eOvVUKAMc/">
+Classes
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recRT8JKvbTiGaosk">
+4.&nbsp;&nbsp;Single Page Applications
+</a>
+<ul class="nav bd-sidenav">
+
+<li>
+<a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
+React Router I
+</a>
+</li>
+<li>
+<a href="/webannex/module/recYkF1FDilIedmwX/">
+React Router II
+</a>
+</li>
+<li>
+<a href="/webannex/module/rect081xiYT2cfxGF/">
+Form Management
+</a>
+</li>
+<li>
+<a href="/webannex/module/recKK5C7wV0WiECfr/">
+Advanced Form Management
+</a>
+</li>
+</ul>
+</div>
+<div class="bd-toc-item ">
+<a class="bd-toc-link" href="/webannex/sprint/recozTHaHJe6L1ThN">
+5.&nbsp;&nbsp;Authentication and Testing
+</a>
+<ul class="nav bd-sidenav">
+
+<li class="active bd-sidenav-active">
+<a href="/webannex/module/recQD9lnhqWEFh6g4/">
+Introduction to Authentication
+</a>
+</li>
+<li>
+<a href="/webannex/module/recvIPgHwxF194c7q/">
+Using Sessions and Cookies
+</a>
+</li>
+<li>
+<a href="/webannex/module/reciCHdNjavSKaaLt/">
+Using JSON Web Tokens (JWT)
+</a>
+</li>
+<li>
+<a href="/webannex/module/reciXdxRA8zXJXDID/">
+Testing the Back End
+</a>
+</li>
+</ul>
+</div>
+<hr>
+</nav>
+</div>
+</div>
+<main class="content-container flex-wrapper" role="main">
+<div class="sticky-nav">
+<div class="sprint-nav">
+<ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+<li class="toc-entry toc-h2"><a href="#guided-project">Guided Project</a></li>
+<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+</ul>
+</div>
+
+</div>
+<div class="wrapper limit-width">
+<div class="flex-wrapper">
+<div class="limit-width">
+<div class="jumbotron">
+<h1 class="bd-title" id="content">Introduction to Authentication</h1>
+<span class="lead">
+<p class="bd-lead"></p>
+<p>Authentication is a complex and important topic. Complex because new threats surface every day that challenge our security strategies and standards. It is important because most of our lives depend on online services and computer systems that hold our sensitive data.</p>
+<p>In this module we’ll get a gentle introduction into the world of authentication, what it is and isn’t, as well as some strategies to protect the keys to our data: our credentials.</p>
+</span>
+<strong>At the end of this module, you should be able to:</strong>
+<ul>
+<li>explain what is authentication and provide guidelines for password security.</li>
+<li>hash passwords before saving them to the database</li>
+<li>verify passwords using bcrypt</li>
+<li>use in-memory sessions to persist authentication information across requests</li>
+<li>implement logout using a sessions based API</li>
+<li>restrict access to resources, allowing access only for authenticated users</li>
+</ul>
+</div>
+<div class="alert alert-warning" role="alert">
+<h4>Pro Tip</h4>
+<p>Good writing is good because it is easier to read.</p>
+</div>
+<h2 class="display-4">
+<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
+<p class="lead">Review each preclass resource before class.</p>
+<div class="preclass">
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<a target="_blank" href="https://youtu.be/-Qyip0bKbd0">Video: Using Sessions and Cookies for FSW13 w/ Luis Hernandez</a>
+<p>Using Sessions and Cookies for FSW13 w/ Luis Hernandez</p>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/XFsLtRqKpXQ" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/iRanaxmN9O4" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ke85xaOTTqg" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/aUerI0MXM1I" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0Q3XvKqU8cI" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li class="list-group-item">
+<a target="_blank" href="https://cloudplatform.googleblog.com/2018/01/12-best-practices-for-user-account.html">User Account Best Practices</a>
+<p>User Account best practices by Google.</p>
+</li>
+<li class="list-group-item">
+<a target="_blank" href="https://www.npmjs.com/package/bcryptjs">bcrypt npm module</a>
+<p>NPM module useful for hashing passwords.</p>
+</li>
+<li class="list-group-item">
+<a target="_blank" href="https://stackoverflow.com/questions/6832445/how-can-bcrypt-have-built-in-salts">bcrypt defined</a>
+</li>
+<li class="list-group-item">
+<a target="_blank" href="https://nodewebapps.com/2017/06/18/how-do-nodejs-sessions-work/">How do express sessions work?</a>
+</li>
+<li class="list-group-item">
+<a target="_blank" href="https://www.npmjs.com/package/express-session">express-session package documentation</a>
+<p>How to install and use express-session</p>
+</li>
+</ul>
+</div>
+<h2 class="display-4">
+<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
+<h4 class="mark mb-3 p-2">Learn to explain what is authentication and provide guidelines for password security.</h4>
+<p>Authentication and Authorization (also known as authN and authZ) are often confused or used interchangeably, but they don’t mean the same thing. In this section we’ll cover what they are and see how the different.</p>
+<p>We will also talk about why implementing authentication is challenging and the things to keep in mind when dealing with credentials.</p>
+<h5>Overview</h5>
+<p><strong>Authentication</strong> is the process by which our Web API verifies the identity of a client that is trying to access a resource. This is different from <strong>authorization</strong>, which comes after authentication and determines what type of access, if any, that a user should have.</p>
+<p>Adding authentication to a Web API requires that an API can:</p>
+<ul>
+<li>register user accounts.</li>
+<li>login to prove identity.</li>
+<li>logout of the system to invalidate the user’s access until they login again.</li>
+<li>add a way for users to reset their passwords.</li>
+</ul>
+<p>Proper authentication is difficult. There is a constant race between security experts coming up with innovative ways to protect our information and attackers coming up with ways to circumvent those security measures.</p>
+<p>Some of the things we need to take into account when implementing authentication are:</p>
+<ul>
+<li>Password storage.</li>
+<li>Password strength.</li>
+<li>Brute-force safeguards.</li>
+</ul>
+<h5>Follow Along</h5>
+<p>Let’s tackle the first one, <strong>password storage</strong>. The rule of thumb is: <strong>NEVER, EVER, under no circumstances, store user passwords in plain text</strong>. Then what are the two main options:</p>
+<ul>
+<li>encryption.</li>
+<li>hashing.</li>
+</ul>
+<h3 id="password-hashing-vs-encryption-for-password-storage">Password Hashing vs. Encryption for password storage</h3>
+<ul>
+<li>Encryption goes two ways. First, it utilizes plain text and private keys to generate encrypted passwords and then reverses the process to match to an original password.</li>
+<li>Cryptographic hashes only go one way: parameters + input = hash. It is pure; given the same parameters and input it generates the same hash.</li>
+</ul>
+<p>If the database of users and keys are compromised, it is possible to decrypt the passwords to their original values, and this is bad because users often share passwords across different sites. This is one reason why <strong>cryptographic hashing is the preferred method for storing user passwords</strong>.</p>
+<h3 id="password-strength">Password Strength</h3>
+<p>Password length alone is not enough to slow password guessing, but in general, long passwords are better than short, complicated passwords. It is a trade-off between convenience and security.</p>
+<p>Visit <a href="https://www.grc.com/haystack.htm">this site</a> to see how a combination of password length and complexity affects an attacker’s ability to pre-generate password hashes.</p>
+<h3 id="brute-force-attack-mitigation">Brute-Force Attack Mitigation</h3>
+<p>A common way that attackers circumvent hashing algorithms is by pre-calculating hashes for all possible character combinations up to a particular length using common hashing techniques. The results of said calculations are stored into a database table known as a <strong>rainbow table</strong>. Whenever there is a breach, the attacker checks every breached password against their table.</p>
+<p>Which Cryptographic Hashing Algorithm should we use? MD5, SHA-1, SHA-2, SHA-3? None of these, because they are flawed, these algorithms are optimized for speed, not security.</p>
+<p>We aim to slow down hackers’ ability to get at a user’s password. To do so, we are going to add <strong>time</strong> to our security algorithm to produce what is known as a <strong>key derivation function</strong>.</p>
+<p>[Hash] + [Time] = [Key Derivation Function].</p>
+<p>In the next section, we’ll learn how to use a popular Key Derivation library to store user passwords safely.</p>
+<h5>Challenge</h5>
+<p>Write a paragraph that explains the difference between authentication and authorization and send it to your PM on slack.</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://www.cloudflare.com/learning/security/threats/owasp-top-10/" target="blank_">OWASP Top 10</a><br> </li>
+<li>
+<a href="http://plaintextoffenders.com/" target="blank_">Plain Text Offenders</a><br> A list of websites storing passwords as plain text.</li>
+<li>
+<a href="https://www.oreilly.com/ideas/the-seif-project" target="blank_">The Seif Project</a><br> </li>
+<li>
+<a href="https://stackoverflow.com/questions/6832445/how-can-bcrypt-have-built-in-salts" target="blank_">bcrypt defined</a><br> </li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to hash passwords before saving them to the database</h4>
+<p>When storing a user’s password into a database we must ensure that they are not saved as plain text. The reasons are obvious and yet, we have heard of big companies like t-mobile not doing this.</p>
+<p>In this section we’ll learn how to save passwords in a secure manner.</p>
+<h5>Overview</h5>
+<p>Instead of writing our own <em>key derivation function</em> (fancy name for hashing function), we’ll use a well known and popular module called <a href="https://www.npmjs.com/package/bcryptjs">bcryptjs</a>. This module is well supported and stable, but there are other options you can explore.</p>
+<p>Bcryptjs features include:</p>
+<ul>
+<li>password hashing function.</li>
+<li>implements salting both manually and automatically.</li>
+<li>accumulative hashing rounds.</li>
+</ul>
+<p>Having an algorithm that hashes the information multiple times (rounds) means an attacker needs to have the hash, know the algorithm used, and how many rounds were used to generate the hash in the first place.</p>
+<h5>Follow Along</h5>
+<p>Follow these steps to use bcrypt in your project.</p>
+<p>Install <code class="highlighter-rouge">bcryptjs</code> using npm.</p>
+<p>Import it into your server.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">bcrypt</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">bcryptjs</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+<p>To hash a password:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">credentials</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">hash</span> <span class="o">=</span> <span class="nx">bcrypt</span><span class="p">.</span><span class="nx">hashSync</span><span class="p">(</span><span class="nx">credentials</span><span class="p">.</span><span class="nx">password</span><span class="p">,</span> <span class="mi">14</span><span class="p">);</span>
+
+<span class="nx">credentials</span><span class="p">.</span><span class="nx">password</span> <span class="o">=</span> <span class="nx">hash</span><span class="p">;</span>
+
+<span class="c1">// move on to save the user.</span>
+</code></pre></div></div>
+<p>To verify a password:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">credentials</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+
+<span class="c1">// find the user in the database by it's username then</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">user</span> <span class="o">||</span> <span class="o">!</span><span class="nx">bcrypt</span><span class="p">.</span><span class="nx">compareSync</span><span class="p">(</span><span class="nx">credentials</span><span class="p">.</span><span class="nx">password</span><span class="p">,</span> <span class="nx">user</span><span class="p">.</span><span class="nx">password</span><span class="p">))</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">401</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span> <span class="na">error</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Incorrect credentials</span><span class="dl">'</span> <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="c1">// the user is valid, continue on</span>
+</code></pre></div></div>
+<h5>Challenge</h5>
+<p>Use bcrypt to add password hashing functionality to your user registration.</p>
+<h5>Dig Deeper</h5>
+<ul>
+<li>
+<a href="https://en.wikipedia.org/wiki/Rainbow_table" target="blank_">Rainbow Table Attacks</a><br> Just a Wiki on what this can be.</li>
+</ul>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to verify passwords using bcrypt</h4>
+<p>We have established that <strong>passwords must be hashed before they are persisted to
+the data storage</strong>, but when users attempt to login, they provide a password
+guess in plain text. We need a way to validate the provided plain text password
+against the hash that was stored when the user registered.</p>
+<h5>Overview</h5>
+<p>Use <code class="highlighter-rouge">bcrypt.compareSync()</code>, passing the password guess in plain text and the password hash from the database to validate credentials.</p>
+<p>If the password guess is valid, the method returns true. Otherwise, it returns false. The library hashes the password guess first and then compare the hashes.</p>
+<h5>Follow Along</h5>
+<p>Let’s see an example.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">server</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">/api/login</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="p">{</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+
+  <span class="nx">Users</span><span class="p">.</span><span class="nx">findBy</span><span class="p">({</span> <span class="nx">username</span> <span class="p">})</span>
+    <span class="p">.</span><span class="nx">first</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">user</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="c1">// check that passwords match</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">user</span> <span class="o">&amp;&amp;</span> <span class="nx">bcrypt</span><span class="p">.</span><span class="nx">compareSync</span><span class="p">(</span><span class="nx">password</span><span class="p">,</span> <span class="nx">user</span><span class="p">.</span><span class="nx">password</span><span class="p">))</span> <span class="p">{</span>
+        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span> <span class="na">message</span><span class="p">:</span> <span class="s2">`Welcome </span><span class="p">${</span><span class="nx">user</span><span class="p">.</span><span class="nx">username</span><span class="p">}</span><span class="s2">!`</span> <span class="p">});</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// we will return 401 if the password or username are invalid</span>
+        <span class="c1">// we don't want to let attackers know when they have a good username</span>
+        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">401</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span> <span class="na">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Invalid Credentials</span><span class="dl">'</span> <span class="p">});</span>
+      <span class="p">}</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">500</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">});</span> 
+</code></pre></div></div>
+<h5>Challenge</h5>
+<p>Add login to one of your prior module challenges.</p>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to use in-memory sessions to persist authentication information across requests</h4>
+<p>Sessions are commonly used to allow a server to store information about a client. That information can then be used for a variety of purposes.</p>
+<p>We’ll use it to persist authentication information so there is no need to re-enter credentials on every new request the client makes to the server.</p>
+<h5>Overview</h5>
+<p>Sessions provide a way to persist data across requests. We’ll use them to save authentication information, so there is no need to re-enter credentials on every new request the client makes to the server.</p>
+<p>When using sessions, <strong>each client will have a unique session</strong> stored on the server.</p>
+<p>Now that we have a solution for keeping authentication information, we need a way to transmit that information between the client and server. For that, we’ll use <strong>cookies</strong>.</p>
+<h3 id="authentication-workflow-for-sessions">Authentication Workflow for sessions</h3>
+<p>The basic workflow when using a combination of <em>cookies</em> and <em>sessions</em> for authentication is:</p>
+<ul>
+<li>Client sends credentials.</li>
+<li>Server verify credentials.</li>
+<li>Server creates a session for the client.</li>
+<li>Server produces and sends back cookie.</li>
+<li>Client stores the cookie.</li>
+<li>Client sends cookie on every request.</li>
+<li>Server verifies that cookie is valid.</li>
+<li>Server provides access to resource.</li>
+</ul>
+<p>To understand how cookies are transmitted and stored in the browser, we need to look at the basic structure of an HTTP message. Every HTTP message, be it a request or a response, has two main parts: the <em>headers</em> and the <em>body</em>.</p>
+<p>The <em>headers</em> are a set of key/value stores that include information about the request. There are several standard headers, but we can add our own if needed.</p>
+<p>To send <em>cookies</em>, the server adds the <code class="highlighter-rouge">Set-Cookie</code> header to the response like so: <code class="highlighter-rouge">"Set-Cookie": "session=12345"</code>. Notice how the value of a header is just a string. The browser will read the header and save a cookie called <code class="highlighter-rouge">session</code> with the value <code class="highlighter-rouge">12345</code> in this example. We will use a library that takes care of creating and sending the cookie.</p>
+<p>The <em>body</em> contains the data portion of the message.</p>
+<p>The browser will add the <code class="highlighter-rouge">"Cookie": "session=12345"</code> header on every subsequent request and the server.</p>
+<p>Cookies are not accessible from JavaScript or anywhere because they are cryptographically signed and very secure.</p>
+<p>There are sever libraries for handling sessions in Node.js, below are two examples:</p>
+<ul>
+<li><a href="https://www.npmjs.com/package/client-sessions">client-sessions</a></li>
+<li><a href="https://www.npmjs.com/package/express-session">express-session</a></li>
+</ul>
+<p>We will use the latter.</p>
+<h4 id="common-ways-to-store-session-data-on-the-server">Common ways to store session data on the server:</h4>
+<ul>
+<li>Memory.</li>
+<li>Memory cache (like Redis and Memcached).</li>
+<li>Database.</li>
+</ul>
+<h5 id="cookies">Cookies</h5>
+<ul>
+<li>Automatically included on every request.</li>
+<li>Unique to each domain + device pair.</li>
+<li>Cannot be sent to a different domain.</li>
+<li>Sent in the cookie header.</li>
+<li>Has a body that can have extra identifying information.</li>
+<li>Max size around 4KB.</li>
+</ul>
+<h5 id="storing-session-data-in-memory">Storing session data in memory</h5>
+<ul>
+<li>Data stored in memory is wiped when the server restarts.</li>
+<li>Causes memory leaks as more and more memory is used as the application continues to store data in session for different clients.</li>
+<li>Good for development due to its simplicity.</li>
+</ul>
+<h5 id="using-cookies-to-transfer-session-data">Using cookies to transfer session data.</h5>
+<p>Advantages when using cookies:</p>
+<ul>
+<li>a cookie is a small key/value pair data structure that is passed back and forth between client and server and stored in the browser.</li>
+<li>the server uses it to store information about a particular client/user.</li>
+<li>workflow for using cookies as session storage:
+<ul>
+<li>the server issues a cookie with an expiration time and sends it with the response.</li>
+<li>browsers automatically store the cookie and send it on every request to the same domain.</li>
+<li>the server can read the information contained in the cookie (like the username).</li>
+<li>the server can make changes to the cookie before sending it back on the response.</li>
+<li>rinse and repeat.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Express-session uses cookies for session management</strong>.</p>
+<p>Drawbacks when using cookies:</p>
+<ul>
+<li>small size, around 4KB.</li>
+<li>sent in every request, increasing the size of the request if too much information is stored in them.</li>
+<li>if an attacker gets a hold of the private key used to encrypt the cookie, they could read the cookie data.</li>
+</ul>
+<h5 id="storing-session-data-in-memory-cache-preferred-way-of-storing-sessions-in-production-applications">Storing session data in Memory Cache (preferred way of storing sessions in production applications)</h5>
+<ul>
+<li>stored as key-value pair data in a separate server.</li>
+<li>the server still uses a cookie, but it only contains the session id.</li>
+<li>the memory cache server uses that session id to find the session data.</li>
+</ul>
+<p>Advantages:</p>
+<ul>
+<li>Quick lookups.</li>
+<li>Decoupled from the API server.</li>
+<li>A single memory cache server can serve many applications.</li>
+<li>Automatically remove old session data.</li>
+</ul>
+<p>Drawbacks:</p>
+<ul>
+<li>another server to set up and manage.</li>
+<li>extra complexity for small applications.</li>
+<li>hard to reset the cache without losing all session data.</li>
+</ul>
+<h5 id="storing-session-data-in-a-database">Storing session data in a database</h5>
+<ul>
+<li>Similar to storing data in a memory store.</li>
+<li>The session cookie still holds the session id.</li>
+<li>The server uses the session id to find the session data in the database.</li>
+<li>Retrieving data from a database is slower than reading from a memory cache.</li>
+<li>Causes chatter between the server and the database.</li>
+<li>
+<strong>Need to manage/remove old sessions manually</strong> or the database will be filled with unused session data. Most libraries now manage this for you.</li>
+</ul>
+<p>Here is a list of <a href="https://github.com/expressjs/session#compatible-session-stores">express-session compatible stores.</a></p>
+<h5>Follow Along</h5>
+<p>Let’s add session support to our Web API:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">session</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express-session</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="c1">// configure express-session middleware</span>
+<span class="nx">server</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span>
+  <span class="nx">session</span><span class="p">({</span>
+    <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">notsession</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// default is connect.sid</span>
+    <span class="na">secret</span><span class="p">:</span> <span class="dl">'</span><span class="s1">nobody tosses a dwarf!</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">cookie</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">maxAge</span><span class="p">:</span> <span class="mi">1</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">,</span>
+      <span class="na">secure</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// only set cookies over https. Server will not send back a cookie over http.</span>
+    <span class="p">},</span> <span class="c1">// 1 day in milliseconds</span>
+    <span class="na">httpOnly</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// don't let JS code access cookies. Browser extensions run JS code on your browser!</span>
+    <span class="na">resave</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="na">saveUninitialized</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="p">})</span>
+<span class="p">);</span>
+</code></pre></div></div>
+<p>The <code class="highlighter-rouge">resave</code> option forces the session to be saved back to the session store, even if the session wasn’t modified during the request.</p>
+<p>The <code class="highlighter-rouge">saveUninitialized</code> flag, forces a session that is “uninitialized” to be saved to the store. A session is uninitialized when it is new but not modified. Choosing <code class="highlighter-rouge">false</code> is useful for implementing login sessions, reducing server storage usage, or <strong>complying with laws that require permission before setting a cookie</strong>.</p>
+<p>Now we can store session data in one route handler and read it in another.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Frodo</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">got it</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/greet</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s2">`hello </span><span class="p">${</span><span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+<p>The server sends back a session id with every response, and the client then sends back that session id on every request.</p>
+<p><a href="https://www.npmjs.com/package/express-session"><code class="highlighter-rouge">express-session</code></a> uses in-memory storage by default.</p>
+<p>Note how we generalize the session cookie’s name, to make it harder for attackers to know which library we’re using to manage our sessions. This is akin to using a helmet to hide the <code class="highlighter-rouge">X-Powered-By=Express</code> header.</p>
+<h5>Challenge</h5>
+<p>Implement session storage in your Web API using the <a href="https://www.npmjs.com/package/client-sessions">client-sessions</a> library instead of <code class="highlighter-rouge">express-session</code>.</p>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to implement logout using a sessions based API</h4>
+<p>In this section we’ll see how to implement user logout functionality.</p>
+<h5>Overview</h5>
+<p>Sessions remain active until they reach the expiration time configured when they were created, but when a user logs out, we need to invalidate the session immediately.</p>
+<p>We can do this by removing the session from our session store. Each library does it differently.</p>
+<h5>Follow Along</h5>
+<p>Add the following code for the logout endpoint:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">server</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/api/logout</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">destroy</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">error logging out</span><span class="dl">'</span><span class="p">);</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">good bye</span><span class="dl">'</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></div>
+<h5>Challenge</h5>
+<p>Implement logout using the <a href="https://www.npmjs.com/package/client-sessions">client-sessions</a> library instead of <code class="highlighter-rouge">express-session</code>.</p>
+<hr>
+<h4 class="mark mb-3 p-2">Learn to restrict access to resources, allowing access only for authenticated users</h4>
+<p>Most Web APIs will have endpoints that can only be accessed by authenticated clients.</p>
+<p>In this section we’ll see how we can use Express local middleware to implement this functionality.</p>
+<h5>Overview</h5>
+<p>Restricting access to endpoints is a two-step process:</p>
+<ul>
+<li>We write middleware to check that there is a <em>session</em> for the client.</li>
+<li>We place that middleware in front of the endpoints we want to restrict.</li>
+</ul>
+<h5>Follow Along</h5>
+<p>We’ll start by writing a piece of middleware we can use locally to restrict access to protected routes.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="kr">protected</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">session</span> <span class="o">&amp;&amp;</span> <span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">userId</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">next</span><span class="p">();</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">401</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span> <span class="na">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">you shall not pass!!</span><span class="dl">'</span> <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>This middleware verifies that we have a session and that the <code class="highlighter-rouge">userId</code> is set. We could use <code class="highlighter-rouge">username</code> or any other value to verify access to a resource.</p>
+<p>Then, we add that middleware to the endpoints we’d like to protect.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">server</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/api/users</span><span class="dl">'</span><span class="p">,</span> <span class="kr">protected</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">db</span><span class="p">(</span><span class="dl">'</span><span class="s1">users</span><span class="dl">'</span><span class="p">)</span> 
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">users</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span><span class="nx">users</span><span class="p">))</span>
+    <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span><span class="nx">err</span><span class="p">));</span>
+<span class="p">});</span>
+</code></pre></div></div>
+<p>The <code class="highlighter-rouge">/api/users</code> endpoint is only accessible when the client is logged in.</p>
+<h5>Challenge</h5>
+<p>Add a piece of global middleware that restricts access to all endpoints, but the <code class="highlighter-rouge">/register</code> and <code class="highlighter-rouge">/login</code> endpoints.</p>
+<hr>
+<h2>
+<a id="guided-project" class="anchor" href="#guided-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Guided Project</h2>
+<h3>Node Auth 1 Guided Project</h3>
+<p>Starter code for Node Auth 1 guided project</p>
+<a target="_blank" href="https://github.com/LambdaSchool/node-auth1-guided">GitHub Repo</a>
+<hr>
+<h2 class="display-4">
+<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
+<ul class="list-group">
+<li class="list-group-item">
+<h5><a target="_blank" href="https://github.com/LambdaSchool/node-auth1-project">Web Auth 1 Module Project</a></h5>
+<p>Afternoon project for “Node Auth 1” Module</p>
+</li>
+</ul>
+<h2 class="display-4">
+<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
+<h3 class="display-5">Class Recordings</h3>
+<p class="lead">You can use class recordings to help you master the material.</p>
+<div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<strong><a target="_blank" href="https://youtu.be/tjmZWGR4PPM">Introduction to Authentication for Web PT 18 w/Jason Maurer</a></strong>
+<p>Authentication is a complex and important topic. Complex because new threats surface every day that challenge our security strategies and standards. It is important because most of our lives depend on online services and computer systems that hold our sensitive data. In this module we’ll get a gentle introduction into the world of authentication, what it is and isn’t, as well as some strategies to protect the keys to our data: our credentials. At the end of this module, you should be able to: explain what is authentication and provide guidelines for password security. hash passwords before saving them to the database verify passwords using bcrypt use in-memory sessions to persist authentication information across requests implement logout using a sessions based API restrict access to resources, allowing access only for authenticated users</p>
+</li>
+<li class="list-group-item">
+<a href="/archive/FSW/module/recQD9lnhqWEFh6g4">All previous recordings</a>
+</li>
+</ul>
+</div>
+<h3 class="display-5">Demonstrate Mastery</h3>
+<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
+<ul>
+<li>Objective challenge: <p>Write a paragraph that explains the difference between authentication and authorization and send it to your PM on slack.</p>
+</li>
+<li>Objective challenge: <p>Use bcrypt to add password hashing functionality to your user registration.</p>
+</li>
+<li>Objective challenge: <p>Add login to one of your prior module challenges.</p>
+</li>
+<li>Objective challenge: <p>Implement session storage in your Web API using the <a href="https://www.npmjs.com/package/client-sessions">client-sessions</a> library instead of <code class="highlighter-rouge">express-session</code>.</p>
+</li>
+<li>Objective challenge: <p>Implement logout using the <a href="https://www.npmjs.com/package/client-sessions">client-sessions</a> library instead of <code class="highlighter-rouge">express-session</code>.</p>
+</li>
+<li>Objective challenge: <p>Add a piece of global middleware that restricts access to all endpoints, but the <code class="highlighter-rouge">/register</code> and <code class="highlighter-rouge">/login</code> endpoints.</p>
+</li>
+<li>Guided Project: Node Auth 1 Guided Project</li>
+<li>Project: Web Auth 1 Module Project</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80850900-4');
+</script>
+<script type="text/javascript">
+  function getDomain() {
+    const domainName = window.location.hostname.split('.')[1];
+    return `${domainName}.com`;
+  }
+</script>
+<script src="" integrity="" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
+<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+  SimpleJekyllSearch.init({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    dataSource: '/search.json',
+    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Introduction to Authentication">{title}</a></li>',
+    noResultsText: '',
+    limit: 10,
+    fuzzy: true,
+  })
+</script>
+<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
+  if (window.attachEvent) {
+    window.attachEvent('onload', verifySignedIn);
+  } else {
+    if (window.onload) {
+      var currentOnLoadFn = window.onload;
+      var newOnLoadFn = function (evt) {
+        currentOnLoadFn(evt);
+        verifySignedIn();
+      };
+      window.onload = newOnLoadFn;
+    } else {
+      window.onload = verifySignedIn;
+    }
+  }
+
+  function verifySignedIn() {
+    if (isPagePublic()) {
+      return showPageContents();
+    }
+
+    window.__user = null;
+    isSignedIn().then((user) => {
+      window.__user = user;
+
+      if (!user.signedIn) {
+        redirectToSignIn();
+      } else if (!user.student && !window.__openToAdmissions) {
+        showUnauthorizedMessage();
+      } else {
+        showPageContents();
+      }
+    });
+  }
+
+  function isPagePublic() {
+    const openCourses = [
+      'and-pre',
+      'ds-pre',
+      'fsw-pre',
+      'help',
+      'ios-pre',
+    ];
+
+    const openPages = [
+      'cs-and',
+      'cs-fsw',
+      'cs-ios',
+      'cr',
+      'ds',
+      'jx',
+      'p4s',
+      'ux',
+    ];
+
+    const pathParts = window.location.pathname.split('/');
+    const courseName = pathParts[1];
+    const pageName = pathParts[pathParts.length - 1];
+
+    return openCourses.includes(courseName) || openPages.includes(pageName);
+  }
+
+  function isSignedIn() {
+    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
+
+    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
+
+    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
+      .then((response) => response.text())
+      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
+      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
+      .catch((error) => {});
+  }
+
+  function redirectToSignIn() {
+    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+    const redirectMessage = document.querySelector('#redirect-message');
+    redirectMessage.style.display = "block";
+    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+    window.location = signInUrl;
+  }
+
+  function showPageContents() {
+    document.querySelector('#content-wrapper').style.visibility = 'visible';
+  }
+
+  function showUnauthorizedMessage() {
+    document.querySelector('#unauthorized-message').style.display = 'block';
+  }
+
+  function getAuthBaseUrl() {
+    const domain = getDomain();
+    const authBaseUrl = `https://auth.${domain}`;
+    return authBaseUrl;
+  }
+</script><script src="/assets/js/docs.min.js"></script><script>
+  var MathJax = {
+    tex: {
+      inlineMath: [['$$', '$$'], ['\[', '\])']]
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax span": {
+          color: "#000000"
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script>
+  handleExternalLinks();
+
+  function handleExternalLinks() {
+    const domain = getDomain();
+    const links = document.querySelectorAll('a');
+    return links.forEach((link) => {
+      if (!link.host.includes(domain)) link.target = '_blank';
+    })
+  };
+</script>
+</div>
+</body>
+</html>
