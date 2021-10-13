@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
@@ -39,32 +37,32 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Guided Project](#guided-project)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Guided Project](#guided-project)
+- [Project](#project)
+- [Review](#review)
 
 # Web Deployment and Best Practices
 
@@ -74,13 +72,13 @@ The time has come to show your work to the world. In this module we’ll deploy 
 
 We’ll learn how to:
 
--   extract configuration values into environment variables.
--   deploy an API to Heroku.
+- extract configuration values into environment variables.
+- deploy an API to Heroku.
 
 **At the end of this module, you should be able to:**
 
--   extract configuration into environment variables
--   deploy a web-api to Heroku
+- extract configuration into environment variables
+- deploy a web-api to Heroku
 
 #### Pro Tip
 
@@ -90,21 +88,17 @@ Never put anything out there on social media that you wouldn’t want to come up
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Ju41JnGH8WY), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Ju41JnGH8WY), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=j27EEMJEuHc), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- [Heroku Installation guide](https://devcenter.heroku.com/articles/heroku-cli)
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=j27EEMJEuHc), or enable JavaScript if it is disabled in your browser.
-
--   [Heroku Installation guide](https://devcenter.heroku.com/articles/heroku-cli)
-
-    How to install Heroku for use on your development environment
+  How to install Heroku for use on your development environment
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -132,13 +126,13 @@ The starter code for this tutorial can be found in [this repository](https://git
 
 The server is not configured to run when typing `npm run server`. It is also not using `nodemon` to restart on changes. Let’s configure both.
 
--   -   Add `nodemon` as a development time dependency: `npm install -D nodemon`.
+- - Add `nodemon` as a development time dependency: `npm install -D nodemon`.
 
--   Open `package.json` and modify the “test” script to read:
+- Open `package.json` and modify the “test” script to read:
 
-    "server": "nodemon index.js"
+  "server": "nodemon index.js"
 
--   Test from a terminal.
+- Test from a terminal.
 
 When we deploy the API, Heroku is going to look for a “start” script that uses `node` to run the server. We need to add that script to `package.json`.
 
@@ -157,26 +151,26 @@ After this change, `heroku` knows how to start our server but, needs to be in co
 
 ### Make the Port Dynamic
 
--   Introduce `process.env`.
--   Introduce the [dotenv npm module](https://www.npmjs.com/package/dotenv). Show the documentation on `npmjs.com`.
--   Install `dotenv` as a production dependency.
--   Change `index.js`:
+- Introduce `process.env`.
+- Introduce the [dotenv npm module](https://www.npmjs.com/package/dotenv). Show the documentation on `npmjs.com`.
+- Install `dotenv` as a production dependency.
+- Change `index.js`:
 
-    // it's recommended to load configuration for .env as early as possible
-    require('dotenv').config(); // add this line as the first thing to run1
+  // it's recommended to load configuration for .env as early as possible
+  require('dotenv').config(); // add this line as the first thing to run1
 
-    const server = require('./api/server.js');
+  const server = require('./api/server.js');
 
-    // we'll read the port from the server environment if it is there
-    // heroku will have the PORT environment variable set
-    const port = process.env.PORT || 5000;
+  // we'll read the port from the server environment if it is there
+  // heroku will have the PORT environment variable set
+  const port = process.env.PORT || 5000;
 
-    // we can now use that port, if set up by heroku or read from .env or 5000 as a default if not set
-    server.listen(port, () => {
-      console.log(`\n*** Server Running on http://localhost:${port} ***\n`);
-    });
+  // we can now use that port, if set up by heroku or read from .env or 5000 as a default if not set
+  server.listen(port, () => {
+  console.log(`\n*** Server Running on http://localhost:${port} ***\n`);
+  });
 
--   add a `.env` file to the root folder (next to `package.json`) with the following content
+- add a `.env` file to the root folder (next to `package.json`) with the following content
 
 <!-- -->
 
@@ -186,14 +180,14 @@ It is recommended to add `.env` to `.gitignore` to prevent it from being uploade
 
 The reason is that most systems add configuration secrets to that file that are different between environments. Some examples are database connection credentials or API keys for external services.
 
--   **stop the server** and restart it again, or the change to `.env` will not be detected.
--   the API should be using port 4000 now as specified in `.env`.
+- **stop the server** and restart it again, or the change to `.env` will not be detected.
+- the API should be using port 4000 now as specified in `.env`.
 
 ##### Challenge
 
 Extract all secrets and values that need to change between `development` and `production` environments.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to deploy a web-api to Heroku
 
@@ -215,23 +209,23 @@ This tutorial continues to work with [this repository](https://github.com/Lambda
 
 #### Setup Continuous Deployment from GitHub
 
--   Login to `heroku` and create an app.
--   In the `Deploy` tab, select *GitHub* in the `Deployment Method` section.
--   GitHub will be ask to authorize access to `heroku`, approve access.
--   Search for the repository (their fork of the starter code) in the `Connect to GitHub` section and click *Connect*.
--   In the `Automatic deploys` section, pick the `main` branch and click `Enable Automatic Deploys`.
-    -   Note that Heroku automatically deploys to `master`. We strongly encourage you to use a `main` branch instead. You can override this automatic deployment using `git push -f heroku main:master`
--   In the `Manual deploy` section, click on `Deploy Branch` to kick-start the first deploy.
--   Scroll to the top and move to the `Overview` tab to see the deployment in action.
--   On the top right, click `Open App`.
+- Login to `heroku` and create an app.
+- In the `Deploy` tab, select _GitHub_ in the `Deployment Method` section.
+- GitHub will be ask to authorize access to `heroku`, approve access.
+- Search for the repository (their fork of the starter code) in the `Connect to GitHub` section and click _Connect_.
+- In the `Automatic deploys` section, pick the `main` branch and click `Enable Automatic Deploys`.
+  - Note that Heroku automatically deploys to `master`. We strongly encourage you to use a `main` branch instead. You can override this automatic deployment using `git push -f heroku main:master`
+- In the `Manual deploy` section, click on `Deploy Branch` to kick-start the first deploy.
+- Scroll to the top and move to the `Overview` tab to see the deployment in action.
+- On the top right, click `Open App`.
 
 The deployment succeeded, but opening the App fails because the fork on GitHub still has the old code without the dynamic port and new `start` script.
 
 Our application displays `Application Error` and information on how to open the logs. We can fix it by pushing our changes to the main branch on GitHub.
 
--   Commit and push the changes to the forked repository on GitHub
--   Check the `Overview` tab on `Heroku` and wait for the message that the application was deployed.
--   Refresh the browser where the application is running, and there should be an empty array. Success!
+- Commit and push the changes to the forked repository on GitHub
+- Check the `Overview` tab on `Heroku` and wait for the message that the application was deployed.
+- Refresh the browser where the application is running, and there should be an empty array. Success!
 
 Use Postman to connect to the API and post a few shoutouts to people that deserve it.
 
@@ -243,37 +237,37 @@ An example:
 
 ### Add an Environment Variable on Heroku
 
--   change the GET to `/` endpoint to include a message of the day as part of the response.
+- change the GET to `/` endpoint to include a message of the day as part of the response.
 
-    server.get('/', async (req, res) => {
-      try {
-        const shoutouts = await db('shoutouts');
-        const messageOfTheDay = process.env.MOTD || 'Hello World!'; // add this line
-        res.status(200).json({ motd: messageOfTheDay, shoutouts }); // change this line
-      } catch (error) {
-        console.error('\nERROR', error);
-        res.status(500).json({ error: 'Cannot retrieve the shoutouts' });
-      }
-    });
+  server.get('/', async (req, res) => {
+  try {
+  const shoutouts = await db('shoutouts');
+  const messageOfTheDay = process.env.MOTD || 'Hello World!'; // add this line
+  res.status(200).json({ motd: messageOfTheDay, shoutouts }); // change this line
+  } catch (error) {
+  console.error('\nERROR', error);
+  res.status(500).json({ error: 'Cannot retrieve the shoutouts' });
+  }
+  });
 
--   add the MOTD to the `.env` file.
+- add the MOTD to the `.env` file.
 
 <!-- -->
 
     PORT=4000
     MOTD=Hello from my computer
 
--   **restart the server** running on localhost.
--   make a request to the api running on localhost to verify that the `motd` property is there.
--   commit and push to GitHub.
--   once the new changes are deployed, refresh the application on `heroku`. Note that we get the default `Hello World!` message because the environment variable does not exist on `heroku`.
+- **restart the server** running on localhost.
+- make a request to the api running on localhost to verify that the `motd` property is there.
+- commit and push to GitHub.
+- once the new changes are deployed, refresh the application on `heroku`. Note that we get the default `Hello World!` message because the environment variable does not exist on `heroku`.
 
 Now we are going to add that configuration variable on Heroku.
 
--   on `heroku`, go to the `Settings` tab.
--   click on `Reveal Config Vars` in the `Config Vars` section.
--   add a `MOTD` config var with the value *“Hello from the World Wide Web”*
--   refresh the application.
+- on `heroku`, go to the `Settings` tab.
+- click on `Reveal Config Vars` in the `Config Vars` section.
+- add a `MOTD` config var with the value _“Hello from the World Wide Web”_
+- refresh the application.
 
 Note the environment variable on `heroku` overrides the value in code and the value in our local `.env` file. Environment variables can be used to store API keys, database connection information, and any other secrets in a more secure manner.
 
@@ -281,7 +275,7 @@ Note the environment variable on `heroku` overrides the value in code and the va
 
 Using the information you’ve obtained from the guided project, create an application on Heroku to set-up continuous deployment from one of your GitHub repositories.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
@@ -291,13 +285,13 @@ Guided Project Starter Code for Node API 4 Module
 
 [GitHub Repo](https://github.com/LambdaSchool/node-api4-guided)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Node API 4 Project](https://github.com/LambdaSchool/node-api4-project)
+- ##### [Node API 4 Project](https://github.com/LambdaSchool/node-api4-project)
 
-    Project for Node API 4 Module
+  Project for Node API 4 Module
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -305,24 +299,24 @@ Guided Project Starter Code for Node API 4 Module
 
 You can use class recordings to help you master the material.
 
--   **[Web Deployment and Best Practices - Web PT 18 - Jason Maurer - October 7, 2020](https://youtu.be/kKwBS2xbHWw)**
+- **[Web Deployment and Best Practices - Web PT 18 - Jason Maurer - October 7, 2020](https://youtu.be/kKwBS2xbHWw)**
 
-    The time has come to show your work to the world. In this module we’ll deploy our application to heroku, a cloud provider that provides several services geared towards helping developers publish their site on the internet.
+  The time has come to show your work to the world. In this module we’ll deploy our application to heroku, a cloud provider that provides several services geared towards helping developers publish their site on the internet.
 
--   [All previous recordings](/archive/FSW/module/recs9QOkOAtZhsjc4)
+- [All previous recordings](/archive/FSW/module/recs9QOkOAtZhsjc4)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Extract all secrets and values that need to change between `development` and `production` environments.
+  Extract all secrets and values that need to change between `development` and `production` environments.
 
--   Objective challenge:
+- Objective challenge:
 
-    Using the information you’ve obtained from the guided project, create an application on Heroku to set-up continuous deployment from one of your GitHub repositories.
+  Using the information you’ve obtained from the guided project, create an application on Heroku to set-up continuous deployment from one of your GitHub repositories.
 
--   Guided Project: Node API 4 Guided Project
+- Guided Project: Node API 4 Guided Project
 
--   Project: Node API 4 Project
+- Project: Node API 4 Project

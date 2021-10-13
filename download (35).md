@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Context API
 
@@ -73,9 +71,9 @@ In your typical react application `state` is passed top-down (parent to child) v
 
 **At the end of this module, you should be able to:**
 
--   describe what the Context API is and the problem is solves
--   provide data to the component tree with a context provider
--   consume data from a context object in nested components
+- describe what the Context API is and the problem is solves
+- provide data to the component tree with a context provider
+- consume data from a context object in nested components
 
 #### Pro Tip
 
@@ -111,7 +109,7 @@ Read through [this article](https://hackernoon.com/everything-you-need-to-know-a
 
 Read through the [Context API docs](https://reactjs.org/docs/context.html) and explain to someone in your TL group what the Provider and Consumer methods are.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to provide data to the component tree with a context provider
 
@@ -186,7 +184,7 @@ Doing so, we allow all child components of our `UserContext Provider` to consume
 
 Using an old project, go in and add a context item for some of the state there. Then pass the data into the context provider.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to consume data from a context object in nested components
 
@@ -241,13 +239,13 @@ The completed follow along code can be found [here](https://codesandbox.io/s/con
 
 Continue working in the app you chose in the last objective. Now that you have rendered the context provider, and passed in your data, you need to consume that data where it’s needed.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [React Shopping Cart](https://github.com/LambdaSchool/react-shopping-cart/blob/master/README.md)
+- ##### [React Shopping Cart](https://github.com/LambdaSchool/react-shopping-cart/blob/master/README.md)
 
-    In this project you’ll take take an existing e-commerce store and refactor the application to use the Context API.
+  In this project you’ll take take an existing e-commerce store and refactor the application to use the Context API.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -255,26 +253,26 @@ Continue working in the app you chose in the last objective. Now that you have r
 
 You can use class recordings to help you master the material.
 
--   **[Context API for Web35 w/ Dustin Myers](https://youtu.be/nbZOhyKngUw)**
+- **[Context API for Web35 w/ Dustin Myers](https://youtu.be/nbZOhyKngUw)**
 
-    Context API
+  Context API
 
--   [All previous recordings](/archive/WEB3/module/recByjgF7FwwH5Z7W)
+- [All previous recordings](/archive/WEB3/module/recByjgF7FwwH5Z7W)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Read through the [Context API docs](https://reactjs.org/docs/context.html) and explain to someone in your TL group what the Provider and Consumer methods are.
+  Read through the [Context API docs](https://reactjs.org/docs/context.html) and explain to someone in your TL group what the Provider and Consumer methods are.
 
--   Objective challenge:
+- Objective challenge:
 
-    Using an old project, go in and add a context item for some of the state there. Then pass the data into the context provider.
+  Using an old project, go in and add a context item for some of the state there. Then pass the data into the context provider.
 
--   Objective challenge:
+- Objective challenge:
 
-    Continue working in the app you chose in the last objective. Now that you have rendered the context provider, and passed in your data, you need to consume that data where it’s needed.
+  Continue working in the app you chose in the last objective. Now that you have rendered the context provider, and passed in your data, you need to consume that data where it’s needed.
 
--   Project: React Shopping Cart
+- Project: React Shopping Cart

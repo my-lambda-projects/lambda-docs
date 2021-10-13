@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
@@ -39,32 +37,32 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Guided Project](#guided-project)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Guided Project](#guided-project)
+- [Project](#project)
+- [Review](#review)
 
 # Introduction to Relational Databases
 
@@ -76,18 +74,18 @@ Out of all the technologies used to save and retrieve that data, Relational Data
 
 On this lecture we will cover the following topics:
 
--   Introduction to Relational Databases
--   The basics of Structured Query Language (SQL)
--   Select, Insert, Update, and Delete queries in SQL
--   Setup for Knex.js
--   Select, Insert, Update, and Delete queries using Knex
+- Introduction to Relational Databases
+- The basics of Structured Query Language (SQL)
+- Select, Insert, Update, and Delete queries in SQL
+- Setup for Knex.js
+- Select, Insert, Update, and Delete queries using Knex
 
 **At the end of this module, you should be able to:**
 
--   explain what a Relational Database is and its core components
--   explain what SQL is and its advantages
--   query, insert, and modify data in SQL
--   write database queries using knex.js
+- explain what a Relational Database is and its core components
+- explain what SQL is and its advantages
+- query, insert, and modify data in SQL
+- write database queries using knex.js
 
 #### Pro Tip
 
@@ -97,31 +95,23 @@ Life is a marathon, not a sprint.
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=cd7Yio-D7qM), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=cd7Yio-D7qM), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=h-migT0FtvU), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=h-migT0FtvU), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Q-7hlnXK1gU), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=OFLPJfCNAS0), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Q-7hlnXK1gU), or enable JavaScript if it is disabled in your browser.
-
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=OFLPJfCNAS0), or enable JavaScript if it is disabled in your browser.
-
--   [Overview of SQL](https://www.w3schools.com/sql/default.asp)
+- [Overview of SQL](https://www.w3schools.com/sql/default.asp)
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -147,17 +137,17 @@ A familiar example of non-persistent data would be JS objects and arrays, which 
 
 In relational databases, the data is stored in tabular format grouped into rows and columns (similar to spreadsheets). A collection of **rows** is called a **table**. Each row represents a single record in the table and is made up of one or more **columns**.
 
-These kinds of databases are called relational because a *relation* is a mathematical idea that is equivalent to a table. So relational databases are databases that store their data in tables.
+These kinds of databases are called relational because a _relation_ is a mathematical idea that is equivalent to a table. So relational databases are databases that store their data in tables.
 
 ##### Tables
 
--   Tables organize data in rows and columns.
--   Each row on a table represents one distinct record.
--   Each column represents a field or attribute that is common to all records.
--   Fields should have a descriptive name and a data type appropriate for the attribute it represents.
--   Tables usually have more rows than columns
--   Tables have primary keys that uniquely identify each row.
--   Foreign keys represent the relationships with other tables.
+- Tables organize data in rows and columns.
+- Each row on a table represents one distinct record.
+- Each column represents a field or attribute that is common to all records.
+- Fields should have a descriptive name and a data type appropriate for the attribute it represents.
+- Tables usually have more rows than columns
+- Tables have primary keys that uniquely identify each row.
+- Foreign keys represent the relationships with other tables.
 
 ##### Follow Along
 
@@ -169,9 +159,9 @@ Use the internet to research two other types of databases (non-relational) and w
 
 ##### Dig Deeper
 
--   [SQL Tutorial](https://www.w3resource.com/sql/tutorials.php)  
+- [SQL Tutorial](https://www.w3resource.com/sql/tutorials.php)
 
-------------------------------------------------------------------------
+---
 
 #### Learn to explain what SQL is and its advantages
 
@@ -189,11 +179,11 @@ The syntax for SQL is English-like and requires fewer symbols than programming l
 
 When learning SQL it is helpful to understand that each command is designed for a different purpose. If we classify the commands by purpose we’ll end up with the following sub-categories of SQL:
 
--   **Data Definition Language (DDL)**: used to modify database objects. Some examples are: `CREATE TABLE`, `ALTER TABLE` , and `DROP TABLE`.
--   **Data Manipulation Language (DML)**: used to manipulate the data stored in the database. Some examples are: `INSERT`, `UPDATE` , and `DELETE`.
--   **Data Query Language (DQL)**: used to ask questions about the data stored in the database. The most commonly used SQL command by far is `SELECT`, and it falls in this category.
--   **Data Control Language (DCL)**: used to manage database security and user’s access to data. This falls into the realm of Database Administrators. Some examples are `GRANT` and `REVOKE`.
--   **Transaction Control Commands**: used for managing groups of statements that must execute as a unit or not execute at all. Examples are `COMMIT` and `ROLLBACK`.
+- **Data Definition Language (DDL)**: used to modify database objects. Some examples are: `CREATE TABLE`, `ALTER TABLE` , and `DROP TABLE`.
+- **Data Manipulation Language (DML)**: used to manipulate the data stored in the database. Some examples are: `INSERT`, `UPDATE` , and `DELETE`.
+- **Data Query Language (DQL)**: used to ask questions about the data stored in the database. The most commonly used SQL command by far is `SELECT`, and it falls in this category.
+- **Data Control Language (DCL)**: used to manage database security and user’s access to data. This falls into the realm of Database Administrators. Some examples are `GRANT` and `REVOKE`.
+- **Transaction Control Commands**: used for managing groups of statements that must execute as a unit or not execute at all. Examples are `COMMIT` and `ROLLBACK`.
 
 As a developer, you’ll need to get familiar with DDL and become proficient using DML an DQL. This lesson will cover only DML and DQL commands.
 
@@ -205,7 +195,7 @@ Write a 1 paragraph explanation of why SQL would be a better tool. Use language 
 
 Send this to your PM when it is complete.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to query, insert, and modify data in SQL
 
@@ -310,7 +300,7 @@ Some SQL engines also support using field abbreviations when sorting.
 
     select name, salary, department from employees order by 3, 2 desc;
 
-In this case, the results are sorted by department in ascending order first and then by salary in descending order. The numbers refer to the position of the fields in the *selection* portion of the query, so 1 would be *name*, 2 would be *salary* and so on.
+In this case, the results are sorted by department in ascending order first and then by salary in descending order. The numbers refer to the position of the fields in the _selection_ portion of the query, so 1 would be _name_, 2 would be _salary_ and so on.
 
 Note that the `WHERE` clause should come after the `FROM` clause. The `ORDER BY` clause always goes last.
 
@@ -365,13 +355,13 @@ Once again, the `WHERE` clause is not required, but leaving it off would remove 
 
 Write queries for the following requirements:
 
--   List the products but only show the product id and the product name.
--   List the employees sorted by the last name in ascending order.
--   Add a new record in the category table
--   Come up with a more creative name for the product “tofu” and update it in the database.
--   Delete a single record for the “employees” table.
+- List the products but only show the product id and the product name.
+- List the employees sorted by the last name in ascending order.
+- Add a new record in the category table
+- Come up with a more creative name for the product “tofu” and update it in the database.
+- Delete a single record for the “employees” table.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to write database queries using knex.js
 
@@ -443,7 +433,7 @@ Using this, we could write a `GET` endpoint.
       db('users')
       .then(users => {
         res.json(users);
-      }) 
+      })
       .catch (err => {
         res.status(500).json({ message: 'Failed to get users' });
       });
@@ -506,7 +496,7 @@ Once again, the `where` must come before the `del`. This method will resolve to 
 
 Pick a challenge or guided project from the previous sprint. First, find where Knex is configured. Then find where the Knex queries are written.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
@@ -514,11 +504,11 @@ Pick a challenge or guided project from the previous sprint. First, find where K
 
 [GitHub Repo](https://github.com/LambdaSchool/node-db1-guided)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Node DB 1 Project](https://github.com/LambdaSchool/node-db1-project)
+- ##### [Node DB 1 Project](https://github.com/LambdaSchool/node-db1-project)
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -526,42 +516,42 @@ Pick a challenge or guided project from the previous sprint. First, find where K
 
 You can use class recordings to help you master the material.
 
--   **[Introduction to Relational Databases for Web PT 18 with Jason Maurer](https://youtu.be/kQ-bMUtw4d4)**
+- **[Introduction to Relational Databases for Web PT 18 with Jason Maurer](https://youtu.be/kQ-bMUtw4d4)**
 
-    The modern world runs on data. Our every day life is dependent on the data in our devices.The places we shop, the work that we do, all of it is data-driven. Computers and devices that do anything useful have some type of data persistence. Out of all the technologies used to save and retrieve that data, Relational Databases is king. Learning how relational databases work and how to write Structured Query Language (SQL) to communicate with Relational Database Management Systems is a well sought out skill by companies of all sizes and a great tool to have in your arsenal.
+  The modern world runs on data. Our every day life is dependent on the data in our devices.The places we shop, the work that we do, all of it is data-driven. Computers and devices that do anything useful have some type of data persistence. Out of all the technologies used to save and retrieve that data, Relational Databases is king. Learning how relational databases work and how to write Structured Query Language (SQL) to communicate with Relational Database Management Systems is a well sought out skill by companies of all sizes and a great tool to have in your arsenal.
 
--   [All previous recordings](/archive/FSW/module/recFG7SqlSCAB8iU7)
+- [All previous recordings](/archive/FSW/module/recFG7SqlSCAB8iU7)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Use the internet to research two other types of databases (non-relational) and write a short paragraph for each describing how they are different from relational databases. Send the response to your TL on slack.
+  Use the internet to research two other types of databases (non-relational) and write a short paragraph for each describing how they are different from relational databases. Send the response to your TL on slack.
 
--   Objective challenge:
+- Objective challenge:
 
-    Imagine that you have been contracted to work with a dataset of 10 million entries. The client needs a tool to filter through this data for fast retrieval. They are foolishly insisting you use javascript to perform these operations.
+  Imagine that you have been contracted to work with a dataset of 10 million entries. The client needs a tool to filter through this data for fast retrieval. They are foolishly insisting you use javascript to perform these operations.
 
-    Write a 1 paragraph explanation of why SQL would be a better tool. Use language that a non-technical person would understand. Do any research necessary to support your argument.
+  Write a 1 paragraph explanation of why SQL would be a better tool. Use language that a non-technical person would understand. Do any research necessary to support your argument.
 
-    Send this to your PM when it is complete.
+  Send this to your PM when it is complete.
 
--   Objective challenge:
+- Objective challenge:
 
-    Write queries for the following requirements:
+  Write queries for the following requirements:
 
-    -   List the products but only show the product id and the product name.
-    -   List the employees sorted by the last name in ascending order.
-    -   Add a new record in the category table
-    -   Come up with a more creative name for the product “tofu” and update it in the database.
-    -   Delete a single record for the “employees” table.
+  - List the products but only show the product id and the product name.
+  - List the employees sorted by the last name in ascending order.
+  - Add a new record in the category table
+  - Come up with a more creative name for the product “tofu” and update it in the database.
+  - Delete a single record for the “employees” table.
 
--   Objective challenge:
+- Objective challenge:
 
-    Pick a challenge or guided project from the previous sprint. First, find where Knex is configured. Then find where the Knex queries are written.
+  Pick a challenge or guided project from the previous sprint. First, find where Knex is configured. Then find where the Knex queries are written.
 
--   Guided Project: Node DB 1 Guided Project
+- Guided Project: Node DB 1 Guided Project
 
--   Project: Node DB 1 Project
+- Project: Node DB 1 Project

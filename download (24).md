@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Projects](#projects)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Projects](#projects)
+- [Review](#review)
 
 # React Router
 
@@ -75,11 +73,11 @@ This module will guide you into the intricacies of React Router V5. As you learn
 
 **At the end of this module, you should be able to:**
 
--   explain the difference between client-side routing and sever-side routing
--   set up routes within a React Application using the Router, Route and Link components
--   use Router's useParam hook to add dynamic Routes to an application
--   use Router's useRouteMatch hook to add nested Routes to an application
--   use Router's useHistory hook to programmatically navigate to other routes
+- explain the difference between client-side routing and sever-side routing
+- set up routes within a React Application using the Router, Route and Link components
+- use Router's useParam hook to add dynamic Routes to an application
+- use Router's useRouteMatch hook to add nested Routes to an application
+- use Router's useHistory hook to programmatically navigate to other routes
 
 #### Pro Tip
 
@@ -91,37 +89,27 @@ Tom Cargill, Bell Labs
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=OrBKbQbobC0), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=OrBKbQbobC0), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=WSZkkZrquiA), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=WSZkkZrquiA), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ZLpRLXsPNHs), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=nbwHVhkXuVk), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ZLpRLXsPNHs), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=BNOjGb_DE38), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=nbwHVhkXuVk), or enable JavaScript if it is disabled in your browser.
-
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=BNOjGb_DE38), or enable JavaScript if it is disabled in your browser.
-
--   [Client vs Server side Routing](https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f)
+- [Client vs Server side Routing](https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f)
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -139,7 +127,7 @@ Being able to access information based on a URL is not only a powerful tool at o
 
 ### What is a Server?
 
-Before we talk about the *how* of routing, we need a solid definition of the *what*. In computer science, the term “server” refers to centralized resources on a network. These servers are physical devices, usually housed with other servers in large warehouses, that run the “behind the scenes” work of the internet like data storage. When you route, you’re routing to a server.
+Before we talk about the _how_ of routing, we need a solid definition of the _what_. In computer science, the term “server” refers to centralized resources on a network. These servers are physical devices, usually housed with other servers in large warehouses, that run the “behind the scenes” work of the internet like data storage. When you route, you’re routing to a server.
 
 You may be familiar with this type of server room from movies or TV. Each one of those boxes is a server, housing thousands of filing cabinets worth of data every couple of inches.
 
@@ -173,7 +161,7 @@ Read through this medium article [here](https://medium.com/@wilbo/server-side-vs
 
 On your own, write down some of the pros and cons for both server-side routing and client-side routing, and then write a paragraph of what you like about both, and which you would prefer to use and why. Submit this to your TL via slack.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to set up routes within a React Application using the Router, Route and Link components
 
@@ -187,13 +175,13 @@ React Router is declarative style routing for React applications. React Router i
 
 Routes are a way of getting to a destination. A route can specify which components to render on the page, and in what order, as we’ve seen before.
 
-To set up React Router, you need to declare what components will be mounted when certain URL paths are met. This step happens *after* we’ve wrapped our `Root` component in the `Router` or `BrowserRouter` component. The best part of React Router is that you can do this at pretty much any point during your development process, whereas previously you had to declare your routes early on in the development cycle. What this allows us to do is figure out more important things without allowing routing to get in the way. React Router is a super useful tool for this reason!
+To set up React Router, you need to declare what components will be mounted when certain URL paths are met. This step happens _after_ we’ve wrapped our `Root` component in the `Router` or `BrowserRouter` component. The best part of React Router is that you can do this at pretty much any point during your development process, whereas previously you had to declare your routes early on in the development cycle. What this allows us to do is figure out more important things without allowing routing to get in the way. React Router is a super useful tool for this reason!
 
 Once you have React Router installed by using `npm install react-router-dom`, you can import the `Route` Component and use it within your application.
 
     import { Route } from 'react-router-dom';
 
-The `Route` component declares what `components` will be *mounted* based on what `URL's` the user requests. The best part about this process is that we get a chance to do this in a very “React” way. Lets picture a component `Users` that will display a list of users in your system when the URL `www.coolestapp.com/users` is requested. The `Route` component takes in a few props; the first is the URL `path` where the Route component will trigger. Next is the `component` prop. This is the component that you want React to *mount* when the URL matches the requested `path`. So in our case, when `/users` is requested, the `Users` component will be mounted.
+The `Route` component declares what `components` will be _mounted_ based on what `URL's` the user requests. The best part about this process is that we get a chance to do this in a very “React” way. Lets picture a component `Users` that will display a list of users in your system when the URL `www.coolestapp.com/users` is requested. The `Route` component takes in a few props; the first is the URL `path` where the Route component will trigger. Next is the `component` prop. This is the component that you want React to _mount_ when the URL matches the requested `path`. So in our case, when `/users` is requested, the `Users` component will be mounted.
 
     <Route path="/users" component={Users} />
 
@@ -359,7 +347,7 @@ Our final `App.js` before hooks should look something like this:
 2.  In your friends app, add a new `Home` component and `Friends` component. Then add a route for each component. Test your app in the browser to make sure both apps are rendering at the correct route. Build out your `Home` component and then render out a list of friends data in the `Friends` component.
 3.  Make a navbar on the friends app. In the list component, add a Link component to the mapped list of friends to give us a way to route to the individual friend page.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use Router's useParam hook to add dynamic Routes to an application
 
@@ -373,7 +361,7 @@ The `useParam` hook relies on props to pass new and changing data into the app. 
 
 The `useParam` hook allows us to create dynamic routes that will render content based on the URL. So, instead of requiring that all routes are written out ahead of time, the URL determines what renders on the page. For example, a url `"website.com/johnSmith"` would render data about John Smith, while `"website.com/janeDoe"` would render data about Jane Doe - neither have to be specified in your code. The browser “matches” the URL to the data, thus the name. If no data is found, it throws an errorIn some ways this provides access to search parameters in the URL. Before React Router 5.1 this was only possible using `match.params`.
 
-In order to use a parameter in routing we need to assign the route with a colon in `App.js` or wherever else the routes are defined. So, \` &lt;Route path=”/employee` becomes ` &lt;Route path=”/:employee`. With that simple change we can use the `useParam\` hook to create dynamic routes.
+In order to use a parameter in routing we need to assign the route with a colon in `App.js` or wherever else the routes are defined. So, \` &lt;Route path=”/employee`becomes` &lt;Route path=”/:employee`. With that simple change we can use the `useParam\` hook to create dynamic routes.
 
 A real life example of this is Twitter. It would be crazy to imagine that every time a user makes a new profile, a new line of code has to be written. Instead, Twitter routes look something like this:
 
@@ -439,7 +427,7 @@ Once this is in place you should be able to visit a site such that `ourapp.com/a
 
 Create a dynamic route in your `Friends` application with `useParams`
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use Router's useRouteMatch hook to add nested Routes to an application
 
@@ -521,7 +509,7 @@ The only thing we need to add to our lists is the `{url}` to our `<NavLink>` ele
             <p>{heros.description}</p>
             <img src={heros.img} alt="random avengers img" />
             <nav className="nav-buttons">
-            // replace 
+            // replace
               <NavLink to={`${url}/movies`}>Movie List</NavLink>
             </nav>
             <Route path={`${path}/movies`}>
@@ -539,7 +527,7 @@ Before moving on, check your work by looking over the complete [Avenger’s Exam
 
 Create a nested route in your `Friends` application with `useParams`
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use Router's useHistory hook to programmatically navigate to other routes
 
@@ -599,15 +587,15 @@ Once this code is properly implemented you should be able to navigate between yo
 
 Add an `onClick` event handler to your `friends` app that works with a method of `useHistory` wherever it makes sense to do so.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#projects" id="projects" class="anchor"><span class="octicon octicon-link"></span></a>Projects
 
--   ##### [React-Router-Movies](https://github.com/LambdaSchool/React-Router-Movies)
+- ##### [React-Router-Movies](https://github.com/LambdaSchool/React-Router-Movies)
 
-    Create an app that renders a list of movies in one route, and a movie info page in another route.
+  Create an app that renders a list of movies in one route, and a movie info page in another route.
 
--   ##### [React-Router-Apple-Nav STRETCH ASSIGNMENT](https://github.com/LambdaSchool/React-Router-Apple-Nav)
+- ##### [React-Router-Apple-Nav STRETCH ASSIGNMENT](https://github.com/LambdaSchool/React-Router-Apple-Nav)
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -615,35 +603,36 @@ Add an `onClick` event handler to your `friends` app that works with a method of
 
 You can use class recordings to help you master the material.
 
--   **[React Router for WebPT22 w/Chris Atoki](https://youtu.be/LRGJi0o4W7Y)**
+- **[React Router for WebPT22 w/Chris Atoki](https://youtu.be/LRGJi0o4W7Y)**
 
-    Due to the insane popularity of JavaScript frameworks and what we call Single Page Applications (SPAs) we rely on our modern web browsers today for a lot more than we used to in the past. One of the common trends with SPAs to see today is the idea of Client Side Routing or the browser taking care of “URL” history This module will guide you into the intricacies of React Router V5. As you learn and discover the inner workings of this package, your SPA’s will start to come to life, you’ll have more control over how your users view the content they’re supposed to be viewing, and you’ll be granted a rich developer experience. A lot of the items discussed here lend themselves to being commonly used
+  Due to the insane popularity of JavaScript frameworks and what we call Single Page Applications (SPAs) we rely on our modern web browsers today for a lot more than we used to in the past. One of the common trends with SPAs to see today is the idea of Client Side Routing or the browser taking care of “URL” history This module will guide you into the intricacies of React Router V5. As you learn and discover the inner workings of this package, your SPA’s will start to come to life, you’ll have more control over how your users view the content they’re supposed to be viewing, and you’ll be granted a rich developer experience. A lot of the items discussed here lend themselves to being commonly used
 
--   [All previous recordings](/archive/WEB2/module/recd7jGy7tfVkcFlX)
+- [All previous recordings](/archive/WEB2/module/recd7jGy7tfVkcFlX)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    On your own, write down some of the pros and cons for both server-side routing and client-side routing, and then write a paragraph of what you like about both, and which you would prefer to use and why. Submit this to your TL via slack.
+  On your own, write down some of the pros and cons for both server-side routing and client-side routing, and then write a paragraph of what you like about both, and which you would prefer to use and why. Submit this to your TL via slack.
 
--   Objective challenge:
-    1.  Start up a new React app called friends, install react-router-dom and get it wired up to use React Router. Inspect your app in the browser with the React tools and make sure you see your app wrapped in the Router component (reference the image above).
-    2.  In your friends app, add a new `Home` component and `Friends` component. Then add a route for each component. Test your app in the browser to make sure both apps are rendering at the correct route. Build out your `Home` component and then render out a list of friends data in the `Friends` component.
-    3.  Make a navbar on the friends app. In the list component, add a Link component to the mapped list of friends to give us a way to route to the individual friend page.
+- Objective challenge:
 
--   Objective challenge:
+  1.  Start up a new React app called friends, install react-router-dom and get it wired up to use React Router. Inspect your app in the browser with the React tools and make sure you see your app wrapped in the Router component (reference the image above).
+  2.  In your friends app, add a new `Home` component and `Friends` component. Then add a route for each component. Test your app in the browser to make sure both apps are rendering at the correct route. Build out your `Home` component and then render out a list of friends data in the `Friends` component.
+  3.  Make a navbar on the friends app. In the list component, add a Link component to the mapped list of friends to give us a way to route to the individual friend page.
 
-    Create a dynamic route in your `Friends` application with `useParams`
+- Objective challenge:
 
--   Objective challenge:
+  Create a dynamic route in your `Friends` application with `useParams`
 
-    Create a nested route in your `Friends` application with `useParams`
+- Objective challenge:
 
--   Objective challenge:
+  Create a nested route in your `Friends` application with `useParams`
 
-    Add an `onClick` event handler to your `friends` app that works with a method of `useHistory` wherever it makes sense to do so.
+- Objective challenge:
 
--   Project: React-Router-Movies
+  Add an `onClick` event handler to your `friends` app that works with a method of `useHistory` wherever it makes sense to do so.
+
+- Project: React-Router-Movies

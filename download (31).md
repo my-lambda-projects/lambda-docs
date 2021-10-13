@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Testing Web Applications
 
@@ -73,9 +71,9 @@ In this module we will learn about automated testing, and more specifically how 
 
 **At the end of this module, you should be able to:**
 
--   explain what automated testing is and its importance
--   use react-testing-library for testing react components
--   use react-testing-library to test user interactions with fireEvent
+- explain what automated testing is and its importance
+- use react-testing-library for testing react components
+- use react-testing-library to test user interactions with fireEvent
 
 #### Pro Tip
 
@@ -85,23 +83,17 @@ We all build on the work of others.
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=jyWUNzzV29U), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=jyWUNzzV29U), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=uFXGcLpbBMU), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=uFXGcLpbBMU), or enable JavaScript if it is disabled in your browser.
-
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=vItkiDBCVcc), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=vItkiDBCVcc), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -117,21 +109,21 @@ Automated testing minimizes the risk of bugs finding their way into production c
 
 **In terms of benefits, testing…**
 
--   Surfaces bugs faster.
--   Reduces the risk of regressions.
--   Allows us to trust the code.
--   Makes us think about the edge cases.
--   Acts as a safety net when making changes or refactoring.
--   Acts as documentation for the code.
--   Encourages us to write more testable (better!) code.
+- Surfaces bugs faster.
+- Reduces the risk of regressions.
+- Allows us to trust the code.
+- Makes us think about the edge cases.
+- Acts as a safety net when making changes or refactoring.
+- Acts as documentation for the code.
+- Encourages us to write more testable (better!) code.
 
 **On the other hand, NOT testing…**
 
--   Forces very expensive manual testing.
--   Causes bugs and edge cases to be encountered later.
--   Makes refactoring or adding features risky and scary.
--   Can make codebases fragile and expensive to maintain.
--   Makes less documented codebases much harder to understand.
+- Forces very expensive manual testing.
+- Causes bugs and edge cases to be encountered later.
+- Makes refactoring or adding features risky and scary.
+- Can make codebases fragile and expensive to maintain.
+- Makes less documented codebases much harder to understand.
 
 Not writing tests can be thought of as **taking a loan with a very high-interest rate**. The quick payoff is being able to write spaghetti code unhindered. The costs long term can become enormous and surpass hundreds of times over any marginal time gains obtained by not writing tests. Eventually, entire teams of developers can get so bogged down in bugs and regressions that the product can’t move forward.
 
@@ -155,9 +147,9 @@ We test the smaller units of software (often functions or methods) in isolation.
 
 When trying to determine whether to manually test a feature, or to automate testing, consider the following guidelines:
 
--   Automated testing should be built for any test that is executed often. Internally at Lambda we say “1..2.. automate!” meaning, you should only do a task 2 times manually before you are required to build out a system to automate that test or task for you. It isn’t always relevant, but a catchy motto to consider.
--   Automated testing should be built for any difficult manual task - if it requires too much work, or too many steps, that even a 2nd manual test would be a large task, automate it from the start.
--   Automated testing should be built for any test that, if it fails, will dramatically affect the use of a product or health of a company. For example, you’d always want to build a test to check for security of credit card information on a payment processing website.
+- Automated testing should be built for any test that is executed often. Internally at Lambda we say “1..2.. automate!” meaning, you should only do a task 2 times manually before you are required to build out a system to automate that test or task for you. It isn’t always relevant, but a catchy motto to consider.
+- Automated testing should be built for any difficult manual task - if it requires too much work, or too many steps, that even a 2nd manual test would be a large task, automate it from the start.
+- Automated testing should be built for any test that, if it fails, will dramatically affect the use of a product or health of a company. For example, you’d always want to build a test to check for security of credit card information on a payment processing website.
 
 On the flip side, if you’re trying something new, or if test requirements are changing a lot, you can probably hold off on creating an automated test.
 
@@ -175,7 +167,7 @@ Read through this article that talks about how to know what to test: https://ken
 
 Research other types of tests: sanity testing, smoke testing, regression testing, system testing, snapshot testing, acceptance testing.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use react-testing-library for testing react components
 
@@ -183,7 +175,7 @@ In the Node ecosystem, small and specialized libraries prevail over large, batte
 
 ##### Overview
 
-In the last objective we discussed the general *what* and *why* of testing. Here we’re going to dive into the *how*. We will use the [react-testing-library](https://testing-library.com/docs/react-testing-library/intro) to run tests in this unit. Unlike previous testing libraries, react-testing-library is designed with the user in mind, testing components via DOM nodes, similar to how a user would interact with the front end of a website.
+In the last objective we discussed the general _what_ and _why_ of testing. Here we’re going to dive into the _how_. We will use the [react-testing-library](https://testing-library.com/docs/react-testing-library/intro) to run tests in this unit. Unlike previous testing libraries, react-testing-library is designed with the user in mind, testing components via DOM nodes, similar to how a user would interact with the front end of a website.
 
 react-testing-library recently underwent a major overhaul - we used to use a different libraries, Enzyme and Jest, for tests that cared more about the internal management of props and state. Now though, we can use react-testing-library to test prop, state, output (in DOM elements), and more.
 
@@ -286,12 +278,13 @@ Remember that older versions of Create React App required you to install `@testi
           const { getByText } = render(<App />);
           const linkElement = getByText(/learn react/i);
           expect(linkElement).toBeInTheDocument();
+
     });
 
 1.  **Note** a few things about the imports:
 
--   `React` has to be in scope because we will be using JSX.
--   `react-testing-library` exposes a render function that we are importing with `import { render }` syntax. This allows us to render React components so we can **test them**.
+- `React` has to be in scope because we will be using JSX.
+- `react-testing-library` exposes a render function that we are importing with `import { render }` syntax. This allows us to render React components so we can **test them**.
 
 1.  **Render a React element** containing a “Hello World” message, and run tests as usual:
 
@@ -327,7 +320,7 @@ Remember that older versions of Create React App required you to install `@testi
 
 Add two more text elements (headers, paragraphs, anchor tags, etc) to the component and write a test for each of them to assert that they are being rendered.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use react-testing-library to test user interactions with fireEvent
 
@@ -385,13 +378,13 @@ We’ll tell you to break your tests often. In the example above there are multi
 ##### Follow Along
 
 1.  **Change** `App.js` to output different jsx:
-          const App = () => {
-               return (
-                 <section aria-labelledby="KittensHeader">
-                   <h2 id="KittensHeader">All About Kittens</h2>
-                   <p className='content'>Lorem ipsum dolor sit amet</p>
-                 </section>
-           }
+    const App = () => {
+    return (
+    <section aria-labelledby="KittensHeader">
+    <h2 id="KittensHeader">All About Kittens</h2>
+    <p className='content'>Lorem ipsum dolor sit amet</p>
+    </section>
+    }
 
 2.  **Import** the App component into our test file `App.test.js` and render it. You may pass any props you want! Renders the app component.
 
@@ -450,13 +443,13 @@ We’ll tell you to break your tests often. In the example above there are multi
 
 Use the starter code above to create a test that works for the decrement button.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [React Testing - Contact Form](https://github.com/LambdaSchool/React-Testing-Contact-Form)
+- ##### [React Testing - Contact Form](https://github.com/LambdaSchool/React-Testing-Contact-Form)
 
-    Write tests for a contact form to give you confidence in the component’s code
+  Write tests for a contact form to give you confidence in the component’s code
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -464,26 +457,26 @@ Use the starter code above to create a test that works for the decrement button.
 
 You can use class recordings to help you master the material.
 
--   **[Testing Web Applications for Web35 w/ Warren Longmire](https://youtu.be/IH-1DYjcpxg)**
+- **[Testing Web Applications for Web35 w/ Warren Longmire](https://youtu.be/IH-1DYjcpxg)**
 
-    Testing Web Applications
+  Testing Web Applications
 
--   [All previous recordings](/archive/WEB3/module/rechTQVfCg4p85Hoi)
+- [All previous recordings](/archive/WEB3/module/rechTQVfCg4p85Hoi)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Research other types of tests: sanity testing, smoke testing, regression testing, system testing, snapshot testing, acceptance testing.
+  Research other types of tests: sanity testing, smoke testing, regression testing, system testing, snapshot testing, acceptance testing.
 
--   Objective challenge:
+- Objective challenge:
 
-    Add two more text elements (headers, paragraphs, anchor tags, etc) to the component and write a test for each of them to assert that they are being rendered.
+  Add two more text elements (headers, paragraphs, anchor tags, etc) to the component and write a test for each of them to assert that they are being rendered.
 
--   Objective challenge:
+- Objective challenge:
 
-    Use the starter code above to create a test that works for the decrement button.
+  Use the starter code above to create a test that works for the decrement button.
 
--   Project: React Testing - Contact Form
+- Project: React Testing - Contact Form

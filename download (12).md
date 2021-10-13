@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Scope and Closure
 
@@ -73,8 +71,8 @@ This module will give you practice with function scope and closures. Closures ar
 
 **At the end of this module, you should be able to:**
 
--   explain function scope
--   describe what closure is, how closure is created in a program and why it is important to understand closures in JavaScript
+- explain function scope
+- describe what closure is, how closure is created in a program and why it is important to understand closures in JavaScript
 
 #### Pro Tip
 
@@ -84,17 +82,13 @@ Always think of yourself as a learner…It’s like being in a community of wiza
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ppb_O7UQZbY), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ppb_O7UQZbY), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=AgBoMqDO-08), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=AgBoMqDO-08), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -110,7 +104,7 @@ Scope is defined as which variables we currently have access to and where. So fa
 
 #### Function Level Scope
 
-Function scope allows us to create variables inside of functions, that are essentially private to that function. We can not reach into a function from the outside and get access to these variables. But we are free to use these variables anywhere within our function. Conversely, we *do* have access to variables outside of the function. It is a one-way street. Functions can reach out and grab variables outside of their scope, but we can not reach into a function to get a variable.
+Function scope allows us to create variables inside of functions, that are essentially private to that function. We can not reach into a function from the outside and get access to these variables. But we are free to use these variables anywhere within our function. Conversely, we _do_ have access to variables outside of the function. It is a one-way street. Functions can reach out and grab variables outside of their scope, but we can not reach into a function to get a variable.
 
     const var1 = 'Lambda'
 
@@ -324,7 +318,7 @@ Typically when we use variables we declare and initialize them in the same line.
     // declare & initialize variable
     var myVariable = "this is a variable";
 
-According to the rules of JavaScript though, we don’t actually have to do it this way. For example, the below is also perfectly acceptable and more closely mirrors what JavaScript is doing under the hood. When you run JavaScript, the compiler will declare all variables *before* initializing them and *before* running the rest of the script. First the compiler will declare all functions, then the variables. This is one of the quirky things about JavaScript as a language.
+According to the rules of JavaScript though, we don’t actually have to do it this way. For example, the below is also perfectly acceptable and more closely mirrors what JavaScript is doing under the hood. When you run JavaScript, the compiler will declare all variables _before_ initializing them and _before_ running the rest of the script. First the compiler will declare all functions, then the variables. This is one of the quirky things about JavaScript as a language.
 
     // declare variable
     var myVariable;
@@ -352,9 +346,9 @@ Let’s consider another example. What would you expect the output here to be?
       console.log("hello");
     }
 
-If you guessed `"hello"`, you’d be correct. After declaring all of the variables and functions, your compiler will also **initialize** functions. This means that functions can be used before they are declared *or* initialized. Quick note that this only applies to declared functions, not function expressions.
+If you guessed `"hello"`, you’d be correct. After declaring all of the variables and functions, your compiler will also **initialize** functions. This means that functions can be used before they are declared _or_ initialized. Quick note that this only applies to declared functions, not function expressions.
 
-All of that encompasses the idea of ***hoisting***, Hoisting is the ability to call functions and variables before they are declared, like we see above. It is usually preferable to declare your function before you call it, but because of hoisting, you won’t get an error either way. The only time you’d want to break that rule is if you wanted to invoke all the functions at the top of a file so that another developer looking at your file could see at the top what that file does
+All of that encompasses the idea of **_hoisting_**, Hoisting is the ability to call functions and variables before they are declared, like we see above. It is usually preferable to declare your function before you call it, but because of hoisting, you won’t get an error either way. The only time you’d want to break that rule is if you wanted to invoke all the functions at the top of a file so that another developer looking at your file could see at the top what that file does
 
 We’ve mentioned some minor differences between variable declaration types in the past. Those are explained by hoisting. Declarations with `var` and the `function` keyword are hoisted and can therefore be used anywhere in a script. These will return undefined if not yet initialized. Variables declared with `let` and `const` are not hoisted and thus can not be used anywhere without throwing a `ReferenceError`. Basically, you can’t use `let` variables or `const` variables before you’ve given them a value. That difference is illustrated here:
 
@@ -572,7 +566,7 @@ Copyright © 2021 Replit, Inc. All rights reserved.
 
 In order to perform this calculation we’ll utilize a common programing trick and create a counter called `countHeads`, this counter will be declared with `var` and we will add `1` to it every time the flip lands on heads (or `1`).
 
-To make this counter functional we have to rely on scope. It will be important that we declare the variable *outside* the loop but *inside* the function.
+To make this counter functional we have to rely on scope. It will be important that we declare the variable _outside_ the loop but _inside_ the function.
 
 This way the variable can be referenced and changed inside of the for loop, but will reset to 0 every time the function is run.
 
@@ -820,9 +814,9 @@ Check your knowledge with the [function scope challenge](https://codepen.io/lamb
 
 ##### Dig Deeper
 
--   [Understand Hoisting in JavaScript](https://scotch.io/tutorials/understanding-hoisting-in-javascript)  
+- [Understand Hoisting in JavaScript](https://scotch.io/tutorials/understanding-hoisting-in-javascript)
 
-------------------------------------------------------------------------
+---
 
 #### Learn to describe what closure is, how closure is created in a program and why it is important to understand closures in JavaScript
 
@@ -839,14 +833,14 @@ In it’s most simplest of forms this is a closure:
       return foo;
     }
     returnFoo();
-    // -> reaches outside its scope to find foo because it doesn't exist inside of return Foo's scope when foo is referenced. 
+    // -> reaches outside its scope to find foo because it doesn't exist inside of return Foo's scope when foo is referenced.
 
 The function body (code inside returnFoo) has access to the outside scope (code outside of returnFoo) and can access that ‘foo’ variable.
 
 Lets look at another example:
 
     const lastName = 'Bob';
-    function greet() { 
+    function greet() {
       const firstName = 'Jim';
       alert(`The name's ${lastName}, ${firstName} ${lastName}`);
     }
@@ -879,19 +873,19 @@ Let’s work through one of your problems from your Homework together.
 
 For this challenge you will create your own closure:
 
--   Create a function that houses 2 nested functions inside of it
--   Create a unique variable for each function you created
--   Test out where you can log the unique variables for each function.
+- Create a function that houses 2 nested functions inside of it
+- Create a unique variable for each function you created
+- Test out where you can log the unique variables for each function.
 
 Why can you access variable values in nested functions?
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Baseball Scoreboard Challenge](https://github.com/LambdaSchool/web-module-challenge-scope-and-closure)
+- ##### [Baseball Scoreboard Challenge](https://github.com/LambdaSchool/web-module-challenge-scope-and-closure)
 
-    In this challenge you will work through a variety of exercises to build a console version of a baseball scoreboard.
+  In this challenge you will work through a variety of exercises to build a console version of a baseball scoreboard.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -899,28 +893,28 @@ Why can you access variable values in nested functions?
 
 You can use class recordings to help you master the material.
 
--   **[Scope and Closure for WebPT22 w/Nathan Braun](https://youtu.be/nicSGnXpsrY)**
+- **[Scope and Closure for WebPT22 w/Nathan Braun](https://youtu.be/nicSGnXpsrY)**
 
-    This module will give you practice with function scope and closures. Closures are an important programming concept that often come up in job interviews. Closure can help solve complex problems with ease, and builds nicely off of what you’ve been learning the past few days.
+  This module will give you practice with function scope and closures. Closures are an important programming concept that often come up in job interviews. Closure can help solve complex problems with ease, and builds nicely off of what you’ve been learning the past few days.
 
--   [All previous recordings](/archive/WEB1/module/recrBjfZ9mBasSPpa)
+- [All previous recordings](/archive/WEB1/module/recrBjfZ9mBasSPpa)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Check your knowledge with the [function scope challenge](https://codepen.io/lambdaschool/pen/gOpOjbp?editors=0012).
+  Check your knowledge with the [function scope challenge](https://codepen.io/lambdaschool/pen/gOpOjbp?editors=0012).
 
--   Objective challenge:
+- Objective challenge:
 
-    For this challenge you will create your own closure:
+  For this challenge you will create your own closure:
 
-    -   Create a function that houses 2 nested functions inside of it
-    -   Create a unique variable for each function you created
-    -   Test out where you can log the unique variables for each function.
+  - Create a function that houses 2 nested functions inside of it
+  - Create a unique variable for each function you created
+  - Test out where you can log the unique variables for each function.
 
-    Why can you access variable values in nested functions?
+  Why can you access variable values in nested functions?
 
--   Project: Baseball Scoreboard Challenge
+- Project: Baseball Scoreboard Challenge

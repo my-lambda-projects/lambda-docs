@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # DOM I
 
@@ -73,10 +71,10 @@ Now that we can build a basic static web page with HTML and CSS, we need to add 
 
 **At the end of this module, you should be able to:**
 
--   explain what the DOM is, and how it relates to an html page
--   use DOM selectors, and describe the differences in the behavior of each
--   use different properties and methods to manipulate a selected element
--   create a new element, manipulate it, and add it to the DOM
+- explain what the DOM is, and how it relates to an html page
+- use DOM selectors, and describe the differences in the behavior of each
+- use different properties and methods to manipulate a selected element
+- create a new element, manipulate it, and add it to the DOM
 
 #### Pro Tip
 
@@ -86,29 +84,21 @@ When talking about your journey, don’t focus on things you don’t know yet, f
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=k6nS8-lq_YY), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=k6nS8-lq_YY), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=WVq-2Yp7wgU), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=WVq-2Yp7wgU), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=cuXOWWsrcNk), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=cuXOWWsrcNk), or enable JavaScript if it is disabled in your browser.
-
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ikmnlhPDiyo), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ikmnlhPDiyo), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -126,7 +116,7 @@ The DOM is built as a data structure known as a ‘Tree’, because parent eleme
 
 When the DOM is built and the webpage is loaded, developers get access to it in the form of the global Javascript object `document`. `document` contains the entire hierarchy of the page, each element (or DOM node), and it also contains dozens of built in methods and properties. We can use these methods and properties to manipulate what we see on the screen.
 
--   Note: There are so many methods and properties on document (and its subsequent elements and collections) that it would take a lot longer to properly cover them all. We will only be covering the few most commonly used. From this point forward you will be expected to reference the official documentation to learn more about the different methods and properties available, when your need arises for something other than what we have taught. This is a very good habit to get into as we progress deeper in to the course.
+- Note: There are so many methods and properties on document (and its subsequent elements and collections) that it would take a lot longer to properly cover them all. We will only be covering the few most commonly used. From this point forward you will be expected to reference the official documentation to learn more about the different methods and properties available, when your need arises for something other than what we have taught. This is a very good habit to get into as we progress deeper in to the course.
 
 ##### Follow Along
 
@@ -139,7 +129,7 @@ Lets investigate the DOM together by visiting a live website and updating the DO
 1.  Navigate to [lambdaschool.com](https://lambdaschool.com/).
 2.  Right click on the main heading and you should see a dropdown with an option to `inspect element.` Click that option and chrome developer tools should activate.
 3.  The developer tools should be showing the selection you made when you right clicked. Double click the content of the heading. You should now be able to edit the text of the header.
-4.  Update the text with anything you’d like. For this example, I will update the text to say “Hello there!” *You won’t see any changes until you deselect the content in the chrome developer tools.*
+4.  Update the text with anything you’d like. For this example, I will update the text to say “Hello there!” _You won’t see any changes until you deselect the content in the chrome developer tools._
 5.  Now try updating the content and HTML of other elements on the page.
 
 Notice that if you refresh the page, the changes you made are gone! **That is because the elements you were editing existed in the DOM and were not permanent!**
@@ -156,16 +146,16 @@ This should make the document appear on the screen, play around with it for a mi
 
 ##### Dig Deeper
 
--   [Live DOM Viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/)  
-    This live DOM viewer exposes the DOM in a great way for learning
--   [Eloquent Javascript: DOM](https://eloquentjavascript.net/14_dom.html)  
-    A fantastic chapter on the DOM from the book, 'Eloquent Javascript'
--   [MDN 'document' documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document)  
-    Official documentation for the 'document' Javascript object
--   [MDN DOM documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)  
-    Official DOM docs
+- [Live DOM Viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/)  
+  This live DOM viewer exposes the DOM in a great way for learning
+- [Eloquent Javascript: DOM](https://eloquentjavascript.net/14_dom.html)  
+  A fantastic chapter on the DOM from the book, 'Eloquent Javascript'
+- [MDN 'document' documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document)  
+  Official documentation for the 'document' Javascript object
+- [MDN DOM documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)  
+  Official DOM docs
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use DOM selectors, and describe the differences in the behavior of each
 
@@ -201,7 +191,7 @@ This method will take a single string as an argument containing the class of the
 
 These are the newest element selection methods added to the DOM. These methods allow us to select element(s) based on CSS style selectors (remember `.` is class and `#` is id). Each method takes a string containing the selectors and returns the element(s). Note - we can select by element, id, class, or others with both methods.
 
-    document.querySelector(‘.custom-style’); 
+    document.querySelector(‘.custom-style’);
 
 This method will search for and return the **first element** that matches the value passed into the method. Remember from above that the biggest change from the older DOM selection methods is that we now need to pass the proper CSS selector into the argument.
 
@@ -209,7 +199,7 @@ If we passed `(‘custom-style’)` and not `(‘.custom-style’)` we would err
 
     document.querySelectorAll(‘queryString’);
 
-This method will search for and return *ALL* elements matching the query string. This method returns these elements in an array-like object called a `NodeList`
+This method will search for and return _ALL_ elements matching the query string. This method returns these elements in an array-like object called a `NodeList`
 
 #### The Difference between `HTMLCollection`, `NodeList`, and `Array`
 
@@ -313,7 +303,7 @@ Note that we had to type out the `.` in `.nav-item`. This trips up new developer
 
 Finish the DOM selector requests based on given HTML, LESS, and JS [- follow this link for the challenge.](https://codepen.io/lambdaschool/pen/mGYarw?editors=1010)
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use different properties and methods to manipulate a selected element
 
@@ -327,58 +317,58 @@ After we have captured our element (eg. `const el = document.querySelector(‘#i
 
 #### .textContent
 
--   Gets and sets the text of an element. Essentially whatever text is between the open and closing tags of an HTML element.
--   Can use the assignment operator ( = ) to reset the text of an element
--   Setting this property on a node removes all of its children and replaces them with the new single text node.
--   `<div>Something Here</div>`
--   `element.textContent = 'Something New`;
+- Gets and sets the text of an element. Essentially whatever text is between the open and closing tags of an HTML element.
+- Can use the assignment operator ( = ) to reset the text of an element
+- Setting this property on a node removes all of its children and replaces them with the new single text node.
+- `<div>Something Here</div>`
+- `element.textContent = 'Something New`;
 
 #### .setAttribute() (or .{attr})
 
--   This method (or property) is used as a way to set or reassign an attribute on the element.
--   ‘.setAttribute()’ is a method that takes two arguments, the attribute to set, and the value to set to that attribute.
--   eg: `element.setAttribute('src', 'http://www.imagsource.com/image.jpg')`
--   Can also use the pattern: `element.'attrName' = ‘value’`.
--   eg: `element.src = 'http://www.imagsource.com/image.jpg'`
+- This method (or property) is used as a way to set or reassign an attribute on the element.
+- ‘.setAttribute()’ is a method that takes two arguments, the attribute to set, and the value to set to that attribute.
+- eg: `element.setAttribute('src', 'http://www.imagsource.com/image.jpg')`
+- Can also use the pattern: `element.'attrName' = ‘value’`.
+- eg: `element.src = 'http://www.imagsource.com/image.jpg'`
 
 #### .style
 
--   Every element contains a style object. This property accesses that style object. The style object contains every available style as a key and a value as the value. It is important to note, that these are NOT the CSS styles, these are inline HTML styles.
--   These styles are associated with the HTML inline style set on the element
-    -   eg: `<div style=“color: red;”>DIV STUFF</div>`
--   You can access and change a property on the style object by using the assignment operator `=`.
--   eg: `element.style.color = ‘blue’;`
--   Changing a property on the style object will effectively give this element an inline style.
--   Inline styles have the highest specificity, overriding any other selector except `!important`.
--   VERY IMPORTANT to note that this does NOT access or change anything in the CSS file.
+- Every element contains a style object. This property accesses that style object. The style object contains every available style as a key and a value as the value. It is important to note, that these are NOT the CSS styles, these are inline HTML styles.
+- These styles are associated with the HTML inline style set on the element
+  - eg: `<div style=“color: red;”>DIV STUFF</div>`
+- You can access and change a property on the style object by using the assignment operator `=`.
+- eg: `element.style.color = ‘blue’;`
+- Changing a property on the style object will effectively give this element an inline style.
+- Inline styles have the highest specificity, overriding any other selector except `!important`.
+- VERY IMPORTANT to note that this does NOT access or change anything in the CSS file.
 
 #### .className, .id
 
--   `.className` accesses or assigns a string containing all of the classes on the element.
--   `.id` accesses or assigns a string containing the id of the element.
+- `.className` accesses or assigns a string containing all of the classes on the element.
+- `.id` accesses or assigns a string containing the id of the element.
 
 #### .classList
 
--   `classList` will return an array-like object of all the classes on the element. There are many useful methods available on `classList`.
-    -   `classList` is a `DOMTokenList`.
-        -   A `DOMTokenList` is an array-like object with a numerical zero-based index, a length property, also the `.contains()` and `.forEach()` methods.
-    -   Most notably the methods `.add()` `.remove()` and `.toggle()` exist. All three take a single string representing the class.
-        -   `.add('className')` and `.remove('className')` do as their names indicate.
-        -   `.toggle('className')` will add the class if it does not exist and remove it if if does.
+- `classList` will return an array-like object of all the classes on the element. There are many useful methods available on `classList`.
+  - `classList` is a `DOMTokenList`.
+    - A `DOMTokenList` is an array-like object with a numerical zero-based index, a length property, also the `.contains()` and `.forEach()` methods.
+  - Most notably the methods `.add()` `.remove()` and `.toggle()` exist. All three take a single string representing the class.
+    - `.add('className')` and `.remove('className')` do as their names indicate.
+    - `.toggle('className')` will add the class if it does not exist and remove it if if does.
 
 #### .appendChild() and .prepend()
 
--   These methods add child elements to parent elements.
--   `.appendChild(child)` will take an element and add it to it’s children. It will add it to the ‘end’ physically so if the children are displayed in order it will be the last.
-    -   eg: `parentElement.appendChild(childElement)`
--   `.prepend(child)` adds a child to the beginning, displaying it first.
-    -   eq: `parentElement.prepend(childElement)`
+- These methods add child elements to parent elements.
+- `.appendChild(child)` will take an element and add it to it’s children. It will add it to the ‘end’ physically so if the children are displayed in order it will be the last.
+  - eg: `parentElement.appendChild(childElement)`
+- `.prepend(child)` adds a child to the beginning, displaying it first.
+  - eq: `parentElement.prepend(childElement)`
 
 #### .children and .parentNode
 
--   These properties are used for accessing relatives of the element.
--   `.children` returns an `HTMLCollection` of all the children of that element.
--   `.parentNode` returns the parent element of that element.
+- These properties are used for accessing relatives of the element.
+- `.children` returns an `HTMLCollection` of all the children of that element.
+- `.parentNode` returns the parent element of that element.
 
 ##### Follow Along
 
@@ -472,13 +462,13 @@ The JavaScript version would look like this:
 
 Here are some ideas:
 
--   Change the color of the paragraphs
--   Change the text contents of any element of your choosing
--   Change the `href` of an anchor tag
--   Update the `alt` tag of an image
--   Update layout styles, try out flex properties with JavaScript syntax
+- Change the color of the paragraphs
+- Change the text contents of any element of your choosing
+- Change the `href` of an anchor tag
+- Update the `alt` tag of an image
+- Update layout styles, try out flex properties with JavaScript syntax
 
-------------------------------------------------------------------------
+---
 
 #### Learn to create a new element, manipulate it, and add it to the DOM
 
@@ -492,30 +482,30 @@ An important feature of the DOM is the ability to create brand new elements dyna
 
 ### .createElement
 
--   `.createElement` creates a brand new element based on a given string.
--   New element exists in memory, but not on the DOM yet.
--   Can use any DOM property or method to style and manipulate the element.
--   eg: `document.createElement('h1')` will create an `h1` element.
+- `.createElement` creates a brand new element based on a given string.
+- New element exists in memory, but not on the DOM yet.
+- Can use any DOM property or method to style and manipulate the element.
+- eg: `document.createElement('h1')` will create an `h1` element.
 
 ### .appendChild() and .prepend()
 
--   Add child elements to parent elements.
--   `.appendChild(child)` add an element to it’s children. Adds to the ‘end’, so that if displayed in order, the added child will be last.
-    -   eg: `parentElement.appendChild(childElement)`
--   `.prepend(child)` adds a child to the beginning, displaying it first.
-    -   eq: `parentElement.prepend(childElement)`
+- Add child elements to parent elements.
+- `.appendChild(child)` add an element to it’s children. Adds to the ‘end’, so that if displayed in order, the added child will be last.
+  - eg: `parentElement.appendChild(childElement)`
+- `.prepend(child)` adds a child to the beginning, displaying it first.
+  - eq: `parentElement.prepend(childElement)`
 
 ##### Challenge
 
 Practice the concepts covered.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [DOM I](https://github.com/LambdaSchool/DOM-I)
+- ##### [DOM I](https://github.com/LambdaSchool/DOM-I)
 
-    Manipulating the DOM with JavaScript, using selectors.
+  Manipulating the DOM with JavaScript, using selectors.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -523,44 +513,44 @@ Practice the concepts covered.
 
 You can use class recordings to help you master the material.
 
--   **[DOM I for WebPT22 w/Keiran Kozlowski](https://youtu.be/s8-xWtQiOgI)**
+- **[DOM I for WebPT22 w/Keiran Kozlowski](https://youtu.be/s8-xWtQiOgI)**
 
-    Now that we can build a basic static web page with HTML and CSS, we need to add functionality to the page. The first step in building vibrant dynamic web pages and applications is learning about the DOM. What it is, how it affects our page, and how to access and manipulate it. DOM manipulation is at the core of every framework and before we start using frameworks we need to understand the DOM.
+  Now that we can build a basic static web page with HTML and CSS, we need to add functionality to the page. The first step in building vibrant dynamic web pages and applications is learning about the DOM. What it is, how it affects our page, and how to access and manipulate it. DOM manipulation is at the core of every framework and before we start using frameworks we need to understand the DOM.
 
--   [All previous recordings](/archive/FSW/module/rectn5PUU5ubcQkPu)
+- [All previous recordings](/archive/FSW/module/rectn5PUU5ubcQkPu)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Open the console in your web browser and enter
+  Open the console in your web browser and enter
 
-    `console.log(document);`
+  `console.log(document);`
 
-    This should make the document appear on the screen, play around with it for a minute. Notice how the document contains all of the HTML elements (otherwise now known as DOM nodes) on the page. Hover over these nodes and notice how the element on the page is highlighted.
+  This should make the document appear on the screen, play around with it for a minute. Notice how the document contains all of the HTML elements (otherwise now known as DOM nodes) on the page. Hover over these nodes and notice how the element on the page is highlighted.
 
--   Objective challenge:
+- Objective challenge:
 
-    Finish the DOM selector requests based on given HTML, LESS, and JS [- follow this link for the challenge.](https://codepen.io/lambdaschool/pen/mGYarw?editors=1010)
+  Finish the DOM selector requests based on given HTML, LESS, and JS [- follow this link for the challenge.](https://codepen.io/lambdaschool/pen/mGYarw?editors=1010)
 
--   Objective challenge:
+- Objective challenge:
 
-    ### DOM Manipulation Challenge
+  ### DOM Manipulation Challenge
 
-    [Take the example code from your tutorial](https://codepen.io/lambdaschool/pen/jvjjGB?editors=1011) and try updating the DOM in various ways.
+  [Take the example code from your tutorial](https://codepen.io/lambdaschool/pen/jvjjGB?editors=1011) and try updating the DOM in various ways.
 
-    Here are some ideas:
+  Here are some ideas:
 
-    -   Change the color of the paragraphs
-    -   Change the text contents of any element of your choosing
-    -   Change the `href` of an anchor tag
-    -   Update the `alt` tag of an image
-    -   Update layout styles, try out flex properties with JavaScript syntax
+  - Change the color of the paragraphs
+  - Change the text contents of any element of your choosing
+  - Change the `href` of an anchor tag
+  - Update the `alt` tag of an image
+  - Update layout styles, try out flex properties with JavaScript syntax
 
--   Objective challenge:
+- Objective challenge:
 
-    Practice the concepts covered.
+  Practice the concepts covered.
 
--   Project: DOM I
+- Project: DOM I

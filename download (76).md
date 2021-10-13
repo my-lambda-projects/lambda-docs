@@ -16,31 +16,31 @@ You must be a Lambda School student to view this page.
 
 <a href="/cs/sprint/reckLrPDHRpFN3a6p" class="bd-toc-link">1.  Computer Science Fundamentals</a>
 
--   [Python Basics](/cs/module/recHNgXTaBpnn052p/)
--   [Problem Solving](/cs/module/recagU9ihCuMePtbx/)
--   [Time and Space Complexity](/cs/module/recZ6g2C5xkxHmT16/)
--   [Computer Memory Basics](/cs/module/recy2QANAS6Blpc5o/)
+- [Python Basics](/cs/module/recHNgXTaBpnn052p/)
+- [Problem Solving](/cs/module/recagU9ihCuMePtbx/)
+- [Time and Space Complexity](/cs/module/recZ6g2C5xkxHmT16/)
+- [Computer Memory Basics](/cs/module/recy2QANAS6Blpc5o/)
 
 <a href="/cs/sprint/recdbs5ZPBtMb6fou" class="bd-toc-link">2.  Data Structures and Algorithms I</a>
 
--   [Array and String Manipulation](/cs/module/recR43dkPzilEMXlE/)
--   [Linked Lists](/cs/module/recQJcAAjpSTtNf8A/)
--   [Queues and Stacks](/cs/module/rec07JKgm7ltWrPYD/)
--   [Searching and Recursion](/cs/module/rec00Cf3TiBWiCONA/)
+- [Array and String Manipulation](/cs/module/recR43dkPzilEMXlE/)
+- [Linked Lists](/cs/module/recQJcAAjpSTtNf8A/)
+- [Queues and Stacks](/cs/module/rec07JKgm7ltWrPYD/)
+- [Searching and Recursion](/cs/module/rec00Cf3TiBWiCONA/)
 
 <a href="/cs/sprint/recyC7E0YQc0qQgxa" class="bd-toc-link">3.  Data Structures and Algorithms II</a>
 
--   [Binary Search Trees](/cs/module/recgJOPYUjvQaN2sa/)
--   [Tree Traversal](/cs/module/recS3C67spna4M4HU/)
--   [Graphs I](/cs/module/recEPIaHFEriTuU2x/)
--   [Graphs II](/cs/module/recX4dkkIPeJ6JjX6/)
+- [Binary Search Trees](/cs/module/recgJOPYUjvQaN2sa/)
+- [Tree Traversal](/cs/module/recS3C67spna4M4HU/)
+- [Graphs I](/cs/module/recEPIaHFEriTuU2x/)
+- [Graphs II](/cs/module/recX4dkkIPeJ6JjX6/)
 
 <a href="/cs/sprint/recsJW8CaZiKcyUZj" class="bd-toc-link">4.  Data Structures and Algorithms III</a>
 
--   [Hash Tables I](/cs/module/recLpJY4yFQcV3qeW/)
--   [Hash Tables II](/cs/module/recG6onEnlSOWziKO/)
--   [Technical Interview Tips I](/cs/module/reczaVKTynSkqN8ZS/)
--   [Technical Interview Tips II](/cs/module/rec6kEjLri9SXMYdE/)
+- [Hash Tables I](/cs/module/recLpJY4yFQcV3qeW/)
+- [Hash Tables II](/cs/module/recG6onEnlSOWziKO/)
+- [Technical Interview Tips I](/cs/module/reczaVKTynSkqN8ZS/)
+- [Technical Interview Tips II](/cs/module/rec6kEjLri9SXMYdE/)
 
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjM1IiB2aWV3Ym94PSIwIDAgNzU2IDE5NyIgZmlsbD0iI2VjMzk0NCI+PGc+PHBhdGggZD0iTTI5Mi45LDEyNi42aC02LjdjLTksMC0xMi42LTEuOS0xMi42LTkuNVY0OC41YzAtNy43LDEuNi04LjYsMTEuNC05Ljd2LTQuNWgtNDEuM3Y0LjUgYzkuOCwxLjEsMTEuNCwxLjksMTEuNCw5Ljd2NjkuM2MwLDcuNy0xLjYsOC42LTExLjQsOS43djQuNWg3My43bDQuOS0yOS40aC00LjRDMzA4LjUsMTE5LjYsMzAzLjksMTI2LjYsMjkyLjksMTI2LjZ6Ij48L3BhdGg+PHBhdGggZD0iTTM4NS41LDEyMS4xVjc5LjNjMC0xNS44LTkuNC0yMi40LTI2LjYtMjIuNGMtMTUsMC0yNi44LDYuNi0yNi44LDE5LjNjMCwyLjQsMC4yLDMuMywwLjgsNWgxNi42IGMtMC41LTItMC43LTUtMC43LTcuNWMwLTkuNiwzLjYtMTIuNCw5LjQtMTIuNGM2LjQsMCw5LjcsMiw5LjcsMTQuNHYxMS4ybC0yMC44LDcuN2MtMTAuNiw0LjEtMTkuMyw4LjgtMTkuMywyMC43IGMwLDEwLjksNy41LDE3LjgsMTguNiwxNy44YzkuOSwwLDE3LjQtNi4yLDIxLjktMTIuMWwwLjEtMC4xbDAsMFYxMzJoMjZ2LTQuNEMzODcuNywxMjcuMSwzODUuNSwxMjYuMiwzODUuNSwxMjEuMXogTTM2OCwxMTcuOCBjLTQuNCwzLjMtNy42LDUuMy0xMiw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNFYxMTcuOEwzNjgsMTE3Ljh6Ij48L3BhdGg+PHBhdGggZD0iTTUxNC40LDEyMVY3OS41YzAtMTQuOC02LTIyLjQtMTguNy0yMi40Yy0xMS41LDAtMTkuNCw2LjYtMjUuNSwxMy45Yy0xLjgtOS42LTcuNy0xMy45LTE3LjgtMTMuOSBjLTExLjQsMC0xOC43LDYuMi0yNC44LDEzLjZWNTdoLTIuM2wtMjMuOCw3LjR2Mi40bDguNiw1djQ5LjRjMCw1LTIuMSw2LjEtOC45LDYuNHY0LjRoMzUuMXYtNC40Yy02LjctMC4zLTguNy0xLjMtOC43LTYuNHYtNDcgYzQuNy0zLjYsOS41LTYuNSwxNS41LTYuNWM3LjYsMCwxMC41LDQuMiwxMC41LDEyLjd2NDAuOGMwLDUtMS45LDYuMS04LjcsNi40djQuNGwzNC44LDB2LTQuNGMtNi43LTAuMy04LjYtMS4zLTguNi02LjR2LTQ3IGM0LjctMy42LDkuNS02LjUsMTUuNS02LjVjNy42LDAsMTAuNSw0LjIsMTAuNSwxMi43bC0wLjEsNDAuNWMwLDUtMS44LDYuNC04LjYsNi43bDAsNC40aDM1LjF2LTQuNCBDNTE2LjcsMTI3LjQsNTE0LjQsMTI2LjEsNTE0LjQsMTIxeiI+PC9wYXRoPjxwYXRoIGQ9Ik01NzMuMiw1Ny4zYy0xMSwwLTE4LjUsNS43LTIzLjQsMTIuOFYyMi45aC0yLjdsLTIzLjQsNi44djIuNWw4LjYsNC41VjEzMmgyLjlsOC0zLjVjNS44LDMuMywxMi4zLDUsMjAuMiw1IGMyMC44LDAsMzcuNC0xNS44LDM3LjQtNDIuNkM2MDAuOSw2OS45LDU5MC40LDU3LjMsNTczLjIsNTcuM3ogTTU2My40LDEyOC43Yy01LjQsMC0xMC4zLTIuNC0xMy43LTcuOVY3My42IGMzLjQtMy40LDguNS01LjcsMTMuNS01LjdjMTMuOSwwLDIwLDEyLjgsMjAsMjkuNUM1ODMuMywxMTQuNyw1NzUuOCwxMjguNSw1NjMuNCwxMjguN3oiPjwvcGF0aD48cGF0aCBkPSJNNjc3LDEyMS4yVjIyLjhoLTIuNkw2NTEsMjkuNlYzMmw4LjYsNC41djI1LjdjLTMuNC0zLjItOC44LTUuMS0xNS41LTUuMWMtMTkuOSwwLTM1LjIsMTUuMy0zNS4yLDQxLjMgYzAsMjAuNywxMS4yLDM0LjYsMjguMSwzNC42YzkuOCwwLDE3LTUuMywyMi42LTEzLjF2MC45VjEzMmgyNi4zbDAtNC40QzY3OS4xLDEyNy4zLDY3NywxMjYuMyw2NzcsMTIxLjJ6IE02NTkuNiwxMTcuMSBMNjU5LjYsMTE3LjFjLTMuNCwzLjQtOCw1LjEtMTMuMiw1LjFjLTEzLjIsMC0yMC40LTEyLjgtMjAuNC0yOS44YzAtMTcuOCw3LjMtMjkuMiwxOS41LTI5LjJjOC43LDAsMTQuMSw2LjksMTQuMSwxOC4zIEw2NTkuNiwxMTcuMXoiPjwvcGF0aD48cGF0aCBkPSJNNzQ3LjEsMTIxLjFWNzkuM2MwLTE1LjgtOS40LTIyLjQtMjYuNi0yMi40Yy0xNSwwLTI2LjgsNi42LTI2LjgsMTkuM2MwLDIuNCwwLjIsMy4zLDAuOCw1aDE2LjYgYy0wLjUtMi0wLjctNS0wLjctNy41YzAtOS42LDMuNi0xMi40LDkuNC0xMi40YzYuNCwwLDkuNywyLDkuNywxNC40djExLjJsLTIwLjgsNy43Yy0xMC42LDQuMS0xOS4zLDguOC0xOS4zLDIwLjcgYzAsMTAuOSw3LjUsMTcuOCwxOC42LDE3LjhjOS45LDAsMTcuNC02LjIsMjEuOS0xMi4xdi0wLjFoMC4xbDAsMTEuMWwyNiwwLjF2LTQuNUM3NDkuMywxMjcuMSw3NDcuMSwxMjYuMiw3NDcuMSwxMjEuMXogTTcyOS42LDExNy44Yy00LjQsMy4zLTcuNiw1LjMtMTIuMSw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNEw3MjkuNiwxMTcuOEw3MjkuNiwxMTcuOHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTAsMHY5MC40YzAsNjUuNyw1MC45LDg4LjUsODguMSwxMDUuMmgwLjFsMywxLjRjMC43LTAuNCwxLjQtMC43LDIuMi0xYzAuNC0wLjIsMC45LTAuNCwxLjMtMC42IGMzNy4zLTE2LjYsODguNC0zOS41LDg4LjQtMTA1VjBIMHogTTExNiwxMzJsLTItNS4zbC0yNi42LTcwYy0xLjYsNC4xLTUuMywxNC05LjMsMjQuNmwtMTUuMyw0MS4zYy0wLjcsMi0wLjMsMywwLjIsMy43IGMxLjEsMS4zLDMuNSwxLjMsNy4zLDEuM0g3MWwwLDQuNEg0Mi40bDAtNC40aDIuMmMzLjksMCw3LjEtMS43LDkuNS02LjVsMi45LTYuNmwyNi41LTY3LjhsLTQuNy0xMi41aDI0LjdsMzQuMSw4OS43bDMuMSw4LjFIMTE2eiI+PC9wYXRoPjwvc3ZnPg==" /></a>
 
@@ -48,35 +48,35 @@ You must be a Lambda School student to view this page.
 
 <a href="/cs/sprint/reckLrPDHRpFN3a6p" class="bd-toc-link">1.  Computer Science Fundamentals</a>
 
--   [Python Basics](/cs/module/recHNgXTaBpnn052p/)
--   [Problem Solving](/cs/module/recagU9ihCuMePtbx/)
--   [Time and Space Complexity](/cs/module/recZ6g2C5xkxHmT16/)
--   [Computer Memory Basics](/cs/module/recy2QANAS6Blpc5o/)
+- [Python Basics](/cs/module/recHNgXTaBpnn052p/)
+- [Problem Solving](/cs/module/recagU9ihCuMePtbx/)
+- [Time and Space Complexity](/cs/module/recZ6g2C5xkxHmT16/)
+- [Computer Memory Basics](/cs/module/recy2QANAS6Blpc5o/)
 
 <a href="/cs/sprint/recdbs5ZPBtMb6fou" class="bd-toc-link">2.  Data Structures and Algorithms I</a>
 
--   [Array and String Manipulation](/cs/module/recR43dkPzilEMXlE/)
--   [Linked Lists](/cs/module/recQJcAAjpSTtNf8A/)
--   [Queues and Stacks](/cs/module/rec07JKgm7ltWrPYD/)
--   [Searching and Recursion](/cs/module/rec00Cf3TiBWiCONA/)
+- [Array and String Manipulation](/cs/module/recR43dkPzilEMXlE/)
+- [Linked Lists](/cs/module/recQJcAAjpSTtNf8A/)
+- [Queues and Stacks](/cs/module/rec07JKgm7ltWrPYD/)
+- [Searching and Recursion](/cs/module/rec00Cf3TiBWiCONA/)
 
 <a href="/cs/sprint/recyC7E0YQc0qQgxa" class="bd-toc-link">3.  Data Structures and Algorithms II</a>
 
--   [Binary Search Trees](/cs/module/recgJOPYUjvQaN2sa/)
--   [Tree Traversal](/cs/module/recS3C67spna4M4HU/)
--   [Graphs I](/cs/module/recEPIaHFEriTuU2x/)
--   [Graphs II](/cs/module/recX4dkkIPeJ6JjX6/)
+- [Binary Search Trees](/cs/module/recgJOPYUjvQaN2sa/)
+- [Tree Traversal](/cs/module/recS3C67spna4M4HU/)
+- [Graphs I](/cs/module/recEPIaHFEriTuU2x/)
+- [Graphs II](/cs/module/recX4dkkIPeJ6JjX6/)
 
 <a href="/cs/sprint/recsJW8CaZiKcyUZj" class="bd-toc-link">4.  Data Structures and Algorithms III</a>
 
--   [Hash Tables I](/cs/module/recLpJY4yFQcV3qeW/)
--   [Hash Tables II](/cs/module/recG6onEnlSOWziKO/)
--   [Technical Interview Tips I](/cs/module/reczaVKTynSkqN8ZS/)
--   [Technical Interview Tips II](/cs/module/rec6kEjLri9SXMYdE/)
+- [Hash Tables I](/cs/module/recLpJY4yFQcV3qeW/)
+- [Hash Tables II](/cs/module/recG6onEnlSOWziKO/)
+- [Technical Interview Tips I](/cs/module/reczaVKTynSkqN8ZS/)
+- [Technical Interview Tips II](/cs/module/rec6kEjLri9SXMYdE/)
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Review](#review)
 
 # Graphs II
 
@@ -84,10 +84,10 @@ You must be a Lambda School student to view this page.
 
 **At the end of this module, you should be able to:**
 
--   represent a breadth-first-search of a graph in pseudo-code and recall typical applications for its use
--   represent a depth-first-search of a graph in pseudo-code and recall typical applications for its use
--   implement a breadth-first search on a graph
--   implement a depth-first search on a graph
+- represent a breadth-first-search of a graph in pseudo-code and recall typical applications for its use
+- represent a depth-first-search of a graph in pseudo-code and recall typical applications for its use
+- implement a breadth-first search on a graph
+- implement a depth-first search on a graph
 
 #### Pro Tip
 
@@ -97,29 +97,21 @@ We all build on the work of others.
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=qDNtVQSgodo), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=qDNtVQSgodo), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=RrdVrVWCguE), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=RrdVrVWCguE), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=TraCqRGMZiQ), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=TraCqRGMZiQ), or enable JavaScript if it is disabled in your browser.
-
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=2XxefUT7Si4), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=2XxefUT7Si4), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -139,19 +131,19 @@ We followed the edges represented with thicker black arrows. We did not follow t
 
 The exact order will vary depending on which branches get taken first and which vertex is the starting vertex.
 
-*Note: it’s essential to know the distinction between a breadth-first search and a breadth-first traversal. A breadth-first traversal is when you visit each vertex in the breadth-first order and do something during the traversal. A breadth-first search is when you search through vertexes in the breadth-first order until you find the target vertex. A breadth-first search usually returns the shortest path from the starting vertex to the target vertex once the target is found.*
+_Note: it’s essential to know the distinction between a breadth-first search and a breadth-first traversal. A breadth-first traversal is when you visit each vertex in the breadth-first order and do something during the traversal. A breadth-first search is when you search through vertexes in the breadth-first order until you find the target vertex. A breadth-first search usually returns the shortest path from the starting vertex to the target vertex once the target is found._
 
 ### Applications of BFS
 
--   Pathfinding, Routing
--   Find neighbor nodes in a P2P network like BitTorrent
--   Web crawlers
--   Finding people `n` connections away on a social network
--   Find neighboring locations on the graph
--   Broadcasting in a network
--   Cycle detection in a graph
--   Finding [Connected Components](https://en.wikipedia.org/wiki/Connected_component_(graph_theory))
--   Solving several theoretical graph problems
+- Pathfinding, Routing
+- Find neighbor nodes in a P2P network like BitTorrent
+- Web crawlers
+- Finding people `n` connections away on a social network
+- Find neighboring locations on the graph
+- Broadcasting in a network
+- Cycle detection in a graph
+- Finding [Connected Components](<https://en.wikipedia.org/wiki/Connected_component_(graph_theory)>)
+- Solving several theoretical graph problems
 
 ### Coloring Vertexes
 
@@ -163,7 +155,7 @@ Unvisited verts are white, verts whose neighbors are being explored are gray, an
 
 In a BFS, it’s useful to track which nodes we still need to explore. For example, in the diagram above, when we get to node 2, we know that we also need to explore nodes 3 and 4.
 
-We can track that by adding neighbors to a *queue* (which remember is first in, first out), and then explore the verts in the queue one by one.
+We can track that by adding neighbors to a _queue_ (which remember is first in, first out), and then explore the verts in the queue one by one.
 
 ##### Follow Along
 
@@ -197,9 +189,9 @@ The condition we check at the outset of each while loop is if the queue is **not
 
 Then, we loop through each of that vert’s neighbors and:
 
--   We check if it is unvisited (the color white).
--   If it is unvisited, we mark it as gray (meaning we will explore its neighbors).
--   We enqueue the vert.
+- We check if it is unvisited (the color white).
+- If it is unvisited, we mark it as gray (meaning we will explore its neighbors).
+- We enqueue the vert.
 
 Next, we dequeue the current vert we’ve been exploring and mark that vert as black (marking it as visited).
 
@@ -236,15 +228,15 @@ On your own, complete the following tasks:
 
 ##### Dig Deeper
 
--   <https://brilliant.org/wiki/breadth-first-search-bfs/>  
+- <https://brilliant.org/wiki/breadth-first-search-bfs/>
 
-------------------------------------------------------------------------
+---
 
 #### Learn to represent a depth-first-search of a graph in pseudo-code and recall typical applications for its use
 
 ##### Overview
 
-Another method we can use when searching a graph is a **depth-first search** (DFS). This searching algorithm *“dives”* *“down”* the graph as far as it can before backtracking and exploring another branch.
+Another method we can use when searching a graph is a **depth-first search** (DFS). This searching algorithm _“dives”_ _“down”_ the graph as far as it can before backtracking and exploring another branch.
 
 The algorithm never attempts to explore a vert it has already explored or is exploring.
 
@@ -258,15 +250,15 @@ The exact order will vary depending on which branches get taken first and which 
 
 ### Applications of DFS
 
-DFS is often the preferred method or exploring a graph *if we want to ensure we visit every node in the graph*. For example, let’s say that we have a graph representing all the friendships in the entire world. We want to find a path between two known people, `Andy` and `Sarah`. If we used a depth-first search in this scenario, we could end up exceptionally far away from `Andy` while still not finding a path to `Sarah`. Using a DFS, we will eventually find the path, but it won’t find the shortest route, and it will also likely take a long time.
+DFS is often the preferred method or exploring a graph _if we want to ensure we visit every node in the graph_. For example, let’s say that we have a graph representing all the friendships in the entire world. We want to find a path between two known people, `Andy` and `Sarah`. If we used a depth-first search in this scenario, we could end up exceptionally far away from `Andy` while still not finding a path to `Sarah`. Using a DFS, we will eventually find the path, but it won’t find the shortest route, and it will also likely take a long time.
 
-So, this is an example of where a DFS *would not work well*. What about a genuine use case for DFS. Here are a few examples:
+So, this is an example of where a DFS _would not work well_. What about a genuine use case for DFS. Here are a few examples:
 
--   Finding [Minimum Spanning Trees](https://en.wikipedia.org/wiki/Minimum_spanning_tree) of weighted graphs
--   Pathfinding
--   Detecting cycles in graphs
--   [Topological sorting](https://en.wikipedia.org/wiki/Topological_sorting), useful for scheduling sequences of dependent jobs
--   Solving and generating mazes
+- Finding [Minimum Spanning Trees](https://en.wikipedia.org/wiki/Minimum_spanning_tree) of weighted graphs
+- Pathfinding
+- Detecting cycles in graphs
+- [Topological sorting](https://en.wikipedia.org/wiki/Topological_sorting), useful for scheduling sequences of dependent jobs
+- Solving and generating mazes
 
 ### Coloring Vertexes
 
@@ -343,9 +335,9 @@ On your own, complete the following tasks:
 
 ##### Dig Deeper
 
--   <https://brilliant.org/wiki/depth-first-search-dfs/>  
+- <https://brilliant.org/wiki/depth-first-search-dfs/>
 
-------------------------------------------------------------------------
+---
 
 #### Learn to implement a breadth-first search on a graph
 
@@ -448,13 +440,13 @@ Now, we will add a `breadth_first_search` method to our `Graph` class. One of th
 ##### Challenge
 
 1.  What is time complexity in Big O notation of a breadth-first search on a graph with `V` vertices and `E` edges?
-2.  Which method will find the ***shortest*** path between a starting point and any other reachable node? A breadth-first search or a depth-first search?
+2.  Which method will find the **_shortest_** path between a starting point and any other reachable node? A breadth-first search or a depth-first search?
 
 ##### Dig Deeper
 
--   <https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/>  
+- <https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/>
 
-------------------------------------------------------------------------
+---
 
 #### Learn to implement a depth-first search on a graph
 
@@ -555,9 +547,9 @@ Now, we will add a `depth_first_search` method to our `Graph` class. One of the 
 
 ##### Dig Deeper
 
--   <https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/>  
+- <https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/>
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -565,72 +557,73 @@ Now, we will add a `depth_first_search` method to our `Graph` class. One of the 
 
 You can use class recordings to help you master the material.
 
--   [All previous recordings](/archive/cs/module/recX4dkkIPeJ6JjX6)
+- [All previous recordings](/archive/cs/module/recX4dkkIPeJ6JjX6)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    On your own, complete the following tasks:
+  On your own, complete the following tasks:
 
-    1.  Please spend a few minutes researching to find a unique use-case of a breadth-first-search that we did not mention in the list above.
+  1.  Please spend a few minutes researching to find a unique use-case of a breadth-first-search that we did not mention in the list above.
 
-    2.  Using the graph represented below, draw a picture of the graph and label each of the verts to show the correct vertex visitation order for a breadth-first-search starting with vertex `"I"`.
+  2.  Using the graph represented below, draw a picture of the graph and label each of the verts to show the correct vertex visitation order for a breadth-first-search starting with vertex `"I"`.
 
-             class Graph:
-                 def __init__(self):
-                     self.vertices = {
-                                         "A": {"B", "C", "D"},
-                                         "B": {},
-                                         "C": {"E", "F"},
-                                         "D": {"G"},
-                                         "E": {"G"},
-                                         "F": {"J"},
-                                         "G": {},
-                                         "H": {"C", "J", "K"},
-                                         "I": {"D", "E", "H"},
-                                         "J": {"L"},
-                                         "K": {"C"},
-                                         "L": {"M"},
-                                         "M": {},
-                                         "N": {"H", "K", "M"}
-                                     }
+           class Graph:
+               def __init__(self):
+                   self.vertices = {
+                                       "A": {"B", "C", "D"},
+                                       "B": {},
+                                       "C": {"E", "F"},
+                                       "D": {"G"},
+                                       "E": {"G"},
+                                       "F": {"J"},
+                                       "G": {},
+                                       "H": {"C", "J", "K"},
+                                       "I": {"D", "E", "H"},
+                                       "J": {"L"},
+                                       "K": {"C"},
+                                       "L": {"M"},
+                                       "M": {},
+                                       "N": {"H", "K", "M"}
+                                   }
 
-    3.  Besides marking verts with colors as in the pseudo-code example above, how else could you track the verts we have already visited?
+  3.  Besides marking verts with colors as in the pseudo-code example above, how else could you track the verts we have already visited?
 
--   Objective challenge:
+- Objective challenge:
 
-    On your own, complete the following tasks:
+  On your own, complete the following tasks:
 
-    1.  Please spend a few minutes researching to find a unique use-case of a depth-first search that we did not mention in the list above.
+  1.  Please spend a few minutes researching to find a unique use-case of a depth-first search that we did not mention in the list above.
 
-    2.  Using the graph represented below, draw a picture of the graph and label each of the verts to show the correct vertex visitation order for a depth-first-search starting with vertex `"I"`.
+  2.  Using the graph represented below, draw a picture of the graph and label each of the verts to show the correct vertex visitation order for a depth-first-search starting with vertex `"I"`.
 
-             class Graph:
-                 def __init__(self):
-                     self.vertices = {
-                                         "A": {"B", "C", "D"},
-                                         "B": {},
-                                         "C": {"E", "F"},
-                                         "D": {"G"},
-                                         "E": {"G"},
-                                         "F": {"J"},
-                                         "G": {},
-                                         "H": {"C", "J", "K"},
-                                         "I": {"D", "E", "H"},
-                                         "J": {"L"},
-                                         "K": {"C"},
-                                         "L": {"M"},
-                                         "M": {},
-                                         "N": {"H", "K", "M"}
-                                     }
+           class Graph:
+               def __init__(self):
+                   self.vertices = {
+                                       "A": {"B", "C", "D"},
+                                       "B": {},
+                                       "C": {"E", "F"},
+                                       "D": {"G"},
+                                       "E": {"G"},
+                                       "F": {"J"},
+                                       "G": {},
+                                       "H": {"C", "J", "K"},
+                                       "I": {"D", "E", "H"},
+                                       "J": {"L"},
+                                       "K": {"C"},
+                                       "L": {"M"},
+                                       "M": {},
+                                       "N": {"H", "K", "M"}
+                                   }
 
--   Objective challenge:
-    1.  What is time complexity in Big O notation of a breadth-first search on a graph with `V` vertices and `E` edges?
-    2.  Which method will find the ***shortest*** path between a starting point and any other reachable node? A breadth-first search or a depth-first search?
+- Objective challenge:
 
--   Objective challenge:
-    1.  Does a depth-first search reliably find the shortest path?
-    2.  If you didn’t want to use recursion, what data structure could you use to write an iterative depth-first search?
+  1.  What is time complexity in Big O notation of a breadth-first search on a graph with `V` vertices and `E` edges?
+  2.  Which method will find the **_shortest_** path between a starting point and any other reachable node? A breadth-first search or a depth-first search?
+
+- Objective challenge:
+  1.  Does a depth-first search reliably find the shortest path?
+  2.  If you didn’t want to use recursion, what data structure could you use to write an iterative depth-first search?

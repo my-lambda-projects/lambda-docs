@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,9 +10,9 @@
 
 <a href="/ll/sprint/recQf3zxkHFPeRABL" class="bd-toc-link">1.  Lambda Orientation</a>
 
--   [Learning at Lambda](/ll/module/recBC1BCvLsTSiaLS/)
--   [Labs and Beyond](/ll/module/recnBWTWXqXWjWCUd/)
--   [Values and Support](/ll/module/rec7Vyq18G1tytzyk/)
+- [Learning at Lambda](/ll/module/recBC1BCvLsTSiaLS/)
+- [Labs and Beyond](/ll/module/recnBWTWXqXWjWCUd/)
+- [Values and Support](/ll/module/rec7Vyq18G1tytzyk/)
 
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjM1IiB2aWV3Ym94PSIwIDAgNzU2IDE5NyIgZmlsbD0iI2VjMzk0NCI+PGc+PHBhdGggZD0iTTI5Mi45LDEyNi42aC02LjdjLTksMC0xMi42LTEuOS0xMi42LTkuNVY0OC41YzAtNy43LDEuNi04LjYsMTEuNC05Ljd2LTQuNWgtNDEuM3Y0LjUgYzkuOCwxLjEsMTEuNCwxLjksMTEuNCw5Ljd2NjkuM2MwLDcuNy0xLjYsOC42LTExLjQsOS43djQuNWg3My43bDQuOS0yOS40aC00LjRDMzA4LjUsMTE5LjYsMzAzLjksMTI2LjYsMjkyLjksMTI2LjZ6Ij48L3BhdGg+PHBhdGggZD0iTTM4NS41LDEyMS4xVjc5LjNjMC0xNS44LTkuNC0yMi40LTI2LjYtMjIuNGMtMTUsMC0yNi44LDYuNi0yNi44LDE5LjNjMCwyLjQsMC4yLDMuMywwLjgsNWgxNi42IGMtMC41LTItMC43LTUtMC43LTcuNWMwLTkuNiwzLjYtMTIuNCw5LjQtMTIuNGM2LjQsMCw5LjcsMiw5LjcsMTQuNHYxMS4ybC0yMC44LDcuN2MtMTAuNiw0LjEtMTkuMyw4LjgtMTkuMywyMC43IGMwLDEwLjksNy41LDE3LjgsMTguNiwxNy44YzkuOSwwLDE3LjQtNi4yLDIxLjktMTIuMWwwLjEtMC4xbDAsMFYxMzJoMjZ2LTQuNEMzODcuNywxMjcuMSwzODUuNSwxMjYuMiwzODUuNSwxMjEuMXogTTM2OCwxMTcuOCBjLTQuNCwzLjMtNy42LDUuMy0xMiw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNFYxMTcuOEwzNjgsMTE3Ljh6Ij48L3BhdGg+PHBhdGggZD0iTTUxNC40LDEyMVY3OS41YzAtMTQuOC02LTIyLjQtMTguNy0yMi40Yy0xMS41LDAtMTkuNCw2LjYtMjUuNSwxMy45Yy0xLjgtOS42LTcuNy0xMy45LTE3LjgtMTMuOSBjLTExLjQsMC0xOC43LDYuMi0yNC44LDEzLjZWNTdoLTIuM2wtMjMuOCw3LjR2Mi40bDguNiw1djQ5LjRjMCw1LTIuMSw2LjEtOC45LDYuNHY0LjRoMzUuMXYtNC40Yy02LjctMC4zLTguNy0xLjMtOC43LTYuNHYtNDcgYzQuNy0zLjYsOS41LTYuNSwxNS41LTYuNWM3LjYsMCwxMC41LDQuMiwxMC41LDEyLjd2NDAuOGMwLDUtMS45LDYuMS04LjcsNi40djQuNGwzNC44LDB2LTQuNGMtNi43LTAuMy04LjYtMS4zLTguNi02LjR2LTQ3IGM0LjctMy42LDkuNS02LjUsMTUuNS02LjVjNy42LDAsMTAuNSw0LjIsMTAuNSwxMi43bC0wLjEsNDAuNWMwLDUtMS44LDYuNC04LjYsNi43bDAsNC40aDM1LjF2LTQuNCBDNTE2LjcsMTI3LjQsNTE0LjQsMTI2LjEsNTE0LjQsMTIxeiI+PC9wYXRoPjxwYXRoIGQ9Ik01NzMuMiw1Ny4zYy0xMSwwLTE4LjUsNS43LTIzLjQsMTIuOFYyMi45aC0yLjdsLTIzLjQsNi44djIuNWw4LjYsNC41VjEzMmgyLjlsOC0zLjVjNS44LDMuMywxMi4zLDUsMjAuMiw1IGMyMC44LDAsMzcuNC0xNS44LDM3LjQtNDIuNkM2MDAuOSw2OS45LDU5MC40LDU3LjMsNTczLjIsNTcuM3ogTTU2My40LDEyOC43Yy01LjQsMC0xMC4zLTIuNC0xMy43LTcuOVY3My42IGMzLjQtMy40LDguNS01LjcsMTMuNS01LjdjMTMuOSwwLDIwLDEyLjgsMjAsMjkuNUM1ODMuMywxMTQuNyw1NzUuOCwxMjguNSw1NjMuNCwxMjguN3oiPjwvcGF0aD48cGF0aCBkPSJNNjc3LDEyMS4yVjIyLjhoLTIuNkw2NTEsMjkuNlYzMmw4LjYsNC41djI1LjdjLTMuNC0zLjItOC44LTUuMS0xNS41LTUuMWMtMTkuOSwwLTM1LjIsMTUuMy0zNS4yLDQxLjMgYzAsMjAuNywxMS4yLDM0LjYsMjguMSwzNC42YzkuOCwwLDE3LTUuMywyMi42LTEzLjF2MC45VjEzMmgyNi4zbDAtNC40QzY3OS4xLDEyNy4zLDY3NywxMjYuMyw2NzcsMTIxLjJ6IE02NTkuNiwxMTcuMSBMNjU5LjYsMTE3LjFjLTMuNCwzLjQtOCw1LjEtMTMuMiw1LjFjLTEzLjIsMC0yMC40LTEyLjgtMjAuNC0yOS44YzAtMTcuOCw3LjMtMjkuMiwxOS41LTI5LjJjOC43LDAsMTQuMSw2LjksMTQuMSwxOC4zIEw2NTkuNiwxMTcuMXoiPjwvcGF0aD48cGF0aCBkPSJNNzQ3LjEsMTIxLjFWNzkuM2MwLTE1LjgtOS40LTIyLjQtMjYuNi0yMi40Yy0xNSwwLTI2LjgsNi42LTI2LjgsMTkuM2MwLDIuNCwwLjIsMy4zLDAuOCw1aDE2LjYgYy0wLjUtMi0wLjctNS0wLjctNy41YzAtOS42LDMuNi0xMi40LDkuNC0xMi40YzYuNCwwLDkuNywyLDkuNywxNC40djExLjJsLTIwLjgsNy43Yy0xMC42LDQuMS0xOS4zLDguOC0xOS4zLDIwLjcgYzAsMTAuOSw3LjUsMTcuOCwxOC42LDE3LjhjOS45LDAsMTcuNC02LjIsMjEuOS0xMi4xdi0wLjFoMC4xbDAsMTEuMWwyNiwwLjF2LTQuNUM3NDkuMywxMjcuMSw3NDcuMSwxMjYuMiw3NDcuMSwxMjEuMXogTTcyOS42LDExNy44Yy00LjQsMy4zLTcuNiw1LjMtMTIuMSw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNEw3MjkuNiwxMTcuOEw3MjkuNiwxMTcuOHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTAsMHY5MC40YzAsNjUuNyw1MC45LDg4LjUsODguMSwxMDUuMmgwLjFsMywxLjRjMC43LTAuNCwxLjQtMC43LDIuMi0xYzAuNC0wLjIsMC45LTAuNCwxLjMtMC42IGMzNy4zLTE2LjYsODguNC0zOS41LDg4LjQtMTA1VjBIMHogTTExNiwxMzJsLTItNS4zbC0yNi42LTcwYy0xLjYsNC4xLTUuMywxNC05LjMsMjQuNmwtMTUuMyw0MS4zYy0wLjcsMi0wLjMsMywwLjIsMy43IGMxLjEsMS4zLDMuNSwxLjMsNy4zLDEuM0g3MWwwLDQuNEg0Mi40bDAtNC40aDIuMmMzLjksMCw3LjEtMS43LDkuNS02LjVsMi45LTYuNmwyNi41LTY3LjhsLTQuNy0xMi41aDI0LjdsMzQuMSw4OS43bDMuMSw4LjFIMTE2eiI+PC9wYXRoPjwvc3ZnPg==" /></a>
 
@@ -22,14 +20,14 @@
 
 <a href="/ll/sprint/recQf3zxkHFPeRABL" class="bd-toc-link">1.  Lambda Orientation</a>
 
--   [Learning at Lambda](/ll/module/recBC1BCvLsTSiaLS/)
--   [Labs and Beyond](/ll/module/recnBWTWXqXWjWCUd/)
--   [Values and Support](/ll/module/rec7Vyq18G1tytzyk/)
+- [Learning at Lambda](/ll/module/recBC1BCvLsTSiaLS/)
+- [Labs and Beyond](/ll/module/recnBWTWXqXWjWCUd/)
+- [Values and Support](/ll/module/rec7Vyq18G1tytzyk/)
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Learning at Lambda
 
@@ -39,16 +37,16 @@ Welcome to Lambda School! We are so excited to have you as a student and begin t
 
 **At the end of this module, you should be able to:**
 
--   know how to navigate and communicate using Slack.
--   know how to access and participate fully and professionally in Zoom.
--   know how to access and navigate Training Kit
--   know how to access and navigate the Progress Report Dashboard.
--   know how to access and ask a question in Frontdesk.
--   know how to access and navigate Google Calendar.
--   identify the requirements of the ISA.
--   understand the I do, we do, you do structure of Lambda school curriculum and how it is valuable for learning.
--   understand the difference between traditional grading and outcomes based assessments.
--   articulate the academic expectations, attendance expectation and daily work routine of Lambda School classes.
+- know how to navigate and communicate using Slack.
+- know how to access and participate fully and professionally in Zoom.
+- know how to access and navigate Training Kit
+- know how to access and navigate the Progress Report Dashboard.
+- know how to access and ask a question in Frontdesk.
+- know how to access and navigate Google Calendar.
+- identify the requirements of the ISA.
+- understand the I do, we do, you do structure of Lambda school curriculum and how it is valuable for learning.
+- understand the difference between traditional grading and outcomes based assessments.
+- articulate the academic expectations, attendance expectation and daily work routine of Lambda School classes.
 
 #### Pro Tip
 
@@ -58,45 +56,33 @@ Treat everyone with as much respect and integrity as you wish to be treated with
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=tLkEFZsVM8A), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=tLkEFZsVM8A), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=8rhPlaWUX20), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=8rhPlaWUX20), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=5cJZesnvLUA), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Ijq9ZyJeBN0), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=5cJZesnvLUA), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=yPzjB5e0ZoU), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Ijq9ZyJeBN0), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=CLtiWtUkwBI), or enable JavaScript if it is disabled in your browser.
 
--   
+- [What is Slack?](https://www.youtube.com/watch?v=9RJZMSsH7-g)
 
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=yPzjB5e0ZoU), or enable JavaScript if it is disabled in your browser.
-
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=CLtiWtUkwBI), or enable JavaScript if it is disabled in your browser.
-
--   [What is Slack?](https://www.youtube.com/watch?v=9RJZMSsH7-g)
-
-    A video that introduces the Slack platform
+  A video that introduces the Slack platform
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -108,19 +94,19 @@ Slack is an online communication tool used widely in the tech industry. For Lamb
 
 Slack is a collaboration hub where you will communicate with everyone at Lambda School. Slack is used because of the following benefits and features not provided by an email system;
 
--   Organized conversations
--   Searchable history
--   Apps and integrations Slack can be used in a browser, as a desktop app, and as a mobile app. It is vitally important that you are on Slack every school day at Lambda.
+- Organized conversations
+- Searchable history
+- Apps and integrations Slack can be used in a browser, as a desktop app, and as a mobile app. It is vitally important that you are on Slack every school day at Lambda.
 
 ### Slack at Lambda School
 
--   You will be placed in a Slack channel with the other students in your program. The instructor will interact with you in this Slack channel. They will post lecture links to their Zoom rooms, answer questions and post additional resources.
+- You will be placed in a Slack channel with the other students in your program. The instructor will interact with you in this Slack channel. They will post lecture links to their Zoom rooms, answer questions and post additional resources.
 
--   Once you’ve filled out your confirmation form, you will be added to the student Slack workspace and assigned to a few main channels depending on your class and group.
+- Once you’ve filled out your confirmation form, you will be added to the student Slack workspace and assigned to a few main channels depending on your class and group.
 
--   *Example: You are a new student joining the WEB18 class (Full Stack Web, Class 18), your main Slack channels will be #WEB18 and #WEB18\_help. You will be assigned to a smaller group with your Project Manager. For example, if your Project Manager is Alicia Jackson, that Slack channel might be named #WEB18\_aj.*
+- _Example: You are a new student joining the WEB18 class (Full Stack Web, Class 18), your main Slack channels will be #WEB18 and #WEB18_help. You will be assigned to a smaller group with your Project Manager. For example, if your Project Manager is Alicia Jackson, that Slack channel might be named #WEB18_aj._
 
--   Lambda School instructors and staff will generally have a Lambda shield to the right of their username.
+- Lambda School instructors and staff will generally have a Lambda shield to the right of their username.
 
 ### Tips for Using Slack
 
@@ -162,7 +148,7 @@ There are some special commands in Slack that are useful to Lambda School studen
 
 [Message and File Threads](https://get.slack.help/hc/en-us/articles/115000769927-Message-and-file-threads)
 
-------------------------------------------------------------------------
+---
 
 #### Learn to know how to access and participate fully and professionally in Zoom.
 
@@ -174,15 +160,15 @@ Download Zoom at <https://zoom.us/download>
 
 ### Tips for Being a Professional in a Zoom Meeting
 
--   If you are not speaking set your microphone to mute. But, be sure to toggle it on when it is your time to speak.
--   When your microphone is on be aware of distracting noises. If using an onboard microphone on a laptop using your keyboard will be very loud to other Zoom participants. Little things like cell phone buzzers, the noise of your microphone rubbing on your shirt collar or a squeaky office chair can be enough to distract your audience.
--   Shut out your most distracting housemates. If you have a child, a dog, a cat, a guinea pig, or any other animal that can get loud or “needy” at times, they’re probably going to want to be involved in your conversations as soon as they hear you talking to the cool people on the other side of the monitor. It’s best to just leave them out of the room while the meeting’s going on.
--   Be camera ready. If possible before the meeting have a look at yourself on webcam. You might notice that the webcam is pointed at your forehead, your lighting makes it difficult to see you or you have something distracting in your background. If your lighting is behind you, people will only see a silhouette. Make sure that any light coming towards your face is stronger than the light behind you. Wear a nice shirt. From your Mac or PC, just click “Settings” on your Zoom client, and then “Video” to see what you look like before you join the meeting.
--   There’s a lot to be said about video meeting etiquette regarding eating and drinking. If you’re grabbing a cup of tea or some bottled water, that’s acceptable, or at least more acceptable than slurping spaghetti during your meeting. Along the same lines, it is not professional to be smoking or vaping during a video meeting.
--   Before you share your screen, it would be wise to eliminate any possible occasion for distraction during the screen sharing session. This means closing social networks, messaging applications, and anything that pops up or flashes while you’re trying to present something.
--   Use a webcam and allow your classmates to see you on video. Video conferencing is more engaging and allows you to make virtual eye contact with your classmates, project managers and instructors. Humans process visual information far faster than text or audio, so it will also increase your ability to communicate and learn.
+- If you are not speaking set your microphone to mute. But, be sure to toggle it on when it is your time to speak.
+- When your microphone is on be aware of distracting noises. If using an onboard microphone on a laptop using your keyboard will be very loud to other Zoom participants. Little things like cell phone buzzers, the noise of your microphone rubbing on your shirt collar or a squeaky office chair can be enough to distract your audience.
+- Shut out your most distracting housemates. If you have a child, a dog, a cat, a guinea pig, or any other animal that can get loud or “needy” at times, they’re probably going to want to be involved in your conversations as soon as they hear you talking to the cool people on the other side of the monitor. It’s best to just leave them out of the room while the meeting’s going on.
+- Be camera ready. If possible before the meeting have a look at yourself on webcam. You might notice that the webcam is pointed at your forehead, your lighting makes it difficult to see you or you have something distracting in your background. If your lighting is behind you, people will only see a silhouette. Make sure that any light coming towards your face is stronger than the light behind you. Wear a nice shirt. From your Mac or PC, just click “Settings” on your Zoom client, and then “Video” to see what you look like before you join the meeting.
+- There’s a lot to be said about video meeting etiquette regarding eating and drinking. If you’re grabbing a cup of tea or some bottled water, that’s acceptable, or at least more acceptable than slurping spaghetti during your meeting. Along the same lines, it is not professional to be smoking or vaping during a video meeting.
+- Before you share your screen, it would be wise to eliminate any possible occasion for distraction during the screen sharing session. This means closing social networks, messaging applications, and anything that pops up or flashes while you’re trying to present something.
+- Use a webcam and allow your classmates to see you on video. Video conferencing is more engaging and allows you to make virtual eye contact with your classmates, project managers and instructors. Humans process visual information far faster than text or audio, so it will also increase your ability to communicate and learn.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to know how to access and navigate Training Kit
 
@@ -194,16 +180,16 @@ The Lambda School Training Kit is the home for all learning resources at Lambda 
 
 Each track is organized into sections with clearly outlined objectives. These objectives describe what you should be able to do after completing the lesson.
 
--   The *Prepare* section will provide videos, website resources and text that should be read before the lecture.
--   The *Learn* section is the content that will be covered in the lecture by your instructor and is also there as a resource when you are working on your projects.
--   The *Projects* section which is where you will find information about the projects you’ll be working on in the afternoon.
--   The *Review* Section that will detail the specific requirements to demonstrate mastery during your code review.
+- The _Prepare_ section will provide videos, website resources and text that should be read before the lecture.
+- The _Learn_ section is the content that will be covered in the lecture by your instructor and is also there as a resource when you are working on your projects.
+- The _Projects_ section which is where you will find information about the projects you’ll be working on in the afternoon.
+- The _Review_ Section that will detail the specific requirements to demonstrate mastery during your code review.
 
 There are navigation buttons across the top of the Training Kit that will allow you to jump to each of these sections. These lessons are generally covered in one day during a full time track and over two days in part time tracks.
 
 There are other resources included in Training Kit including Career Readiness and Principles for Success. Career Readiness focuses on preparing you to be employed in a professional position. Principles for Success focuses on the mindset and motivation needed to accomplish difficult tasks and grow as a professional.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to know how to access and navigate the Progress Report Dashboard.
 
@@ -219,7 +205,7 @@ The dashboard is where you as a student can find feedback from the team leader (
 
 This dashboard shows you the feedback from your TL on your sprint challenge. It also gives Lambda staff a clear picture of units where you may need extra support.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to know how to access and ask a question in Frontdesk.
 
@@ -231,7 +217,7 @@ Frontdesk is accessed through Slack by starting a direct message to yourself and
 
 Frontdesk in meant only for submitting feedback and support requests. If you have classwork related questions go ahead and contact your team lead or your class help channel. When asking a question try to give as much detail as possible. Remember to only reply to the threaded messages on your Ticket in the FrontDesk Slack App, that way you can refer to the answers given to you if you forget or have followup questions. Even if you are frustrated, be sure to be professional in all of your interactions with Lambda staff.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to know how to access and navigate Google Calendar.
 
@@ -249,7 +235,7 @@ Google Calendar is a free time-management and scheduling calendar service develo
 
 [Print Your Calendar](https://support.google.com/calendar/answer/41067?hl=en&ref_topic=3417921)
 
-------------------------------------------------------------------------
+---
 
 #### Learn to identify the requirements of the ISA.
 
@@ -259,7 +245,7 @@ The income share agreement allows Lambda School to provide an education that usu
 
 ### United States
 
-*Important Note: This page explains certain ISA features and terms, but it is not a substitute for and does not override any terms in the Income Share Agreement contract itself. You should read the contract carefully to understand its terms.*
+_Important Note: This page explains certain ISA features and terms, but it is not a substitute for and does not override any terms in the Income Share Agreement contract itself. You should read the contract carefully to understand its terms._
 
 Students can elect to pay tuition upfront. Or, instead of paying tuition upfront, many Lambda School Students choose to sign an Income Share Agreement (ISA). ISAs allow us to provide an education that usually costs tens of thousands of dollars upfront for no upfront cost.
 
@@ -277,10 +263,10 @@ As long as a Student is earning above the minimum income threshold (the $4,167),
 
 Your ISA payments are based on your income so your total cost can be between $0 and $30,000.
 
--   If your income never reaches the $4,167 monthly threshold, you will be in deferment. You have 60 months of deferment and if you do not have qualifying pay or position during that time you will end up paying $0 for your education.
--   Important note: there are cases where, because payments stopped and started due to deferment, the total 60 months of deferment could be more than 5 calendar years from the date the Student completes Lambda School.
--   If you’re making good money (congratulations!), you could pay up to the $30,000 cap.
--   You’ll never pay more than $30,000.
+- If your income never reaches the $4,167 monthly threshold, you will be in deferment. You have 60 months of deferment and if you do not have qualifying pay or position during that time you will end up paying $0 for your education.
+- Important note: there are cases where, because payments stopped and started due to deferment, the total 60 months of deferment could be more than 5 calendar years from the date the Student completes Lambda School.
+- If you’re making good money (congratulations!), you could pay up to the $30,000 cap.
+- You’ll never pay more than $30,000.
 
 Anything you pay is spread out over 24 separate monthly payments.
 
@@ -290,20 +276,20 @@ The 17% is a percentage of a Student’s gross income, i.e. before taxes.
 
 What types of jobs require that I pay on my ISA?
 
--   Positions in software, data science, full-stack web, iOS/Android development, cybersecurity, information technology, UX, and web and app development and design.
--   Any position that leverages your Lambda School education
--   Any position obtained due to Lambda School job placement efforts In general, expect to repay your ISA based on getting a position after attending Lambda School.
+- Positions in software, data science, full-stack web, iOS/Android development, cybersecurity, information technology, UX, and web and app development and design.
+- Any position that leverages your Lambda School education
+- Any position obtained due to Lambda School job placement efforts In general, expect to repay your ISA based on getting a position after attending Lambda School.
 
 ### Payment Refund Policy
 
-*refund policies may vary by state, please refer to your Enrollment Agreement*
+_refund policies may vary by state, please refer to your Enrollment Agreement_
 
 We offer a refund policy for people who leave Lambda School:
 
--   If you decide to withdraw in the first 4 sprints, your tuition or any installment payments will be returned in full. Your ISA will be canceled.
--   After completion of 4 sprints, you become responsible for 40% of the tuition.
--   Each week thereafter you become responsible for another 10% of the tuition
--   After 10 weeks, you are responsible for tuition in full.
+- If you decide to withdraw in the first 4 sprints, your tuition or any installment payments will be returned in full. Your ISA will be canceled.
+- After completion of 4 sprints, you become responsible for 40% of the tuition.
+- Each week thereafter you become responsible for another 10% of the tuition
+- After 10 weeks, you are responsible for tuition in full.
 
 If pro-ration occurs, its made on the ISA Cap, not the Income Share percentage. In other words, if you withdraw early and are 50% vested, you would still owe the 17% for 24 months, but the cap would be reduced to $15k from the original $30k.
 
@@ -353,10 +339,10 @@ You make 10% payments on your income every month until you’ve made 48 monthly 
 
 Your ISA payments are based on your income so your total cost can be between £0 and £25,000 or €27,500.
 
--   If your income never reaches the £2,000 or €2,291 monthly threshold, you’ll pay 0.
--   Your monthly payments will vary based as your income and may fluctuate over time.
--   If you’re making good money (congratulations!), you could pay up to the £25,000 or €27,500 cap.
--   You’ll never pay more than £25,000 or €27,500.
+- If your income never reaches the £2,000 or €2,291 monthly threshold, you’ll pay 0.
+- Your monthly payments will vary based as your income and may fluctuate over time.
+- If you’re making good money (congratulations!), you could pay up to the £25,000 or €27,500 cap.
+- You’ll never pay more than £25,000 or €27,500.
 
 Anything you pay is spread out over 48 separate monthly payments.
 
@@ -370,10 +356,10 @@ If your income is less than £2,000 or €2,291 a month, your account will be pl
 
 We offer a refund policy for people who leave Lambda School:
 
--   If you decide to withdraw in the first 4 sprints, your tuition or any installment payments will be returned in full. Your ISA will be cancelled.
--   After completion of 4 sprints, you become responsible for 40% of the tuition.
--   Each week thereafter you become responsible for another 10% of the tuition
--   After 10 weeks, you are responsible for tuition in full.
+- If you decide to withdraw in the first 4 sprints, your tuition or any installment payments will be returned in full. Your ISA will be cancelled.
+- After completion of 4 sprints, you become responsible for 40% of the tuition.
+- Each week thereafter you become responsible for another 10% of the tuition
+- After 10 weeks, you are responsible for tuition in full.
 
 Students who are removed from Lambda School due to violations of the Code of Conduct will have their income share agreements prorated as described above in our refund policy.
 
@@ -385,15 +371,15 @@ The ISA begins on your last day of school. But once you’ve made your required 
 
 ISA payments are collected the first full month after your graduation or withdrawal. Your first payment is due on the first business day of the following month.
 
--   On or before April 30th each year you will submit your tax return and year-end pay stub.
--   We will use this information to determine if you underpaid or overpaid on your monthly payments. If you overpaid, we will credit that towards future payments. If you underpaid, we will bill you for the amount owed.
--   Updating income changes throughout the year, when they occur, will help you avoid overpaying or underpaying.
+- On or before April 30th each year you will submit your tax return and year-end pay stub.
+- We will use this information to determine if you underpaid or overpaid on your monthly payments. If you overpaid, we will credit that towards future payments. If you underpaid, we will bill you for the amount owed.
+- Updating income changes throughout the year, when they occur, will help you avoid overpaying or underpaying.
 
 The ISA begins on your last day of school. The life of the ISA is 5 years, meaning we have 5 years to collect payment. But once you’ve made your required monthly payments, the ISA is complete.
 
 ISA payments are collected the first full month after your graduation or withdrawal. Your first payment is due on the first business day of the following month.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to understand the I do, we do, you do structure of Lambda school curriculum and how it is valuable for learning.
 
@@ -421,7 +407,7 @@ The whole Lambda program uses this same concept. The “I do” section is the c
 
 The IWY method is a tried and true teaching method and is especially useful when learning new difficult content. The way Lambda school uses it, it makes the most of precious direct instruction time. It is a very different model than is used by most online schools, where you spend a majority of time reading and taking content level tests and very little time doing real world projects, working as a team and receiving useful feedback.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to understand the difference between traditional grading and outcomes based assessments.
 
@@ -469,7 +455,7 @@ The articulated outcomes allow Lambda school to assess the student’s achieveme
 
 Student involvement in the classroom is a key part of outcomes based assessment. Students are expected to do their own learning, so that they gain a full understanding of the material. Increased student involvement allows students to feel responsible for their own learning, and they should learn more through this individual learning. Employer partners are asked to give input to Lambda School to uphold the standards of education and to ensure that students will be prepared for employment after school.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to articulate the academic expectations, attendance expectation and daily work routine of Lambda School classes.
 
@@ -538,35 +524,35 @@ Your team lead will meet with you 1:1 to go over your Sprint Challenge and asses
 
 #### Part Time
 
-*Part time Web tracks also have earlier starts every other cohort to accommodate students in other time zones, these times are denoted in parenthesis and italics in the schedules below*
+_Part time Web tracks also have earlier starts every other cohort to accommodate students in other time zones, these times are denoted in parenthesis and italics in the schedules below_
 
 Part time students cover all the same material as full time students but it is spread out over two weeks. For that reason, part time has “A” weeks and “B” weeks. Part time also has a choice of days for their 5th day to better meet their schedule.
 
-*“A” Week;*
+_“A” Week;_
 
-Monday, 6 pm to 9 pm PT (*4 pm - 7 pm PT*) 1:1 Review and Training Kit Prep.  
+Monday, 6 pm to 9 pm PT (_4 pm - 7 pm PT_) 1:1 Review and Training Kit Prep.  
 You will review the Sprint Challenge the Monday after it was due. This is also the time to look over the week’s material ahead in the training kit and prepare.
 
-Tuesday and Thursdays, 6 pm to 6:30 pm PT (*4 pm - 4:30 pm PT*)Training Kit Review. This is the daily time to look at the pre-work in the training material and prepare for the guided project.
+Tuesday and Thursdays, 6 pm to 6:30 pm PT (_4 pm - 4:30 pm PT_)Training Kit Review. This is the daily time to look at the pre-work in the training material and prepare for the guided project.
 
-Tuesday and Thursdays, 6:30 pm to 8:30 pm PT(*4:30 pm - 6:30 pm PT*) Guided Project. For your guided project you will follow a link to Zoom and meet your instructor in a live session. For two hours your instructor will take you step by step through a project. You will be able to see their computer screen and exactly what code they are typing in. You’ll be able to interact through chat or microphone with your instructor. This is the “I do and We do” part of the curriculum.
+Tuesday and Thursdays, 6:30 pm to 8:30 pm PT(_4:30 pm - 6:30 pm PT_) Guided Project. For your guided project you will follow a link to Zoom and meet your instructor in a live session. For two hours your instructor will take you step by step through a project. You will be able to see their computer screen and exactly what code they are typing in. You’ll be able to interact through chat or microphone with your instructor. This is the “I do and We do” part of the curriculum.
 
-Tuesday and Thursdays, 8:30 pm to 9 pm PT (*6:30 pm - 7 pm PT*) Project Time. Enough time to get started on the project by reading the requirements and getting the coding started. Don’t worry, you have most of the evening tomorrow to finish it.
+Tuesday and Thursdays, 8:30 pm to 9 pm PT (_6:30 pm - 7 pm PT_) Project Time. Enough time to get started on the project by reading the requirements and getting the coding started. Don’t worry, you have most of the evening tomorrow to finish it.
 
-Wednesdays 6 pm - 8:30 pm PT (*4 pm - 6:30 pm PT*) Guided Project Now it’s time to work on the project for the evening. Write the code, learn more, troubleshoot the code, research answers, ask for help, and finish writing the code.
+Wednesdays 6 pm - 8:30 pm PT (_4 pm - 6:30 pm PT_) Guided Project Now it’s time to work on the project for the evening. Write the code, learn more, troubleshoot the code, research answers, ask for help, and finish writing the code.
 
 Stand Up Meeting It has been a long productive evening and now its time to touch base with your team lead and your small group. You will get feedback on your project, get questions answered and know that you are not alone in your educational journey.
 
-Flexible Day 6 pm - 8:30 pm (*4:00 pm - 6:30 pm*) Guided Project  
-Flexible Day 8:30 pm - 9 pm (*6:30 pm - 7:00 pm*) Stand Up Meeting
+Flexible Day 6 pm - 8:30 pm (_4:00 pm - 6:30 pm_) Guided Project  
+Flexible Day 8:30 pm - 9 pm (_6:30 pm - 7:00 pm_) Stand Up Meeting
 
-*“B” Week;*
+_“B” Week;_
 
 Same as an “A” week except for two exceptions-
 
-Monday 6 pm - 6:30 pm(*4:00 pm - 4:30 pm*) Training Kit Review (don’t need to do a Sprint 1:1)
+Monday 6 pm - 6:30 pm(_4:00 pm - 4:30 pm_) Training Kit Review (don’t need to do a Sprint 1:1)
 
-Flex Day 6 pm - 9 pm(*4 pm - 7 pm*) Sprint Challenge Now it is time to take everything you have learned in the past two weeks and put it into action. This is a little bit longer project with a wider scope. You have all evening to code.
+Flex Day 6 pm - 9 pm(_4 pm - 7 pm_) Sprint Challenge Now it is time to take everything you have learned in the past two weeks and put it into action. This is a little bit longer project with a wider scope. You have all evening to code.
 
 ### Curriculum Structure
 
@@ -610,9 +596,9 @@ You will meet with your assigned Team Lead daily for 10 minutes. Besides providi
 
 Following the completion of your sprint challenge, you will meet with your Team Lead to discuss your performance. The Team Lead will submit a review of your Sprint Challenge as well as verification of performance in the following areas;
 
--   Technical skills
--   Teamwork/Collaboration skills
--   Career Readiness
+- Technical skills
+- Teamwork/Collaboration skills
+- Career Readiness
 
 Students who are unable to meet the objectives on any of the evaluation points above will be required to attend Support Hours for that sprint.
 
@@ -648,8 +634,8 @@ Your project sometimes needs extra time to be at the level expected. Assessment 
 
 To receive a badge and move into Lambda X, students will have to pass a final assessment. The exact process includes more details, but here are a few highlights:
 
--   Summative formal technical assessment
--   Rigorous technical Interview
+- Summative formal technical assessment
+- Rigorous technical Interview
 
 #### Lambda Endorsement
 
@@ -657,13 +643,13 @@ An endorsement is synonymous with graduation at Lambda School. There are many ch
 
 There are technical, career and teamwork expectations to meet endorsement requirements.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [LL Module 1 Project](https://docs.google.com/document/d/1lgofGEo1u4pz9hhm2ToWPov3WHhph6fPmRB0a4tAIqA/edit?usp=sharing)
+- ##### [LL Module 1 Project](https://docs.google.com/document/d/1lgofGEo1u4pz9hhm2ToWPov3WHhph6fPmRB0a4tAIqA/edit?usp=sharing)
 
-    These tasks are to be completed during the project time for your track. For full time these tasks will be completed in the afternoons after the lunch break. For part time these tasks are completed every other day, on the opposite days of the guided project instruction.
+  These tasks are to be completed during the project time for your track. For full time these tasks will be completed in the afternoons after the lunch break. For part time these tasks are completed every other day, on the opposite days of the guided project instruction.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -671,14 +657,14 @@ There are technical, career and teamwork expectations to meet endorsement requir
 
 You can use class recordings to help you master the material.
 
--   **[Learning at Lambda for LS200803FT w/James Pacheco](https://youtu.be/zYXbNHay6tI)**
+- **[Learning at Lambda for LS200803FT w/James Pacheco](https://youtu.be/zYXbNHay6tI)**
 
-    An overview of Lambda School’s tools, Student Journey, Learning Environment, and Daily Workflow.
+  An overview of Lambda School’s tools, Student Journey, Learning Environment, and Daily Workflow.
 
--   [All previous recordings](/archive/LL/module/recBC1BCvLsTSiaLS)
+- [All previous recordings](/archive/LL/module/recBC1BCvLsTSiaLS)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Project: LL Module 1 Project
+- Project: LL Module 1 Project

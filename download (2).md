@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,9 +10,9 @@
 
 <a href="/ll/sprint/recQf3zxkHFPeRABL" class="bd-toc-link">1.  Lambda Orientation</a>
 
--   [Learning at Lambda](/ll/module/recBC1BCvLsTSiaLS/)
--   [Labs and Beyond](/ll/module/recnBWTWXqXWjWCUd/)
--   [Values and Support](/ll/module/rec7Vyq18G1tytzyk/)
+- [Learning at Lambda](/ll/module/recBC1BCvLsTSiaLS/)
+- [Labs and Beyond](/ll/module/recnBWTWXqXWjWCUd/)
+- [Values and Support](/ll/module/rec7Vyq18G1tytzyk/)
 
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjM1IiB2aWV3Ym94PSIwIDAgNzU2IDE5NyIgZmlsbD0iI2VjMzk0NCI+PGc+PHBhdGggZD0iTTI5Mi45LDEyNi42aC02LjdjLTksMC0xMi42LTEuOS0xMi42LTkuNVY0OC41YzAtNy43LDEuNi04LjYsMTEuNC05Ljd2LTQuNWgtNDEuM3Y0LjUgYzkuOCwxLjEsMTEuNCwxLjksMTEuNCw5Ljd2NjkuM2MwLDcuNy0xLjYsOC42LTExLjQsOS43djQuNWg3My43bDQuOS0yOS40aC00LjRDMzA4LjUsMTE5LjYsMzAzLjksMTI2LjYsMjkyLjksMTI2LjZ6Ij48L3BhdGg+PHBhdGggZD0iTTM4NS41LDEyMS4xVjc5LjNjMC0xNS44LTkuNC0yMi40LTI2LjYtMjIuNGMtMTUsMC0yNi44LDYuNi0yNi44LDE5LjNjMCwyLjQsMC4yLDMuMywwLjgsNWgxNi42IGMtMC41LTItMC43LTUtMC43LTcuNWMwLTkuNiwzLjYtMTIuNCw5LjQtMTIuNGM2LjQsMCw5LjcsMiw5LjcsMTQuNHYxMS4ybC0yMC44LDcuN2MtMTAuNiw0LjEtMTkuMyw4LjgtMTkuMywyMC43IGMwLDEwLjksNy41LDE3LjgsMTguNiwxNy44YzkuOSwwLDE3LjQtNi4yLDIxLjktMTIuMWwwLjEtMC4xbDAsMFYxMzJoMjZ2LTQuNEMzODcuNywxMjcuMSwzODUuNSwxMjYuMiwzODUuNSwxMjEuMXogTTM2OCwxMTcuOCBjLTQuNCwzLjMtNy42LDUuMy0xMiw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNFYxMTcuOEwzNjgsMTE3Ljh6Ij48L3BhdGg+PHBhdGggZD0iTTUxNC40LDEyMVY3OS41YzAtMTQuOC02LTIyLjQtMTguNy0yMi40Yy0xMS41LDAtMTkuNCw2LjYtMjUuNSwxMy45Yy0xLjgtOS42LTcuNy0xMy45LTE3LjgtMTMuOSBjLTExLjQsMC0xOC43LDYuMi0yNC44LDEzLjZWNTdoLTIuM2wtMjMuOCw3LjR2Mi40bDguNiw1djQ5LjRjMCw1LTIuMSw2LjEtOC45LDYuNHY0LjRoMzUuMXYtNC40Yy02LjctMC4zLTguNy0xLjMtOC43LTYuNHYtNDcgYzQuNy0zLjYsOS41LTYuNSwxNS41LTYuNWM3LjYsMCwxMC41LDQuMiwxMC41LDEyLjd2NDAuOGMwLDUtMS45LDYuMS04LjcsNi40djQuNGwzNC44LDB2LTQuNGMtNi43LTAuMy04LjYtMS4zLTguNi02LjR2LTQ3IGM0LjctMy42LDkuNS02LjUsMTUuNS02LjVjNy42LDAsMTAuNSw0LjIsMTAuNSwxMi43bC0wLjEsNDAuNWMwLDUtMS44LDYuNC04LjYsNi43bDAsNC40aDM1LjF2LTQuNCBDNTE2LjcsMTI3LjQsNTE0LjQsMTI2LjEsNTE0LjQsMTIxeiI+PC9wYXRoPjxwYXRoIGQ9Ik01NzMuMiw1Ny4zYy0xMSwwLTE4LjUsNS43LTIzLjQsMTIuOFYyMi45aC0yLjdsLTIzLjQsNi44djIuNWw4LjYsNC41VjEzMmgyLjlsOC0zLjVjNS44LDMuMywxMi4zLDUsMjAuMiw1IGMyMC44LDAsMzcuNC0xNS44LDM3LjQtNDIuNkM2MDAuOSw2OS45LDU5MC40LDU3LjMsNTczLjIsNTcuM3ogTTU2My40LDEyOC43Yy01LjQsMC0xMC4zLTIuNC0xMy43LTcuOVY3My42IGMzLjQtMy40LDguNS01LjcsMTMuNS01LjdjMTMuOSwwLDIwLDEyLjgsMjAsMjkuNUM1ODMuMywxMTQuNyw1NzUuOCwxMjguNSw1NjMuNCwxMjguN3oiPjwvcGF0aD48cGF0aCBkPSJNNjc3LDEyMS4yVjIyLjhoLTIuNkw2NTEsMjkuNlYzMmw4LjYsNC41djI1LjdjLTMuNC0zLjItOC44LTUuMS0xNS41LTUuMWMtMTkuOSwwLTM1LjIsMTUuMy0zNS4yLDQxLjMgYzAsMjAuNywxMS4yLDM0LjYsMjguMSwzNC42YzkuOCwwLDE3LTUuMywyMi42LTEzLjF2MC45VjEzMmgyNi4zbDAtNC40QzY3OS4xLDEyNy4zLDY3NywxMjYuMyw2NzcsMTIxLjJ6IE02NTkuNiwxMTcuMSBMNjU5LjYsMTE3LjFjLTMuNCwzLjQtOCw1LjEtMTMuMiw1LjFjLTEzLjIsMC0yMC40LTEyLjgtMjAuNC0yOS44YzAtMTcuOCw3LjMtMjkuMiwxOS41LTI5LjJjOC43LDAsMTQuMSw2LjksMTQuMSwxOC4zIEw2NTkuNiwxMTcuMXoiPjwvcGF0aD48cGF0aCBkPSJNNzQ3LjEsMTIxLjFWNzkuM2MwLTE1LjgtOS40LTIyLjQtMjYuNi0yMi40Yy0xNSwwLTI2LjgsNi42LTI2LjgsMTkuM2MwLDIuNCwwLjIsMy4zLDAuOCw1aDE2LjYgYy0wLjUtMi0wLjctNS0wLjctNy41YzAtOS42LDMuNi0xMi40LDkuNC0xMi40YzYuNCwwLDkuNywyLDkuNywxNC40djExLjJsLTIwLjgsNy43Yy0xMC42LDQuMS0xOS4zLDguOC0xOS4zLDIwLjcgYzAsMTAuOSw3LjUsMTcuOCwxOC42LDE3LjhjOS45LDAsMTcuNC02LjIsMjEuOS0xMi4xdi0wLjFoMC4xbDAsMTEuMWwyNiwwLjF2LTQuNUM3NDkuMywxMjcuMSw3NDcuMSwxMjYuMiw3NDcuMSwxMjEuMXogTTcyOS42LDExNy44Yy00LjQsMy4zLTcuNiw1LjMtMTIuMSw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNEw3MjkuNiwxMTcuOEw3MjkuNiwxMTcuOHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTAsMHY5MC40YzAsNjUuNyw1MC45LDg4LjUsODguMSwxMDUuMmgwLjFsMywxLjRjMC43LTAuNCwxLjQtMC43LDIuMi0xYzAuNC0wLjIsMC45LTAuNCwxLjMtMC42IGMzNy4zLTE2LjYsODguNC0zOS41LDg4LjQtMTA1VjBIMHogTTExNiwxMzJsLTItNS4zbC0yNi42LTcwYy0xLjYsNC4xLTUuMywxNC05LjMsMjQuNmwtMTUuMyw0MS4zYy0wLjcsMi0wLjMsMywwLjIsMy43IGMxLjEsMS4zLDMuNSwxLjMsNy4zLDEuM0g3MWwwLDQuNEg0Mi40bDAtNC40aDIuMmMzLjksMCw3LjEtMS43LDkuNS02LjVsMi45LTYuNmwyNi41LTY3LjhsLTQuNy0xMi41aDI0LjdsMzQuMSw4OS43bDMuMSw4LjFIMTE2eiI+PC9wYXRoPjwvc3ZnPg==" /></a>
 
@@ -22,14 +20,14 @@
 
 <a href="/ll/sprint/recQf3zxkHFPeRABL" class="bd-toc-link">1.  Lambda Orientation</a>
 
--   [Learning at Lambda](/ll/module/recBC1BCvLsTSiaLS/)
--   [Labs and Beyond](/ll/module/recnBWTWXqXWjWCUd/)
--   [Values and Support](/ll/module/rec7Vyq18G1tytzyk/)
+- [Learning at Lambda](/ll/module/recBC1BCvLsTSiaLS/)
+- [Labs and Beyond](/ll/module/recnBWTWXqXWjWCUd/)
+- [Values and Support](/ll/module/rec7Vyq18G1tytzyk/)
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Values and Support
 
@@ -39,14 +37,14 @@ Lambda Launch material is now updated and available in Canvas. As of August, all
 
 **At the end of this module, you should be able to:**
 
--   identify school mission, vision and values.
--   integrate with the school culture and understand the code of conduct expectations.
--   clearly articulate why they have chosen to attend Lambda School.
--   know who to ask for help and how to ask for help at Lambda School
--   identify what a growth mindset means and how it applies to everyday life at Lambda School.
--   identify the school services available to support their educational and personal goals and how to access them.
--   develop a spirit of independent learning through self-direction, self-reflection, and advocacy.
--   see themselves as a professional employee and understand the necessity to develop the social and academic skills needed for a professional employee.
+- identify school mission, vision and values.
+- integrate with the school culture and understand the code of conduct expectations.
+- clearly articulate why they have chosen to attend Lambda School.
+- know who to ask for help and how to ask for help at Lambda School
+- identify what a growth mindset means and how it applies to everyday life at Lambda School.
+- identify the school services available to support their educational and personal goals and how to access them.
+- develop a spirit of independent learning through self-direction, self-reflection, and advocacy.
+- see themselves as a professional employee and understand the necessity to develop the social and academic skills needed for a professional employee.
 
 #### Pro Tip
 
@@ -58,17 +56,13 @@ Bruce Lee
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=BRH_l1c-NAE), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=BRH_l1c-NAE), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=doavKvzkpkM), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=doavKvzkpkM), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -90,7 +84,7 @@ This set of values means that operations at Lambda School will be different from
 
 [Blog Post about Feedback from Austen Allred, CEO of Lambda School](https://lambdaschool.com/blog/your-feedback-and-making-lambda-school-better)
 
-------------------------------------------------------------------------
+---
 
 #### Learn to integrate with the school culture and understand the code of conduct expectations.
 
@@ -116,7 +110,7 @@ Violations of the Code of Conduct may result in deferral or removal from the pro
 
 If you think there is something that is preventing you from being successful, communicate with your instructors and Project Manager.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to clearly articulate why they have chosen to attend Lambda School.
 
@@ -136,11 +130,11 @@ Your first answer that may come to mind when asked “What’s Your Why?” it m
 
 What part of a better job is the most crucial to you?
 
--   Will the increased salary help with your financial security and allow you to provide for yourself and the ones you love?
--   Will the professional work schedule and flexibility allow you to spend more time doing what you enjoy?
--   Do you just feel that you have more intellect to offer an employer and aren’t fulfilled in your current job?
--   Do you want to be surrounded by other people that are successful and doing what they love?
--   Do you want to set a good example for friends and family that you can positively change your situation?
+- Will the increased salary help with your financial security and allow you to provide for yourself and the ones you love?
+- Will the professional work schedule and flexibility allow you to spend more time doing what you enjoy?
+- Do you just feel that you have more intellect to offer an employer and aren’t fulfilled in your current job?
+- Do you want to be surrounded by other people that are successful and doing what they love?
+- Do you want to set a good example for friends and family that you can positively change your situation?
 
 These are just some examples and your “why” might not be any of these things. But, hopefully, it gives you some inspiration for discovering your personal “why”.
 
@@ -160,7 +154,7 @@ It can be easy to lose sight of why you are working so hard when you have a bad 
 
 Employers want to know that you are passionate about your work. If you can clearly explain your why and how their job is everything you’ve been working towards it will make you stand out. If the problems your employer is solving in the world match with your purpose that is a powerful thing.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to know who to ask for help and how to ask for help at Lambda School
 
@@ -182,7 +176,7 @@ Lambda School is focused on your success and all of our processes are geared tow
 
 4.  Ask the question- We have a guideline of a 20 minute rule. Work on your problem for 20 minutes by clearly defining it, figuring out the desired outcome and brainstorming solutions. If your problem is not solved in these steps then it is time to reach out for assistance. Instead of a generic “I can’t do this, I don’t even know where to start” you should have a “In the last section of this piece of code I don’t understand this particular part and would like assistance finding this particular resource”. This makes your question easier to answer for instructors, team leaders, and staff. It also shows that you took the time to try to think critically and problem solve before asking. No one wants you to be stuck, frustrated and contemplating quitting. But, we do want you to learn how to learn and be resilient when things get hard.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to identify what a growth mindset means and how it applies to everyday life at Lambda School.
 
@@ -202,13 +196,13 @@ We are all on a continuum of fixed and growth mindsets. Those with a growth mind
 
 It can be useful to know what your fixed mindset triggers may look like.
 
--   When faced with a challenge do you feel overly anxious or does a voice in your head warn you away? The human brain enjoys cognitive ease and equates it it to safety and familiarity.
--   Do you feel incompetent or defeated when you don’t succeed at a challenge on the first try? You may look for an excuse, such as not enough time or poor instruction to explain away your failure.
--   Does critical feedback make you feel defensive, angry or crushed?
+- When faced with a challenge do you feel overly anxious or does a voice in your head warn you away? The human brain enjoys cognitive ease and equates it it to safety and familiarity.
+- Do you feel incompetent or defeated when you don’t succeed at a challenge on the first try? You may look for an excuse, such as not enough time or poor instruction to explain away your failure.
+- Does critical feedback make you feel defensive, angry or crushed?
 
 It is best to accept these thoughts and feelings and then work through them with a growth mindset. Notice, we didn’t say you shouldn’t feel this way, that is just human nature, what matters is that you work through them and continue to learn and grow. The point isn’t to get it all right away. The point is to grow your understanding step by step.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to identify the school services available to support their educational and personal goals and how to access them.
 
@@ -230,9 +224,9 @@ In a typical Lambda school day you will have a two hour guided project with the 
 
 Targeted Support hours are designed for students who were unable to meet the objectives in the following three areas:
 
--   Technical
--   Teamwork/Collaboration
--   Career Readiness
+- Technical
+- Teamwork/Collaboration
+- Career Readiness
 
 During the various assessment points in the program, your Team Lead will show if you need more time and support with any of the objectives covered. As a student, you will be able to select the support hour schedule that works best for you.
 
@@ -240,12 +234,12 @@ During the various assessment points in the program, your Team Lead will show if
 
 The following scenarios would indicate that you need to attend targeted support hours;
 
--   In a self-assessment you feel like you didn’t grasp the material. You can state to your TL that you would like targeted support hours.
--   If you have difficulty in explaining parts/most of the module objectives during your daily 1:1 review.
--   You earn a 1-star rating on a sprint challenge performance.
--   You experience or your TL notices collaboration concerns when working with a team.
--   If you are making insufficient progress with Career and Professional Development content and assignments.
--   If you miss a guided project or daily module assignment
+- In a self-assessment you feel like you didn’t grasp the material. You can state to your TL that you would like targeted support hours.
+- If you have difficulty in explaining parts/most of the module objectives during your daily 1:1 review.
+- You earn a 1-star rating on a sprint challenge performance.
+- You experience or your TL notices collaboration concerns when working with a team.
+- If you are making insufficient progress with Career and Professional Development content and assignments.
+- If you miss a guided project or daily module assignment
 
 #### Types of Targeted Support Hours
 
@@ -253,8 +247,8 @@ The following scenarios would indicate that you need to attend targeted support 
 
 TL Hours are provided to students who need more technical support. TL Hours will be before and after regular scheduled school hours and over the weekends to provide extra support for the students who are struggling with the technical blockers. Students will meet with a TL to cover areas of concern when:
 
--   Module Assessment - Following your daily 1:1, your TL will state if more time is needed. If so, you will be required to attend two hours of the TL Support Hours within two days
--   Sprint Assessment - If your performance on the sprint challenge is rated at a 1, you will be required to attend four hours (FT) or three hours (PT) of TL Support Hours. Your TL will indicate which objectives were missed and you will receive help in mastering those in the following sprint as you move forward with the next sprint’s content.
+- Module Assessment - Following your daily 1:1, your TL will state if more time is needed. If so, you will be required to attend two hours of the TL Support Hours within two days
+- Sprint Assessment - If your performance on the sprint challenge is rated at a 1, you will be required to attend four hours (FT) or three hours (PT) of TL Support Hours. Your TL will indicate which objectives were missed and you will receive help in mastering those in the following sprint as you move forward with the next sprint’s content.
 
 **Full Time**
 
@@ -304,9 +298,9 @@ CC Hours are provided to students in need of extra support with Career and Profe
 
 Every student that enters Lambda School is part of the flex program. Flex enables every student to learn at a pace that allows them to master all the material we teach. Students are able to repeat material when more time is needed to demonstrate mastery in the following areas;
 
--   Team collaboration skills focus
--   Career readiness focus
--   Modular and Unit level focus
+- Team collaboration skills focus
+- Career readiness focus
+- Modular and Unit level focus
 
 Students flex on a unit basis. One failed sprint challenge will not require Flex, just support hours. Two failed sprint challenges in a unit will make a student qualified to flex to the previous unit.
 
@@ -314,10 +308,10 @@ Students flex on a unit basis. One failed sprint challenge will not require Flex
 
 If you need non-instructional support you can reach the student success team on Frontdesk in the Slack system. Example of issues that could be handled through Frontdesk;
 
--   Non-coursework inquiries
--   Verification Letters or Admissions Letters Requests
--   Feedback
--   Need to talk to Student Success
+- Non-coursework inquiries
+- Verification Letters or Admissions Letters Requests
+- Feedback
+- Need to talk to Student Success
 
 When you submit a /frontdesk ticket, all responses will come back to your student email.
 
@@ -331,14 +325,14 @@ Mental health issues can and will affect everyone - students and staff alike. It
 
 ### Modern Health Areas of Support
 
--   Work Performance: Productivity, Leadership Skills, Work Relationships, Professional Development
--   Relationships: Romantic Relationships & Dating, Family, Friends, Breakups
--   Stress & Anxiety: Anxiety, Depression, Stress, Resilience
--   Healthy Lifestyles: Sleep, Physical Activity, Eating Well, Habits
--   Financial Well-being: Goals, Budgeting Savings and Debt, Management, Investing
--   Diversity & Inclusion: Gender, Equality, Unconscious Bias, LGBTQIA+
--   Life Challenges: Pregnancy/Parenting, Elder/Child Care, Loss of a Loved One, Illness
--   Mindfulness & Meditation: Stress, Sleep, Focus, Meditation
+- Work Performance: Productivity, Leadership Skills, Work Relationships, Professional Development
+- Relationships: Romantic Relationships & Dating, Family, Friends, Breakups
+- Stress & Anxiety: Anxiety, Depression, Stress, Resilience
+- Healthy Lifestyles: Sleep, Physical Activity, Eating Well, Habits
+- Financial Well-being: Goals, Budgeting Savings and Debt, Management, Investing
+- Diversity & Inclusion: Gender, Equality, Unconscious Bias, LGBTQIA+
+- Life Challenges: Pregnancy/Parenting, Elder/Child Care, Loss of a Loved One, Illness
+- Mindfulness & Meditation: Stress, Sleep, Focus, Meditation
 
 ### How to Access Modern Health
 
@@ -380,7 +374,7 @@ Esteem for oneself and respect from others is another part of our psychological 
 
 If all of your other needs are met, then you can truly focus on self-fulfillment. Going to Lambda school to become a programmer, designer or data scientist is all about improving yourself and having a better life. There will be great satisfaction in achieving this goal. It will lead you to want to achieve other personal and professional goals. It is worth the time to make sure all of your psychological and physiological needs are met so you concentrate on achieving your goal.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to develop a spirit of independent learning through self-direction, self-reflection, and advocacy.
 
@@ -415,15 +409,15 @@ At this point this list may not reflect what type of learner you see yourself as
 
 #### Million Dollar Moment
 
-It’s extremely common for students to ask us to change the curriculum, loosen the requirements, switch to another class, or *anything* to make what they’re learning a little easier. Most of the time that’s not the solution; **what you actually need are more reps**.
+It’s extremely common for students to ask us to change the curriculum, loosen the requirements, switch to another class, or _anything_ to make what they’re learning a little easier. Most of the time that’s not the solution; **what you actually need are more reps**.
 
 A natural reaction to frustration is finding something external to blame. If you find yourself struggling with a concept or assignment and you think the requirements are too tough or the curriculum isn’t teaching you the things you need to be a successful programmer, nine times out of ten the best solution is to keep on keeping on and power through.
 
-We call this the “*million dollar moment*,” because what you decide to do in this situation can easily swing your future net worth millions of dollars one way or the other. This is the time to put up your dukes and fight harder than you’ve ever fought before, *not* to give up and force your circumstances to change.
+We call this the “_million dollar moment_,” because what you decide to do in this situation can easily swing your future net worth millions of dollars one way or the other. This is the time to put up your dukes and fight harder than you’ve ever fought before, _not_ to give up and force your circumstances to change.
 
-It’s normal to have several “*million dollar moments*” during the course of Lambda School. You’re not stupid, you’re not behind, and you shouldn’t be discouraged because you don’t see the other students having these moments. At some point in the course, every student will encounter their own “*million dollar moment*,” you just might not be aware of their struggle.
+It’s normal to have several “_million dollar moments_” during the course of Lambda School. You’re not stupid, you’re not behind, and you shouldn’t be discouraged because you don’t see the other students having these moments. At some point in the course, every student will encounter their own “_million dollar moment_,” you just might not be aware of their struggle.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to see themselves as a professional employee and understand the necessity to develop the social and academic skills needed for a professional employee.
 
@@ -443,12 +437,12 @@ Online communication methods prevent you from expressing meaning through facial 
 
 If this was a physical school then how you dress and hygiene habits would be a larger part of your professional image. Instead, in an online school, your image is based on what you post online. Here are some tips for maintaining a professional image:
 
--   Post a nice professional looking picture in the profiles of your accounts
--   Don’t over share personal information
--   Don’t use curse words
--   Don’t use poor grammar
--   Keep personal biases and prejudice out of conversation (sex, religion and politics are topics to avoid in a professional environment)
--   Don’t spread gossip or tease others
+- Post a nice professional looking picture in the profiles of your accounts
+- Don’t over share personal information
+- Don’t use curse words
+- Don’t use poor grammar
+- Keep personal biases and prejudice out of conversation (sex, religion and politics are topics to avoid in a professional environment)
+- Don’t spread gossip or tease others
 
 Working in small groups in Slack will seem like an intimate environment with close friends. But, remember everything you post is a screen shot away from ending up on the front page of social media. On the other hand, things you share on social media, may be seen by your fellow students at Lambda School and future employers. Before posting anything always think about how it may affect your professional image.
 
@@ -462,13 +456,13 @@ A professional is on-time for meetings and appointments. You should set alarms a
 
 Volunteer to take on responsibility. If your natural tendency is to take on ALL the responsibility then share responsibility and trust that others will follow through. A leader wants what is best for their team and appreciates new ideas, differing opinions and constructive feedback. A leader will go beyond the minimum requirements and deliver extra value. You should take care of the people you are working with and makes sure roadblocks are removed so they can successfully complete their work too. A leader takes risks and demonstrates they are a problem solver by agreeing to take on difficult tasks.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [LL Module 3 Project](https://docs.google.com/document/d/144Sa_GMUwJIWThB1HYOc1y4ne7NoIW6Qkxr6YUQ5dio/edit?usp=sharing)
+- ##### [LL Module 3 Project](https://docs.google.com/document/d/144Sa_GMUwJIWThB1HYOc1y4ne7NoIW6Qkxr6YUQ5dio/edit?usp=sharing)
 
-    These tasks are to be completed during the project time for your track. For full time these tasks will be completed in the afternoons after lunch. For part time these tasks are completed every other day, on the opposite days of the guided project instruction.
+  These tasks are to be completed during the project time for your track. For full time these tasks will be completed in the afternoons after lunch. For part time these tasks are completed every other day, on the opposite days of the guided project instruction.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -476,14 +470,14 @@ Volunteer to take on responsibility. If your natural tendency is to take on ALL 
 
 You can use class recordings to help you master the material.
 
--   **[Values and Support for LS200803FT w/James Pacheco](https://youtu.be/JsZODx_XTAw)**
+- **[Values and Support for LS200803FT w/James Pacheco](https://youtu.be/JsZODx_XTAw)**
 
-    An overview of Lambda School values, how we support you, and how to be successful.
+  An overview of Lambda School values, how we support you, and how to be successful.
 
--   [All previous recordings](/archive/LL/module/rec7Vyq18G1tytzyk)
+- [All previous recordings](/archive/LL/module/rec7Vyq18G1tytzyk)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Project: LL Module 3 Project
+- Project: LL Module 3 Project

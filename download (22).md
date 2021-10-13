@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Component Side Effects
 
@@ -73,10 +71,10 @@ Side effects in web apps are very common. It’s important to understand what si
 
 **At the end of this module, you should be able to:**
 
--   explain what side effects are in React components
--   demonstrate how to sync side effects with state and props using the effect hook
--   fetch data from an API using the effect hook
--   demonstrate how to clean up side effects in the effect hook
+- explain what side effects are in React components
+- demonstrate how to sync side effects with state and props using the effect hook
+- fetch data from an API using the effect hook
+- demonstrate how to clean up side effects in the effect hook
 
 #### Pro Tip
 
@@ -84,29 +82,21 @@ Side effects in web apps are very common. It’s important to understand what si
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=M5yZxpyub48), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=M5yZxpyub48), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=7oCm8Ih-ZCA), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=7oCm8Ih-ZCA), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=jMa1nnILdNM), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=jMa1nnILdNM), or enable JavaScript if it is disabled in your browser.
-
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=rCtq5zvWI0Y), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=rCtq5zvWI0Y), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -155,7 +145,7 @@ Here are some basic examples of other common side effects we might see in React 
       console.log("The component has mounted.");
     }, []);
 
-------------------------------------------------------------------------
+---
 
 #### Learn to demonstrate how to sync side effects with state and props using the effect hook
 
@@ -211,7 +201,7 @@ Using a dependency array as the second argument in the effect hook, we can tell 
     useEffect(fn, []); // no state or props
     useEffect(fn, [these, states, props]);
 
-------------------------------------------------------------------------
+---
 
 #### Learn to fetch data from an API using the effect hook
 
@@ -420,11 +410,11 @@ Finally, we will add the fetch logic.
 
 See the final sandbox [here](https://codesandbox.io/s/xenodochial-field-h4rfd).
 
-------------------------------------------------------------------------
+---
 
 #### Learn to demonstrate how to clean up side effects in the effect hook
 
-Network requests, manual DOM manipulations, and logging are some examples of effects that do not require cleanup. In other words, these effects can run and will not cause problems if the component mounts, unmounts, and remounts again. Other effects, however, will continue to execute, even if the component unmounts. Imagine that you write an effect function for a component that doesn’t get cleaned up, then your user navigates back and forth to the component ten times. You now have 10 effect functions all running the same effect over and over again. You’ve increased the power and memory needed to run that function 10x’s! Ahhh! That does not sound good, right? It’s not! This is what we call a *memory leak*.
+Network requests, manual DOM manipulations, and logging are some examples of effects that do not require cleanup. In other words, these effects can run and will not cause problems if the component mounts, unmounts, and remounts again. Other effects, however, will continue to execute, even if the component unmounts. Imagine that you write an effect function for a component that doesn’t get cleaned up, then your user navigates back and forth to the component ten times. You now have 10 effect functions all running the same effect over and over again. You’ve increased the power and memory needed to run that function 10x’s! Ahhh! That does not sound good, right? It’s not! This is what we call a _memory leak_.
 
 ##### Overview
 
@@ -504,13 +494,13 @@ See a working example of the completed example [here](https://codesandbox.io/s/l
 
 Try this out again, but this time with the `resize` event listener. That listener will listen for the browser to change size. So if you set your state with `window.innerHeight` and `window.innerWidth`, then listen for the resizing event to happen and update your state with those same properties, you should be able to render the browser size continuously.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [NASA Photo of the Day](https://github.com/LambdaSchool/nasa-photo-of-the-day)
+- ##### [NASA Photo of the Day](https://github.com/LambdaSchool/nasa-photo-of-the-day)
 
-    Build an app that consumes the NASA API to fetch the Astronomy Photo of the Day. Display the photo and other info on the DOM.
+  Build an app that consumes the NASA API to fetch the Astronomy Photo of the Day. Display the photo and other info on the DOM.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -518,18 +508,18 @@ Try this out again, but this time with the `resize` event listener. That listene
 
 You can use class recordings to help you master the material.
 
--   **[Components Side Effects for WebPT22 w/Ben Schinn](https://youtu.be/T2wgHRkHa6k)**
+- **[Components Side Effects for WebPT22 w/Ben Schinn](https://youtu.be/T2wgHRkHa6k)**
 
-    Side effects in web apps are very common. It’s important to understand what side effects are so we can handle them properly in our components.
+  Side effects in web apps are very common. It’s important to understand what side effects are so we can handle them properly in our components.
 
--   [All previous recordings](/archive/FSW/module/recKe8PW6ZMwjL1Qg)
+- [All previous recordings](/archive/FSW/module/recKe8PW6ZMwjL1Qg)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Try this out again, but this time with the `resize` event listener. That listener will listen for the browser to change size. So if you set your state with `window.innerHeight` and `window.innerWidth`, then listen for the resizing event to happen and update your state with those same properties, you should be able to render the browser size continuously.
+  Try this out again, but this time with the `resize` event listener. That listener will listen for the browser to change size. So if you set your state with `window.innerHeight` and `window.innerWidth`, then listen for the resizing event to happen and update your state with those same properties, you should be able to render the browser size continuously.
 
--   Project: NASA Photo of the Day
+- Project: NASA Photo of the Day

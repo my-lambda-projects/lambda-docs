@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Deploying Web Apps
 
@@ -73,9 +71,9 @@ Learn how to deploy a web application with Vercel (formerly ZEIT)
 
 **At the end of this module, you should be able to:**
 
--   explain how the world wide web works
--   explain what it means to "deploy" a static web app
--   demonstrate the ability to deploy and maintain a React App using Vercel
+- explain how the world wide web works
+- explain what it means to "deploy" a static web app
+- demonstrate the ability to deploy and maintain a React App using Vercel
 
 #### Pro Tip
 
@@ -103,7 +101,7 @@ The term “web server” can mean 1) a computer that stores the code for a webs
 
 The physical computer device that we call a web server (much like the one shown below) is connected to the internet, and stores the code for different websites to be shared across the world at all times. When we load the code for our websites, or web apps, on a server like this, we would say that the server is “hosting” our website/app.
 
-However, the server itself needs some code to tell *it* what to do, right? That software program is called… a web server! Its main purpose is to “serve” web pages it retrieves from your project code to users upon request.
+However, the server itself needs some code to tell _it_ what to do, right? That software program is called… a web server! Its main purpose is to “serve” web pages it retrieves from your project code to users upon request.
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Wikimedia_Foundation_Servers-8055_35.jpg/2560px-Wikimedia_Foundation_Servers-8055_35.jpg" width="600" alt="Servers" />
 
@@ -115,7 +113,7 @@ When you set up app hosting, what’s the first thing you always do? You open a 
 
 #### Domain Names and URLs
 
-In 1984, a couple decades *after* the first computers and networks were invented, the Domain Name Service (DNS) was introduced. This was a concept where computers could distinguish themselves from one another. Six domains that you will probably recognize were introduced: edu (Education), gov (Government), mil (Military), com (Commercial), net (Network Resources), and org (Organization).
+In 1984, a couple decades _after_ the first computers and networks were invented, the Domain Name Service (DNS) was introduced. This was a concept where computers could distinguish themselves from one another. Six domains that you will probably recognize were introduced: edu (Education), gov (Government), mil (Military), com (Commercial), net (Network Resources), and org (Organization).
 
 Just a few short years later, in 1991, the worldwide web network was opened to the world and incorporated the new HTML computer language. HTML uses specifications for Uniform Resource Locators (URLs). These URLs became (and remain) the universal standard for locating website addresses.
 
@@ -135,7 +133,7 @@ Now that you know how the web works, read [this article](https://www.doteasy.com
 
 Research what it means to deploy apps to a server, and the difference between static and dynamic applications.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to explain what it means to "deploy" a static web app
 
@@ -157,13 +155,13 @@ Services like these are a huge step up in modern technology that allows us to de
 
 Deploying a static web app is a little different than deploying a dynamic web app. Most of the apps that you have built up to this point are static apps. A basic definition of a static site is one that has hardcoded data that doesn’t change. A lot of our React apps use data from third-party libraries abut still deploy like a static app.
 
-Deploying a site with an accompanying server and database is going to be more complicated than just an *almost* static site that consumes a third-party API. We’ll learn more about that kind of deployment in the backend unit.
+Deploying a site with an accompanying server and database is going to be more complicated than just an _almost_ static site that consumes a third-party API. We’ll learn more about that kind of deployment in the backend unit.
 
 ##### Challenge
 
 Now that you’ve learned what it means to deploy a static web app, do a search online for potential problems that you may face during or after your project is deployed.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to demonstrate the ability to deploy and maintain a React App using Vercel
 
@@ -187,7 +185,7 @@ Fill out your information, upload an avatar, and proceed to installing the GitHu
 
 ![GitHub integration](https://github-integration-onboarding.coetry.now.sh)
 
-Click the *Setup Now For GitHub* button and you’ll be taken to GitHub to finish the installation process. If you are a part of other GitHub organizations, you’ll be given all the different organizations that you can install the integration for. Most likely, you only have a personal account, so go ahead and install it there.
+Click the _Setup Now For GitHub_ button and you’ll be taken to GitHub to finish the installation process. If you are a part of other GitHub organizations, you’ll be given all the different organizations that you can install the integration for. Most likely, you only have a personal account, so go ahead and install it there.
 
 ![install GitHub integration to account](https://install-now-to-gh-account.coetry.now.sh)
 
@@ -215,7 +213,7 @@ Upon creating your project, you’ll be taken to the project overview page where
 
 ![project overview](https://project-overview.coetry.now.sh)
 
-Give your deployment about a minute to finish building and refresh the page. You should see a preview screenshot as well as a `READY` status. Congratulations on your first deployment! Click on the image preview or the blue *Visit* button and you’ll be taken to your deployment.
+Give your deployment about a minute to finish building and refresh the page. You should see a preview screenshot as well as a `READY` status. Congratulations on your first deployment! Click on the image preview or the blue _Visit_ button and you’ll be taken to your deployment.
 
 ![deployment overview](https://deployment-overview.coetry.now.sh)
 
@@ -223,13 +221,13 @@ Give your deployment about a minute to finish building and refresh the page. You
 
 Do you have a domain name? Maybe for your portfolio site? Follow the instructions [here](https://Vercel.co/docs/v2/advanced/domains/transferring-a-domain/?query=domain_) to transfer your domain to Vercel, and deploy and maintain your project with Vercel. If you don’t have a domain name yet, look through the Vercel documentation and find a guide that is interesting to you [here](https://Vercel.co/guides/).
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Deploying React Apps](https://github.com/LambdaSchool/Deploying-Web-Apps)
+- ##### [Deploying React Apps](https://github.com/LambdaSchool/Deploying-Web-Apps)
 
-    Practice deploying a web app using ZEIT by deploying an app you’ve made previously and adding it as a portfolio piece.
+  Practice deploying a web app using ZEIT by deploying an app you’ve made previously and adding it as a portfolio piece.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -237,26 +235,26 @@ Do you have a domain name? Maybe for your portfolio site? Follow the instruction
 
 You can use class recordings to help you master the material.
 
--   **[Deploying Web Apps for Web35 w/ Warren Longmire](https://youtu.be/QPFPcprbSdw)**
+- **[Deploying Web Apps for Web35 w/ Warren Longmire](https://youtu.be/QPFPcprbSdw)**
 
-    Deploying Web Apps
+  Deploying Web Apps
 
--   [All previous recordings](/archive/WEB3/module/receOMvCB7dSyX5FL)
+- [All previous recordings](/archive/WEB3/module/receOMvCB7dSyX5FL)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Research what it means to deploy apps to a server, and the difference between static and dynamic applications.
+  Research what it means to deploy apps to a server, and the difference between static and dynamic applications.
 
--   Objective challenge:
+- Objective challenge:
 
-    Now that you’ve learned what it means to deploy a static web app, do a search online for potential problems that you may face during or after your project is deployed.
+  Now that you’ve learned what it means to deploy a static web app, do a search online for potential problems that you may face during or after your project is deployed.
 
--   Objective challenge:
+- Objective challenge:
 
-    Do you have a domain name? Maybe for your portfolio site? Follow the instructions [here](https://Vercel.co/docs/v2/advanced/domains/transferring-a-domain/?query=domain_) to transfer your domain to Vercel, and deploy and maintain your project with Vercel. If you don’t have a domain name yet, look through the Vercel documentation and find a guide that is interesting to you [here](https://Vercel.co/guides/).
+  Do you have a domain name? Maybe for your portfolio site? Follow the instructions [here](https://Vercel.co/docs/v2/advanced/domains/transferring-a-domain/?query=domain_) to transfer your domain to Vercel, and deploy and maintain your project with Vercel. If you don’t have a domain name yet, look through the Vercel documentation and find a guide that is interesting to you [here](https://Vercel.co/guides/).
 
--   Project: Deploying React Apps
+- Project: Deploying React Apps

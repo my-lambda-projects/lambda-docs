@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
@@ -39,32 +37,32 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Guided Project](#guided-project)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Guided Project](#guided-project)
+- [Project](#project)
+- [Review](#review)
 
 # Multi-Table Queries
 
@@ -72,17 +70,17 @@
 
 In this lecture well learn about:
 
--   Foreign keys
--   SQL joins
--   Aggregate functions
--   Knex joins
--   Database access functions
+- Foreign keys
+- SQL joins
+- Aggregate functions
+- Knex joins
+- Database access functions
 
 **At the end of this module, you should be able to:**
 
--   explain the role of a foreign key
--   query data from multiple tables
--   write database access methods
+- explain the role of a foreign key
+- query data from multiple tables
+- write database access methods
 
 #### Pro Tip
 
@@ -92,31 +90,25 @@ Be on time. It’s a mark of respect not to keep others waiting.
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=BgPwDwW3FE8), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=BgPwDwW3FE8), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=w2aIyxsT48I), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=w2aIyxsT48I), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=5ROv0RXrhX0), or enable JavaScript if it is disabled in your browser.
 
--   
+- [Visual Explanation of Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
 
-    # An error occurred.
+  from CodingHorror.com
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=5ROv0RXrhX0), or enable JavaScript if it is disabled in your browser.
+- [SQL Joins Tutorial](https://www.w3resource.com/sql/joins/sql-joins.php)
 
--   [Visual Explanation of Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
-
-    from CodingHorror.com
-
--   [SQL Joins Tutorial](https://www.w3resource.com/sql/joins/sql-joins.php)
-
-    SQL Joins explanation on w3resource.com
+  SQL Joins explanation on w3resource.com
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -146,7 +138,7 @@ Open [SQLTryIT](https://www.w3schools.com/sql/trysql.asp?filename=trysql_op_in).
 
 How many records in the products table belong to the category “confections”?
 
-------------------------------------------------------------------------
+---
 
 #### Learn to query data from multiple tables
 
@@ -158,20 +150,20 @@ We can use a `JOIN` to combine query data from multiple tables using a single `S
 
 There are different types of joins; some are listed below:
 
--   inner joins.
--   outer joins.
--   left joins.
--   right joins.
--   cross joins.
--   non-equality joins.
--   self joins.
+- inner joins.
+- outer joins.
+- left joins.
+- right joins.
+- cross joins.
+- non-equality joins.
+- self joins.
 
-Using `joins` requires that the two tables of interest contain at least one field with shared information. For example, if a *departments* table has an *id* field, and an employee table has a *department\_id* field, and the values that exist in the *id* column of the *departments* table live in the *department\_id* field of the employee table, we can use those fields to join both tables like so:
+Using `joins` requires that the two tables of interest contain at least one field with shared information. For example, if a _departments_ table has an _id_ field, and an employee table has a _department_id_ field, and the values that exist in the _id_ column of the _departments_ table live in the _department_id_ field of the employee table, we can use those fields to join both tables like so:
 
     select * from employees
     join departments on employees.department_id = departments.id
 
-This query will return the data from both tables for every instance where the `ON` condition is true. If there are employees with no value for department\*id or where the value stored in the field does not correspond to an existing id in the *departments* table, then that record will NOT be returned. In a similar fashion, any records from the *departments* table that don’t have an employee associated with them will also be omitted from the results. Basically, if the *id* does not show as the value of department\_id for an employee, it won’t be able to join.
+This query will return the data from both tables for every instance where the `ON` condition is true. If there are employees with no value for department\*id or where the value stored in the field does not correspond to an existing id in the _departments_ table, then that record will NOT be returned. In a similar fashion, any records from the _departments_ table that don’t have an employee associated with them will also be omitted from the results. Basically, if the _id_ does not show as the value of department_id for an employee, it won’t be able to join.
 
 We can shorten the condition by giving the table names an alias. This is a common practice. Below is the same example using aliases, picking which fields to return and sorting the results:
 
@@ -199,11 +191,11 @@ A good explanation of how the different types of joins can be seen [in this arti
 
 Use [this online tool](https://www.w3schools.com/Sql/tryit.asp?filename=trysql_select_top) to write the following queries:
 
--   list the products, including their category name.
--   list the products, including the supplier name.
--   list the products, including both the category name and supplier name.
+- list the products, including their category name.
+- list the products, including the supplier name.
+- list the products, including both the category name and supplier name.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to write database access methods
 
@@ -258,9 +250,9 @@ Once all methods are written as desired, we can export them like so:
 
     module.exports = {
       find,
-      findById, 
-      add, 
-      update, 
+      findById,
+      add,
+      update,
       delete
     }
 
@@ -283,7 +275,7 @@ There should no be `knex` code in the endpoints themselves.
 
 Refactor a project from earlier in this sprint to make db access modular.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
@@ -291,11 +283,11 @@ Refactor a project from earlier in this sprint to make db access modular.
 
 [GitHub Repo](https://github.com/LambdaSchool/node-db3-guided)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Node DB3 Project](https://github.com/LambdaSchool/node-db3-project)
+- ##### [Node DB3 Project](https://github.com/LambdaSchool/node-db3-project)
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -303,34 +295,34 @@ Refactor a project from earlier in this sprint to make db access modular.
 
 You can use class recordings to help you master the material.
 
--   **[Multi-Table Queries for Web PT 18 w/Jason Maurer - October 19, 2020](https://youtu.be/dL7AvrUIZw0)**
+- **[Multi-Table Queries for Web PT 18 w/Jason Maurer - October 19, 2020](https://youtu.be/dL7AvrUIZw0)**
 
-    In this lecture well learn about: Foreign keys SQL joins Aggregate functions Knex joins Database access functions At the end of this module, you should be able to: explain the role of a foreign key query data from multiple tables write database access methods
+  In this lecture well learn about: Foreign keys SQL joins Aggregate functions Knex joins Database access functions At the end of this module, you should be able to: explain the role of a foreign key query data from multiple tables write database access methods
 
--   [All previous recordings](/archive/FSW/module/recw2ezN22yjehidj)
+- [All previous recordings](/archive/FSW/module/recw2ezN22yjehidj)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Open [SQLTryIT](https://www.w3schools.com/sql/trysql.asp?filename=trysql_op_in).
+  Open [SQLTryIT](https://www.w3schools.com/sql/trysql.asp?filename=trysql_op_in).
 
-    How many records in the products table belong to the category “confections”?
+  How many records in the products table belong to the category “confections”?
 
--   Objective challenge:
+- Objective challenge:
 
-    Use [this online tool](https://www.w3schools.com/Sql/tryit.asp?filename=trysql_select_top) to write the following queries:
+  Use [this online tool](https://www.w3schools.com/Sql/tryit.asp?filename=trysql_select_top) to write the following queries:
 
-    -   list the products, including their category name.
-    -   list the products, including the supplier name.
-    -   list the products, including both the category name and supplier name.
+  - list the products, including their category name.
+  - list the products, including the supplier name.
+  - list the products, including both the category name and supplier name.
 
--   Objective challenge:
+- Objective challenge:
 
-    Refactor a project from earlier in this sprint to make db access modular.
+  Refactor a project from earlier in this sprint to make db access modular.
 
--   Guided Project: Node DB3 Guided Project
+- Guided Project: Node DB3 Guided Project
 
--   Project: Node DB3 Project
+- Project: Node DB3 Project

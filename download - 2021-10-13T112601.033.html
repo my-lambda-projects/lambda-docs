@@ -1,595 +1,755 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Intended as a home for Lambda School curriculum."
+    />
+    <meta name="author" content="" />
+    <meta name="generator" content="Jekyll v3.8.0" />
+    <title>Introduction To C · Lambda School</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Intended as a home for Lambda School curriculum.">
-  <meta name="author" content="">
-  <meta name="generator" content="Jekyll v3.8.0">
-  <title>Introduction To C · Lambda School</title>
+    <link
+      rel="stylesheet"
+      integrity
+      crossorigin="anonymous"
+      href="https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css"
+    />
 
-  <link rel='stylesheet' integrity crossorigin='anonymous'
-    href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+    <link
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css"
+    />
 
-  <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-  <link rel='stylesheet'
-    href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css"
+    />
 
-  <link rel='stylesheet'
-    href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-122016605-1", "learn.lambdaschool.com");
+      ga("send", "pageview");
+    </script>
 
-  <script>
-    ( function ( i, s, o, g, r, a, m ) {
-      i[ 'GoogleAnalyticsObject' ] = r;
-      i[ r ] = i[ r ] || function () {
-        ( i[ r ].q = i[ r ].q || [] ).push( arguments )
-      }, i[ r ].l = 1 * new Date();
-      a = s.createElement( o ),
-        m = s.getElementsByTagName( o )[ 0 ];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore( a, m )
-    } )( window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga' );
-    ga( 'create', 'UA-122016605-1', 'learn.lambdaschool.com' );
-    ga( 'send', 'pageview' );
-  </script>
-
-  <script>
-    ! function () {
-      var analytics = window.analytics = window.analytics || [];
-      if ( !analytics.initialize )
-        if ( analytics.invoked ) window.console && console.error && console.error( "Segment snippet included twice." );
-        else {
-          analytics.invoked = !0;
-          analytics.methods = [ "trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset",
-            "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"
-          ];
-          analytics.factory = function ( t ) {
-            return function () {
-              var e = Array.prototype.slice.call( arguments );
-              e.unshift( t );
-              analytics.push( e );
-              return analytics
+    <script>
+      !(function () {
+        var analytics = (window.analytics = window.analytics || []);
+        if (!analytics.initialize)
+          if (analytics.invoked)
+            window.console &&
+              console.error &&
+              console.error("Segment snippet included twice.");
+          else {
+            analytics.invoked = !0;
+            analytics.methods = [
+              "trackSubmit",
+              "trackClick",
+              "trackLink",
+              "trackForm",
+              "pageview",
+              "identify",
+              "reset",
+              "group",
+              "track",
+              "ready",
+              "alias",
+              "debug",
+              "page",
+              "once",
+              "off",
+              "on",
+            ];
+            analytics.factory = function (t) {
+              return function () {
+                var e = Array.prototype.slice.call(arguments);
+                e.unshift(t);
+                analytics.push(e);
+                return analytics;
+              };
+            };
+            for (var t = 0; t < analytics.methods.length; t++) {
+              var e = analytics.methods[t];
+              analytics[e] = analytics.factory(e);
             }
-          };
-          for ( var t = 0; t < analytics.methods.length; t++ ) {
-            var e = analytics.methods[ t ];
-            analytics[ e ] = analytics.factory( e )
+            analytics.load = function (t, e) {
+              var n = document.createElement("script");
+              n.type = "text/javascript";
+              n.async = !0;
+              n.src =
+                "https://cdn.segment.com/analytics.js/v1/" +
+                t +
+                "/analytics.min.js";
+              var a = document.getElementsByTagName("script")[0];
+              a.parentNode.insertBefore(n, a);
+              analytics._loadOptions = e;
+            };
+            analytics.SNIPPET_VERSION = "4.1.0";
+            analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+            analytics.page();
           }
-          analytics.load = function ( t, e ) {
-            var n = document.createElement( "script" );
-            n.type = "text/javascript";
-            n.async = !0;
-            n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
-            var a = document.getElementsByTagName( "script" )[ 0 ];
-            a.parentNode.insertBefore( n, a );
-            analytics._loadOptions = e
-          };
-          analytics.SNIPPET_VERSION = "4.1.0";
-          analytics.load( "BjKorwKrSvMamfNoGkBq9rISk7wF6QQX" );
-          analytics.page();
-        }
-    }();
-  </script>
+      })();
+    </script>
 
-  <link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-  <link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="manifest" href="/assets/img/favicons/manifest.json">
-  <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
-  <link rel="icon" href="/favicon.ico">
-  <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
-  <meta name="theme-color" content="#a0001e">
-</head>
+    <link
+      rel="apple-touch-icon"
+      href="/assets/img/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/assets/img/favicons/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicons/safari-pinned-tab.svg"
+      color="#a0001e"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="msapplication-config"
+      content="/assets/img/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#a0001e" />
+  </head>
 
-<body>
-  <noscript>Please enable JavaScript to view this page.</noscript>
-  <div id="redirect-message" style="display: none;">
-    You must be logged in to view this page.
-  </div>
-  <div id="unauthorized-message" style="display: none;">
-    You must be a Lambda School student to view this page.
-  </div>
-  <div id="content-wrapper" style="visibility: hidden;">
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
-      <div class="container">
-        <span class="skiplink-text">Skip to main content</span>
-      </div>
-    </a>
-    <div class="mobile-menu">
-      <div class="m-drop">
-        <div class="mobile-row">
-          <div class="header-row" style="padding: 3px 7px">
-            <a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg"
-                width="33" height="35" viewBox="0 0 33 35" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
-                  fill="#EC3944" />
-              </svg></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu"
-              aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
-                <title>Menu</title>
-                <path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
-                  d="M4 7h22M4 15h22M4 23h22"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="nav-row">
-          <div class="results-container">
-            <ul id="results-container" class="dropdown list-group"></ul>
-          </div>
-          <div id="mobile-course-menu" class="collapse nav-row">
-            <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
-              <nav class="bd-links">
-                <div class="bd-toc-item">
-                  <h4 class="bd-toc-link">Computer Science Annex</h4>
-                </div>
-
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/csannex/sprint/recMPt6jmsCgaqrfj">
-                    1.&nbsp;&nbsp;Data Structures: Heaps
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/csannex/module/recNbOiLfM7bfQ0aE/">
-                        Heaps
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/csannex/sprint/recKzV5STy8vYnbQ1">
-                    2.&nbsp;&nbsp;Intro to Django
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/csannex/module/recvCvXoZKm5cYOc4/">
-                        Django basics and setup
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/csannex/module/recuEEEsf9eXphxy0/">
-                        Building APIs
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/csannex/sprint/recUHGX7arXkBIutr">
-                    3.&nbsp;&nbsp;Python/Django I
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/csannex/module/rec4yg0hRHaeOmBGN/">
-                        Getting started with Python and Django
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/csannex/module/recHhVqI4Y3j6UgLa/">
-                        Object-Oriented Programming
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/csannex/module/recgVHqW0RShuQn1Z/">
-                        Software Design Patterns
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/csannex/sprint/rec64nbdwB28JM7Qu">
-                    4.&nbsp;&nbsp;Python/Django II/Career Development
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/csannex/module/rec7YHjLuXabdlhof/">
-                        REST
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/csannex/module/recjIPIwz5Pn5WbPh/">
-                        GraphQL
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/csannex/module/recVsikSMFoQ25WZd/">
-                        Model-View-Controller
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/csannex/sprint/reczMSFEG5pffpADx">
-                    5.&nbsp;&nbsp;Python/Django III/Career Development
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/csannex/module/reccrn1If8mhlIymc/">
-                        Object-relational mapping
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/csannex/module/recU6Q1DLISGvt0dk/">
-                        Relational Databases
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/csannex/sprint/recTTpwFpgZXtPG2o">
-                    6.&nbsp;&nbsp;Project Week: Cellular Automata
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/csannex/module/rec42j1bkTmC0Hsro/">
-                        Game of Life
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/csannex/sprint/recqkHjNcXzK5DTqd">
-                    7.&nbsp;&nbsp;C Programming Topics
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li class="active bd-sidenav-active">
-                      <a href="/csannex/module/recLymrrD7f46rdBa/">
-                        Introduction To C
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/csannex/module/rec7YmMV7ukDLK770/">
-                        Processes and System Calls
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/csannex/module/recfiYtQDLFXGOBFA/">
-                        Scheduling
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/csannex/module/recHPT5QiPS6NOCgz/">
-                        Operating Systems
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/csannex/module/recz76g3pcHs88Dax/">
-                        Web Server I
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/csannex/module/recFGnBVmKCyR0427/">
-                        Web Server II
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/csannex/module/recH0OAnSr6ZcnZ7F/">
-                        Theory of Computation
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
+  <body>
+    <noscript>Please enable JavaScript to view this page.</noscript>
+    <div id="redirect-message" style="display: none">
+      You must be logged in to view this page.
     </div>
-    <div class="main-container">
-      <div class="sidebar-container bd-sidebar">
-        <div class="docs-sidebar">
-          <a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197"
-              fill="#ec3944">
-              <g>
-                <path
-                  d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z">
-                </path>
-                <path
-                  d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z">
-                </path>
-                <path
-                  d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z">
-                </path>
-                <path
-                  d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z">
-                </path>
-                <path
-                  d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z">
-                </path>
-                <path
-                  d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z">
-                </path>
-              </g>
-              <path
-                d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z">
-              </path>
-            </svg></a>
-          <ul id="results-container" class="dropdown list-group"></ul>
-          <nav class="bd-links collapse" id="bd-docs-nav">
-            <div class="bd-toc-item">
-              <h4 class="bd-toc-link">Computer Science Annex</h4>
+    <div id="unauthorized-message" style="display: none">
+      You must be a Lambda School student to view this page.
+    </div>
+    <div id="content-wrapper" style="visibility: hidden">
+      <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+          <span class="skiplink-text">Skip to main content</span>
+        </div>
+      </a>
+      <div class="mobile-menu">
+        <div class="m-drop">
+          <div class="mobile-row">
+            <div class="header-row" style="padding: 3px 7px">
+              <a class="navbar-brand" href="/" aria-label="Lambda School"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="35"
+                  viewBox="0 0 33 35"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                    fill="#EC3944"
+                  /></svg
+              ></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#mobile-course-menu"
+                aria-controls="mobile-course-menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="30"
+                  height="30"
+                  focusable="false"
+                >
+                  <title>Menu</title>
+                  <path
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    d="M4 7h22M4 15h22M4 23h22"
+                  ></path>
+                </svg>
+              </button>
             </div>
-
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/csannex/sprint/recMPt6jmsCgaqrfj">
-                1.&nbsp;&nbsp;Data Structures: Heaps
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/csannex/module/recNbOiLfM7bfQ0aE/">
-                    Heaps
-                  </a>
-                </li>
-              </ul>
+          </div>
+          <div class="nav-row">
+            <div class="results-container">
+              <ul id="results-container" class="dropdown list-group"></ul>
             </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/csannex/sprint/recKzV5STy8vYnbQ1">
-                2.&nbsp;&nbsp;Intro to Django
-              </a>
-              <ul class="nav bd-sidenav">
+            <div id="mobile-course-menu" class="collapse nav-row">
+              <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+                <nav class="bd-links">
+                  <div class="bd-toc-item">
+                    <h4 class="bd-toc-link">Computer Science Annex</h4>
+                  </div>
 
-                <li>
-                  <a href="/csannex/module/recvCvXoZKm5cYOc4/">
-                    Django basics and setup
-                  </a>
-                </li>
-                <li>
-                  <a href="/csannex/module/recuEEEsf9eXphxy0/">
-                    Building APIs
-                  </a>
-                </li>
-              </ul>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/csannex/sprint/recMPt6jmsCgaqrfj"
+                    >
+                      1.&nbsp;&nbsp;Data Structures: Heaps
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/csannex/module/recNbOiLfM7bfQ0aE/"> Heaps </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/csannex/sprint/recKzV5STy8vYnbQ1"
+                    >
+                      2.&nbsp;&nbsp;Intro to Django
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/csannex/module/recvCvXoZKm5cYOc4/">
+                          Django basics and setup
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/csannex/module/recuEEEsf9eXphxy0/">
+                          Building APIs
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/csannex/sprint/recUHGX7arXkBIutr"
+                    >
+                      3.&nbsp;&nbsp;Python/Django I
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/csannex/module/rec4yg0hRHaeOmBGN/">
+                          Getting started with Python and Django
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/csannex/module/recHhVqI4Y3j6UgLa/">
+                          Object-Oriented Programming
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/csannex/module/recgVHqW0RShuQn1Z/">
+                          Software Design Patterns
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/csannex/sprint/rec64nbdwB28JM7Qu"
+                    >
+                      4.&nbsp;&nbsp;Python/Django II/Career Development
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/csannex/module/rec7YHjLuXabdlhof/"> REST </a>
+                      </li>
+                      <li>
+                        <a href="/csannex/module/recjIPIwz5Pn5WbPh/">
+                          GraphQL
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/csannex/module/recVsikSMFoQ25WZd/">
+                          Model-View-Controller
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/csannex/sprint/reczMSFEG5pffpADx"
+                    >
+                      5.&nbsp;&nbsp;Python/Django III/Career Development
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/csannex/module/reccrn1If8mhlIymc/">
+                          Object-relational mapping
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/csannex/module/recU6Q1DLISGvt0dk/">
+                          Relational Databases
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/csannex/sprint/recTTpwFpgZXtPG2o"
+                    >
+                      6.&nbsp;&nbsp;Project Week: Cellular Automata
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/csannex/module/rec42j1bkTmC0Hsro/">
+                          Game of Life
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/csannex/sprint/recqkHjNcXzK5DTqd"
+                    >
+                      7.&nbsp;&nbsp;C Programming Topics
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li class="active bd-sidenav-active">
+                        <a href="/csannex/module/recLymrrD7f46rdBa/">
+                          Introduction To C
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/csannex/module/rec7YmMV7ukDLK770/">
+                          Processes and System Calls
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/csannex/module/recfiYtQDLFXGOBFA/">
+                          Scheduling
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/csannex/module/recHPT5QiPS6NOCgz/">
+                          Operating Systems
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/csannex/module/recz76g3pcHs88Dax/">
+                          Web Server I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/csannex/module/recFGnBVmKCyR0427/">
+                          Web Server II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/csannex/module/recH0OAnSr6ZcnZ7F/">
+                          Theory of Computation
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
             </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/csannex/sprint/recUHGX7arXkBIutr">
-                3.&nbsp;&nbsp;Python/Django I
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/csannex/module/rec4yg0hRHaeOmBGN/">
-                    Getting started with Python and Django
-                  </a>
-                </li>
-                <li>
-                  <a href="/csannex/module/recHhVqI4Y3j6UgLa/">
-                    Object-Oriented Programming
-                  </a>
-                </li>
-                <li>
-                  <a href="/csannex/module/recgVHqW0RShuQn1Z/">
-                    Software Design Patterns
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/csannex/sprint/rec64nbdwB28JM7Qu">
-                4.&nbsp;&nbsp;Python/Django II/Career Development
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/csannex/module/rec7YHjLuXabdlhof/">
-                    REST
-                  </a>
-                </li>
-                <li>
-                  <a href="/csannex/module/recjIPIwz5Pn5WbPh/">
-                    GraphQL
-                  </a>
-                </li>
-                <li>
-                  <a href="/csannex/module/recVsikSMFoQ25WZd/">
-                    Model-View-Controller
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/csannex/sprint/reczMSFEG5pffpADx">
-                5.&nbsp;&nbsp;Python/Django III/Career Development
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/csannex/module/reccrn1If8mhlIymc/">
-                    Object-relational mapping
-                  </a>
-                </li>
-                <li>
-                  <a href="/csannex/module/recU6Q1DLISGvt0dk/">
-                    Relational Databases
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/csannex/sprint/recTTpwFpgZXtPG2o">
-                6.&nbsp;&nbsp;Project Week: Cellular Automata
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/csannex/module/rec42j1bkTmC0Hsro/">
-                    Game of Life
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/csannex/sprint/recqkHjNcXzK5DTqd">
-                7.&nbsp;&nbsp;C Programming Topics
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li class="active bd-sidenav-active">
-                  <a href="/csannex/module/recLymrrD7f46rdBa/">
-                    Introduction To C
-                  </a>
-                </li>
-                <li>
-                  <a href="/csannex/module/rec7YmMV7ukDLK770/">
-                    Processes and System Calls
-                  </a>
-                </li>
-                <li>
-                  <a href="/csannex/module/recfiYtQDLFXGOBFA/">
-                    Scheduling
-                  </a>
-                </li>
-                <li>
-                  <a href="/csannex/module/recHPT5QiPS6NOCgz/">
-                    Operating Systems
-                  </a>
-                </li>
-                <li>
-                  <a href="/csannex/module/recz76g3pcHs88Dax/">
-                    Web Server I
-                  </a>
-                </li>
-                <li>
-                  <a href="/csannex/module/recFGnBVmKCyR0427/">
-                    Web Server II
-                  </a>
-                </li>
-                <li>
-                  <a href="/csannex/module/recH0OAnSr6ZcnZ7F/">
-                    Theory of Computation
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+          </div>
         </div>
       </div>
-      <main class="content-container flex-wrapper" role="main">
-        <div class="sticky-nav">
-          <div class="sprint-nav">
-            <ul class="section-nav">
-              <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
-              <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
-              <li class="toc-entry toc-h2"><a href="#guided-project">Guided Project</a></li>
-              <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
-              <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
-            </ul>
-          </div>
+      <div class="main-container">
+        <div class="sidebar-container bd-sidebar">
+          <div class="docs-sidebar">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"
+              ><svg
+                width="135"
+                height="35"
+                viewBox="0 0 756 197"
+                fill="#ec3944"
+              >
+                <g>
+                  <path
+                    d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"
+                  ></path>
+                  <path
+                    d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"
+                  ></path>
+                  <path
+                    d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"
+                  ></path>
+                  <path
+                    d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"
+                  ></path>
+                  <path
+                    d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"
+                  ></path>
+                  <path
+                    d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"
+                  ></path>
+                </g>
+                <path
+                  d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"
+                ></path></svg
+            ></a>
+            <ul id="results-container" class="dropdown list-group"></ul>
+            <nav class="bd-links collapse" id="bd-docs-nav">
+              <div class="bd-toc-item">
+                <h4 class="bd-toc-link">Computer Science Annex</h4>
+              </div>
 
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/csannex/sprint/recMPt6jmsCgaqrfj">
+                  1.&nbsp;&nbsp;Data Structures: Heaps
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/csannex/module/recNbOiLfM7bfQ0aE/"> Heaps </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/csannex/sprint/recKzV5STy8vYnbQ1">
+                  2.&nbsp;&nbsp;Intro to Django
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/csannex/module/recvCvXoZKm5cYOc4/">
+                      Django basics and setup
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/csannex/module/recuEEEsf9eXphxy0/">
+                      Building APIs
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/csannex/sprint/recUHGX7arXkBIutr">
+                  3.&nbsp;&nbsp;Python/Django I
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/csannex/module/rec4yg0hRHaeOmBGN/">
+                      Getting started with Python and Django
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/csannex/module/recHhVqI4Y3j6UgLa/">
+                      Object-Oriented Programming
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/csannex/module/recgVHqW0RShuQn1Z/">
+                      Software Design Patterns
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/csannex/sprint/rec64nbdwB28JM7Qu">
+                  4.&nbsp;&nbsp;Python/Django II/Career Development
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/csannex/module/rec7YHjLuXabdlhof/"> REST </a>
+                  </li>
+                  <li>
+                    <a href="/csannex/module/recjIPIwz5Pn5WbPh/"> GraphQL </a>
+                  </li>
+                  <li>
+                    <a href="/csannex/module/recVsikSMFoQ25WZd/">
+                      Model-View-Controller
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/csannex/sprint/reczMSFEG5pffpADx">
+                  5.&nbsp;&nbsp;Python/Django III/Career Development
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/csannex/module/reccrn1If8mhlIymc/">
+                      Object-relational mapping
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/csannex/module/recU6Q1DLISGvt0dk/">
+                      Relational Databases
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/csannex/sprint/recTTpwFpgZXtPG2o">
+                  6.&nbsp;&nbsp;Project Week: Cellular Automata
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/csannex/module/rec42j1bkTmC0Hsro/">
+                      Game of Life
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/csannex/sprint/recqkHjNcXzK5DTqd">
+                  7.&nbsp;&nbsp;C Programming Topics
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li class="active bd-sidenav-active">
+                    <a href="/csannex/module/recLymrrD7f46rdBa/">
+                      Introduction To C
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/csannex/module/rec7YmMV7ukDLK770/">
+                      Processes and System Calls
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/csannex/module/recfiYtQDLFXGOBFA/">
+                      Scheduling
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/csannex/module/recHPT5QiPS6NOCgz/">
+                      Operating Systems
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/csannex/module/recz76g3pcHs88Dax/">
+                      Web Server I
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/csannex/module/recFGnBVmKCyR0427/">
+                      Web Server II
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/csannex/module/recH0OAnSr6ZcnZ7F/">
+                      Theory of Computation
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
         </div>
-        <div class="wrapper limit-width">
-          <div class="flex-wrapper">
-            <div class="limit-width">
-              <div class="jumbotron">
-                <h1 class="bd-title" id="content">Introduction To C</h1>
-                <span class="lead">
-                  <p class="bd-lead"></p>
-                  <p>As the students’ first introduction to the C programming language, this sprint aims to expose
-                    students to topics pertaining to low-level languages, such as strong typing, pointers, and memory
-                    allocation. The structure of this sprint mimics the structure of other sprints that introduce
-                    students to a new language.</p>
-                </span>
-                <strong>At the end of this module, you should be able to:</strong>
-                <ul>
-                  <li>describe and use header files, basic types, arrays, strings, flow control, and functions in C</li>
-                  <li>describe how a computer's memory model works and how pointers relate to this memory model in C
-                  </li>
-                  <li>utilize pointers appropriately in order to work with dynamic memory</li>
-                  <li>use structs to create more complex composite types in C</li>
-                </ul>
-              </div>
-              <div class="alert alert-warning" role="alert">
-                <h4>Pro Tip</h4>
-                <p>A quick temper will make a fool of you soon enough.</p>
-                <footer class="blockquote-footer">
-                  <p>Bruce Lee</p>
-                </footer>
-              </div>
-              <h2 class="display-4">
-                <a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Prepare</h2>
-              <p class="lead">Review each preclass resource before class.</p>
-              <div class="preclass">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-VzxJwHDFsM"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MI_C_Qt4RCM"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uloU0VqOV7k"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3tBW2Hhocbk"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <h2 class="display-4">
-                <a id="learn" class="anchor" href="#learn" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Learn</h2>
-              <h4 class="mark mb-3 p-2">Learn to describe and use header files, basic types, arrays, strings, flow
-                control, and functions in C</h4>
-              <p>While there are many important topics that fall under the umbrella of C programming, there are a few
-                fundamental concepts that you will likely need to use, regardless of the type of application you are
-                developing. Some concepts, like header files, may be new, depending on what languages you have worked
-                with previously. Others, like data types and functions, are very similar to their counterparts in other
-                languages like JavaScript.</p>
-              <h5>Overview</h5>
-              <h3 id="header-files">Header Files</h3>
-              <p>Listed at the top of the program:</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+        <main class="content-container flex-wrapper" role="main">
+          <div class="sticky-nav">
+            <div class="sprint-nav">
+              <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+                <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+                <li class="toc-entry toc-h2">
+                  <a href="#guided-project">Guided Project</a>
+                </li>
+                <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+                <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="wrapper limit-width">
+            <div class="flex-wrapper">
+              <div class="limit-width">
+                <div class="jumbotron">
+                  <h1 class="bd-title" id="content">Introduction To C</h1>
+                  <span class="lead">
+                    <p class="bd-lead"></p>
+                    <p>
+                      As the students’ first introduction to the C programming
+                      language, this sprint aims to expose students to topics
+                      pertaining to low-level languages, such as strong typing,
+                      pointers, and memory allocation. The structure of this
+                      sprint mimics the structure of other sprints that
+                      introduce students to a new language.
+                    </p>
+                  </span>
+                  <strong
+                    >At the end of this module, you should be able to:</strong
+                  >
+                  <ul>
+                    <li>
+                      describe and use header files, basic types, arrays,
+                      strings, flow control, and functions in C
+                    </li>
+                    <li>
+                      describe how a computer's memory model works and how
+                      pointers relate to this memory model in C
+                    </li>
+                    <li>
+                      utilize pointers appropriately in order to work with
+                      dynamic memory
+                    </li>
+                    <li>
+                      use structs to create more complex composite types in C
+                    </li>
+                  </ul>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                  <h4>Pro Tip</h4>
+                  <p>A quick temper will make a fool of you soon enough.</p>
+                  <footer class="blockquote-footer">
+                    <p>Bruce Lee</p>
+                  </footer>
+                </div>
+                <h2 class="display-4">
+                  <a
+                    id="prepare"
+                    class="anchor"
+                    href="#prepare"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Prepare
+                </h2>
+                <p class="lead">Review each preclass resource before class.</p>
+                <div class="preclass">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/-VzxJwHDFsM"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/MI_C_Qt4RCM"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/uloU0VqOV7k"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/3tBW2Hhocbk"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <h2 class="display-4">
+                  <a id="learn" class="anchor" href="#learn" aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Learn
+                </h2>
+                <h4 class="mark mb-3 p-2">
+                  Learn to describe and use header files, basic types, arrays,
+                  strings, flow control, and functions in C
+                </h4>
+                <p>
+                  While there are many important topics that fall under the
+                  umbrella of C programming, there are a few fundamental
+                  concepts that you will likely need to use, regardless of the
+                  type of application you are developing. Some concepts, like
+                  header files, may be new, depending on what languages you have
+                  worked with previously. Others, like data types and functions,
+                  are very similar to their counterparts in other languages like
+                  JavaScript.
+                </p>
+                <h5>Overview</h5>
+                <h3 id="header-files">Header Files</h3>
+                <p>Listed at the top of the program:</p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="cp">#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 #include &lt;math.h&gt;
 </span></code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Each included <em>header file</em> gives access to the functionality declared in that header file.</p>
-              <ul>
-                <li>Only <code class="highlighter-rouge">#include</code> the files you need</li>
-                <li>Consult the <code class="highlighter-rouge">man</code> page for the function to see what you want to
-                  <code class="highlighter-rouge">#include</code>
-                  <ul>
-                    <li>If the <code class="highlighter-rouge">man</code> page doesn’t look right, like it’s for another
-                      language, try
-                      other manual sections, especially 2 and 3:
-                      <ul>
-                        <li><code class="highlighter-rouge">man 2 fork</code></li>
-                        <li><code class="highlighter-rouge">man 3 printf</code></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <h3 id="types">Types</h3>
-              <h4 id="numeric-types">Numeric Types</h4>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="c1">// Sample declarations</span>
+                <p>
+                  Each included <em>header file</em> gives access to the
+                  functionality declared in that header file.
+                </p>
+                <ul>
+                  <li>
+                    Only <code class="highlighter-rouge">#include</code> the
+                    files you need
+                  </li>
+                  <li>
+                    Consult the <code class="highlighter-rouge">man</code> page
+                    for the function to see what you want to
+                    <code class="highlighter-rouge">#include</code>
+                    <ul>
+                      <li>
+                        If the <code class="highlighter-rouge">man</code> page
+                        doesn’t look right, like it’s for another language, try
+                        other manual sections, especially 2 and 3:
+                        <ul>
+                          <li>
+                            <code class="highlighter-rouge">man 2 fork</code>
+                          </li>
+                          <li>
+                            <code class="highlighter-rouge">man 3 printf</code>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <h3 id="types">Types</h3>
+                <h4 id="numeric-types">Numeric Types</h4>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="c1">// Sample declarations</span>
 
 <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>      <span class="c1">// a is an integer</span>
 <span class="kt">long</span> <span class="n">a</span><span class="p">;</span>   <span class="c1">// a is a long integer--holds bigger values</span>
@@ -599,20 +759,24 @@
 
 <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>   <span class="c1">// 1-byte integer value, or a character</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Initialization:</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+                <p>Initialization:</p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
 <span class="kt">float</span> <span class="n">f</span> <span class="o">=</span> <span class="mi">32</span><span class="p">.</span><span class="mi">9</span><span class="p">;</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Implicit and Explicit Type Casting:</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">.</span><span class="mi">1</span><span class="p">;</span>
+                <p>Implicit and Explicit Type Casting:</p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">.</span><span class="mi">1</span><span class="p">;</span>
 <span class="n">printf</span><span class="p">(</span><span class="s">"The value stored in a is %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="c1">// Output: The value stored in a is 5</span>
 <span class="c1">//This is as expected.  Integers cannot store decimals, so the value is implicitly type cast from a float to an integer.  The decimal is discarded.</span>
 
@@ -640,52 +804,69 @@
 <span class="c1">// (float)( 5/7 ) will first handle the division as integer math, then typecast the result into a float, resulting in 0.000000 again.</span>
 
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h4 id="arrays">Arrays</h4>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>        <span class="c1">// array of 20 ints</span>
+                <h4 id="arrays">Arrays</h4>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>        <span class="c1">// array of 20 ints</span>
 <span class="kt">float</span> <span class="n">f</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">20</span><span class="p">];</span> <span class="c1">// 2D array, 2 rows of 20 columns of floats</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Initialization:</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
+                <p>Initialization:</p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
 <span class="kt">int</span> <span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">},</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">}</span> <span class="p">};</span>
 
 <span class="c1">// Autosize the array to 3 elements:</span>
 <span class="kt">int</span> <span class="n">c</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">};</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h4 id="strings">Strings</h4>
-              <p>Strings are stored as a pointer to the first element. The string terminates with a <code
-                  class="highlighter-rouge">NUL</code> (<code class="highlighter-rouge">\0</code>) character. That is, a
-                <code class="highlighter-rouge">NUL</code> is found at the end of the string.</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kt">char</span> <span class="o">*</span><span class="n">s</span><span class="p">;</span> <span class="c1">// s is a pointer to a char, or string</span>
+                <h4 id="strings">Strings</h4>
+                <p>
+                  Strings are stored as a pointer to the first element. The
+                  string terminates with a
+                  <code class="highlighter-rouge">NUL</code> (<code
+                    class="highlighter-rouge"
+                    >\0</code
+                  >) character. That is, a
+                  <code class="highlighter-rouge">NUL</code> is found at the end
+                  of the string.
+                </p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kt">char</span> <span class="o">*</span><span class="n">s</span><span class="p">;</span> <span class="c1">// s is a pointer to a char, or string</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Initialization:</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kt">char</span> <span class="o">*</span><span class="n">s</span> <span class="o">=</span> <span class="s">"Hello, world!"</span><span class="p">;</span>
+                <p>Initialization:</p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kt">char</span> <span class="o">*</span><span class="n">s</span> <span class="o">=</span> <span class="s">"Hello, world!"</span><span class="p">;</span>
 
 <span class="c1">// Or into an array:</span>
 <span class="kt">char</span> <span class="n">t</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"This is the secret message"</span><span class="p">;</span>
 <span class="kt">char</span> <span class="o">*</span><span class="n">u</span> <span class="o">=</span> <span class="n">t</span><span class="p">;</span> <span class="c1">// t and u both refer to the same string</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h4 id="functions">Functions</h4>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="c1">// Function that accepts an int, a float, and retuns a double</span>
+                <h4 id="functions">Functions</h4>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="c1">// Function that accepts an int, a float, and retuns a double</span>
 
 <span class="kt">double</span> <span class="nf">analyze_data</span><span class="p">(</span><span class="kt">int</span> <span class="n">d</span><span class="p">,</span> <span class="kt">float</span> <span class="n">f</span><span class="p">)</span>
 <span class="p">{</span>
@@ -703,13 +884,15 @@
     <span class="k">return</span> <span class="n">len</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h4 id="flow-control">Flow Control</h4>
-              <p>Works just like JavaScript for the most part:</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>    <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+                <h4 id="flow-control">Flow Control</h4>
+                <p>Works just like JavaScript for the most part:</p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// ...</span>
     <span class="p">}</span>
 
@@ -725,13 +908,18 @@
         <span class="c1">// ...</span>
     <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">);</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h5>Follow Along</h5>
-              <p>Write a function that accepts two arguments and returns the sum.</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+                <h5>Follow Along</h5>
+                <p>
+                  Write a function that accepts two arguments and returns the
+                  sum.
+                </p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="cp">#include &lt;stdio.h&gt;
 </span>
 <span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
 <span class="p">{</span>
@@ -747,109 +935,187 @@
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Compiling and running:</p>
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>gcc -Wall -Wextra -o add add.c
+                <p>Compiling and running:</p>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>gcc -Wall -Wextra -o add add.c
 
 ./add
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Note that the <code class="highlighter-rouge">-Wall</code> flag turns on all warnings. The <code
-                  class="highlighter-rouge">-Wextra</code> flag turns on extra warnings.</p>
-              <h5>Challenge</h5>
-              <p>Write a function called <code class="highlighter-rouge">intsqrt</code> that accepts an <code
-                  class="highlighter-rouge">int</code> as an argument, computes the square root of the argument, and
-                returns the result as a <code class="highlighter-rouge">double</code>.</p>
-              <p>Use Google-fu to help find the answer.</p>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to describe how a computer's memory model works and how pointers relate to
-                this memory model in C</h4>
-              <p>One of the main differences between C and other languages students have utilized over the course of
-                Lambda School is that C explicitly manipulates memory addresses and the values those memory addresses
-                point to. This is done for a number of reasons:</p>
-              <ul>
-                <li>
-                  <p>Pointers allow us to separate the actual reference from the value, which can be useful when we want
-                    to pass values around. Instead of always having to copy the value around in order to pass it, we can
-                    just pass the pointer to the value.</p>
-                </li>
-                <li>
-                  <p>Functions in C only permit one return value. If we need to return multiple values from a function,
-                    this issue can be circumvented by having the function return a pointer to all of the desired return
-                    values.</p>
-                </li>
-                <li>
-                  <p>Pointers allow us to circumvent always needing to know up-front how much memory we want allocated
-                    in a string or array, since pointers themselves have fixed sizes, and yet they can refer to some
-                    value of arbitrary size and that we may not know the size of up-front.</p>
-                </li>
-              </ul>
-              <h5>Overview</h5>
-              <p>The C programming language is very much concerned with working with and manipulating memory. Memory, or
-                RAM, can be thought of as nothing more than a giant array. When we work with arrays, there’s always two
-                parts: the value we’re storing in the array, along with the index at which the value is stored at in the
-                array.</p>
-              <p>Since memory is just a giant array, we’ll need to be cognizant of these same two concepts, the value
-                and its associated index, when working in C.</p>
-              <h3 id="when-do-you-not-need-to-use-pointers">When Do You Not Need to Use Pointers?</h3>
-              <p>Pointers are only explicitly necessary when working with values of dynamic sizes. The most common
-                use-cases are when working with arrays, strings, and structs, because these often hold other pieces of
-                data, and we might not know the sizes of those other pieces of data up-front.</p>
-              <p>However, when working with values where we already know their size up-front, we don’t need to use
-                pointers. When working with integers, floats, and chars, we don’t need to take a pointer to these
-                because the C compiler always knows how large an integer is. In other words, the size of the integer
-                doesn’t inform its size. An <code class="highlighter-rouge">int</code> type (or <code
-                  class="highlighter-rouge">float</code>, or <code class="highlighter-rouge">double</code>, etc.) has a
-                ceiling up to which it can store any integer value. So long as the integer we’re storing doesn’t exceed
-                that ceiling, the size of the integer is known to the C compiler.</p>
-              <p>To put it another way, pointers allow us to reference a value of an arbitrary type using a reference of
-                a known size. The compiler always knows the size of a pointer, even if it doesn’t know the size of
-                whatever that pointer is pointing to.</p>
-              <h5>Follow Along</h5>
-              <p>Here’s an example of how to declare a pointer:</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>    <span class="kt">char</span> <span class="o">*</span><span class="n">str</span> <span class="o">=</span> <span class="s">"I'm a string!"</span><span class="p">;</span>
+                <p>
+                  Note that the
+                  <code class="highlighter-rouge">-Wall</code> flag turns on all
+                  warnings. The
+                  <code class="highlighter-rouge">-Wextra</code> flag turns on
+                  extra warnings.
+                </p>
+                <h5>Challenge</h5>
+                <p>
+                  Write a function called
+                  <code class="highlighter-rouge">intsqrt</code> that accepts an
+                  <code class="highlighter-rouge">int</code> as an argument,
+                  computes the square root of the argument, and returns the
+                  result as a <code class="highlighter-rouge">double</code>.
+                </p>
+                <p>Use Google-fu to help find the answer.</p>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to describe how a computer's memory model works and how
+                  pointers relate to this memory model in C
+                </h4>
+                <p>
+                  One of the main differences between C and other languages
+                  students have utilized over the course of Lambda School is
+                  that C explicitly manipulates memory addresses and the values
+                  those memory addresses point to. This is done for a number of
+                  reasons:
+                </p>
+                <ul>
+                  <li>
+                    <p>
+                      Pointers allow us to separate the actual reference from
+                      the value, which can be useful when we want to pass values
+                      around. Instead of always having to copy the value around
+                      in order to pass it, we can just pass the pointer to the
+                      value.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Functions in C only permit one return value. If we need to
+                      return multiple values from a function, this issue can be
+                      circumvented by having the function return a pointer to
+                      all of the desired return values.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Pointers allow us to circumvent always needing to know
+                      up-front how much memory we want allocated in a string or
+                      array, since pointers themselves have fixed sizes, and yet
+                      they can refer to some value of arbitrary size and that we
+                      may not know the size of up-front.
+                    </p>
+                  </li>
+                </ul>
+                <h5>Overview</h5>
+                <p>
+                  The C programming language is very much concerned with working
+                  with and manipulating memory. Memory, or RAM, can be thought
+                  of as nothing more than a giant array. When we work with
+                  arrays, there’s always two parts: the value we’re storing in
+                  the array, along with the index at which the value is stored
+                  at in the array.
+                </p>
+                <p>
+                  Since memory is just a giant array, we’ll need to be cognizant
+                  of these same two concepts, the value and its associated
+                  index, when working in C.
+                </p>
+                <h3 id="when-do-you-not-need-to-use-pointers">
+                  When Do You Not Need to Use Pointers?
+                </h3>
+                <p>
+                  Pointers are only explicitly necessary when working with
+                  values of dynamic sizes. The most common use-cases are when
+                  working with arrays, strings, and structs, because these often
+                  hold other pieces of data, and we might not know the sizes of
+                  those other pieces of data up-front.
+                </p>
+                <p>
+                  However, when working with values where we already know their
+                  size up-front, we don’t need to use pointers. When working
+                  with integers, floats, and chars, we don’t need to take a
+                  pointer to these because the C compiler always knows how large
+                  an integer is. In other words, the size of the integer doesn’t
+                  inform its size. An
+                  <code class="highlighter-rouge">int</code> type (or
+                  <code class="highlighter-rouge">float</code>, or
+                  <code class="highlighter-rouge">double</code>, etc.) has a
+                  ceiling up to which it can store any integer value. So long as
+                  the integer we’re storing doesn’t exceed that ceiling, the
+                  size of the integer is known to the C compiler.
+                </p>
+                <p>
+                  To put it another way, pointers allow us to reference a value
+                  of an arbitrary type using a reference of a known size. The
+                  compiler always knows the size of a pointer, even if it
+                  doesn’t know the size of whatever that pointer is pointing to.
+                </p>
+                <h5>Follow Along</h5>
+                <p>Here’s an example of how to declare a pointer:</p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="kt">char</span> <span class="o">*</span><span class="n">str</span> <span class="o">=</span> <span class="s">"I'm a string!"</span><span class="p">;</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>We can print out the actual <em>address</em>, which is the value of the pointer itself, like so:</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>    <span class="n">printf</span><span class="p">(</span><span class="s">"%p</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
+                <p>
+                  We can print out the actual <em>address</em>, which is the
+                  value of the pointer itself, like so:
+                </p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="n">printf</span><span class="p">(</span><span class="s">"%p</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>And we can print out the value that the address is pointing to like so:</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>    <span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="n">str</span><span class="p">);</span>
+                <p>
+                  And we can print out the value that the address is pointing to
+                  like so:
+                </p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="n">str</span><span class="p">);</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Here we’re using the asterisk again. When the asterisk isn’t used in a variable declaration, it takes
-                on an entirely new meaning. In this case, it’s <em>dereferencing</em> the pointer, which means it’s
-                getting the value (in this case a single character) that the pointer is pointing to.</p>
-              <p>We can print out the <em>entire string</em>, by using the string placeholder (%s) and passing a pointer
-                to our printf() function., like so:</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>    <span class="n">printf</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
+                <p>
+                  Here we’re using the asterisk again. When the asterisk isn’t
+                  used in a variable declaration, it takes on an entirely new
+                  meaning. In this case, it’s <em>dereferencing</em> the
+                  pointer, which means it’s getting the value (in this case a
+                  single character) that the pointer is pointing to.
+                </p>
+                <p>
+                  We can print out the <em>entire string</em>, by using the
+                  string placeholder (%s) and passing a pointer to our printf()
+                  function., like so:
+                </p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="n">printf</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Printf() will begin at the address you pass via pointer and iterate through all of the characters it
-                finds, printing them out until it reaches the terminating character \0</p>
-              <h5>Challenge</h5>
-              <p>Take a look at the following code. At each line, write down what each variable is referring to (i.e. is
-                it referring to a value, or an address?).</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">z</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+                <p>
+                  Printf() will begin at the address you pass via pointer and
+                  iterate through all of the characters it finds, printing them
+                  out until it reaches the terminating character \0
+                </p>
+                <h5>Challenge</h5>
+                <p>
+                  Take a look at the following code. At each line, write down
+                  what each variable is referring to (i.e. is it referring to a
+                  value, or an address?).
+                </p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">z</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
     <span class="kt">int</span> <span class="o">*</span><span class="n">ip</span><span class="p">;</span>
 
     <span class="n">ip</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>         <span class="c1">// What is ip here?</span>
@@ -857,240 +1123,421 @@
     <span class="o">*</span><span class="n">ip</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>          <span class="c1">// What is ip here now? What is x now?</span>
     <span class="n">ip</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>    <span class="c1">// What is ip now?</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to utilize pointers appropriately in order to work with dynamic memory
-              </h4>
-              <p>Now that students have a fundamental understanding of what pointers are and how to initialize them,
-                they need to practice using pointers in appropriate contexts.</p>
-              <p>Some examples of these appropriate contexts include:</p>
-              <ul>
-                <li>Using the <code class="highlighter-rouge">malloc</code> system call in order to allocate dynamic
-                  memory on the heap.</li>
-                <li>Passing pointers as function parameters.</li>
-              </ul>
-              <h5>Overview</h5>
-              <p>Now that we’ve talked about what pointers are, how they’re created / initialized, and how to
-                dereference them, it’s time to talk about the situations in which we would apply pointers. But first
-                off, let’s talk about pointer arithmetic.</p>
-              <h3 id="pointer-arithmetic">Pointer Arithmetic</h3>
-              <p>One of the neat features of pointers is that they can be incremented, just like array indices can be
-                incremented in order to access subsequent slots in an array. Take a look at the following code:</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>    <span class="kt">char</span> <span class="o">*</span><span class="n">str</span> <span class="o">=</span> <span class="s">"supercalifragilisticexpialidocious"</span><span class="p">;</span>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to utilize pointers appropriately in order to work with
+                  dynamic memory
+                </h4>
+                <p>
+                  Now that students have a fundamental understanding of what
+                  pointers are and how to initialize them, they need to practice
+                  using pointers in appropriate contexts.
+                </p>
+                <p>Some examples of these appropriate contexts include:</p>
+                <ul>
+                  <li>
+                    Using the
+                    <code class="highlighter-rouge">malloc</code> system call in
+                    order to allocate dynamic memory on the heap.
+                  </li>
+                  <li>Passing pointers as function parameters.</li>
+                </ul>
+                <h5>Overview</h5>
+                <p>
+                  Now that we’ve talked about what pointers are, how they’re
+                  created / initialized, and how to dereference them, it’s time
+                  to talk about the situations in which we would apply pointers.
+                  But first off, let’s talk about pointer arithmetic.
+                </p>
+                <h3 id="pointer-arithmetic">Pointer Arithmetic</h3>
+                <p>
+                  One of the neat features of pointers is that they can be
+                  incremented, just like array indices can be incremented in
+                  order to access subsequent slots in an array. Take a look at
+                  the following code:
+                </p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="kt">char</span> <span class="o">*</span><span class="n">str</span> <span class="o">=</span> <span class="s">"supercalifragilisticexpialidocious"</span><span class="p">;</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="n">str</span><span class="p">);</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">str</span> <span class="o">+</span> <span class="mi">1</span><span class="p">));</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>The <code class="highlighter-rouge">str</code> pointer initially points to the first character of the
-                string, “s” in this case. We can advance the pointer by one spot so that it refers to the next character
-                in the string “u”. The parentheses are needed here because typically the dereference operator takes
-                precedence over arithmetic operations, but in this case we specifically want the addition operation to
-                happen before the dereference.</p>
-              <h3 id="the-stack-and-the-heap">The Stack and the Heap</h3>
-              <p>Up till this point, all of the variables and data that we’ve been initializing in our C programs has
-                been living in a portion of memory called the Stack. It’s called the Stack because it exhibits Last In
-                First Out ordering, just like a stack data structure does.</p>
-              <p>The Stack is the portion of memory where function stack frames are stored. Function stack frames are
-                essentially how your machine represents function calls. All of a function’s parameters, variables, and
-                local data are stored in a stack frame on the Stack. If you’ve heard of the term “stack trace”, that is
-                referring to when an error occurs in a function. The Stack is “unwound”, as in all of the stack frames
-                on the Stack are popped off in LIFO order, starting with the most-recent stack frame (the one in which
-                the error occurred). This is how error messages are propagated.</p>
-              <p>You can think of the Stack as a very temporary form of storage. Data that is local to functions goes on
-                the Stack, and when the stack frame for the function is popped off the Stack, that local data is
-                automatically reclaimed. Sometimes though we want the lifetime of some data to not be tied to a
-                function’s scope, notably things like data structures, which are oftentimes accessed by many functions.
-              </p>
-              <p>To accommodate for this use case, there’s a separate portion of memory specifically for data that needs
-                to live past the lifetime of any function. This portion of memory is called the Heap, not to be confused
-                with the heap data structure. Unlike the Stack and the stack data structure, which do share
-                similarities, the Heap and the heap data structure share name only; the Heap does not exhibit the same
-                properties as a heap data structure.</p>
-              <p>Data that lives in the Heap either lives as long as the program that initialized the memory, or until
-                it is explicitly freed by the developer in the same program. Unlike data that lives on the Stack, Heap
-                memory must be explicitly requested and explicitly freed. This makes the Heap ideal for storing data
-                that needs to live longer than just the scope of a single function, or simply for data that the
-                developer wants finer-grained control in terms of when that memory is freed.</p>
-              <h3 id="memory-allocation">Memory Allocation</h3>
-              <p>One of the most prevalent use-cases of pointers is memory allocation. Memory allocation is facilitated
-                via the <code class="highlighter-rouge">malloc</code> system call, which requests and returns a chunk of
-                memory on the Heap. Given a parameter that indicates how many bytes of memory the user wants, <code
-                  class="highlighter-rouge">malloc</code> fetches a contiguous chunk of memory that satisfies the
-                request size criteria and then returns a pointer to the first spot of the allocated block. From there,
-                the user is able to fill this contiguous block with data.</p>
-              <p><code class="highlighter-rouge">malloc</code> returns a pointer instead of the actual block of memory
-                because the block of memory can be of <em>any</em> arbitrary size, since the user gets to request how
-                large of a block they want. For large chunks of memory, it would be a lot of work to pass a possibly
-                huge chunk of memory around. Instead, <code class="highlighter-rouge">malloc</code> just passes an
-                address to the beginning of the block because pointers are comparatively much more compact and portable.
-              </p>
-              <h3 id="passing-pointers-to-functions">Passing Pointers to Functions</h3>
-              <p>If you’re familiar with the notion of passing by reference (and you should be), C makes this much more
-                explicit than languages like Python and JavaScript, where there isn’t an explicit concept of pointers.
-                Since pointers <em>are</em> references, any time we pass a pointer to a function we’re passing by
-                reference. This is useful if whenever we’re passing large arrays, strings, and / or objects to
-                functions, since it’s a lot cheaper to just pass a reference than actually passing the whole thing,
-                which would necessitate copying.</p>
-              <p>So when we pass a reference to something into a function and then mutate that thing inside the
-                function, the mutated thing retains those updates outside the scope of the function. Also, we don’t
-                actually need to explicitly return the pointer to the mutated thing.</p>
-              <h5>Follow Along</h5>
-              <h3 id="pointer-arithmetic">Pointer Arithmetic</h3>
-              <p>Going off of the earlier supercalifragilisticexpialidocious string example, we can write a loop to
-                print out every single character separately:</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>    <span class="kt">char</span> <span class="o">*</span><span class="n">str</span> <span class="o">=</span> <span class="s">"supercalifragilisticexpialidocious"</span><span class="p">;</span>
+                <p>
+                  The <code class="highlighter-rouge">str</code> pointer
+                  initially points to the first character of the string, “s” in
+                  this case. We can advance the pointer by one spot so that it
+                  refers to the next character in the string “u”. The
+                  parentheses are needed here because typically the dereference
+                  operator takes precedence over arithmetic operations, but in
+                  this case we specifically want the addition operation to
+                  happen before the dereference.
+                </p>
+                <h3 id="the-stack-and-the-heap">The Stack and the Heap</h3>
+                <p>
+                  Up till this point, all of the variables and data that we’ve
+                  been initializing in our C programs has been living in a
+                  portion of memory called the Stack. It’s called the Stack
+                  because it exhibits Last In First Out ordering, just like a
+                  stack data structure does.
+                </p>
+                <p>
+                  The Stack is the portion of memory where function stack frames
+                  are stored. Function stack frames are essentially how your
+                  machine represents function calls. All of a function’s
+                  parameters, variables, and local data are stored in a stack
+                  frame on the Stack. If you’ve heard of the term “stack trace”,
+                  that is referring to when an error occurs in a function. The
+                  Stack is “unwound”, as in all of the stack frames on the Stack
+                  are popped off in LIFO order, starting with the most-recent
+                  stack frame (the one in which the error occurred). This is how
+                  error messages are propagated.
+                </p>
+                <p>
+                  You can think of the Stack as a very temporary form of
+                  storage. Data that is local to functions goes on the Stack,
+                  and when the stack frame for the function is popped off the
+                  Stack, that local data is automatically reclaimed. Sometimes
+                  though we want the lifetime of some data to not be tied to a
+                  function’s scope, notably things like data structures, which
+                  are oftentimes accessed by many functions.
+                </p>
+                <p>
+                  To accommodate for this use case, there’s a separate portion
+                  of memory specifically for data that needs to live past the
+                  lifetime of any function. This portion of memory is called the
+                  Heap, not to be confused with the heap data structure. Unlike
+                  the Stack and the stack data structure, which do share
+                  similarities, the Heap and the heap data structure share name
+                  only; the Heap does not exhibit the same properties as a heap
+                  data structure.
+                </p>
+                <p>
+                  Data that lives in the Heap either lives as long as the
+                  program that initialized the memory, or until it is explicitly
+                  freed by the developer in the same program. Unlike data that
+                  lives on the Stack, Heap memory must be explicitly requested
+                  and explicitly freed. This makes the Heap ideal for storing
+                  data that needs to live longer than just the scope of a single
+                  function, or simply for data that the developer wants
+                  finer-grained control in terms of when that memory is freed.
+                </p>
+                <h3 id="memory-allocation">Memory Allocation</h3>
+                <p>
+                  One of the most prevalent use-cases of pointers is memory
+                  allocation. Memory allocation is facilitated via the
+                  <code class="highlighter-rouge">malloc</code> system call,
+                  which requests and returns a chunk of memory on the Heap.
+                  Given a parameter that indicates how many bytes of memory the
+                  user wants,
+                  <code class="highlighter-rouge">malloc</code> fetches a
+                  contiguous chunk of memory that satisfies the request size
+                  criteria and then returns a pointer to the first spot of the
+                  allocated block. From there, the user is able to fill this
+                  contiguous block with data.
+                </p>
+                <p>
+                  <code class="highlighter-rouge">malloc</code> returns a
+                  pointer instead of the actual block of memory because the
+                  block of memory can be of <em>any</em> arbitrary size, since
+                  the user gets to request how large of a block they want. For
+                  large chunks of memory, it would be a lot of work to pass a
+                  possibly huge chunk of memory around. Instead,
+                  <code class="highlighter-rouge">malloc</code> just passes an
+                  address to the beginning of the block because pointers are
+                  comparatively much more compact and portable.
+                </p>
+                <h3 id="passing-pointers-to-functions">
+                  Passing Pointers to Functions
+                </h3>
+                <p>
+                  If you’re familiar with the notion of passing by reference
+                  (and you should be), C makes this much more explicit than
+                  languages like Python and JavaScript, where there isn’t an
+                  explicit concept of pointers. Since pointers
+                  <em>are</em> references, any time we pass a pointer to a
+                  function we’re passing by reference. This is useful if
+                  whenever we’re passing large arrays, strings, and / or objects
+                  to functions, since it’s a lot cheaper to just pass a
+                  reference than actually passing the whole thing, which would
+                  necessitate copying.
+                </p>
+                <p>
+                  So when we pass a reference to something into a function and
+                  then mutate that thing inside the function, the mutated thing
+                  retains those updates outside the scope of the function. Also,
+                  we don’t actually need to explicitly return the pointer to the
+                  mutated thing.
+                </p>
+                <h5>Follow Along</h5>
+                <h3 id="pointer-arithmetic">Pointer Arithmetic</h3>
+                <p>
+                  Going off of the earlier supercalifragilisticexpialidocious
+                  string example, we can write a loop to print out every single
+                  character separately:
+                </p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="kt">char</span> <span class="o">*</span><span class="n">str</span> <span class="o">=</span> <span class="s">"supercalifragilisticexpialidocious"</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">len</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>    <span class="c1">// find the length of the string</span>
 
     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">str</span><span class="o">+</span><span class="n">i</span><span class="p">));</span>
     <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>One thing to note about the pointer arithmetic syntax is that it’s equivalent to the familiar array
-                indexing syntax that uses brackets. We can rewrite the for loop like this:</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <p>
+                  One thing to note about the pointer arithmetic syntax is that
+                  it’s equivalent to the familiar array indexing syntax that
+                  uses brackets. We can rewrite the for loop like this:
+                </p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
     <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>This implies then that the expressions <code class="highlighter-rouge">*(str+i)</code> and <code
-                  class="highlighter-rouge">str[i]</code> are equivalent. Indeed, the bracket notation is simply
-                syntactic sugar on top of the pointer arithmetic syntax.</p>
-              <h3 id="using-malloc">Using <code class="highlighter-rouge">malloc</code>
-              </h3>
-              <p>The following are examples of using <code class="highlighter-rouge">malloc</code>:</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>    <span class="kt">int</span> <span class="o">*</span><span class="mi">100</span><span class="n">_ints</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="nf">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+                <p>
+                  This implies then that the expressions
+                  <code class="highlighter-rouge">*(str+i)</code> and
+                  <code class="highlighter-rouge">str[i]</code> are equivalent.
+                  Indeed, the bracket notation is simply syntactic sugar on top
+                  of the pointer arithmetic syntax.
+                </p>
+                <h3 id="using-malloc">
+                  Using <code class="highlighter-rouge">malloc</code>
+                </h3>
+                <p>
+                  The following are examples of using
+                  <code class="highlighter-rouge">malloc</code>:
+                </p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="kt">int</span> <span class="o">*</span><span class="mi">100</span><span class="n">_ints</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="nf">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
     <span class="kt">char</span> <span class="o">*</span><span class="mi">50</span><span class="n">_chars</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="mi">50</span> <span class="o">*</span> <span class="nf">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">));</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>In both of the these cases, the variables <code class="highlighter-rouge">100_ints</code> and <code
-                  class="highlighter-rouge">50_chars</code> are pointers that are pointing to blocks of memory of their
-                respective requested sizes, but these blocks haven’t been filled in with anything yet.</p>
-              <p>We could then go and fill in the <code class="highlighter-rouge">malloc</code>‘d block of memory with
-                data like so:</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <p>
+                  In both of the these cases, the variables
+                  <code class="highlighter-rouge">100_ints</code> and
+                  <code class="highlighter-rouge">50_chars</code> are pointers
+                  that are pointing to blocks of memory of their respective
+                  requested sizes, but these blocks haven’t been filled in with
+                  anything yet.
+                </p>
+                <p>
+                  We could then go and fill in the
+                  <code class="highlighter-rouge">malloc</code>‘d block of
+                  memory with data like so:
+                </p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
         <span class="o">*</span><span class="p">(</span><span class="mi">100</span><span class="n">_ints</span><span class="o">+</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">rand</span><span class="p">();</span>    <span class="c1">// fill the ith slot with a random int</span>
     <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Another important thing to note is that whenever you allocate memory with <code
-                  class="highlighter-rouge">malloc</code>, you need to garbage collect that memory when you’re done with
-                it. This is as simple as calling the <code class="highlighter-rouge">free</code> function, which takes
-                as its only parameter a pointer to <code class="highlighter-rouge">malloc</code>‘d memory. That memory
-                is then freed so that it can be used by other processes.</p>
-              <h3 id="passing-pointers-to-functions">Passing Pointers to Functions</h3>
-              <p>Let’s take a look at the following function that performs element-wise addition on two input integer
-                arrays:</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>    <span class="kt">void</span> <span class="nf">element_wise_add</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">result</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="n">len</span><span class="p">)</span>
+                <p>
+                  Another important thing to note is that whenever you allocate
+                  memory with <code class="highlighter-rouge">malloc</code>, you
+                  need to garbage collect that memory when you’re done with it.
+                  This is as simple as calling the
+                  <code class="highlighter-rouge">free</code> function, which
+                  takes as its only parameter a pointer to
+                  <code class="highlighter-rouge">malloc</code>‘d memory. That
+                  memory is then freed so that it can be used by other
+                  processes.
+                </p>
+                <h3 id="passing-pointers-to-functions">
+                  Passing Pointers to Functions
+                </h3>
+                <p>
+                  Let’s take a look at the following function that performs
+                  element-wise addition on two input integer arrays:
+                </p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="kt">void</span> <span class="nf">element_wise_add</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">result</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="n">len</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="o">*</span><span class="p">(</span><span class="n">result</span><span class="o">+</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="n">i</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>In this example, since every parameter to the function except for the length is a pointer, there’s no
-                need to copy any of the integer arrays into the body of the function. Only the addresses where each
-                array is located is copied in the function’s scope, and we can access the underlying array values by
-                dereferencing the pointers. Note that our function can just have a return type of <code
-                  class="highlighter-rouge">void</code> since nothing needs to be returned from the function in order
-                for us to see the changes performed by the function.</p>
-              <h5>Challenge</h5>
-              <ol>
-                <li>
-                  <p>Write a C function <code class="highlighter-rouge">matrix_alloc</code> that receives two integer
-                    parameters <code class="highlighter-rouge">cols</code> and <code
-                      class="highlighter-rouge">rows</code> and have your function allocate a two-dimensional array of
-                    integers. Here, the parameter <code class="highlighter-rouge">cols</code> specifies the number of
-                    columns of the allocated matrix, and <code class="highlighter-rouge">rows</code> represents the
-                    number of rows. What will be the return type of this function?</p>
-                </li>
-                <li>
-                  <p>Write a function <code class="highlighter-rouge">matrix_free</code> that receives a matrix created
-                    by <code class="highlighter-rouge">matrix_alloc</code> and frees it.</p>
-                </li>
-              </ol>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to use structs to create more complex composite types in C</h4>
-              <p>C provides us a way to create composite types from other pre-existing types. This is facilitated via
-                structs. Students will learn how to use structs to create new composite types and data structures.</p>
-              <h5>Overview</h5>
-              <p>So far, we’ve only been exposed to types that C provides to us by default. How do we create any new
-                types? How do we create data structures?</p>
-              <p>Luckily, C provides us with structs. Structs allow us to create new types that are composites of other
-                existing types. Using this, we can create new types as well as data structures.</p>
-              <h5>Follow Along</h5>
-              <h3 id="an-example-struct-definition">An Example Struct Definition</h3>
-              <p>Let’s say we wanted to create a Person type that stored a person’s name, age, and weight. We could do
-                that with a struct:</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>    <span class="k">struct</span> <span class="n">Person</span> <span class="p">{</span>
+                <p>
+                  In this example, since every parameter to the function except
+                  for the length is a pointer, there’s no need to copy any of
+                  the integer arrays into the body of the function. Only the
+                  addresses where each array is located is copied in the
+                  function’s scope, and we can access the underlying array
+                  values by dereferencing the pointers. Note that our function
+                  can just have a return type of
+                  <code class="highlighter-rouge">void</code> since nothing
+                  needs to be returned from the function in order for us to see
+                  the changes performed by the function.
+                </p>
+                <h5>Challenge</h5>
+                <ol>
+                  <li>
+                    <p>
+                      Write a C function
+                      <code class="highlighter-rouge">matrix_alloc</code> that
+                      receives two integer parameters
+                      <code class="highlighter-rouge">cols</code> and
+                      <code class="highlighter-rouge">rows</code> and have your
+                      function allocate a two-dimensional array of integers.
+                      Here, the parameter
+                      <code class="highlighter-rouge">cols</code> specifies the
+                      number of columns of the allocated matrix, and
+                      <code class="highlighter-rouge">rows</code> represents the
+                      number of rows. What will be the return type of this
+                      function?
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Write a function
+                      <code class="highlighter-rouge">matrix_free</code> that
+                      receives a matrix created by
+                      <code class="highlighter-rouge">matrix_alloc</code> and
+                      frees it.
+                    </p>
+                  </li>
+                </ol>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to use structs to create more complex composite types in
+                  C
+                </h4>
+                <p>
+                  C provides us a way to create composite types from other
+                  pre-existing types. This is facilitated via structs. Students
+                  will learn how to use structs to create new composite types
+                  and data structures.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  So far, we’ve only been exposed to types that C provides to us
+                  by default. How do we create any new types? How do we create
+                  data structures?
+                </p>
+                <p>
+                  Luckily, C provides us with structs. Structs allow us to
+                  create new types that are composites of other existing types.
+                  Using this, we can create new types as well as data
+                  structures.
+                </p>
+                <h5>Follow Along</h5>
+                <h3 id="an-example-struct-definition">
+                  An Example Struct Definition
+                </h3>
+                <p>
+                  Let’s say we wanted to create a Person type that stored a
+                  person’s name, age, and weight. We could do that with a
+                  struct:
+                </p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="k">struct</span> <span class="n">Person</span> <span class="p">{</span>
         <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
         <span class="kt">float</span> <span class="n">weight</span><span class="p">;</span>
     <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Our Person struct is a conglomeration of multiple other types that each hold a piece of the final
-                composite type. We can not use this struct as a type in its own right, i.e., we can use it as a return
-                type to a function, as a type for declaring a variable, we can take pointers to it, etc.</p>
-              <p>One other thing we should add to this struct definition is the <code
-                  class="highlighter-rouge">typedef</code> keyword. This keyword simply allows us to define an alias for
-                an existing type. Without the <code class="highlighter-rouge">typedef</code> keyword, the official name
-                of our Person type is <code class="highlighter-rouge">struct Person</code>, meaning we’ll have to type
-                <code class="highlighter-rouge">struct Person</code> anywhere we’re using it as a type. We can make a
-                small tweak to the definition like so:</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>    <span class="k">typedef</span> <span class="k">struct</span> <span class="n">Person</span> <span class="p">{</span>
+                <p>
+                  Our Person struct is a conglomeration of multiple other types
+                  that each hold a piece of the final composite type. We can not
+                  use this struct as a type in its own right, i.e., we can use
+                  it as a return type to a function, as a type for declaring a
+                  variable, we can take pointers to it, etc.
+                </p>
+                <p>
+                  One other thing we should add to this struct definition is the
+                  <code class="highlighter-rouge">typedef</code> keyword. This
+                  keyword simply allows us to define an alias for an existing
+                  type. Without the
+                  <code class="highlighter-rouge">typedef</code> keyword, the
+                  official name of our Person type is
+                  <code class="highlighter-rouge">struct Person</code>, meaning
+                  we’ll have to type
+                  <code class="highlighter-rouge">struct Person</code> anywhere
+                  we’re using it as a type. We can make a small tweak to the
+                  definition like so:
+                </p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="k">typedef</span> <span class="k">struct</span> <span class="n">Person</span> <span class="p">{</span>
         <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
         <span class="kt">float</span> <span class="n">weight</span><span class="p">;</span>
     <span class="p">}</span> <span class="n">Person</span><span class="p">;</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Now, the official name for our Person type is just <code class="highlighter-rouge">Person</code>; we no
-                longer have to prepend the type with <code class="highlighter-rouge">struct</code>!</p>
-              <h3 id="creating-a-stack-using-structs">Creating a Stack using Structs</h3>
-              <p>We’ll use structs to create a new type that represents a stack data structure.</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>    <span class="k">typedef</span> <span class="k">struct</span> <span class="n">Stack</span> <span class="p">{</span>
+                <p>
+                  Now, the official name for our Person type is just
+                  <code class="highlighter-rouge">Person</code>; we no longer
+                  have to prepend the type with
+                  <code class="highlighter-rouge">struct</code>!
+                </p>
+                <h3 id="creating-a-stack-using-structs">
+                  Creating a Stack using Structs
+                </h3>
+                <p>
+                  We’ll use structs to create a new type that represents a stack
+                  data structure.
+                </p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="k">typedef</span> <span class="k">struct</span> <span class="n">Stack</span> <span class="p">{</span>
         <span class="kt">int</span> <span class="o">*</span><span class="n">storage</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">length</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">capacity</span><span class="p">;</span>
     <span class="p">}</span> <span class="n">Stack</span><span class="p">;</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Once we’ve defined our Stack type, we’ll need to write a function that actually creates an instance of
-                a stack, just like how we would do it in JS or Python. In the case of C, that function might look like
-                this:</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>    <span class="n">Stack</span> <span class="o">*</span><span class="nf">createStack</span><span class="p">(</span><span class="kt">int</span> <span class="n">capacity</span><span class="p">)</span>
+                <p>
+                  Once we’ve defined our Stack type, we’ll need to write a
+                  function that actually creates an instance of a stack, just
+                  like how we would do it in JS or Python. In the case of C,
+                  that function might look like this:
+                </p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="n">Stack</span> <span class="o">*</span><span class="nf">createStack</span><span class="p">(</span><span class="kt">int</span> <span class="n">capacity</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="n">Stack</span> <span class="o">*</span><span class="n">newStack</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">Stack</span><span class="p">));</span>
         <span class="n">newStack</span><span class="o">-&gt;</span><span class="n">storage</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="n">capacity</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
@@ -1099,90 +1546,167 @@
         <span class="k">return</span> <span class="n">newStack</span><span class="p">;</span>
     <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Similarly, we’ll want to write a method to free the memory that we allocated to create our stack.
-                Remember, every time we call <code class="highlighter-rouge">malloc</code>, we need to call the <code
-                  class="highlighter-rouge">free</code> function in order to free the allocated memory when we’re done
-                with it.</p>
-              <div class="language-c highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>    <span class="kt">void</span> <span class="nf">destroyStack</span><span class="p">(</span><span class="n">Stack</span> <span class="o">*</span><span class="n">stack</span><span class="p">)</span>
+                <p>
+                  Similarly, we’ll want to write a method to free the memory
+                  that we allocated to create our stack. Remember, every time we
+                  call <code class="highlighter-rouge">malloc</code>, we need to
+                  call the <code class="highlighter-rouge">free</code> function
+                  in order to free the allocated memory when we’re done with it.
+                </p>
+                <div class="language-c highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="kt">void</span> <span class="nf">destroyStack</span><span class="p">(</span><span class="n">Stack</span> <span class="o">*</span><span class="n">stack</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="n">free</span><span class="p">(</span><span class="n">stack</span><span class="o">-&gt;</span><span class="n">storage</span><span class="p">);</span>
         <span class="n">free</span><span class="p">(</span><span class="n">stack</span><span class="p">);</span>
     <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h5>Challenge</h5>
-              <p>Finish up the implementation of the Stack data structure we started implementing. It will need a <code
-                  class="highlighter-rouge">push</code> and <code class="highlighter-rouge">pop</code> method. How might
-                we need to implement these methods if C is not an object oriented language that has support for methods?
-              </p>
-              <hr>
-              <h2>
-                <a id="guided-project" class="anchor" href="#guided-project" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Guided Project</h2>
-              <h3>Intro to C</h3>
-              <p>Students’ first C repository that introduces them to important C concepts in a modular fashion by
-                having students complete modules that each focus on a single concept.</p>
-              <a target="_blank" href="https://github.com/LambdaSchool/Intro-to-C-Guided-Demo">GitHub Repo</a>
-              <hr>
-              <h2 class="display-4">
-                <a id="project" class="anchor" href="#project" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Project</h2>
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <h5><a target="_blank" href="https://github.com/LambdaSchool/Intro-to-C">Intro to C</a></h5>
-                  <p>Students’ first C repository that introduces them to important C concepts in a modular fashion by
-                    having students complete modules that each focus on a single concept.</p>
-                  <p>The prescribed order with which you should work on each module is:</p>
-                  <ol>
-                    <li>fizzbuzz</li>
-                    <li>strings</li>
-                    <li>pointers</li>
-                    <li>malloc</li>
-                    <li>structs</li>
-                    <li>queues</li>
-                    <li>quicksort</li>
-                  </ol>
-                  <p><code class="highlighter-rouge">cd</code> into each directory and work on each exercise. Run the
-                    included unit tests to ensure that your code works as expected. Once you’ve gotten all of the unit
-                    tests passing for the given directory, move on to the next one.</p>
-                </li>
-              </ul>
-              <h2 class="display-4">
-                <a id="review" class="anchor" href="#review" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Review</h2>
-              <h3 class="display-5">Class Recordings</h3>
-              <p class="lead">You can use class recordings to help you master the material.</p>
-              <div>
-                <ul class="list-group list-group-flush">
+                <h5>Challenge</h5>
+                <p>
+                  Finish up the implementation of the Stack data structure we
+                  started implementing. It will need a
+                  <code class="highlighter-rouge">push</code> and
+                  <code class="highlighter-rouge">pop</code> method. How might
+                  we need to implement these methods if C is not an object
+                  oriented language that has support for methods?
+                </p>
+                <hr />
+                <h2>
+                  <a
+                    id="guided-project"
+                    class="anchor"
+                    href="#guided-project"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Guided Project
+                </h2>
+                <h3>Intro to C</h3>
+                <p>
+                  Students’ first C repository that introduces them to important
+                  C concepts in a modular fashion by having students complete
+                  modules that each focus on a single concept.
+                </p>
+                <a
+                  target="_blank"
+                  href="https://github.com/LambdaSchool/Intro-to-C-Guided-Demo"
+                  >GitHub Repo</a
+                >
+                <hr />
+                <h2 class="display-4">
+                  <a
+                    id="project"
+                    class="anchor"
+                    href="#project"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Project
+                </h2>
+                <ul class="list-group">
                   <li class="list-group-item">
-                    <strong><a target="_blank" href="https://youtu.be/dboY-mb6GYc">Intro to C Day Two for WEB15
-                        w/Jonathan Brunt</a></strong>
-                    <p>Second day of intro to C. Pointer review, memory management, and data structures</p>
-                  </li>
-                  <li class="list-group-item">
-                    <a href="/archive/CSAnnex/module/recLymrrD7f46rdBa">All previous recordings</a>
+                    <h5>
+                      <a
+                        target="_blank"
+                        href="https://github.com/LambdaSchool/Intro-to-C"
+                        >Intro to C</a
+                      >
+                    </h5>
+                    <p>
+                      Students’ first C repository that introduces them to
+                      important C concepts in a modular fashion by having
+                      students complete modules that each focus on a single
+                      concept.
+                    </p>
+                    <p>
+                      The prescribed order with which you should work on each
+                      module is:
+                    </p>
+                    <ol>
+                      <li>fizzbuzz</li>
+                      <li>strings</li>
+                      <li>pointers</li>
+                      <li>malloc</li>
+                      <li>structs</li>
+                      <li>queues</li>
+                      <li>quicksort</li>
+                    </ol>
+                    <p>
+                      <code class="highlighter-rouge">cd</code> into each
+                      directory and work on each exercise. Run the included unit
+                      tests to ensure that your code works as expected. Once
+                      you’ve gotten all of the unit tests passing for the given
+                      directory, move on to the next one.
+                    </p>
                   </li>
                 </ul>
-              </div>
-              <h3 class="display-5">Demonstrate Mastery</h3>
-              <p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the
-                following:</p>
-              <ul>
-                <li>Objective challenge: <p>Write a function called <code class="highlighter-rouge">intsqrt</code> that
-                    accepts an <code class="highlighter-rouge">int</code> as an argument, computes the square root of
-                    the argument, and returns the result as a <code class="highlighter-rouge">double</code>.</p>
-                  <p>Use Google-fu to help find the answer.</p>
-                </li>
-                <li>Objective challenge: <p>Take a look at the following code. At each line, write down what each
-                    variable is referring to (i.e. is it referring to a value, or an address?).</p>
-                  <div class="language-c highlighter-rouge">
-                    <div class="highlight">
-                      <pre class="highlight"><code>    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">z</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+                <h2 class="display-4">
+                  <a
+                    id="review"
+                    class="anchor"
+                    href="#review"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Review
+                </h2>
+                <h3 class="display-5">Class Recordings</h3>
+                <p class="lead">
+                  You can use class recordings to help you master the material.
+                </p>
+                <div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong
+                        ><a target="_blank" href="https://youtu.be/dboY-mb6GYc"
+                          >Intro to C Day Two for WEB15 w/Jonathan Brunt</a
+                        ></strong
+                      >
+                      <p>
+                        Second day of intro to C. Pointer review, memory
+                        management, and data structures
+                      </p>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="/archive/CSAnnex/module/recLymrrD7f46rdBa"
+                        >All previous recordings</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <h3 class="display-5">Demonstrate Mastery</h3>
+                <p>
+                  To demonstrate mastery of this module, you need to complete
+                  and pass a code review on each of the following:
+                </p>
+                <ul>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      Write a function called
+                      <code class="highlighter-rouge">intsqrt</code> that
+                      accepts an <code class="highlighter-rouge">int</code> as
+                      an argument, computes the square root of the argument, and
+                      returns the result as a
+                      <code class="highlighter-rouge">double</code>.
+                    </p>
+                    <p>Use Google-fu to help find the answer.</p>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      Take a look at the following code. At each line, write
+                      down what each variable is referring to (i.e. is it
+                      referring to a value, or an address?).
+                    </p>
+                    <div class="language-c highlighter-rouge">
+                      <div class="highlight">
+                        <pre
+                          class="highlight"
+                        ><code>    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">z</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
     <span class="kt">int</span> <span class="o">*</span><span class="n">ip</span><span class="p">;</span>
 
     <span class="n">ip</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>         <span class="c1">// What is ip here?</span>
@@ -1190,216 +1714,259 @@
     <span class="o">*</span><span class="n">ip</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>          <span class="c1">// What is ip here now? What is x now?</span>
     <span class="n">ip</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>    <span class="c1">// What is ip now?</span>
 </code></pre>
+                      </div>
                     </div>
-                  </div>
-                </li>
-                <li>Objective challenge: <ol>
-                    <li>
-                      <p>Write a C function <code class="highlighter-rouge">matrix_alloc</code> that receives two
-                        integer parameters <code class="highlighter-rouge">cols</code> and <code
-                          class="highlighter-rouge">rows</code> and have your function allocate a two-dimensional array
-                        of integers. Here, the parameter <code class="highlighter-rouge">cols</code> specifies the
-                        number of columns of the allocated matrix, and <code class="highlighter-rouge">rows</code>
-                        represents the number of rows. What will be the return type of this function?</p>
-                    </li>
-                    <li>
-                      <p>Write a function <code class="highlighter-rouge">matrix_free</code> that receives a matrix
-                        created by <code class="highlighter-rouge">matrix_alloc</code> and frees it.</p>
-                    </li>
-                  </ol>
-                </li>
-                <li>Objective challenge: <p>Finish up the implementation of the Stack data structure we started
-                    implementing. It will need a <code class="highlighter-rouge">push</code> and <code
-                      class="highlighter-rouge">pop</code> method. How might we need to implement these methods if C is
-                    not an object oriented language that has support for methods?</p>
-                </li>
-                <li>Guided Project: Intro to C</li>
-                <li>Project: Intro to C</li>
-              </ul>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <ol>
+                      <li>
+                        <p>
+                          Write a C function
+                          <code class="highlighter-rouge">matrix_alloc</code>
+                          that receives two integer parameters
+                          <code class="highlighter-rouge">cols</code> and
+                          <code class="highlighter-rouge">rows</code> and have
+                          your function allocate a two-dimensional array of
+                          integers. Here, the parameter
+                          <code class="highlighter-rouge">cols</code> specifies
+                          the number of columns of the allocated matrix, and
+                          <code class="highlighter-rouge">rows</code> represents
+                          the number of rows. What will be the return type of
+                          this function?
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Write a function
+                          <code class="highlighter-rouge">matrix_free</code>
+                          that receives a matrix created by
+                          <code class="highlighter-rouge">matrix_alloc</code>
+                          and frees it.
+                        </p>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      Finish up the implementation of the Stack data structure
+                      we started implementing. It will need a
+                      <code class="highlighter-rouge">push</code> and
+                      <code class="highlighter-rouge">pop</code> method. How
+                      might we need to implement these methods if C is not an
+                      object oriented language that has support for methods?
+                    </p>
+                  </li>
+                  <li>Guided Project: Intro to C</li>
+                  <li>Project: Intro to C</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-        dataLayer.push( arguments );
-      }
-      gtag( 'js', new Date() );
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
 
-      gtag( 'config', 'UA-80850900-4' );
-    </script>
-    <script type="text/javascript">
-      function getDomain() {
-        const domainName = window.location.hostname.split( '.' )[ 1 ];
-        return `${domainName}.com`;
-      }
-    </script>
-    <script src="" integrity="" crossorigin="anonymous"></script>
-    <script>
-      window.jQuery || document.write( '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>' )
-    </script>
-    <script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script>
-    <script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
-    <script src="/assets/js/activate.js"></script>
-    <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      SimpleJekyllSearch.init( {
-        searchInput: document.getElementById( 'search-input' ),
-        resultsContainer: document.getElementById( 'results-container' ),
-        dataSource: '/search.json',
-        searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Introduction To C">{title}</a></li>',
-        noResultsText: '',
-        limit: 10,
-        fuzzy: true,
-      } )
-    </script>
-    <script src="/assets/js/mermaid.min.js"></script>
-    <script type="text/javascript">
-      if ( window.attachEvent ) {
-        window.attachEvent( 'onload', verifySignedIn );
-      } else {
-        if ( window.onload ) {
-          var currentOnLoadFn = window.onload;
-          var newOnLoadFn = function ( evt ) {
-            currentOnLoadFn( evt );
-            verifySignedIn();
-          };
-          window.onload = newOnLoadFn;
+        gtag("config", "UA-80850900-4");
+      </script>
+      <script type="text/javascript">
+        function getDomain() {
+          const domainName = window.location.hostname.split(".")[1];
+          return `${domainName}.com`;
+        }
+      </script>
+      <script src="" integrity="" crossorigin="anonymous"></script>
+      <script>
+        window.jQuery ||
+          document.write(
+            '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>'
+          );
+      </script>
+      <script
+        src="/assets/js/vendor/popper.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="/dist/js/bootstrap.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script src="/assets/js/activate.js"></script>
+      <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        SimpleJekyllSearch.init({
+          searchInput: document.getElementById("search-input"),
+          resultsContainer: document.getElementById("results-container"),
+          dataSource: "/search.json",
+          searchResultTemplate:
+            '<li class="list-group-item"><a href="{url}" title="Introduction To C">{title}</a></li>',
+          noResultsText: "",
+          limit: 10,
+          fuzzy: true,
+        });
+      </script>
+      <script src="/assets/js/mermaid.min.js"></script>
+      <script type="text/javascript">
+        if (window.attachEvent) {
+          window.attachEvent("onload", verifySignedIn);
         } else {
-          window.onload = verifySignedIn;
-        }
-      }
-
-      function verifySignedIn() {
-        if ( isPagePublic() ) {
-          return showPageContents();
-        }
-
-        window.__user = null;
-        isSignedIn().then( ( user ) => {
-          window.__user = user;
-
-          if ( !user.signedIn ) {
-            redirectToSignIn();
-          } else if ( !user.student && !window.__openToAdmissions ) {
-            showUnauthorizedMessage();
+          if (window.onload) {
+            var currentOnLoadFn = window.onload;
+            var newOnLoadFn = function (evt) {
+              currentOnLoadFn(evt);
+              verifySignedIn();
+            };
+            window.onload = newOnLoadFn;
           } else {
-            showPageContents();
-          }
-        } );
-      }
-
-      function isPagePublic() {
-        const openCourses = [
-          'and-pre',
-          'ds-pre',
-          'fsw-pre',
-          'help',
-          'ios-pre',
-        ];
-
-        const openPages = [
-          'cs-and',
-          'cs-fsw',
-          'cs-ios',
-          'cr',
-          'ds',
-          'jx',
-          'p4s',
-          'ux',
-        ];
-
-        const pathParts = window.location.pathname.split( '/' );
-        const courseName = pathParts[ 1 ];
-        const pageName = pathParts[ pathParts.length - 1 ];
-
-        return openCourses.includes( courseName ) || openPages.includes( pageName );
-      }
-
-      function isSignedIn() {
-        const isDeployPreview = window.location.hostname.startsWith( 'deploy-preview' ) && window.location.hostname
-          .endsWith( 'netlify.com' );
-
-        if ( isDeployPreview ) return Promise.resolve( {
-          signedIn: true,
-          student: true
-        } );
-
-        return fetch( `${getAuthBaseUrl()}/whoami`, {
-            credentials: 'include'
-          } )
-          .then( ( response ) => response.text() )
-          .then( ( userAsText ) => userAsText ? JSON.parse( userAsText ) : null )
-          .then( ( userData ) => ( {
-            signedIn: Boolean( userData ),
-            student: Boolean( userData && userData.airtableId ),
-            id: userData ? userData.id : null,
-            email: userData ? userData.email : null
-          } ) )
-          .catch( ( error ) => {} );
-      }
-
-      function redirectToSignIn() {
-        const signInUrl =
-          `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
-        const redirectMessage = document.querySelector( '#redirect-message' );
-        redirectMessage.style.display = "block";
-        redirectMessage.innerHTML =
-          `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
-        window.location = signInUrl;
-      }
-
-      function showPageContents() {
-        document.querySelector( '#content-wrapper' ).style.visibility = 'visible';
-      }
-
-      function showUnauthorizedMessage() {
-        document.querySelector( '#unauthorized-message' ).style.display = 'block';
-      }
-
-      function getAuthBaseUrl() {
-        const domain = getDomain();
-        const authBaseUrl = `https://auth.${domain}`;
-        return authBaseUrl;
-      }
-    </script>
-    <script src="/assets/js/docs.min.js"></script>
-    <script>
-      var MathJax = {
-        tex: {
-          inlineMath: [
-            [ '$$', '$$' ],
-            [ '\[', '\])' ]
-          ]
-        },
-        "HTML-CSS": {
-          styles: {
-            ".MathJax span": {
-              color: "#000000"
-            }
+            window.onload = verifySignedIn;
           }
         }
-      }
-    </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
-    </script>
-    <script>
-      handleExternalLinks();
 
-      function handleExternalLinks() {
-        const domain = getDomain();
-        const links = document.querySelectorAll( 'a' );
-        return links.forEach( ( link ) => {
-          if ( !link.host.includes( domain ) ) link.target = '_blank';
-        } )
-      };
-    </script>
-  </div>
-</body>
+        function verifySignedIn() {
+          if (isPagePublic()) {
+            return showPageContents();
+          }
 
+          window.__user = null;
+          isSignedIn().then((user) => {
+            window.__user = user;
+
+            if (!user.signedIn) {
+              redirectToSignIn();
+            } else if (!user.student && !window.__openToAdmissions) {
+              showUnauthorizedMessage();
+            } else {
+              showPageContents();
+            }
+          });
+        }
+
+        function isPagePublic() {
+          const openCourses = [
+            "and-pre",
+            "ds-pre",
+            "fsw-pre",
+            "help",
+            "ios-pre",
+          ];
+
+          const openPages = [
+            "cs-and",
+            "cs-fsw",
+            "cs-ios",
+            "cr",
+            "ds",
+            "jx",
+            "p4s",
+            "ux",
+          ];
+
+          const pathParts = window.location.pathname.split("/");
+          const courseName = pathParts[1];
+          const pageName = pathParts[pathParts.length - 1];
+
+          return (
+            openCourses.includes(courseName) || openPages.includes(pageName)
+          );
+        }
+
+        function isSignedIn() {
+          const isDeployPreview =
+            window.location.hostname.startsWith("deploy-preview") &&
+            window.location.hostname.endsWith("netlify.com");
+
+          if (isDeployPreview)
+            return Promise.resolve({
+              signedIn: true,
+              student: true,
+            });
+
+          return fetch(`${getAuthBaseUrl()}/whoami`, {
+            credentials: "include",
+          })
+            .then((response) => response.text())
+            .then((userAsText) => (userAsText ? JSON.parse(userAsText) : null))
+            .then((userData) => ({
+              signedIn: Boolean(userData),
+              student: Boolean(userData && userData.airtableId),
+              id: userData ? userData.id : null,
+              email: userData ? userData.email : null,
+            }))
+            .catch((error) => {});
+        }
+
+        function redirectToSignIn() {
+          const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(
+            window.location.href
+          )}&reason=auth_required`;
+          const redirectMessage = document.querySelector("#redirect-message");
+          redirectMessage.style.display = "block";
+          redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`;
+          window.location = signInUrl;
+        }
+
+        function showPageContents() {
+          document.querySelector("#content-wrapper").style.visibility =
+            "visible";
+        }
+
+        function showUnauthorizedMessage() {
+          document.querySelector("#unauthorized-message").style.display =
+            "block";
+        }
+
+        function getAuthBaseUrl() {
+          const domain = getDomain();
+          const authBaseUrl = `https://auth.${domain}`;
+          return authBaseUrl;
+        }
+      </script>
+      <script src="/assets/js/docs.min.js"></script>
+      <script>
+        var MathJax = {
+          tex: {
+            inlineMath: [
+              ["$$", "$$"],
+              ["\[", "\])"],
+            ],
+          },
+          "HTML-CSS": {
+            styles: {
+              ".MathJax span": {
+                color: "#000000",
+              },
+            },
+          },
+        };
+      </script>
+      <script
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+        type="text/javascript"
+      ></script>
+      <script>
+        handleExternalLinks();
+
+        function handleExternalLinks() {
+          const domain = getDomain();
+          const links = document.querySelectorAll("a");
+          return links.forEach((link) => {
+            if (!link.host.includes(domain)) link.target = "_blank";
+          });
+        }
+      </script>
+    </div>
+  </body>
 </html>

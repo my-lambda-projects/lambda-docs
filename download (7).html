@@ -1,481 +1,660 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Intended as a home for Lambda School curriculum."
+    />
+    <meta name="author" content="" />
+    <meta name="generator" content="Jekyll v3.8.0" />
+    <title>Intro CSS · Lambda School</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Intended as a home for Lambda School curriculum.">
-  <meta name="author" content="">
-  <meta name="generator" content="Jekyll v3.8.0">
-  <title>Intro CSS · Lambda School</title>
+    <link
+      rel="stylesheet"
+      integrity
+      crossorigin="anonymous"
+      href="https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css"
+    />
 
-  <link rel='stylesheet' integrity crossorigin='anonymous'
-    href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+    <link
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css"
+    />
 
-  <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-  <link rel='stylesheet'
-    href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css"
+    />
 
-  <link rel='stylesheet'
-    href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-122016605-1", "learn.lambdaschool.com");
+      ga("send", "pageview");
+    </script>
 
-  <script>
-    ( function ( i, s, o, g, r, a, m ) {
-      i[ 'GoogleAnalyticsObject' ] = r;
-      i[ r ] = i[ r ] || function () {
-        ( i[ r ].q = i[ r ].q || [] ).push( arguments )
-      }, i[ r ].l = 1 * new Date();
-      a = s.createElement( o ),
-        m = s.getElementsByTagName( o )[ 0 ];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore( a, m )
-    } )( window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga' );
-    ga( 'create', 'UA-122016605-1', 'learn.lambdaschool.com' );
-    ga( 'send', 'pageview' );
-  </script>
-
-  <script>
-    ! function () {
-      var analytics = window.analytics = window.analytics || [];
-      if ( !analytics.initialize )
-        if ( analytics.invoked ) window.console && console.error && console.error( "Segment snippet included twice." );
-        else {
-          analytics.invoked = !0;
-          analytics.methods = [ "trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset",
-            "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"
-          ];
-          analytics.factory = function ( t ) {
-            return function () {
-              var e = Array.prototype.slice.call( arguments );
-              e.unshift( t );
-              analytics.push( e );
-              return analytics
+    <script>
+      !(function () {
+        var analytics = (window.analytics = window.analytics || []);
+        if (!analytics.initialize)
+          if (analytics.invoked)
+            window.console &&
+              console.error &&
+              console.error("Segment snippet included twice.");
+          else {
+            analytics.invoked = !0;
+            analytics.methods = [
+              "trackSubmit",
+              "trackClick",
+              "trackLink",
+              "trackForm",
+              "pageview",
+              "identify",
+              "reset",
+              "group",
+              "track",
+              "ready",
+              "alias",
+              "debug",
+              "page",
+              "once",
+              "off",
+              "on",
+            ];
+            analytics.factory = function (t) {
+              return function () {
+                var e = Array.prototype.slice.call(arguments);
+                e.unshift(t);
+                analytics.push(e);
+                return analytics;
+              };
+            };
+            for (var t = 0; t < analytics.methods.length; t++) {
+              var e = analytics.methods[t];
+              analytics[e] = analytics.factory(e);
             }
-          };
-          for ( var t = 0; t < analytics.methods.length; t++ ) {
-            var e = analytics.methods[ t ];
-            analytics[ e ] = analytics.factory( e )
+            analytics.load = function (t, e) {
+              var n = document.createElement("script");
+              n.type = "text/javascript";
+              n.async = !0;
+              n.src =
+                "https://cdn.segment.com/analytics.js/v1/" +
+                t +
+                "/analytics.min.js";
+              var a = document.getElementsByTagName("script")[0];
+              a.parentNode.insertBefore(n, a);
+              analytics._loadOptions = e;
+            };
+            analytics.SNIPPET_VERSION = "4.1.0";
+            analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+            analytics.page();
           }
-          analytics.load = function ( t, e ) {
-            var n = document.createElement( "script" );
-            n.type = "text/javascript";
-            n.async = !0;
-            n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
-            var a = document.getElementsByTagName( "script" )[ 0 ];
-            a.parentNode.insertBefore( n, a );
-            analytics._loadOptions = e
-          };
-          analytics.SNIPPET_VERSION = "4.1.0";
-          analytics.load( "BjKorwKrSvMamfNoGkBq9rISk7wF6QQX" );
-          analytics.page();
-        }
-    }();
-  </script>
+      })();
+    </script>
 
-  <link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-  <link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="manifest" href="/assets/img/favicons/manifest.json">
-  <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
-  <link rel="icon" href="/favicon.ico">
-  <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
-  <meta name="theme-color" content="#a0001e">
-</head>
+    <link
+      rel="apple-touch-icon"
+      href="/assets/img/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/assets/img/favicons/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicons/safari-pinned-tab.svg"
+      color="#a0001e"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="msapplication-config"
+      content="/assets/img/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#a0001e" />
+  </head>
 
-<body>
-  <noscript>Please enable JavaScript to view this page.</noscript>
-  <div id="redirect-message" style="display: none;">
-    You must be logged in to view this page.
-  </div>
-  <div id="unauthorized-message" style="display: none;">
-    You must be a Lambda School student to view this page.
-  </div>
-  <div id="content-wrapper" style="visibility: hidden;">
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
-      <div class="container">
-        <span class="skiplink-text">Skip to main content</span>
-      </div>
-    </a>
-    <div class="mobile-menu">
-      <div class="m-drop">
-        <div class="mobile-row">
-          <div class="header-row" style="padding: 3px 7px">
-            <a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg"
-                width="33" height="35" viewBox="0 0 33 35" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
-                  fill="#EC3944" />
-              </svg></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu"
-              aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
-                <title>Menu</title>
-                <path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
-                  d="M4 7h22M4 15h22M4 23h22"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="nav-row">
-          <div class="results-container">
-            <ul id="results-container" class="dropdown list-group"></ul>
-          </div>
-          <div id="mobile-course-menu" class="collapse nav-row">
-            <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
-              <nav class="bd-links">
-                <div class="bd-toc-item">
-                  <h4 class="bd-toc-link">Web Fundamentals</h4>
-                </div>
-
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/web1/sprint/rec2neAvlo6zM07qc">
-                    1.&nbsp;&nbsp;User Interface and Git
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/web1/module/recl0IyzS2Vl89lZa/">
-                        User Interface
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web1/module/rect59e95N6OSvoCd/">
-                        Git for Web Development
-                      </a>
-                    </li>
-                    <li class="active bd-sidenav-active">
-                      <a href="/web1/module/rec6KMj0W3ukhYeWv/">
-                        Intro CSS
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web1/module/recYyDfYS2UmsvquL/">
-                        CSS Layouts
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/web1/sprint/recYAgtervk7WilBW">
-                    2.&nbsp;&nbsp;Advanced CSS and Intro JavaScript
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/web1/module/recUPpx89Z2uWzkzU/">
-                        Responsive Design
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web1/module/recPmaqIfzn9NMPLY/">
-                        Intro to JavaScript
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web1/module/recXRqGjyTS6uDzSA/">
-                        Arrays
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web1/module/recQV3tKcEDXa840D/">
-                        Objects
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/web1/sprint/recIS8D2e4nTRGCLT">
-                    3.&nbsp;&nbsp;JavaScript Fundamentals
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/web1/module/recrBjfZ9mBasSPpa/">
-                        Scope and Closure
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web1/module/recNilLQDqhqvPuNk/">
-                        Advanced Array Methods
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web1/module/rec0AWuNLezbpit7m/">
-                        Prototypes and Inheritance
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web1/module/recyS588eOvVUKAMc/">
-                        Classes
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/web1/sprint/rec2di8phTBw15e4E">
-                    4.&nbsp;&nbsp;WEB Unit 1 Build
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                  </ul>
-                </div>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
+  <body>
+    <noscript>Please enable JavaScript to view this page.</noscript>
+    <div id="redirect-message" style="display: none">
+      You must be logged in to view this page.
     </div>
-    <div class="main-container">
-      <div class="sidebar-container bd-sidebar">
-        <div class="docs-sidebar">
-          <a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197"
-              fill="#ec3944">
-              <g>
-                <path
-                  d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z">
-                </path>
-                <path
-                  d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z">
-                </path>
-                <path
-                  d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z">
-                </path>
-                <path
-                  d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z">
-                </path>
-                <path
-                  d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z">
-                </path>
-                <path
-                  d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z">
-                </path>
-              </g>
-              <path
-                d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z">
-              </path>
-            </svg></a>
-          <ul id="results-container" class="dropdown list-group"></ul>
-          <nav class="bd-links collapse" id="bd-docs-nav">
-            <div class="bd-toc-item">
-              <h4 class="bd-toc-link">Web Fundamentals</h4>
+    <div id="unauthorized-message" style="display: none">
+      You must be a Lambda School student to view this page.
+    </div>
+    <div id="content-wrapper" style="visibility: hidden">
+      <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+          <span class="skiplink-text">Skip to main content</span>
+        </div>
+      </a>
+      <div class="mobile-menu">
+        <div class="m-drop">
+          <div class="mobile-row">
+            <div class="header-row" style="padding: 3px 7px">
+              <a class="navbar-brand" href="/" aria-label="Lambda School"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="35"
+                  viewBox="0 0 33 35"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                    fill="#EC3944"
+                  /></svg
+              ></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#mobile-course-menu"
+                aria-controls="mobile-course-menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="30"
+                  height="30"
+                  focusable="false"
+                >
+                  <title>Menu</title>
+                  <path
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    d="M4 7h22M4 15h22M4 23h22"
+                  ></path>
+                </svg>
+              </button>
             </div>
-
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/web1/sprint/rec2neAvlo6zM07qc">
-                1.&nbsp;&nbsp;User Interface and Git
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/web1/module/recl0IyzS2Vl89lZa/">
-                    User Interface
-                  </a>
-                </li>
-                <li>
-                  <a href="/web1/module/rect59e95N6OSvoCd/">
-                    Git for Web Development
-                  </a>
-                </li>
-                <li class="active bd-sidenav-active">
-                  <a href="/web1/module/rec6KMj0W3ukhYeWv/">
-                    Intro CSS
-                  </a>
-                </li>
-                <li>
-                  <a href="/web1/module/recYyDfYS2UmsvquL/">
-                    CSS Layouts
-                  </a>
-                </li>
-              </ul>
+          </div>
+          <div class="nav-row">
+            <div class="results-container">
+              <ul id="results-container" class="dropdown list-group"></ul>
             </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/web1/sprint/recYAgtervk7WilBW">
-                2.&nbsp;&nbsp;Advanced CSS and Intro JavaScript
-              </a>
-              <ul class="nav bd-sidenav">
+            <div id="mobile-course-menu" class="collapse nav-row">
+              <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+                <nav class="bd-links">
+                  <div class="bd-toc-item">
+                    <h4 class="bd-toc-link">Web Fundamentals</h4>
+                  </div>
 
-                <li>
-                  <a href="/web1/module/recUPpx89Z2uWzkzU/">
-                    Responsive Design
-                  </a>
-                </li>
-                <li>
-                  <a href="/web1/module/recPmaqIfzn9NMPLY/">
-                    Intro to JavaScript
-                  </a>
-                </li>
-                <li>
-                  <a href="/web1/module/recXRqGjyTS6uDzSA/">
-                    Arrays
-                  </a>
-                </li>
-                <li>
-                  <a href="/web1/module/recQV3tKcEDXa840D/">
-                    Objects
-                  </a>
-                </li>
-              </ul>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web1/sprint/rec2neAvlo6zM07qc"
+                    >
+                      1.&nbsp;&nbsp;User Interface and Git
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web1/module/recl0IyzS2Vl89lZa/">
+                          User Interface
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web1/module/rect59e95N6OSvoCd/">
+                          Git for Web Development
+                        </a>
+                      </li>
+                      <li class="active bd-sidenav-active">
+                        <a href="/web1/module/rec6KMj0W3ukhYeWv/">
+                          Intro CSS
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web1/module/recYyDfYS2UmsvquL/">
+                          CSS Layouts
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web1/sprint/recYAgtervk7WilBW"
+                    >
+                      2.&nbsp;&nbsp;Advanced CSS and Intro JavaScript
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web1/module/recUPpx89Z2uWzkzU/">
+                          Responsive Design
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web1/module/recPmaqIfzn9NMPLY/">
+                          Intro to JavaScript
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web1/module/recXRqGjyTS6uDzSA/"> Arrays </a>
+                      </li>
+                      <li>
+                        <a href="/web1/module/recQV3tKcEDXa840D/"> Objects </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web1/sprint/recIS8D2e4nTRGCLT"
+                    >
+                      3.&nbsp;&nbsp;JavaScript Fundamentals
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web1/module/recrBjfZ9mBasSPpa/">
+                          Scope and Closure
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web1/module/recNilLQDqhqvPuNk/">
+                          Advanced Array Methods
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web1/module/rec0AWuNLezbpit7m/">
+                          Prototypes and Inheritance
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web1/module/recyS588eOvVUKAMc/"> Classes </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web1/sprint/rec2di8phTBw15e4E"
+                    >
+                      4.&nbsp;&nbsp;WEB Unit 1 Build
+                    </a>
+                    <ul class="nav bd-sidenav"></ul>
+                  </div>
+                </nav>
+              </div>
             </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/web1/sprint/recIS8D2e4nTRGCLT">
-                3.&nbsp;&nbsp;JavaScript Fundamentals
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/web1/module/recrBjfZ9mBasSPpa/">
-                    Scope and Closure
-                  </a>
-                </li>
-                <li>
-                  <a href="/web1/module/recNilLQDqhqvPuNk/">
-                    Advanced Array Methods
-                  </a>
-                </li>
-                <li>
-                  <a href="/web1/module/rec0AWuNLezbpit7m/">
-                    Prototypes and Inheritance
-                  </a>
-                </li>
-                <li>
-                  <a href="/web1/module/recyS588eOvVUKAMc/">
-                    Classes
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/web1/sprint/rec2di8phTBw15e4E">
-                4.&nbsp;&nbsp;WEB Unit 1 Build
-              </a>
-              <ul class="nav bd-sidenav">
-
-              </ul>
-            </div>
-          </nav>
+          </div>
         </div>
       </div>
-      <main class="content-container flex-wrapper" role="main">
-        <div class="sticky-nav">
-          <div class="sprint-nav">
-            <ul class="section-nav">
-              <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
-              <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
-              <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
-              <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
-            </ul>
-          </div>
+      <div class="main-container">
+        <div class="sidebar-container bd-sidebar">
+          <div class="docs-sidebar">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"
+              ><svg
+                width="135"
+                height="35"
+                viewBox="0 0 756 197"
+                fill="#ec3944"
+              >
+                <g>
+                  <path
+                    d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"
+                  ></path>
+                  <path
+                    d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"
+                  ></path>
+                  <path
+                    d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"
+                  ></path>
+                  <path
+                    d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"
+                  ></path>
+                  <path
+                    d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"
+                  ></path>
+                  <path
+                    d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"
+                  ></path>
+                </g>
+                <path
+                  d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"
+                ></path></svg
+            ></a>
+            <ul id="results-container" class="dropdown list-group"></ul>
+            <nav class="bd-links collapse" id="bd-docs-nav">
+              <div class="bd-toc-item">
+                <h4 class="bd-toc-link">Web Fundamentals</h4>
+              </div>
 
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/web1/sprint/rec2neAvlo6zM07qc">
+                  1.&nbsp;&nbsp;User Interface and Git
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web1/module/recl0IyzS2Vl89lZa/">
+                      User Interface
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web1/module/rect59e95N6OSvoCd/">
+                      Git for Web Development
+                    </a>
+                  </li>
+                  <li class="active bd-sidenav-active">
+                    <a href="/web1/module/rec6KMj0W3ukhYeWv/"> Intro CSS </a>
+                  </li>
+                  <li>
+                    <a href="/web1/module/recYyDfYS2UmsvquL/"> CSS Layouts </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/web1/sprint/recYAgtervk7WilBW">
+                  2.&nbsp;&nbsp;Advanced CSS and Intro JavaScript
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web1/module/recUPpx89Z2uWzkzU/">
+                      Responsive Design
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web1/module/recPmaqIfzn9NMPLY/">
+                      Intro to JavaScript
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web1/module/recXRqGjyTS6uDzSA/"> Arrays </a>
+                  </li>
+                  <li>
+                    <a href="/web1/module/recQV3tKcEDXa840D/"> Objects </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/web1/sprint/recIS8D2e4nTRGCLT">
+                  3.&nbsp;&nbsp;JavaScript Fundamentals
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web1/module/recrBjfZ9mBasSPpa/">
+                      Scope and Closure
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web1/module/recNilLQDqhqvPuNk/">
+                      Advanced Array Methods
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web1/module/rec0AWuNLezbpit7m/">
+                      Prototypes and Inheritance
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web1/module/recyS588eOvVUKAMc/"> Classes </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/web1/sprint/rec2di8phTBw15e4E">
+                  4.&nbsp;&nbsp;WEB Unit 1 Build
+                </a>
+                <ul class="nav bd-sidenav"></ul>
+              </div>
+            </nav>
+          </div>
         </div>
-        <div class="wrapper limit-width">
-          <div class="flex-wrapper">
-            <div class="limit-width">
-              <div class="jumbotron">
-                <h1 class="bd-title" id="content">Intro CSS</h1>
-                <span class="lead">
-                  <p class="bd-lead"></p>
-                  <p>In this module we will dive deeper into the world of CSS to learn about the box model, specificity,
-                    and responsive units. These tools will help you to write professional-quality CSS that will be
-                    mostly compatible across browser types and screen sizes.</p>
-                </span>
-                <strong>At the end of this module, you should be able to:</strong>
-                <ul>
-                  <li>learn about the box model and be able to explain its properties</li>
-                  <li>demonstrate CSS specificity and inheritance to create and update styles</li>
-                  <li>implement a CSS reset and understand why it’s important for cross browser development</li>
-                  <li>describe and use responsive units to create a fully responsive website</li>
-                </ul>
-              </div>
-              <div class="alert alert-warning" role="alert">
-                <h4>Pro Tip</h4>
-                <p>Keep in mind that anything you put on social media reflects your brand. Consider what is important
-                  for you to say and for other people to hear you say, and use this to shape a social media presence
-                  that is both professional and authentic to you.</p>
-              </div>
-              <h2 class="display-4">
-                <a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Prepare</h2>
-              <p class="lead">Review each preclass resource before class.</p>
-              <div class="preclass">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/quEisuPangM"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uN-yD5usiR0"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-TVGmd81Vow"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/H376eVtXfYg"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <a target="_blank" href="http://www.htmldog.com/guides/css/intermediate/specificity/">Specificity
-                      Weight </a>
-                    <p>By simply adding numbers to elements, classes, and IDs we can make specificity weight problems a
-                      thing of the past.</p>
-                  </li>
-                  <li class="list-group-item">
-                    <a target="_blank" href="https://meyerweb.com/eric/tools/css/reset/">Eric Meyer Reset</a>
-                    <p>One of the first main stream resets used in web development.</p>
-                  </li>
-                  <li class="list-group-item">
-                    <a target="_blank" href="https://snook.ca/archives/html_and_css/font-size-with-rem">Rem font-size
-                      study</a>
-                    <p>This is one of the first articles on the internet to suggest making the root font-size match the
-                      users settings. It’s old but still very relevant.</p>
-                  </li>
-                  <li class="list-group-item">
-                    <a target="_blank" href="https://engageinteractive.co.uk/blog/em-vs-rem-vs-px">A guide to em, rem,
-                      and px units</a>
-                    <p>This quick read takes you though some modern considerations for responsive units.</p>
-                  </li>
-                </ul>
-              </div>
-              <h2 class="display-4">
-                <a id="learn" class="anchor" href="#learn" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Learn</h2>
-              <h4 class="mark mb-3 p-2">Learn to learn about the box model and be able to explain its properties</h4>
-              <h5>Overview</h5>
-              <h3 id="introduction-to-the-box-model">Introduction to the Box Model</h3>
-              <p>The box model places all html elements into boxes. The make-up of each box is the content (text or
-                image), padding (blank space around the content), border, and margin (blank space around the border). We
-                use CSS to add style in our box model. By default, most html elements are boxes - however, there are
-                some, including <code class="highlighter-rouge">&lt;span&gt;</code>, <code
-                  class="highlighter-rouge">&lt;a&gt;</code>, <code class="highlighter-rouge">&lt;button&gt;</code>, and
-                others, that don’t follow these rules. These can be modified to follow the box model in CSS with <code
-                  class="highlighter-rouge">display: block</code></p>
-              <p><img src="https://i.imgur.com/jZrYyQV.gif" alt="Image of the box model"></p>
-              <ul>
-                <li>
-                  <code class="highlighter-rouge">height</code> and <code class="highlighter-rouge">width</code>
+        <main class="content-container flex-wrapper" role="main">
+          <div class="sticky-nav">
+            <div class="sprint-nav">
+              <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+                <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+                <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+                <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="wrapper limit-width">
+            <div class="flex-wrapper">
+              <div class="limit-width">
+                <div class="jumbotron">
+                  <h1 class="bd-title" id="content">Intro CSS</h1>
+                  <span class="lead">
+                    <p class="bd-lead"></p>
+                    <p>
+                      In this module we will dive deeper into the world of CSS
+                      to learn about the box model, specificity, and responsive
+                      units. These tools will help you to write
+                      professional-quality CSS that will be mostly compatible
+                      across browser types and screen sizes.
+                    </p>
+                  </span>
+                  <strong
+                    >At the end of this module, you should be able to:</strong
+                  >
                   <ul>
-                    <li>We can tell the browser exactly how wide and how tall we want our element (content) to be. This
-                      is used in <code class="highlighter-rouge">div</code>s, <code
-                        class="highlighter-rouge">img</code>s, and other height-based elements (in order to determine
-                      the size of text, we will need to use a different styling property). Size values can be in lots of
-                      different measures, but the most common are the pixel (“px”) and relative percent of screen (%).
+                    <li>
+                      learn about the box model and be able to explain its
+                      properties
+                    </li>
+                    <li>
+                      demonstrate CSS specificity and inheritance to create and
+                      update styles
+                    </li>
+                    <li>
+                      implement a CSS reset and understand why it’s important
+                      for cross browser development
+                    </li>
+                    <li>
+                      describe and use responsive units to create a fully
+                      responsive website
                     </li>
                   </ul>
-                </li>
-              </ul>
-              <div class="language-css highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>  <span class="nt">div</span> <span class="p">{</span>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                  <h4>Pro Tip</h4>
+                  <p>
+                    Keep in mind that anything you put on social media reflects
+                    your brand. Consider what is important for you to say and
+                    for other people to hear you say, and use this to shape a
+                    social media presence that is both professional and
+                    authentic to you.
+                  </p>
+                </div>
+                <h2 class="display-4">
+                  <a
+                    id="prepare"
+                    class="anchor"
+                    href="#prepare"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Prepare
+                </h2>
+                <p class="lead">Review each preclass resource before class.</p>
+                <div class="preclass">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/quEisuPangM"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/uN-yD5usiR0"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/-TVGmd81Vow"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/H376eVtXfYg"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <a
+                        target="_blank"
+                        href="http://www.htmldog.com/guides/css/intermediate/specificity/"
+                        >Specificity Weight
+                      </a>
+                      <p>
+                        By simply adding numbers to elements, classes, and IDs
+                        we can make specificity weight problems a thing of the
+                        past.
+                      </p>
+                    </li>
+                    <li class="list-group-item">
+                      <a
+                        target="_blank"
+                        href="https://meyerweb.com/eric/tools/css/reset/"
+                        >Eric Meyer Reset</a
+                      >
+                      <p>
+                        One of the first main stream resets used in web
+                        development.
+                      </p>
+                    </li>
+                    <li class="list-group-item">
+                      <a
+                        target="_blank"
+                        href="https://snook.ca/archives/html_and_css/font-size-with-rem"
+                        >Rem font-size study</a
+                      >
+                      <p>
+                        This is one of the first articles on the internet to
+                        suggest making the root font-size match the users
+                        settings. It’s old but still very relevant.
+                      </p>
+                    </li>
+                    <li class="list-group-item">
+                      <a
+                        target="_blank"
+                        href="https://engageinteractive.co.uk/blog/em-vs-rem-vs-px"
+                        >A guide to em, rem, and px units</a
+                      >
+                      <p>
+                        This quick read takes you though some modern
+                        considerations for responsive units.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <h2 class="display-4">
+                  <a id="learn" class="anchor" href="#learn" aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Learn
+                </h2>
+                <h4 class="mark mb-3 p-2">
+                  Learn to learn about the box model and be able to explain its
+                  properties
+                </h4>
+                <h5>Overview</h5>
+                <h3 id="introduction-to-the-box-model">
+                  Introduction to the Box Model
+                </h3>
+                <p>
+                  The box model places all html elements into boxes. The make-up
+                  of each box is the content (text or image), padding (blank
+                  space around the content), border, and margin (blank space
+                  around the border). We use CSS to add style in our box model.
+                  By default, most html elements are boxes - however, there are
+                  some, including
+                  <code class="highlighter-rouge">&lt;span&gt;</code>,
+                  <code class="highlighter-rouge">&lt;a&gt;</code>,
+                  <code class="highlighter-rouge">&lt;button&gt;</code>, and
+                  others, that don’t follow these rules. These can be modified
+                  to follow the box model in CSS with
+                  <code class="highlighter-rouge">display: block</code>
+                </p>
+                <p>
+                  <img
+                    src="https://i.imgur.com/jZrYyQV.gif"
+                    alt="Image of the box model"
+                  />
+                </p>
+                <ul>
+                  <li>
+                    <code class="highlighter-rouge">height</code> and
+                    <code class="highlighter-rouge">width</code>
+                    <ul>
+                      <li>
+                        We can tell the browser exactly how wide and how tall we
+                        want our element (content) to be. This is used in
+                        <code class="highlighter-rouge">div</code>s,
+                        <code class="highlighter-rouge">img</code>s, and other
+                        height-based elements (in order to determine the size of
+                        text, we will need to use a different styling property).
+                        Size values can be in lots of different measures, but
+                        the most common are the pixel (“px”) and relative
+                        percent of screen (%).
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="language-css highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>  <span class="nt">div</span> <span class="p">{</span>
     <span class="nl">height</span><span class="p">:</span> <span class="m">400px</span><span class="p">;</span>
     <span class="nl">width</span><span class="p">:</span> <span class="m">400px</span><span class="p">;</span>
   <span class="p">}</span>
@@ -485,71 +664,145 @@
     <span class="nl">width</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
   <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <ul>
-                <li>
-                  <code class="highlighter-rouge">margin</code>
-                  <ul>
-                    <li>The margin is an invisible area that surrounds your content, padding, and border. This is the
-                      outermost area in the box model.</li>
-                  </ul>
-                </li>
-                <li>
-                  <code class="highlighter-rouge">border</code>
-                  <ul>
-                    <li>Border will set a border around your element. You can determine the size, color, and style of
-                      the border. It will be set up in this order: width, style, color (a list of border styles can be
-                      found <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border">here</a>. The border is
-                      outside the padding, but inside the margin.</li>
-                  </ul>
-                </li>
-              </ul>
-              <div class="language-css highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>  <span class="nt">div</span> <span class="p">{</span>
+                <ul>
+                  <li>
+                    <code class="highlighter-rouge">margin</code>
+                    <ul>
+                      <li>
+                        The margin is an invisible area that surrounds your
+                        content, padding, and border. This is the outermost area
+                        in the box model.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <code class="highlighter-rouge">border</code>
+                    <ul>
+                      <li>
+                        Border will set a border around your element. You can
+                        determine the size, color, and style of the border. It
+                        will be set up in this order: width, style, color (a
+                        list of border styles can be found
+                        <a
+                          href="https://developer.mozilla.org/en-US/docs/Web/CSS/border"
+                          >here</a
+                        >. The border is outside the padding, but inside the
+                        margin.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="language-css highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>  <span class="nt">div</span> <span class="p">{</span>
     <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
   <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <ul>
-                <li>
-                  <code class="highlighter-rouge">padding</code>
-                  <ul>
-                    <li>The padding is the transparent area between the border and the content. It is very similar to
-                      the margin.</li>
-                  </ul>
-                </li>
-              </ul>
-              <p class="codepen" data-height="400" data-theme-id="dark" data-default-tab="css,result"
-                data-user="lambdaschool" data-slug-hash="6e4b0e0e1fe78c145cdbd47e92b05a88" data-editable="true"
-                style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-                data-pen-title="Precourse Box Model">
-                <span>See the Pen <a href="https://codepen.io/lambdaschool/pen/6e4b0e0e1fe78c145cdbd47e92b05a88">
-                    Precourse Box Model</a> by Lambda School (<a
-                    href="https://codepen.io/lambdaschool">@lambdaschool</a>)
-                  on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
-              <script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
-              <p><strong>Check for Understanding:</strong> Play with the CSS above to change the border and padding
-                around the h1 content.</p>
-              <h5>Follow Along</h5>
-              <p>Hopefully you’re starting to make connections between this material and its application on our Lambda
-                School clone. When we left off, our whole webpage was squished down to its bare bones. Let’s add some
-                CSS to reflect learnings about the box model.</p>
-              <p class="codepen" data-height="535" data-theme-id="dark" data-default-tab="html,result"
-                data-user="lambdaschool" data-slug-hash="0ff4f6ef935cbcef04f4ea49d796b4db"
-                style="height: 535px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-                data-pen-title="Objective 2 - Box Model">
-                <span>See the Pen <a href="https://codepen.io/lambdaschool/pen/0ff4f6ef935cbcef04f4ea49d796b4db">
-                    Objective 2 - Box Model</a> by Lambda School (<a
-                    href="https://codepen.io/lambdaschool">@lambdaschool</a>)
-                  on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
-              <script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
-              <p>We can start small by adding styling to the button such that it looks like lambdaschool.com.</p>
-              <pre><code class="language-CSS">button {
+                <ul>
+                  <li>
+                    <code class="highlighter-rouge">padding</code>
+                    <ul>
+                      <li>
+                        The padding is the transparent area between the border
+                        and the content. It is very similar to the margin.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p
+                  class="codepen"
+                  data-height="400"
+                  data-theme-id="dark"
+                  data-default-tab="css,result"
+                  data-user="lambdaschool"
+                  data-slug-hash="6e4b0e0e1fe78c145cdbd47e92b05a88"
+                  data-editable="true"
+                  style="
+                    height: 265px;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 2px solid;
+                    margin: 1em 0;
+                    padding: 1em;
+                  "
+                  data-pen-title="Precourse Box Model"
+                >
+                  <span
+                    >See the Pen
+                    <a
+                      href="https://codepen.io/lambdaschool/pen/6e4b0e0e1fe78c145cdbd47e92b05a88"
+                    >
+                      Precourse Box Model</a
+                    >
+                    by Lambda School (<a href="https://codepen.io/lambdaschool"
+                      >@lambdaschool</a
+                    >) on <a href="https://codepen.io">CodePen</a>.</span
+                  >
+                </p>
+                <script
+                  async=""
+                  src="https://static.codepen.io/assets/embed/ei.js"
+                ></script>
+                <p>
+                  <strong>Check for Understanding:</strong> Play with the CSS
+                  above to change the border and padding around the h1 content.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Hopefully you’re starting to make connections between this
+                  material and its application on our Lambda School clone. When
+                  we left off, our whole webpage was squished down to its bare
+                  bones. Let’s add some CSS to reflect learnings about the box
+                  model.
+                </p>
+                <p
+                  class="codepen"
+                  data-height="535"
+                  data-theme-id="dark"
+                  data-default-tab="html,result"
+                  data-user="lambdaschool"
+                  data-slug-hash="0ff4f6ef935cbcef04f4ea49d796b4db"
+                  style="
+                    height: 535px;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 2px solid;
+                    margin: 1em 0;
+                    padding: 1em;
+                  "
+                  data-pen-title="Objective 2 - Box Model"
+                >
+                  <span
+                    >See the Pen
+                    <a
+                      href="https://codepen.io/lambdaschool/pen/0ff4f6ef935cbcef04f4ea49d796b4db"
+                    >
+                      Objective 2 - Box Model</a
+                    >
+                    by Lambda School (<a href="https://codepen.io/lambdaschool"
+                      >@lambdaschool</a
+                    >) on <a href="https://codepen.io">CodePen</a>.</span
+                  >
+                </p>
+                <script
+                  async=""
+                  src="https://static.codepen.io/assets/embed/ei.js"
+                ></script>
+                <p>
+                  We can start small by adding styling to the button such that
+                  it looks like lambdaschool.com.
+                </p>
+                <pre><code class="language-CSS">button {
   color: white;
   font-family: sans-serif;
   font-size: 16px;
@@ -558,53 +811,89 @@
   padding: 10px;
 }
 </code></pre>
-              <p>Let’s add padding to the #image-container as well.</p>
-              <pre><code class="language-CSS">#image-container {
+                <p>Let’s add padding to the #image-container as well.</p>
+                <pre><code class="language-CSS">#image-container {
   background: url("https://assets-global.website-files.com/5cd091cfb5499f22bdf72905/5d1133da829994859a190d12_website-home4.jpg");
   padding: 200px;
   background-position: center; 
 }
 </code></pre>
-              <p>Finally, let’s change the width of our text so that it cuts off right around this smiling student’s
-                shoulder. To do that, we’re going to cheat a little and use a responsive design trick that you’ll learn
-                later on. Instead of sizing our #home-page-text div with pixels, we’re going to use a percentage so that
-                no matter what width the page is, the text always looks right.</p>
-              <pre><code class="language-CSS">h1, h2, p {
+                <p>
+                  Finally, let’s change the width of our text so that it cuts
+                  off right around this smiling student’s shoulder. To do that,
+                  we’re going to cheat a little and use a responsive design
+                  trick that you’ll learn later on. Instead of sizing our
+                  #home-page-text div with pixels, we’re going to use a
+                  percentage so that no matter what width the page is, the text
+                  always looks right.
+                </p>
+                <pre><code class="language-CSS">h1, h2, p {
   color: black;
   font-family: sans-serif;
   width: 50%;
 }
 </code></pre>
-              <p>We’re not going to build the whole website here, but with some research, at this point you could add a
-                navigation menu, place an “apply now” button in the corner, and even challenge yourself to create the
-                Tweet slideshow down below! We’ll revisit this page at the end of our JavaScript curriculum. But for
-                now, sit back, and get excited about the power of frontend!</p>
-              <p><img src="https://i.imgur.com/y6m3Xby.png" alt="Screen Shot 2020-01-16 at 4.51.20 PM"></p>
-              <h5>Challenge</h5>
-              <p>Continue to add style to your personal webpage with the box model where applicable. If you haven’t
-                added an image yet, now is a good time to do so and practice styling.</p>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to demonstrate CSS specificity and inheritance to create and update styles
-              </h4>
-              <p>The most basic building blocks of any app or website on the internet today rely heavily on HTML and
-                CSS. The first steps into building bigger and more complex projects start with a solid understanding of
-                CSS specificity and inheritance.</p>
-              <h5>Overview</h5>
-              <h4 id="css-inheritance">CSS Inheritance</h4>
-              <p>CSS stands for cascading style sheets. To understand CSS, we need to understand where the “C” comes
-                from. The word “cascade” suggests a pattern of inheritance that we can use in our code. Inheritance in
-                computer science is similar to inheritance in humans - characteristics are passed down from generation
-                to generation. Children inherit characteristics and personality traits from their parents.</p>
-              <p>CSS inheritance is similar to human inheritance in that you can pass traits down to ancestor elements.
-                In CSS, every ancestor of the original parent gains access to all the CSS properties through
-                inheritance. You may be thinking, “How does inheritance occur in CSS?” The answer is the HTML structure.
-                In HTML, when an element is placed inside another element, it is said to be nested within its parent
-                element. This HTML nesting creates a bond between elements that we call inheritance.</p>
-              <p>Lets look at an example to demonstrate inheritance:</p>
-              <p><strong>HTML Structure:</strong></p>
-              <div class="language-html highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"parent"</span><span class="nt">&gt;</span>  
+                <p>
+                  We’re not going to build the whole website here, but with some
+                  research, at this point you could add a navigation menu, place
+                  an “apply now” button in the corner, and even challenge
+                  yourself to create the Tweet slideshow down below! We’ll
+                  revisit this page at the end of our JavaScript curriculum. But
+                  for now, sit back, and get excited about the power of
+                  frontend!
+                </p>
+                <p>
+                  <img
+                    src="https://i.imgur.com/y6m3Xby.png"
+                    alt="Screen Shot 2020-01-16 at 4.51.20 PM"
+                  />
+                </p>
+                <h5>Challenge</h5>
+                <p>
+                  Continue to add style to your personal webpage with the box
+                  model where applicable. If you haven’t added an image yet, now
+                  is a good time to do so and practice styling.
+                </p>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to demonstrate CSS specificity and inheritance to create
+                  and update styles
+                </h4>
+                <p>
+                  The most basic building blocks of any app or website on the
+                  internet today rely heavily on HTML and CSS. The first steps
+                  into building bigger and more complex projects start with a
+                  solid understanding of CSS specificity and inheritance.
+                </p>
+                <h5>Overview</h5>
+                <h4 id="css-inheritance">CSS Inheritance</h4>
+                <p>
+                  CSS stands for cascading style sheets. To understand CSS, we
+                  need to understand where the “C” comes from. The word
+                  “cascade” suggests a pattern of inheritance that we can use in
+                  our code. Inheritance in computer science is similar to
+                  inheritance in humans - characteristics are passed down from
+                  generation to generation. Children inherit characteristics and
+                  personality traits from their parents.
+                </p>
+                <p>
+                  CSS inheritance is similar to human inheritance in that you
+                  can pass traits down to ancestor elements. In CSS, every
+                  ancestor of the original parent gains access to all the CSS
+                  properties through inheritance. You may be thinking, “How does
+                  inheritance occur in CSS?” The answer is the HTML structure.
+                  In HTML, when an element is placed inside another element, it
+                  is said to be nested within its parent element. This HTML
+                  nesting creates a bond between elements that we call
+                  inheritance.
+                </p>
+                <p>Lets look at an example to demonstrate inheritance:</p>
+                <p><strong>HTML Structure:</strong></p>
+                <div class="language-html highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"parent"</span><span class="nt">&gt;</span>  
   <span class="nt">&lt;p&gt;</span>Parent<span class="nt">&lt;/p&gt;</span>  
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"child"</span><span class="nt">&gt;</span>  
     <span class="nt">&lt;p&gt;</span>Child<span class="nt">&lt;/p&gt;</span>  
@@ -614,188 +903,294 @@
   <span class="nt">&lt;/div&gt;</span>  
 <span class="nt">&lt;/div&gt;</span>  
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p><strong>CSS:</strong></p>
-              <div class="language-css highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nc">.parent</span> <span class="p">{</span>  
+                <p><strong>CSS:</strong></p>
+                <div class="language-css highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nc">.parent</span> <span class="p">{</span>  
   <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>  
 <span class="p">}</span>  
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Notice that by styling the <code class="highlighter-rouge">.parent</code> class, all of our <code
-                  class="highlighter-rouge">p</code> tags nested inside of the parent class turn red. Using inheritance
-                this way is extremely powerful and allows for more natural development when building user interfaces.
-                However, we don’t always want to change everything at once. What if we only wanted two elements to turn
-                red and not all 3? This problem can be solved with specificity and understanding selectors.</p>
-              <h3 id="css-specificity">CSS Specificity</h3>
-              <p>Specificity is the concept we use to describe the ability to style many elements or just one element
-                using CSS selectors. Selectors allow us to access HTML tags and update their styles. Before we learn
-                more about selector syntax and usage, we need to study specificity weight.</p>
-              <h5 id="specificity-weight">Specificity Weight</h5>
-              <p>Think of specificity weight like the waterfall example used earlier. The water at the top of the
-                waterfall is less specific and, therefore, can be overwritten further This diagram below helps visualize
-                specificity weight. Note the <code class="highlighter-rouge">&lt;</code> symbol is used to represent
-                “less specific.” The more you read to the right, the more specific a selector or style will be. You have
-                seen some of the selectors in this list before, others might be new.</p>
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>* &lt; elements &lt; classes, pseudo-classes, attributes &lt; IDs &lt; inline styles &lt; !important
+                <p>
+                  Notice that by styling the
+                  <code class="highlighter-rouge">.parent</code> class, all of
+                  our <code class="highlighter-rouge">p</code> tags nested
+                  inside of the parent class turn red. Using inheritance this
+                  way is extremely powerful and allows for more natural
+                  development when building user interfaces. However, we don’t
+                  always want to change everything at once. What if we only
+                  wanted two elements to turn red and not all 3? This problem
+                  can be solved with specificity and understanding selectors.
+                </p>
+                <h3 id="css-specificity">CSS Specificity</h3>
+                <p>
+                  Specificity is the concept we use to describe the ability to
+                  style many elements or just one element using CSS selectors.
+                  Selectors allow us to access HTML tags and update their
+                  styles. Before we learn more about selector syntax and usage,
+                  we need to study specificity weight.
+                </p>
+                <h5 id="specificity-weight">Specificity Weight</h5>
+                <p>
+                  Think of specificity weight like the waterfall example used
+                  earlier. The water at the top of the waterfall is less
+                  specific and, therefore, can be overwritten further This
+                  diagram below helps visualize specificity weight. Note the
+                  <code class="highlighter-rouge">&lt;</code> symbol is used to
+                  represent “less specific.” The more you read to the right, the
+                  more specific a selector or style will be. You have seen some
+                  of the selectors in this list before, others might be new.
+                </p>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>* &lt; elements &lt; classes, pseudo-classes, attributes &lt; IDs &lt; inline styles &lt; !important
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>The selectors above are very common in styling practices, but they do not represent every possible
-                selector. It is recommended that you solidify your knowledge of these selectors first before moving on
-                to more advanced selectors. A few of those are below.</p>
-              <h4 id="universal-selector--">Universal Selector <code class="highlighter-rouge">*</code>
-              </h4>
-              <p>There are occasions you would want to select every element on a web page. The universal selector,
-                sometimes called the wild card or star selector, does precisely that.</p>
-              <p><strong>Specificity Weight:</strong> Less specific than any selector.</p>
-              <h5 id="css-syntax-example">CSS Syntax example:</h5>
-              <div class="language-css highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="o">*</span> <span class="p">{</span>
+                <p>
+                  The selectors above are very common in styling practices, but
+                  they do not represent every possible selector. It is
+                  recommended that you solidify your knowledge of these
+                  selectors first before moving on to more advanced selectors. A
+                  few of those are below.
+                </p>
+                <h4 id="universal-selector--">
+                  Universal Selector <code class="highlighter-rouge">*</code>
+                </h4>
+                <p>
+                  There are occasions you would want to select every element on
+                  a web page. The universal selector, sometimes called the wild
+                  card or star selector, does precisely that.
+                </p>
+                <p>
+                  <strong>Specificity Weight:</strong> Less specific than any
+                  selector.
+                </p>
+                <h5 id="css-syntax-example">CSS Syntax example:</h5>
+                <div class="language-css highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="o">*</span> <span class="p">{</span>
   <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>  
 <span class="p">}</span>  
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h4 id="element-selectors--h1h1">Element Selectors <code
-                  class="highlighter-rouge">&lt;h1&gt;&lt;/h1&gt;</code>
-              </h4>
-              <p>When styling elements, we are basically telling the browser: “I want every single tag I specify to
-                follow my styles.” This is more specific than the universal selector.</p>
-              <p><strong>Specificity Weight:</strong> More specific than universal less than everything else.</p>
-              <h5 id="html-syntax-example">HTML Syntax example:</h5>
-              <div class="language-html highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>I'm a h1 element<span class="nt">&lt;/h1&gt;</span>  
+                <h4 id="element-selectors--h1h1">
+                  Element Selectors
+                  <code class="highlighter-rouge">&lt;h1&gt;&lt;/h1&gt;</code>
+                </h4>
+                <p>
+                  When styling elements, we are basically telling the browser:
+                  “I want every single tag I specify to follow my styles.” This
+                  is more specific than the universal selector.
+                </p>
+                <p>
+                  <strong>Specificity Weight:</strong> More specific than
+                  universal less than everything else.
+                </p>
+                <h5 id="html-syntax-example">HTML Syntax example:</h5>
+                <div class="language-html highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nt">&lt;h1&gt;</span>I'm a h1 element<span class="nt">&lt;/h1&gt;</span>  
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h5 id="css-syntax-example-1">CSS Syntax example:</h5>
-              <div class="language-css highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nt">h1</span> <span class="p">{</span>  
+                <h5 id="css-syntax-example-1">CSS Syntax example:</h5>
+                <div class="language-css highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nt">h1</span> <span class="p">{</span>  
   <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>  
 <span class="p">}</span>  
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h4 id="class-selector--class">Class Selector <code class="highlighter-rouge">.class</code>
-              </h4>
-              <p>Class selectors begin to introduce a heavier specificity compared to the element or universal
-                selectors. Classes allow us to select individual elements by placing a special attribute in our HTML. We
-                can use the same class over and over again on many elements. This behavior is extremely powerful and
-                allows designers and developers to be more efficient.</p>
-              <p><strong>Specificity Weight:</strong> More than universal and element, less than ID, inline, and
-                important.</p>
-              <h5 id="html-syntax-example-1">HTML Syntax example:</h5>
-              <div class="language-html highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"example-class"</span><span class="nt">&gt;</span>I'm a class<span class="nt">&lt;/h1&gt;</span>  
+                <h4 id="class-selector--class">
+                  Class Selector <code class="highlighter-rouge">.class</code>
+                </h4>
+                <p>
+                  Class selectors begin to introduce a heavier specificity
+                  compared to the element or universal selectors. Classes allow
+                  us to select individual elements by placing a special
+                  attribute in our HTML. We can use the same class over and over
+                  again on many elements. This behavior is extremely powerful
+                  and allows designers and developers to be more efficient.
+                </p>
+                <p>
+                  <strong>Specificity Weight:</strong> More than universal and
+                  element, less than ID, inline, and important.
+                </p>
+                <h5 id="html-syntax-example-1">HTML Syntax example:</h5>
+                <div class="language-html highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"example-class"</span><span class="nt">&gt;</span>I'm a class<span class="nt">&lt;/h1&gt;</span>  
 <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"example-class"</span><span class="nt">&gt;</span>I'm a duplicate class<span class="nt">&lt;/h1&gt;</span> 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"another-class"</span><span class="nt">&gt;</span>New class selector<span class="nt">&lt;/div&gt;</span> 
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h5 id="css-syntax-example-2">CSS Syntax example:</h5>
-              <div class="language-css highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nc">.example-class</span> <span class="p">{</span>  
+                <h5 id="css-syntax-example-2">CSS Syntax example:</h5>
+                <div class="language-css highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nc">.example-class</span> <span class="p">{</span>  
   <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>  
   <span class="nl">font-size</span><span class="p">:</span> <span class="m">16rem</span><span class="p">;</span>  
   <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>  
 <span class="p">}</span>  
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h4 id="multiple-classes">Multiple Classes</h4>
-              <p>Classes are unique in that we can have multiple classes in the same HTML attribute. This allows for
-                layers of class specificity weight that we can control by using sibling selectors. The example below
-                demonstrates how this might look.</p>
-              <p><strong>Specificity Weight:</strong> Same overall weight as a single class, but lowest class on the
-                page wins.</p>
-              <h4 id="pseudo-classes">Pseudo-Classes</h4>
-              <p>Pseudo-classes are used when you may not have a set amount of elements, but you still want to style
-                them individually.</p>
-              <p>For example, you are given a list of items in a store’s inventory. That list of items grows and shrinks
-                everyday with purchases and new items.</p>
-              <p>Now let’s imagine that the last item in the inventory needs to update to a new color to signify the end
-                of the inventory. Without pseudo-classes, we couldn’t achieve that result.</p>
-              <p>We could use something like <code class="highlighter-rouge">li:last-child</code> to always select the
-                last child in an unordered list to achieve our goal with the inventory.</p>
-              <p><strong>Specificity Weight:</strong></p>
-              <p>Same specificity weight as classes.
-                More specific than universal and element.<br>
-                Less specific than ID, inline styles, and important.</p>
-              <h5 id="html-syntax-example-2">HTML Syntax example:</h5>
-              <div class="language-html highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"normal"</span><span class="nt">&gt;</span>Normal class here<span class="nt">&lt;/h1&gt;</span>  
+                <h4 id="multiple-classes">Multiple Classes</h4>
+                <p>
+                  Classes are unique in that we can have multiple classes in the
+                  same HTML attribute. This allows for layers of class
+                  specificity weight that we can control by using sibling
+                  selectors. The example below demonstrates how this might look.
+                </p>
+                <p>
+                  <strong>Specificity Weight:</strong> Same overall weight as a
+                  single class, but lowest class on the page wins.
+                </p>
+                <h4 id="pseudo-classes">Pseudo-Classes</h4>
+                <p>
+                  Pseudo-classes are used when you may not have a set amount of
+                  elements, but you still want to style them individually.
+                </p>
+                <p>
+                  For example, you are given a list of items in a store’s
+                  inventory. That list of items grows and shrinks everyday with
+                  purchases and new items.
+                </p>
+                <p>
+                  Now let’s imagine that the last item in the inventory needs to
+                  update to a new color to signify the end of the inventory.
+                  Without pseudo-classes, we couldn’t achieve that result.
+                </p>
+                <p>
+                  We could use something like
+                  <code class="highlighter-rouge">li:last-child</code> to always
+                  select the last child in an unordered list to achieve our goal
+                  with the inventory.
+                </p>
+                <p><strong>Specificity Weight:</strong></p>
+                <p>
+                  Same specificity weight as classes. More specific than
+                  universal and element.<br />
+                  Less specific than ID, inline styles, and important.
+                </p>
+                <h5 id="html-syntax-example-2">HTML Syntax example:</h5>
+                <div class="language-html highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"normal"</span><span class="nt">&gt;</span>Normal class here<span class="nt">&lt;/h1&gt;</span>  
 <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"normal"</span><span class="nt">&gt;</span>Normal class here<span class="nt">&lt;/h1&gt;</span>  
 <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"normal"</span><span class="nt">&gt;</span>Psuedo class found here!<span class="nt">&lt;/h1&gt;</span>  
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h5 id="css-syntax-example-3">CSS Syntax example:</h5>
-              <div class="language-css highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nt">h1</span><span class="nd">:last-child</span> <span class="p">{</span>  
+                <h5 id="css-syntax-example-3">CSS Syntax example:</h5>
+                <div class="language-css highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nt">h1</span><span class="nd">:last-child</span> <span class="p">{</span>  
   <span class="nl">color</span><span class="p">:</span> <span class="no">orange</span><span class="p">;</span>  
 <span class="p">}</span>  
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h4 id="id-selectors">ID Selectors</h4>
-              <p>IDs are only allowed to be used once per HTML page. Use IDs for very specific reasons that can’t be
-                accomplished using a class. Be mindful of where you use IDs as their specificity weight is heavier than
-                most selectors.</p>
-              <h5 id="specificity-weight-1">Specificity Weight:</h5>
-              <ul>
-                <li>More than universal, element, pseudo-classes, and classes.</li>
-                <li>Less than inline styles, and important.</li>
-              </ul>
-              <h5 id="html-syntax-example-3">HTML Syntax example:</h5>
-              <div class="language-html highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"example-id"</span><span class="nt">&gt;</span>I have an ID<span class="nt">&lt;/h1&gt;</span>  
+                <h4 id="id-selectors">ID Selectors</h4>
+                <p>
+                  IDs are only allowed to be used once per HTML page. Use IDs
+                  for very specific reasons that can’t be accomplished using a
+                  class. Be mindful of where you use IDs as their specificity
+                  weight is heavier than most selectors.
+                </p>
+                <h5 id="specificity-weight-1">Specificity Weight:</h5>
+                <ul>
+                  <li>
+                    More than universal, element, pseudo-classes, and classes.
+                  </li>
+                  <li>Less than inline styles, and important.</li>
+                </ul>
+                <h5 id="html-syntax-example-3">HTML Syntax example:</h5>
+                <div class="language-html highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"example-id"</span><span class="nt">&gt;</span>I have an ID<span class="nt">&lt;/h1&gt;</span>  
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h5 id="css-syntax-example-4">CSS Syntax example:</h5>
-              <div class="language-css highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nf">#example-id</span> <span class="p">{</span>  
+                <h5 id="css-syntax-example-4">CSS Syntax example:</h5>
+                <div class="language-css highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nf">#example-id</span> <span class="p">{</span>  
   <span class="nl">color</span><span class="p">:</span> <span class="no">gold</span><span class="p">;</span>  
 <span class="p">}</span> 
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h4 id="3-different-style-integrations">3 Different Style Integrations</h4>
-              <p>You can introduce CSS styles into your HTML using 3 different approaches.</p>
-              <ol>
-                <li>Inline styles</li>
-                <li>Embedded style tag in the HTML page</li>
-                <li>Externally linked CSS file</li>
-              </ol>
-              <p>The standards the best approach change with the flow of new technology, but for now, we will say that
-                external style sheets are the way to code. Why? Because both the inline styles and the style tag are
-                more specific, and we want to control all our style specificity in one place as we learn. In the future,
-                you may have cases where knowledge of all three come into play. It is generally recommended to know how
-                all three work. We recommend the <a href="https://www.w3schools.com/css/css_howto.asp">overview from w3
-                  schools</a> if you want to dig in.</p>
-              <h5>Follow Along</h5>
-              <h3 id="specificity-tutorial">Specificity Tutorial</h3>
-              <p>For this tutorial, you will be building CSS selector chains to demonstrate specificity and inheritance.
-              </p>
-              <p>CSS specificity begins with HTML structure. Before we write any CSS, study the HTML nesting below:</p>
-              <div class="language-html highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span> 
+                <h4 id="3-different-style-integrations">
+                  3 Different Style Integrations
+                </h4>
+                <p>
+                  You can introduce CSS styles into your HTML using 3 different
+                  approaches.
+                </p>
+                <ol>
+                  <li>Inline styles</li>
+                  <li>Embedded style tag in the HTML page</li>
+                  <li>Externally linked CSS file</li>
+                </ol>
+                <p>
+                  The standards the best approach change with the flow of new
+                  technology, but for now, we will say that external style
+                  sheets are the way to code. Why? Because both the inline
+                  styles and the style tag are more specific, and we want to
+                  control all our style specificity in one place as we learn. In
+                  the future, you may have cases where knowledge of all three
+                  come into play. It is generally recommended to know how all
+                  three work. We recommend the
+                  <a href="https://www.w3schools.com/css/css_howto.asp"
+                    >overview from w3 schools</a
+                  >
+                  if you want to dig in.
+                </p>
+                <h5>Follow Along</h5>
+                <h3 id="specificity-tutorial">Specificity Tutorial</h3>
+                <p>
+                  For this tutorial, you will be building CSS selector chains to
+                  demonstrate specificity and inheritance.
+                </p>
+                <p>
+                  CSS specificity begins with HTML structure. Before we write
+                  any CSS, study the HTML nesting below:
+                </p>
+                <div class="language-html highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span> 
   <span class="nt">&lt;header&gt;</span>
     <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"main-header"</span><span class="nt">&gt;</span>Lambda School<span class="nt">&lt;/h1&gt;</span>
     <span class="nt">&lt;nav&gt;</span>
@@ -807,112 +1202,203 @@
   <span class="nt">&lt;/header&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>We can see that there is a class of <code class="highlighter-rouge">.container</code> wrapping all of
-                the other elements.</p>
-              <h3 id="css-specificity-many-elements">CSS Specificity: Many Elements</h3>
-              <p>With this knowledge in hand, we now have a starting point for our specificity chain to begin. Let’s
-                start by styling the <code class="highlighter-rouge">.container</code> itself:</p>
-              <div class="language-css highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
+                <p>
+                  We can see that there is a class of
+                  <code class="highlighter-rouge">.container</code> wrapping all
+                  of the other elements.
+                </p>
+                <h3 id="css-specificity-many-elements">
+                  CSS Specificity: Many Elements
+                </h3>
+                <p>
+                  With this knowledge in hand, we now have a starting point for
+                  our specificity chain to begin. Let’s start by styling the
+                  <code class="highlighter-rouge">.container</code> itself:
+                </p>
+                <div class="language-css highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nc">.container</span> <span class="p">{</span>
   <span class="nl">width</span><span class="p">:</span> <span class="m">600px</span><span class="p">;</span>
   <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Notice that all of the content within <code class="highlighter-rouge">.container</code> is now centered
-                on the page. We are using the cascade to impact all of the elements inside of <code
-                  class="highlighter-rouge">container</code> with just a few simple lines of CSS!</p>
-              <p>Let’s increase our specificity chain by styling everything in the header to have a <code
-                  class="highlighter-rouge">font-family</code> of <code class="highlighter-rouge">Helvetica</code>:</p>
-              <div class="language-css highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nc">.container</span> <span class="nt">header</span> <span class="p">{</span>
+                <p>
+                  Notice that all of the content within
+                  <code class="highlighter-rouge">.container</code> is now
+                  centered on the page. We are using the cascade to impact all
+                  of the elements inside of
+                  <code class="highlighter-rouge">container</code> with just a
+                  few simple lines of CSS!
+                </p>
+                <p>
+                  Let’s increase our specificity chain by styling everything in
+                  the header to have a
+                  <code class="highlighter-rouge">font-family</code> of
+                  <code class="highlighter-rouge">Helvetica</code>:
+                </p>
+                <div class="language-css highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nc">.container</span> <span class="nt">header</span> <span class="p">{</span>
   <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'Helvetica'</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Because of the cascade, all of the elements in the header will now have a <code
-                  class="highlighter-rouge">font-family</code> of <code class="highlighter-rouge">Helvetica</code>.</p>
-              <h3 id="css-specificity-one-element">CSS Specificity: One Element</h3>
-              <p>Styling many elements is pretty easy because of the cascade, what about styling one specific element?
-              </p>
-              <p>Let’s select the <code class="highlighter-rouge">.main-header</code> class and style it’s <code
-                  class="highlighter-rouge">color</code> to <code class="highlighter-rouge">crimson</code>:</p>
-              <div class="language-css highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nc">.container</span> <span class="nt">header</span> <span class="nc">.main-header</span> <span class="p">{</span>
+                <p>
+                  Because of the cascade, all of the elements in the header will
+                  now have a
+                  <code class="highlighter-rouge">font-family</code> of
+                  <code class="highlighter-rouge">Helvetica</code>.
+                </p>
+                <h3 id="css-specificity-one-element">
+                  CSS Specificity: One Element
+                </h3>
+                <p>
+                  Styling many elements is pretty easy because of the cascade,
+                  what about styling one specific element?
+                </p>
+                <p>
+                  Let’s select the
+                  <code class="highlighter-rouge">.main-header</code> class and
+                  style it’s <code class="highlighter-rouge">color</code> to
+                  <code class="highlighter-rouge">crimson</code>:
+                </p>
+                <div class="language-css highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nc">.container</span> <span class="nt">header</span> <span class="nc">.main-header</span> <span class="p">{</span>
   <span class="nl">color</span><span class="p">:</span> <span class="no">crimson</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Note that we could have written the selector chain above with just the <code
-                  class="highlighter-rouge">h1</code> and achieved the same result:</p>
-              <div class="language-css highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nc">.container</span> <span class="nt">header</span> <span class="nt">h1</span> <span class="p">{</span>
+                <p>
+                  Note that we could have written the selector chain above with
+                  just the <code class="highlighter-rouge">h1</code> and
+                  achieved the same result:
+                </p>
+                <div class="language-css highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nc">.container</span> <span class="nt">header</span> <span class="nt">h1</span> <span class="p">{</span>
   <span class="nl">color</span><span class="p">:</span> <span class="no">crimson</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>This is because both the class <code class="highlighter-rouge">.main-header</code> and the <code
-                  class="highlighter-rouge">h1</code> element is on the same specificity level in our chain.</p>
-              <p>If we wanted to be extremely specific, we could use both the element AND the class together like this:
-              </p>
-              <div class="language-css highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nc">.container</span> <span class="nt">header</span> <span class="nt">h1</span><span class="nc">.main-header</span> <span class="p">{</span>
+                <p>
+                  This is because both the class
+                  <code class="highlighter-rouge">.main-header</code> and the
+                  <code class="highlighter-rouge">h1</code> element is on the
+                  same specificity level in our chain.
+                </p>
+                <p>
+                  If we wanted to be extremely specific, we could use both the
+                  element AND the class together like this:
+                </p>
+                <div class="language-css highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nc">.container</span> <span class="nt">header</span> <span class="nt">h1</span><span class="nc">.main-header</span> <span class="p">{</span>
   <span class="nl">color</span><span class="p">:</span> <span class="no">crimson</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>We just did the same thing in three different ways with the same result!</p>
-              <p>Some developers see this as a powerful aspect of CSS; but, others point this out as a reason CSS is so
-                confusing.</p>
-              <p>Our opinion is that you should know several ways to do the same thing in case you run into a unique
-                situation where you need to weigh the specificity more heavily.</p>
-              <p>At this point, you should attempt to style the anchor tags inside the navigation, explore the several
-                different ways you could write your specificity chains.</p>
-              <p><a href="https://codepen.io/lambdaschool/pen/rqOOmX?editors=1100">Check your code against a final
-                  solution for this tutorial.</a></p>
-              <h5>Challenge</h5>
-              <p>Follow the instructions <a href="https://codepen.io/lambdaschool/pen/rddroJ">here</a> to challenge
-                yourself using CSS specificity and inheritance.</p>
-              <h5>Dig Deeper</h5>
-              <ul>
-                <li>
-                  <a href="https://css-tricks.com/centering-css-complete-guide/" target="blank_">Centering things in
-                    CSS</a><br> Center anything, vertically or horizontally using CSS.</li>
-                <li>
-                  <a href="https://jigsaw.w3.org/css-validator/" target="blank_">Check your code: CSS</a><br> You can
-                  check your CSS validation against current standards. Open bracket? Missing semicolon? This validator
-                  will find it.</li>
-                <li>
-                  <a href="https://validator.w3.org/" target="blank_">Check your code: HTML Validator</a><br> You can
-                  check your code against the W3 standards by using their HTML validator. Remember, this is just HTML
-                  and doesn't include CSS or JavaScript.</li>
-              </ul>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to implement a CSS reset and understand why it’s important for cross
-                browser development</h4>
-              <p>CSS resets allow development teams to have a consistent rendering experience across multiple browsers.
-                Resets are common in the web development industry and although they may not be right every situation,
-                knowing about them and how they are used it critical to most projects.</p>
-              <h5>Overview</h5>
-              <h3 id="what-is-a-css-reset">What is a CSS Reset?</h3>
-              <p>A CSS reset is when a developer will remove all default styling provided by browsers. Usually, a CSS
-                reset will set all box model and font properties to 0 or inherit.</p>
-              <p>Example code from Eric Meyer’s popular CSS reset:</p>
-              <div class="language-css highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>
+                <p>
+                  We just did the same thing in three different ways with the
+                  same result!
+                </p>
+                <p>
+                  Some developers see this as a powerful aspect of CSS; but,
+                  others point this out as a reason CSS is so confusing.
+                </p>
+                <p>
+                  Our opinion is that you should know several ways to do the
+                  same thing in case you run into a unique situation where you
+                  need to weigh the specificity more heavily.
+                </p>
+                <p>
+                  At this point, you should attempt to style the anchor tags
+                  inside the navigation, explore the several different ways you
+                  could write your specificity chains.
+                </p>
+                <p>
+                  <a
+                    href="https://codepen.io/lambdaschool/pen/rqOOmX?editors=1100"
+                    >Check your code against a final solution for this
+                    tutorial.</a
+                  >
+                </p>
+                <h5>Challenge</h5>
+                <p>
+                  Follow the instructions
+                  <a href="https://codepen.io/lambdaschool/pen/rddroJ">here</a>
+                  to challenge yourself using CSS specificity and inheritance.
+                </p>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://css-tricks.com/centering-css-complete-guide/"
+                      target="blank_"
+                      >Centering things in CSS</a
+                    ><br />
+                    Center anything, vertically or horizontally using CSS.
+                  </li>
+                  <li>
+                    <a
+                      href="https://jigsaw.w3.org/css-validator/"
+                      target="blank_"
+                      >Check your code: CSS</a
+                    ><br />
+                    You can check your CSS validation against current standards.
+                    Open bracket? Missing semicolon? This validator will find
+                    it.
+                  </li>
+                  <li>
+                    <a href="https://validator.w3.org/" target="blank_"
+                      >Check your code: HTML Validator</a
+                    ><br />
+                    You can check your code against the W3 standards by using
+                    their HTML validator. Remember, this is just HTML and
+                    doesn't include CSS or JavaScript.
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to implement a CSS reset and understand why it’s
+                  important for cross browser development
+                </h4>
+                <p>
+                  CSS resets allow development teams to have a consistent
+                  rendering experience across multiple browsers. Resets are
+                  common in the web development industry and although they may
+                  not be right every situation, knowing about them and how they
+                  are used it critical to most projects.
+                </p>
+                <h5>Overview</h5>
+                <h3 id="what-is-a-css-reset">What is a CSS Reset?</h3>
+                <p>
+                  A CSS reset is when a developer will remove all default
+                  styling provided by browsers. Usually, a CSS reset will set
+                  all box model and font properties to 0 or inherit.
+                </p>
+                <p>Example code from Eric Meyer’s popular CSS reset:</p>
+                <div class="language-css highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>
 <span class="nt">html</span><span class="o">,</span> <span class="nt">body</span><span class="o">,</span> <span class="nt">div</span><span class="o">,</span> <span class="nt">span</span><span class="o">,</span> <span class="nt">applet</span><span class="o">,</span> <span class="nt">object</span><span class="o">,</span> <span class="nt">iframe</span><span class="o">,</span>  
 <span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">h5</span><span class="o">,</span> <span class="nt">h6</span><span class="o">,</span> <span class="nt">p</span><span class="o">,</span> <span class="nt">blockquote</span><span class="o">,</span> <span class="nt">pre</span><span class="o">,</span>  
 <span class="nt">a</span><span class="o">,</span> <span class="nt">abbr</span><span class="o">,</span> <span class="nt">acronym</span><span class="o">,</span> <span class="nt">address</span><span class="o">,</span> <span class="nt">big</span><span class="o">,</span> <span class="nt">cite</span><span class="o">,</span> <span class="nt">code</span><span class="o">,</span>  
@@ -935,112 +1421,196 @@
 <span class="p">}</span>
 
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>This type of reset is beginner-friendly because it forces you to create your own styles from scratch.
-              </p>
-              <h3 id="alternative-resets">Alternative Resets</h3>
-              <p>There are other more tailored resets that companies will use that are very specific to their needs.
-                Some companies will incorporate their own style guides into a reset so that all new developers joining
-                the company are aligned from the beginning.</p>
-              <p>A popular alternative to just setting everything to zero is called Normalize. Normalize focuses on only
-                fixing the cross browser problems and adding your own styles. The focus here is to utilize the positive
-                sides of default browser styles. If you would like to learn more about normalize it would be to your
-                advantage as many companies use this to build their projects.</p>
-              <p>Link to normalize: https://necolas.github.io/normalize.css/</p>
-              <h3 id="implementation">Implementation</h3>
-              <p>Because resets knock out most default styling from the browser, you will want to place your reset code
-                at the top of your CSS page. If you put the reset at the bottom of your page, it will knock out all your
-                styles due the cascade of CSS.</p>
-              <p>If you choose to use a CSS reset, make it your first priority to use it at the top of your CSS files
-                when starting a project, otherwise it will be more of a headache than a help.</p>
-              <h5>Follow Along</h5>
-              <h3 id="css-reset-in-action">CSS Reset In Action</h3>
-              <p>The best way to see a reset in action is to use existing code with default settings in it. Then, add a
-                reset to see the difference. Follow these instructions to see how impactful a reset it:</p>
-              <ul>
-                <li>Open this codepen: https://codepen.io/lambdaschool/pen/bjWbrx?editors=1000</li>
-                <li>Go to Eric Meyer’s reset page: https://meyerweb.com/eric/tools/css/reset/</li>
-                <li>Copy and paste the CSS reset code</li>
-                <li>Paste the code in the CSS section of the codepen you have open</li>
-                <li>Observe the huge changes that just occurred</li>
-              </ul>
-              <p>Notice how your code is now looking lifeless. This is pretty jarring at first, but it gives us an
-                opportunity now style these tags the way the designer wants without being worried about cross browser
-                issues.</p>
-              <h5>Challenge</h5>
-              <h3 id="see-the-difference-reset-vs-normalize">See The Difference: Reset vs Normalize</h3>
-              <p>Use this codepen: https://codepen.io/lambdaschool/pen/bjWbrx?editors=1000</p>
-              <p>Implement the eric meyer reset and take note of how much changed. Then implement normalize instead of
-                the eric meyer reset. Notice the subtle but important differences. Make a list of changes you see
-                between the two approaches by inspecting the code in your web developer tools and looking at the CSS
-                properties on each element.</p>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to describe and use responsive units to create a fully responsive website
-              </h4>
-              <p>Responsive units allow us the flexibility we need to code for thousands of devices in one code base.
-              </p>
-              <h5>Overview</h5>
-              <h3 id="px">px</h3>
-              <p>The <code class="highlighter-rouge">px</code> unit is referred to as an <code
-                  class="highlighter-rouge">absolute length unit</code>. This means that <code
-                  class="highlighter-rouge">px</code> does not adjust for its surroundings. That being understood, <code
-                  class="highlighter-rouge">px</code> units are still viable in some scenarios where layout control is
-                needed. Modern browsers now allow <code class="highlighter-rouge">px</code> units to scale with the
-                zoomed in viewport.</p>
-              <h4 id="syntax-example">Syntax Example</h4>
-              <div class="language-html highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>Example<span class="nt">&lt;/h1&gt;</span>
+                <p>
+                  This type of reset is beginner-friendly because it forces you
+                  to create your own styles from scratch.
+                </p>
+                <h3 id="alternative-resets">Alternative Resets</h3>
+                <p>
+                  There are other more tailored resets that companies will use
+                  that are very specific to their needs. Some companies will
+                  incorporate their own style guides into a reset so that all
+                  new developers joining the company are aligned from the
+                  beginning.
+                </p>
+                <p>
+                  A popular alternative to just setting everything to zero is
+                  called Normalize. Normalize focuses on only fixing the cross
+                  browser problems and adding your own styles. The focus here is
+                  to utilize the positive sides of default browser styles. If
+                  you would like to learn more about normalize it would be to
+                  your advantage as many companies use this to build their
+                  projects.
+                </p>
+                <p>
+                  Link to normalize: https://necolas.github.io/normalize.css/
+                </p>
+                <h3 id="implementation">Implementation</h3>
+                <p>
+                  Because resets knock out most default styling from the
+                  browser, you will want to place your reset code at the top of
+                  your CSS page. If you put the reset at the bottom of your
+                  page, it will knock out all your styles due the cascade of
+                  CSS.
+                </p>
+                <p>
+                  If you choose to use a CSS reset, make it your first priority
+                  to use it at the top of your CSS files when starting a
+                  project, otherwise it will be more of a headache than a help.
+                </p>
+                <h5>Follow Along</h5>
+                <h3 id="css-reset-in-action">CSS Reset In Action</h3>
+                <p>
+                  The best way to see a reset in action is to use existing code
+                  with default settings in it. Then, add a reset to see the
+                  difference. Follow these instructions to see how impactful a
+                  reset it:
+                </p>
+                <ul>
+                  <li>
+                    Open this codepen:
+                    https://codepen.io/lambdaschool/pen/bjWbrx?editors=1000
+                  </li>
+                  <li>
+                    Go to Eric Meyer’s reset page:
+                    https://meyerweb.com/eric/tools/css/reset/
+                  </li>
+                  <li>Copy and paste the CSS reset code</li>
+                  <li>
+                    Paste the code in the CSS section of the codepen you have
+                    open
+                  </li>
+                  <li>Observe the huge changes that just occurred</li>
+                </ul>
+                <p>
+                  Notice how your code is now looking lifeless. This is pretty
+                  jarring at first, but it gives us an opportunity now style
+                  these tags the way the designer wants without being worried
+                  about cross browser issues.
+                </p>
+                <h5>Challenge</h5>
+                <h3 id="see-the-difference-reset-vs-normalize">
+                  See The Difference: Reset vs Normalize
+                </h3>
+                <p>
+                  Use this codepen:
+                  https://codepen.io/lambdaschool/pen/bjWbrx?editors=1000
+                </p>
+                <p>
+                  Implement the eric meyer reset and take note of how much
+                  changed. Then implement normalize instead of the eric meyer
+                  reset. Notice the subtle but important differences. Make a
+                  list of changes you see between the two approaches by
+                  inspecting the code in your web developer tools and looking at
+                  the CSS properties on each element.
+                </p>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to describe and use responsive units to create a fully
+                  responsive website
+                </h4>
+                <p>
+                  Responsive units allow us the flexibility we need to code for
+                  thousands of devices in one code base.
+                </p>
+                <h5>Overview</h5>
+                <h3 id="px">px</h3>
+                <p>
+                  The <code class="highlighter-rouge">px</code> unit is referred
+                  to as an
+                  <code class="highlighter-rouge">absolute length unit</code>.
+                  This means that <code class="highlighter-rouge">px</code> does
+                  not adjust for its surroundings. That being understood,
+                  <code class="highlighter-rouge">px</code> units are still
+                  viable in some scenarios where layout control is needed.
+                  Modern browsers now allow
+                  <code class="highlighter-rouge">px</code> units to scale with
+                  the zoomed in viewport.
+                </p>
+                <h4 id="syntax-example">Syntax Example</h4>
+                <div class="language-html highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nt">&lt;h1&gt;</span>Example<span class="nt">&lt;/h1&gt;</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <div class="language-css highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nt">h1</span> <span class="p">{</span>
+                <div class="language-css highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nt">h1</span> <span class="p">{</span>
   <span class="nl">font-size</span><span class="p">:</span> <span class="m">18px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h4 id="pros">Pros</h4>
-              <ul>
-                <li>Easiest unit for developers to read from design files</li>
-                <li>Modern browsers now allow <code class="highlighter-rouge">px</code> units to grow with built in zoom
-                  features</li>
-                <li>No reliance on cascade for sizing</li>
-              </ul>
-              <h4 id="cons">Cons</h4>
-              <ul>
-                <li>Rigid unit that is not responsive in layouts</li>
-                <li>Hard coded font size values are not accessible for users that change their default settings</li>
-              </ul>
-              <h3 id="em">em</h3>
-              <p>The <code class="highlighter-rouge">em</code> unit is referred to as a <code
-                  class="highlighter-rouge">relative length unit</code>. This means that <code
-                  class="highlighter-rouge">em</code> will adjust to its surroundings. In the syntax example below you
-                can see that the <code class="highlighter-rouge">h1</code> is nested within the <code
-                  class="highlighter-rouge">.main-content</code> section.</p>
-              <p>Notice that the <code class="highlighter-rouge">.main-content</code> has a <code
-                  class="highlighter-rouge">font-size: 10px</code>. The <code class="highlighter-rouge">em</code> inside
-                of our <code class="highlighter-rouge">h1</code> will now adjust its value to match the <code
-                  class="highlighter-rouge">10px</code>! This can be really useful when building responsive layouts or
-                adjusting fonts on different devices.</p>
-              <p>One of the issues with <code class="highlighter-rouge">em</code> is its inherited calculation.
-                Sometimes changing just one parent element can lead to a cascade of skewed sizes. The cascade of font
-                sizes can easily compound, creating hard-to-anticipate issues.</p>
-              <h4 id="syntax-example-1">Syntax Example</h4>
-              <div class="language-html highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"main-content"</span><span class="nt">&gt;</span>
+                <h4 id="pros">Pros</h4>
+                <ul>
+                  <li>Easiest unit for developers to read from design files</li>
+                  <li>
+                    Modern browsers now allow
+                    <code class="highlighter-rouge">px</code> units to grow with
+                    built in zoom features
+                  </li>
+                  <li>No reliance on cascade for sizing</li>
+                </ul>
+                <h4 id="cons">Cons</h4>
+                <ul>
+                  <li>Rigid unit that is not responsive in layouts</li>
+                  <li>
+                    Hard coded font size values are not accessible for users
+                    that change their default settings
+                  </li>
+                </ul>
+                <h3 id="em">em</h3>
+                <p>
+                  The <code class="highlighter-rouge">em</code> unit is referred
+                  to as a
+                  <code class="highlighter-rouge">relative length unit</code>.
+                  This means that <code class="highlighter-rouge">em</code> will
+                  adjust to its surroundings. In the syntax example below you
+                  can see that the <code class="highlighter-rouge">h1</code> is
+                  nested within the
+                  <code class="highlighter-rouge">.main-content</code> section.
+                </p>
+                <p>
+                  Notice that the
+                  <code class="highlighter-rouge">.main-content</code> has a
+                  <code class="highlighter-rouge">font-size: 10px</code>. The
+                  <code class="highlighter-rouge">em</code> inside of our
+                  <code class="highlighter-rouge">h1</code> will now adjust its
+                  value to match the
+                  <code class="highlighter-rouge">10px</code>! This can be
+                  really useful when building responsive layouts or adjusting
+                  fonts on different devices.
+                </p>
+                <p>
+                  One of the issues with
+                  <code class="highlighter-rouge">em</code> is its inherited
+                  calculation. Sometimes changing just one parent element can
+                  lead to a cascade of skewed sizes. The cascade of font sizes
+                  can easily compound, creating hard-to-anticipate issues.
+                </p>
+                <h4 id="syntax-example-1">Syntax Example</h4>
+                <div class="language-html highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"main-content"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;h1&gt;</span>Example<span class="nt">&lt;/h1&gt;</span>
 <span class="nt">&lt;/section&gt;</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <div class="language-css highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nc">.main-content</span> <span class="p">{</span>
+                <div class="language-css highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nc">.main-content</span> <span class="p">{</span>
   <span class="nl">font-size</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -1049,63 +1619,109 @@
   <span class="nl">font-size</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h4 id="pros-1">Pros</h4>
-              <ul>
-                <li>Responsive to its surroundings</li>
-              </ul>
-              <h4 id="cons-1">Cons</h4>
-              <ul>
-                <li>Can be too flexible at times and create cascading font sizes that weren’t expected</li>
-                <li>Converting <code class="highlighter-rouge">px</code> to <code class="highlighter-rouge">em</code>
-                  when creating code from a design file usually requires a calculator or memorization that can feel
-                  cumbersome</li>
-              </ul>
-              <h3 id="rem">rem</h3>
-              <p>The <code class="highlighter-rouge">rem</code> or <code class="highlighter-rouge">root em</code> unit
-                is also referred to as a <code class="highlighter-rouge">relative length unit</code>. The <code
-                  class="highlighter-rouge">root</code> part means that this unit looks to the <code
-                  class="highlighter-rouge">root</code> element in a page. Usually the <code
-                  class="highlighter-rouge">root</code> element is going to be the <code
-                  class="highlighter-rouge">html</code> tag in a web page or application.</p>
-              <p>Look at the syntax example below and you will see we have the same exact set up from our <code
-                  class="highlighter-rouge">em</code> example. This time we have added a reference to the <code
-                  class="highlighter-rouge">html</code> element and assigned a <code
-                  class="highlighter-rouge">font-size:16px</code>.</p>
-              <p>Notice that the <code class="highlighter-rouge">rem</code> in our <code
-                  class="highlighter-rouge">h1</code> is not impacted by our <code
-                  class="highlighter-rouge">main-content</code> class anymore! The <code
-                  class="highlighter-rouge">h1</code> is instead going off of <code
-                  class="highlighter-rouge">16px</code> as it’s base multiplier.</p>
-              <p>This is a great thing because now we can adjust our relative font-size off of one place instead of many
-                like the <code class="highlighter-rouge">em</code> does.</p>
-              <p><strong>Pro Tip:</strong> Using a hard coded pixel on the <code class="highlighter-rouge">html</code>
-                tag is bad practice as it overwrites the user’s default settings on their browser.</p>
-              <p>Instead, use a % based unit to be more accessible. A great trick is to use <code
-                  class="highlighter-rouge">62.5%</code> as the base value because then you can convert <code
-                  class="highlighter-rouge">rem</code> units by the power of <code class="highlighter-rouge">10</code>
-                instead of <code class="highlighter-rouge">16</code>. <code class="highlighter-rouge">62.5 * .16 =
-                  10</code>. That means <code class="highlighter-rouge">1rem</code> would equate to <code
-                  class="highlighter-rouge">10px</code> throughout the document!</p>
-              <p>This makes using <code class="highlighter-rouge">rem</code> so much easier to calculate compared to
-                <code class="highlighter-rouge">em</code>.</p>
-              <p>Take a look at these examples:<br>
-                <code class="highlighter-rouge">18px === 1.8rem
-                  13px === 1.3rem
-                  27px === 2.7rem</code></p>
-              <h4 id="syntax-example-2">Syntax Example</h4>
-              <div class="language-html highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"main-content"</span><span class="nt">&gt;</span>
+                <h4 id="pros-1">Pros</h4>
+                <ul>
+                  <li>Responsive to its surroundings</li>
+                </ul>
+                <h4 id="cons-1">Cons</h4>
+                <ul>
+                  <li>
+                    Can be too flexible at times and create cascading font sizes
+                    that weren’t expected
+                  </li>
+                  <li>
+                    Converting <code class="highlighter-rouge">px</code> to
+                    <code class="highlighter-rouge">em</code> when creating code
+                    from a design file usually requires a calculator or
+                    memorization that can feel cumbersome
+                  </li>
+                </ul>
+                <h3 id="rem">rem</h3>
+                <p>
+                  The <code class="highlighter-rouge">rem</code> or
+                  <code class="highlighter-rouge">root em</code> unit is also
+                  referred to as a
+                  <code class="highlighter-rouge">relative length unit</code>.
+                  The <code class="highlighter-rouge">root</code> part means
+                  that this unit looks to the
+                  <code class="highlighter-rouge">root</code> element in a page.
+                  Usually the
+                  <code class="highlighter-rouge">root</code> element is going
+                  to be the <code class="highlighter-rouge">html</code> tag in a
+                  web page or application.
+                </p>
+                <p>
+                  Look at the syntax example below and you will see we have the
+                  same exact set up from our
+                  <code class="highlighter-rouge">em</code> example. This time
+                  we have added a reference to the
+                  <code class="highlighter-rouge">html</code> element and
+                  assigned a
+                  <code class="highlighter-rouge">font-size:16px</code>.
+                </p>
+                <p>
+                  Notice that the <code class="highlighter-rouge">rem</code> in
+                  our <code class="highlighter-rouge">h1</code> is not impacted
+                  by our
+                  <code class="highlighter-rouge">main-content</code> class
+                  anymore! The <code class="highlighter-rouge">h1</code> is
+                  instead going off of
+                  <code class="highlighter-rouge">16px</code> as it’s base
+                  multiplier.
+                </p>
+                <p>
+                  This is a great thing because now we can adjust our relative
+                  font-size off of one place instead of many like the
+                  <code class="highlighter-rouge">em</code> does.
+                </p>
+                <p>
+                  <strong>Pro Tip:</strong> Using a hard coded pixel on the
+                  <code class="highlighter-rouge">html</code> tag is bad
+                  practice as it overwrites the user’s default settings on their
+                  browser.
+                </p>
+                <p>
+                  Instead, use a % based unit to be more accessible. A great
+                  trick is to use
+                  <code class="highlighter-rouge">62.5%</code> as the base value
+                  because then you can convert
+                  <code class="highlighter-rouge">rem</code> units by the power
+                  of <code class="highlighter-rouge">10</code> instead of
+                  <code class="highlighter-rouge">16</code>.
+                  <code class="highlighter-rouge">62.5 * .16 = 10</code>. That
+                  means <code class="highlighter-rouge">1rem</code> would equate
+                  to <code class="highlighter-rouge">10px</code> throughout the
+                  document!
+                </p>
+                <p>
+                  This makes using <code class="highlighter-rouge">rem</code> so
+                  much easier to calculate compared to
+                  <code class="highlighter-rouge">em</code>.
+                </p>
+                <p>
+                  Take a look at these examples:<br />
+                  <code class="highlighter-rouge"
+                    >18px === 1.8rem 13px === 1.3rem 27px === 2.7rem</code
+                  >
+                </p>
+                <h4 id="syntax-example-2">Syntax Example</h4>
+                <div class="language-html highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"main-content"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;h1&gt;</span>Example<span class="nt">&lt;/h1&gt;</span>
 <span class="nt">&lt;/section&gt;</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <div class="language-css highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nt">html</span> <span class="p">{</span>
+                <div class="language-css highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nt">html</span> <span class="p">{</span>
   <span class="c">/* This technically works but is too rigid and not accessible */</span>
   <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
   <span class="c">/* Best Practice */</span>
@@ -1121,50 +1737,85 @@
   <span class="nl">font-size</span><span class="p">:</span> <span class="m">2rem</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h4 id="pros-2">Pros</h4>
-              <ul>
-                <li>Responsive to <code class="highlighter-rouge">root</code> element only</li>
-                <li>If you use a % based unit, you can achieve accessibility gains and eliminate the awkward conversion
-                  system of 16px (the browser’s default font-size)</li>
-              </ul>
-              <h4 id="cons-2">Cons</h4>
-              <ul>
-                <li>If you don’t make the root element flexible, you will hurt accessibility by overwriting default user
-                  settings in the browser</li>
-                <li>Converting <code class="highlighter-rouge">px</code> to <code class="highlighter-rouge">rem</code>
-                  when creating code from a design file usually requires a calculator or memorization that can feel
-                  cumbersome</li>
-              </ul>
-              <h3>%</h3>
-              <p>The <code class="highlighter-rouge">%</code> unit is also referred to as a <code
-                  class="highlighter-rouge">relative length unit</code>. The <code class="highlighter-rouge">%</code>
-                unit is usually used for building responsive layouts more than for font sizing. <code
-                  class="highlighter-rouge">%</code> based layouts start at the viewport width and then cascade down
-                through nested units.</p>
-              <p>Look at the example below to see how the cascade of nested <code class="highlighter-rouge">%</code>
-                based units work. You can see the <code class="highlighter-rouge">.main-content</code> section is <code
-                  class="highlighter-rouge">100%</code> of it’s viewport as it’s the top level element in our example.
-              </p>
-              <p>Note the <code class="highlighter-rouge">h1</code> width is 50% of the <code
-                  class="highlighter-rouge">.main-content</code> width and not the viewport. That means if we adjusted
-                <code class="highlighter-rouge">.main-content</code> width to a different value like 60%, the <code
-                  class="highlighter-rouge">h1</code> width would then become 50% of the new value 60%.</p>
-              <p>You can see how this would compound very quickly! You need to make sure that you avoid going over 100%
-                in a responsive layout or you will get strange and frustrating behavior as you’re building.</p>
-              <h4 id="syntax-example-3">Syntax Example</h4>
-              <div class="language-html highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"main-content"</span><span class="nt">&gt;</span>
+                <h4 id="pros-2">Pros</h4>
+                <ul>
+                  <li>
+                    Responsive to
+                    <code class="highlighter-rouge">root</code> element only
+                  </li>
+                  <li>
+                    If you use a % based unit, you can achieve accessibility
+                    gains and eliminate the awkward conversion system of 16px
+                    (the browser’s default font-size)
+                  </li>
+                </ul>
+                <h4 id="cons-2">Cons</h4>
+                <ul>
+                  <li>
+                    If you don’t make the root element flexible, you will hurt
+                    accessibility by overwriting default user settings in the
+                    browser
+                  </li>
+                  <li>
+                    Converting <code class="highlighter-rouge">px</code> to
+                    <code class="highlighter-rouge">rem</code> when creating
+                    code from a design file usually requires a calculator or
+                    memorization that can feel cumbersome
+                  </li>
+                </ul>
+                <h3>%</h3>
+                <p>
+                  The <code class="highlighter-rouge">%</code> unit is also
+                  referred to as a
+                  <code class="highlighter-rouge">relative length unit</code>.
+                  The <code class="highlighter-rouge">%</code> unit is usually
+                  used for building responsive layouts more than for font
+                  sizing. <code class="highlighter-rouge">%</code> based layouts
+                  start at the viewport width and then cascade down through
+                  nested units.
+                </p>
+                <p>
+                  Look at the example below to see how the cascade of nested
+                  <code class="highlighter-rouge">%</code> based units work. You
+                  can see the
+                  <code class="highlighter-rouge">.main-content</code> section
+                  is <code class="highlighter-rouge">100%</code> of it’s
+                  viewport as it’s the top level element in our example.
+                </p>
+                <p>
+                  Note the <code class="highlighter-rouge">h1</code> width is
+                  50% of the
+                  <code class="highlighter-rouge">.main-content</code> width and
+                  not the viewport. That means if we adjusted
+                  <code class="highlighter-rouge">.main-content</code> width to
+                  a different value like 60%, the
+                  <code class="highlighter-rouge">h1</code> width would then
+                  become 50% of the new value 60%.
+                </p>
+                <p>
+                  You can see how this would compound very quickly! You need to
+                  make sure that you avoid going over 100% in a responsive
+                  layout or you will get strange and frustrating behavior as
+                  you’re building.
+                </p>
+                <h4 id="syntax-example-3">Syntax Example</h4>
+                <div class="language-html highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"main-content"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;h1&gt;</span>Example<span class="nt">&lt;/h1&gt;</span>
 <span class="nt">&lt;/section&gt;</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <div class="language-css highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nc">.main-content</span> <span class="p">{</span>
+                <div class="language-css highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nc">.main-content</span> <span class="p">{</span>
 <span class="c">/* this will be the entire viewport */</span>
   <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
 <span class="p">}</span>
@@ -1174,271 +1825,375 @@
   <span class="nl">width</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h4 id="pros-3">Pros</h4>
-              <ul>
-                <li>Responsiveness starts at the viewport level and cascades down to nested elements helping you build
-                  layouts to adjust to any size</li>
-              </ul>
-              <h4 id="cons-3">Cons</h4>
-              <ul>
-                <li>You have to be careful with <code class="highlighter-rouge">%</code> based layout as widths can get
-                  too small very fast</li>
-                <li>If you don’t add everything up to 100% when building layout, <code
-                    class="highlighter-rouge">%</code> can cause a lot of frustration searching the box model to see
-                  where the math went wrong</li>
-              </ul>
-              <h3 id="vw--vh">vw / vh</h3>
-              <p>These units completely rely on the viewport of the browser window to render. While these units can be
-                used most places any other unit can be used, we caution against using them <strong>except</strong> in a
-                specific use-case: full screen layouts.</p>
-              <p>If you have ever tried to use <code class="highlighter-rouge">height: 100%</code>, you’ll appreciate
-                <code class="highlighter-rouge">vw</code> and <code class="highlighter-rouge">vh</code>. Rarely they are
-                used to make a font fill the screen (think slideshows, or landing page headers w/ font sized to 1/3 of
-                viewport, e.g. <code class="highlighter-rouge">font-size: 33vh</code>.)</p>
-              <h3 id="other-units">Other Units</h3>
-              <p>There are many other absolute and responsive units. You can take a look at them here: <a
-                  href="https://www.w3schools.com/css/css_units.asp">https://www.w3schools.com/css/css_units.asp</a></p>
-              <p>Currently the most popular units of length in CSS are <code class="highlighter-rouge">rem, em, px,
-                  %</code> with some newer units making waves like <code class="highlighter-rouge">vw and vh</code>. You
-                are encouraged to try out other units and see how they behave compared the units we have discussed here.
-              </p>
-              <hr>
-              <h2 class="display-4">
-                <a id="project" class="anchor" href="#project" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Project</h2>
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <h5><a target="_blank" href="https://github.com/LambdaSchool/web-module-project-intro-css">Intro
-                      CSS</a></h5>
-                  <p>Practice specificity and styling with responsive units by writing CSS to match a design file.</p>
-                </li>
-              </ul>
-              <h2 class="display-4">
-                <a id="review" class="anchor" href="#review" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Review</h2>
-              <h3 class="display-5">Class Recordings</h3>
-              <p class="lead">You can use class recordings to help you master the material.</p>
-              <div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <strong><a target="_blank" href="https://youtu.be/4M3me5XVj2A">Intro CSS for WebPT22 w/Nathan
-                        Braun</a></strong>
-                    <p>In this module we will dive deeper into the world of CSS to learn about the box model,
-                      specificity, and responsive units. These tools will help you to write professional-quality CSS
-                      that will be mostly compatible across browser types and screen sizes.</p>
-                  </li>
-                  <li class="list-group-item">
-                    <a href="/archive/WEB1/module/rec6KMj0W3ukhYeWv">All previous recordings</a>
+                <h4 id="pros-3">Pros</h4>
+                <ul>
+                  <li>
+                    Responsiveness starts at the viewport level and cascades
+                    down to nested elements helping you build layouts to adjust
+                    to any size
                   </li>
                 </ul>
+                <h4 id="cons-3">Cons</h4>
+                <ul>
+                  <li>
+                    You have to be careful with
+                    <code class="highlighter-rouge">%</code> based layout as
+                    widths can get too small very fast
+                  </li>
+                  <li>
+                    If you don’t add everything up to 100% when building layout,
+                    <code class="highlighter-rouge">%</code> can cause a lot of
+                    frustration searching the box model to see where the math
+                    went wrong
+                  </li>
+                </ul>
+                <h3 id="vw--vh">vw / vh</h3>
+                <p>
+                  These units completely rely on the viewport of the browser
+                  window to render. While these units can be used most places
+                  any other unit can be used, we caution against using them
+                  <strong>except</strong> in a specific use-case: full screen
+                  layouts.
+                </p>
+                <p>
+                  If you have ever tried to use
+                  <code class="highlighter-rouge">height: 100%</code>, you’ll
+                  appreciate <code class="highlighter-rouge">vw</code> and
+                  <code class="highlighter-rouge">vh</code>. Rarely they are
+                  used to make a font fill the screen (think slideshows, or
+                  landing page headers w/ font sized to 1/3 of viewport, e.g.
+                  <code class="highlighter-rouge">font-size: 33vh</code>.)
+                </p>
+                <h3 id="other-units">Other Units</h3>
+                <p>
+                  There are many other absolute and responsive units. You can
+                  take a look at them here:
+                  <a href="https://www.w3schools.com/css/css_units.asp"
+                    >https://www.w3schools.com/css/css_units.asp</a
+                  >
+                </p>
+                <p>
+                  Currently the most popular units of length in CSS are
+                  <code class="highlighter-rouge">rem, em, px, %</code> with
+                  some newer units making waves like
+                  <code class="highlighter-rouge">vw and vh</code>. You are
+                  encouraged to try out other units and see how they behave
+                  compared the units we have discussed here.
+                </p>
+                <hr />
+                <h2 class="display-4">
+                  <a
+                    id="project"
+                    class="anchor"
+                    href="#project"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Project
+                </h2>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <h5>
+                      <a
+                        target="_blank"
+                        href="https://github.com/LambdaSchool/web-module-project-intro-css"
+                        >Intro CSS</a
+                      >
+                    </h5>
+                    <p>
+                      Practice specificity and styling with responsive units by
+                      writing CSS to match a design file.
+                    </p>
+                  </li>
+                </ul>
+                <h2 class="display-4">
+                  <a
+                    id="review"
+                    class="anchor"
+                    href="#review"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Review
+                </h2>
+                <h3 class="display-5">Class Recordings</h3>
+                <p class="lead">
+                  You can use class recordings to help you master the material.
+                </p>
+                <div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong
+                        ><a target="_blank" href="https://youtu.be/4M3me5XVj2A"
+                          >Intro CSS for WebPT22 w/Nathan Braun</a
+                        ></strong
+                      >
+                      <p>
+                        In this module we will dive deeper into the world of CSS
+                        to learn about the box model, specificity, and
+                        responsive units. These tools will help you to write
+                        professional-quality CSS that will be mostly compatible
+                        across browser types and screen sizes.
+                      </p>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="/archive/WEB1/module/rec6KMj0W3ukhYeWv"
+                        >All previous recordings</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <h3 class="display-5">Demonstrate Mastery</h3>
+                <p>
+                  To demonstrate mastery of this module, you need to complete
+                  and pass a code review on each of the following:
+                </p>
+                <ul>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      Continue to add style to your personal webpage with the
+                      box model where applicable. If you haven’t added an image
+                      yet, now is a good time to do so and practice styling.
+                    </p>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      Follow the instructions
+                      <a href="https://codepen.io/lambdaschool/pen/rddroJ"
+                        >here</a
+                      >
+                      to challenge yourself using CSS specificity and
+                      inheritance.
+                    </p>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <h3 id="see-the-difference-reset-vs-normalize">
+                      See The Difference: Reset vs Normalize
+                    </h3>
+                    <p>
+                      Use this codepen:
+                      https://codepen.io/lambdaschool/pen/bjWbrx?editors=1000
+                    </p>
+                    <p>
+                      Implement the eric meyer reset and take note of how much
+                      changed. Then implement normalize instead of the eric
+                      meyer reset. Notice the subtle but important differences.
+                      Make a list of changes you see between the two approaches
+                      by inspecting the code in your web developer tools and
+                      looking at the CSS properties on each element.
+                    </p>
+                  </li>
+                  <li>Project: Intro CSS</li>
+                </ul>
               </div>
-              <h3 class="display-5">Demonstrate Mastery</h3>
-              <p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the
-                following:</p>
-              <ul>
-                <li>Objective challenge: <p>Continue to add style to your personal webpage with the box model where
-                    applicable. If you haven’t added an image yet, now is a good time to do so and practice styling.</p>
-                </li>
-                <li>Objective challenge: <p>Follow the instructions <a
-                      href="https://codepen.io/lambdaschool/pen/rddroJ">here</a> to challenge yourself using CSS
-                    specificity and inheritance.</p>
-                </li>
-                <li>Objective challenge: <h3 id="see-the-difference-reset-vs-normalize">See The Difference: Reset vs
-                    Normalize</h3>
-                  <p>Use this codepen: https://codepen.io/lambdaschool/pen/bjWbrx?editors=1000</p>
-                  <p>Implement the eric meyer reset and take note of how much changed. Then implement normalize instead
-                    of the eric meyer reset. Notice the subtle but important differences. Make a list of changes you see
-                    between the two approaches by inspecting the code in your web developer tools and looking at the CSS
-                    properties on each element.</p>
-                </li>
-                <li>Project: Intro CSS</li>
-              </ul>
             </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-        dataLayer.push( arguments );
-      }
-      gtag( 'js', new Date() );
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
 
-      gtag( 'config', 'UA-80850900-4' );
-    </script>
-    <script type="text/javascript">
-      function getDomain() {
-        const domainName = window.location.hostname.split( '.' )[ 1 ];
-        return `${domainName}.com`;
-      }
-    </script>
-    <script src="" integrity="" crossorigin="anonymous"></script>
-    <script>
-      window.jQuery || document.write( '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>' )
-    </script>
-    <script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script>
-    <script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
-    <script src="/assets/js/activate.js"></script>
-    <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      SimpleJekyllSearch.init( {
-        searchInput: document.getElementById( 'search-input' ),
-        resultsContainer: document.getElementById( 'results-container' ),
-        dataSource: '/search.json',
-        searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Intro CSS">{title}</a></li>',
-        noResultsText: '',
-        limit: 10,
-        fuzzy: true,
-      } )
-    </script>
-    <script src="/assets/js/mermaid.min.js"></script>
-    <script type="text/javascript">
-      if ( window.attachEvent ) {
-        window.attachEvent( 'onload', verifySignedIn );
-      } else {
-        if ( window.onload ) {
-          var currentOnLoadFn = window.onload;
-          var newOnLoadFn = function ( evt ) {
-            currentOnLoadFn( evt );
-            verifySignedIn();
-          };
-          window.onload = newOnLoadFn;
+        gtag("config", "UA-80850900-4");
+      </script>
+      <script type="text/javascript">
+        function getDomain() {
+          const domainName = window.location.hostname.split(".")[1];
+          return `${domainName}.com`;
+        }
+      </script>
+      <script src="" integrity="" crossorigin="anonymous"></script>
+      <script>
+        window.jQuery ||
+          document.write(
+            '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>'
+          );
+      </script>
+      <script
+        src="/assets/js/vendor/popper.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="/dist/js/bootstrap.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script src="/assets/js/activate.js"></script>
+      <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        SimpleJekyllSearch.init({
+          searchInput: document.getElementById("search-input"),
+          resultsContainer: document.getElementById("results-container"),
+          dataSource: "/search.json",
+          searchResultTemplate:
+            '<li class="list-group-item"><a href="{url}" title="Intro CSS">{title}</a></li>',
+          noResultsText: "",
+          limit: 10,
+          fuzzy: true,
+        });
+      </script>
+      <script src="/assets/js/mermaid.min.js"></script>
+      <script type="text/javascript">
+        if (window.attachEvent) {
+          window.attachEvent("onload", verifySignedIn);
         } else {
-          window.onload = verifySignedIn;
-        }
-      }
-
-      function verifySignedIn() {
-        if ( isPagePublic() ) {
-          return showPageContents();
-        }
-
-        window.__user = null;
-        isSignedIn().then( ( user ) => {
-          window.__user = user;
-
-          if ( !user.signedIn ) {
-            redirectToSignIn();
-          } else if ( !user.student && !window.__openToAdmissions ) {
-            showUnauthorizedMessage();
+          if (window.onload) {
+            var currentOnLoadFn = window.onload;
+            var newOnLoadFn = function (evt) {
+              currentOnLoadFn(evt);
+              verifySignedIn();
+            };
+            window.onload = newOnLoadFn;
           } else {
-            showPageContents();
-          }
-        } );
-      }
-
-      function isPagePublic() {
-        const openCourses = [
-          'and-pre',
-          'ds-pre',
-          'fsw-pre',
-          'help',
-          'ios-pre',
-        ];
-
-        const openPages = [
-          'cs-and',
-          'cs-fsw',
-          'cs-ios',
-          'cr',
-          'ds',
-          'jx',
-          'p4s',
-          'ux',
-        ];
-
-        const pathParts = window.location.pathname.split( '/' );
-        const courseName = pathParts[ 1 ];
-        const pageName = pathParts[ pathParts.length - 1 ];
-
-        return openCourses.includes( courseName ) || openPages.includes( pageName );
-      }
-
-      function isSignedIn() {
-        const isDeployPreview = window.location.hostname.startsWith( 'deploy-preview' ) && window.location.hostname
-          .endsWith( 'netlify.com' );
-
-        if ( isDeployPreview ) return Promise.resolve( {
-          signedIn: true,
-          student: true
-        } );
-
-        return fetch( `${getAuthBaseUrl()}/whoami`, {
-            credentials: 'include'
-          } )
-          .then( ( response ) => response.text() )
-          .then( ( userAsText ) => userAsText ? JSON.parse( userAsText ) : null )
-          .then( ( userData ) => ( {
-            signedIn: Boolean( userData ),
-            student: Boolean( userData && userData.airtableId ),
-            id: userData ? userData.id : null,
-            email: userData ? userData.email : null
-          } ) )
-          .catch( ( error ) => {} );
-      }
-
-      function redirectToSignIn() {
-        const signInUrl =
-          `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
-        const redirectMessage = document.querySelector( '#redirect-message' );
-        redirectMessage.style.display = "block";
-        redirectMessage.innerHTML =
-          `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
-        window.location = signInUrl;
-      }
-
-      function showPageContents() {
-        document.querySelector( '#content-wrapper' ).style.visibility = 'visible';
-      }
-
-      function showUnauthorizedMessage() {
-        document.querySelector( '#unauthorized-message' ).style.display = 'block';
-      }
-
-      function getAuthBaseUrl() {
-        const domain = getDomain();
-        const authBaseUrl = `https://auth.${domain}`;
-        return authBaseUrl;
-      }
-    </script>
-    <script src="/assets/js/docs.min.js"></script>
-    <script>
-      var MathJax = {
-        tex: {
-          inlineMath: [
-            [ '$$', '$$' ],
-            [ '\[', '\])' ]
-          ]
-        },
-        "HTML-CSS": {
-          styles: {
-            ".MathJax span": {
-              color: "#000000"
-            }
+            window.onload = verifySignedIn;
           }
         }
-      }
-    </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
-    </script>
-    <script>
-      handleExternalLinks();
 
-      function handleExternalLinks() {
-        const domain = getDomain();
-        const links = document.querySelectorAll( 'a' );
-        return links.forEach( ( link ) => {
-          if ( !link.host.includes( domain ) ) link.target = '_blank';
-        } )
-      };
-    </script>
-  </div>
-</body>
+        function verifySignedIn() {
+          if (isPagePublic()) {
+            return showPageContents();
+          }
 
+          window.__user = null;
+          isSignedIn().then((user) => {
+            window.__user = user;
+
+            if (!user.signedIn) {
+              redirectToSignIn();
+            } else if (!user.student && !window.__openToAdmissions) {
+              showUnauthorizedMessage();
+            } else {
+              showPageContents();
+            }
+          });
+        }
+
+        function isPagePublic() {
+          const openCourses = [
+            "and-pre",
+            "ds-pre",
+            "fsw-pre",
+            "help",
+            "ios-pre",
+          ];
+
+          const openPages = [
+            "cs-and",
+            "cs-fsw",
+            "cs-ios",
+            "cr",
+            "ds",
+            "jx",
+            "p4s",
+            "ux",
+          ];
+
+          const pathParts = window.location.pathname.split("/");
+          const courseName = pathParts[1];
+          const pageName = pathParts[pathParts.length - 1];
+
+          return (
+            openCourses.includes(courseName) || openPages.includes(pageName)
+          );
+        }
+
+        function isSignedIn() {
+          const isDeployPreview =
+            window.location.hostname.startsWith("deploy-preview") &&
+            window.location.hostname.endsWith("netlify.com");
+
+          if (isDeployPreview)
+            return Promise.resolve({
+              signedIn: true,
+              student: true,
+            });
+
+          return fetch(`${getAuthBaseUrl()}/whoami`, {
+            credentials: "include",
+          })
+            .then((response) => response.text())
+            .then((userAsText) => (userAsText ? JSON.parse(userAsText) : null))
+            .then((userData) => ({
+              signedIn: Boolean(userData),
+              student: Boolean(userData && userData.airtableId),
+              id: userData ? userData.id : null,
+              email: userData ? userData.email : null,
+            }))
+            .catch((error) => {});
+        }
+
+        function redirectToSignIn() {
+          const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(
+            window.location.href
+          )}&reason=auth_required`;
+          const redirectMessage = document.querySelector("#redirect-message");
+          redirectMessage.style.display = "block";
+          redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`;
+          window.location = signInUrl;
+        }
+
+        function showPageContents() {
+          document.querySelector("#content-wrapper").style.visibility =
+            "visible";
+        }
+
+        function showUnauthorizedMessage() {
+          document.querySelector("#unauthorized-message").style.display =
+            "block";
+        }
+
+        function getAuthBaseUrl() {
+          const domain = getDomain();
+          const authBaseUrl = `https://auth.${domain}`;
+          return authBaseUrl;
+        }
+      </script>
+      <script src="/assets/js/docs.min.js"></script>
+      <script>
+        var MathJax = {
+          tex: {
+            inlineMath: [
+              ["$$", "$$"],
+              ["\[", "\])"],
+            ],
+          },
+          "HTML-CSS": {
+            styles: {
+              ".MathJax span": {
+                color: "#000000",
+              },
+            },
+          },
+        };
+      </script>
+      <script
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+        type="text/javascript"
+      ></script>
+      <script>
+        handleExternalLinks();
+
+        function handleExternalLinks() {
+          const domain = getDomain();
+          const links = document.querySelectorAll("a");
+          return links.forEach((link) => {
+            if (!link.host.includes(domain)) link.target = "_blank";
+          });
+        }
+      </script>
+    </div>
+  </body>
 </html>

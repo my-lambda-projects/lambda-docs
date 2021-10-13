@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Git for Web Development
 
@@ -75,13 +73,13 @@ Git can be overwhelming at first, but if we break it down concept by concept, it
 
 **At the end of this module, you should be able to:**
 
--   explain why we use the command line interface (CLI), and demonstrate use of basic CLI commands
--   sufficiently explain what version control and Git are, and why as software engineers we use them
--   demonstrate an ability to fork and clone a repo
--   understand branching, and be able to create a branch locally
--   explain and properly utilize the git commands: \`status\`, \`add\`, \`commit\`, and \`push\`
--   submit a Pull Request
--   demonstrate their ability to use the Lambda School Git Workflow to submit an assignment to your Team Lead
+- explain why we use the command line interface (CLI), and demonstrate use of basic CLI commands
+- sufficiently explain what version control and Git are, and why as software engineers we use them
+- demonstrate an ability to fork and clone a repo
+- understand branching, and be able to create a branch locally
+- explain and properly utilize the git commands: \`status\`, \`add\`, \`commit\`, and \`push\`
+- submit a Pull Request
+- demonstrate their ability to use the Lambda School Git Workflow to submit an assignment to your Team Lead
 
 #### Pro Tip
 
@@ -91,49 +89,37 @@ Listen to and learn from the opinions of others. Diverse ideas lead to a better 
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=vJ-9Fh2KbXk), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=vJ-9Fh2KbXk), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=a8e3kF2zYtk), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=a8e3kF2zYtk), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=TfcuaW-YjwQ), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=TIsXqSNFSV0), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=TfcuaW-YjwQ), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=GFdOSl-Zmlo), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=TIsXqSNFSV0), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=cSoHP7WSsEg), or enable JavaScript if it is disabled in your browser.
 
--   
+- [CLI Cheat Sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/)
 
-    # An error occurred.
+  This cheat sheet will give you the basics to navigate around your CLI
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=GFdOSl-Zmlo), or enable JavaScript if it is disabled in your browser.
+- [Git Cheat Sheet](https://www.git-tower.com/blog/git-cheat-sheet)
 
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=cSoHP7WSsEg), or enable JavaScript if it is disabled in your browser.
-
--   [CLI Cheat Sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/)
-
-    This cheat sheet will give you the basics to navigate around your CLI
-
--   [Git Cheat Sheet](https://www.git-tower.com/blog/git-cheat-sheet)
-
-    A simple git cheat sheet for when you start writing your commands
+  A simple git cheat sheet for when you start writing your commands
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -207,27 +193,27 @@ Now run:
 
 You probably got yourself an error. That’s because the directory we’re trying to move into is not created yet. But there is a way we can create a directory using the command line.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to sufficiently explain what version control and Git are, and why as software engineers we use them
 
-------------------------------------------------------------------------
+---
 
 #### Learn to demonstrate an ability to fork and clone a repo
 
-------------------------------------------------------------------------
+---
 
 #### Learn to understand branching, and be able to create a branch locally
 
-------------------------------------------------------------------------
+---
 
 #### Learn to explain and properly utilize the git commands: \`status\`, \`add\`, \`commit\`, and \`push\`
 
-------------------------------------------------------------------------
+---
 
 #### Learn to submit a Pull Request
 
-------------------------------------------------------------------------
+---
 
 #### Learn to demonstrate their ability to use the Lambda School Git Workflow to submit an assignment to your Team Lead
 
@@ -239,7 +225,7 @@ At Lambda School we’re doing everything we can to get you to practice what it�
 
 The Lambda School Git Flow is how you will access and submit all of your projects from this point forward. Using what you’ve learned so far about git and the command line you will be able to fork a repo, clone it to your local machine, work on the project, then create a pull request for submission.
 
-### Why would you learn *this* flow?
+### Why would you learn _this_ flow?
 
 You will work in a specific environment when you go out and get a job as a software developer. Learning a broad approach to different git strategies will help you thrive in any specific environment. By learning this flow, you will become a master of both forking and branching, common strategies in “the real world”.
 
@@ -281,7 +267,7 @@ This project is designed for you to practice the Git/Github workflow here at Lam
 
 **Step 1:** Create YOUR OWN version of Repo —> (Fork)
 
-![Fork\_LI](https://tk-assets.lambdaschool.com/883ddcb8-be8f-46f0-bc63-5f3b2a64aee7_Fork_LI1.jpg)
+![Fork_LI](https://tk-assets.lambdaschool.com/883ddcb8-be8f-46f0-bc63-5f3b2a64aee7_Fork_LI1.jpg)
 
 Click the Fork Button to fork the Repo
 
@@ -293,7 +279,7 @@ Notice it says ‘forked from’ and then has a link to the original Repo.
 
 **Step 3:** Add your TL as a collaborator on your forked Repo.
 
--   **\*\*Settings\*\*** → **\*\*Collaborators\*\*** → **\*\*Add Collaborator\*\*** (use my Github handle)
+- **\*\*Settings\*\*** → **\*\*Collaborators\*\*** → **\*\*Add Collaborator\*\*** (use my Github handle)
 
 ![Collab 1](https://tk-assets.lambdaschool.com/83c7b452-c8ed-4bc0-8dab-dbe89626c2a2_screencapture-github-MileyWright-Git-for-Web-Development-Project-2019-12-01-00_24_106.png)
 
@@ -323,11 +309,11 @@ Here you can either highlight the link and copy the text OR click Clipboard icon
 
 Notice we are in the directory **\*\*Documents/Git**\*\*, this could be different for you depending on where you want your repo to be cloned to.
 
-**Step 6:** Use the *\*\**git clone \*\*\*\* command to clone the repo to the directory you are currently in.
+**Step 6:** Use the \*\*\*\*git clone \*\*\*\* command to clone the repo to the directory you are currently in.
 
 ![git clone](https://tk-assets.lambdaschool.com/91e7eaad-ae52-4fa8-9426-56af2a3fbbd1_Untitled19.png)
 
-**Step 7:** **\*\*cd**\*\* into the newly created repo using the *\*\**cd \*\*\*\* command
+**Step 7:** **\*\*cd**\*\* into the newly created repo using the \*\*\*\*cd \*\*\*\* command
 
 ![cd into repo](https://tk-assets.lambdaschool.com/915f6d16-d5f4-44e4-82ae-4ca908fe2ffb_Untitled18.png)
 
@@ -343,37 +329,37 @@ notice that after you checkout the branch name changes from **\*\*master**\*\* t
 
 **Step 10:** To add and commit changes on your branch you can do the following
 
--   **\*\*git add .**\*\* will add the repo changes and make them ready for committing
+- **\*\*git add .**\*\* will add the repo changes and make them ready for committing
 
--   **\*\*git commit -m “Your helpful commit message here”**\*\* will commit the changes with your specified commit message (commit message should explain what changes you’ve added to the repo that you are committing)
+- **\*\*git commit -m “Your helpful commit message here”**\*\* will commit the changes with your specified commit message (commit message should explain what changes you’ve added to the repo that you are committing)
 
 **Step 11:** Push your changes back up to your Github repo
 
--   **\*\*git push -u origin branch-name**\*\* will push all of your commits from your local machine up onto github
+- **\*\*git push -u origin branch-name**\*\* will push all of your commits from your local machine up onto github
 
--   Remember that **\*\*branch-name**\*\* here will be whatever name you specified when you did **\*\*git checkout -b**\*\* (in the case it should be your firstname-lastname)
+- Remember that **\*\*branch-name**\*\* here will be whatever name you specified when you did **\*\*git checkout -b**\*\* (in the case it should be your firstname-lastname)
 
 **Step 12:** Now that the changes are on github you can submit a PR (Pull Request)
 
 **Step 13:** Go back to your forked Project repo on github (make sure you are on YOUR FORKED copy NOT the original Lambda one)
 
--   Click on the **\*\*Branch:master**\*\* button on the left side (see picture)
+- Click on the **\*\*Branch:master**\*\* button on the left side (see picture)
 
 ![Branch Master](https://tk-assets.lambdaschool.com/71ebb334-bcb9-44a6-a055-b4d1eb5d01c3_screencapture-github-MileyWright-Git-for-Web-Development-Project-2019-12-01-00_24_104.png)
 
--   This will create a dropdown where you should be able to select your name-branch now
+- This will create a dropdown where you should be able to select your name-branch now
 
--   Click your name-branch and then click the **\*\*New pull request**\*\* button to make a pull request on your name branch
+- Click your name-branch and then click the **\*\*New pull request**\*\* button to make a pull request on your name branch
 
 ![New Pull Request](https://tk-assets.lambdaschool.com/9888f606-8729-4d06-96ae-ba26255188cc_screencapture-github-MileyWright-Git-for-Web-Development-Project-tree-Miley-Wright-2019-12-02-01_39_48.png)
 
--   After you click new pull request it should redirect you to the pull request page
+- After you click new pull request it should redirect you to the pull request page
 
--   IT IS IMPORTANT THAT YOU DO NOT CLICK THE **\*\*Create pull request**\*\* BUTTON UNTIL AFTER YOU’VE COMPLETED THE NEXT STEP
+- IT IS IMPORTANT THAT YOU DO NOT CLICK THE **\*\*Create pull request**\*\* BUTTON UNTIL AFTER YOU’VE COMPLETED THE NEXT STEP
 
 ![Create Pull Request](https://tk-assets.lambdaschool.com/69335f91-34e9-494c-8a08-5d158298edf2_screencapture-github-LambdaSchool-Git-for-Web-Development-Project-compare-master-MileyWright-Miley-Wright-2019-12-02-01_46_10.png)
 
--   When you get to the PR page, make sure to click the dropdown button that says **\*\*base repository**\*\* and CHANGE it to be your FORKED REPO instead of the original Lambda repo (when submitting PR it will default to the original Repo this is why it needs to be changed)
+- When you get to the PR page, make sure to click the dropdown button that says **\*\*base repository**\*\* and CHANGE it to be your FORKED REPO instead of the original Lambda repo (when submitting PR it will default to the original Repo this is why it needs to be changed)
 
 ![](https://tk-assets.lambdaschool.com/ec9c0472-63a0-491a-8a2e-9f07648dd735_screencapture-github-LambdaSchool-Git-for-Web-Development-Project-compare-master-MileyWright-Miley-Wright-2019-12-02-01_46_38.png)gg
 
@@ -395,11 +381,11 @@ Your TL will merge the PR after they have done a review.
 
 Now that you have demonstrated your ability to work within this flow. Use this flow to turn in your afternoon assignment today and for the rest of your time here at Lambda School.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Git for Web Development Project](https://github.com/LambdaSchool/Git-for-Web-Development-Project)
+- ##### [Git for Web Development Project](https://github.com/LambdaSchool/Git-for-Web-Development-Project)
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -407,18 +393,18 @@ Now that you have demonstrated your ability to work within this flow. Use this f
 
 You can use class recordings to help you master the material.
 
--   **[Git for Web Development for WebPT22 w/Nathan Braun](https://youtu.be/gPUzjC99I5I)**
+- **[Git for Web Development for WebPT22 w/Nathan Braun](https://youtu.be/gPUzjC99I5I)**
 
-    Git is a distributed version control system. What does that mean to a new web developer? It means that git is used to monitor and control code changes made during development across several people or teams. Git can be overwhelming at first, but if we break it down concept by concept, it should start to become clear why almost everyone in the industry uses it every day.
+  Git is a distributed version control system. What does that mean to a new web developer? It means that git is used to monitor and control code changes made during development across several people or teams. Git can be overwhelming at first, but if we break it down concept by concept, it should start to become clear why almost everyone in the industry uses it every day.
 
--   [All previous recordings](/archive/FSW/module/rect59e95N6OSvoCd)
+- [All previous recordings](/archive/FSW/module/rect59e95N6OSvoCd)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Now that you have demonstrated your ability to work within this flow. Use this flow to turn in your afternoon assignment today and for the rest of your time here at Lambda School.
+  Now that you have demonstrated your ability to work within this flow. Use this flow to turn in your afternoon assignment today and for the rest of your time here at Lambda School.
 
--   Project: Git for Web Development Project
+- Project: Git for Web Development Project

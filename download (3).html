@@ -1,717 +1,1079 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Intended as a home for Lambda School curriculum."
+    />
+    <meta name="author" content="" />
+    <meta name="generator" content="Jekyll v3.8.0" />
+    <title>Labs and Beyond · Lambda School</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Intended as a home for Lambda School curriculum.">
-  <meta name="author" content="">
-  <meta name="generator" content="Jekyll v3.8.0">
-  <title>Labs and Beyond · Lambda School</title>
+    <link
+      rel="stylesheet"
+      integrity
+      crossorigin="anonymous"
+      href="https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css"
+    />
 
-  <link rel='stylesheet' integrity crossorigin='anonymous'
-    href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+    <link
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css"
+    />
 
-  <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-  <link rel='stylesheet'
-    href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css"
+    />
 
-  <link rel='stylesheet'
-    href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
 
-  <script>
-    ( function ( i, s, o, g, r, a, m ) {
-      i[ 'GoogleAnalyticsObject' ] = r;
-      i[ r ] = i[ r ] || function () {
-        ( i[ r ].q = i[ r ].q || [] ).push( arguments )
-      }, i[ r ].l = 1 * new Date();
-      a = s.createElement( o ),
-        m = s.getElementsByTagName( o )[ 0 ];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore( a, m )
-    } )( window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga' );
-    ga( 'create', 'UA-122016605-1', 'learn.lambdaschool.com' );
-    ga( 'send', 'pageview' );
-  </script>
 
-  <script>
-    ! function () {
-      var analytics = window.analytics = window.analytics || [];
-      if ( !analytics.initialize )
-        if ( analytics.invoked ) window.console && console.error && console.error( "Segment snippet included twice." );
-        else {
-          analytics.invoked = !0;
-          analytics.methods = [ "trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset",
-            "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"
-          ];
-          analytics.factory = function ( t ) {
-            return function () {
-              var e = Array.prototype.slice.call( arguments );
-              e.unshift( t );
-              analytics.push( e );
-              return analytics
+    <script>
+      !(function () {
+        var analytics = (window.analytics = window.analytics || []);
+        if (!analytics.initialize)
+          if (analytics.invoked)
+            window.console &&
+              console.error &&
+              console.error("Segment snippet included twice.");
+          else {
+            analytics.invoked = !0;
+            analytics.methods = [
+              "trackSubmit",
+              "trackClick",
+              "trackLink",
+              "trackForm",
+              "pageview",
+              "identify",
+              "reset",
+              "group",
+              "track",
+              "ready",
+              "alias",
+              "debug",
+              "page",
+              "once",
+              "off",
+              "on",
+            ];
+            analytics.factory = function (t) {
+              return function () {
+                var e = Array.prototype.slice.call(arguments);
+                e.unshift(t);
+                analytics.push(e);
+                return analytics;
+              };
+            };
+            for (var t = 0; t < analytics.methods.length; t++) {
+              var e = analytics.methods[t];
+              analytics[e] = analytics.factory(e);
             }
-          };
-          for ( var t = 0; t < analytics.methods.length; t++ ) {
-            var e = analytics.methods[ t ];
-            analytics[ e ] = analytics.factory( e )
+            analytics.load = function (t, e) {
+              var n = document.createElement("script");
+              n.type = "text/javascript";
+              n.async = !0;
+              n.src =
+                "https://cdn.segment.com/analytics.js/v1/" +
+                t +
+                "/analytics.min.js";
+              var a = document.getElementsByTagName("script")[0];
+              a.parentNode.insertBefore(n, a);
+              analytics._loadOptions = e;
+            };
+            analytics.SNIPPET_VERSION = "4.1.0";
+            analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+            analytics.page();
           }
-          analytics.load = function ( t, e ) {
-            var n = document.createElement( "script" );
-            n.type = "text/javascript";
-            n.async = !0;
-            n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
-            var a = document.getElementsByTagName( "script" )[ 0 ];
-            a.parentNode.insertBefore( n, a );
-            analytics._loadOptions = e
-          };
-          analytics.SNIPPET_VERSION = "4.1.0";
-          analytics.load( "BjKorwKrSvMamfNoGkBq9rISk7wF6QQX" );
-          analytics.page();
-        }
-    }();
-  </script>
+      })();
+    </script>
 
-  <link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-  <link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="manifest" href="/assets/img/favicons/manifest.json">
-  <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
-  <link rel="icon" href="/favicon.ico">
-  <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
-  <meta name="theme-color" content="#a0001e">
-</head>
+    <link
+      rel="apple-touch-icon"
+      href="/assets/img/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/assets/img/favicons/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicons/safari-pinned-tab.svg"
+      color="#a0001e"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="msapplication-config"
+      content="/assets/img/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#a0001e" />
+  </head>
 
-<body>
-  <noscript>Please enable JavaScript to view this page.</noscript>
-  <div id="redirect-message" style="display: none;">
-    You must be logged in to view this page.
-  </div>
-  <div id="unauthorized-message" style="display: none;">
-    You must be a Lambda School student to view this page.
-  </div>
-  <div id="content-wrapper">
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
-      <div class="container">
-        <span class="skiplink-text">Skip to main content</span>
-      </div>
-    </a>
-    <div class="mobile-menu">
-      <div class="m-drop">
-        <div class="mobile-row">
-          <div class="header-row" style="padding: 3px 7px">
-            <a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg"
-                width="33" height="35" viewBox="0 0 33 35" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
-                  fill="#EC3944" />
-              </svg></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu"
-              aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
-                <title>Menu</title>
-                <path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
-                  d="M4 7h22M4 15h22M4 23h22"></path>
-              </svg>
-            </button>
+  <body>
+    <noscript>Please enable JavaScript to view this page.</noscript>
+    <div id="redirect-message" style="display: none">
+      You must be logged in to view this page.
+    </div>
+    <div id="unauthorized-message" style="display: none">
+      You must be a Lambda School student to view this page.
+    </div>
+    <div id="content-wrapper">
+      <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+          <span class="skiplink-text">Skip to main content</span>
+        </div>
+      </a>
+      <div class="mobile-menu">
+        <div class="m-drop">
+          <div class="mobile-row">
+            <div class="header-row" style="padding: 3px 7px">
+              <a class="navbar-brand" href="/" aria-label="Lambda School"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="35"
+                  viewBox="0 0 33 35"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                    fill="#EC3944"
+                  /></svg
+              ></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#mobile-course-menu"
+                aria-controls="mobile-course-menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="30"
+                  height="30"
+                  focusable="false"
+                >
+                  <title>Menu</title>
+                  <path
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    d="M4 7h22M4 15h22M4 23h22"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="nav-row">
+            <div class="results-container">
+              <ul id="results-container" class="dropdown list-group"></ul>
+            </div>
+            <div id="mobile-course-menu" class="collapse nav-row">
+              <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+                <nav class="bd-links">
+                  <div class="bd-toc-item">
+                    <h4 class="bd-toc-link">Lambda Launch</h4>
+                  </div>
+
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/ll/sprint/recQf3zxkHFPeRABL">
+                      1.&nbsp;&nbsp;Lambda Orientation
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/ll/module/recBC1BCvLsTSiaLS/">
+                          Learning at Lambda
+                        </a>
+                      </li>
+                      <li class="active bd-sidenav-active">
+                        <a href="/ll/module/recnBWTWXqXWjWCUd/">
+                          Labs and Beyond
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/ll/module/rec7Vyq18G1tytzyk/">
+                          Values and Support
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="nav-row">
-          <div class="results-container">
+      </div>
+      <div class="main-container">
+        <div class="sidebar-container bd-sidebar">
+          <div class="docs-sidebar">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"
+              ><svg
+                width="135"
+                height="35"
+                viewBox="0 0 756 197"
+                fill="#ec3944"
+              >
+                <g>
+                  <path
+                    d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"
+                  ></path>
+                  <path
+                    d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"
+                  ></path>
+                  <path
+                    d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"
+                  ></path>
+                  <path
+                    d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"
+                  ></path>
+                  <path
+                    d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"
+                  ></path>
+                  <path
+                    d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"
+                  ></path>
+                </g>
+                <path
+                  d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"
+                ></path></svg
+            ></a>
             <ul id="results-container" class="dropdown list-group"></ul>
+            <nav class="bd-links collapse" id="bd-docs-nav">
+              <div class="bd-toc-item">
+                <h4 class="bd-toc-link">Lambda Launch</h4>
+              </div>
+
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/ll/sprint/recQf3zxkHFPeRABL">
+                  1.&nbsp;&nbsp;Lambda Orientation
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/ll/module/recBC1BCvLsTSiaLS/">
+                      Learning at Lambda
+                    </a>
+                  </li>
+                  <li class="active bd-sidenav-active">
+                    <a href="/ll/module/recnBWTWXqXWjWCUd/">
+                      Labs and Beyond
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/ll/module/rec7Vyq18G1tytzyk/">
+                      Values and Support
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
           </div>
-          <div id="mobile-course-menu" class="collapse nav-row">
-            <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
-              <nav class="bd-links">
-                <div class="bd-toc-item">
-                  <h4 class="bd-toc-link">Lambda Launch</h4>
-                </div>
-
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/ll/sprint/recQf3zxkHFPeRABL">
-                    1.&nbsp;&nbsp;Lambda Orientation
-                  </a>
-                  <ul class="nav bd-sidenav">
-
+        </div>
+        <main class="content-container flex-wrapper" role="main">
+          <div class="sticky-nav">
+            <div class="sprint-nav">
+              <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+                <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+                <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+                <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="wrapper limit-width">
+            <div class="flex-wrapper">
+              <div class="limit-width">
+                <div class="jumbotron">
+                  <h1 class="bd-title" id="content">Labs and Beyond</h1>
+                  <span class="lead">
+                    <p class="bd-lead"></p>
+                    <p>
+                      Lambda Launch material is now updated and available in
+                      Canvas. As of August, all material shown in Training Kit
+                      is deprecated. School’s goal is to find untapped or
+                      underutilized talent, and train that talent for the most
+                      in-demand jobs in the world. This module will cover our
+                      careers curriculum, labs, Lambda X and the endorsement
+                      process.
+                    </p>
+                  </span>
+                  <strong
+                    >At the end of this module, you should be able to:</strong
+                  >
+                  <ul>
                     <li>
-                      <a href="/ll/module/recBC1BCvLsTSiaLS/">
-                        Learning at Lambda
-                      </a>
-                    </li>
-                    <li class="active bd-sidenav-active">
-                      <a href="/ll/module/recnBWTWXqXWjWCUd/">
-                        Labs and Beyond
-                      </a>
+                      develop a framework of success through explaining careers
+                      lessons, Lambda X and endorsements.
                     </li>
                     <li>
-                      <a href="/ll/module/rec7Vyq18G1tytzyk/">
-                        Values and Support
-                      </a>
+                      understand the basics of the career and professional
+                      development curriculum
+                    </li>
+                    <li>
+                      articulate how Lambda supports them in their job search
+                      and the importance of becoming endorsed
+                    </li>
+                    <li>
+                      understand that the Lambda curriculum has a singular focus
+                      on career readiness.
+                    </li>
+                    <li>
+                      know how to access and participate in school engagement
+                      opportunities.
                     </li>
                   </ul>
                 </div>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="main-container">
-      <div class="sidebar-container bd-sidebar">
-        <div class="docs-sidebar">
-          <a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197"
-              fill="#ec3944">
-              <g>
-                <path
-                  d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z">
-                </path>
-                <path
-                  d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z">
-                </path>
-                <path
-                  d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z">
-                </path>
-                <path
-                  d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z">
-                </path>
-                <path
-                  d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z">
-                </path>
-                <path
-                  d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z">
-                </path>
-              </g>
-              <path
-                d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z">
-              </path>
-            </svg></a>
-          <ul id="results-container" class="dropdown list-group"></ul>
-          <nav class="bd-links collapse" id="bd-docs-nav">
-            <div class="bd-toc-item">
-              <h4 class="bd-toc-link">Lambda Launch</h4>
-            </div>
-
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/ll/sprint/recQf3zxkHFPeRABL">
-                1.&nbsp;&nbsp;Lambda Orientation
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/ll/module/recBC1BCvLsTSiaLS/">
-                    Learning at Lambda
-                  </a>
-                </li>
-                <li class="active bd-sidenav-active">
-                  <a href="/ll/module/recnBWTWXqXWjWCUd/">
-                    Labs and Beyond
-                  </a>
-                </li>
-                <li>
-                  <a href="/ll/module/rec7Vyq18G1tytzyk/">
-                    Values and Support
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </div>
-      <main class="content-container flex-wrapper" role="main">
-        <div class="sticky-nav">
-          <div class="sprint-nav">
-            <ul class="section-nav">
-              <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
-              <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
-              <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
-              <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
-            </ul>
-          </div>
-
-        </div>
-        <div class="wrapper limit-width">
-          <div class="flex-wrapper">
-            <div class="limit-width">
-              <div class="jumbotron">
-                <h1 class="bd-title" id="content">Labs and Beyond</h1>
-                <span class="lead">
-                  <p class="bd-lead"></p>
-                  <p>Lambda Launch material is now updated and available in Canvas. As of August, all material shown in
-                    Training Kit is deprecated. School’s goal is to find untapped or underutilized talent, and train
-                    that talent for the most in-demand jobs in the world. This module will cover our careers curriculum,
-                    labs, Lambda X and the endorsement process.</p>
-                </span>
-                <strong>At the end of this module, you should be able to:</strong>
+                <div class="alert alert-warning" role="alert">
+                  <h4>Pro Tip</h4>
+                  <p>
+                    Testing will happen. The choice you make is who does the
+                    testing and when it happens. Internal people testing earlier
+                    is generally preferable to external customers testing
+                    ‘live’, but either way, the testing will happen.
+                  </p>
+                </div>
+                <h2 class="display-4">
+                  <a
+                    id="prepare"
+                    class="anchor"
+                    href="#prepare"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Prepare
+                </h2>
+                <p class="lead">Review each preclass resource before class.</p>
+                <div class="preclass">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/VG-C9Ue6xuk"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/qchq6fbEirk"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <h2 class="display-4">
+                  <a id="learn" class="anchor" href="#learn" aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Learn
+                </h2>
+                <h4 class="mark mb-3 p-2">
+                  Learn to develop a framework of success through explaining
+                  careers lessons, Lambda X and endorsements.
+                </h4>
+                <p>
+                  Lambda School is investing in you and your success is our
+                  success. We want you to succeed and have an amazing job offer
+                  (or a few) at the end of the program.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  We are constantly learning and changing our curriculum to be
+                  sure you have the skills that employers are looking for. The
+                  technical skills are actually the easier part to teach and
+                  learn. They are very concrete and you either know them or you
+                  don’t. It is the career skills and people “soft” skills that
+                  can be the more difficult to teach. Soft skills like good
+                  interpersonal communication, self-awareness and emotional
+                  intelligence are part of who a person is, but they can still
+                  be taught and improved upon. Career skill expectations are
+                  always changing and an interview at a tech company is going to
+                  be very different than a minimum wage job interview. At Lambda
+                  school we are going to focus on “soft” skills and career
+                  skills from the first day.
+                </p>
+                <h3 id="careers-lessons">Careers Lessons</h3>
+                <p>
+                  Each week there is a careers lesson presented. These lessons
+                  cover a wide variety of topics including job search skills,
+                  presentation skills, social media presence and financial
+                  planning to name just a few. These are the necessary skills to
+                  help you land a great job. The career lessons also have a
+                  required assignment component and you are expected to complete
+                  these along with your technical assignments.
+                </p>
+                <h3 id="lambda-x">Lambda X</h3>
+                <p>
+                  <em><strong>Lambda X</strong></em> is comprised of
+                  <em><strong>Build Weeks</strong></em
+                  >, <em><strong>Labs</strong></em> and
+                  <em><strong>Lambda X</strong></em
+                  >.
+                </p>
+                <p>
+                  Our program helps you reach your full potential by creating
+                  meaningful products using all the skills you will learn at
+                  Lambda. Lambda X gives students the real-world knowledge,
+                  training, an assigned team, and product specifications to
+                  simulate what their life will be like as a developer or data
+                  scientist in a company/organization. In Lambda X you will
+                  receive targeted support and lessons on teamwork.
+                </p>
+                <h4 id="build-weeks">Build Weeks</h4>
+                <p>
+                  The fourth sprint in every unit is a build week. In a build
+                  week you spend a week on building a real-world based project
+                  based on what you have learned. You will come together with
+                  students from all the other tracks and with varying levels of
+                  experience. You will be assigned a role and tasks based on
+                  your track and experience. By the last day of build week you
+                  will have a MVP (minimally viable product) to share. You can
+                  even apply and be chosen to present your teams product to the
+                  entire school.
+                </p>
+                <h4 id="labs">Labs</h4>
+                <p>
+                  You will have 8 sprints in Labs that occurs between your core
+                  curriculum and additional curriculum. In labs you will have
+                  longer to work on a project and receive targeted lessons on
+                  teamwork. This product will be one of the core pieces of your
+                  portfolio. The experience working long term with a diverse
+                  team will give you the experience you need to be successful at
+                  your first job.
+                </p>
+                <h4 id="lambda-x-1">Lambda X</h4>
+                <p>
+                  Lambda X is 40% weekly guided job search activities designed
+                  to help you do the right things every week that lead to a job.
+                  Includes job sourcing, applications, interview practice,
+                  technical reviews, and more. The other 60% is portfolio
+                  building where you continue building on new or existing Labs
+                  projects to add to your portfolio and stay sharp. Students who
+                  don’t continue coding after graduation are only 20% as likely
+                  to get a job as those who continue to code every day.
+                </p>
+                <h3 id="lambda-endorsement">Lambda Endorsement</h3>
+                <p>
+                  The Lambda Endorsement is the definitive signal you’re ready
+                  to crush it on the job. Endorsed Lambda students didn’t just
+                  make it to the end of an online course, they showed up day in
+                  and day out, learning and proving mastery across a wide range
+                  of technical, career, and collaborative skills. Lambda
+                  Endorsement is our guarantee to you as the student that you’re
+                  ready to land a great job in the industry, and our guarantee
+                  to hiring managers that you’ve nailed every expectation they
+                  could have for you. In addition to proving to yourself and to
+                  hiring managers that you’ve graduated from Lambda School, here
+                  are a few more benefits to getting endorsed.
+                </p>
                 <ul>
-                  <li>develop a framework of success through explaining careers lessons, Lambda X and endorsements.</li>
-                  <li>understand the basics of the career and professional development curriculum</li>
-                  <li>articulate how Lambda supports them in their job search and the importance of becoming endorsed
+                  <li>
+                    Lifetime access to Lambda X for portfolio building and job
+                    search support
                   </li>
-                  <li>understand that the Lambda curriculum has a singular focus on career readiness.</li>
-                  <li>know how to access and participate in school engagement opportunities.</li>
-                </ul>
-              </div>
-              <div class="alert alert-warning" role="alert">
-                <h4>Pro Tip</h4>
-                <p>Testing will happen. The choice you make is who does the testing and when it happens. Internal people
-                  testing earlier is generally preferable to external customers testing ‘live’, but either way, the
-                  testing will happen.</p>
-              </div>
-              <h2 class="display-4">
-                <a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Prepare</h2>
-              <p class="lead">Review each preclass resource before class.</p>
-              <div class="preclass">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VG-C9Ue6xuk"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
+                  <li>Priority for flexible PM roles during job search</li>
+                  <li>Weekly sessions with local industry mentors</li>
+                  <li>Guaranteed interviews with matched hiring partners</li>
+                  <li>Featured profiles on upcoming hiring company portal</li>
+                  <li>
+                    Offer negotiation support (average of 17% additional
+                    compensation)
                   </li>
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qchq6fbEirk"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
+                  <li>
+                    Lifetime access to updated track curriculum, career
+                    workshops, and coach support
                   </li>
                 </ul>
-              </div>
-              <h2 class="display-4">
-                <a id="learn" class="anchor" href="#learn" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Learn</h2>
-              <h4 class="mark mb-3 p-2">Learn to develop a framework of success through explaining careers lessons,
-                Lambda X and endorsements.</h4>
-              <p>Lambda School is investing in you and your success is our success. We want you to succeed and have an
-                amazing job offer (or a few) at the end of the program.</p>
-              <h5>Overview</h5>
-              <p>We are constantly learning and changing our curriculum to be sure you have the skills that employers
-                are looking for. The technical skills are actually the easier part to teach and learn. They are very
-                concrete and you either know them or you don’t. It is the career skills and people “soft” skills that
-                can be the more difficult to teach. Soft skills like good interpersonal communication, self-awareness
-                and emotional intelligence are part of who a person is, but they can still be taught and improved upon.
-                Career skill expectations are always changing and an interview at a tech company is going to be very
-                different than a minimum wage job interview. At Lambda school we are going to focus on “soft” skills and
-                career skills from the first day.</p>
-              <h3 id="careers-lessons">Careers Lessons</h3>
-              <p>Each week there is a careers lesson presented. These lessons cover a wide variety of topics including
-                job search skills, presentation skills, social media presence and financial planning to name just a few.
-                These are the necessary skills to help you land a great job. The career lessons also have a required
-                assignment component and you are expected to complete these along with your technical assignments.</p>
-              <h3 id="lambda-x">Lambda X</h3>
-              <p><em><strong>Lambda X</strong></em> is comprised of <em><strong>Build Weeks</strong></em>,
-                <em><strong>Labs</strong></em> and <em><strong>Lambda X</strong></em>.</p>
-              <p>Our program helps you reach your full potential by creating meaningful products using all the skills
-                you will learn at Lambda. Lambda X gives students the real-world knowledge, training, an assigned team,
-                and product specifications to simulate what their life will be like as a developer or data scientist in
-                a company/organization. In Lambda X you will receive targeted support and lessons on teamwork.</p>
-              <h4 id="build-weeks">Build Weeks</h4>
-              <p>The fourth sprint in every unit is a build week. In a build week you spend a week on building a
-                real-world based project based on what you have learned. You will come together with students from all
-                the other tracks and with varying levels of experience. You will be assigned a role and tasks based on
-                your track and experience. By the last day of build week you will have a MVP (minimally viable product)
-                to share. You can even apply and be chosen to present your teams product to the entire school.</p>
-              <h4 id="labs">Labs</h4>
-              <p>You will have 8 sprints in Labs that occurs between your core curriculum and additional curriculum. In
-                labs you will have longer to work on a project and receive targeted lessons on teamwork. This product
-                will be one of the core pieces of your portfolio. The experience working long term with a diverse team
-                will give you the experience you need to be successful at your first job.</p>
-              <h4 id="lambda-x-1">Lambda X</h4>
-              <p>Lambda X is 40% weekly guided job search activities designed to help you do the right things every week
-                that lead to a job. Includes job sourcing, applications, interview practice, technical reviews, and
-                more. The other 60% is portfolio building where you continue building on new or existing Labs projects
-                to add to your portfolio and stay sharp. Students who don’t continue coding after graduation are only
-                20% as likely to get a job as those who continue to code every day.</p>
-              <h3 id="lambda-endorsement">Lambda Endorsement</h3>
-              <p>The Lambda Endorsement is the definitive signal you’re ready to crush it on the job. Endorsed Lambda
-                students didn’t just make it to the end of an online course, they showed up day in and day out, learning
-                and proving mastery across a wide range of technical, career, and collaborative skills. Lambda
-                Endorsement is our guarantee to you as the student that you’re ready to land a great job in the
-                industry, and our guarantee to hiring managers that you’ve nailed every expectation they could have for
-                you. In addition to proving to yourself and to hiring managers that you’ve graduated from Lambda School,
-                here are a few more benefits to getting endorsed.</p>
-              <ul>
-                <li>Lifetime access to Lambda X for portfolio building and job search support</li>
-                <li>Priority for flexible PM roles during job search</li>
-                <li>Weekly sessions with local industry mentors</li>
-                <li>Guaranteed interviews with matched hiring partners</li>
-                <li>Featured profiles on upcoming hiring company portal</li>
-                <li>Offer negotiation support (average of 17% additional compensation)</li>
-                <li>Lifetime access to updated track curriculum, career workshops, and coach support</li>
-              </ul>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to understand the basics of the career and professional development
-                curriculum</h4>
-              <h5>Overview</h5>
-              <p>While you are at Lambda School to build new technical skills, you are also here to change or grow in
-                your career. Careers at Lambda School is not just about helping Students get their next job, but also
-                about building the professional skills that they will be able to use throughout their career. We build
-                Careers in to every step of the student journey with Lambda School so that students are ready to launch
-                their career as soon as possible after completing the curriculum!</p>
-              <h5>Follow Along</h5>
-              <h3 id="career-lessons">Career Lessons</h3>
-              <p>Students will start career lessons early in their Lambda School coursework. During their course track,
-                we will cover professional development and on-the-job success so they can put these concepts into
-                practice as they move through the curriculum. These lessons cover topics like team dynamics, how to
-                deliver/receive feedback professionally, creating a strong professional brand, and building a network of
-                peers both within and external to Lambda School.</p>
-              <p>Students will have dedicated time to work on their resumes, LinkedIn profiles, artifacts, interview
-                abilities, and any other tools or skills that they will need to be successful in their job search.</p>
-              <p>Lambda X is the final unit of the curriculum, and this will be focused on brushing up on a Student’s
-                technical skills and polishing all of their job search tools. Students will work closely with members of
-                the Careers and Hiring Solutions teams, and will have access to mentors who can help them find an
-                awesome job in their field!</p>
-              <p>At any point in the program, students have access to Career Coaches through daily office hours, where
-                they can get 1:1 support on any career or professional topic they are seeking insight on.</p>
-              <h3 id="core-track-career-lessons">Core Track Career Lessons</h3>
-              <p>During your core track you will receive a careers lessons once per sprint. The assignment for this
-                module of Lambda Launch is actually our first careers assignment and you are expected to complete it to
-                be prepared for your following careers lessons.</p>
-              <h3 id="how-to-work-with-a-career-coach">How to Work With a Career Coach</h3>
-              <p>Starting day one at Lambda, you can start working with our Career Coach team. Career Coaches help you
-                define your career plan, create your target list of companies, come up with a job search strategy,
-                create your application materials, develop a networking plan, practice for interviews, learn how to
-                follow-up after interviews, negotiate your salary, succeed on the job, and more.</p>
-              <p>How to get help from a Career Coach:</p>
-              <ul>
-                <li>Stop by Career Office Hours. These happen Sunday - Friday and the schedule is both posted daily in
-                  the <strong>#career_help</strong> channel and in the <a
-                    href="https://calendar.google.com/calendar/embed?src=lambdaschool.com_h86abn6o840diu4p1aeual9m90@group.calendar.google.com&amp;ctz=America/Los_Angeles">calendar</a>,
-                  which is also pinned to the top of the channel.</li>
-                <li>Submit a /frontdesk ticket. This will get a direct response from a career coach within 24 business
-                  hours. <em>Please <a
-                      href="https://www.notion.so/lambdaschool/Career-FAQs-e2209a95d19a46eeacca69936655336e">see our
-                      FAQ</a> for frequently asked questions like Lambda’s phone number/address, how to get a transcript
-                    for job applications, etc.</em>
-                </li>
-              </ul>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to articulate how Lambda supports them in their job search and the
-                importance of becoming endorsed</h4>
-              <h5>Overview</h5>
-              <p>Lambda Endorsement is our signal to students and employers that a student is career ready. Endorsement
-                signifies that a student has not only met/exceeded all technical expectations of the Lambda School
-                curriculum, but also that they have demonstrated a strong ability to work with peers and drive their job
-                search and career development.</p>
-              <p>At Lambda School Endorsement = Graduation… Graduation = Endorsement.</p>
-              <h5>Follow Along</h5>
-              <h3 id="steps-to-endorsement">Steps to Endorsement</h3>
-              <p>To keep Students on track towards full endorsement, there are multiple checkpoints and milestones
-                during each unit. To receive an endorsement, all Students will need to meet/complete the following
-                technical and professional endorsement categories</p>
-              <h4 id="technical">Technical</h4>
-              <p>1) Complete each Sprint Challenge with a 2+ on each objective
-                2) Complete each Build Week assessment with a 2+ on each objective
-                3) Complete a Technical Endorsement Review: <a
-                  href="https://www.notion.so/Technical-Endorsement-Review-a6c42201ed0940ecbc6564c804a4929c">Technical
-                  Endorsement Review</a></p>
-              <h4 id="professional">Professional</h4>
-              <p>Once a Student completes the Lambda School coursework, a member of the Careers team will review and
-                sign off on the following:</p>
-              <ul>
-                <li>Resume</li>
-                <li>LinkedIn</li>
-                <li>GitHub (Web, iOS, AND, DS tracks only)</li>
-                <li>Portfolio and artifacts for the Student’s track</li>
-                <li>1:1 behavioral interview</li>
-              </ul>
-              <p>Students can find detailed expectations and requirements, along with checklists to complete all of the
-                above: <a
-                  href="https://www.notion.so/Professional-Endorsement-Review-a97a2001310f4fb3b8ef1222e68dc4e7">Professional
-                  Endorsement Review </a></p>
-              <p>Each of the above endorsement categories will be evaluated as a Student moves through Lambda’s
-                curriculum. If a Student needs additional time to work on any of the endorsement categories, we’ll work
-                with them during Lambda X to help them get Lambda Endorsed and career-ready.</p>
-              <h3 id="maintaining-endorsement">Maintaining Endorsement</h3>
-              <p>Once endorsed, it is expected that a student will;</p>
-              <ul>
-                <li>Maintain communication with career coaches, updating them on upcoming interviews and offers</li>
-                <li>Request a coach look over their resume, LinkedIn, portfolio or other artifacts when making changes
-                  or updates to gain another set of eyes to catch formatting or grammatical errors</li>
-                <li>Communicate with hiring partners who reach out, ensuring they always receive a reply or update to
-                  any communications within 24 hours</li>
-                <li>Uphold scheduled interviews, and professionally communicate if they need to cancel or rearrange the
-                  interview to a different time</li>
-                <li>Continuously work on new projects or maintain old projects to stay fresh on technical abilities.
-                </li>
-              </ul>
-              <h3 id="benefits-of-endorsement">Benefits of Endorsement</h3>
-              <p>Working toward your Lambda School Endorsement opens a variety of doors simply by you continually
-                leveling up your skills to meet the high bar required for endorsement. Additionally, getting endorsed
-                gives you the following exclusive benefits:</p>
-              <ul>
-                <li>Sessions with local industry mentors</li>
-                <li>Interviews with matched hiring partners</li>
-                <li>Featured profiles on upcoming hiring company portal</li>
-                <li>Offer negotiation support (avg 17% additional comp)</li>
-                <li>Lifetime access to updated track curriculum, career workshops, and coach support</li>
-              </ul>
-              <h3 id="hiring-solutions">Hiring Solutions</h3>
-              <p>There is a whole team at Lambda whose focus is on getting students hired. This team reaches out to
-                companies to tell them about Lambda School and why they should hire you. This team can help you reach
-                out to companies, just like they do, to assist you in making your job search more effective. This team
-                has talked to hundreds of companies and are building relationships with hiring managers. If they talk to
-                a company that is looking for someone like you (and you are endorsed) they will introduce you.</p>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to understand that the Lambda curriculum has a singular focus on career
-                readiness.</h4>
-              <h5>Overview</h5>
-              <p>There is a team of curriculum developers at Lambda School that work on the training kit content, guided
-                project lesson plans, module projects, sprint projects and assessments. With as quickly as technical
-                subjects change, they are tasked with updating content continuously. The curriculum developer works in
-                conjunction with a subject matter expert and instructors to ensure that the curriculum is techically
-                correct and teaches the necessary concepts.</p>
-              <h3 id="start-with-the-end-in-mind">Start with the End in Mind</h3>
-              <p>At Lambda, we have the unique opportunity to work closely with hiring partners and industry experts
-                when designing every component of our curriculum.</p>
-              <p>The very first step when starting to design curriculum, is to work with these partners to develop the
-                learning objectives. We get to ask ourselves about the specific skills a student must have to be hired
-                in their chosen track. What must they understand? What attitudes and dispositions must they possess?</p>
-              <p>Once we have this large list of objectives, we can work backwards from there to design our modules,
-                module projects, sprints, sprint challenges, units, and build week projects. This ensures that we
-                engineer every moment of a student’s Lambda journey with the most important outcome in mind: getting the
-                student a job!</p>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to know how to access and participate in school engagement opportunities.
-              </h4>
-              <h5>Overview</h5>
-              <p>As a student we want you to form a connection with Lambda school, with Lambda school staff and with
-                your fellow students. These connections help provide the social interaction and support you will need to
-                be successful. In Slack, there are channels set up to allow you to reach out to other Lambda students in
-                your physical area, chat about your favorite TV shows and share your favorite hobbies.
-                Lambda School is encouraging local meetups of students and is even willing to pitch in some money for
-                food. You can find information about local meetups by joining your state channel in Slack.
-                Do you have a beautiful yard and want to share pictures? There is a Slack channel for that
-                #gardens_and_yards. Are you focused on improving your body as you improve your mind? There is a Slack
-                channel for that; #fitness or even #biohacking. In a more educational related channel, you can share
-                your favorite books in the Slack channel #books. Find a few that interest you to join.
-                If you want to keep up with Lambda School as a company there is a blog on the main website or there is
-                an active Lambda School Twitter account https://twitter.com/lambdaschool or follow our CEO Austen Allred
-                at https://twitter.com/Austen.
-                We hope that you’ll be a part of the Lambda School community far into the future as alumni working as a
-                professional in the tech industry.</p>
-              <hr>
-              <h2 class="display-4">
-                <a id="project" class="anchor" href="#project" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Project</h2>
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <h5><a target="_blank"
-                      href="https://docs.google.com/document/d/1F0BPlMdDn6U6Y9IZGSRtdvZm_XDc3mCQSRjT7Gk3NL0/edit?usp=sharing">LL
-                      Module 2 Project</a></h5>
-                  <p>These tasks are to be completed during the project time for your track. For full time these tasks
-                    will be completed in the afternoons after lunch. For part time these tasks are completed every other
-                    day, on the opposite days of the guided project instruction.</p>
-                </li>
-              </ul>
-              <h2 class="display-4">
-                <a id="review" class="anchor" href="#review" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Review</h2>
-              <h3 class="display-5">Class Recordings</h3>
-              <p class="lead">You can use class recordings to help you master the material.</p>
-              <div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <strong><a target="_blank" href="https://youtu.be/v0qH7LVVMmc">Labs and Beyond for LS200803FT
-                        w/James Pacheco</a></strong>
-                    <p>An overview of Labs, Lambda X, Career and Professional Development, and Getting a Job.</p>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to understand the basics of the career and professional
+                  development curriculum
+                </h4>
+                <h5>Overview</h5>
+                <p>
+                  While you are at Lambda School to build new technical skills,
+                  you are also here to change or grow in your career. Careers at
+                  Lambda School is not just about helping Students get their
+                  next job, but also about building the professional skills that
+                  they will be able to use throughout their career. We build
+                  Careers in to every step of the student journey with Lambda
+                  School so that students are ready to launch their career as
+                  soon as possible after completing the curriculum!
+                </p>
+                <h5>Follow Along</h5>
+                <h3 id="career-lessons">Career Lessons</h3>
+                <p>
+                  Students will start career lessons early in their Lambda
+                  School coursework. During their course track, we will cover
+                  professional development and on-the-job success so they can
+                  put these concepts into practice as they move through the
+                  curriculum. These lessons cover topics like team dynamics, how
+                  to deliver/receive feedback professionally, creating a strong
+                  professional brand, and building a network of peers both
+                  within and external to Lambda School.
+                </p>
+                <p>
+                  Students will have dedicated time to work on their resumes,
+                  LinkedIn profiles, artifacts, interview abilities, and any
+                  other tools or skills that they will need to be successful in
+                  their job search.
+                </p>
+                <p>
+                  Lambda X is the final unit of the curriculum, and this will be
+                  focused on brushing up on a Student’s technical skills and
+                  polishing all of their job search tools. Students will work
+                  closely with members of the Careers and Hiring Solutions
+                  teams, and will have access to mentors who can help them find
+                  an awesome job in their field!
+                </p>
+                <p>
+                  At any point in the program, students have access to Career
+                  Coaches through daily office hours, where they can get 1:1
+                  support on any career or professional topic they are seeking
+                  insight on.
+                </p>
+                <h3 id="core-track-career-lessons">
+                  Core Track Career Lessons
+                </h3>
+                <p>
+                  During your core track you will receive a careers lessons once
+                  per sprint. The assignment for this module of Lambda Launch is
+                  actually our first careers assignment and you are expected to
+                  complete it to be prepared for your following careers lessons.
+                </p>
+                <h3 id="how-to-work-with-a-career-coach">
+                  How to Work With a Career Coach
+                </h3>
+                <p>
+                  Starting day one at Lambda, you can start working with our
+                  Career Coach team. Career Coaches help you define your career
+                  plan, create your target list of companies, come up with a job
+                  search strategy, create your application materials, develop a
+                  networking plan, practice for interviews, learn how to
+                  follow-up after interviews, negotiate your salary, succeed on
+                  the job, and more.
+                </p>
+                <p>How to get help from a Career Coach:</p>
+                <ul>
+                  <li>
+                    Stop by Career Office Hours. These happen Sunday - Friday
+                    and the schedule is both posted daily in the
+                    <strong>#career_help</strong> channel and in the
+                    <a
+                      href="https://calendar.google.com/calendar/embed?src=lambdaschool.com_h86abn6o840diu4p1aeual9m90@group.calendar.google.com&amp;ctz=America/Los_Angeles"
+                      >calendar</a
+                    >, which is also pinned to the top of the channel.
                   </li>
-                  <li class="list-group-item">
-                    <a href="/archive/LL/module/recnBWTWXqXWjWCUd">All previous recordings</a>
+                  <li>
+                    Submit a /frontdesk ticket. This will get a direct response
+                    from a career coach within 24 business hours.
+                    <em
+                      >Please
+                      <a
+                        href="https://www.notion.so/lambdaschool/Career-FAQs-e2209a95d19a46eeacca69936655336e"
+                        >see our FAQ</a
+                      >
+                      for frequently asked questions like Lambda’s phone
+                      number/address, how to get a transcript for job
+                      applications, etc.</em
+                    >
                   </li>
                 </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to articulate how Lambda supports them in their job
+                  search and the importance of becoming endorsed
+                </h4>
+                <h5>Overview</h5>
+                <p>
+                  Lambda Endorsement is our signal to students and employers
+                  that a student is career ready. Endorsement signifies that a
+                  student has not only met/exceeded all technical expectations
+                  of the Lambda School curriculum, but also that they have
+                  demonstrated a strong ability to work with peers and drive
+                  their job search and career development.
+                </p>
+                <p>
+                  At Lambda School Endorsement = Graduation… Graduation =
+                  Endorsement.
+                </p>
+                <h5>Follow Along</h5>
+                <h3 id="steps-to-endorsement">Steps to Endorsement</h3>
+                <p>
+                  To keep Students on track towards full endorsement, there are
+                  multiple checkpoints and milestones during each unit. To
+                  receive an endorsement, all Students will need to
+                  meet/complete the following technical and professional
+                  endorsement categories
+                </p>
+                <h4 id="technical">Technical</h4>
+                <p>
+                  1) Complete each Sprint Challenge with a 2+ on each objective
+                  2) Complete each Build Week assessment with a 2+ on each
+                  objective 3) Complete a Technical Endorsement Review:
+                  <a
+                    href="https://www.notion.so/Technical-Endorsement-Review-a6c42201ed0940ecbc6564c804a4929c"
+                    >Technical Endorsement Review</a
+                  >
+                </p>
+                <h4 id="professional">Professional</h4>
+                <p>
+                  Once a Student completes the Lambda School coursework, a
+                  member of the Careers team will review and sign off on the
+                  following:
+                </p>
+                <ul>
+                  <li>Resume</li>
+                  <li>LinkedIn</li>
+                  <li>GitHub (Web, iOS, AND, DS tracks only)</li>
+                  <li>Portfolio and artifacts for the Student’s track</li>
+                  <li>1:1 behavioral interview</li>
+                </ul>
+                <p>
+                  Students can find detailed expectations and requirements,
+                  along with checklists to complete all of the above:
+                  <a
+                    href="https://www.notion.so/Professional-Endorsement-Review-a97a2001310f4fb3b8ef1222e68dc4e7"
+                    >Professional Endorsement Review
+                  </a>
+                </p>
+                <p>
+                  Each of the above endorsement categories will be evaluated as
+                  a Student moves through Lambda’s curriculum. If a Student
+                  needs additional time to work on any of the endorsement
+                  categories, we’ll work with them during Lambda X to help them
+                  get Lambda Endorsed and career-ready.
+                </p>
+                <h3 id="maintaining-endorsement">Maintaining Endorsement</h3>
+                <p>Once endorsed, it is expected that a student will;</p>
+                <ul>
+                  <li>
+                    Maintain communication with career coaches, updating them on
+                    upcoming interviews and offers
+                  </li>
+                  <li>
+                    Request a coach look over their resume, LinkedIn, portfolio
+                    or other artifacts when making changes or updates to gain
+                    another set of eyes to catch formatting or grammatical
+                    errors
+                  </li>
+                  <li>
+                    Communicate with hiring partners who reach out, ensuring
+                    they always receive a reply or update to any communications
+                    within 24 hours
+                  </li>
+                  <li>
+                    Uphold scheduled interviews, and professionally communicate
+                    if they need to cancel or rearrange the interview to a
+                    different time
+                  </li>
+                  <li>
+                    Continuously work on new projects or maintain old projects
+                    to stay fresh on technical abilities.
+                  </li>
+                </ul>
+                <h3 id="benefits-of-endorsement">Benefits of Endorsement</h3>
+                <p>
+                  Working toward your Lambda School Endorsement opens a variety
+                  of doors simply by you continually leveling up your skills to
+                  meet the high bar required for endorsement. Additionally,
+                  getting endorsed gives you the following exclusive benefits:
+                </p>
+                <ul>
+                  <li>Sessions with local industry mentors</li>
+                  <li>Interviews with matched hiring partners</li>
+                  <li>Featured profiles on upcoming hiring company portal</li>
+                  <li>Offer negotiation support (avg 17% additional comp)</li>
+                  <li>
+                    Lifetime access to updated track curriculum, career
+                    workshops, and coach support
+                  </li>
+                </ul>
+                <h3 id="hiring-solutions">Hiring Solutions</h3>
+                <p>
+                  There is a whole team at Lambda whose focus is on getting
+                  students hired. This team reaches out to companies to tell
+                  them about Lambda School and why they should hire you. This
+                  team can help you reach out to companies, just like they do,
+                  to assist you in making your job search more effective. This
+                  team has talked to hundreds of companies and are building
+                  relationships with hiring managers. If they talk to a company
+                  that is looking for someone like you (and you are endorsed)
+                  they will introduce you.
+                </p>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to understand that the Lambda curriculum has a singular
+                  focus on career readiness.
+                </h4>
+                <h5>Overview</h5>
+                <p>
+                  There is a team of curriculum developers at Lambda School that
+                  work on the training kit content, guided project lesson plans,
+                  module projects, sprint projects and assessments. With as
+                  quickly as technical subjects change, they are tasked with
+                  updating content continuously. The curriculum developer works
+                  in conjunction with a subject matter expert and instructors to
+                  ensure that the curriculum is techically correct and teaches
+                  the necessary concepts.
+                </p>
+                <h3 id="start-with-the-end-in-mind">
+                  Start with the End in Mind
+                </h3>
+                <p>
+                  At Lambda, we have the unique opportunity to work closely with
+                  hiring partners and industry experts when designing every
+                  component of our curriculum.
+                </p>
+                <p>
+                  The very first step when starting to design curriculum, is to
+                  work with these partners to develop the learning objectives.
+                  We get to ask ourselves about the specific skills a student
+                  must have to be hired in their chosen track. What must they
+                  understand? What attitudes and dispositions must they possess?
+                </p>
+                <p>
+                  Once we have this large list of objectives, we can work
+                  backwards from there to design our modules, module projects,
+                  sprints, sprint challenges, units, and build week projects.
+                  This ensures that we engineer every moment of a student’s
+                  Lambda journey with the most important outcome in mind:
+                  getting the student a job!
+                </p>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to know how to access and participate in school
+                  engagement opportunities.
+                </h4>
+                <h5>Overview</h5>
+                <p>
+                  As a student we want you to form a connection with Lambda
+                  school, with Lambda school staff and with your fellow
+                  students. These connections help provide the social
+                  interaction and support you will need to be successful. In
+                  Slack, there are channels set up to allow you to reach out to
+                  other Lambda students in your physical area, chat about your
+                  favorite TV shows and share your favorite hobbies. Lambda
+                  School is encouraging local meetups of students and is even
+                  willing to pitch in some money for food. You can find
+                  information about local meetups by joining your state channel
+                  in Slack. Do you have a beautiful yard and want to share
+                  pictures? There is a Slack channel for that
+                  #gardens_and_yards. Are you focused on improving your body as
+                  you improve your mind? There is a Slack channel for that;
+                  #fitness or even #biohacking. In a more educational related
+                  channel, you can share your favorite books in the Slack
+                  channel #books. Find a few that interest you to join. If you
+                  want to keep up with Lambda School as a company there is a
+                  blog on the main website or there is an active Lambda School
+                  Twitter account https://twitter.com/lambdaschool or follow our
+                  CEO Austen Allred at https://twitter.com/Austen. We hope that
+                  you’ll be a part of the Lambda School community far into the
+                  future as alumni working as a professional in the tech
+                  industry.
+                </p>
+                <hr />
+                <h2 class="display-4">
+                  <a
+                    id="project"
+                    class="anchor"
+                    href="#project"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Project
+                </h2>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <h5>
+                      <a
+                        target="_blank"
+                        href="https://docs.google.com/document/d/1F0BPlMdDn6U6Y9IZGSRtdvZm_XDc3mCQSRjT7Gk3NL0/edit?usp=sharing"
+                        >LL Module 2 Project</a
+                      >
+                    </h5>
+                    <p>
+                      These tasks are to be completed during the project time
+                      for your track. For full time these tasks will be
+                      completed in the afternoons after lunch. For part time
+                      these tasks are completed every other day, on the opposite
+                      days of the guided project instruction.
+                    </p>
+                  </li>
+                </ul>
+                <h2 class="display-4">
+                  <a
+                    id="review"
+                    class="anchor"
+                    href="#review"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Review
+                </h2>
+                <h3 class="display-5">Class Recordings</h3>
+                <p class="lead">
+                  You can use class recordings to help you master the material.
+                </p>
+                <div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong
+                        ><a target="_blank" href="https://youtu.be/v0qH7LVVMmc"
+                          >Labs and Beyond for LS200803FT w/James Pacheco</a
+                        ></strong
+                      >
+                      <p>
+                        An overview of Labs, Lambda X, Career and Professional
+                        Development, and Getting a Job.
+                      </p>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="/archive/LL/module/recnBWTWXqXWjWCUd"
+                        >All previous recordings</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <h3 class="display-5">Demonstrate Mastery</h3>
+                <p>
+                  To demonstrate mastery of this module, you need to complete
+                  and pass a code review on each of the following:
+                </p>
+                <ul>
+                  <li>Project: LL Module 2 Project</li>
+                </ul>
               </div>
-              <h3 class="display-5">Demonstrate Mastery</h3>
-              <p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the
-                following:</p>
-              <ul>
-                <li>Project: LL Module 2 Project</li>
-              </ul>
             </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-        dataLayer.push( arguments );
-      }
-      gtag( 'js', new Date() );
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
 
-      gtag( 'config', 'UA-80850900-4' );
-    </script>
-    <script type="text/javascript">
-      function getDomain() {
-        const domainName = window.location.hostname.split( '.' )[ 1 ];
-        return `${domainName}.com`;
-      }
-    </script>
-    <script src="" integrity="" crossorigin="anonymous"></script>
-    <script>
-      window.jQuery || document.write( '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>' )
-    </script>
-    <script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script>
-    <script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
-    <script src="/assets/js/activate.js"></script>
-    <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      SimpleJekyllSearch.init( {
-        searchInput: document.getElementById( 'search-input' ),
-        resultsContainer: document.getElementById( 'results-container' ),
-        dataSource: '/search.json',
-        searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Labs and Beyond">{title}</a></li>',
-        noResultsText: '',
-        limit: 10,
-        fuzzy: true,
-      } )
-    </script>
-    <script src="/assets/js/mermaid.min.js"></script>
-    <script type="text/javascript">
-      if ( window.attachEvent ) {
-        window.attachEvent( 'onload', verifySignedIn );
-      } else {
-        if ( window.onload ) {
-          var currentOnLoadFn = window.onload;
-          var newOnLoadFn = function ( evt ) {
-            currentOnLoadFn( evt );
-            verifySignedIn();
-          };
-          window.onload = newOnLoadFn;
+        gtag("config", "UA-80850900-4");
+      </script>
+      <script type="text/javascript">
+        function getDomain() {
+          const domainName = window.location.hostname.split(".")[1];
+          return `${domainName}.com`;
+        }
+      </script>
+      <script src="" integrity="" crossorigin="anonymous"></script>
+      <script>
+        window.jQuery ||
+          document.write(
+            '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>'
+          );
+      </script>
+      <script
+        src="/assets/js/vendor/popper.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="/dist/js/bootstrap.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script src="/assets/js/activate.js"></script>
+      <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        SimpleJekyllSearch.init({
+          searchInput: document.getElementById("search-input"),
+          resultsContainer: document.getElementById("results-container"),
+          dataSource: "/search.json",
+          searchResultTemplate:
+            '<li class="list-group-item"><a href="{url}" title="Labs and Beyond">{title}</a></li>',
+          noResultsText: "",
+          limit: 10,
+          fuzzy: true,
+        });
+      </script>
+      <script src="/assets/js/mermaid.min.js"></script>
+      <script type="text/javascript">
+        if (window.attachEvent) {
+          window.attachEvent("onload", verifySignedIn);
         } else {
-          window.onload = verifySignedIn;
-        }
-      }
-
-      function verifySignedIn() {
-        if ( isPagePublic() ) {
-          return showPageContents();
-        }
-
-        window.__user = null;
-        isSignedIn().then( ( user ) => {
-          window.__user = user;
-
-          if ( !user.signedIn ) {
-            redirectToSignIn();
-          } else if ( !user.student && !window.__openToAdmissions ) {
-            showUnauthorizedMessage();
+          if (window.onload) {
+            var currentOnLoadFn = window.onload;
+            var newOnLoadFn = function (evt) {
+              currentOnLoadFn(evt);
+              verifySignedIn();
+            };
+            window.onload = newOnLoadFn;
           } else {
-            showPageContents();
-          }
-        } );
-      }
-
-      function isPagePublic() {
-        const openCourses = [
-          'and-pre',
-          'ds-pre',
-          'fsw-pre',
-          'help',
-          'ios-pre',
-        ];
-
-        const openPages = [
-          'cs-and',
-          'cs-fsw',
-          'cs-ios',
-          'cr',
-          'ds',
-          'jx',
-          'p4s',
-          'ux',
-        ];
-
-        const pathParts = window.location.pathname.split( '/' );
-        const courseName = pathParts[ 1 ];
-        const pageName = pathParts[ pathParts.length - 1 ];
-
-        return openCourses.includes( courseName ) || openPages.includes( pageName );
-      }
-
-      function isSignedIn() {
-        const isDeployPreview = window.location.hostname.startsWith( 'deploy-preview' ) && window.location.hostname
-          .endsWith( 'netlify.com' );
-
-        if ( isDeployPreview ) return Promise.resolve( {
-          signedIn: true,
-          student: true
-        } );
-
-        return fetch( `${getAuthBaseUrl()}/whoami`, {
-            credentials: 'include'
-          } )
-          .then( ( response ) => response.text() )
-          .then( ( userAsText ) => userAsText ? JSON.parse( userAsText ) : null )
-          .then( ( userData ) => ( {
-            signedIn: Boolean( userData ),
-            student: Boolean( userData && userData.airtableId ),
-            id: userData ? userData.id : null,
-            email: userData ? userData.email : null
-          } ) )
-          .catch( ( error ) => {} );
-      }
-
-      function redirectToSignIn() {
-        const signInUrl =
-          `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
-        const redirectMessage = document.querySelector( '#redirect-message' );
-        redirectMessage.style.display = "block";
-        redirectMessage.innerHTML =
-          `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
-        window.location = signInUrl;
-      }
-
-      function showPageContents() {
-        document.querySelector( '#content-wrapper' ).style.visibility = 'visible';
-      }
-
-      function showUnauthorizedMessage() {
-        document.querySelector( '#unauthorized-message' ).style.display = 'block';
-      }
-
-      function getAuthBaseUrl() {
-        const domain = getDomain();
-        const authBaseUrl = `https://auth.${domain}`;
-        return authBaseUrl;
-      }
-    </script>
-    <script src="/assets/js/docs.min.js"></script>
-    <script>
-      var MathJax = {
-        tex: {
-          inlineMath: [
-            [ '$$', '$$' ],
-            [ '\[', '\])' ]
-          ]
-        },
-        "HTML-CSS": {
-          styles: {
-            ".MathJax span": {
-              color: "#000000"
-            }
+            window.onload = verifySignedIn;
           }
         }
-      }
-    </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
-    </script>
-    <script>
-      handleExternalLinks();
 
-      function handleExternalLinks() {
-        const domain = getDomain();
-        const links = document.querySelectorAll( 'a' );
-        return links.forEach( ( link ) => {
-          if ( !link.host.includes( domain ) ) link.target = '_blank';
-        } )
-      };
-    </script>
-  </div>
-</body>
+        function verifySignedIn() {
+          if (isPagePublic()) {
+            return showPageContents();
+          }
 
+          window.__user = null;
+          isSignedIn().then((user) => {
+            window.__user = user;
+
+            if (!user.signedIn) {
+              redirectToSignIn();
+            } else if (!user.student && !window.__openToAdmissions) {
+              showUnauthorizedMessage();
+            } else {
+              showPageContents();
+            }
+          });
+        }
+
+        function isPagePublic() {
+          const openCourses = [
+            "and-pre",
+            "ds-pre",
+            "fsw-pre",
+            "help",
+            "ios-pre",
+          ];
+
+          const openPages = [
+            "cs-and",
+            "cs-fsw",
+            "cs-ios",
+            "cr",
+            "ds",
+            "jx",
+            "p4s",
+            "ux",
+          ];
+
+          const pathParts = window.location.pathname.split("/");
+          const courseName = pathParts[1];
+          const pageName = pathParts[pathParts.length - 1];
+
+          return (
+            openCourses.includes(courseName) || openPages.includes(pageName)
+          );
+        }
+
+        function isSignedIn() {
+          const isDeployPreview =
+            window.location.hostname.startsWith("deploy-preview") &&
+            window.location.hostname.endsWith("netlify.com");
+
+          if (isDeployPreview)
+            return Promise.resolve({
+              signedIn: true,
+              student: true,
+            });
+
+          return fetch(`${getAuthBaseUrl()}/whoami`, {
+            credentials: "include",
+          })
+            .then((response) => response.text())
+            .then((userAsText) => (userAsText ? JSON.parse(userAsText) : null))
+            .then((userData) => ({
+              signedIn: Boolean(userData),
+              student: Boolean(userData && userData.airtableId),
+              id: userData ? userData.id : null,
+              email: userData ? userData.email : null,
+            }))
+            .catch((error) => {});
+        }
+
+        function redirectToSignIn() {
+          const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(
+            window.location.href
+          )}&reason=auth_required`;
+          const redirectMessage = document.querySelector("#redirect-message");
+          redirectMessage.style.display = "block";
+          redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`;
+          window.location = signInUrl;
+        }
+
+        function showPageContents() {
+          document.querySelector("#content-wrapper").style.visibility =
+            "visible";
+        }
+
+        function showUnauthorizedMessage() {
+          document.querySelector("#unauthorized-message").style.display =
+            "block";
+        }
+
+        function getAuthBaseUrl() {
+          const domain = getDomain();
+          const authBaseUrl = `https://auth.${domain}`;
+          return authBaseUrl;
+        }
+      </script>
+      <script src="/assets/js/docs.min.js"></script>
+      <script>
+        var MathJax = {
+          tex: {
+            inlineMath: [
+              ["$$", "$$"],
+              ["\[", "\])"],
+            ],
+          },
+          "HTML-CSS": {
+            styles: {
+              ".MathJax span": {
+                color: "#000000",
+              },
+            },
+          },
+        };
+      </script>
+      <script
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+        type="text/javascript"
+      ></script>
+      <script>
+        handleExternalLinks();
+
+        function handleExternalLinks() {
+          const domain = getDomain();
+          const links = document.querySelectorAll("a");
+          return links.forEach((link) => {
+            if (!link.host.includes(domain)) link.target = "_blank";
+          });
+        }
+      </script>
+    </div>
+  </body>
 </html>

@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # cypress.io
 
@@ -75,10 +73,10 @@ The visual testing application, cypress, is a great place to start learning abou
 
 **At the end of this module, you should be able to:**
 
--   define what end-to-end testing is and explain its importance
--   use the Cypress GUI to write tests and interact with Elements
--   use Cypress to test controlled input
--   run all tests in without any UI
+- define what end-to-end testing is and explain its importance
+- use the Cypress GUI to write tests and interact with Elements
+- use Cypress to test controlled input
+- run all tests in without any UI
 
 #### Pro Tip
 
@@ -88,17 +86,13 @@ Listen to and learn from the opinions of others. Diverse ideas lead to a better 
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=dr10Z-HpsCQ), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=dr10Z-HpsCQ), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=VvLocgtCQnY), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=VvLocgtCQnY), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -120,7 +114,7 @@ Unit testing verifies that individual, isolated parts of your code (like functio
 
 ### Integration
 
-Integration testing works to test several units at one time - verifying that they work together as expected. For example, if you have a function that relies on the output of another function, you might write an integration test to confirm that they’re working together as expected. For example, you might simulate a user action to enter login credentials and submit a form, then *verify* that the submission links a user to a new page. Here, you’re not testing the full app, but not testing just one function, either.
+Integration testing works to test several units at one time - verifying that they work together as expected. For example, if you have a function that relies on the output of another function, you might write an integration test to confirm that they’re working together as expected. For example, you might simulate a user action to enter login credentials and submit a form, then _verify_ that the submission links a user to a new page. Here, you’re not testing the full app, but not testing just one function, either.
 
 ### End to End
 
@@ -150,7 +144,7 @@ This is an example of an end to end test because it simulates an entire user exp
 
 > A tool that debugs a js file, highlighting locations that are missing semi-colons, parentheses, and other syntax.
 
-This is *not* an example of E2E testing, even though it focuses on a whole file, because it works at the static-test level to catch typos and errors as you write code.
+This is _not_ an example of E2E testing, even though it focuses on a whole file, because it works at the static-test level to catch typos and errors as you write code.
 
 ### Example 3
 
@@ -164,9 +158,9 @@ Think of an example from your experience where writing an end to end test would 
 
 ##### Dig Deeper
 
--   [Highly Recommended: Unit vs. E2E tests](https://kentcdodds.com/blog/unit-vs-integration-vs-e2e-tests)  
+- [Highly Recommended: Unit vs. E2E tests](https://kentcdodds.com/blog/unit-vs-integration-vs-e2e-tests)
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use the Cypress GUI to write tests and interact with Elements
 
@@ -235,15 +229,15 @@ For the next few objectives we’ll be working inside of your most recent `fun b
 1.  Install cypress locally with `npm install --save-dev cypress`. You’ll notice 5k+ changes to your working directory in git but this is just Cypress installing all of its dependencies.
 2.  Since there is no `package.json` file in our fun bus example, we’ll need to create one. Then, we’ll add the following code to our new file:
 
-    { "scripts": 
-        { "cypress:open": "cypress open" 
-        };
+    { "scripts":
+    { "cypress:open": "cypress open"
+    };
     }
 
-1.  Run `npm run e2e` in terminal which will create a cypress.json file and a cypress folder within your website directory. Inside the cypress folder you’ll find four more folders, including the example files we looked at earlier.
-2.  To write our own tests we’ll need to create a new test file. You can call it anything you want but best practices suggest that the file name should match the function of the test. In this case, the file name would be `sample_test.js`.
-3.  From the cypress GUI, click on the file `sample_test.js` to run in browser. ![Screen Shot 2020-02-24 at 11.41.00 AM](https://i.imgur.com/y8GUutK.png)
-4.  At this point you should see the `No tests found` error message as well as the default blank page. We would need to tell Cypress to load a page in order to see our actual html displayed. ![No Tests Found](https://i.imgur.com/B2as22i.png)
+3.  Run `npm run e2e` in terminal which will create a cypress.json file and a cypress folder within your website directory. Inside the cypress folder you’ll find four more folders, including the example files we looked at earlier.
+4.  To write our own tests we’ll need to create a new test file. You can call it anything you want but best practices suggest that the file name should match the function of the test. In this case, the file name would be `sample_test.js`.
+5.  From the cypress GUI, click on the file `sample_test.js` to run in browser. ![Screen Shot 2020-02-24 at 11.41.00 AM](https://i.imgur.com/y8GUutK.png)
+6.  At this point you should see the `No tests found` error message as well as the default blank page. We would need to tell Cypress to load a page in order to see our actual html displayed. ![No Tests Found](https://i.imgur.com/B2as22i.png)
 
 ### My First Test
 
@@ -265,17 +259,17 @@ Until this point we’ve been running tests on the default blank page. If we wan
 1.  In order to do this we’ll need to add a base URL to cypress.json file. You should use the format “http://localhost:8080/” such that the addition looks something like the below. Note that you can visit a URL without setting the baseURL, but then you would need the full file path in `cy.visit()`. That said, using `localhost:8080` is considered a best practice because it prevents an annoying automatic default refresh that happens under the hood.
 
     {
-        "baseUrl":"http://localhost:8080/"
+    "baseUrl":"http://localhost:8080/"
     }
 
 1.  Now that a baseUrl exists, you can run a second test to load your index.html page with `cy.visit()`.
 
-     describe('My Second Test', function () {
-        //Arrange
-        it('Visits a new site', function() {
-        // Act
-        cy.visit("index.html");
-        })
+    describe('My Second Test', function () {
+    //Arrange
+    it('Visits a new site', function() {
+    // Act
+    cy.visit("index.html");
+    })
     })
 
 The example below shows what these tests will look like if successful for our favorite example, the fun bus.
@@ -292,10 +286,10 @@ Set up Cypress testing in a module challenge of your choosing. Run two tests:
 
 ##### Dig Deeper
 
--   [Cypress.io](https://www.cypress.io/)  
--   [Cypress Documentation](https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell)  
+- [Cypress.io](https://www.cypress.io/)
+- [Cypress Documentation](https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell)
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use Cypress to test controlled input
 
@@ -325,7 +319,7 @@ The following cheat sheet of best targeting elements is taken directly from the 
 
 After we set up the simulated user actions we will want to test that some expectation has been met: text has rendered on the page, a new page has loaded, etc. We’ll do this using assertions.
 
-The most common assertion is`.should()`: we’ll assert that some element *should* contain some content or do a specific thing. Since Cypress code syntax is English-like, let’s look at an example which tests that a link navigates to a new page.
+The most common assertion is`.should()`: we’ll assert that some element _should_ contain some content or do a specific thing. Since Cypress code syntax is English-like, let’s look at an example which tests that a link navigates to a new page.
 
     describe('Link Navigation', function() {
       it('Asserts that the words instagram.com link to instagram.com', function() {
@@ -345,24 +339,24 @@ Let’s write a real test to actually test DOM elements.
 1.  **Arrange** - First, we need to set up our test with a name and function declaration. As covered in the previous objectives, this is where we describe what the test will do.
 
     describe('Header Text', function() {
-        it('Checks if header text exists', function () { })
+    it('Checks if header text exists', function () { })
     })
 
 1.  **Act** - Next we need to act. Our action here will simply be loading up the page with `cy.visit()`.
 
     describe('Header Text', function() {
-        it('Checks if header text exists', function () {
-        cy.visit("index.html");
-     })
+    it('Checks if header text exists', function () {
+    cy.visit("index.html");
+    })
     })
 
 1.  **Assert** - Finally, we’ll grab the header element of interest and assert that it contains the text “Fun Bus” with `cy.get('.logo-heading').contains('Fun Bus');`.
 
     describe('Header Text', function() {
-        it('Checks if header text exists', function () {
-        cy.visit("index.html");
-        cy.get('.logo-heading').contains('Fun Bus');
-        })
+    it('Checks if header text exists', function () {
+    cy.visit("index.html");
+    cy.get('.logo-heading').contains('Fun Bus');
+    })
     })
 
 ### Failing Test
@@ -385,7 +379,7 @@ A test will fail when the expectation, or assertion, is false. In our example ab
 
 Write a test on your chosen module challenge using an assertion that we did **not** cover above - get inspired in the documentation [here](https://docs.cypress.io/guides/references/assertions.html#Chai).
 
-------------------------------------------------------------------------
+---
 
 #### Learn to run all tests in without any UI
 
@@ -401,7 +395,7 @@ Thankfully, cypress tests can be run straight from the terminal with `npx cypres
 
 #### `--spec`
 
-`--spec` or `-s` will *specify* which tests to run. So, `npx cypress run --spec "cypress/integration/sample_test.js"` will run only the tests in the `sample_test.js` file.
+`--spec` or `-s` will _specify_ which tests to run. So, `npx cypress run --spec "cypress/integration/sample_test.js"` will run only the tests in the `sample_test.js` file.
 
 You can specify multiple files by separating filenames with a `,` all inside of the quotation marks.
 
@@ -423,13 +417,13 @@ Run the tests you created in previous objectives in terminal.
 
 ##### Dig Deeper
 
--   [Cypress CLI Documentation](https://docs.cypress.io/guides/guides/command-line.html#How-to-run-commands)  
+- [Cypress CLI Documentation](https://docs.cypress.io/guides/guides/command-line.html#How-to-run-commands)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Cypress Testing](https://github.com/LambdaSchool/Cypress-Testing)
+- ##### [Cypress Testing](https://github.com/LambdaSchool/Cypress-Testing)
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -437,32 +431,32 @@ Run the tests you created in previous objectives in terminal.
 
 You can use class recordings to help you master the material.
 
--   **[Cypress.io for WebPT22 w/Keiran Kozlowski](https://youtu.be/MbjiVqdf0FI)**
+- **[Cypress.io for WebPT22 w/Keiran Kozlowski](https://youtu.be/MbjiVqdf0FI)**
 
-    In this module you will learn about testing. Writing good, quality code isn’t possible without tests. It’s simply too difficult to catch every error on your own. In your careers, you’ll be expected to write and understand different types of testing in order to speed up your work flow, prevent bugs, and integrate systems. The visual testing application, cypress, is a great place to start learning about testing principles in general.
+  In this module you will learn about testing. Writing good, quality code isn’t possible without tests. It’s simply too difficult to catch every error on your own. In your careers, you’ll be expected to write and understand different types of testing in order to speed up your work flow, prevent bugs, and integrate systems. The visual testing application, cypress, is a great place to start learning about testing principles in general.
 
--   [All previous recordings](/archive/WEB2/module/recduYpjgZBQaQM8X)
+- [All previous recordings](/archive/WEB2/module/recduYpjgZBQaQM8X)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Think of an example from your experience where writing an end to end test would have been helpful in your development process. Write a sentence or two explaining how you see testing being useful in this situation and send it to your TL.
+  Think of an example from your experience where writing an end to end test would have been helpful in your development process. Write a sentence or two explaining how you see testing being useful in this situation and send it to your TL.
 
--   Objective challenge:
+- Objective challenge:
 
-    Set up Cypress testing in a module challenge of your choosing. Run two tests:
+  Set up Cypress testing in a module challenge of your choosing. Run two tests:
 
-    1\) to confirm that `true === true`. 2) to confirm that your index.html file will load locally.
+  1\) to confirm that `true === true`. 2) to confirm that your index.html file will load locally.
 
--   Objective challenge:
+- Objective challenge:
 
-    Write a test on your chosen module challenge using an assertion that we did **not** cover above - get inspired in the documentation [here](https://docs.cypress.io/guides/references/assertions.html#Chai).
+  Write a test on your chosen module challenge using an assertion that we did **not** cover above - get inspired in the documentation [here](https://docs.cypress.io/guides/references/assertions.html#Chai).
 
--   Objective challenge:
+- Objective challenge:
 
-    Run the tests you created in previous objectives in terminal.
+  Run the tests you created in previous objectives in terminal.
 
--   Project: Cypress Testing
+- Project: Cypress Testing

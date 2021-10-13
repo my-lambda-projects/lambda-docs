@@ -16,38 +16,38 @@ You must be a Lambda School student to view this page.
 
 <a href="/webannex/sprint/recfwZvI7QhMa7xbG" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
--   [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
--   [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
+- [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
+- [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
+- [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
 
 <a href="/webannex/sprint/recIXiQgpgMdJ81ms" class="bd-toc-link">2.  Advanced CSS</a>
 
--   [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
--   [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
--   [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
--   [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
+- [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
+- [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
+- [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
+- [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
 
 <a href="/webannex/sprint/recclZwJxMU8kUngT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
--   [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
--   [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
--   [Classes](/webannex/module/recyS588eOvVUKAMc/)
+- [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
+- [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
+- [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
+- [Classes](/webannex/module/recyS588eOvVUKAMc/)
 
 <a href="/webannex/sprint/recRT8JKvbTiGaosk" class="bd-toc-link">4.  Single Page Applications</a>
 
--   [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
--   [React Router II](/webannex/module/recYkF1FDilIedmwX/)
--   [Form Management](/webannex/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
+- [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
+- [React Router II](/webannex/module/recYkF1FDilIedmwX/)
+- [Form Management](/webannex/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
 
 <a href="/webannex/sprint/recozTHaHJe6L1ThN" class="bd-toc-link">5.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
--   [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
--   [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
--   [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
+- [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
+- [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
+- [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
 
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjM1IiB2aWV3Ym94PSIwIDAgNzU2IDE5NyIgZmlsbD0iI2VjMzk0NCI+PGc+PHBhdGggZD0iTTI5Mi45LDEyNi42aC02LjdjLTksMC0xMi42LTEuOS0xMi42LTkuNVY0OC41YzAtNy43LDEuNi04LjYsMTEuNC05Ljd2LTQuNWgtNDEuM3Y0LjUgYzkuOCwxLjEsMTEuNCwxLjksMTEuNCw5Ljd2NjkuM2MwLDcuNy0xLjYsOC42LTExLjQsOS43djQuNWg3My43bDQuOS0yOS40aC00LjRDMzA4LjUsMTE5LjYsMzAzLjksMTI2LjYsMjkyLjksMTI2LjZ6Ij48L3BhdGg+PHBhdGggZD0iTTM4NS41LDEyMS4xVjc5LjNjMC0xNS44LTkuNC0yMi40LTI2LjYtMjIuNGMtMTUsMC0yNi44LDYuNi0yNi44LDE5LjNjMCwyLjQsMC4yLDMuMywwLjgsNWgxNi42IGMtMC41LTItMC43LTUtMC43LTcuNWMwLTkuNiwzLjYtMTIuNCw5LjQtMTIuNGM2LjQsMCw5LjcsMiw5LjcsMTQuNHYxMS4ybC0yMC44LDcuN2MtMTAuNiw0LjEtMTkuMyw4LjgtMTkuMywyMC43IGMwLDEwLjksNy41LDE3LjgsMTguNiwxNy44YzkuOSwwLDE3LjQtNi4yLDIxLjktMTIuMWwwLjEtMC4xbDAsMFYxMzJoMjZ2LTQuNEMzODcuNywxMjcuMSwzODUuNSwxMjYuMiwzODUuNSwxMjEuMXogTTM2OCwxMTcuOCBjLTQuNCwzLjMtNy42LDUuMy0xMiw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNFYxMTcuOEwzNjgsMTE3Ljh6Ij48L3BhdGg+PHBhdGggZD0iTTUxNC40LDEyMVY3OS41YzAtMTQuOC02LTIyLjQtMTguNy0yMi40Yy0xMS41LDAtMTkuNCw2LjYtMjUuNSwxMy45Yy0xLjgtOS42LTcuNy0xMy45LTE3LjgtMTMuOSBjLTExLjQsMC0xOC43LDYuMi0yNC44LDEzLjZWNTdoLTIuM2wtMjMuOCw3LjR2Mi40bDguNiw1djQ5LjRjMCw1LTIuMSw2LjEtOC45LDYuNHY0LjRoMzUuMXYtNC40Yy02LjctMC4zLTguNy0xLjMtOC43LTYuNHYtNDcgYzQuNy0zLjYsOS41LTYuNSwxNS41LTYuNWM3LjYsMCwxMC41LDQuMiwxMC41LDEyLjd2NDAuOGMwLDUtMS45LDYuMS04LjcsNi40djQuNGwzNC44LDB2LTQuNGMtNi43LTAuMy04LjYtMS4zLTguNi02LjR2LTQ3IGM0LjctMy42LDkuNS02LjUsMTUuNS02LjVjNy42LDAsMTAuNSw0LjIsMTAuNSwxMi43bC0wLjEsNDAuNWMwLDUtMS44LDYuNC04LjYsNi43bDAsNC40aDM1LjF2LTQuNCBDNTE2LjcsMTI3LjQsNTE0LjQsMTI2LjEsNTE0LjQsMTIxeiI+PC9wYXRoPjxwYXRoIGQ9Ik01NzMuMiw1Ny4zYy0xMSwwLTE4LjUsNS43LTIzLjQsMTIuOFYyMi45aC0yLjdsLTIzLjQsNi44djIuNWw4LjYsNC41VjEzMmgyLjlsOC0zLjVjNS44LDMuMywxMi4zLDUsMjAuMiw1IGMyMC44LDAsMzcuNC0xNS44LDM3LjQtNDIuNkM2MDAuOSw2OS45LDU5MC40LDU3LjMsNTczLjIsNTcuM3ogTTU2My40LDEyOC43Yy01LjQsMC0xMC4zLTIuNC0xMy43LTcuOVY3My42IGMzLjQtMy40LDguNS01LjcsMTMuNS01LjdjMTMuOSwwLDIwLDEyLjgsMjAsMjkuNUM1ODMuMywxMTQuNyw1NzUuOCwxMjguNSw1NjMuNCwxMjguN3oiPjwvcGF0aD48cGF0aCBkPSJNNjc3LDEyMS4yVjIyLjhoLTIuNkw2NTEsMjkuNlYzMmw4LjYsNC41djI1LjdjLTMuNC0zLjItOC44LTUuMS0xNS41LTUuMWMtMTkuOSwwLTM1LjIsMTUuMy0zNS4yLDQxLjMgYzAsMjAuNywxMS4yLDM0LjYsMjguMSwzNC42YzkuOCwwLDE3LTUuMywyMi42LTEzLjF2MC45VjEzMmgyNi4zbDAtNC40QzY3OS4xLDEyNy4zLDY3NywxMjYuMyw2NzcsMTIxLjJ6IE02NTkuNiwxMTcuMSBMNjU5LjYsMTE3LjFjLTMuNCwzLjQtOCw1LjEtMTMuMiw1LjFjLTEzLjIsMC0yMC40LTEyLjgtMjAuNC0yOS44YzAtMTcuOCw3LjMtMjkuMiwxOS41LTI5LjJjOC43LDAsMTQuMSw2LjksMTQuMSwxOC4zIEw2NTkuNiwxMTcuMXoiPjwvcGF0aD48cGF0aCBkPSJNNzQ3LjEsMTIxLjFWNzkuM2MwLTE1LjgtOS40LTIyLjQtMjYuNi0yMi40Yy0xNSwwLTI2LjgsNi42LTI2LjgsMTkuM2MwLDIuNCwwLjIsMy4zLDAuOCw1aDE2LjYgYy0wLjUtMi0wLjctNS0wLjctNy41YzAtOS42LDMuNi0xMi40LDkuNC0xMi40YzYuNCwwLDkuNywyLDkuNywxNC40djExLjJsLTIwLjgsNy43Yy0xMC42LDQuMS0xOS4zLDguOC0xOS4zLDIwLjcgYzAsMTAuOSw3LjUsMTcuOCwxOC42LDE3LjhjOS45LDAsMTcuNC02LjIsMjEuOS0xMi4xdi0wLjFoMC4xbDAsMTEuMWwyNiwwLjF2LTQuNUM3NDkuMywxMjcuMSw3NDcuMSwxMjYuMiw3NDcuMSwxMjEuMXogTTcyOS42LDExNy44Yy00LjQsMy4zLTcuNiw1LjMtMTIuMSw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNEw3MjkuNiwxMTcuOEw3MjkuNiwxMTcuOHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTAsMHY5MC40YzAsNjUuNyw1MC45LDg4LjUsODguMSwxMDUuMmgwLjFsMywxLjRjMC43LTAuNCwxLjQtMC43LDIuMi0xYzAuNC0wLjIsMC45LTAuNCwxLjMtMC42IGMzNy4zLTE2LjYsODguNC0zOS41LDg4LjQtMTA1VjBIMHogTTExNiwxMzJsLTItNS4zbC0yNi42LTcwYy0xLjYsNC4xLTUuMywxNC05LjMsMjQuNmwtMTUuMyw0MS4zYy0wLjcsMi0wLjMsMywwLjIsMy43IGMxLjEsMS4zLDMuNSwxLjMsNy4zLDEuM0g3MWwwLDQuNEg0Mi40bDAtNC40aDIuMmMzLjksMCw3LjEtMS43LDkuNS02LjVsMi45LTYuNmwyNi41LTY3LjhsLTQuNy0xMi41aDI0LjdsMzQuMSw4OS43bDMuMSw4LjFIMTE2eiI+PC9wYXRoPjwvc3ZnPg==" /></a>
 
@@ -55,43 +55,43 @@ You must be a Lambda School student to view this page.
 
 <a href="/webannex/sprint/recfwZvI7QhMa7xbG" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
--   [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
--   [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
+- [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
+- [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
+- [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
 
 <a href="/webannex/sprint/recIXiQgpgMdJ81ms" class="bd-toc-link">2.  Advanced CSS</a>
 
--   [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
--   [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
--   [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
--   [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
+- [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
+- [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
+- [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
+- [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
 
 <a href="/webannex/sprint/recclZwJxMU8kUngT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
--   [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
--   [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
--   [Classes](/webannex/module/recyS588eOvVUKAMc/)
+- [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
+- [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
+- [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
+- [Classes](/webannex/module/recyS588eOvVUKAMc/)
 
 <a href="/webannex/sprint/recRT8JKvbTiGaosk" class="bd-toc-link">4.  Single Page Applications</a>
 
--   [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
--   [React Router II](/webannex/module/recYkF1FDilIedmwX/)
--   [Form Management](/webannex/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
+- [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
+- [React Router II](/webannex/module/recYkF1FDilIedmwX/)
+- [Form Management](/webannex/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
 
 <a href="/webannex/sprint/recozTHaHJe6L1ThN" class="bd-toc-link">5.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
--   [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
--   [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
--   [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
+- [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
+- [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
+- [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Preprocessing I
 
@@ -107,9 +107,9 @@ Beyond that is just syntax and study of the documentation. With practice, prepro
 
 **At the end of this module, you should be able to:**
 
--   install Node on Windows (if needed)
--   install Node on Mac (if needed)
--   implement variables, mixins, nesting, nested at-rules in LESS
+- install Node on Windows (if needed)
+- install Node on Mac (if needed)
+- implement variables, mixins, nesting, nested at-rules in LESS
 
 #### Pro Tip
 
@@ -119,37 +119,31 @@ If you have questions about how to do something, try to batch them so you only i
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=uTTgynLLz-M), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=uTTgynLLz-M), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ttMay5P_NEM), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ttMay5P_NEM), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Kul8Temilk4), or enable JavaScript if it is disabled in your browser.
 
--   
+- [Official LESS Documentation](http://lesscss.org/)
 
-    # An error occurred.
+  LESS 3.0 documentation. This is where we learn how to use LESS syntax.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Kul8Temilk4), or enable JavaScript if it is disabled in your browser.
+- [Introduction to Preprocessors](https://htmlmag.com/article/an-introduction-to-css-preprocessors-sass-less-stylus)
 
--   [Official LESS Documentation](http://lesscss.org/)
-
-    LESS 3.0 documentation. This is where we learn how to use LESS syntax.
-
--   [Introduction to Preprocessors](https://htmlmag.com/article/an-introduction-to-css-preprocessors-sass-less-stylus)
-
-    This is a brief overview of what preprocessors are as well as a small guide on the different types of preprocessors available to use.
+  This is a brief overview of what preprocessors are as well as a small guide on the different types of preprocessors available to use.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
 #### Learn to install Node on Windows (if needed)
 
-------------------------------------------------------------------------
+---
 
 #### Learn to install Node on Mac (if needed)
 
@@ -175,59 +169,59 @@ If you are on a mac, follow the mac instructions below. If you are on a PC, scro
 
 ### Step By Step Install Instructions for Mac
 
-***Step 1: [Install Homebrew and Node](https://brew.sh/)***
+**_Step 1: [Install Homebrew and Node](https://brew.sh/)_**
 
--   Follow the instructions on how to install Homebrew using your terminal
--   Pay attention to your terminal as the installer will ask for a password
--   Once Homebrew is installed, run `brew install node` in your terminal
--   Pay attention to your terminal, as there might be small issues to troubleshoot
--   Restart your terminal after installation
--   Run `node -v` in your terminal to make sure node was installed correctly
+- Follow the instructions on how to install Homebrew using your terminal
+- Pay attention to your terminal as the installer will ask for a password
+- Once Homebrew is installed, run `brew install node` in your terminal
+- Pay attention to your terminal, as there might be small issues to troubleshoot
+- Restart your terminal after installation
+- Run `node -v` in your terminal to make sure node was installed correctly
 
-***Step 2: Install Less*** *NOTE:* You will see our commands have `-g` in them. Please write the commands exactly as you see them. Globally installing packages is ideal for our situation.
+**_Step 2: Install Less_** _NOTE:_ You will see our commands have `-g` in them. Please write the commands exactly as you see them. Globally installing packages is ideal for our situation.
 
--   Open terminal and run `npm install -g less`
--   If it’s not working, restart your terminal and try again
+- Open terminal and run `npm install -g less`
+- If it’s not working, restart your terminal and try again
 
-***Step 3: Install less-watch-compiler***
+**_Step 3: Install less-watch-compiler_**
 
--   Open the terminal and run `npm install -g less-watch-compiler`
+- Open the terminal and run `npm install -g less-watch-compiler`
 
-***Step 4: Use less-watch-compiler On Your Project***
+**_Step 4: Use less-watch-compiler On Your Project_**
 
--   Fork and clone [Preprocessing-Part-I](https://github.com/LambdaSchool/Preprocessing-Part-I)
--   `cd` into your project on your local machine
--   Once you are in the root of your project run `less-watch-compiler less css index.less`
--   Your project should be up and running, change some styles around in your .less file, and save the file to make sure you see a change in your CSS.
--   Great work, you’re all set up!
+- Fork and clone [Preprocessing-Part-I](https://github.com/LambdaSchool/Preprocessing-Part-I)
+- `cd` into your project on your local machine
+- Once you are in the root of your project run `less-watch-compiler less css index.less`
+- Your project should be up and running, change some styles around in your .less file, and save the file to make sure you see a change in your CSS.
+- Great work, you’re all set up!
 
 ### Step By Step Install Instructions for PC
 
-***Step 1: [Install Node.js](https://nodejs.org/en/)***
+**_Step 1: [Install Node.js](https://nodejs.org/en/)_**
 
-***Step 2: [Install Git Bash (Git SCM)](https://git-scm.com/download/win)***
+**_Step 2: [Install Git Bash (Git SCM)](https://git-scm.com/download/win)_**
 
--   After the installer finishes, open git bash and run `node -v` to make sure node is installed correctly
--   If you don’t see some node version numbers display in your git bash window, restart git bash and try again
+- After the installer finishes, open git bash and run `node -v` to make sure node is installed correctly
+- If you don’t see some node version numbers display in your git bash window, restart git bash and try again
 
-***Step 3: Install Less***
+**_Step 3: Install Less_**
 
-*NOTE:* You will see our commands have `-g` in them. Please write the commands exactly as you see them. Globally installing packages is ideal for our situation.
+_NOTE:_ You will see our commands have `-g` in them. Please write the commands exactly as you see them. Globally installing packages is ideal for our situation.
 
--   Open git bash and run `npm install -g less`
--   If it’s not working, restart your git bash and try again
+- Open git bash and run `npm install -g less`
+- If it’s not working, restart your git bash and try again
 
-***Step 4: Install less-watch-compiler***
+**_Step 4: Install less-watch-compiler_**
 
--   Open git bash and run `npm install -g less-watch-compiler`
+- Open git bash and run `npm install -g less-watch-compiler`
 
-***Step 5: Use less-watch-compiler On Your Project***
+**_Step 5: Use less-watch-compiler On Your Project_**
 
--   Fork and clone [Preprocessing-Part-I](https://github.com/LambdaSchool/Preprocessing-Part-I)
--   `cd` into your project on your local machine
--   Once you are in the root of your project run `less-watch-compiler less css index.less`
--   Your project should be up and running, change some styles around in your .less file, and save the file to make sure you see a change in your CSS.
--   Great work, you’re all set up!
+- Fork and clone [Preprocessing-Part-I](https://github.com/LambdaSchool/Preprocessing-Part-I)
+- `cd` into your project on your local machine
+- Once you are in the root of your project run `less-watch-compiler less css index.less`
+- Your project should be up and running, change some styles around in your .less file, and save the file to make sure you see a change in your CSS.
+- Great work, you’re all set up!
 
 ##### Challenge
 
@@ -235,7 +229,7 @@ If you are on a mac, follow the mac instructions below. If you are on a PC, scro
 2.  Once in your project, change the background color of your body tag to `red`.
 3.  Once the background turns red, your compiler is working correctly.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to implement variables, mixins, nesting, nested at-rules in LESS
 
@@ -247,11 +241,11 @@ Preprocessing extends the ability of CSS by adding abstractions and making CSS e
 
 Variables in LESS are identified with the `@` symbol. Variables allow developers to hold onto essential values like font stacks, colors, and width sizes, to name a few.
 
-*Variable Syntax:*
+_Variable Syntax:_
 
     @variable-name:  #FF0000;
 
-*Variable Usage:*
+_Variable Usage:_
 
     @variable-example:  #FF0000;
 
@@ -271,7 +265,7 @@ Variables in LESS are identified with the `@` symbol. Variables allow developers
 
 Mixins derive their name from the ability to mix different classes. Being able to create one class and use its properties within another class opens new possibilities in CSS.
 
-*Mixin Syntax:*
+_Mixin Syntax:_
 
     .some-class {
         color: red;
@@ -283,7 +277,7 @@ Mixins derive their name from the ability to mix different classes. Being able t
         .some-class();
     }
 
-*Mixin Usage:*
+_Mixin Usage:_
 
     .font-class {
       color: black;
@@ -302,7 +296,7 @@ Mixins derive their name from the ability to mix different classes. Being able t
       .box-class();
     }
 
-*Compiles to:*
+_Compiles to:_
 
     .example-mixin {
       color: black;
@@ -317,7 +311,7 @@ Mixins derive their name from the ability to mix different classes. Being able t
 
 Nesting is extremely useful for organizing our code and keeping our specificity scoped properly. However, we don’t want to be so specific that we become entirely rigid in our code. A good rule to follow with nesting is to avoid going more than four levels deep if possible.
 
-*Nesting Syntax:*
+_Nesting Syntax:_
 
     .parent {
       color: black;
@@ -326,10 +320,10 @@ Nesting is extremely useful for organizing our code and keeping our specificity 
       .child {
         color: red;
         font-size: 16px;
-      }  
+      }
     } // parent
 
-*Compiles to:*
+_Compiles to:_
 
     .parent {
       color: black;
@@ -340,7 +334,7 @@ Nesting is extremely useful for organizing our code and keeping our specificity 
       font-size: 16px;
     }
 
-*Nesting Usage:*
+_Nesting Usage:_
 
     .parent {
       color: black;
@@ -358,7 +352,7 @@ Nesting is extremely useful for organizing our code and keeping our specificity 
           height: 100px;
           background: gray;
         }
-      }  
+      }
     } // parent
 
 ### Nested At-Rules and Bubbling
@@ -377,7 +371,7 @@ Being able to nest `@media` directly into a selector increases code readability 
       }
     }
 
-*Compiles to:*
+_Compiles to:_
 
     // The compiled version showcases how the media query that was once nested inside .some-class in LESS has now bubbled to enclose the selector in CSS
 
@@ -451,16 +445,16 @@ Study the code and rearrange the selectors and variables correctly.
 
 ##### Dig Deeper
 
--   [Codepen](https://codepen.io/)  
-    This is a great tool to help you learn LESS without local setup on your computer.
+- [Codepen](https://codepen.io/)  
+  This is a great tool to help you learn LESS without local setup on your computer.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Preprocessing I: Digital Resume](https://github.com/LambdaSchool/Preprocessing-I)
+- ##### [Preprocessing I: Digital Resume](https://github.com/LambdaSchool/Preprocessing-I)
 
-    Because we were just introduced to preprocessors, this project focuses on getting the compiler up and running first. Once your compiler is in place, you are free to build a digital resume for you or a fictional character of your choice!
+  Because we were just introduced to preprocessors, this project focuses on getting the compiler up and running first. Once your compiler is in place, you are free to build a digital resume for you or a fictional character of your choice!
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -468,34 +462,35 @@ Study the code and rearrange the selectors and variables correctly.
 
 You can use class recordings to help you master the material.
 
--   **[Preprocessing I for WEBPT19 w/ Pace Ellsworth](https://youtu.be/9cNoHMjuU7g)**
+- **[Preprocessing I for WEBPT19 w/ Pace Ellsworth](https://youtu.be/9cNoHMjuU7g)**
 
-    Introduction to CSS preprocessing/Less
+  Introduction to CSS preprocessing/Less
 
--   [All previous recordings](/archive/WebAnnex/module/reculyBhIYkuoBRqh)
+- [All previous recordings](/archive/WebAnnex/module/reculyBhIYkuoBRqh)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
-    1.  Follow the instructions provided to you in the tutorial above.
-    2.  Once in your project, change the background color of your body tag to `red`.
-    3.  Once the background turns red, your compiler is working correctly.
+- Objective challenge:
 
--   Objective challenge:
+  1.  Follow the instructions provided to you in the tutorial above.
+  2.  Once in your project, change the background color of your body tag to `red`.
+  3.  Once the background turns red, your compiler is working correctly.
 
-    #### Variables and Nesting Single Challenge
+- Objective challenge:
 
-    Rules of the challenge:
+  #### Variables and Nesting Single Challenge
 
-    1.  You cannot change the values of the variables.
-    2.  You cannot change class names on the HTML.
-    3.  No adding additional color properties.
-    4.  Match the colors with the titles in the boxes.
+  Rules of the challenge:
 
-    Study the code and rearrange the selectors and variables correctly.
+  1.  You cannot change the values of the variables.
+  2.  You cannot change class names on the HTML.
+  3.  No adding additional color properties.
+  4.  Match the colors with the titles in the boxes.
 
-    [Click here to see the challenge code](https://codepen.io/lambdaschool/pen/YdNPOg?editors=1100)
+  Study the code and rearrange the selectors and variables correctly.
 
--   Project: Preprocessing I: Digital Resume
+  [Click here to see the challenge code](https://codepen.io/lambdaschool/pen/YdNPOg?editors=1100)
+
+- Project: Preprocessing I: Digital Resume

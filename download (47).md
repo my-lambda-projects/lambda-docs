@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
@@ -39,32 +37,32 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Guided Project](#guided-project)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Guided Project](#guided-project)
+- [Project](#project)
+- [Review](#review)
 
 # Data Modeling
 
@@ -76,17 +74,17 @@ When designing a data model we go from high level Entities to low level database
 
 On this lecture we we’ll cover:
 
--   Normalizing the model.
--   One to many relationships.
--   Many to many relationships.
--   One to one relationships.
--   Creating multi table schemas in knex
+- Normalizing the model.
+- One to many relationships.
+- Many to many relationships.
+- One to one relationships.
+- Creating multi table schemas in knex
 
 **At the end of this module, you should be able to:**
 
--   explain data normalization
--   explain different table relationships
--   create table relationships using Knex
+- explain data normalization
+- explain different table relationships
+- create table relationships using Knex
 
 #### Pro Tip
 
@@ -96,33 +94,27 @@ Life is a marathon, not a sprint.
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=TUsoTNch95w), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=TUsoTNch95w), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=-Bau_Ed18Og), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=-Bau_Ed18Og), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=9kP0CVOwP_Y), or enable JavaScript if it is disabled in your browser.
 
--   
+- [Database Normalization Explained in Simple English](https://www.essentialsql.com/get-ready-to-learn-sql-database-normalization-explained-in-simple-english/)
 
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=9kP0CVOwP_Y), or enable JavaScript if it is disabled in your browser.
-
--   [Database Normalization Explained in Simple English](https://www.essentialsql.com/get-ready-to-learn-sql-database-normalization-explained-in-simple-english/)
-
--   [one to one relationships](https://gerardnico.com/data/modeling/one-to-one)
+- [one to one relationships](https://gerardnico.com/data/modeling/one-to-one)
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
 #### Learn to explain data normalization
 
-The relational database model is different from the object model we use in our JavaScript code. In JavaScript we can add arrays or nested objects to our entities. A client can have multiple address embedded as an array. But that same relationship in a relational model could result in data repetition and other *anomalies*.
+The relational database model is different from the object model we use in our JavaScript code. In JavaScript we can add arrays or nested objects to our entities. A client can have multiple address embedded as an array. But that same relationship in a relational model could result in data repetition and other _anomalies_.
 
 In this section we’ll learn the basic principles of `data normalization` and how to recognize a denormalized table.
 
@@ -130,7 +122,7 @@ In this section we’ll learn the basic principles of `data normalization` and h
 
 `Normalization` is the process of designing or refactoring database tables for maximum consistency and minimum redundancy.
 
-With objects, we’re used to *denormalized* data, stored with ease of use and speed in mind. Non-normalized tables are considered ineffective in relational databases.
+With objects, we’re used to _denormalized_ data, stored with ease of use and speed in mind. Non-normalized tables are considered ineffective in relational databases.
 
 ##### Follow Along
 
@@ -138,11 +130,11 @@ With objects, we’re used to *denormalized* data, stored with ease of use and s
 
 ### Normalization Guidelines
 
--   Each record has a primary key.
--   No fields are repeated.
--   All fields relate directly to the key data.
--   Each field entry contains a single data point.
--   There are no redundant entries.
+- Each record has a primary key.
+- No fields are repeated.
+- All fields relate directly to the key data.
+- Each field entry contains a single data point.
+- There are no redundant entries.
 
 ### Denormalized Data
 
@@ -178,11 +170,11 @@ What issues does the following table have?
 
 ##### Dig Deeper
 
--   [Database Normalization (Wikipedia)](https://en.wikipedia.org/wiki/Database_normalization)  
-    Database normalization is the process of structuring a relational database in accordance with a series of so-called normal forms in order to reduce data redundancy and improve data integrity.
--   [Description of the database normalization basics](https://support.microsoft.com/en-us/help/283878/description-of-the-database-normalization-basics)  
+- [Database Normalization (Wikipedia)](https://en.wikipedia.org/wiki/Database_normalization)  
+  Database normalization is the process of structuring a relational database in accordance with a series of so-called normal forms in order to reduce data redundancy and improve data integrity.
+- [Description of the database normalization basics](https://support.microsoft.com/en-us/help/283878/description-of-the-database-normalization-basics)
 
-------------------------------------------------------------------------
+---
 
 #### Learn to explain different table relationships
 
@@ -194,9 +186,9 @@ The way we model the relationship between our entities will influence how easy (
 
 There are three types of relationships:
 
--   One to one.
--   One to many.
--   Many to many.
+- One to one.
+- One to many.
+- Many to many.
 
 Determining how data is related can provide a set of guidelines for table representation and guides the use of foreign keys to connect said tables.
 
@@ -220,9 +212,9 @@ The `farm_id` is the foreign key that links `farms` and `projections` together.
 
 Notes about one-to-one relationships:
 
--   The foreign key should always have a `unique` constraint to prevent duplicate entries. In the example above, we wouldn’t want to allow multiple projections records for one farm.
--   The foreign key can be in either table. For example, we may have had a `projection_id` in the `farms` table instead. A good rule of thumb is to put the foreign key in whichever table is more auxiliary to the other.
--   You can represent one-to-one data in a single table *without* creating anomalies. However, it is sometimes prudent to use two tables as shown above to keep separate concerns in separate tables.
+- The foreign key should always have a `unique` constraint to prevent duplicate entries. In the example above, we wouldn’t want to allow multiple projections records for one farm.
+- The foreign key can be in either table. For example, we may have had a `projection_id` in the `farms` table instead. A good rule of thumb is to put the foreign key in whichever table is more auxiliary to the other.
+- You can represent one-to-one data in a single table _without_ creating anomalies. However, it is sometimes prudent to use two tables as shown above to keep separate concerns in separate tables.
 
 ### One to Many Relationships
 
@@ -232,9 +224,9 @@ This is called a **one-to-many** relationship.
 
 This is the most common type of relationship between entities. Some other examples:
 
--   One `customer` can have many `orders`.
--   One `user` can have many `posts`.
--   One `post` can have many `comments`.
+- One `customer` can have many `orders`.
+- One `user` can have many `posts`.
+- One `post` can have many `comments`.
 
 Manage this type of relationship by adding a foreign key on the “many” table of the relationship that points to the primary key on the “one” table. Consider the `farms` and `ranchers` tables.
 
@@ -242,7 +234,7 @@ Manage this type of relationship by adding a foreign key on the “many” table
 
 <table><thead><tr class="header"><th>id</th><th>rancher_name</th><th>farm_id</th></tr></thead><tbody><tr class="odd"><td>1</td><td>John Doe</td><td>1</td></tr><tr class="even"><td>2</td><td>Jane Doe</td><td>1</td></tr><tr class="odd"><td>3</td><td>Jim Done</td><td>2</td></tr><tr class="even"><td>4</td><td>Jay Dow</td><td>2</td></tr><tr class="odd"><td>5</td><td>Jen Dunn</td><td>1</td></tr></tbody></table>
 
-In a many-to-many relationship, the foreign key (in this case `farm_id`) should *not* be unique.
+In a many-to-many relationship, the foreign key (in this case `farm_id`) should _not_ be unique.
 
 ### Many to Many Relationships
 
@@ -250,8 +242,8 @@ If we want to track animals on a farm as well, we must explore the **many-to-man
 
 Some other examples:
 
--   an `order` can have many `products` and the same `product` will appear in many `orders`.
--   a `book` can have more than one `author`, and an `author` can write more than one `book`.
+- an `order` can have many `products` and the same `product` will appear in many `orders`.
+- a `book` can have more than one `author`, and an `author` can write more than one `book`.
 
 To model this relationship, we need to introduce an **intermediary table** that holds foreign keys that reference the primary key on the related tables. We now have a `farms`, `animals`, and `farm_animals` table.
 
@@ -267,16 +259,16 @@ While each foreign key on the intermediary table is not unique, the combinations
 
 Model the relationship for addresses where:
 
--   an address has the street address, the city, state and zip code.
--   a state can have several cities.
--   a city belongs to only one state.
+- an address has the street address, the city, state and zip code.
+- a state can have several cities.
+- a city belongs to only one state.
 
 ##### Dig Deeper
 
--   [many to many relationships](https://gerardnico.com/data/modeling/many-to-many)  
--   [one to many relationships](https://gerardnico.com/data/modeling/one-to-many)  
+- [many to many relationships](https://gerardnico.com/data/modeling/many-to-many)
+- [one to many relationships](https://gerardnico.com/data/modeling/one-to-many)
 
-------------------------------------------------------------------------
+---
 
 #### Learn to create table relationships using Knex
 
@@ -296,7 +288,7 @@ In Knex, foreign key restrictions don’t automatically work. Whenever using for
 
     development: {
       client: 'sqlite3',
-      useNullAsDefault: true, 
+      useNullAsDefault: true,
       connection: {
         filename: './data/database.db3',
       },
@@ -334,9 +326,9 @@ Let’s look at how we might track our `farms` and `ranchers` using Knex. In our
         })
     };
 
-Note that the foreign key can only be created *after* the reference table.
+Note that the foreign key can only be created _after_ the reference table.
 
-In the down function, the opposite is true. We always want to drop a table with a foreign key *before* dropping the table it references.
+In the down function, the opposite is true. We always want to drop a table with a foreign key _before_ dropping the table it references.
 
     exports.down = function(knex, Promise) {
       // drop in the opposite order
@@ -372,7 +364,7 @@ Order is also a concern when seeding. We want to create seeds in the **same** or
 
 In our example, make sure to write the `01-farms` seed file and then the `02-ranchers` seed file.
 
-However, we run into a problem with truncating our seeds, because we want to truncate `02-ranchers` *before* `01-farms`. A library called `knex-cleaner` provides an easy solution for us.
+However, we run into a problem with truncating our seeds, because we want to truncate `02-ranchers` _before_ `01-farms`. A library called `knex-cleaner` provides an easy solution for us.
 
 Run `knex seed:make 00-cleanup` and `npm install knex-cleaner`. Inside the cleanup seed, use the following code.
 
@@ -409,7 +401,7 @@ If we want that to override this default, we can delete or update with **cascade
 
 Write the migration file to create a table to track users and posts.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
@@ -417,11 +409,11 @@ Write the migration file to create a table to track users and posts.
 
 [GitHub Repo](https://github.com/LambdaSchool/node-db4-guided)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Node DB4 Challenge](https://github.com/LambdaSchool/node-db4-challenge)
+- ##### [Node DB4 Challenge](https://github.com/LambdaSchool/node-db4-challenge)
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -429,34 +421,34 @@ Write the migration file to create a table to track users and posts.
 
 You can use class recordings to help you master the material.
 
--   **[Data Modeling for Web PT 18 w/Jason Maurer](https://youtu.be/DNCEdN3P2Rg)**
+- **[Data Modeling for Web PT 18 w/Jason Maurer](https://youtu.be/DNCEdN3P2Rg)**
 
-    A data model is an abstraction of the information a system needs to fulfill it’s purpose. When designing a data model we go from high level Entities to low level database schemas. The lower we get the more detailed the model needs to be. We’ll work at the physical database design level in order to learn how to create database objects, but always working towards the high level entities. On this lecture we we’ll cover: Normalizing the model. One to many relationships. Many to many relationships. One to one relationships. Creating multi table schemas in knex At the end of this module, you should be able to: explain data normalization explain different table relationships create table relationships using Knex
+  A data model is an abstraction of the information a system needs to fulfill it’s purpose. When designing a data model we go from high level Entities to low level database schemas. The lower we get the more detailed the model needs to be. We’ll work at the physical database design level in order to learn how to create database objects, but always working towards the high level entities. On this lecture we we’ll cover: Normalizing the model. One to many relationships. Many to many relationships. One to one relationships. Creating multi table schemas in knex At the end of this module, you should be able to: explain data normalization explain different table relationships create table relationships using Knex
 
--   [All previous recordings](/archive/FSW/module/rec5J23yAIdjmFbgP)
+- [All previous recordings](/archive/FSW/module/rec5J23yAIdjmFbgP)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    What issues does the following table have?
+  What issues does the following table have?
 
-    <table><thead><tr class="header"><th>name</th><th>city</th><th style="text-align: center;">state</th><th>powers</th></tr></thead><tbody><tr class="odd"><td>John Doe</td><td>Miami</td><td style="text-align: center;">FL</td><td>none</td></tr><tr class="even"><td>Jane Doe</td><td>Miami</td><td style="text-align: center;">FL</td><td>none</td></tr><tr class="odd"><td>Frank Castle</td><td>New York</td><td style="text-align: center;">NY</td><td>kidnapping, extortion</td></tr><tr class="even"><td>Tony Stark</td><td>New York</td><td style="text-align: center;">NY</td><td>wealth</td></tr><tr class="odd"><td>Peter Parker</td><td>New York</td><td style="text-align: center;">NY</td><td>spider-sense, webbing</td></tr></tbody></table>
+  <table><thead><tr class="header"><th>name</th><th>city</th><th style="text-align: center;">state</th><th>powers</th></tr></thead><tbody><tr class="odd"><td>John Doe</td><td>Miami</td><td style="text-align: center;">FL</td><td>none</td></tr><tr class="even"><td>Jane Doe</td><td>Miami</td><td style="text-align: center;">FL</td><td>none</td></tr><tr class="odd"><td>Frank Castle</td><td>New York</td><td style="text-align: center;">NY</td><td>kidnapping, extortion</td></tr><tr class="even"><td>Tony Stark</td><td>New York</td><td style="text-align: center;">NY</td><td>wealth</td></tr><tr class="odd"><td>Peter Parker</td><td>New York</td><td style="text-align: center;">NY</td><td>spider-sense, webbing</td></tr></tbody></table>
 
--   Objective challenge:
+- Objective challenge:
 
-    Model the relationship for addresses where:
+  Model the relationship for addresses where:
 
-    -   an address has the street address, the city, state and zip code.
-    -   a state can have several cities.
-    -   a city belongs to only one state.
+  - an address has the street address, the city, state and zip code.
+  - a state can have several cities.
+  - a city belongs to only one state.
 
--   Objective challenge:
+- Objective challenge:
 
-    Write the migration file to create a table to track users and posts.
+  Write the migration file to create a table to track users and posts.
 
--   Guided Project: Node DB 4 Guided Project
+- Guided Project: Node DB 4 Guided Project
 
--   Project: Node DB4 Challenge
+- Project: Node DB4 Challenge

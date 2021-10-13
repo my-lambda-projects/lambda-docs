@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # The React Lifecycle
 
@@ -73,9 +71,9 @@ Every component in React has what we call a lifecycle. The Lifecycle is a a part
 
 **At the end of this module, you should be able to:**
 
--   describe the three phases of the React Component Lifecycle
--   properly explain what the \`constructor\` and \`render\` methods do and what their place is in the React Component Lifecycle
--   use the \`componentDidMount\` function to set a component's state post render
+- describe the three phases of the React Component Lifecycle
+- properly explain what the \`constructor\` and \`render\` methods do and what their place is in the React Component Lifecycle
+- use the \`componentDidMount\` function to set a component's state post render
 
 #### Pro Tip
 
@@ -85,27 +83,21 @@ Write all code knowing someone else will be working on it after you.
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=KRZXwWOa18c), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=KRZXwWOa18c), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=nFEorPNRNd8), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=nFEorPNRNd8), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=t985N_qPhEU), or enable JavaScript if it is disabled in your browser.
 
--   
+- [React Lifecycle methods](https://engineering.musefind.com/react-lifecycle-methods-how-and-when-to-use-them-2111a1b692b1)
 
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=t985N_qPhEU), or enable JavaScript if it is disabled in your browser.
-
--   [React Lifecycle methods](https://engineering.musefind.com/react-lifecycle-methods-how-and-when-to-use-them-2111a1b692b1)
-
-    A great introduction to what we have at our disposal when working with React.
+  A great introduction to what we have at our disposal when working with React.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -125,22 +117,22 @@ As you can see, the three React lifestyle phases are 1) Birth/Mounting, 2) Growt
 
 This is the phase when the component is being built out from the ground up. A few things are happening here: Whatever initial data you want access to will be defined on the constructor of this phase
 
--   Your render method is invoked.
--   `componentDidMount` gets called as well.
+- Your render method is invoked.
+- `componentDidMount` gets called as well.
 
 ### Growth/Updating Phase
 
 In the Growth/Updating phase you’re updating compnent data.
 
--   `setState` can be used to change the component’s state data, forcing a call to `render`.
--   `shouldComponentUpdate` is a method one could use here to stop a component from calling render if necessary.
+- `setState` can be used to change the component’s state data, forcing a call to `render`.
+- `shouldComponentUpdate` is a method one could use here to stop a component from calling render if necessary.
 
 ### Death/Un-mounting Phase
 
 Again, self-explanatory, but the unmounting phase includes removing the component from the screen.
 
--   Component is removed from the screen.
--   `componentWillUnmount` is called and can be used for any clean up you may need to do.
+- Component is removed from the screen.
+- `componentWillUnmount` is called and can be used for any clean up you may need to do.
 
 ##### Follow Along
 
@@ -148,11 +140,11 @@ Dive into the documentation at [ReactJS](https://reactjs.org/docs/react-componen
 
 The methods that we’re going to look at are:
 
--   `constructor`
--   `render`
--   `componentDidMount`
--   `componentDidUpdate`
--   `componentWillUnmount`
+- `constructor`
+- `render`
+- `componentDidMount`
+- `componentDidUpdate`
+- `componentWillUnmount`
 
 Let’s also compare where each of these methods belong within the react lifecycle by taking a look at [this diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/).
 
@@ -164,13 +156,13 @@ Read [this medium article](https://medium.com/@baphemot/understanding-reactjs-co
 
 ##### Dig Deeper
 
--   [React Lifecycle Methods: How and When to Use Them](https://blog.bitsrc.io/react-16-lifecycle-methods-how-and-when-to-use-them-f4ad31fb2282)  
-    An article thoroughly walks through when to use each React component lifecycle method, and why
--   [React Interview Questions](https://tylermcginnis.com/react-interview-questions/)  
-    An amazing breakdown of commonly seen react interview questions by \_Tyler McGinnis\_
--   [CS8 - React II Lifecycle Methods](https://youtu.be/GY8zKD4AHl0)  
+- [React Lifecycle Methods: How and When to Use Them](https://blog.bitsrc.io/react-16-lifecycle-methods-how-and-when-to-use-them-f4ad31fb2282)  
+  An article thoroughly walks through when to use each React component lifecycle method, and why
+- [React Interview Questions](https://tylermcginnis.com/react-interview-questions/)  
+  An amazing breakdown of commonly seen react interview questions by \_Tyler McGinnis\_
+- [CS8 - React II Lifecycle Methods](https://youtu.be/GY8zKD4AHl0)
 
-------------------------------------------------------------------------
+---
 
 #### Learn to properly explain what the \`constructor\` and \`render\` methods do and what their place is in the React Component Lifecycle
 
@@ -194,7 +186,7 @@ Let’s say we have some data from an external file living within our applicatio
     class MyComponent extends React.Component {
       constructor() { // if I wanted to receive some props here I could pass them in through the constructor! constructor(props)...
         super(); // if i receive props through the constructor I will need to pass them back through super(props);
-        this.state = { 
+        this.state = {
            arbitraryStateData: data,
         }
       }
@@ -276,11 +268,11 @@ Now that we imported data, we can loop over that friend’s array and generate a
 
 Now you’re going to extend the Friends App that we built together [link]() by completing the following tasks.
 
--   Notice that each person object has an array of friends assigned to it.
--   The goal for the stretch problem will be to have a `FriendsList` drop-down built out that hides the friends for each person until it is clicked on.
--   Once a user clicks on your FriendsList card, display that user’s friends.
+- Notice that each person object has an array of friends assigned to it.
+- The goal for the stretch problem will be to have a `FriendsList` drop-down built out that hides the friends for each person until it is clicked on.
+- Once a user clicks on your FriendsList card, display that user’s friends.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use the \`componentDidMount\` function to set a component's state post render
 
@@ -354,13 +346,13 @@ Once the dogs are on state. Build out a list of `<img>` tags that display each d
 
 [If you get stuck this is what I’m going for](https://codesandbox.io/s/x96vm3vykq)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [React Github User Card](https://github.com/LambdaSchool/React-Github-User-Card)
+- ##### [React Github User Card](https://github.com/LambdaSchool/React-Github-User-Card)
 
-    Rebuild the Github User Card app, but this time with React. In this project, you will fetch the data and manage state in class components.
+  Rebuild the Github User Card app, but this time with React. In this project, you will fetch the data and manage state in class components.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -368,41 +360,41 @@ Once the dogs are on state. Build out a list of `<img>` tags that display each d
 
 You can use class recordings to help you master the material.
 
--   **[The React Lifecycle for Web35 w/ Warren Longmire](https://youtu.be/yMoLP7Bo_Bg)**
+- **[The React Lifecycle for Web35 w/ Warren Longmire](https://youtu.be/yMoLP7Bo_Bg)**
 
-    The React Lifecycle
+  The React Lifecycle
 
--   [All previous recordings](/archive/FSW/module/rec1DPoOZSmocXfak)
+- [All previous recordings](/archive/FSW/module/rec1DPoOZSmocXfak)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Read [this medium article](https://medium.com/@baphemot/understanding-reactjs-component-life-cycle-823a640b3e8d) about the component lifecycle. Take notes and share what you learned in a paragraph to your Project Manager via Slack.
+  Read [this medium article](https://medium.com/@baphemot/understanding-reactjs-component-life-cycle-823a640b3e8d) about the component lifecycle. Take notes and share what you learned in a paragraph to your Project Manager via Slack.
 
--   Objective challenge:
+- Objective challenge:
 
-    Now you’re going to extend the Friends App that we built together [link]() by completing the following tasks.
+  Now you’re going to extend the Friends App that we built together [link]() by completing the following tasks.
 
-    -   Notice that each person object has an array of friends assigned to it.
-    -   The goal for the stretch problem will be to have a `FriendsList` drop-down built out that hides the friends for each person until it is clicked on.
-    -   Once a user clicks on your FriendsList card, display that user’s friends.
+  - Notice that each person object has an array of friends assigned to it.
+  - The goal for the stretch problem will be to have a `FriendsList` drop-down built out that hides the friends for each person until it is clicked on.
+  - Once a user clicks on your FriendsList card, display that user’s friends.
 
--   Objective challenge:
+- Objective challenge:
 
-    Use this function inside of a `componentDidMount` call in an app with a state object set up. Fetch a list of Dogs you can see their beautiful images.
+  Use this function inside of a `componentDidMount` call in an app with a state object set up. Fetch a list of Dogs you can see their beautiful images.
 
-        const getDogs = () => {
-            fetch('https://dog.ceo/api/breed/labrador/images')
-              .then(res => res.json())
-              .then(dogs => this.setState({dogs: dogs.message}))
-              .catch(err => console.log('noooo'));
-        };
+      const getDogs = () => {
+          fetch('https://dog.ceo/api/breed/labrador/images')
+            .then(res => res.json())
+            .then(dogs => this.setState({dogs: dogs.message}))
+            .catch(err => console.log('noooo'));
+      };
 
-    Once the dogs are on state. Build out a list of `<img>` tags that display each doggo.
+  Once the dogs are on state. Build out a list of `<img>` tags that display each doggo.
 
-    [If you get stuck this is what I’m going for](https://codesandbox.io/s/x96vm3vykq)
+  [If you get stuck this is what I’m going for](https://codesandbox.io/s/x96vm3vykq)
 
--   Project: React Github User Card
+- Project: React Github User Card

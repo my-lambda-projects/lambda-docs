@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Advanced Styling Techniques
 
@@ -73,9 +71,9 @@ CSS by itself can be hard to scale in large applications. In this module we will
 
 **At the end of this module, you should be able to:**
 
--   bootstrap a React application with Create React App
--   understand how to style React components using Reactstrap
--   use styled-components to add functional styles to their React Components
+- bootstrap a React application with Create React App
+- understand how to style React components using Reactstrap
+- use styled-components to add functional styles to their React Components
 
 #### Pro Tip
 
@@ -85,27 +83,21 @@ Read error messages carefully - computers are always right (from the state they 
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Z5hDajZrLjk), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Z5hDajZrLjk), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=aAVCh5Xf_4E), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=aAVCh5Xf_4E), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=BFKQWaWwaQ0), or enable JavaScript if it is disabled in your browser.
 
--   
+- [Why Styled Components](https://youtu.be/bIK2NwoK9xk)
 
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=BFKQWaWwaQ0), or enable JavaScript if it is disabled in your browser.
-
--   [Why Styled Components](https://youtu.be/bIK2NwoK9xk)
-
-    Max Stoiber discusses why this is a good idea.
+  Max Stoiber discusses why this is a good idea.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -137,7 +129,7 @@ Open your terminal and build a React app. We will use the npx utility, which was
 
     npx create-react-app animals --use-npm
 
-As soon as you run the command successfully, CRA gets to work installing all necessary files, folders, and dependencies using npm. It will even initialize a git repository and perform an initial commit. Once the process completes (it might take a while!) you should see a *Happy hacking!* success message in your terminal.
+As soon as you run the command successfully, CRA gets to work installing all necessary files, folders, and dependencies using npm. It will even initialize a git repository and perform an initial commit. Once the process completes (it might take a while!) you should see a _Happy hacking!_ success message in your terminal.
 
 If npx does not work for you, CRA has got you covered. Let’s look in here at how we can install CRA globally and run that command (https://facebook.github.io/create-react-app/){:target=”\_blank”}):
 
@@ -161,11 +153,11 @@ The `start` command here will launch the bundler (Webpack) and a transcompiler (
 
 Some other commands you can run here are as follows.
 
--   `npm test` will launch tests with the testing library `jest`.
+- `npm test` will launch tests with the testing library `jest`.
 
--   `npm run build` will launch the bundler and transcompiler to produce a minified bundle appropriate for deployment.
+- `npm run build` will launch the bundler and transcompiler to produce a minified bundle appropriate for deployment.
 
--   `npm run eject` will unhide all the configuration and dependencies that CRA-generated react apps use under the hood. No way back from this, so don’t do it unless you are sure you need to! Ejecting is usually NOT necessary for toy apps or small prototypes, but often inevitable when building real-world apps.
+- `npm run eject` will unhide all the configuration and dependencies that CRA-generated react apps use under the hood. No way back from this, so don’t do it unless you are sure you need to! Ejecting is usually NOT necessary for toy apps or small prototypes, but often inevitable when building real-world apps.
 
 ### Project dependencies
 
@@ -199,7 +191,7 @@ Then, go ahead and run `npm start` to bundle the app and boot up our web develop
 
 Use CRA to build a new app. Explore the app. Make changes and see what happens. Share what you discover with your team lead!
 
-------------------------------------------------------------------------
+---
 
 #### Learn to understand how to style React components using Reactstrap
 
@@ -238,28 +230,28 @@ We’re going to learn how to get this package installed into a react applicatio
 
 ### Step 1 Build your application
 
--   run `npx create-react-app reactstrap-project --use-npm`
--   or if you have `CRA` installed globally run `create-react-app reactstrap-project --use-npm`
--   cd into your project and run run `npm start` to start your `webpack-dev-server`
--   navigate to `localhost:3000` to see your app
+- run `npx create-react-app reactstrap-project --use-npm`
+- or if you have `CRA` installed globally run `create-react-app reactstrap-project --use-npm`
+- cd into your project and run run `npm start` to start your `webpack-dev-server`
+- navigate to `localhost:3000` to see your app
 
 ### Step 2 installing Reactstrap
 
--   inside the root of your `reactstrap-project` run `npm install reactstrap bootstrap` to get both `bootstrap` and `reactstrap` installed
+- inside the root of your `reactstrap-project` run `npm install reactstrap bootstrap` to get both `bootstrap` and `reactstrap` installed
 
 ### Step 3 configuring your index.js file to use the Global `bootstrap.css stylesheet`
 
--   inside of the `index.js` file add `import 'bootstrap/dist/css/bootstrap.min.css';` This will install the bootstrap styling lib globally for your project.
+- inside of the `index.js` file add `import 'bootstrap/dist/css/bootstrap.min.css';` This will install the bootstrap styling lib globally for your project.
 
 ##### Challenge
 
 Use Create React App to build a project from the ground up.
 
--   Include the `Reactstrap, and bootstrap libraries` using `npm`
--   Build out a Todo App using the styled components only provided to you by `Reactstrap`
--   Feel free to use your previous Todo Project as a reference.
+- Include the `Reactstrap, and bootstrap libraries` using `npm`
+- Build out a Todo App using the styled components only provided to you by `Reactstrap`
+- Feel free to use your previous Todo Project as a reference.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use styled-components to add functional styles to their React Components
 
@@ -422,15 +414,15 @@ Now we’re talkin! With this, and so much more that we can learn from the style
 
 ##### Challenge
 
-Take your Todo APP that you built out last week, and apply the principles you’ve learned here today to style that app. Make it look nice and pretty! Share your newly polished app with your peers in the #show\_it\_off channel!
+Take your Todo APP that you built out last week, and apply the principles you’ve learned here today to style that app. Make it look nice and pretty! Share your newly polished app with your peers in the #show_it_off channel!
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [NASA Photo of the Day](https://github.com/LambdaSchool/nasa-photo-of-the-day)
+- ##### [NASA Photo of the Day](https://github.com/LambdaSchool/nasa-photo-of-the-day)
 
-    Build an app that consumes the NASA API to fetch the Astronomy Photo of the Day. Display the photo and other info on the DOM.
+  Build an app that consumes the NASA API to fetch the Astronomy Photo of the Day. Display the photo and other info on the DOM.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -438,30 +430,30 @@ Take your Todo APP that you built out last week, and apply the principles you’
 
 You can use class recordings to help you master the material.
 
--   **[Advanced Styling Techniques for WebPT22 w/Ben Schinn](https://youtu.be/kk9TKW_U0ag)**
+- **[Advanced Styling Techniques for WebPT22 w/Ben Schinn](https://youtu.be/kk9TKW_U0ag)**
 
-    CSS by itself can be hard to scale in large applications. In this module we will see multiple libraries that have been built to help us style our apps in a lot more scalable way.
+  CSS by itself can be hard to scale in large applications. In this module we will see multiple libraries that have been built to help us style our apps in a lot more scalable way.
 
--   [All previous recordings](/archive/FSW/module/recNDoSqyUw3eq1y3)
+- [All previous recordings](/archive/FSW/module/recNDoSqyUw3eq1y3)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Use CRA to build a new app. Explore the app. Make changes and see what happens. Share what you discover with your team lead!
+  Use CRA to build a new app. Explore the app. Make changes and see what happens. Share what you discover with your team lead!
 
--   Objective challenge:
+- Objective challenge:
 
-    Use Create React App to build a project from the ground up.
+  Use Create React App to build a project from the ground up.
 
-    -   Include the `Reactstrap, and bootstrap libraries` using `npm`
-    -   Build out a Todo App using the styled components only provided to you by `Reactstrap`
-    -   Feel free to use your previous Todo Project as a reference.
+  - Include the `Reactstrap, and bootstrap libraries` using `npm`
+  - Build out a Todo App using the styled components only provided to you by `Reactstrap`
+  - Feel free to use your previous Todo Project as a reference.
 
--   Objective challenge:
+- Objective challenge:
 
-    Take your Todo APP that you built out last week, and apply the principles you’ve learned here today to style that app. Make it look nice and pretty! Share your newly polished app with your peers in the #show\_it\_off channel!
+  Take your Todo APP that you built out last week, and apply the principles you’ve learned here today to style that app. Make it look nice and pretty! Share your newly polished app with your peers in the #show_it_off channel!
 
--   Project: NASA Photo of the Day
+- Project: NASA Photo of the Day

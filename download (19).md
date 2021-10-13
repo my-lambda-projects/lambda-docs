@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Components II
 
@@ -73,9 +71,9 @@ Now that we have some understanding of what a component is, we can learn to util
 
 **At the end of this module, you should be able to:**
 
--   understand and utilize asynchronous Javascript and Promises
--   understand HTTP requests and get data from a server using axios
--   iterate over a list of data received from a server, creating a set of components and adding them to the DOM
+- understand and utilize asynchronous Javascript and Promises
+- understand HTTP requests and get data from a server using axios
+- iterate over a list of data received from a server, creating a set of components and adding them to the DOM
 
 #### Pro Tip
 
@@ -85,15 +83,13 @@ Life is a marathon, not a sprint.
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=7I3TeN2Sj1k), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=7I3TeN2Sj1k), or enable JavaScript if it is disabled in your browser.
+- [Data Attributes in HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 
--   [Data Attributes in HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
-
-    Learn how to read and update data attributes in HTML
+  Learn how to read and update data attributes in HTML
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -139,19 +135,19 @@ Consider the following code and what it is doing here.
     timeMachine();
     console.log(time); --> OUTPUTS: 0;
 
-What we have seen here is that at some point in time, the setTimeout function (1 second later) will actually end up manipulating the `time` variable. However, when we `console.log` time we get `0`. The reason for this, is because of the way the `time` variable is defined. It is happening inside of a `setTimeout` block, which waits 1000ms to actually do its thing. This is an important concept to grasp here. *Even though we’ve manipulated the data, we don’t have access to the data that was manipulated quite yet*. In a nutshell this is asynchronous JavaScript.
+What we have seen here is that at some point in time, the setTimeout function (1 second later) will actually end up manipulating the `time` variable. However, when we `console.log` time we get `0`. The reason for this, is because of the way the `time` variable is defined. It is happening inside of a `setTimeout` block, which waits 1000ms to actually do its thing. This is an important concept to grasp here. _Even though we’ve manipulated the data, we don’t have access to the data that was manipulated quite yet_. In a nutshell this is asynchronous JavaScript.
 
 Ok, so the problem, is that we’re expecting `time` to be equal to `1000` by the time we want to work with it. One way we can solve this is by using Promises. Before we do that let’s figure out what a `promise` is first.
 
 Straight from MDN:
 
-> *A Promise is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action’s eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future.*
+> _A Promise is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action’s eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future._
 
 Simply put, a Promise is just that, a promise from the object that it will let us know when it has completed (or errored) what we have asked it to do. A promise can exist in one of three states:
 
--   `Pending`: a state where the promise is neither rejected nor fulfilled. (this is the state it is in when we first call it)
--   `Fulfilled`: a state where *all’s well* and a resolved value can be used by our code.
--   `Rejected`: a state where *something went wrong* and there is an error that needs to be dealt with.
+- `Pending`: a state where the promise is neither rejected nor fulfilled. (this is the state it is in when we first call it)
+- `Fulfilled`: a state where _all’s well_ and a resolved value can be used by our code.
+- `Rejected`: a state where _something went wrong_ and there is an error that needs to be dealt with.
 
 If the promise succeeds, it will return the value as a parameter into a callback passed into `.then()`. If the promise fails, the callback passed into the `.catch()` runs, taking an error as its argument.
 
@@ -159,21 +155,21 @@ If the promise succeeds, it will return the value as a parameter into a callback
 
 Ok that’s a lot of words, now lets see some code.
 
--   Reminder, we *are* building our own promise here, although you will *not* need to do this on your own today.
-        let time = 0;
-        const timeMachine = () => {
-        return new Promise((resolve, reject) => {
-          setTimeout(() => {
-            resolve((time += 1000));
-          }, 1000);
-        });
-        };
+- Reminder, we _are_ building our own promise here, although you will _not_ need to do this on your own today.
+  let time = 0;
+  const timeMachine = () => {
+  return new Promise((resolve, reject) => {
+  setTimeout(() => {
+  resolve((time += 1000));
+  }, 1000);
+  });
+  };
 
 Notice here that we’ve now wrapped our `setTimeout` function in a `new Promise` and we’re resolving the addition of the `time += 1000` and passing that resolved result. This allows us to do what we call `promise chaining` when we invoke our `timeMachine` function. Remember that every promise ships with `then and catch` methods and we can use those methods to either receive a `resolved promise` or a `rejected promise`. Lets find out how!
 
     timeMachine()
         .then(newTime => {
-           console.log(newTime); --> OUTPUTS: 1000 
+           console.log(newTime); --> OUTPUTS: 1000
         });
 
 Ok, in the above code, the `thenified` timeMachine invocation is now receiving a callback itself, (this is how all promise chains should look) with some item being received as a parameter. We can chain multiple `thens` together. Inside of each `then` block when/if we return something new, we can be directed into a new `then` block which is really neat. Or maybe we’re `resolving` more than one process, and we want to see the next result in the next `then` block. Lets manipulate the data in the `.then` block we have now, and see what happens when we use another `then`.
@@ -240,7 +236,7 @@ And that is that! We have successfully built out a promise chain that allows us 
 
 Using the time machine example you just built, build one more function from scratch that returns a `Promise` that has a setTimeout inside it. In the `.then()` console.log what is resolved from inside the setTimeout.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to understand HTTP requests and get data from a server using axios
 
@@ -250,15 +246,15 @@ Often when building a website or application we need dynamic data. This data is 
 
 ### HTTP
 
-HTTP is a *network protocol*, a set of rules that govern the way web clients, like a browser, communicate with web servers over the internet.
+HTTP is a _network protocol_, a set of rules that govern the way web clients, like a browser, communicate with web servers over the internet.
 
 We, as developers, need to know what HTTP Methods are and how they are used to perform CRUD (Create, Read, Update, Delete) operations on server resources and what HTTP status codes are and what they are used for.
 
-`HTTP Methods` provide a common *language* or nomenclature that the client can use to let the server know what operation it wants to perform.
+`HTTP Methods` provide a common _language_ or nomenclature that the client can use to let the server know what operation it wants to perform.
 
 When a client needs to ask a server for information it should do a GET request specifying a URL that points to the desired resource.
 
-A POST request is used to ask the server to add or *create* new resources.
+A POST request is used to ask the server to add or _create_ new resources.
 
 The method used by the client to ask the server to make changes to specific resources is PUT.
 
@@ -266,11 +262,11 @@ To remove or delete data from the server the client needs to send a DELETE reque
 
 We will see examples of how to use those methods from our React Applications.
 
-`HTTP Status Codes` are used to indicate if a *request* has been successful or not and **why**. The server will set the status code for all responses sent to the client.
+`HTTP Status Codes` are used to indicate if a _request_ has been successful or not and **why**. The server will set the status code for all responses sent to the client.
 
 ### axios
 
-`axios` is a Javascript library. It is used to send HTTP requests to servers. It is *not* necessary to do this, but it makes things much easier. Because all server requests are asynchronous, `axios` uses Promises. Once you get the basic pattern down, `axios` is incredibly easy to use.
+`axios` is a Javascript library. It is used to send HTTP requests to servers. It is _not_ necessary to do this, but it makes things much easier. Because all server requests are asynchronous, `axios` uses Promises. Once you get the basic pattern down, `axios` is incredibly easy to use.
 
 To read more you can check out the documentation here: [https://github.com/axios/axiosn](https://github.com/axios/axios)
 
@@ -298,7 +294,7 @@ axios.get will return a Promise to us. This tells us that it is busy getting the
             // deal with the error in here
         })
 
-------------------------------------------------------------------------
+---
 
 #### Learn to iterate over a list of data received from a server, creating a set of components and adding them to the DOM
 
@@ -316,35 +312,35 @@ First we will build our component creator function:
         let newButton = document.createElement('button');
         newButton.textContent = buttonTitle;
         newButton.classList.add('button');
-        
+
         return newButton;
     }
 
 Next, let’s grab some data. Once we receieve the data we will map over it and create components out of it. Then we can add it to the DOM:
 
--   One important thing to note is that the data that comes back from the server will be formatted differently for every server. It is good practice to either read the documentation of the server you are using, or inspect the data yourself before attempting to use it. In this example the `response` object will have a key on it called `data` that key will have a value of an array with a list of strings.
+- One important thing to note is that the data that comes back from the server will be formatted differently for every server. It is good practice to either read the documentation of the server you are using, or inspect the data yourself before attempting to use it. In this example the `response` object will have a key on it called `data` that key will have a value of an array with a list of strings.
 
-    axios.get('http://fakeserver.com/data')
-        .then( response => {
-            // Remember response is an object, response.data is an array.
-            response.data.forEach( item => {
-                let button = buttonCreator(item);
-                parent.appendChild(button);
-            })
-        })
-        .catch( error => {
-            console.log("Error:", err);
-        })
+  axios.get('http://fakeserver.com/data')
+  .then( response => {
+  // Remember response is an object, response.data is an array.
+  response.data.forEach( item => {
+  let button = buttonCreator(item);
+  parent.appendChild(button);
+  })
+  })
+  .catch( error => {
+  console.log("Error:", err);
+  })
 
 And there you have it! We have retrieved data, created new components based on that data, and added them to the DOM!
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Github User Card](https://github.com/LambdaSchool/github-usercard)
+- ##### [Github User Card](https://github.com/LambdaSchool/github-usercard)
 
-    Request data from the Github API and create a component based on the data you get back.
+  Request data from the Github API and create a component based on the data you get back.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -352,18 +348,18 @@ And there you have it! We have retrieved data, created new components based on t
 
 You can use class recordings to help you master the material.
 
--   **[Components II for WebPT22 w/Ben Schinn](https://youtu.be/f_NKm--PjBk)**
+- **[Components II for WebPT22 w/Ben Schinn](https://youtu.be/f_NKm--PjBk)**
 
-    Now that we have some understanding of what a component is, we can learn to utilize asynchronous JavaScript and Promises to make HTTP requests and get data from a server.
+  Now that we have some understanding of what a component is, we can learn to utilize asynchronous JavaScript and Promises to make HTTP requests and get data from a server.
 
--   [All previous recordings](/archive/FSW/module/recd6kDKS6eMapSRq)
+- [All previous recordings](/archive/FSW/module/recd6kDKS6eMapSRq)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Using the time machine example you just built, build one more function from scratch that returns a `Promise` that has a setTimeout inside it. In the `.then()` console.log what is resolved from inside the setTimeout.
+  Using the time machine example you just built, build one more function from scratch that returns a `Promise` that has a setTimeout inside it. In the `.then()` console.log what is resolved from inside the setTimeout.
 
--   Project: Github User Card
+- Project: Github User Card

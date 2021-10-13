@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,29 +10,29 @@
 
 <a href="/web4java/sprint/recnLDyTtONLTMiFJ" class="bd-toc-link">1.  Java Precourse Information</a>
 
--   [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
--   [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
+- [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
+- [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
 
 <a href="/web4java/sprint/recoJ4ZqNQWX3cy6E" class="bd-toc-link">2.  Java Fundamentals</a>
 
--   [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
--   [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
--   [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
--   [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
+- [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
+- [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
+- [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
+- [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
 
 <a href="/web4java/sprint/recRVUSWQEtosl0Cz" class="bd-toc-link">3.  RDBMS and Intro to APIs</a>
 
--   [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
--   [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
--   [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
--   [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
+- [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
+- [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
+- [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
+- [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
 
 <a href="/web4java/sprint/recSqm5AAEkJcIl3p" class="bd-toc-link">4.  Java Frameworks</a>
 
--   [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
--   [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
--   [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
--   [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
+- [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
+- [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
+- [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
+- [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
 
 <a href="/web4java/sprint/recC5dhR9menaROwx" class="bd-toc-link">5.  WEB Unit 4 Java Build</a>
 
@@ -44,37 +42,37 @@
 
 <a href="/web4java/sprint/recnLDyTtONLTMiFJ" class="bd-toc-link">1.  Java Precourse Information</a>
 
--   [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
--   [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
+- [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
+- [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
 
 <a href="/web4java/sprint/recoJ4ZqNQWX3cy6E" class="bd-toc-link">2.  Java Fundamentals</a>
 
--   [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
--   [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
--   [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
--   [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
+- [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
+- [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
+- [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
+- [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
 
 <a href="/web4java/sprint/recRVUSWQEtosl0Cz" class="bd-toc-link">3.  RDBMS and Intro to APIs</a>
 
--   [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
--   [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
--   [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
--   [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
+- [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
+- [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
+- [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
+- [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
 
 <a href="/web4java/sprint/recSqm5AAEkJcIl3p" class="bd-toc-link">4.  Java Frameworks</a>
 
--   [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
--   [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
--   [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
--   [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
+- [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
+- [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
+- [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
+- [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
 
 <a href="/web4java/sprint/recC5dhR9menaROwx" class="bd-toc-link">5.  WEB Unit 4 Java Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Guided Project](#guided-project)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Guided Project](#guided-project)
+- [Project](#project)
+- [Review](#review)
 
 # Java - JDK and Java Classes
 
@@ -84,16 +82,16 @@
 
 **At the end of this module, you should be able to:**
 
--   understand what makes Java a programming language worth studying
--   explain the basic concept of Object Oriented Programming and how they relate to Java
--   create and manipulate the base Java types which include Boolean, byte, char (including Strings), short, int, long, float, and double
--   craft multiple Java Classes which include comments, constructors, static and instance variables (fields), accessors, public and private methods and instantiate and use Objects of these classes.
--   implement and use the String and Date data types
--   understand the reason behind and use of BigDecimals (\*\*\* OPTIONAL \*\*\*)
--   craft and use for loops (\*\*\* OPTIONAL \*\*\*)
--   craft and use while loops and do while loops (\*\*\* OPTIONAL \*\*\*)
--   craft and use recursion (\*\*\* OPTIONAL \*\*\*)
--   craft and use Java conditionals, branching, including if-then, if-then-else, and switch statements (\*\*\* OPTIONAL \*\*\*)
+- understand what makes Java a programming language worth studying
+- explain the basic concept of Object Oriented Programming and how they relate to Java
+- create and manipulate the base Java types which include Boolean, byte, char (including Strings), short, int, long, float, and double
+- craft multiple Java Classes which include comments, constructors, static and instance variables (fields), accessors, public and private methods and instantiate and use Objects of these classes.
+- implement and use the String and Date data types
+- understand the reason behind and use of BigDecimals (\*\*\* OPTIONAL \*\*\*)
+- craft and use for loops (\*\*\* OPTIONAL \*\*\*)
+- craft and use while loops and do while loops (\*\*\* OPTIONAL \*\*\*)
+- craft and use recursion (\*\*\* OPTIONAL \*\*\*)
+- craft and use Java conditionals, branching, including if-then, if-then-else, and switch statements (\*\*\* OPTIONAL \*\*\*)
 
 #### Pro Tip
 
@@ -105,7 +103,7 @@ Brian Kernighan
 
 Review each preclass resource before class.
 
--   [Video: JX Java Optional Objectives](https://youtu.be/_FUd49FHk78)
+- [Video: JX Java Optional Objectives](https://youtu.be/_FUd49FHk78)
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -117,8 +115,8 @@ Review each preclass resource before class.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   Text Editor
+- Java Development Kit (JDK) - at least version 11
+- Text Editor
 
 ![Java Logo](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%201%20-%20JX%20Java%20-%20I%20JDK%20and%20Java%20Classes/assets/javalogo.png)
 
@@ -126,18 +124,18 @@ Review each preclass resource before class.
 
 So why study Java? Well here are several good reasons. Arguably more lines of code are written in Java than any other programming language. It is popular with:
 
--   Internet of Things (IoT) devices
--   Desktop, Gaming development (Minecraft is written in Java!)
--   Android Development
--   Full stack Web development
+- Internet of Things (IoT) devices
+- Desktop, Gaming development (Minecraft is written in Java!)
+- Android Development
+- Full stack Web development
 
 Java is frequently used in high schools and colleges as the language to introduce programming. Many programmers know the language. Java has been in use for many years so there is a lot of legacy code that needs maintaining.
 
 Java Development can be split into 3 different categories:
 
--   **Core Java:** Every Java programmer needs to know this at some level. System developers, IoT programmers, and desktop coders need to know this area very well.
--   **Android Development:** New Android development is done primarily in Kotlin but there is a lot of legacy code in Java.
--   **Web development:** This is the area where we will be concentrating.
+- **Core Java:** Every Java programmer needs to know this at some level. System developers, IoT programmers, and desktop coders need to know this area very well.
+- **Android Development:** New Android development is done primarily in Kotlin but there is a lot of legacy code in Java.
+- **Web development:** This is the area where we will be concentrating.
 
 Java has been around for awhile and has gone through many changes. It was first released in 1996 by Sun Microsystems which became part of Oracle in 2010.
 
@@ -147,50 +145,52 @@ As of March 25, 2020, we are on version 11 as the Long Term Support Version. The
 
 OpenJDK is an alternative to the commercial version by Oracle:
 
--   Free for all uses
+- Free for all uses
 
--   Oracle does support OpenJDK
+- Oracle does support OpenJDK
 
--   OpenJDK does not work well with other Oracle products
+- OpenJDK does not work well with other Oracle products
 
--   see <https://openjdk.java.net/> for more information
+- see <https://openjdk.java.net/> for more information
 
--   Comments on the name ***Java***
-    -   It is named for either the beverage or the island; I am with the group that says it is named for the beverage!
-    -   Java is not related to JavaScript other than:
-        -   Both are programming languages used on the web
-        -   Both share 4 letters
-            -   ***Java*** is to ***Java***Script like ***Lamb*** is to ***Lamb***da or ***Car*** is to ***Car***pet
+- Comments on the name **_Java_**
 
--   Java was originally developed to make web content dynamic
-    -   This was done through Java applets. These proved very insecure and so we moved on
-    -   Java is cross platform operational but how?
-        -   It could have forced each web browser to have a Java compiler built into. This was the approach JavaScript took.
-        -   It could have forced to have the code compiled for each type of machine on which it was run. This is the approach for C languages, C, C++, C#
-        -   Java choose to compile to an intermediate code that would run on virtual machines.
-            -   To run any Java program, your machine must be running a Java Virtual Machine (JVM).
-                -   JVMs are compiled to native machine language for each type of computer.
-            -   This intermediate code is called **Bytecode**.
+  - It is named for either the beverage or the island; I am with the group that says it is named for the beverage!
+  - Java is not related to JavaScript other than:
+    - Both are programming languages used on the web
+    - Both share 4 letters
+      - **_Java_** is to **_Java_**Script like **_Lamb_** is to **_Lamb_**da or **_Car_** is to **_Car_**pet
 
--   Java Conceptual Diagram
-    -   To run Java on a machine, you must have the Java Virtual Machine (JVM) installed.
-    -   On most machines, the JVM makes use of certain modules to aid in operations.
-        -   These modules plus the JVM make up the Java Run Environment Environment (JRE).
-    -   Tools and APIs have been developed to help with Java application development.
-        -   These modules plus the JRE make up the Java Development Kit (JDK).
-    -   So the JVM is part of the JRE which is part of the JDK.
+- Java was originally developed to make web content dynamic
+
+  - This was done through Java applets. These proved very insecure and so we moved on
+  - Java is cross platform operational but how?
+    - It could have forced each web browser to have a Java compiler built into. This was the approach JavaScript took.
+    - It could have forced to have the code compiled for each type of machine on which it was run. This is the approach for C languages, C, C++, C#
+    - Java choose to compile to an intermediate code that would run on virtual machines.
+      - To run any Java program, your machine must be running a Java Virtual Machine (JVM).
+        - JVMs are compiled to native machine language for each type of computer.
+      - This intermediate code is called **Bytecode**.
+
+- Java Conceptual Diagram
+  - To run Java on a machine, you must have the Java Virtual Machine (JVM) installed.
+  - On most machines, the JVM makes use of certain modules to aid in operations.
+    - These modules plus the JVM make up the Java Run Environment Environment (JRE).
+  - Tools and APIs have been developed to help with Java application development.
+    - These modules plus the JRE make up the Java Development Kit (JDK).
+  - So the JVM is part of the JRE which is part of the JDK.
 
 Java Conceptual Diagram from Oracle <https://docs.oracle.com/javase/8/docs/index.html>
 
 ![Java Conceptual Diagram](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%201%20-%20JX%20Java%20-%20I%20JDK%20and%20Java%20Classes/assets/java_conceptual_diagram.png)
 
--   Java has 5 Primary Goals
-    -   It must be “simple, object-oriented, and familiar”
-        -   so mimics C++ a popular programming language at the time of Java’s release.
-    -   It must be “robust and secure”.
-    -   It must be “architecture-neutral and portable”.
-    -   It must execute with “high performance”.
-    -   It must be “interpreted, threaded, and dynamic”.
+- Java has 5 Primary Goals
+  - It must be “simple, object-oriented, and familiar”
+    - so mimics C++ a popular programming language at the time of Java’s release.
+  - It must be “robust and secure”.
+  - It must be “architecture-neutral and portable”.
+  - It must execute with “high performance”.
+  - It must be “interpreted, threaded, and dynamic”.
 
 #### Java’s Organization: Object Oriented
 
@@ -219,15 +219,15 @@ Everything in Java has a type, which is a way to say what type of data can be st
 
 Java Arrays are not immune to being strongly typed:
 
--   Arrays have a fixed length predetermined before they can be used.
--   Arrays contain a single data element type.
+- Arrays have a fixed length predetermined before they can be used.
+- Arrays contain a single data element type.
 
 #### Java Development
 
 Java development is primarily done through Integrated Development Environments. These combine a full featured text editor with the JDK to enhance productivity. Two main competitors are:
 
--   [Eclipse](https://www.eclipse.org/): popular open source, free, system
--   [JetBrains IntelliJ IDEA](https://www.jetbrains.com/idea/): commercial product with a free alternative and the one we use in class
+- [Eclipse](https://www.eclipse.org/): popular open source, free, system
+- [JetBrains IntelliJ IDEA](https://www.jetbrains.com/idea/): commercial product with a free alternative and the one we use in class
 
 For the first few days of class we do not use an IDE. To be taken seriously as a Java programmer, you need experience working with the JDK without an IDE. It’s also a good way to experience the language without the crutch of an IDE.
 
@@ -239,29 +239,29 @@ Instead, we will be using a text editor and the command line interface (CLI) for
 
 We are going to program a standard Hello World Program. Such a program is a good way to get started as it familiarizes you with the language and development environment, walking us through all the steps in generating a Java application
 
--   Input: Entering the source code
--   Processing: Compiling, Interpreting, Building
--   Output: Run, Execute Program and Find the output!
+- Input: Entering the source code
+- Processing: Compiling, Interpreting, Building
+- Output: Run, Execute Program and Find the output!
 
 Let’s get started. So follow along. The naming of things and the case, upper or lower, that is used makes a huge difference in Java programming. So, follow the directions!
 
 **Create a directory / folder**
 
--   Create some directory where can you can store your Java code, for example `jxwork`. I will call this `<work dir>`
--   Now create a directory where you can store this application. `<work dir>/helloapp`
--   Under `helloapp` create a directory `src` and under `src` a directory `hello`. So in the end you are sitting in the directory
-    -   `<work dir>/helloapp/src/hello`
-        -   `<work dir>` - is just a directory for us to store all of our Java work
-        -   `helloapp` - the name of our application
-        -   `src` - where we put our source code. The JDK requires this to be called src
-        -   `hello` - the name of our package. All Java code is organized into packages. We will learn more about these through out the course.
--   Now create a text file in that directory called `HelloWorld.java` and enter the following Java code:
--   Some comments on this code first
-    -   We will be explaining this code in detail in future lessons
-    -   By habit, I put my opening curly braces `{` on a new line. This is common among older Java programmers.
-        -   You are welcome to put the `{` at the end of the previously line
-        -   Both positioning will be acceptable in class; just be consistent. Follow their programming style standards for the company you work for.
-        -   The class name must match the file name. In this code the class name is `HelloWord` and the file name is `HelloWorld` with a `.java` extension.
+- Create some directory where can you can store your Java code, for example `jxwork`. I will call this `<work dir>`
+- Now create a directory where you can store this application. `<work dir>/helloapp`
+- Under `helloapp` create a directory `src` and under `src` a directory `hello`. So in the end you are sitting in the directory
+  - `<work dir>/helloapp/src/hello`
+    - `<work dir>` - is just a directory for us to store all of our Java work
+    - `helloapp` - the name of our application
+    - `src` - where we put our source code. The JDK requires this to be called src
+    - `hello` - the name of our package. All Java code is organized into packages. We will learn more about these through out the course.
+- Now create a text file in that directory called `HelloWorld.java` and enter the following Java code:
+- Some comments on this code first
+  - We will be explaining this code in detail in future lessons
+  - By habit, I put my opening curly braces `{` on a new line. This is common among older Java programmers.
+    - You are welcome to put the `{` at the end of the previously line
+    - Both positioning will be acceptable in class; just be consistent. Follow their programming style standards for the company you work for.
+    - The class name must match the file name. In this code the class name is `HelloWord` and the file name is `HelloWorld` with a `.java` extension.
 
 <!-- -->
 
@@ -290,7 +290,7 @@ Create another text file called `Greeter.java` and enter the following code
 
 Now that we have our source code in place, we need to convert that source code to **bytecode** so we can execute it using the Java Virtual Machine (JVM)
 
--   Go to a command / terminal prompt and change directories to the `src` directory you created above. Run the following commands from the `<work dir>/helloapp/src/` directory:
+- Go to a command / terminal prompt and change directories to the `src` directory you created above. Run the following commands from the `<work dir>/helloapp/src/` directory:
 
 <!-- -->
 
@@ -307,9 +307,9 @@ If all works, you should get nothing for an output - just a return to the prompt
 
 The error message tells you
 
--   the file where the compiler found the error, in our case `hello/Greeter.java`
--   the line number where the compiler thinks the error is located, in our case `:7:`
--   a comment on what the compiler thinks the error is, in our case
+- the file where the compiler found the error, in our case `hello/Greeter.java`
+- the line number where the compiler thinks the error is located, in our case `:7:`
+- a comment on what the compiler thinks the error is, in our case
 
 <!-- -->
 
@@ -324,10 +324,10 @@ Next: Distributing a directory of `*.class` files is clunky. Normally we archive
 
 where cvfe are options meaning
 
--   **c** - create a new archive file with a given name
--   **v** - generate verbose output
--   **f** - specific the jar output file to be created, in our case *hellothere.jar*
--   **e** - sets the main class also called the Entry point, in our case *hello.HelloWord*
+- **c** - create a new archive file with a given name
+- **v** - generate verbose output
+- **f** - specific the jar output file to be created, in our case _hellothere.jar_
+- **e** - sets the main class also called the Entry point, in our case _hello.HelloWord_
 
 You should get output similar to
 
@@ -339,9 +339,9 @@ And finally - Now we are ready to execute the program. Again issue the following
 
     java -jar hellothere.jar
 
--   `java` launches the JVM
--   `-jar` says we are using a `*.jar` file, the most common type of Java archived file
--   `hellothere.jar` is the name of application
+- `java` launches the JVM
+- `-jar` says we are using a `*.jar` file, the most common type of Java archived file
+- `hellothere.jar` is the name of application
 
 You should get the following output
 
@@ -357,16 +357,16 @@ Congratulations. You just wrote a Java application!!!
 
 ##### Dig Deeper
 
--   [Oracle Java Documentation](https://docs.oracle.com/en/java/javase/11/)  
-    Official Oracle Java 11 Documentation
--   [Open JDK](https://openjdk.java.net/)  
-    Open JDK - Alternative to Oracle's Java
--   [Free](https://medium.com/@javachampions/java-is-still-free-2-0-0-6b9aa8d6d244)  
-    Java is Still Free
--   [State of Java](https://www.baeldung.com/java-in-2019)  
-    Baeldung - The State of Java in 2019
+- [Oracle Java Documentation](https://docs.oracle.com/en/java/javase/11/)  
+  Official Oracle Java 11 Documentation
+- [Open JDK](https://openjdk.java.net/)  
+  Open JDK - Alternative to Oracle's Java
+- [Free](https://medium.com/@javachampions/java-is-still-free-2-0-0-6b9aa8d6d244)  
+  Java is Still Free
+- [State of Java](https://www.baeldung.com/java-in-2019)  
+  Baeldung - The State of Java in 2019
 
-------------------------------------------------------------------------
+---
 
 #### Learn to explain the basic concept of Object Oriented Programming and how they relate to Java
 
@@ -376,8 +376,8 @@ Congratulations. You just wrote a Java application!!!
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   Text Editor
+- Java Development Kit (JDK) - at least version 11
+- Text Editor
 
 Java is an Object Oriented Programming (OOP) Language. For comparison, JavaScript is considered an object based (OBP) or prototype based language.
 
@@ -389,60 +389,61 @@ To do work in Java, you must first create a Class, sometimes called a factory or
 
 #### Classes
 
--   Collections of objects
--   Blueprint to create individual objects
--   Static Fields and Methods - class level attributes and behaviors shared by all objects of the class
+- Collections of objects
+- Blueprint to create individual objects
+- Static Fields and Methods - class level attributes and behaviors shared by all objects of the class
 
 #### Objects
 
--   An entity with state (fields) and behaviors (methods)
--   Chair, person, dog - examples of a physical or logical entity upon which the program performs work
--   Considered an “instance” of a class; to make an object, you instantiate it
--   This is where the work in Java happens!
+- An entity with state (fields) and behaviors (methods)
+- Chair, person, dog - examples of a physical or logical entity upon which the program performs work
+- Considered an “instance” of a class; to make an object, you instantiate it
+- This is where the work in Java happens!
 
 Two popular frameworks organize the principles behind OOP. Interviewers like to ask questions like “What are the 4 Pillars of OOP?” and “Explain SOLID and its relationship to Java”. So, let’s take a look at these two questions!
 
 #### Four Pillars of Object Oriented Programming
 
--   **Abstraction**
-    -   Hiding internal details and showing functionality
-    -   We can access our smartphone but may not know how the internals work
--   **Encapsulation**
-    -   Wrapping, binding all code and data together
-    -   State of the object and behavior all in one
-    -   Fields are kept private and accessed through methods (getters and setters)
--   **Polymorphism**
-    -   Poly = many, morph = form
-    -   Use the same word with different meanings
-    -   Method overloading: same method with different parameters resulting in different behaviors
-    -   Method overriding: a child can implement a method differently than the parent. The parent or the child method can be invoked (called) based on context
--   **Inheritance**
-    -   A new class can adopt (inherit) the properties (fields and/or methods) from another class
-    -   The original class is called a parent or superclass
-    -   The new class is called a child or subclass
+- **Abstraction**
+  - Hiding internal details and showing functionality
+  - We can access our smartphone but may not know how the internals work
+- **Encapsulation**
+  - Wrapping, binding all code and data together
+  - State of the object and behavior all in one
+  - Fields are kept private and accessed through methods (getters and setters)
+- **Polymorphism**
+  - Poly = many, morph = form
+  - Use the same word with different meanings
+  - Method overloading: same method with different parameters resulting in different behaviors
+  - Method overriding: a child can implement a method differently than the parent. The parent or the child method can be invoked (called) based on context
+- **Inheritance**
+  - A new class can adopt (inherit) the properties (fields and/or methods) from another class
+  - The original class is called a parent or superclass
+  - The new class is called a child or subclass
 
 **S.O.L.I.D.**
 
--   **S**ingle-responsibility principle
-    -   A class should only do one thing, have a single responsibility, a single job - manage configuration for Swagger, interface with the employee’s table, print a HelloWorld message.
+- **S**ingle-responsibility principle
 
--   **O**pen-closed principle
+  - A class should only do one thing, have a single responsibility, a single job - manage configuration for Swagger, interface with the employee’s table, print a HelloWorld message.
 
-    -   Objects are open for extension but closed for modification.
-    -   Open says you can add fields (behaviors) by inheriting from the class
-    -   Closed says other entities can rely on the object’s structure (fields and methods) through implementation of a standard interface
+- **O**pen-closed principle
 
--   **L**iskov substitution principle
+  - Objects are open for extension but closed for modification.
+  - Open says you can add fields (behaviors) by inheriting from the class
+  - Closed says other entities can rely on the object’s structure (fields and methods) through implementation of a standard interface
 
-    -   Objects can be replaced with subtypes without alternating the correctness of the program. Subtypes should do at least what their parents do.
+- **L**iskov substitution principle
 
--   **I**nterface segregation principle
+  - Objects can be replaced with subtypes without alternating the correctness of the program. Subtypes should do at least what their parents do.
 
-    -   Just implement what you need; many interfaces are better than a huge general one
+- **I**nterface segregation principle
 
--   **D**ependency Inversion Principle
+  - Just implement what you need; many interfaces are better than a huge general one
 
-    -   Abstract as much as possible. “Entities must depend on abstractions not on concretions”. Higher level classes must not depend on lower classes. Modules are all separate entities that can be tied together using some abstract layer.
+- **D**ependency Inversion Principle
+
+  - Abstract as much as possible. “Entities must depend on abstractions not on concretions”. Higher level classes must not depend on lower classes. Modules are all separate entities that can be tied together using some abstract layer.
 
 So how do these principles work in Java and Spring? You will want to revisit this section as you learn more about Java and the Spring Framework
 
@@ -450,40 +451,40 @@ Wait a minute. What is the Spring Framework? This is a Java Framework we will in
 
 #### Four Pillars of Object Oriented Programming: Examples with Spring
 
--   **Abstraction:** Creating a class
--   **Encapsulation:** Creating pieces of code that do one thing well and then calling is over and over again. For example a routine to access the database can be used regardless of the database
-    -   Grouping our fields and methods into classes for a single entity. Everything related to employees, data and behaviors, goes with employees, everything related to the company goes with the companies.
--   **Polymorphism:** We can create a `sum` function that takes various parameters
-    -   sum(1, 2) = 3
-    -   sum(‘a’, ‘b’, ‘c’) = abc
-    -   sum(5) = 5
-    -   We can create a variety of ways to create an object depending on how much information we can give to the method. The method then implements the objects based on available information
--   **Inheritance:** Abstract classes and interfaces
-    -   Child classes can then inherit their parents characteristics and expand upon those.
+- **Abstraction:** Creating a class
+- **Encapsulation:** Creating pieces of code that do one thing well and then calling is over and over again. For example a routine to access the database can be used regardless of the database
+  - Grouping our fields and methods into classes for a single entity. Everything related to employees, data and behaviors, goes with employees, everything related to the company goes with the companies.
+- **Polymorphism:** We can create a `sum` function that takes various parameters
+  - sum(1, 2) = 3
+  - sum(‘a’, ‘b’, ‘c’) = abc
+  - sum(5) = 5
+  - We can create a variety of ways to create an object depending on how much information we can give to the method. The method then implements the objects based on available information
+- **Inheritance:** Abstract classes and interfaces
+  - Child classes can then inherit their parents characteristics and expand upon those.
 
 #### S.O.L.I.D.: Examples with Spring
 
--   **S**ingle-responsibility principle
-    -   Manage configuration for Swagger, interface with the employee’s table, print a `HelloWorld` message.
--   **O**pen-closed principle
-    -   The Spring Framework is a great example. The core logic is fixed; we cannot change it. The framework does have interfaces where we can inject own our code.
--   **L**iskov substitution principle
-    -   Our abstract classes will fit this description.
--   **I**nterface segregation principle
-    -   Different interfaces for different functions.
--   **D**ependency Inversion Principle
-    -   In Spring all modules are separate entities but can be used together as Beans.
+- **S**ingle-responsibility principle
+  - Manage configuration for Swagger, interface with the employee’s table, print a `HelloWorld` message.
+- **O**pen-closed principle
+  - The Spring Framework is a great example. The core logic is fixed; we cannot change it. The framework does have interfaces where we can inject own our code.
+- **L**iskov substitution principle
+  - Our abstract classes will fit this description.
+- **I**nterface segregation principle
+  - Different interfaces for different functions.
+- **D**ependency Inversion Principle
+  - In Spring all modules are separate entities but can be used together as Beans.
 
 ##### Dig Deeper
 
--   [OOPs Concepts](https://www.javatpoint.com/java-oops-concepts)  
-    Java OOPs Concepts
--   [SOLID](https://scotch.io/bar-talk/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)  
-    S.O.L.I.D: The First 5 Principles of Object Oriented Design
--   [4 Pillars](https://howtodoinjava.com/oops/object-oriented-principles/)  
-    4 Pillars of OOP with Java Examples
+- [OOPs Concepts](https://www.javatpoint.com/java-oops-concepts)  
+  Java OOPs Concepts
+- [SOLID](https://scotch.io/bar-talk/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)  
+  S.O.L.I.D: The First 5 Principles of Object Oriented Design
+- [4 Pillars](https://howtodoinjava.com/oops/object-oriented-principles/)  
+  4 Pillars of OOP with Java Examples
 
-------------------------------------------------------------------------
+---
 
 #### Learn to create and manipulate the base Java types which include Boolean, byte, char (including Strings), short, int, long, float, and double
 
@@ -493,8 +494,8 @@ Wait a minute. What is the Spring Framework? This is a Java Framework we will in
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   Text Editor
+- Java Development Kit (JDK) - at least version 11
+- Text Editor
 
 ### Strongly Typed Language
 
@@ -518,13 +519,13 @@ Declaring and initializing a variable can be done all in one step; this is quite
 
 Some other examples include:
 
--   Declaring a **double** variable. Notice the use of the `.0` In Java a `3` is an integer. A `3.0` is a double. I know in math we say they have the same value and are the same. In programming, they still have the same value but are NOT the same and are not interchangeable!
+- Declaring a **double** variable. Notice the use of the `.0` In Java a `3` is an integer. A `3.0` is a double. I know in math we say they have the same value and are the same. In programming, they still have the same value but are NOT the same and are not interchangeable!
 
 <!-- -->
 
     double money = 3.0;
 
--   Declaring a **boolean** variable. These values have valued of `true` or `false` (yes lowercase!):
+- Declaring a **boolean** variable. These values have valued of `true` or `false` (yes lowercase!):
 
 <!-- -->
 
@@ -536,15 +537,15 @@ Java has 8 different primitive data types or types that are built into the langu
 
 In practice, the types we generally just use
 
--   **int** for example `3`
--   **long** for example `3l` (notice the `l` to say it is long as opposed to an integer)
--   **double** for example `3.0`
--   **boolean** for example `true`
--   **char** for example `'a'`
+- **int** for example `3`
+- **long** for example `3l` (notice the `l` to say it is long as opposed to an integer)
+- **double** for example `3.0`
+- **boolean** for example `true`
+- **char** for example `'a'`
 
 In addition to the primitive data types, we can create our own data types using Java classes. By convention, a class starts with an uppercase letter. This is not enforced in Java syntax but is the choice of programmers. The language forces primitive data types to start with a lowercase letter. Sometimes we call these primitive data types **base** data types; they are the same thing.
 
--   Declaring a **String** variable. A String is not a primitive type. It is actually a Class derived using the primitive type char. That is why String is capitalized!
+- Declaring a **String** variable. A String is not a primitive type. It is actually a Class derived using the primitive type char. That is why String is capitalized!
 
 <!-- -->
 
@@ -556,10 +557,10 @@ Another programming tip: Notice that all these commands have ended with a semico
 
 **Scope** is defined as the space in the program where variables are available for use. Scope tells us in which blocks of code which variables are available. Java is very strict about the way it handles scope.
 
--   Fields are in scope throughout the class
--   Local variable are in scope from their declaration to the end of the block
--   You can reuse names in different scopes, blocks
--   You can even hide names within a scope
+- Fields are in scope throughout the class
+- Local variable are in scope from their declaration to the end of the block
+- You can reuse names in different scopes, blocks
+- You can even hide names within a scope
 
 ### Random Number Generator
 
@@ -569,9 +570,9 @@ But first a note on `import`: `Random` is not part of the core Java language. Yo
 
 How do you know when and what to import? Soon we will be using the Integrated Development Environment (IDE) JetBrains IntelliJ Idea. This IDE will manage the imports for us, adding them when needed. Until then, what normally happens in practice is:
 
--   You use a construct
--   You try to compile and get a syntax error
--   You remember you need an import: You remember the import you need and add it to your source code or you search the web for what you need
+- You use a construct
+- You try to compile and get a syntax error
+- You remember you need an import: You remember the import you need and add it to your source code or you search the web for what you need
 
 Not the most scientific way of approaching the situation but it is what is often done in practice!
 
@@ -613,21 +614,21 @@ Not the most scientific way of approaching the situation but it is what is often
 
 Sometimes you have one data type but need to convert it to be another type. For example:
 
--   You need a double but you are working with an integer
--   You have a double but need an integer
--   You want to display a double
+- You need a double but you are working with an integer
+- You have a double but need an integer
+- You want to display a double
 
 Changing data types is called **type casting**. When you go from a smaller data type to a larger one, you are **widening casting**. This is done automatically in Java. If a data type completely contains a different data type you are trying to assign it, conversion happens automatically. `double` contains all values of integers, so assigning an integer to a double is handled automatically by Java.
 
--   `double myValue = 3;`
+- `double myValue = 3;`
 
 When you go from a larger data type to a smaller one, you are **narrowing (manual) casting**. You must manually tell Java to do this type of casting. Going from a `double` to an `integer` causes the decimal part of the `double` to be truncated. Java requires this to be done manually so you don’t accidentally lose value in data type casting. You have to specifically say, yes I know I will lose some data and I am okay with that. You do this by including the new data type in parenthesis.
 
--   `int myValue = (int) 3.14;`
+- `int myValue = (int) 3.14;`
 
 When you go from some data type to a string, this is called **String conversion**. Normally this happens automatically. For example, you try to print an integer, it is converted to a String and then displayed.
 
--   `System.out.println(3)`
+- `System.out.println(3)`
 
 ##### Follow Along
 
@@ -643,8 +644,8 @@ Remember that the first `basetypes` in the name of our application. JDK requires
 
 Now, in the the `basetypes` directory, use your text editor to create the following code in a file called `Main.java`:
 
--   As you enter the code, pay attention to the lines marked with //. These are comments that are ignored by the compiler but explain what each line does. You have a choice on entering the comments but DO READ THEM! I have explained the code using the comment sections.
--   Note that `System.out.println()` displays to the console whatever is inside the parenthesis—more on this later.
+- As you enter the code, pay attention to the lines marked with //. These are comments that are ignored by the compiler but explain what each line does. You have a choice on entering the comments but DO READ THEM! I have explained the code using the comment sections.
+- Note that `System.out.println()` displays to the console whatever is inside the parenthesis—more on this later.
 
 <!-- -->
 
@@ -902,14 +903,14 @@ Fix any errors you encounter. The output you should get is:
 
 ##### Dig Deeper
 
--   [Modulus Operator](http://www.cs.ukzn.ac.za/~hughm/java/intro/week2/21.html)  
-    The Remainder or Modulus Operator in Java
--   [Random Class](https://docs.oracle.com/javase/8/docs/api/java/util/Random.html)  
-    Oracle's Documentation on the Random Class
--   [Typecasting](https://www.edureka.co/blog/type-casting-in-java/)  
-    What is Typecasting in Java and how does it work
+- [Modulus Operator](http://www.cs.ukzn.ac.za/~hughm/java/intro/week2/21.html)  
+  The Remainder or Modulus Operator in Java
+- [Random Class](https://docs.oracle.com/javase/8/docs/api/java/util/Random.html)  
+  Oracle's Documentation on the Random Class
+- [Typecasting](https://www.edureka.co/blog/type-casting-in-java/)  
+  What is Typecasting in Java and how does it work
 
-------------------------------------------------------------------------
+---
 
 #### Learn to craft multiple Java Classes which include comments, constructors, static and instance variables (fields), accessors, public and private methods and instantiate and use Objects of these classes.
 
@@ -919,18 +920,18 @@ Fix any errors you encounter. The output you should get is:
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   Text Editor
+- Java Development Kit (JDK) - at least version 11
+- Text Editor
 
 Java is an Object Oriented Language. That means we are doing Object Oriented Programming. So we will be living in the world of classes, objects, fields, and methods.
 
--   **Classes** are blueprints, prototypes from which objects are created. Some like to think of classes as factories that can produce objects.
-    -   To be used in a program, an object of the class must be created. Exceptions to this rule exits in forms of *Static Methods* and *Static Fields*. These can be used directly from a class. All objects that derive from a class share the same static methods and static fields.
--   **Objects** are derived from classes. Objects are the entities were most of the work is done. They represent real world entities and contain
-    -   **Fields**, pieces of data that the object knows. Taken all together, the values of the fields at any given time is the *state* of the object
-    -   **Methods** are the actions that the object can perform. They are the behaviors of the object. They get invoked, causing the object to do the action outlined by the method
-    -   **Pointers** the name of the object or the identity of the object. Pointers are memory locations where the object can be found
-    -   Objects are created using a *constructor*. This is a special method inside a class that allows one to create or instantiate an object. Often multiple constructors exist for a single class. Each constructor sets up the object’s initial state differently. The initial state of an object is the object’s state right after instantiation.
+- **Classes** are blueprints, prototypes from which objects are created. Some like to think of classes as factories that can produce objects.
+  - To be used in a program, an object of the class must be created. Exceptions to this rule exits in forms of _Static Methods_ and _Static Fields_. These can be used directly from a class. All objects that derive from a class share the same static methods and static fields.
+- **Objects** are derived from classes. Objects are the entities were most of the work is done. They represent real world entities and contain
+  - **Fields**, pieces of data that the object knows. Taken all together, the values of the fields at any given time is the _state_ of the object
+  - **Methods** are the actions that the object can perform. They are the behaviors of the object. They get invoked, causing the object to do the action outlined by the method
+  - **Pointers** the name of the object or the identity of the object. Pointers are memory locations where the object can be found
+  - Objects are created using a _constructor_. This is a special method inside a class that allows one to create or instantiate an object. Often multiple constructors exist for a single class. Each constructor sets up the object’s initial state differently. The initial state of an object is the object’s state right after instantiation.
 
 Let’s take a look at the following Java Code. Soon we will enter and execute this code but, first, let’s dissect it!
 
@@ -1045,10 +1046,10 @@ Let’s look at `Dog` first. This is a class and must be saved in a file `Dog.ja
 
 Note that
 
--   All Java statements end with a semi colon `;` . The `;` is NOT optional!
--   The first line of a file is usually the package where the class belongs.
-    -   A package is a grouping of similar classes.
-    -   Files in Java are joined together by being in the same package, having the files start with the same package statement.
+- All Java statements end with a semi colon `;` . The `;` is NOT optional!
+- The first line of a file is usually the package where the class belongs.
+  - A package is a grouping of similar classes.
+  - Files in Java are joined together by being in the same package, having the files start with the same package statement.
 
 To use Java classes from other packages, those packages have to be imported (using`import`) into the current package. More on that later. For now, we only have 1 package. Soon we will be adding more. The name of the package can be anything but it must match the folder name where it is located.
 
@@ -1061,10 +1062,10 @@ This sets up the class name to be `Dog`. The name of the class and the name of t
 
 This class is marked as public. That means that any other classes in the application can access this class. Dog is known to all. You have four choices when it comes to these **access modifiers**. These access modifiers can go on classes, fields, or methods.
 
--   **Public** - Anyone can access. You might have to use the package.class.object dot notation to access it, but you can still access it.
--   **Private** - Can only be accessed within the class and objects instantiated from the class.
--   **Protected** - Accessible within the same package and with the class and subclasses in other packages.
--   **Default** - Accessible only with in the same package. For this you just leave the access modifier blank.
+- **Public** - Anyone can access. You might have to use the package.class.object dot notation to access it, but you can still access it.
+- **Private** - Can only be accessed within the class and objects instantiated from the class.
+- **Protected** - Accessible within the same package and with the class and subclasses in other packages.
+- **Default** - Accessible only with in the same package. For this you just leave the access modifier blank.
 
 After the class **header** `public class Dog` is the class **body**. This is what is enclosed in the curly brackets `{ }`.
 
@@ -1072,9 +1073,9 @@ After the class **header** `public class Dog` is the class **body**. This is wha
 
 This a comment in Java. This is a notation made by the developer to aid in reading the code. In Java, you have a few options for entering comments:
 
--   `//` says that the rest of the text on this line is a comment. This is good to make single line comments or to put comments at the end of a line. The compiler will ignore anything after the `//` so make sure that all of your executable code, including the ending `;` is before the `//`! Often called line style.
--   `/*..*/` Placing at `/*` at the beginning of a body of text and `*/` at the end of the body of text says that what is in the middle is a comment and is to be ignored by the compiler. Often called block style.
--   `/**..*/` This is a special case of the block style called **Javadocs**. This syntax allows some useful HTML to be generated from our comments. You will see this syntax in most of the Guided Project and Module Project examples. We do not, however, cover Javadocs directly in class.
+- `//` says that the rest of the text on this line is a comment. This is good to make single line comments or to put comments at the end of a line. The compiler will ignore anything after the `//` so make sure that all of your executable code, including the ending `;` is before the `//`! Often called line style.
+- `/*..*/` Placing at `/*` at the beginning of a body of text and `*/` at the end of the body of text says that what is in the middle is a comment and is to be ignored by the compiler. Often called block style.
+- `/**..*/` This is a special case of the block style called **Javadocs**. This syntax allows some useful HTML to be generated from our comments. You will see this syntax in most of the Guided Project and Module Project examples. We do not, however, cover Javadocs directly in class.
 
 <!-- -->
 
@@ -1090,9 +1091,9 @@ These three are fields. They are private to the object. Each object derived from
 
 Some common tasks of Getters and Setters are
 
--   Restricting access to only those objects who are allowed to have access. Remember with public anyone can access them.
--   Checking or Modifying the data prior to releasing or changing. Some data validation might be done here. Perhaps all string values should be capitalized. Perhaps negative numbers are not allowed.
--   Preventing access completely. Perhaps the value is only needed within the object and the outside world should not read or modify the field.
+- Restricting access to only those objects who are allowed to have access. Remember with public anyone can access them.
+- Checking or Modifying the data prior to releasing or changing. Some data validation might be done here. Perhaps all string values should be capitalized. Perhaps negative numbers are not allowed.
+- Preventing access completely. Perhaps the value is only needed within the object and the outside world should not read or modify the field.
 
 Fields should always be written in all lowercase. No camel case! This naming convention becomes very important as the course progresses.
 
@@ -1103,10 +1104,10 @@ Fields should always be written in all lowercase. No camel case! This naming con
 
 Now we start a series of three constructors, three different ways to send the initial state to the class to create the object. Notice each one has the same name but has different parameters. The headers for the constructor methods all start with `public Dog`.
 
--   Constructors are always public
--   Unlike other methods, constructors have no type. They are always of type `void` meaning that they cannot return a value.
--   They are named the same name as the class
--   They differ by the parameter list. You can have as many different constructors as you can construct combinations of parameters.
+- Constructors are always public
+- Unlike other methods, constructors have no type. They are always of type `void` meaning that they cannot return a value.
+- They are named the same name as the class
+- They differ by the parameter list. You can have as many different constructors as you can construct combinations of parameters.
 
 Now this one is called the default constructor. If no constructor is specified, the JDK will automatically create this default constructor. This constructor creates an object using no parameters. In this case, all of our fields are created with uninitialized values.
 
@@ -1150,8 +1151,8 @@ This constructor takes three parameters used to set the object’s initial state
 
 Now we have a series of Getters or methods that allow us to read the value of a field. Again, these methods can be used to restrict access, modify the field before releasing it to the world, or some other business rule. Of course, these are public so that the rest of the application can get the information. So the Getter for breed:
 
--   `public String` (the same type as the field) `getBreed()` (the word get followed by the field name starting with a capital letter; the naming convention of these become very important as the course progresses.)
--   Inside the body of the Getter method, we would do whatever work needs to be done, ultimately returning a value the same type as the field. `return breed;` (Quite often a Getter simply returns the field value itself)
+- `public String` (the same type as the field) `getBreed()` (the word get followed by the field name starting with a capital letter; the naming convention of these become very important as the course progresses.)
+- Inside the body of the Getter method, we would do whatever work needs to be done, ultimately returning a value the same type as the field. `return breed;` (Quite often a Getter simply returns the field value itself)
 
 <!-- -->
 
@@ -1173,20 +1174,20 @@ Now we have a series of Getters or methods that allow us to read the value of a 
 
 And here we have our series of Setters or methods that allow us to modify the value of a field. Again, these methods are used to provide data validation and various business rules before changing the value of a field. Of course, these are public so that rest of the application can modify the field. Remember when a field is modified, the state of the object changes. So the Setter for breed:
 
--   `public void` (public method that does not return a value, hence the return type is void)
--   `setBreed` (the word set followed by the field name starting with a capital letter)
--   `(String breed)` (the parameter list. Normally the same type as the field and by convention we call the parameter the same name as the field. This will be used to create the new value for the field)
+- `public void` (public method that does not return a value, hence the return type is void)
+- `setBreed` (the word set followed by the field name starting with a capital letter)
+- `(String breed)` (the parameter list. Normally the same type as the field and by convention we call the parameter the same name as the field. This will be used to create the new value for the field)
 
 Inside the body of the Setter method, we would do whatever work needs to be done to validate and update the incoming value ultimately storing that value in the field itself. `this.breed = breed;`
 
 Often you will see Getters and Setters mixed together in this order:
 
--   Getter for breed
--   Setter for breed
--   Getter for age
--   Setter for age
--   Getter for color
--   Setter for color
+- Getter for breed
+- Setter for breed
+- Getter for age
+- Setter for age
+- Getter for color
+- Setter for color
 
 <!-- -->
 
@@ -1217,9 +1218,9 @@ We have a series of statements in the body of this method. Let’s look at these
 
 To print something to the console, you use the `System.out.println()`;
 
--   `System` is the class where the needed method is found
--   `out` is a static field of type PrintStream class
--   `println()` is a method in the PrintStream class. `print` says to display to the console, `ln` says to add a return after printing. That way the next thing that prints will start on a new line.
+- `System` is the class where the needed method is found
+- `out` is a static field of type PrintStream class
+- `println()` is a method in the PrintStream class. `print` says to display to the console, `ln` says to add a return after printing. That way the next thing that prints will start on a new line.
 
 `Dog.bark` where bark is a class field so can be used without instantiating an object. We call it directly from the class:
 
@@ -1246,10 +1247,10 @@ This says to print the value of the variable `dottie` which is of class type `Do
 
 Now we call the Getter for `age` to display the age field from the object body.
 
--   `dottie` is the variable name of the object
--   `.` says to use the field or method from the object
--   `getAge()` is the method from the object we want to use. We know it is a method because of the inclusion of parenthesis. These parentheses are required for all methods, whether or not the method has parameters. It is the `()` that distinguished methods from fields.
--   This is called dot notation.
+- `dottie` is the variable name of the object
+- `.` says to use the field or method from the object
+- `getAge()` is the method from the object we want to use. We know it is a method because of the inclusion of parenthesis. These parentheses are required for all methods, whether or not the method has parameters. It is the `()` that distinguished methods from fields.
+- This is called dot notation.
 
 <!-- -->
 
@@ -1404,14 +1405,14 @@ And that is a complete Java application!
 
 ##### Dig Deeper
 
--   [Code Review](https://dev.to/smartyansh/code-review-checklist-for-java-beginners-181f)  
-    Code Review Checklist for Java Beginners
--   [Streams](https://stackify.com/streams-guide-java-8/)  
-    A Guide to Streams in Java 8: In-Depth Tutorial with Examples
--   [Javadocs](https://www.oracle.com/technetwork/java/javase/documentation/index-137868.html)  
-    How to Write Doc Comments for the Javadoc Tool
+- [Code Review](https://dev.to/smartyansh/code-review-checklist-for-java-beginners-181f)  
+  Code Review Checklist for Java Beginners
+- [Streams](https://stackify.com/streams-guide-java-8/)  
+  A Guide to Streams in Java 8: In-Depth Tutorial with Examples
+- [Javadocs](https://www.oracle.com/technetwork/java/javase/documentation/index-137868.html)  
+  How to Write Doc Comments for the Javadoc Tool
 
-------------------------------------------------------------------------
+---
 
 #### Learn to implement and use the String and Date data types
 
@@ -1421,8 +1422,8 @@ And that is a complete Java application!
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   Text Editor
+- Java Development Kit (JDK) - at least version 11
+- Text Editor
 
 Besides primitive data types, Java makes extensive use of Class data types. Two popular class data types are Strings and Dates. Let’s look at each one individually. Do note that these are classes so the data type begins with a capital letter.
 
@@ -1430,13 +1431,13 @@ Besides primitive data types, Java makes extensive use of Class data types. Two 
 
 String is a class that implements a series of char primitive types that put together form a string. Most string functions return a value and do not affect the original string. Several methods exit to help us with Strings (there are many more than listed here):
 
--   `charAt(int)` returns the character for the particular 0 based index
--   `substring(beginning, ending)` returns the characters found starting from the index beginning inclusive to the index ending exclusive
-    -   Character at beginning index is included
-    -   Character at ending index is excluded
--   `length()` returns how many characters are in the string
--   String `+` String concatenates two strings together
--   `toLowerCase()`, `toUpperCase()` returns the string all in lowercase, uppercase
+- `charAt(int)` returns the character for the particular 0 based index
+- `substring(beginning, ending)` returns the characters found starting from the index beginning inclusive to the index ending exclusive
+  - Character at beginning index is included
+  - Character at ending index is excluded
+- `length()` returns how many characters are in the string
+- String `+` String concatenates two strings together
+- `toLowerCase()`, `toUpperCase()` returns the string all in lowercase, uppercase
 
 Methods also exist that allow us to format doubles to something more readable. There are many different ways to format doubles. One popular method is to use the import java.text.DecimalFormat as soon in the following code snippet:
 
@@ -1467,24 +1468,24 @@ Dates are another popular class type that has many helpful methods. Dates are so
 
 Other good libraries to investigate are:
 
--   [Oracle’s Date Time Library](https://docs.oracle.com/javase/tutorial/datetime/index.html)
--   [Apache’s DateUtils](https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/time/DateUtils.html)
--   [Joda’s Time Libraries](https://www.joda.org/joda-time/)
+- [Oracle’s Date Time Library](https://docs.oracle.com/javase/tutorial/datetime/index.html)
+- [Apache’s DateUtils](https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/time/DateUtils.html)
+- [Joda’s Time Libraries](https://www.joda.org/joda-time/)
 
 We will need to set up formats to help us convert from Strings to Dates and back. We will be setting up class variables to control our date format. This allows us to use a consistent date time format throughout the application. A format of the following means:
 
     "MMM dd yyyy hh:mm:ss a z Z"
 
--   `MMM` is the 3 character month abbreviation
--   `dd` is the two digit day
--   `yyyy` is the four digit year
--   `hh` is the hour
--   `mm` is the minutes
--   `ss` is the seconds
--   `a` says to print in AM / PM 12 hour format
--   `z` says to print the local time zone in 3 character abbreviation
--   `Z` says to print the hours the local time zone differs from Greenwich Mean Time (GMT). Z for being at the Zero Meridian, also called Zulu time.
--   any combination can be used to format the date and time you want
+- `MMM` is the 3 character month abbreviation
+- `dd` is the two digit day
+- `yyyy` is the four digit year
+- `hh` is the hour
+- `mm` is the minutes
+- `ss` is the seconds
+- `a` says to print in AM / PM 12 hour format
+- `z` says to print the local time zone in 3 character abbreviation
+- `Z` says to print the hours the local time zone differs from Greenwich Mean Time (GMT). Z for being at the Zero Meridian, also called Zulu time.
+- any combination can be used to format the date and time you want
 
 How a general data format gets set up in Java is:
 
@@ -1659,20 +1660,20 @@ Fix any errors you encounter. The output you should be similar to although your 
 
 ##### Dig Deeper
 
--   [Strings](https://www.javatpoint.com/java-string)  
-    Java Strings
--   [2 Decimal Display](https://mkyong.com/java/java-display-double-in-2-decimal-points/)  
-    Display Doubles with 2 decimals
--   [Currency Format](https://kodejava.org/how-do-i-format-a-number-as-currency-string/)  
-    How do I format a number as currency string?
--   [Format Specifiers](https://www.geeksforgeeks.org/format-specifiers-in-java/)  
-    GeeksForGeeks - Format Specifiers in Java
--   [java.time](https://docs.oracle.com/javase/tutorial/datetime/index.html)  
-    Oracle's documentation for java.time
--   [java-util-date](https://examples.javacodegeeks.com/java-util-date/)  
-    Java Code Geeks - java-util-date
+- [Strings](https://www.javatpoint.com/java-string)  
+  Java Strings
+- [2 Decimal Display](https://mkyong.com/java/java-display-double-in-2-decimal-points/)  
+  Display Doubles with 2 decimals
+- [Currency Format](https://kodejava.org/how-do-i-format-a-number-as-currency-string/)  
+  How do I format a number as currency string?
+- [Format Specifiers](https://www.geeksforgeeks.org/format-specifiers-in-java/)  
+  GeeksForGeeks - Format Specifiers in Java
+- [java.time](https://docs.oracle.com/javase/tutorial/datetime/index.html)  
+  Oracle's documentation for java.time
+- [java-util-date](https://examples.javacodegeeks.com/java-util-date/)  
+  Java Code Geeks - java-util-date
 
-------------------------------------------------------------------------
+---
 
 #### Learn to understand the reason behind and use of BigDecimals (\*\*\* OPTIONAL \*\*\*)
 
@@ -1682,8 +1683,8 @@ Fix any errors you encounter. The output you should be similar to although your 
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   Text Editor
+- Java Development Kit (JDK) - at least version 11
+- Text Editor
 
 #### The Problem
 
@@ -1704,11 +1705,11 @@ We are going to use the static method `Math.round()`. By default Math.round() ro
 
     double answerRound = Math.round(3.1415 * 100.0) / 100.0;
 
--   multiple the number by 100.0 so for example 3.1415 becomes 314.15
--   then round to the new ones place so 314.15 becomes 314
--   then divide by 100.0 to put the decimals back in the number so 314 becomes 3.14
--   an advantage is that binary, decimal arithmetic works out correctly for multiples of 10. Nice side effect!
--   Note that if we had wanted to round to the thousandth’s place, three decimal points, we would have used 1000.0 instead of 100.0
+- multiple the number by 100.0 so for example 3.1415 becomes 314.15
+- then round to the new ones place so 314.15 becomes 314
+- then divide by 100.0 to put the decimals back in the number so 314 becomes 3.14
+- an advantage is that binary, decimal arithmetic works out correctly for multiples of 10. Nice side effect!
+- Note that if we had wanted to round to the thousandth’s place, three decimal points, we would have used 1000.0 instead of 100.0
 
 #### BigDecimal Solution
 
@@ -1946,10 +1947,10 @@ the workingdecimal.Main class
 
 ##### Dig Deeper
 
--   [Java Math](https://www.dummies.com/programming/java/weird-things-java-math/)  
-    Weird Java Math Things
+- [Java Math](https://www.dummies.com/programming/java/weird-things-java-math/)  
+  Weird Java Math Things
 
-------------------------------------------------------------------------
+---
 
 #### Learn to craft and use for loops (\*\*\* OPTIONAL \*\*\*)
 
@@ -1959,21 +1960,21 @@ the workingdecimal.Main class
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   Text Editor
+- Java Development Kit (JDK) - at least version 11
+- Text Editor
 
 ### FOR LOOP
 
 To demonstrate how execution flows in a Java program, I am using [The Java Visualizer](https://cscircles.cemc.uwaterloo.ca/java_visualize/#) which is based on a visualizer from the [Online Python Tutor](http://www.pythontutor.com/). Do take a look at the code for The Java Visualizer. Much of it is done in Java! For some demonstrations, I use a plugin for IntelliJ [Java Visualizer](https://plugins.jetbrains.com/plugin/11512-java-visualizer) which is based on The Java Visualizer
 
--   [Frontend GitHub Repo](https://github.com/daveagp/java_visualize)
--   [Backend GitHub Repo](https://github.com/daveagp/java_jail/tree/master/cp/traceprinter)
+- [Frontend GitHub Repo](https://github.com/daveagp/java_visualize)
+- [Backend GitHub Repo](https://github.com/daveagp/java_jail/tree/master/cp/traceprinter)
 
 So what about **for loops**. Like most languages, For Loops are a part of Java. For Loops execute a “chunk” of code a set number of times. Remember that for loops have three components:
 
--   **counter** - an index variable that has a data type and is initialized
--   **range** - repeat over the range until the statement is false
--   **step** - how much to change the index variable each time, each loop
+- **counter** - an index variable that has a data type and is initialized
+- **range** - repeat over the range until the statement is false
+- **step** - how much to change the index variable each time, each loop
 
 This is how a loop is done in Java. The following code executes its body 10 times, count 0, 1, 2, 3, 4, 5, 6, 7, 8, 9!
 
@@ -2013,9 +2014,9 @@ Fix any errors you might encounter and try again.
 
 In the above example, we have a for loop where:
 
--   counter = int i starting at 0
--   range = as long as i is less than 10
--   step = add 1 to i each time through the loop
+- counter = int i starting at 0
+- range = as long as i is less than 10
+- step = add 1 to i each time through the loop
 
 So we get the following output:
 
@@ -2059,9 +2060,9 @@ Fix any errors you might encounter and try again.
 
 In the above example, we have a for loop where:
 
--   counter = int i starting at 1
--   range = as long as i is less than or equal to 10
--   step = add 1 to i each time through the loop. However we add 1 to i in the body of the loop
+- counter = int i starting at 1
+- range = as long as i is less than or equal to 10
+- step = add 1 to i each time through the loop. However we add 1 to i in the body of the loop
 
 So the above code produces the following output, minus output from previous sections
 
@@ -2099,9 +2100,9 @@ Fix any errors you might encounter and try again.
 
 We have a for loop where:
 
--   counter = int i starting at 1
--   range = as long as i is less than or equal to 10
--   step = add 2 to i each time through the loop.
+- counter = int i starting at 1
+- range = as long as i is less than or equal to 10
+- step = add 2 to i each time through the loop.
 
 So the above code produces the following output, minus output from previous sections
 
@@ -2144,10 +2145,10 @@ Fix any errors you might encounter and try again.
 
 We have a for loop where:
 
--   counter = int i starting at 1
--   range = as long as i is less than or equal to 10
--   step = add 1 to i each time through the loop.
--   continue statement = if i is evenly divided by 2, just continue the loop. Do not do the println() with Ending
+- counter = int i starting at 1
+- range = as long as i is less than or equal to 10
+- step = add 1 to i each time through the loop.
+- continue statement = if i is evenly divided by 2, just continue the loop. Do not do the println() with Ending
 
 So the above code produces the following output, minus output from previous sections:
 
@@ -2200,10 +2201,10 @@ Fix any errors you might encounter and try again.
 
 We have a for loop where:
 
--   counter = int i starting at 1
--   range = as long as i is less than or equal to 10
--   step = add 1 to i each time through the loop.
--   break statement = if i greater than or equal to 5, just stop the loop
+- counter = int i starting at 1
+- range = as long as i is less than or equal to 10
+- step = add 1 to i each time through the loop.
+- break statement = if i greater than or equal to 5, just stop the loop
 
 So the above code produces the following output, minus output from previous sections:
 
@@ -2279,16 +2280,16 @@ Expand to see the final forloops.main program
 
 ##### Dig Deeper
 
--   [Java Visualizer](https://cscircles.cemc.uwaterloo.ca/java_visualize/#)  
-    Java Visualizer Website
--   [Java Visualizer](https://plugins.jetbrains.com/plugin/11512-java-visualizer)  
-    Java Visualizer IntelliJ Plugin
--   [W3 Schools Java](https://www.w3schools.com/java/java_for_loop.asp)  
-    W3 Schools Java For Loops
--   [W3 Schools Java](https://www.w3schools.com/java/java_break.asp)  
-    W3 Schools Java Break and Continue
+- [Java Visualizer](https://cscircles.cemc.uwaterloo.ca/java_visualize/#)  
+  Java Visualizer Website
+- [Java Visualizer](https://plugins.jetbrains.com/plugin/11512-java-visualizer)  
+  Java Visualizer IntelliJ Plugin
+- [W3 Schools Java](https://www.w3schools.com/java/java_for_loop.asp)  
+  W3 Schools Java For Loops
+- [W3 Schools Java](https://www.w3schools.com/java/java_break.asp)  
+  W3 Schools Java Break and Continue
 
-------------------------------------------------------------------------
+---
 
 #### Learn to craft and use while loops and do while loops (\*\*\* OPTIONAL \*\*\*)
 
@@ -2298,16 +2299,16 @@ Expand to see the final forloops.main program
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   Text Editor
+- Java Development Kit (JDK) - at least version 11
+- Text Editor
 
 ### The While Loop
 
 So what about **while loops**? Like most languages, While Loops are a part of Java. While Loops execute a body (block of code) a until a certain condition is no longer true. A While Loop completes a pre-test on the condition where the condition is checked before the statement is run. If the condition is false, the body does **not** get run; if the condition is true, the body is executed. Thus, it is possible for the body to never be executed; the condition is false when the while loop is first executed.
 
--   The body is what is enclosed in curly brackets `{ }`
--   The condition that must be true for the body to execute is listed right after the `while` keyword
--   Somewhere inside the body, the condition must change to where it eventually becomes `false`. Otherwise you have an infinite loop.
+- The body is what is enclosed in curly brackets `{ }`
+- The condition that must be true for the body to execute is listed right after the `while` keyword
+- Somewhere inside the body, the condition must change to where it eventually becomes `false`. Otherwise you have an infinite loop.
 
 This is how a while loop is executed in Java. The following code executes its body 5 times (count 0, 1, 2, 3, 4):
 
@@ -2317,15 +2318,15 @@ This is how a while loop is executed in Java. The following code executes its bo
 
 “Do while” loops have the same functionality as while loops with one major exception. The body of the do while loop is always executed at least once. The condition is at the end of the loop: the body executes and then the condition is checked:
 
--   if `true` execute the body again
--   if `false`, stop the loop and keep going with the application.
+- if `true` execute the body again
+- if `false`, stop the loop and keep going with the application.
 
 ### Overview - While loops with continue and break
 
 The commands `continue` and `break` work with while loops as they did with for loops:
 
--   `continue` - says to start the loop again and do not execute any more of the body
--   `break` - says to stop the loop immediately and continue with the application.
+- `continue` - says to start the loop again and do not execute any more of the body
+- `break` - says to stop the loop immediately and continue with the application.
 
 I would not recommend using continue and break. Usually, you can write your code in a more readable manner using proper branching statements. However, you should know that continue and break exist.
 
@@ -2491,14 +2492,14 @@ The following shows the execution or flow of this loop.
 
 ##### Dig Deeper
 
--   [While Loops](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html)  
-    Oracle's Java Nuts and Bolts While loops
--   [Break](https://www.programiz.com/java-programming/break-statement)  
-    The Break Statement
--   [Continue](https://www.programiz.com/java-programming/continue-statement)  
-    The Continue Statement
+- [While Loops](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html)  
+  Oracle's Java Nuts and Bolts While loops
+- [Break](https://www.programiz.com/java-programming/break-statement)  
+  The Break Statement
+- [Continue](https://www.programiz.com/java-programming/continue-statement)  
+  The Continue Statement
 
-------------------------------------------------------------------------
+---
 
 #### Learn to craft and use recursion (\*\*\* OPTIONAL \*\*\*)
 
@@ -2508,8 +2509,8 @@ The following shows the execution or flow of this loop.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   Text Editor
+- Java Development Kit (JDK) - at least version 11
+- Text Editor
 
 ### Recursion
 
@@ -2517,19 +2518,19 @@ The following shows the execution or flow of this loop.
 
 Recursion is defined as something that is defined in terms of itself. For recursive functions to be successful, they require two main parts:
 
--   a **general (recursive) case** - This is a function that is described and can be expressed in terms of smaller units of itself.
--   a **base case** - A case where the recursive function can stop or is non-recursive. A solid simple solution to stop the recursive process.
+- a **general (recursive) case** - This is a function that is described and can be expressed in terms of smaller units of itself.
+- a **base case** - A case where the recursive function can stop or is non-recursive. A solid simple solution to stop the recursive process.
 
 For example, let’s look at the factorial or the product of an integer and all the integers below it:
 
--   7! = 7 \* 6 \* 5 \* 4 \* 3 \* 2 \* 1
--   7! = 7 \* 6!
-    -   6! = 6 \* 5!
-        -   5! = 5 \* 4!
-            -   4! = 4 \* 3!
-                -   3! = 3 \* 2!
-                    -   2! = 2 \* 1!
-                        -   1! = 1
+- 7! = 7 \* 6 \* 5 \* 4 \* 3 \* 2 \* 1
+- 7! = 7 \* 6!
+  - 6! = 6 \* 5!
+    - 5! = 5 \* 4!
+      - 4! = 4 \* 3!
+        - 3! = 3 \* 2!
+          - 2! = 2 \* 1!
+            - 1! = 1
 
 ### Recursion Use
 
@@ -2608,8 +2609,8 @@ The above code produces the following output:
     2 * 1!
     Factorial 120
 
--   Our general case is the factorial of a number (that number \* the factorial of that (number - 1))
--   The base case is that the factorial of 1 is 1. When the recursive code reaches this statement, the recursive calling of the function stops
+- Our general case is the factorial of a number (that number \* the factorial of that (number - 1))
+- The base case is that the factorial of 1 is 1. When the recursive code reaches this statement, the recursive calling of the function stops
 
 The following shows the execution or flow of this recursive code.
 
@@ -2617,12 +2618,12 @@ The following shows the execution or flow of this recursive code.
 
 ##### Dig Deeper
 
--   [Recursion](https://youtu.be/ozmE8G6YKww)  
-    How Recursion Works Video
--   [Recursion in Java](https://www.geeksforgeeks.org/recursion-in-java/)  
-    Recusion in Java
+- [Recursion](https://youtu.be/ozmE8G6YKww)  
+  How Recursion Works Video
+- [Recursion in Java](https://www.geeksforgeeks.org/recursion-in-java/)  
+  Recusion in Java
 
-------------------------------------------------------------------------
+---
 
 #### Learn to craft and use Java conditionals, branching, including if-then, if-then-else, and switch statements (\*\*\* OPTIONAL \*\*\*)
 
@@ -2632,21 +2633,21 @@ The following shows the execution or flow of this recursive code.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   Text Editor
+- Java Development Kit (JDK) - at least version 11
+- Text Editor
 
 We can control which statements are executed by using branching, conditionals. These allow us to say:
 
--   if this is true
-    -   execute a body of statements
--   if this is false
-    -   execute a different body of statements
+- if this is true
+  - execute a body of statements
+- if this is false
+  - execute a different body of statements
 
 In Java these are primarily done through:
 
--   if..then..else statements
--   ternary operations
--   switch statements
+- if..then..else statements
+- ternary operations
+- switch statements
 
 ### if..then..else statement
 
@@ -2665,9 +2666,9 @@ A side note: notice how the String variable `result` is declared outside of the 
 
 The characteristics of the above if..then..else are:
 
--   A simple, straightforward comparison statement
--   A single statement to run if the statement is true
--   A single statement to run if the statement is false
+- A simple, straightforward comparison statement
+- A single statement to run if the statement is true
+- A single statement to run if the statement is false
 
 An if..then..else statement that has a single condition followed by a single then statement and a single else statement is so common, there is a special construct just for that type of if..then..else statement. It is called the **ternary operator**.
 
@@ -2677,12 +2678,12 @@ An if..then..else statement that has a single condition followed by a single the
 
 The ternary operator above includes:
 
--   the conditional statement in parenthesis `( )`
--   a `?`
--   the statement to execute if the conditional is true
--   a `:`
--   the statement to execute if the conditional is false
--   and of course the required `;`
+- the conditional statement in parenthesis `( )`
+- a `?`
+- the statement to execute if the conditional is true
+- a `:`
+- the statement to execute if the conditional is false
+- and of course the required `;`
 
 ### Switch Statement
 
@@ -2736,10 +2737,10 @@ There is nothing wrong with this statement except it is hard to read. Java provi
 
 The important characteristics of the switch statement are:
 
--   `switch` is the keyword for this statement
--   the ordinal type can be any data type that can be counted: byte, short, int, char, String (specifically NOT long, double)
--   switch searches until it find the first ordinal type that matches the variable and performs the associated statement(s). The order of the ordinal type constants do not matter!
--   if no match is made, the default action is performed
+- `switch` is the keyword for this statement
+- the ordinal type can be any data type that can be counted: byte, short, int, char, String (specifically NOT long, double)
+- switch searches until it find the first ordinal type that matches the variable and performs the associated statement(s). The order of the ordinal type constants do not matter!
+- if no match is made, the default action is performed
 
 ### Conditions Combination
 
@@ -2769,14 +2770,14 @@ The first option is preferred!
 
 Java allows for the following comparisons.
 
--   Less than: a `<` b
--   Less than or equal to: a `<=` b
--   Greater than: a `>` b
--   Greater than or equal to: a `>=` b
--   Equal: to a `==` b
--   Not Equal to: a `!=` b
--   And: true `&&` true
--   Or: true `||` true
+- Less than: a `<` b
+- Less than or equal to: a `<=` b
+- Greater than: a `>` b
+- Greater than or equal to: a `>=` b
+- Equal: to a `==` b
+- Not Equal to: a `!=` b
+- And: true `&&` true
+- Or: true `||` true
 
 ### Comparing Strings
 
@@ -2860,12 +2861,12 @@ So the above code produces the following output, minus output from previous sect
 
 So what happened?
 
--   Set the `time` integer variable to 22
--   See if `time` is less than 11
-    -   if so display Good Morning.
-    -   if not, see if `time` is less than 20
-        -   if so display Good Day.
-        -   otherwise display Good Evening.
+- Set the `time` integer variable to 22
+- See if `time` is less than 11
+  - if so display Good Morning.
+  - if not, see if `time` is less than 20
+    - if so display Good Day.
+    - otherwise display Good Evening.
 
 ### Ternary Operator
 
@@ -3059,14 +3060,14 @@ So the above code produces the following output, minus output from previous sect
 
 ##### Dig Deeper
 
--   [if..then..else](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html)  
-    Oracle Java Nuts and Bolts if..then..else
--   [Switch](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html)  
-    Oracle Java Nuts and Bolts Switch
--   [Comparing Strings](https://www.geeksforgeeks.org/compare-two-strings-in-java/)  
-    Comparing Two Strings
+- [if..then..else](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html)  
+  Oracle Java Nuts and Bolts if..then..else
+- [Switch](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html)  
+  Oracle Java Nuts and Bolts Switch
+- [Comparing Strings](https://www.geeksforgeeks.org/compare-two-strings-in-java/)  
+  Comparing Two Strings
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
@@ -3076,13 +3077,13 @@ We will be learning our way around the Java Development Kit using the standard H
 
 [GitHub Repo](https://github.com/LambdaSchool/java-EmployeeApp.git)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Snack Bar](https://github.com/LambdaSchool/java-SnackBar.git)
+- ##### [Snack Bar](https://github.com/LambdaSchool/java-SnackBar.git)
 
-    In this project, you will practice using the JDK, working with multiple Java classes and objects, and using base data types.
+  In this project, you will practice using the JDK, working with multiple Java classes and objects, and using base data types.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -3090,12 +3091,12 @@ We will be learning our way around the Java Development Kit using the standard H
 
 You can use class recordings to help you master the material.
 
--   **[Java JDK and Classes for WEB33 with John Mitchell](https://youtu.be/ZRQPnRpa7dA)**
--   [All previous recordings](/archive/WEB4Java/module/recAGVTYNZyJbEFpu)
+- **[Java JDK and Classes for WEB33 with John Mitchell](https://youtu.be/ZRQPnRpa7dA)**
+- [All previous recordings](/archive/WEB4Java/module/recAGVTYNZyJbEFpu)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Guided Project: java-EmployeeAPP
--   Project: Snack Bar
+- Guided Project: java-EmployeeAPP
+- Project: Snack Bar

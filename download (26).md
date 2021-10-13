@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Form Management
 
@@ -71,11 +69,11 @@
 
 **At the end of this module, you should be able to:**
 
--   demonstrate how to build a form with the basic HTML form elements
--   use the onChange handler to capture input values
--   utilize a form's submit event to work with form data
--   demonstrate the ability to handle multiple inputs in a form
--   use controlled inputs to manage form data
+- demonstrate how to build a form with the basic HTML form elements
+- use the onChange handler to capture input values
+- utilize a form's submit event to work with form data
+- demonstrate the ability to handle multiple inputs in a form
+- use controlled inputs to manage form data
 
 #### Pro Tip
 
@@ -85,35 +83,25 @@ When talking about your journey, don’t focus on things you don’t know yet, f
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=OoDQJLStKWM), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=OoDQJLStKWM), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=GIpU4qMyEZY), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=GIpU4qMyEZY), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=IMv4yjP_VCA), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=eMHsHZOsFF8), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=IMv4yjP_VCA), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=eMHsHZOsFF8), or enable JavaScript if it is disabled in your browser.
-
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=bGuKVboEOSk), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=bGuKVboEOSk), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -160,7 +148,7 @@ We’re going to create a step-by-step login form; we’ll start simply by crea
 
     export default App;
 
-This only renders a basic text input field, but already we could ask a couple of questions. First, if all we’re rendering is an `<input>`, then why are we bothering to put it inside a `<form>`? Second, there are a lot of different kinds of `<input>`’s, how does this one know to be a *text* input? The answer to the first question has to do with the form being stateful, as we’ll see soon. To some extent, the `<form>` tag will be able to keep track of what its children are doing. As for the second question, a basic text field is what an `<input>` tag defaults to, but this isn’t very semantic, is it? Another way to say it is that this code isn’t very “self-documenting,” meaning other developers looking at our code in the future might have a harder time understanding what it’s for. What’s even worse is that screen readers might have difficulty parsing what it’s for. A trivial effort from us can mean a world of difference for a future developer or for someone using a screen reader.
+This only renders a basic text input field, but already we could ask a couple of questions. First, if all we’re rendering is an `<input>`, then why are we bothering to put it inside a `<form>`? Second, there are a lot of different kinds of `<input>`’s, how does this one know to be a _text_ input? The answer to the first question has to do with the form being stateful, as we’ll see soon. To some extent, the `<form>` tag will be able to keep track of what its children are doing. As for the second question, a basic text field is what an `<input>` tag defaults to, but this isn’t very semantic, is it? Another way to say it is that this code isn’t very “self-documenting,” meaning other developers looking at our code in the future might have a harder time understanding what it’s for. What’s even worse is that screen readers might have difficulty parsing what it’s for. A trivial effort from us can mean a world of difference for a future developer or for someone using a screen reader.
 
 Let’s do better by making this code a friendlier to developers and screen readers alike.
 
@@ -184,7 +172,7 @@ Let’s do better by making this code a friendlier to developers and screen read
 
 Better. Now screenreaders, users, and fellow developers should have an easier time understanding what this input is for.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use the onChange handler to capture input values
 
@@ -291,7 +279,7 @@ This isn’t a bad start, but writing our function inline like this could get me
 
 This might seem like a little extra work but notice that within the body of our `handleChange` function, we can now execute as many lines of code as we want without cluttering up our markup. Getting used to this pattern will save you some headaches later on.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to utilize a form's submit event to work with form data
 
@@ -305,7 +293,7 @@ Imagine you fill out a form with 10 input fields. You have been keying `tab` to 
 
 ##### Follow Along
 
-*Submitting form data*
+_Submitting form data_
 
 As mentioned above, in real applications, we’d probably be sending this information asynchronously to a server to authenticate them, but for now, let’s just log the user to the console. To do this, we’ll need a submit button and a function to handle that submit.
 
@@ -378,7 +366,7 @@ Here’s our updated code.
 
 Nice, it logs our state to the console without refreshing the page. Let’s move on.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to demonstrate the ability to handle multiple inputs in a form
 
@@ -476,7 +464,7 @@ Okay, so creating a new binding doesn’t give us a new object. How can we creat
 
 This time when we declare `bar`, we take all the key/value pairs inside foo (in this case, there’s only one) and “spread” them out (copy them) inside a brand new object literal. This gives us the behavior we expected to see in the first place.
 
-So what does this have to do with React? Two things. Remember back to the `useState` module when we talked about React’s namesake? When the state changes your view layer *reacts* to the change and updates. To get a little more technical, something in our state changes React triggers a re-render of every component that is using that data. If react doesn’t think the state has changed, it won’t trigger a re-render. Remember that our first goal was to keep the username and the password in a single state object instead of repeating ourselves with two useStates? We might think that we could accomplish that like so:
+So what does this have to do with React? Two things. Remember back to the `useState` module when we talked about React’s namesake? When the state changes your view layer _reacts_ to the change and updates. To get a little more technical, something in our state changes React triggers a re-render of every component that is using that data. If react doesn’t think the state has changed, it won’t trigger a re-render. Remember that our first goal was to keep the username and the password in a single state object instead of repeating ourselves with two useStates? We might think that we could accomplish that like so:
 
     import React, { useState } from "react";
     import "./App.css";
@@ -518,7 +506,7 @@ So what does this have to do with React? Two things. Remember back to the `useSt
 
     export default App;
 
-But we screwed up. All we wanted to do was update one of the keys on our state object, instead, we’re replacing the entire object. If we type a letter in the `Username` field, we’ll have changed the value of `user` from `{name: '', password: ''}` to `{name: [whatever the user types]}`. Then if we type something in the `Password` field, we’ll have changed the value of `user` *again* to `{password: [whatever the user types]}`. Our log to the console can help demonstrate:
+But we screwed up. All we wanted to do was update one of the keys on our state object, instead, we’re replacing the entire object. If we type a letter in the `Username` field, we’ll have changed the value of `user` from `{name: '', password: ''}` to `{name: [whatever the user types]}`. Then if we type something in the `Password` field, we’ll have changed the value of `user` _again_ to `{password: [whatever the user types]}`. Our log to the console can help demonstrate:
 
 <img src="https://tk-assets.lambdaschool.com/db36c808-3a97-499b-87a6-1cd9474d3c91_spread.png" width="600" alt="drawing" />
 
@@ -542,7 +530,7 @@ So we’ve condensed our state into a single object, but we still have two chang
 
 ### Computed properties
 
-Another extremely useful tool from ES6, computed properties, lets us *compute* the properties of objects, as the name implies. Take a look at this.
+Another extremely useful tool from ES6, computed properties, lets us _compute_ the properties of objects, as the name implies. Take a look at this.
 
     let myObject = { firstProperty: "Hi Lambda!" };
 
@@ -681,7 +669,7 @@ You could add as many inputs to this app as you like, and so long as each had a 
 
 That was a lot to get two input fields working, but the things we learned about React and JavaScript to accomplish this will pay off over and over again in other ways down the line. Great job making it this far, but there’s one last thing to discuss.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use controlled inputs to manage form data
 
@@ -788,13 +776,13 @@ Now when the user clicks submit, the state will be reset with empty strings. And
 
 Forms. They’re no joke!
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Team builder](https://github.com/LambdaSchool/team-builder)
+- ##### [Team builder](https://github.com/LambdaSchool/team-builder)
 
-    In this project you will build a form to add new team members to your team. Then you’ll use the same form to add edit functionality to your app as well.
+  In this project you will build a form to add new team members to your team. Then you’ll use the same form to add edit functionality to your app as well.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -802,14 +790,14 @@ Forms. They’re no joke!
 
 You can use class recordings to help you master the material.
 
--   **[Form Management for WebPT22 w/Chris Atoki](https://youtu.be/OiK7bRuHrf8)**
+- **[Form Management for WebPT22 w/Chris Atoki](https://youtu.be/OiK7bRuHrf8)**
 
-    Objectives: Student should be able to demonstrate how to build a form with the basic HTML form elements Student should be able to use the onChange handler to capture input values Student should be able to utilize a form’s submit event to work with form data Student should be able to demonstrate the ability to handle multiple inputs in a form Student should be able to use controlled inputs to manage form data
+  Objectives: Student should be able to demonstrate how to build a form with the basic HTML form elements Student should be able to use the onChange handler to capture input values Student should be able to utilize a form’s submit event to work with form data Student should be able to demonstrate the ability to handle multiple inputs in a form Student should be able to use controlled inputs to manage form data
 
--   [All previous recordings](/archive/FSW/module/rect081xiYT2cfxGF)
+- [All previous recordings](/archive/FSW/module/rect081xiYT2cfxGF)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Project: Team builder
+- Project: Team builder

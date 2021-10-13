@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,29 +10,29 @@
 
 <a href="/web4java/sprint/recnLDyTtONLTMiFJ" class="bd-toc-link">1.  Java Precourse Information</a>
 
--   [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
--   [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
+- [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
+- [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
 
 <a href="/web4java/sprint/recoJ4ZqNQWX3cy6E" class="bd-toc-link">2.  Java Fundamentals</a>
 
--   [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
--   [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
--   [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
--   [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
+- [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
+- [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
+- [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
+- [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
 
 <a href="/web4java/sprint/recRVUSWQEtosl0Cz" class="bd-toc-link">3.  RDBMS and Intro to APIs</a>
 
--   [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
--   [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
--   [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
--   [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
+- [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
+- [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
+- [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
+- [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
 
 <a href="/web4java/sprint/recSqm5AAEkJcIl3p" class="bd-toc-link">4.  Java Frameworks</a>
 
--   [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
--   [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
--   [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
--   [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
+- [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
+- [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
+- [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
+- [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
 
 <a href="/web4java/sprint/recC5dhR9menaROwx" class="bd-toc-link">5.  WEB Unit 4 Java Build</a>
 
@@ -44,35 +42,35 @@
 
 <a href="/web4java/sprint/recnLDyTtONLTMiFJ" class="bd-toc-link">1.  Java Precourse Information</a>
 
--   [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
--   [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
+- [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
+- [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
 
 <a href="/web4java/sprint/recoJ4ZqNQWX3cy6E" class="bd-toc-link">2.  Java Fundamentals</a>
 
--   [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
--   [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
--   [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
--   [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
+- [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
+- [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
+- [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
+- [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
 
 <a href="/web4java/sprint/recRVUSWQEtosl0Cz" class="bd-toc-link">3.  RDBMS and Intro to APIs</a>
 
--   [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
--   [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
--   [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
--   [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
+- [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
+- [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
+- [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
+- [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
 
 <a href="/web4java/sprint/recSqm5AAEkJcIl3p" class="bd-toc-link">4.  Java Frameworks</a>
 
--   [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
--   [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
--   [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
--   [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
+- [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
+- [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
+- [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
+- [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
 
 <a href="/web4java/sprint/recC5dhR9menaROwx" class="bd-toc-link">5.  WEB Unit 4 Java Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Review](#review)
 
 # Java Spring Course Table of Contents
 
@@ -80,7 +78,7 @@
 
 **At the end of this module, you should be able to:**
 
--   find the information needed on a specific topic
+- find the information needed on a specific topic
 
 #### Pro Tip
 
@@ -102,146 +100,150 @@ The following are listed in the order the topics during the course
 
 #### Course Introduction
 
--   [Pros and Cons of Taking the Course](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Pros_and_Cons_of_Taking_the_Course)
--   [What to Expect in the Java Course](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#What_to_Expect_in_the_Java_Course)
--   [Java Spring Resources](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Java_Spring_Resources)
+- [Pros and Cons of Taking the Course](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Pros_and_Cons_of_Taking_the_Course)
+- [What to Expect in the Java Course](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#What_to_Expect_in_the_Java_Course)
+- [Java Spring Resources](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Java_Spring_Resources)
 
 #### Installing Software
 
--   [Install the JDK Overview](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_the_JDK_Overview)
-    -   [Install the JDK for Windows](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_the_JDK_for_Windows)
-    -   [Install the JDK for Mac](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_the_JDK_for_Mac)
-    -   [Install the JDK for Ubuntu](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_the_JDK_for_Ubuntu)
+- [Install the JDK Overview](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_the_JDK_Overview)
 
--   [Install and Configure IntelliJ](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_and_Configure_IntelliJ)
+  - [Install the JDK for Windows](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_the_JDK_for_Windows)
+  - [Install the JDK for Mac](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_the_JDK_for_Mac)
+  - [Install the JDK for Ubuntu](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_the_JDK_for_Ubuntu)
 
--   [Install Postman Overview](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_Postman_Overview)
-    -   [Install Postman for Windows](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_Postman_for_Windows)
-    -   [Install Postman for Mac](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_Postman_for_Mac)
-    -   [Install Postman for Ubuntu](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_Postman_for_Ubuntu)
+- [Install and Configure IntelliJ](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_and_Configure_IntelliJ)
 
--   [Install PostgreSQL Overview](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_PostgreSQL_Overview)
-    -   [Install PostgreSQL on Windows](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_PostgreSQL_on_Windows)
-    -   [Install PostgreSQL on Mac](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_PostgreSQL_on_Mac)
-    -   [Install PostgreSQL on Ubuntu](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_PostgreSQL_on_Ubuntu)
-    -   [Setup PostgreSQL on Heroku](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Setup_PostgreSQL_on_Heroku)
+- [Install Postman Overview](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_Postman_Overview)
 
--   [Setup Environment Variables Overview](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Setup_Environment_Variables_Overview)
-    -   [Setup Environment Variables on Windows](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Setup_Environment_Variables_on_Windows)
-    -   [Setup Environment Variables on Mac](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Setup_Environment_Variables_on_Mac)
-    -   [Setup Environment Variables on Ubuntu](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Setup_Environment_Variables_on_Ubuntu)
+  - [Install Postman for Windows](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_Postman_for_Windows)
+  - [Install Postman for Mac](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_Postman_for_Mac)
+  - [Install Postman for Ubuntu](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_Postman_for_Ubuntu)
 
--   [Install Heroku Overview](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_Heroku_Overview)
-    -   [Heroku CLI Windows](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Heroku_CLI_Windows)
-    -   [Heroku CLI Mac](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Heroku_CLI_Mac)
-    -   [Heroku CLI Ubuntu](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Heroku_CLI_Ubuntu)
+- [Install PostgreSQL Overview](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_PostgreSQL_Overview)
+
+  - [Install PostgreSQL on Windows](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_PostgreSQL_on_Windows)
+  - [Install PostgreSQL on Mac](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_PostgreSQL_on_Mac)
+  - [Install PostgreSQL on Ubuntu](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_PostgreSQL_on_Ubuntu)
+  - [Setup PostgreSQL on Heroku](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Setup_PostgreSQL_on_Heroku)
+
+- [Setup Environment Variables Overview](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Setup_Environment_Variables_Overview)
+
+  - [Setup Environment Variables on Windows](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Setup_Environment_Variables_on_Windows)
+  - [Setup Environment Variables on Mac](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Setup_Environment_Variables_on_Mac)
+  - [Setup Environment Variables on Ubuntu](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Setup_Environment_Variables_on_Ubuntu)
+
+- [Install Heroku Overview](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Install_Heroku_Overview)
+  - [Heroku CLI Windows](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Heroku_CLI_Windows)
+  - [Heroku CLI Mac](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Heroku_CLI_Mac)
+  - [Heroku CLI Ubuntu](https://learn.lambdaschool.com/web4java/module/recfnUAvFbeyIAHib#Heroku_CLI_Ubuntu)
 
 #### Java Fundamentals
 
--   [The Java Development Kit(JDK)](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#The_Java_Development_Kit)
-    -   [Java Introduction](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#Java_Introduction)
-    -   [Object Oriented Programming](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#Object_Oriented_Programming)
-    -   [Base Type in Java](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#Base_Type_in_Java)
-    -   [Constructs in Java](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#Constructs_in_Java)
-    -   [Dates and Strings in Java](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#Dates_and_Strings_in_Java)
-    -   [Big Decimals in Java](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#Big_Decimals_in_Java)
-    -   [FOR Loops](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#FOR_Loops)
-    -   [WHILE Loops](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#WHILE_Loops)
-    -   [Recursion](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#Recursion)
-    -   [Branching](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#Branching)
--   [Interfaces, Abstract Classes, Lambda Expressions](https://learn.lambdaschool.com/web4java/module/rec6Hrk77HupYeoN5#Interfaces_Abstract_Classes_Lambda_Expressions)
-    -   [Collections Overview](https://learn.lambdaschool.com/web4java/module/rec6Hrk77HupYeoN5#Collections_Overview)
-    -   [ArrayList](https://learn.lambdaschool.com/web4java/module/rec6Hrk77HupYeoN5#ArrayList)
-    -   [Interfaces](https://learn.lambdaschool.com/web4java/module/rec6Hrk77HupYeoN5#Interfaces)
-    -   [Abstract Classes](https://learn.lambdaschool.com/web4java/module/rec6Hrk77HupYeoN5#Abstract_Classes)
-    -   [Lambda Expressions](https://learn.lambdaschool.com/web4java/module/rec6Hrk77HupYeoN5#Lambda_Expressions)
-    -   [Arrays](https://learn.lambdaschool.com/web4java/module/rec6Hrk77HupYeoN5#Arrays)
-    -   [HashMap](https://learn.lambdaschool.com/web4java/module/rec6Hrk77HupYeoN5#HashMap)
-    -   [HashSet](https://learn.lambdaschool.com/web4java/module/rec6Hrk77HupYeoN5#HashSet)
--   [RDBMS and SQL](https://learn.lambdaschool.com/web4java/module/recyJ663TrxVgpqY9#RDBMS_and_SQL)
-    -   [RDBMS](https://learn.lambdaschool.com/web4java/module/recyJ663TrxVgpqY9#RDBMS)
-    -   [SQL](https://learn.lambdaschool.com/web4java/module/recyJ663TrxVgpqY9#SQL)
-    -   [Query Single Table](https://learn.lambdaschool.com/web4java/module/recyJ663TrxVgpqY9#Query_Single_Table)
-    -   [Query Multiple Tables](https://learn.lambdaschool.com/web4java/module/recyJ663TrxVgpqY9#Query_Multiple_Tables)
-    -   [CRUD using SQL](https://learn.lambdaschool.com/web4java/module/recyJ663TrxVgpqY9#CRUD_using_SQL)
-    -   [Using PostgreSQL](https://learn.lambdaschool.com/web4java/module/recyJ663TrxVgpqY9#PostgreSQL)
-    -   [DB Normal Forms](https://learn.lambdaschool.com/web4java/module/recyJ663TrxVgpqY9#DB_Normal_Forms)
--   [IntelliJ and REST API](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#IntelliJ_and_REST_API)
-    -   [IntelliJ Overview](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#IntelliJ_Overview)
-    -   [IntelliJ and GitHub](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#IntelliJ_and_GitHub)
-    -   [Maven Spring Tomcat](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#Maven_Spring_Tomcat)
-    -   [REST Review](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#REST_Review)
-    -   [REST Services using Java Spring](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#REST_Services_using_Java_Spring)
-    -   [Dependency Injection](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#Dependency_Injection)
-    -   [Bean Lifecycle](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#Bean_Lifecycle)
-    -   [Maven Phases](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#Maven_Phases)
-    -   [Using Postman](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#Postman)
-    -   [Spring with IntelliJ Community Edition](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#Spring_with_IntelliJ_Community_Edition)
-    -   [IntelliJ Tips and Tricks](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#IntelliJ_Tips_and_Tricks)
-        -   [Use of Live Templates](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#live_templates)
-        -   [Force an Import](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#force_import)
-        -   [Code Reformat](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#code_reformat)
-        -   [Renaming Things](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#renaming_things)
-        -   [Compare Things](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#compare_things)
+- [The Java Development Kit(JDK)](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#The_Java_Development_Kit)
+  - [Java Introduction](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#Java_Introduction)
+  - [Object Oriented Programming](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#Object_Oriented_Programming)
+  - [Base Type in Java](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#Base_Type_in_Java)
+  - [Constructs in Java](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#Constructs_in_Java)
+  - [Dates and Strings in Java](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#Dates_and_Strings_in_Java)
+  - [Big Decimals in Java](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#Big_Decimals_in_Java)
+  - [FOR Loops](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#FOR_Loops)
+  - [WHILE Loops](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#WHILE_Loops)
+  - [Recursion](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#Recursion)
+  - [Branching](https://learn.lambdaschool.com/web4java/module/recAGVTYNZyJbEFpu#Branching)
+- [Interfaces, Abstract Classes, Lambda Expressions](https://learn.lambdaschool.com/web4java/module/rec6Hrk77HupYeoN5#Interfaces_Abstract_Classes_Lambda_Expressions)
+  - [Collections Overview](https://learn.lambdaschool.com/web4java/module/rec6Hrk77HupYeoN5#Collections_Overview)
+  - [ArrayList](https://learn.lambdaschool.com/web4java/module/rec6Hrk77HupYeoN5#ArrayList)
+  - [Interfaces](https://learn.lambdaschool.com/web4java/module/rec6Hrk77HupYeoN5#Interfaces)
+  - [Abstract Classes](https://learn.lambdaschool.com/web4java/module/rec6Hrk77HupYeoN5#Abstract_Classes)
+  - [Lambda Expressions](https://learn.lambdaschool.com/web4java/module/rec6Hrk77HupYeoN5#Lambda_Expressions)
+  - [Arrays](https://learn.lambdaschool.com/web4java/module/rec6Hrk77HupYeoN5#Arrays)
+  - [HashMap](https://learn.lambdaschool.com/web4java/module/rec6Hrk77HupYeoN5#HashMap)
+  - [HashSet](https://learn.lambdaschool.com/web4java/module/rec6Hrk77HupYeoN5#HashSet)
+- [RDBMS and SQL](https://learn.lambdaschool.com/web4java/module/recyJ663TrxVgpqY9#RDBMS_and_SQL)
+  - [RDBMS](https://learn.lambdaschool.com/web4java/module/recyJ663TrxVgpqY9#RDBMS)
+  - [SQL](https://learn.lambdaschool.com/web4java/module/recyJ663TrxVgpqY9#SQL)
+  - [Query Single Table](https://learn.lambdaschool.com/web4java/module/recyJ663TrxVgpqY9#Query_Single_Table)
+  - [Query Multiple Tables](https://learn.lambdaschool.com/web4java/module/recyJ663TrxVgpqY9#Query_Multiple_Tables)
+  - [CRUD using SQL](https://learn.lambdaschool.com/web4java/module/recyJ663TrxVgpqY9#CRUD_using_SQL)
+  - [Using PostgreSQL](https://learn.lambdaschool.com/web4java/module/recyJ663TrxVgpqY9#PostgreSQL)
+  - [DB Normal Forms](https://learn.lambdaschool.com/web4java/module/recyJ663TrxVgpqY9#DB_Normal_Forms)
+- [IntelliJ and REST API](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#IntelliJ_and_REST_API)
+  - [IntelliJ Overview](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#IntelliJ_Overview)
+  - [IntelliJ and GitHub](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#IntelliJ_and_GitHub)
+  - [Maven Spring Tomcat](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#Maven_Spring_Tomcat)
+  - [REST Review](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#REST_Review)
+  - [REST Services using Java Spring](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#REST_Services_using_Java_Spring)
+  - [Dependency Injection](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#Dependency_Injection)
+  - [Bean Lifecycle](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#Bean_Lifecycle)
+  - [Maven Phases](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#Maven_Phases)
+  - [Using Postman](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#Postman)
+  - [Spring with IntelliJ Community Edition](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#Spring_with_IntelliJ_Community_Edition)
+  - [IntelliJ Tips and Tricks](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#IntelliJ_Tips_and_Tricks)
+    - [Use of Live Templates](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#live_templates)
+    - [Force an Import](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#force_import)
+    - [Code Reformat](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#code_reformat)
+    - [Renaming Things](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#renaming_things)
+    - [Compare Things](https://learn.lambdaschool.com/web4java/module/recqtftA9E98qpbak#compare_things)
 
 #### Java with RDBMS and API Intros
 
--   [Spring Database Creating with Seed Data](https://learn.lambdaschool.com/web4java/module/recb0OVmRrJzqhH4D#Data_Model_Creation)
-    -   [Data Modeling](https://learn.lambdaschool.com/web4java/module/recb0OVmRrJzqhH4D#Data_Modeling)
-    -   [Data Seeding Using SQL](https://learn.lambdaschool.com/web4java/module/recb0OVmRrJzqhH4D#Data_Seeding_Using_SQL)
-    -   [Spring Data Relationships](https://learn.lambdaschool.com/web4java/module/recb0OVmRrJzqhH4D#Spring_Data_Relationships)
-    -   [Data Seeding Using Java Spring](https://learn.lambdaschool.com/web4java/module/recb0OVmRrJzqhH4D#Data_Seeding_Using_Java_Spring)
-    -   [Mass Data Seeding JavaFaker](https://learn.lambdaschool.com/web4java/module/recb0OVmRrJzqhH4D#Mass_Data_Seeding)
-    -   [H2 Console](https://learn.lambdaschool.com/web4java/module/recb0OVmRrJzqhH4D#H2_Console)
--   [Reading Data using CRUD Operation](https://learn.lambdaschool.com/web4java/module/rec3THcdjv8BumGCt#Read_Data_using_CRUD_Operation)
-    -   [CRUD Reading](https://learn.lambdaschool.com/web4java/module/rec3THcdjv8BumGCt#CRUD_Reading)
-    -   [Querying using JPA Constructs](https://learn.lambdaschool.com/web4java/module/rec3THcdjv8BumGCt#Querying_using_JPA_Constructs)
-    -   [JsonIgnoreProperties](https://learn.lambdaschool.com/web4java/module/rec3THcdjv8BumGCt#JsonIgnoreProperties)
-    -   [Querying using custom SQL](https://learn.lambdaschool.com/web4java/module/rec3THcdjv8BumGCt#Querying_using_SQL)
--   [Insert, Delete, Update Data using CRUD Operations](https://learn.lambdaschool.com/web4java/module/recJihkiNn2KH2nEW#Insert_Delete_Update_Data_using_CRUD_Operations)
-    -   [Using Postman For CRUD Operations](https://learn.lambdaschool.com/web4java/module/recJihkiNn2KH2nEW#Using_Postman)
-    -   [CRUD Creating and replacing POST and PUT](https://learn.lambdaschool.com/web4java/module/recJihkiNn2KH2nEW#CRUD_Creating_and_replacing)
-    -   [CRUD Partially Updating PATCH](https://learn.lambdaschool.com/web4java/module/recJihkiNn2KH2nEW#CRUD_Partially_Updating)
-    -   [CRUD Deleting DELETE](https://learn.lambdaschool.com/web4java/module/recJihkiNn2KH2nEW#CRUD_Deleting)
-    -   [Transactional](https://learn.lambdaschool.com/web4java/module/recJihkiNn2KH2nEW#Transactional)
--   [Data Modeling and Auditing Fields with Custom Querying](https://learn.lambdaschool.com/web4java/module/rec2oQCFWOVShtxIx#Data_Modeling_and_Auditing_Fields_with_Custom_Querying)
-    -   [Additional fields: Many to Many => 2 One to Many Relationships](https://learn.lambdaschool.com/web4java/module/rec2oQCFWOVShtxIx#Additional_fields)
-    -   [Adding Audit Fields](https://learn.lambdaschool.com/web4java/module/rec2oQCFWOVShtxIx#Adding_Audit_Fields)
-    -   [Using Audit Fields](https://learn.lambdaschool.com/web4java/module/rec2oQCFWOVShtxIx#Using_Audit_Fields)
-    -   [Data Manipulation using SQL](https://learn.lambdaschool.com/web4java/module/rec2oQCFWOVShtxIx#Data_Manipulation_using_SQL)
-    -   [Swagger](https://learn.lambdaschool.com/web4java/module/rec2oQCFWOVShtxIx#Swagger)
-    -   [Printing Swagger](https://learn.lambdaschool.com/web4java/module/rec2oQCFWOVShtxIx#Printing_Swagger)
+- [Spring Database Creating with Seed Data](https://learn.lambdaschool.com/web4java/module/recb0OVmRrJzqhH4D#Data_Model_Creation)
+  - [Data Modeling](https://learn.lambdaschool.com/web4java/module/recb0OVmRrJzqhH4D#Data_Modeling)
+  - [Data Seeding Using SQL](https://learn.lambdaschool.com/web4java/module/recb0OVmRrJzqhH4D#Data_Seeding_Using_SQL)
+  - [Spring Data Relationships](https://learn.lambdaschool.com/web4java/module/recb0OVmRrJzqhH4D#Spring_Data_Relationships)
+  - [Data Seeding Using Java Spring](https://learn.lambdaschool.com/web4java/module/recb0OVmRrJzqhH4D#Data_Seeding_Using_Java_Spring)
+  - [Mass Data Seeding JavaFaker](https://learn.lambdaschool.com/web4java/module/recb0OVmRrJzqhH4D#Mass_Data_Seeding)
+  - [H2 Console](https://learn.lambdaschool.com/web4java/module/recb0OVmRrJzqhH4D#H2_Console)
+- [Reading Data using CRUD Operation](https://learn.lambdaschool.com/web4java/module/rec3THcdjv8BumGCt#Read_Data_using_CRUD_Operation)
+  - [CRUD Reading](https://learn.lambdaschool.com/web4java/module/rec3THcdjv8BumGCt#CRUD_Reading)
+  - [Querying using JPA Constructs](https://learn.lambdaschool.com/web4java/module/rec3THcdjv8BumGCt#Querying_using_JPA_Constructs)
+  - [JsonIgnoreProperties](https://learn.lambdaschool.com/web4java/module/rec3THcdjv8BumGCt#JsonIgnoreProperties)
+  - [Querying using custom SQL](https://learn.lambdaschool.com/web4java/module/rec3THcdjv8BumGCt#Querying_using_SQL)
+- [Insert, Delete, Update Data using CRUD Operations](https://learn.lambdaschool.com/web4java/module/recJihkiNn2KH2nEW#Insert_Delete_Update_Data_using_CRUD_Operations)
+  - [Using Postman For CRUD Operations](https://learn.lambdaschool.com/web4java/module/recJihkiNn2KH2nEW#Using_Postman)
+  - [CRUD Creating and replacing POST and PUT](https://learn.lambdaschool.com/web4java/module/recJihkiNn2KH2nEW#CRUD_Creating_and_replacing)
+  - [CRUD Partially Updating PATCH](https://learn.lambdaschool.com/web4java/module/recJihkiNn2KH2nEW#CRUD_Partially_Updating)
+  - [CRUD Deleting DELETE](https://learn.lambdaschool.com/web4java/module/recJihkiNn2KH2nEW#CRUD_Deleting)
+  - [Transactional](https://learn.lambdaschool.com/web4java/module/recJihkiNn2KH2nEW#Transactional)
+- [Data Modeling and Auditing Fields with Custom Querying](https://learn.lambdaschool.com/web4java/module/rec2oQCFWOVShtxIx#Data_Modeling_and_Auditing_Fields_with_Custom_Querying)
+  - [Additional fields: Many to Many => 2 One to Many Relationships](https://learn.lambdaschool.com/web4java/module/rec2oQCFWOVShtxIx#Additional_fields)
+  - [Adding Audit Fields](https://learn.lambdaschool.com/web4java/module/rec2oQCFWOVShtxIx#Adding_Audit_Fields)
+  - [Using Audit Fields](https://learn.lambdaschool.com/web4java/module/rec2oQCFWOVShtxIx#Using_Audit_Fields)
+  - [Data Manipulation using SQL](https://learn.lambdaschool.com/web4java/module/rec2oQCFWOVShtxIx#Data_Manipulation_using_SQL)
+  - [Swagger](https://learn.lambdaschool.com/web4java/module/rec2oQCFWOVShtxIx#Swagger)
+  - [Printing Swagger](https://learn.lambdaschool.com/web4java/module/rec2oQCFWOVShtxIx#Printing_Swagger)
 
 #### Java Frameworks
 
--   [Exception Handling Overview](https://learn.lambdaschool.com/web4java/module/rec3E1WYDyoiEF1e3#Exception_Handling_Overview)
-    -   [Exception Handling](https://learn.lambdaschool.com/web4java/module/rec3E1WYDyoiEF1e3#Exception_Handling)
-    -   [Java Exception Constructs](https://learn.lambdaschool.com/web4java/module/rec3E1WYDyoiEF1e3#Java_Exception_Constructs)
-    -   [Validation](https://learn.lambdaschool.com/web4java/module/rec3E1WYDyoiEF1e3#Validation)
-    -   [Data from Other APIs](https://learn.lambdaschool.com/web4java/module/rec3E1WYDyoiEF1e3#Data_from_Other_APIs)
-    -   [Customized Swagger Documentation](https://learn.lambdaschool.com/web4java/module/rec3E1WYDyoiEF1e3#Customized_Swagger_Documentation)
--   [User Authentication](https://learn.lambdaschool.com/web4java/module/rececDV2OMIUcY2eH#User_Authentication)
-    -   [OAuth2 Security](https://learn.lambdaschool.com/web4java/module/rececDV2OMIUcY2eH#OAuth2_Security)
-    -   [User Information from Access Token](https://learn.lambdaschool.com/web4java/module/rececDV2OMIUcY2eH#User_Information_from_Access_Token)
-    -   [CORS](https://learn.lambdaschool.com/web4java/module/rececDV2OMIUcY2eH#CORS)
-    -   [Special Endpoints](https://learn.lambdaschool.com/web4java/module/rececDV2OMIUcY2eH#Special_Endpoints)
-    -   [Using Authentication in Postman](https://learn.lambdaschool.com/web4java/module/rececDV2OMIUcY2eH#Using_Authentication_in_Postman)
--   [Automated Testing](https://learn.lambdaschool.com/web4java/module/recDboXln5wm4aKJt#Automated_Testing_Overview)
-    -   [Automated Testing](https://learn.lambdaschool.com/web4java/module/recDboXln5wm4aKJt#Automated_Testing)
-    -   [JUnit Service Unit Testing](https://learn.lambdaschool.com/web4java/module/recDboXln5wm4aKJt#JUnit_Service_Unit_Testing)
-    -   [JUnit Controllers Unit Testing](https://learn.lambdaschool.com/web4java/module/recDboXln5wm4aKJt#JUnit_Controllers_Unit_Testing)
-    -   [RestAssured and Integration Testing](https://learn.lambdaschool.com/web4java/module/recDboXln5wm4aKJt#RestAssured_and_Integration_Testing)
--   [Deployment](https://learn.lambdaschool.com/web4java/module/rec7pCiBPzI4DkAJT#Deployment)
-    -   [Convert to PostgreSQL](https://learn.lambdaschool.com/web4java/module/rec7pCiBPzI4DkAJT#Convert_to_PostgreSQL)
-    -   [Deploy to Cloud (Heroku) Using JAR](https://learn.lambdaschool.com/web4java/module/rec7pCiBPzI4DkAJT#Deploy_to_Cloud_Using_JAR)
-    -   [Access Using JavaScript](https://learn.lambdaschool.com/web4java/module/rec7pCiBPzI4DkAJT#Access_Using_JavaScript)
-    -   [cURL](https://learn.lambdaschool.com/web4java/module/rec7pCiBPzI4DkAJT#cURL)
-    -   [Future Java Topics](https://learn.lambdaschool.com/web4java/module/rec7pCiBPzI4DkAJT#Future_Java_Topics)
-    -   [Deploy Locally Using JAR](https://learn.lambdaschool.com/web4java/module/rec7pCiBPzI4DkAJT#Deploy_Locally_Using_JAR)
--   [List of Dependencies Used in Class](https://docs.google.com/spreadsheets/d/1GC45q1jG3jM-PR_yKmDhipPJN_E_G9XbX27ri4jCH4U/edit?usp=sharing)
--   [List of Annotations Used in Class](https://docs.google.com/spreadsheets/d/1hvve5Bo6Md7C6MmauY7q16H7F1pbHV6w3I7faSe9mfA/edit?usp=sharing)
+- [Exception Handling Overview](https://learn.lambdaschool.com/web4java/module/rec3E1WYDyoiEF1e3#Exception_Handling_Overview)
+  - [Exception Handling](https://learn.lambdaschool.com/web4java/module/rec3E1WYDyoiEF1e3#Exception_Handling)
+  - [Java Exception Constructs](https://learn.lambdaschool.com/web4java/module/rec3E1WYDyoiEF1e3#Java_Exception_Constructs)
+  - [Validation](https://learn.lambdaschool.com/web4java/module/rec3E1WYDyoiEF1e3#Validation)
+  - [Data from Other APIs](https://learn.lambdaschool.com/web4java/module/rec3E1WYDyoiEF1e3#Data_from_Other_APIs)
+  - [Customized Swagger Documentation](https://learn.lambdaschool.com/web4java/module/rec3E1WYDyoiEF1e3#Customized_Swagger_Documentation)
+- [User Authentication](https://learn.lambdaschool.com/web4java/module/rececDV2OMIUcY2eH#User_Authentication)
+  - [OAuth2 Security](https://learn.lambdaschool.com/web4java/module/rececDV2OMIUcY2eH#OAuth2_Security)
+  - [User Information from Access Token](https://learn.lambdaschool.com/web4java/module/rececDV2OMIUcY2eH#User_Information_from_Access_Token)
+  - [CORS](https://learn.lambdaschool.com/web4java/module/rececDV2OMIUcY2eH#CORS)
+  - [Special Endpoints](https://learn.lambdaschool.com/web4java/module/rececDV2OMIUcY2eH#Special_Endpoints)
+  - [Using Authentication in Postman](https://learn.lambdaschool.com/web4java/module/rececDV2OMIUcY2eH#Using_Authentication_in_Postman)
+- [Automated Testing](https://learn.lambdaschool.com/web4java/module/recDboXln5wm4aKJt#Automated_Testing_Overview)
+  - [Automated Testing](https://learn.lambdaschool.com/web4java/module/recDboXln5wm4aKJt#Automated_Testing)
+  - [JUnit Service Unit Testing](https://learn.lambdaschool.com/web4java/module/recDboXln5wm4aKJt#JUnit_Service_Unit_Testing)
+  - [JUnit Controllers Unit Testing](https://learn.lambdaschool.com/web4java/module/recDboXln5wm4aKJt#JUnit_Controllers_Unit_Testing)
+  - [RestAssured and Integration Testing](https://learn.lambdaschool.com/web4java/module/recDboXln5wm4aKJt#RestAssured_and_Integration_Testing)
+- [Deployment](https://learn.lambdaschool.com/web4java/module/rec7pCiBPzI4DkAJT#Deployment)
+  - [Convert to PostgreSQL](https://learn.lambdaschool.com/web4java/module/rec7pCiBPzI4DkAJT#Convert_to_PostgreSQL)
+  - [Deploy to Cloud (Heroku) Using JAR](https://learn.lambdaschool.com/web4java/module/rec7pCiBPzI4DkAJT#Deploy_to_Cloud_Using_JAR)
+  - [Access Using JavaScript](https://learn.lambdaschool.com/web4java/module/rec7pCiBPzI4DkAJT#Access_Using_JavaScript)
+  - [cURL](https://learn.lambdaschool.com/web4java/module/rec7pCiBPzI4DkAJT#cURL)
+  - [Future Java Topics](https://learn.lambdaschool.com/web4java/module/rec7pCiBPzI4DkAJT#Future_Java_Topics)
+  - [Deploy Locally Using JAR](https://learn.lambdaschool.com/web4java/module/rec7pCiBPzI4DkAJT#Deploy_Locally_Using_JAR)
+- [List of Dependencies Used in Class](https://docs.google.com/spreadsheets/d/1GC45q1jG3jM-PR_yKmDhipPJN_E_G9XbX27ri4jCH4U/edit?usp=sharing)
+- [List of Annotations Used in Class](https://docs.google.com/spreadsheets/d/1hvve5Bo6Md7C6MmauY7q16H7F1pbHV6w3I7faSe9mfA/edit?usp=sharing)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -249,7 +251,7 @@ The following are listed in the order the topics during the course
 
 You can use class recordings to help you master the material.
 
--   [All previous recordings](/archive/WEB4Java/module/recjH0lMflsFIVzDM)
+- [All previous recordings](/archive/WEB4Java/module/recjH0lMflsFIVzDM)
 
 ### Demonstrate Mastery
 

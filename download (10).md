@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Objects
 
@@ -73,8 +71,8 @@ Objects are yet another data type that can be used to store a collection of data
 
 **At the end of this module, you should be able to:**
 
--   use objects to store and access data
--   learn to create methods on Objects, and utilize the ‘this’ keyword
+- use objects to store and access data
+- learn to create methods on Objects, and utilize the ‘this’ keyword
 
 #### Pro Tip
 
@@ -84,17 +82,13 @@ Objects are yet another data type that can be used to store a collection of data
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=hssJ16PBVr8), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=hssJ16PBVr8), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=60zqbR43NxM), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=60zqbR43NxM), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -369,7 +363,7 @@ We need to create an object called `greatWhiteShark` and add everything in the c
 
 Syntactically, we’ll declare a new object with `const greatWhiteShark`, then add keys and values with the syntax we learned above - `key: value,`. For the first key:value paid, that will look like `kingdom: 'Animalia',`.
 
-*Note:* Since JavaScript identifies `class` and `order` as keywords, we’ll need to name our properties differently. For consistency, we’ll use the prefix `my` - creating `myKingdom`, `myPhylum`, and the like.
+_Note:_ Since JavaScript identifies `class` and `order` as keywords, we’ll need to name our properties differently. For consistency, we’ll use the prefix `my` - creating `myKingdom`, `myPhylum`, and the like.
 
 Declare `greatWhiteShark` below and add classification data.
 
@@ -593,7 +587,7 @@ Get comfortable adding, reassigning, and removing properties and values before m
 
 Work through all of these exercises on [codepen](https://codepen.io/lambdaschool/pen/gBXdEe).
 
-------------------------------------------------------------------------
+---
 
 #### Learn to learn to create methods on Objects, and utilize the ‘this’ keyword
 
@@ -1088,7 +1082,7 @@ We encountered an error. Please tell us what happened by opening up the sidebar 
 
 Copyright © 2021 Replit, Inc. All rights reserved.
 
-The body of the function is going to include a reference to the genus and species which we can create using the `this` keyword to reference the local genus and species variables such that scientific name will have the value `Genus species`, or in *this* case, `Charcharodon charcharias`.
+The body of the function is going to include a reference to the genus and species which we can create using the `this` keyword to reference the local genus and species variables such that scientific name will have the value `Genus species`, or in _this_ case, `Charcharodon charcharias`.
 
     getScientificName: function() {
         scientificName = this.myGenus + ' ' + this.mySpecies;
@@ -1118,15 +1112,15 @@ Return to your completed `objects challenge`, and add a method called `greet` to
 
 ##### Dig Deeper
 
--   [Object Literals - Lambda Video](https://www.youtube.com/watch?v=VLrBkmLZIYs)  
+- [Object Literals - Lambda Video](https://www.youtube.com/watch?v=VLrBkmLZIYs)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Objects Challenge](https://github.com/LambdaSchool/web-module-challenge-objects)
+- ##### [Objects Challenge](https://github.com/LambdaSchool/web-module-challenge-objects)
 
-    This challenge focuses on objects. You’ll complete a series of tasks designed to get you more comfortable working with data.
+  This challenge focuses on objects. You’ll complete a series of tasks designed to get you more comfortable working with data.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -1134,22 +1128,22 @@ Return to your completed `objects challenge`, and add a method called `greet` to
 
 You can use class recordings to help you master the material.
 
--   **[Objects for Web35 w/ Brit Hemming](https://youtu.be/2D5g7CGT3gw)**
+- **[Objects for Web35 w/ Brit Hemming](https://youtu.be/2D5g7CGT3gw)**
 
-    Javascript Objects
+  Javascript Objects
 
--   [All previous recordings](/archive/WEB1/module/recQV3tKcEDXa840D)
+- [All previous recordings](/archive/WEB1/module/recQV3tKcEDXa840D)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Work through all of these exercises on [codepen](https://codepen.io/lambdaschool/pen/gBXdEe).
+  Work through all of these exercises on [codepen](https://codepen.io/lambdaschool/pen/gBXdEe).
 
--   Objective challenge:
+- Objective challenge:
 
-    Return to your completed `objects challenge`, and add a method called `greet` to the student object to `console.log()` “My name is Jonas and I’m a receiver. I’m 12 years old.” This should work for any student name, age, and role. There are multiple ways to do this, but ultimately, running `student.greet()` should produce the sentence above.
+  Return to your completed `objects challenge`, and add a method called `greet` to the student object to `console.log()` “My name is Jonas and I’m a receiver. I’m 12 years old.” This should work for any student name, age, and role. There are multiple ways to do this, but ultimately, running `student.greet()` should produce the sentence above.
 
--   Project: Objects Challenge
+- Project: Objects Challenge

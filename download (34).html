@@ -1,579 +1,824 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Intended as a home for Lambda School curriculum."
+    />
+    <meta name="author" content="" />
+    <meta name="generator" content="Jekyll v3.8.0" />
+    <title>Redux · Lambda School</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Intended as a home for Lambda School curriculum.">
-  <meta name="author" content="">
-  <meta name="generator" content="Jekyll v3.8.0">
-  <title>Redux · Lambda School</title>
+    <link
+      rel="stylesheet"
+      integrity
+      crossorigin="anonymous"
+      href="https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css"
+    />
 
-  <link rel='stylesheet' integrity crossorigin='anonymous'
-    href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+    <link
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css"
+    />
 
-  <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-  <link rel='stylesheet'
-    href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css"
+    />
 
-  <link rel='stylesheet'
-    href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
 
-  <script>
-    ( function ( i, s, o, g, r, a, m ) {
-      i[ 'GoogleAnalyticsObject' ] = r;
-      i[ r ] = i[ r ] || function () {
-        ( i[ r ].q = i[ r ].q || [] ).push( arguments )
-      }, i[ r ].l = 1 * new Date();
-      a = s.createElement( o ),
-        m = s.getElementsByTagName( o )[ 0 ];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore( a, m )
-    } )( window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga' );
-    ga( 'create', 'UA-122016605-1', 'learn.lambdaschool.com' );
-    ga( 'send', 'pageview' );
-  </script>
 
-  <script>
-    ! function () {
-      var analytics = window.analytics = window.analytics || [];
-      if ( !analytics.initialize )
-        if ( analytics.invoked ) window.console && console.error && console.error( "Segment snippet included twice." );
-        else {
-          analytics.invoked = !0;
-          analytics.methods = [ "trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset",
-            "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"
-          ];
-          analytics.factory = function ( t ) {
-            return function () {
-              var e = Array.prototype.slice.call( arguments );
-              e.unshift( t );
-              analytics.push( e );
-              return analytics
+    <script>
+      !(function () {
+        var analytics = (window.analytics = window.analytics || []);
+        if (!analytics.initialize)
+          if (analytics.invoked)
+            window.console &&
+              console.error &&
+              console.error("Segment snippet included twice.");
+          else {
+            analytics.invoked = !0;
+            analytics.methods = [
+              "trackSubmit",
+              "trackClick",
+              "trackLink",
+              "trackForm",
+              "pageview",
+              "identify",
+              "reset",
+              "group",
+              "track",
+              "ready",
+              "alias",
+              "debug",
+              "page",
+              "once",
+              "off",
+              "on",
+            ];
+            analytics.factory = function (t) {
+              return function () {
+                var e = Array.prototype.slice.call(arguments);
+                e.unshift(t);
+                analytics.push(e);
+                return analytics;
+              };
+            };
+            for (var t = 0; t < analytics.methods.length; t++) {
+              var e = analytics.methods[t];
+              analytics[e] = analytics.factory(e);
             }
-          };
-          for ( var t = 0; t < analytics.methods.length; t++ ) {
-            var e = analytics.methods[ t ];
-            analytics[ e ] = analytics.factory( e )
+            analytics.load = function (t, e) {
+              var n = document.createElement("script");
+              n.type = "text/javascript";
+              n.async = !0;
+              n.src =
+                "https://cdn.segment.com/analytics.js/v1/" +
+                t +
+                "/analytics.min.js";
+              var a = document.getElementsByTagName("script")[0];
+              a.parentNode.insertBefore(n, a);
+              analytics._loadOptions = e;
+            };
+            analytics.SNIPPET_VERSION = "4.1.0";
+            analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+            analytics.page();
           }
-          analytics.load = function ( t, e ) {
-            var n = document.createElement( "script" );
-            n.type = "text/javascript";
-            n.async = !0;
-            n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
-            var a = document.getElementsByTagName( "script" )[ 0 ];
-            a.parentNode.insertBefore( n, a );
-            analytics._loadOptions = e
-          };
-          analytics.SNIPPET_VERSION = "4.1.0";
-          analytics.load( "BjKorwKrSvMamfNoGkBq9rISk7wF6QQX" );
-          analytics.page();
-        }
-    }();
-  </script>
+      })();
+    </script>
 
-  <link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-  <link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="manifest" href="/assets/img/favicons/manifest.json">
-  <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
-  <link rel="icon" href="/favicon.ico">
-  <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
-  <meta name="theme-color" content="#a0001e">
-</head>
+    <link
+      rel="apple-touch-icon"
+      href="/assets/img/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/assets/img/favicons/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicons/safari-pinned-tab.svg"
+      color="#a0001e"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="msapplication-config"
+      content="/assets/img/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#a0001e" />
+  </head>
 
-<body>
-  <noscript>Please enable JavaScript to view this page.</noscript>
-  <div id="redirect-message" style="display: none;">
-    You must be logged in to view this page.
-  </div>
-  <div id="unauthorized-message" style="display: none;">
-    You must be a Lambda School student to view this page.
-  </div>
-  <div id="content-wrapper">
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
-      <div class="container">
-        <span class="skiplink-text">Skip to main content</span>
-      </div>
-    </a>
-    <div class="mobile-menu">
-      <div class="m-drop">
-        <div class="mobile-row">
-          <div class="header-row" style="padding: 3px 7px">
-            <a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg"
-                width="33" height="35" viewBox="0 0 33 35" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
-                  fill="#EC3944" />
-              </svg></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu"
-              aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
-                <title>Menu</title>
-                <path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
-                  d="M4 7h22M4 15h22M4 23h22"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="nav-row">
-          <div class="results-container">
-            <ul id="results-container" class="dropdown list-group"></ul>
-          </div>
-          <div id="mobile-course-menu" class="collapse nav-row">
-            <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
-              <nav class="bd-links">
-                <div class="bd-toc-item">
-                  <h4 class="bd-toc-link">Web Applications II</h4>
-                </div>
-
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/web3/sprint/recq59MvEIZfUAohy">
-                    1.&nbsp;&nbsp;Advanced React
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/web3/module/recnDKrWb24lgaziC/">
-                        Class Components
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web3/module/rec1DPoOZSmocXfak/">
-                        The React Lifecycle
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web3/module/recAxmnYmusEi8JuL/">
-                        Composing and Sharing Non-Visual Behavior
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web3/module/rechTQVfCg4p85Hoi/">
-                        Testing Web Applications
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/web3/sprint/recukritK1B1pFrcM">
-                    2.&nbsp;&nbsp;Advanced State Management
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/web3/module/rectpk6uIV3pCHJh8/">
-                        The Reducer Pattern
-                      </a>
-                    </li>
-                    <li class="active bd-sidenav-active">
-                      <a href="/web3/module/recba2NUdVmgKYyR3/">
-                        Redux
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web3/module/recSoiWNJzGURrXYh/">
-                        Async Redux
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web3/module/recByjgF7FwwH5Z7W/">
-                        Context API
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-
-                  <a class="bd-toc-link" href="/web3/sprint/recnhsJGy28gNi1K5">
-                    3.&nbsp;&nbsp;Advanced Web Applications
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/web3/module/recS9H6qCj0dQe32B/">
-                        Testing React
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web3/module/recQlbCZf9tOVgiXC/">
-                        Client-Side Authentication
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web3/module/recupVjaAKPqbuk7Y/">
-                        HTTP / AJAX II
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web3/module/receOMvCB7dSyX5FL/">
-                        Deploying Web Apps
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/web3/sprint/recVFiuMBzbcZllxC">
-                    4.&nbsp;&nbsp;WEB Unit 3 Build
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                  </ul>
-                </div>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
+  <body>
+    <noscript>Please enable JavaScript to view this page.</noscript>
+    <div id="redirect-message" style="display: none">
+      You must be logged in to view this page.
     </div>
-    <div class="main-container">
-      <div class="sidebar-container bd-sidebar">
-        <div class="docs-sidebar">
-          <a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197"
-              fill="#ec3944">
-              <g>
-                <path
-                  d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z">
-                </path>
-                <path
-                  d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z">
-                </path>
-                <path
-                  d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z">
-                </path>
-                <path
-                  d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z">
-                </path>
-                <path
-                  d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z">
-                </path>
-                <path
-                  d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z">
-                </path>
-              </g>
-              <path
-                d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z">
-              </path>
-            </svg></a>
-          <ul id="results-container" class="dropdown list-group"></ul>
-          <nav class="bd-links collapse" id="bd-docs-nav">
-            <div class="bd-toc-item">
-              <h4 class="bd-toc-link">Web Applications II</h4>
+    <div id="unauthorized-message" style="display: none">
+      You must be a Lambda School student to view this page.
+    </div>
+    <div id="content-wrapper">
+      <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+          <span class="skiplink-text">Skip to main content</span>
+        </div>
+      </a>
+      <div class="mobile-menu">
+        <div class="m-drop">
+          <div class="mobile-row">
+            <div class="header-row" style="padding: 3px 7px">
+              <a class="navbar-brand" href="/" aria-label="Lambda School"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="35"
+                  viewBox="0 0 33 35"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                    fill="#EC3944"
+                  /></svg
+              ></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#mobile-course-menu"
+                aria-controls="mobile-course-menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="30"
+                  height="30"
+                  focusable="false"
+                >
+                  <title>Menu</title>
+                  <path
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    d="M4 7h22M4 15h22M4 23h22"
+                  ></path>
+                </svg>
+              </button>
             </div>
-
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/web3/sprint/recq59MvEIZfUAohy">
-                1.&nbsp;&nbsp;Advanced React
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/web3/module/recnDKrWb24lgaziC/">
-                    Class Components
-                  </a>
-                </li>
-                <li>
-                  <a href="/web3/module/rec1DPoOZSmocXfak/">
-                    The React Lifecycle
-                  </a>
-                </li>
-                <li>
-                  <a href="/web3/module/recAxmnYmusEi8JuL/">
-                    Composing and Sharing Non-Visual Behavior
-                  </a>
-                </li>
-                <li>
-                  <a href="/web3/module/rechTQVfCg4p85Hoi/">
-                    Testing Web Applications
-                  </a>
-                </li>
-              </ul>
+          </div>
+          <div class="nav-row">
+            <div class="results-container">
+              <ul id="results-container" class="dropdown list-group"></ul>
             </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/web3/sprint/recukritK1B1pFrcM">
-                2.&nbsp;&nbsp;Advanced State Management
-              </a>
-              <ul class="nav bd-sidenav">
+            <div id="mobile-course-menu" class="collapse nav-row">
+              <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+                <nav class="bd-links">
+                  <div class="bd-toc-item">
+                    <h4 class="bd-toc-link">Web Applications II</h4>
+                  </div>
 
-                <li>
-                  <a href="/web3/module/rectpk6uIV3pCHJh8/">
-                    The Reducer Pattern
-                  </a>
-                </li>
-                <li class="active bd-sidenav-active">
-                  <a href="/web3/module/recba2NUdVmgKYyR3/">
-                    Redux
-                  </a>
-                </li>
-                <li>
-                  <a href="/web3/module/recSoiWNJzGURrXYh/">
-                    Async Redux
-                  </a>
-                </li>
-                <li>
-                  <a href="/web3/module/recByjgF7FwwH5Z7W/">
-                    Context API
-                  </a>
-                </li>
-              </ul>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web3/sprint/recq59MvEIZfUAohy"
+                    >
+                      1.&nbsp;&nbsp;Advanced React
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web3/module/recnDKrWb24lgaziC/">
+                          Class Components
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web3/module/rec1DPoOZSmocXfak/">
+                          The React Lifecycle
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web3/module/recAxmnYmusEi8JuL/">
+                          Composing and Sharing Non-Visual Behavior
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web3/module/rechTQVfCg4p85Hoi/">
+                          Testing Web Applications
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web3/sprint/recukritK1B1pFrcM"
+                    >
+                      2.&nbsp;&nbsp;Advanced State Management
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web3/module/rectpk6uIV3pCHJh8/">
+                          The Reducer Pattern
+                        </a>
+                      </li>
+                      <li class="active bd-sidenav-active">
+                        <a href="/web3/module/recba2NUdVmgKYyR3/"> Redux </a>
+                      </li>
+                      <li>
+                        <a href="/web3/module/recSoiWNJzGURrXYh/">
+                          Async Redux
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web3/module/recByjgF7FwwH5Z7W/">
+                          Context API
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web3/sprint/recnhsJGy28gNi1K5"
+                    >
+                      3.&nbsp;&nbsp;Advanced Web Applications
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web3/module/recS9H6qCj0dQe32B/">
+                          Testing React
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web3/module/recQlbCZf9tOVgiXC/">
+                          Client-Side Authentication
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web3/module/recupVjaAKPqbuk7Y/">
+                          HTTP / AJAX II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web3/module/receOMvCB7dSyX5FL/">
+                          Deploying Web Apps
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web3/sprint/recVFiuMBzbcZllxC"
+                    >
+                      4.&nbsp;&nbsp;WEB Unit 3 Build
+                    </a>
+                    <ul class="nav bd-sidenav"></ul>
+                  </div>
+                </nav>
+              </div>
             </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/web3/sprint/recnhsJGy28gNi1K5">
-                3.&nbsp;&nbsp;Advanced Web Applications
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/web3/module/recS9H6qCj0dQe32B/">
-                    Testing React
-                  </a>
-                </li>
-                <li>
-                  <a href="/web3/module/recQlbCZf9tOVgiXC/">
-                    Client-Side Authentication
-                  </a>
-                </li>
-                <li>
-                  <a href="/web3/module/recupVjaAKPqbuk7Y/">
-                    HTTP / AJAX II
-                  </a>
-                </li>
-                <li>
-                  <a href="/web3/module/receOMvCB7dSyX5FL/">
-                    Deploying Web Apps
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/web3/sprint/recVFiuMBzbcZllxC">
-                4.&nbsp;&nbsp;WEB Unit 3 Build
-              </a>
-              <ul class="nav bd-sidenav">
-
-              </ul>
-            </div>
-          </nav>
+          </div>
         </div>
       </div>
-      <main class="content-container flex-wrapper" role="main">
-        <div class="sticky-nav">
-          <div class="sprint-nav">
-            <ul class="section-nav">
-              <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
-              <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
-              <li class="toc-entry toc-h2"><a href="#guided-project">Guided Project</a></li>
-              <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
-              <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
-            </ul>
-          </div>
+      <div class="main-container">
+        <div class="sidebar-container bd-sidebar">
+          <div class="docs-sidebar">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"
+              ><svg
+                width="135"
+                height="35"
+                viewBox="0 0 756 197"
+                fill="#ec3944"
+              >
+                <g>
+                  <path
+                    d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"
+                  ></path>
+                  <path
+                    d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"
+                  ></path>
+                  <path
+                    d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"
+                  ></path>
+                  <path
+                    d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"
+                  ></path>
+                  <path
+                    d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"
+                  ></path>
+                  <path
+                    d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"
+                  ></path>
+                </g>
+                <path
+                  d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"
+                ></path></svg
+            ></a>
+            <ul id="results-container" class="dropdown list-group"></ul>
+            <nav class="bd-links collapse" id="bd-docs-nav">
+              <div class="bd-toc-item">
+                <h4 class="bd-toc-link">Web Applications II</h4>
+              </div>
 
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/web3/sprint/recq59MvEIZfUAohy">
+                  1.&nbsp;&nbsp;Advanced React
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web3/module/recnDKrWb24lgaziC/">
+                      Class Components
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web3/module/rec1DPoOZSmocXfak/">
+                      The React Lifecycle
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web3/module/recAxmnYmusEi8JuL/">
+                      Composing and Sharing Non-Visual Behavior
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web3/module/rechTQVfCg4p85Hoi/">
+                      Testing Web Applications
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/web3/sprint/recukritK1B1pFrcM">
+                  2.&nbsp;&nbsp;Advanced State Management
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web3/module/rectpk6uIV3pCHJh8/">
+                      The Reducer Pattern
+                    </a>
+                  </li>
+                  <li class="active bd-sidenav-active">
+                    <a href="/web3/module/recba2NUdVmgKYyR3/"> Redux </a>
+                  </li>
+                  <li>
+                    <a href="/web3/module/recSoiWNJzGURrXYh/"> Async Redux </a>
+                  </li>
+                  <li>
+                    <a href="/web3/module/recByjgF7FwwH5Z7W/"> Context API </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/web3/sprint/recnhsJGy28gNi1K5">
+                  3.&nbsp;&nbsp;Advanced Web Applications
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web3/module/recS9H6qCj0dQe32B/">
+                      Testing React
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web3/module/recQlbCZf9tOVgiXC/">
+                      Client-Side Authentication
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web3/module/recupVjaAKPqbuk7Y/">
+                      HTTP / AJAX II
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web3/module/receOMvCB7dSyX5FL/">
+                      Deploying Web Apps
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/web3/sprint/recVFiuMBzbcZllxC">
+                  4.&nbsp;&nbsp;WEB Unit 3 Build
+                </a>
+                <ul class="nav bd-sidenav"></ul>
+              </div>
+            </nav>
+          </div>
         </div>
-        <div class="wrapper limit-width">
-          <div class="flex-wrapper">
-            <div class="limit-width">
-              <div class="jumbotron">
-                <h1 class="bd-title" id="content">Redux</h1>
-                <span class="lead">
-                  <p class="bd-lead"></p>
-                  <p>React is a very sophisticated UI - Component Library that can be used together with a few other
-                    libraries to build out large scale Single Page Applications. But as our Application’s scale in size
-                    so too will the data that we are concerned with within our applications. And you can only start to
-                    imagine how difficult it might be manage all of that data inside of React components. Redux is a
-                    library that can help solve this problem by providing a single source of truth for our data within
-                    our application. As your team grows, and as your application scales, Redux can help offset the pains
-                    that can be brought on as a result of complexity.</p>
-                </span>
-                <strong>At the end of this module, you should be able to:</strong>
-                <ul>
-                  <li>explain what Redux is and the problem it solves</li>
-                  <li>create a Redux Store and connect it to a React application</li>
-                  <li>use the connect() function to "connect" React components to the Redux store</li>
-                  <li>write Actions and Action Creators to describe state changes</li>
-                  <li>write Reducers to respond to actions and update state</li>
-                </ul>
-              </div>
-              <div class="alert alert-warning" role="alert">
-                <h4>Pro Tip</h4>
-                <p>Be on time. It’s a mark of respect not to keep others waiting.</p>
-              </div>
-              <h2 class="display-4">
-                <a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Prepare</h2>
-              <p class="lead">Review each preclass resource before class.</p>
-              <div class="preclass">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Ozx4FH4iKWc"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/b0x1cwFX5rM"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/gyJ31YLkYnU"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0rNVB36pQTE"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nF2HkjPz01A"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VT9iMpTRexI"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <a target="_blank"
-                      href="https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0">Presentational and
-                      Container Components</a>
-                    <p>A well thought out description of how we can think about our components in react.</p>
-                  </li>
-                </ul>
-              </div>
-              <h2 class="display-4">
-                <a id="learn" class="anchor" href="#learn" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Learn</h2>
-              <h4 class="mark mb-3 p-2">Learn to explain what Redux is and the problem it solves</h4>
-              <p>Managing application state and keeping it in sync across all layers of our application is very
-                important.</p>
-              <p>Many bugs are caused by applications going into an inconsistent state.</p>
-              <h5>Overview</h5>
-              <p>Redux is a predictable state management library for JavaScript applications and is the most popular
-                State container for React applications. By now, we have discovered that building out applications using
-                React requires a lot of forethought to give an application scalability. Specifically, we have noticed
-                some complications around the area of state-management. You may have asked yourself a question like
-                <em>“Which of my components should have state vs. which of my components should just be a way to present
-                  some DOM elements?”</em></p>
-              <p>Luckily you’re not alone in this dilemma. In fact, the Facebook team that built React in the first
-                place noticed that managing state could become a nightmare at scale were they only to use component
-                state. So, they built a pattern, and said, “everyone here at Facebook is going to write code after this
-                pattern.” This way, they could eliminate many of the problems that unwieldy state-full components could
-                surface. That pattern was called <code class="highlighter-rouge">Flux</code> <a
-                  href="https://facebook.github.io/flux/docs/overview.html">link to docs</a>, and it’s primary use case
-                was to add some stringency to the React ecosystem because by itself, React is very unopinionated in how
-                one should be designing their application and managing state.</p>
-              <p>Flux was great, but developers had a hard time with implementation because the pattern presented a few
-                other problems. Because of this, (and around the same time that React was becoming so popular) <a
-                  href="https://github.com/gaearon">Dan Abramov</a> built out a ‘Time-traveling’ approach to debug an
-                application. This method eventually became known as Redux. Dan wanted to be able to go back in time to
-                see when/where the state had changed in his application, and to do that, he ended up creating one of the
-                most popular state-management libraries known to React Developers today.</p>
-              <p>Redux is a small, light-weight state container for use when building JavaScript applications. Remember,
-                Redux has nothing to do with React other than the fact that many developers use them together. The core
-                concepts/principles of Redux are 3 fold:</p>
-              <h4 id="the-store">The Store</h4>
-              <blockquote>
-                <p>Everything that changes within your application is represented
-                  by a single JavaScript Object known as the store. The store
-                  contains our state for our application.</p>
-              </blockquote>
-              <h4 id="application-state-is-immutable">Application state is Immutable</h4>
-              <blockquote>
-                <p>When the application state changes, we clone the state object, modify the clone, and replace the
-                  original state with the new copy. We never mutate the original object, and we never write to our store
-                  object.</p>
-              </blockquote>
-              <h4 id="pure-functions-change-our-state">Pure functions change our state</h4>
-              <blockquote>
-                <p>Given the same input, a pure function returns the same output every time. All functions (reducers) in
-                  Redux must be pure functions. Meaning they take in some state and a description of what changes took
-                  place and return a copy of our state.</p>
-              </blockquote>
-              <p>Redux is pretty simple at its core, the complications with Redux arise when we try and implement it
-                within a React application. Usually, these issues are because there is some new syntax, and it’s just a
-                matter of time spent learning to sort them out.</p>
-              <h5>Follow Along</h5>
-              <p>Watch the first 4 videos in <a
-                  href="https://egghead.io/lessons/react-redux-the-single-immutable-state-tree">this series</a> and try
-                to wrap your head around how this would be useful in a React application. Think of your projects that
-                you’ve built in React up until this point. What types of problems would Redux have solved in those
-                projects if any?</p>
-              <h5>Challenge</h5>
-              <p>Write your thoughts on why Redux exists and at least one reason to use it as well as one reason to not
-                use it.</p>
-              <h5>Dig Deeper</h5>
-              <ul>
-                <li>
-                  <a href="https://www.smashingmagazine.com/2016/06/an-introduction-to-redux/"
-                    target="blank_">Introduction to Redux</a><br> Article on Smashing Magazine that introduces the
-                  basics of Redux</li>
-                <li>
-                  <a href="https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6" target="blank_">A Cartoon
-                    Intro to Redux</a><br> Article that explains the basics of Redux in an entertaining manner</li>
+        <main class="content-container flex-wrapper" role="main">
+          <div class="sticky-nav">
+            <div class="sprint-nav">
+              <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+                <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+                <li class="toc-entry toc-h2">
+                  <a href="#guided-project">Guided Project</a>
+                </li>
+                <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+                <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
               </ul>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to create a Redux Store and connect it to a React application</h4>
-              <p>When using Redux, the state for the whole application is contained inside the <em>Store</em>. This
-                objective will guide you through the process of what it takes to wire up a React application to use
-                Redux.</p>
-              <h5>Overview</h5>
-              <p>In this section, we’ll learn how to create the <em>Redux Store</em> and how to use a library called
-                <code class="highlighter-rouge">react-redux</code> to connect our React application to the
-                <em>Store</em>. Because Redux is a standalone library,
-                (meaning it can be used on its own or with another library/framework for state-management and data flow)
-                we have to use a second helper package that will enable us to string together Redux within a React
-                application. That package is called <a href="https://github.com/reduxjs/react-redux">React-Redux</a>.
-                Some more documentation and information lives <a
-                  href="http://redux.js.org/basics/usage-with-react">here</a>. The packages <code
-                  class="highlighter-rouge">React</code> and <code class="highlighter-rouge">Redux</code> are entirely
-                separate, as quoted in the Redux documentation.</p>
-              <blockquote>
-                <p>From the very beginning, we need to stress that Redux has no relation to React. You can write Redux
-                  apps with React, Angular, Ember, jQuery, or vanilla JavaScript.</p>
-              </blockquote>
-              <h5>Follow Along</h5>
-              <p>The first step we’re going to take to enable Redux within a React application is to install it. This
-                process assumes you’ve used Create React App to boilerplate out a React application.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">react</span><span class="o">-</span><span class="nx">redux</span> <span class="nx">redux</span>
-</code></pre>
+            </div>
+          </div>
+          <div class="wrapper limit-width">
+            <div class="flex-wrapper">
+              <div class="limit-width">
+                <div class="jumbotron">
+                  <h1 class="bd-title" id="content">Redux</h1>
+                  <span class="lead">
+                    <p class="bd-lead"></p>
+                    <p>
+                      React is a very sophisticated UI - Component Library that
+                      can be used together with a few other libraries to build
+                      out large scale Single Page Applications. But as our
+                      Application’s scale in size so too will the data that we
+                      are concerned with within our applications. And you can
+                      only start to imagine how difficult it might be manage all
+                      of that data inside of React components. Redux is a
+                      library that can help solve this problem by providing a
+                      single source of truth for our data within our
+                      application. As your team grows, and as your application
+                      scales, Redux can help offset the pains that can be
+                      brought on as a result of complexity.
+                    </p>
+                  </span>
+                  <strong
+                    >At the end of this module, you should be able to:</strong
+                  >
+                  <ul>
+                    <li>explain what Redux is and the problem it solves</li>
+                    <li>
+                      create a Redux Store and connect it to a React application
+                    </li>
+                    <li>
+                      use the connect() function to "connect" React components
+                      to the Redux store
+                    </li>
+                    <li>
+                      write Actions and Action Creators to describe state
+                      changes
+                    </li>
+                    <li>
+                      write Reducers to respond to actions and update state
+                    </li>
+                  </ul>
                 </div>
-              </div>
-              <p>Now that we have <code class="highlighter-rouge">redux</code> and <code
-                  class="highlighter-rouge">react-redux</code> installed, let’s learn how to set it up within our
-                application. We will use the <code class="highlighter-rouge">createStore</code> function from <code
-                  class="highlighter-rouge">redux</code>, so let’s import that first.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">createStore</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">redux</span><span class="dl">'</span><span class="p">;</span>
-</code></pre>
+                <div class="alert alert-warning" role="alert">
+                  <h4>Pro Tip</h4>
+                  <p>
+                    Be on time. It’s a mark of respect not to keep others
+                    waiting.
+                  </p>
                 </div>
-              </div>
-              <p><code class="highlighter-rouge">createStore</code> will take in a single reducer that represents the
-                state (data) of our application globally. We need to create a <code
-                  class="highlighter-rouge">store</code> variable, and use <code
-                  class="highlighter-rouge">createStore</code> to create the Redux store.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kd">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">createStore</span><span class="p">(</span><span class="nx">reducer</span><span class="p">);</span>
-</code></pre>
+                <h2 class="display-4">
+                  <a
+                    id="prepare"
+                    class="anchor"
+                    href="#prepare"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Prepare
+                </h2>
+                <p class="lead">Review each preclass resource before class.</p>
+                <div class="preclass">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/Ozx4FH4iKWc"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/b0x1cwFX5rM"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/gyJ31YLkYnU"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/0rNVB36pQTE"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/nF2HkjPz01A"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/VT9iMpTRexI"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <a
+                        target="_blank"
+                        href="https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0"
+                        >Presentational and Container Components</a
+                      >
+                      <p>
+                        A well thought out description of how we can think about
+                        our components in react.
+                      </p>
+                    </li>
+                  </ul>
                 </div>
-              </div>
-              <p>You’ll notice that we passed a reducer into <code class="highlighter-rouge">createStore</code>, but we
-                don’t have a reducer yet. We’ll learn a lot more about reducers soon. For now, let’s create a function
-                called <code class="highlighter-rouge">reducer</code> that returns an object representing our state.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kd">function</span> <span class="nx">reducer</span><span class="p">()</span> <span class="p">{</span>
+                <h2 class="display-4">
+                  <a id="learn" class="anchor" href="#learn" aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Learn
+                </h2>
+                <h4 class="mark mb-3 p-2">
+                  Learn to explain what Redux is and the problem it solves
+                </h4>
+                <p>
+                  Managing application state and keeping it in sync across all
+                  layers of our application is very important.
+                </p>
+                <p>
+                  Many bugs are caused by applications going into an
+                  inconsistent state.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  Redux is a predictable state management library for JavaScript
+                  applications and is the most popular State container for React
+                  applications. By now, we have discovered that building out
+                  applications using React requires a lot of forethought to give
+                  an application scalability. Specifically, we have noticed some
+                  complications around the area of state-management. You may
+                  have asked yourself a question like
+                  <em
+                    >“Which of my components should have state vs. which of my
+                    components should just be a way to present some DOM
+                    elements?”</em
+                  >
+                </p>
+                <p>
+                  Luckily you’re not alone in this dilemma. In fact, the
+                  Facebook team that built React in the first place noticed that
+                  managing state could become a nightmare at scale were they
+                  only to use component state. So, they built a pattern, and
+                  said, “everyone here at Facebook is going to write code after
+                  this pattern.” This way, they could eliminate many of the
+                  problems that unwieldy state-full components could surface.
+                  That pattern was called
+                  <code class="highlighter-rouge">Flux</code>
+                  <a href="https://facebook.github.io/flux/docs/overview.html"
+                    >link to docs</a
+                  >, and it’s primary use case was to add some stringency to the
+                  React ecosystem because by itself, React is very unopinionated
+                  in how one should be designing their application and managing
+                  state.
+                </p>
+                <p>
+                  Flux was great, but developers had a hard time with
+                  implementation because the pattern presented a few other
+                  problems. Because of this, (and around the same time that
+                  React was becoming so popular)
+                  <a href="https://github.com/gaearon">Dan Abramov</a> built out
+                  a ‘Time-traveling’ approach to debug an application. This
+                  method eventually became known as Redux. Dan wanted to be able
+                  to go back in time to see when/where the state had changed in
+                  his application, and to do that, he ended up creating one of
+                  the most popular state-management libraries known to React
+                  Developers today.
+                </p>
+                <p>
+                  Redux is a small, light-weight state container for use when
+                  building JavaScript applications. Remember, Redux has nothing
+                  to do with React other than the fact that many developers use
+                  them together. The core concepts/principles of Redux are 3
+                  fold:
+                </p>
+                <h4 id="the-store">The Store</h4>
+                <blockquote>
+                  <p>
+                    Everything that changes within your application is
+                    represented by a single JavaScript Object known as the
+                    store. The store contains our state for our application.
+                  </p>
+                </blockquote>
+                <h4 id="application-state-is-immutable">
+                  Application state is Immutable
+                </h4>
+                <blockquote>
+                  <p>
+                    When the application state changes, we clone the state
+                    object, modify the clone, and replace the original state
+                    with the new copy. We never mutate the original object, and
+                    we never write to our store object.
+                  </p>
+                </blockquote>
+                <h4 id="pure-functions-change-our-state">
+                  Pure functions change our state
+                </h4>
+                <blockquote>
+                  <p>
+                    Given the same input, a pure function returns the same
+                    output every time. All functions (reducers) in Redux must be
+                    pure functions. Meaning they take in some state and a
+                    description of what changes took place and return a copy of
+                    our state.
+                  </p>
+                </blockquote>
+                <p>
+                  Redux is pretty simple at its core, the complications with
+                  Redux arise when we try and implement it within a React
+                  application. Usually, these issues are because there is some
+                  new syntax, and it’s just a matter of time spent learning to
+                  sort them out.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Watch the first 4 videos in
+                  <a
+                    href="https://egghead.io/lessons/react-redux-the-single-immutable-state-tree"
+                    >this series</a
+                  >
+                  and try to wrap your head around how this would be useful in a
+                  React application. Think of your projects that you’ve built in
+                  React up until this point. What types of problems would Redux
+                  have solved in those projects if any?
+                </p>
+                <h5>Challenge</h5>
+                <p>
+                  Write your thoughts on why Redux exists and at least one
+                  reason to use it as well as one reason to not use it.
+                </p>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.smashingmagazine.com/2016/06/an-introduction-to-redux/"
+                      target="blank_"
+                      >Introduction to Redux</a
+                    ><br />
+                    Article on Smashing Magazine that introduces the basics of
+                    Redux
+                  </li>
+                  <li>
+                    <a
+                      href="https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6"
+                      target="blank_"
+                      >A Cartoon Intro to Redux</a
+                    ><br />
+                    Article that explains the basics of Redux in an entertaining
+                    manner
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to create a Redux Store and connect it to a React
+                  application
+                </h4>
+                <p>
+                  When using Redux, the state for the whole application is
+                  contained inside the <em>Store</em>. This objective will guide
+                  you through the process of what it takes to wire up a React
+                  application to use Redux.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  In this section, we’ll learn how to create the
+                  <em>Redux Store</em> and how to use a library called
+                  <code class="highlighter-rouge">react-redux</code> to connect
+                  our React application to the <em>Store</em>. Because Redux is
+                  a standalone library, (meaning it can be used on its own or
+                  with another library/framework for state-management and data
+                  flow) we have to use a second helper package that will enable
+                  us to string together Redux within a React application. That
+                  package is called
+                  <a href="https://github.com/reduxjs/react-redux"
+                    >React-Redux</a
+                  >. Some more documentation and information lives
+                  <a href="http://redux.js.org/basics/usage-with-react">here</a
+                  >. The packages
+                  <code class="highlighter-rouge">React</code> and
+                  <code class="highlighter-rouge">Redux</code> are entirely
+                  separate, as quoted in the Redux documentation.
+                </p>
+                <blockquote>
+                  <p>
+                    From the very beginning, we need to stress that Redux has no
+                    relation to React. You can write Redux apps with React,
+                    Angular, Ember, jQuery, or vanilla JavaScript.
+                  </p>
+                </blockquote>
+                <h5>Follow Along</h5>
+                <p>
+                  The first step we’re going to take to enable Redux within a
+                  React application is to install it. This process assumes
+                  you’ve used Create React App to boilerplate out a React
+                  application.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">react</span><span class="o">-</span><span class="nx">redux</span> <span class="nx">redux</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Now that we have
+                  <code class="highlighter-rouge">redux</code> and
+                  <code class="highlighter-rouge">react-redux</code> installed,
+                  let’s learn how to set it up within our application. We will
+                  use the
+                  <code class="highlighter-rouge">createStore</code> function
+                  from <code class="highlighter-rouge">redux</code>, so let’s
+                  import that first.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="p">{</span> <span class="nx">createStore</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">redux</span><span class="dl">'</span><span class="p">;</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  <code class="highlighter-rouge">createStore</code> will take
+                  in a single reducer that represents the state (data) of our
+                  application globally. We need to create a
+                  <code class="highlighter-rouge">store</code> variable, and use
+                  <code class="highlighter-rouge">createStore</code> to create
+                  the Redux store.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">createStore</span><span class="p">(</span><span class="nx">reducer</span><span class="p">);</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  You’ll notice that we passed a reducer into
+                  <code class="highlighter-rouge">createStore</code>, but we
+                  don’t have a reducer yet. We’ll learn a lot more about
+                  reducers soon. For now, let’s create a function called
+                  <code class="highlighter-rouge">reducer</code> that returns an
+                  object representing our state.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">function</span> <span class="nx">reducer</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">{</span>
     <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Hello world! I</span><span class="se">\'</span><span class="s1">m in the Redux store!</span><span class="dl">'</span><span class="p">,</span>
   <span class="p">}</span>
@@ -581,60 +826,99 @@
 
 <span class="kd">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">createStore</span><span class="p">(</span><span class="nx">reducer</span><span class="p">);</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Now that we have a store, we want to make our application aware of it. The way this works is that
-                react-redux gives us a <code class="highlighter-rouge">&lt;Provider&gt;&lt;/Provider&gt;</code>
-                component that wraps around our entire application. We will pass our newly created store to that
-                component as a prop.</p>
-              <p>Within our Root Component (usually <code class="highlighter-rouge">Index.js</code>), go ahead and
-                import <code class="highlighter-rouge">Provider</code> from <code
-                  class="highlighter-rouge">react-redux</code>.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Provider</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-redux</span><span class="dl">'</span><span class="p">;</span>
+                <p>
+                  Now that we have a store, we want to make our application
+                  aware of it. The way this works is that react-redux gives us a
+                  <code class="highlighter-rouge"
+                    >&lt;Provider&gt;&lt;/Provider&gt;</code
+                  >
+                  component that wraps around our entire application. We will
+                  pass our newly created store to that component as a prop.
+                </p>
+                <p>
+                  Within our Root Component (usually
+                  <code class="highlighter-rouge">Index.js</code>), go ahead and
+                  import <code class="highlighter-rouge">Provider</code> from
+                  <code class="highlighter-rouge">react-redux</code>.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Provider</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-redux</span><span class="dl">'</span><span class="p">;</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Then, all we need to do is wrap our <code class="highlighter-rouge">&lt;App/&gt;</code> with the <code
-                  class="highlighter-rouge">&lt;Provider&gt;</code> component and pass a <code
-                  class="highlighter-rouge">store</code> prop set equal to the store we created. This will look like
-                this:</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="o">&lt;</span><span class="nx">Provider</span> <span class="nx">store</span><span class="o">=</span><span class="p">{</span><span class="nx">store</span><span class="p">}</span><span class="o">&gt;</span>
+                <p>
+                  Then, all we need to do is wrap our
+                  <code class="highlighter-rouge">&lt;App/&gt;</code> with the
+                  <code class="highlighter-rouge">&lt;Provider&gt;</code>
+                  component and pass a
+                  <code class="highlighter-rouge">store</code> prop set equal to
+                  the store we created. This will look like this:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="o">&lt;</span><span class="nx">Provider</span> <span class="nx">store</span><span class="o">=</span><span class="p">{</span><span class="nx">store</span><span class="p">}</span><span class="o">&gt;</span>
   <span class="o">&lt;</span><span class="nx">App</span><span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="sr">/Provider</span><span class="err">&gt;
 </span></code></pre>
+                  </div>
                 </div>
-              </div>
-              <h5>Challenge</h5>
-              <p>Let’s go ahead and take a peek at our application using the React Dev Tools now that we’ve wrapped it
-                up in a Provider Component.</p>
-              <p>Now, take the time to think about where and when you’ve done this before? Is there a package that we’ve
-                used this same way? If so, which package is it? It is important to note that a large number of packages
-                that we use in React are implemented this way.</p>
-              <p>Write down a few thoughts on what you see, where you’ve seen similar patterns, etc, and send that to
-                your PM.</p>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to use the connect() function to "connect" React components to the Redux
-                store</h4>
-              <p>Now that we have created a Redux store, we have to connect our components to that store in order to
-                access the data they will need. We will use the connect function, and mapStateToProps to accomplish
-                this.</p>
-              <h5>Overview</h5>
-              <p>Now that we have built a store to manage our state, we need to connect our components to that store. We
-                can do so using the <code class="highlighter-rouge">connect</code> function, within the components
-                themselves. We can also build a helper function within the component files to tell the <code
-                  class="highlighter-rouge">connect</code> function what pieces of state we want to access. This
-                function is usually named <code class="highlighter-rouge">mapStateToProps</code>, and it will map pieces
-                of our Redux state to the props of our component. Let’s try it out.</p>
-              <h5>Follow Along</h5>
-              <p>Using the app you created earlier that has the redux store wired up, change the object you initially
-                returned out of the reducer function to look like this:</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="p">{</span>
+                <h5>Challenge</h5>
+                <p>
+                  Let’s go ahead and take a peek at our application using the
+                  React Dev Tools now that we’ve wrapped it up in a Provider
+                  Component.
+                </p>
+                <p>
+                  Now, take the time to think about where and when you’ve done
+                  this before? Is there a package that we’ve used this same way?
+                  If so, which package is it? It is important to note that a
+                  large number of packages that we use in React are implemented
+                  this way.
+                </p>
+                <p>
+                  Write down a few thoughts on what you see, where you’ve seen
+                  similar patterns, etc, and send that to your PM.
+                </p>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to use the connect() function to "connect" React
+                  components to the Redux store
+                </h4>
+                <p>
+                  Now that we have created a Redux store, we have to connect our
+                  components to that store in order to access the data they will
+                  need. We will use the connect function, and mapStateToProps to
+                  accomplish this.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  Now that we have built a store to manage our state, we need to
+                  connect our components to that store. We can do so using the
+                  <code class="highlighter-rouge">connect</code> function,
+                  within the components themselves. We can also build a helper
+                  function within the component files to tell the
+                  <code class="highlighter-rouge">connect</code> function what
+                  pieces of state we want to access. This function is usually
+                  named <code class="highlighter-rouge">mapStateToProps</code>,
+                  and it will map pieces of our Redux state to the props of our
+                  component. Let’s try it out.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Using the app you created earlier that has the redux store
+                  wired up, change the object you initially returned out of the
+                  reducer function to look like this:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code><span class="p">{</span>
   <span class="nl">user</span><span class="p">:</span> <span class="p">{</span>
     <span class="nl">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Dustin</span><span class="dl">'</span>
   <span class="p">},</span>
@@ -649,44 +933,76 @@
   <span class="nx">moviesToWatch</span><span class="p">:</span> <span class="mi">13</span>
 <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Now create a component called <code class="highlighter-rouge">MovieList</code>. Next, we’ll take a look
-                at the syntax we use to connect our React component to Redux, then we’ll talk about it. To start, import
-                the <code class="highlighter-rouge">connect</code> function into your component:</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">connect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-redux</span><span class="dl">'</span><span class="p">;</span>
+                <p>
+                  Now create a component called
+                  <code class="highlighter-rouge">MovieList</code>. Next, we’ll
+                  take a look at the syntax we use to connect our React
+                  component to Redux, then we’ll talk about it. To start, import
+                  the <code class="highlighter-rouge">connect</code> function
+                  into your component:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="p">{</span> <span class="nx">connect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-redux</span><span class="dl">'</span><span class="p">;</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Next, we use the <code class="highlighter-rouge">connect</code> function, where we export the component
-                at the bottom of the file. We invoke <code class="highlighter-rouge">connect</code> twice (function
-                currying). First with two arguments - a function and an object. Second with just the component we are
-                trying to connect. For now, we’ll pass <code class="highlighter-rouge">null</code> and <code
-                  class="highlighter-rouge">{}</code> into the first invocation.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="c1">// export default MovieList; Not this way if we are connecting this component!</span>
+                <p>
+                  Next, we use the
+                  <code class="highlighter-rouge">connect</code> function, where
+                  we export the component at the bottom of the file. We invoke
+                  <code class="highlighter-rouge">connect</code> twice (function
+                  currying). First with two arguments - a function and an
+                  object. Second with just the component we are trying to
+                  connect. For now, we’ll pass
+                  <code class="highlighter-rouge">null</code> and
+                  <code class="highlighter-rouge">{}</code> into the first
+                  invocation.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="c1">// export default MovieList; Not this way if we are connecting this component!</span>
 <span class="k">export</span> <span class="k">default</span> <span class="nx">connect</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="p">{})(</span><span class="nx">MovieList</span><span class="p">)</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Now <code class="highlighter-rouge">MovieList</code> is connected to the store. Let’s write our <code
-                  class="highlighter-rouge">mapStateToProps</code> function now, to tell <code
-                  class="highlighter-rouge">connect</code> which pieces of our state we want to bring in to this
-                component. This function takes in <code class="highlighter-rouge">state</code> as a parameter, then
-                returns an object where the properties can be passed to props, and the values are retrieved from the
-                store for our component.</p>
-              <p>For a <code class="highlighter-rouge">MovieList</code> component, we probably only want to know about
-                the <code class="highlighter-rouge">movies</code> array and the <code
-                  class="highlighter-rouge">moviesToWatch</code> number, <em>maybe</em> the <code
-                  class="highlighter-rouge">user</code> object. We’ll not worry about the <code
-                  class="highlighter-rouge">todoList</code>, since our component doesn’t need to know about that part of
-                our state. Let’s bring those three pieces of our state into the component.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kd">const</span> <span class="nx">mapStateToProps</span> <span class="o">=</span> <span class="nx">state</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <p>
+                  Now <code class="highlighter-rouge">MovieList</code> is
+                  connected to the store. Let’s write our
+                  <code class="highlighter-rouge">mapStateToProps</code>
+                  function now, to tell
+                  <code class="highlighter-rouge">connect</code> which pieces of
+                  our state we want to bring in to this component. This function
+                  takes in <code class="highlighter-rouge">state</code> as a
+                  parameter, then returns an object where the properties can be
+                  passed to props, and the values are retrieved from the store
+                  for our component.
+                </p>
+                <p>
+                  For a
+                  <code class="highlighter-rouge">MovieList</code> component, we
+                  probably only want to know about the
+                  <code class="highlighter-rouge">movies</code> array and the
+                  <code class="highlighter-rouge">moviesToWatch</code> number,
+                  <em>maybe</em> the
+                  <code class="highlighter-rouge">user</code> object. We’ll not
+                  worry about the
+                  <code class="highlighter-rouge">todoList</code>, since our
+                  component doesn’t need to know about that part of our state.
+                  Let’s bring those three pieces of our state into the
+                  component.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">mapStateToProps</span> <span class="o">=</span> <span class="nx">state</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">{</span>
     <span class="na">movies</span><span class="p">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">movies</span><span class="p">,</span>
     <span class="na">moviesToWatch</span><span class="p">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">moviesToWatch</span><span class="p">,</span>
@@ -694,147 +1010,264 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Let’s pass this in as the first argument to the first <code class="highlighter-rouge">connect</code>
-                invocation. Notice that <code class="highlighter-rouge">state</code> is being passed into this function.
-                Under the hood, connect passes our entire state tree to <code
-                  class="highlighter-rouge">mapStateToProps</code>. That means that within that function, we have access
-                to all our state via the <code class="highlighter-rouge">state</code> argument. But, the component only
-                receives the pieces of state that we turn out of <code class="highlighter-rouge">mapStateToProps</code>.
-              </p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="k">export</span> <span class="k">default</span> <span class="nx">connect</span><span class="p">(</span><span class="nx">mapStateToProps</span><span class="p">,</span> <span class="p">{})(</span><span class="nx">MovieList</span><span class="p">)</span>
+                <p>
+                  Let’s pass this in as the first argument to the first
+                  <code class="highlighter-rouge">connect</code> invocation.
+                  Notice that <code class="highlighter-rouge">state</code> is
+                  being passed into this function. Under the hood, connect
+                  passes our entire state tree to
+                  <code class="highlighter-rouge">mapStateToProps</code>. That
+                  means that within that function, we have access to all our
+                  state via the
+                  <code class="highlighter-rouge">state</code> argument. But,
+                  the component only receives the pieces of state that we turn
+                  out of <code class="highlighter-rouge">mapStateToProps</code>.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">export</span> <span class="k">default</span> <span class="nx">connect</span><span class="p">(</span><span class="nx">mapStateToProps</span><span class="p">,</span> <span class="p">{})(</span><span class="nx">MovieList</span><span class="p">)</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Now, if you look at the props in the React tools, you will see that all three pieces of our state have
-                been passed to our component through the <code class="highlighter-rouge">connect</code> function! As a
-                side note, other props we’ve passed to this component the traditional way are still going to be
-                available.</p>
-              <p><em>By the way, did you notice that we are using a function that takes in a component, extends its
-                  functionality, and returns a component? <code class="highlighter-rouge">connect</code> is a
-                  HOC!!!`</em></p>
-              <h5>Challenge</h5>
-              <p>Create a new application. Add the <code class="highlighter-rouge">redux</code> and <code
-                  class="highlighter-rouge">react-redux</code> packages. Create a redux store with some test data (have
-                fun with this part!). Build a component and connect that component to the store using <code
-                  class="highlighter-rouge">connect</code> and a <code class="highlighter-rouge">mapStateToProps</code>
-                function. Render the connected data from your connected component.</p>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to write Actions and Action Creators to describe state changes</h4>
-              <p>The Redux store is read only. The only way to modify application state when using Redux is by
-                dispatching actions.</p>
-              <p>We can use action creators and the <code class="highlighter-rouge">react-redux</code> library in order
-                to dispatch those actions.</p>
-              <h5>Overview</h5>
-              <p>In the world of Redux there’s a whole new set of programmer jargon. The first we’ll talk about here is
-                <code class="highlighter-rouge">actions</code>.</p>
-              <h3 id="actions">Actions</h3>
-              <p>Actions in Redux are packets of information that contain an action type and associated data.</p>
-              <p>In code, an action is simply an object with up to two properties - a <code
-                  class="highlighter-rouge">type</code> property and an optional <code
-                  class="highlighter-rouge">payload</code> property. Each action MUST have a <code
-                  class="highlighter-rouge">type</code> property. The <code class="highlighter-rouge">type</code>
-                property is a string that explains what interaction just happened. By convention, we use all caps and
-                underscores for types - ie <code class="highlighter-rouge">'LOGIN_USER</code> or <code
-                  class="highlighter-rouge">TOGGLE_TODO</code>. The <code class="highlighter-rouge">payload</code>
-                property is data that goes along with that interaction.</p>
-              <p>Actions are “dispatched” to our reducer - aka, passed into the reducer function as an argument. When
-                our reducer recieves an action, it will update the state according to the type and payload on the
-                action.</p>
-              <p>Let’s say we have a toggle handler function that switches a boolean field called <code
-                  class="highlighter-rouge">show</code>, which is set on our state in our Redux store. An action for
-                such an event would look like this:</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="p">{</span> <span class="nl">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">TOGGLE_SHOW</span><span class="dl">"</span><span class="p">,</span> <span class="nx">show</span><span class="p">:</span> <span class="o">!</span><span class="nx">state</span><span class="p">.</span><span class="nx">show</span> <span class="p">};</span>
+                <p>
+                  Now, if you look at the props in the React tools, you will see
+                  that all three pieces of our state have been passed to our
+                  component through the
+                  <code class="highlighter-rouge">connect</code> function! As a
+                  side note, other props we’ve passed to this component the
+                  traditional way are still going to be available.
+                </p>
+                <p>
+                  <em
+                    >By the way, did you notice that we are using a function
+                    that takes in a component, extends its functionality, and
+                    returns a component?
+                    <code class="highlighter-rouge">connect</code> is a
+                    HOC!!!`</em
+                  >
+                </p>
+                <h5>Challenge</h5>
+                <p>
+                  Create a new application. Add the
+                  <code class="highlighter-rouge">redux</code> and
+                  <code class="highlighter-rouge">react-redux</code> packages.
+                  Create a redux store with some test data (have fun with this
+                  part!). Build a component and connect that component to the
+                  store using <code class="highlighter-rouge">connect</code> and
+                  a
+                  <code class="highlighter-rouge">mapStateToProps</code>
+                  function. Render the connected data from your connected
+                  component.
+                </p>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to write Actions and Action Creators to describe state
+                  changes
+                </h4>
+                <p>
+                  The Redux store is read only. The only way to modify
+                  application state when using Redux is by dispatching actions.
+                </p>
+                <p>
+                  We can use action creators and the
+                  <code class="highlighter-rouge">react-redux</code> library in
+                  order to dispatch those actions.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  In the world of Redux there’s a whole new set of programmer
+                  jargon. The first we’ll talk about here is
+                  <code class="highlighter-rouge">actions</code>.
+                </p>
+                <h3 id="actions">Actions</h3>
+                <p>
+                  Actions in Redux are packets of information that contain an
+                  action type and associated data.
+                </p>
+                <p>
+                  In code, an action is simply an object with up to two
+                  properties - a
+                  <code class="highlighter-rouge">type</code> property and an
+                  optional
+                  <code class="highlighter-rouge">payload</code> property. Each
+                  action MUST have a
+                  <code class="highlighter-rouge">type</code> property. The
+                  <code class="highlighter-rouge">type</code> property is a
+                  string that explains what interaction just happened. By
+                  convention, we use all caps and underscores for types - ie
+                  <code class="highlighter-rouge">'LOGIN_USER</code> or
+                  <code class="highlighter-rouge">TOGGLE_TODO</code>. The
+                  <code class="highlighter-rouge">payload</code> property is
+                  data that goes along with that interaction.
+                </p>
+                <p>
+                  Actions are “dispatched” to our reducer - aka, passed into the
+                  reducer function as an argument. When our reducer recieves an
+                  action, it will update the state according to the type and
+                  payload on the action.
+                </p>
+                <p>
+                  Let’s say we have a toggle handler function that switches a
+                  boolean field called
+                  <code class="highlighter-rouge">show</code>, which is set on
+                  our state in our Redux store. An action for such an event
+                  would look like this:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="p">{</span> <span class="nl">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">TOGGLE_SHOW</span><span class="dl">"</span><span class="p">,</span> <span class="nx">show</span><span class="p">:</span> <span class="o">!</span><span class="nx">state</span><span class="p">.</span><span class="nx">show</span> <span class="p">};</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>This allows us to keep things as simple as possible when responding to events and interactions!</p>
-              <p>Importantly in Redux, reducers are the only place we can update our state. Actions tell our reducers
-                “how” to update the state, and perhaps with what data it should be updated, but <strong>only</strong> a
-                reducer can actually update the state. <em>More to come on reducers later.</em>.</p>
-              <p>From what we’ve learned so far, we can start to see the flow of data in a React/Redux application:</p>
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>Store sets the state -&gt;
+                <p>
+                  This allows us to keep things as simple as possible when
+                  responding to events and interactions!
+                </p>
+                <p>
+                  Importantly in Redux, reducers are the only place we can
+                  update our state. Actions tell our reducers “how” to update
+                  the state, and perhaps with what data it should be updated,
+                  but <strong>only</strong> a reducer can actually update the
+                  state. <em>More to come on reducers later.</em>.
+                </p>
+                <p>
+                  From what we’ve learned so far, we can start to see the flow
+                  of data in a React/Redux application:
+                </p>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>Store sets the state -&gt;
 Event or user interaction happens -&gt;
 An action desctibing the event and possible changes is dispatched to reducer -&gt;
 The reducer handles the action and replaces the store accordingly.
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h3 id="action-creators">Action creators</h3>
-              <p>Actions should not be confused with <code class="highlighter-rouge">action creators</code> (though
-                admittedly, it’s very easy to confuse them). An action creator is a function that <em>creates</em> an
-                action. Or in other words, an action creator is a function that returns an action object.</p>
-              <p>Action creators are a middle step between events/interactions and the dispatch process. They make it
-                possible to write reusable functions that can create actions on the fly, rather than us hard coding
-                actions into our components. With action creators in mind, here is an updated look at our data flow:</p>
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>Store sets the state -&gt;
+                <h3 id="action-creators">Action creators</h3>
+                <p>
+                  Actions should not be confused with
+                  <code class="highlighter-rouge">action creators</code> (though
+                  admittedly, it’s very easy to confuse them). An action creator
+                  is a function that <em>creates</em> an action. Or in other
+                  words, an action creator is a function that returns an action
+                  object.
+                </p>
+                <p>
+                  Action creators are a middle step between events/interactions
+                  and the dispatch process. They make it possible to write
+                  reusable functions that can create actions on the fly, rather
+                  than us hard coding actions into our components. With action
+                  creators in mind, here is an updated look at our data flow:
+                </p>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>Store sets the state -&gt;
 Event or user interaction happens -&gt;
 An action creator is called and dispatches an action -&gt;
 Actions tell us about the changes from the event -&gt;
 Reducers handle those actions and replace the store accordingly.
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>This flow is one of the reasons that Redux is so powerful. The two major principles here are <code
-                  class="highlighter-rouge">Functional Programming</code> and <code
-                  class="highlighter-rouge">Immutability</code>. Dispatched actions are the trigger for reducers, and
-                reducers are pure functions that never produce any side-effects. Everything you do in Redux is
-                functional.</p>
-              <h3 id="action-types">Action types</h3>
-              <p>The final term we want to cover here is <code class="highlighter-rouge">action types</code>. We’ve
-                talked about, and even demonstrated the <code class="highlighter-rouge">type</code> property of an
-                action. We want to change that up right now, ever-so-slightly… Instead of passing a string to <code
-                  class="highlighter-rouge">action.type</code> we create a variable with the name of the string, and
-                assign it the string we would have passed to an action. Then we give <code
-                  class="highlighter-rouge">action.type</code> the variable as it’s value.</p>
-              <p>We do this because we deal with strings like we deal with <code class="highlighter-rouge">types</code>.
-                Strings are used in multiple places like you’ll see in reducers very soon, misspellings occur, and are
-                very hard to debug. If we misspell our action type in our reducer, our state won’t be updated correctly,
-                and we’ll be left wondering what went wrong.</p>
-              <p>Instead, we’ll create an action type, and import it wherever we need it. That way, with linters
-                IntelliSense in our code editor, we can spot errors a lot quicker. This is what action types looks like:
-              </p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">TOGGLE_SHOW</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">TOGGLE_SHOW</span><span class="dl">'</span><span class="p">;</span>
+                <p>
+                  This flow is one of the reasons that Redux is so powerful. The
+                  two major principles here are
+                  <code class="highlighter-rouge">Functional Programming</code>
+                  and <code class="highlighter-rouge">Immutability</code>.
+                  Dispatched actions are the trigger for reducers, and reducers
+                  are pure functions that never produce any side-effects.
+                  Everything you do in Redux is functional.
+                </p>
+                <h3 id="action-types">Action types</h3>
+                <p>
+                  The final term we want to cover here is
+                  <code class="highlighter-rouge">action types</code>. We’ve
+                  talked about, and even demonstrated the
+                  <code class="highlighter-rouge">type</code> property of an
+                  action. We want to change that up right now, ever-so-slightly…
+                  Instead of passing a string to
+                  <code class="highlighter-rouge">action.type</code> we create a
+                  variable with the name of the string, and assign it the string
+                  we would have passed to an action. Then we give
+                  <code class="highlighter-rouge">action.type</code> the
+                  variable as it’s value.
+                </p>
+                <p>
+                  We do this because we deal with strings like we deal with
+                  <code class="highlighter-rouge">types</code>. Strings are used
+                  in multiple places like you’ll see in reducers very soon,
+                  misspellings occur, and are very hard to debug. If we misspell
+                  our action type in our reducer, our state won’t be updated
+                  correctly, and we’ll be left wondering what went wrong.
+                </p>
+                <p>
+                  Instead, we’ll create an action type, and import it wherever
+                  we need it. That way, with linters IntelliSense in our code
+                  editor, we can spot errors a lot quicker. This is what action
+                  types looks like:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">TOGGLE_SHOW</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">TOGGLE_SHOW</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="c1">// then in our action:</span>
 <span class="p">{</span> <span class="nl">type</span><span class="p">:</span> <span class="nx">TOGGLE_SHOW</span><span class="p">,</span> <span class="nx">payload</span><span class="p">:</span> <span class="o">!</span><span class="nx">state</span><span class="p">.</span><span class="nx">show</span> <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Now let’s try all of this in code!</p>
-              <h5>Follow Along</h5>
-              <p>Let’s build our first action creator. We’ll assume that we have a Redux store connected to our app, and
-                a component connected to the store. On the state object, we have a <code
-                  class="highlighter-rouge">title</code> property brought into the component via the <code
-                  class="highlighter-rouge">mapStateToProps</code> function. Our component has an input field and an
-                “update title” button. When we type into the input and click the button, we want to update our state
-                object with our new title. (You can start with <a href="https://codesandbox.io/s/rj862kxkkp">this
-                  codesandbox</a>)</p>
-              <p>First, we need to create a new folder in the <code class="highlighter-rouge">src</code> folder called
-                <code class="highlighter-rouge">actions</code>. Inside that folder, create an <code
-                  class="highlighter-rouge">actions.js</code> file. Inside that file, create a variable called <code
-                  class="highlighter-rouge">UPDATE_TITLE</code> with the value <code
-                  class="highlighter-rouge">'UPDATE_TITLE'</code>. The variable is an action type. Next, let’s create a
-                function called <code class="highlighter-rouge">updateTitle</code> that takes in a new title. This will
-                be our action creator, and it will simply return an action with the type <code
-                  class="highlighter-rouge">UPDATE_TITLE</code> and a payload of the new title we passed into it. Don’t
-                forget to export both the action type and the action creator function. (Note that these will be <code
-                  class="highlighter-rouge">named exports</code>, so they will be imported with curly brace sytnax -
-                <code class="highlighter-rouge">import { namedExport } from './place';</code>)</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">UPDATE_TITLE</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">UPDATE_TITLE</span><span class="dl">'</span><span class="p">;</span>
+                <p>Now let’s try all of this in code!</p>
+                <h5>Follow Along</h5>
+                <p>
+                  Let’s build our first action creator. We’ll assume that we
+                  have a Redux store connected to our app, and a component
+                  connected to the store. On the state object, we have a
+                  <code class="highlighter-rouge">title</code> property brought
+                  into the component via the
+                  <code class="highlighter-rouge">mapStateToProps</code>
+                  function. Our component has an input field and an “update
+                  title” button. When we type into the input and click the
+                  button, we want to update our state object with our new title.
+                  (You can start with
+                  <a href="https://codesandbox.io/s/rj862kxkkp"
+                    >this codesandbox</a
+                  >)
+                </p>
+                <p>
+                  First, we need to create a new folder in the
+                  <code class="highlighter-rouge">src</code> folder called
+                  <code class="highlighter-rouge">actions</code>. Inside that
+                  folder, create an
+                  <code class="highlighter-rouge">actions.js</code> file. Inside
+                  that file, create a variable called
+                  <code class="highlighter-rouge">UPDATE_TITLE</code> with the
+                  value <code class="highlighter-rouge">'UPDATE_TITLE'</code>.
+                  The variable is an action type. Next, let’s create a function
+                  called <code class="highlighter-rouge">updateTitle</code> that
+                  takes in a new title. This will be our action creator, and it
+                  will simply return an action with the type
+                  <code class="highlighter-rouge">UPDATE_TITLE</code> and a
+                  payload of the new title we passed into it. Don’t forget to
+                  export both the action type and the action creator function.
+                  (Note that these will be
+                  <code class="highlighter-rouge">named exports</code>, so they
+                  will be imported with curly brace sytnax -
+                  <code class="highlighter-rouge"
+                    >import { namedExport } from './place';</code
+                  >)
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">UPDATE_TITLE</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">UPDATE_TITLE</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="k">export</span> <span class="kd">function</span> <span class="nx">updateTitle</span><span class="p">(</span><span class="nx">newTitle</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">{</span>
@@ -843,35 +1276,59 @@ Reducers handle those actions and replace the store accordingly.
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>See how easy that was? It sounded pretty scary up above, but in practice, this is all very concise and
-                intuitive. Now we have an action creator that can dispatch our action to the reducer and send the
-                reducer the new title. Let’s import our action creator into our component, and talk about how to use it
-                there.</p>
-              <p>When we use action creators in our connected components, we first import the action creator. Then, we
-                pass the action creator into the <code class="highlighter-rouge">connect</code> function. Action
-                creators are passed to the object that is the second argument in the first <code
-                  class="highlighter-rouge">connect</code> invocation.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="k">export</span> <span class="k">default</span> <span class="nx">connect</span><span class="p">(</span><span class="nx">mapStateToProps</span><span class="p">,</span> <span class="p">{</span> <span class="na">actionCreator</span><span class="p">:</span> <span class="nx">actionCreator</span> <span class="p">})(</span><span class="nx">Component</span><span class="p">);</span>
+                <p>
+                  See how easy that was? It sounded pretty scary up above, but
+                  in practice, this is all very concise and intuitive. Now we
+                  have an action creator that can dispatch our action to the
+                  reducer and send the reducer the new title. Let’s import our
+                  action creator into our component, and talk about how to use
+                  it there.
+                </p>
+                <p>
+                  When we use action creators in our connected components, we
+                  first import the action creator. Then, we pass the action
+                  creator into the
+                  <code class="highlighter-rouge">connect</code> function.
+                  Action creators are passed to the object that is the second
+                  argument in the first
+                  <code class="highlighter-rouge">connect</code> invocation.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">export</span> <span class="k">default</span> <span class="nx">connect</span><span class="p">(</span><span class="nx">mapStateToProps</span><span class="p">,</span> <span class="p">{</span> <span class="na">actionCreator</span><span class="p">:</span> <span class="nx">actionCreator</span> <span class="p">})(</span><span class="nx">Component</span><span class="p">);</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Then, just like the state pieces that we brought into our component via the <code
-                  class="highlighter-rouge">mapStateToProps</code> function, we have access to our action creator in
-                props. This step is important because it is the <code class="highlighter-rouge">connect</code> function
-                that works in the background to actually dispatch our actions to the reducer. We can’t just import an
-                action creator and use it in our component. It must go through <code
-                  class="highlighter-rouge">connect</code> and be used from the props object.</p>
-              <p>Let’s see how we would do this in the app we have been building. Go to the <code
-                  class="highlighter-rouge">Title</code> component, import <code
-                  class="highlighter-rouge">updateTitle</code>, and pass it into the <code
-                  class="highlighter-rouge">connect</code> function.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+                <p>
+                  Then, just like the state pieces that we brought into our
+                  component via the
+                  <code class="highlighter-rouge">mapStateToProps</code>
+                  function, we have access to our action creator in props. This
+                  step is important because it is the
+                  <code class="highlighter-rouge">connect</code> function that
+                  works in the background to actually dispatch our actions to
+                  the reducer. We can’t just import an action creator and use it
+                  in our component. It must go through
+                  <code class="highlighter-rouge">connect</code> and be used
+                  from the props object.
+                </p>
+                <p>
+                  Let’s see how we would do this in the app we have been
+                  building. Go to the
+                  <code class="highlighter-rouge">Title</code> component, import
+                  <code class="highlighter-rouge">updateTitle</code>, and pass
+                  it into the
+                  <code class="highlighter-rouge">connect</code> function.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">connect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-redux</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="k">import</span> <span class="p">{</span> <span class="nx">updateTitle</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">../actions/actions</span><span class="dl">'</span><span class="p">;</span>
@@ -883,14 +1340,21 @@ Reducers handle those actions and replace the store accordingly.
   <span class="p">{</span> <span class="nx">updateTitle</span> <span class="p">}</span>  <span class="c1">// same as { updateTitle: updateTitle }</span>
 <span class="p">)(</span><span class="nx">Title</span><span class="p">);</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Now when the “Update title” button is pushed, invoke a function on the class that invokes <code
-                  class="highlighter-rouge">this.props.updateTitle</code> that gets <code
-                  class="highlighter-rouge">this.state.newTitleText</code> passed into it.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nx">updateTitle</span> <span class="o">=</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <p>
+                  Now when the “Update title” button is pushed, invoke a
+                  function on the class that invokes
+                  <code class="highlighter-rouge">this.props.updateTitle</code>
+                  that gets
+                  <code class="highlighter-rouge">this.state.newTitleText</code>
+                  passed into it.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nx">updateTitle</span> <span class="o">=</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">updateTitle</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">newTitleText</span><span class="p">)</span>
 <span class="p">}</span>
@@ -899,16 +1363,26 @@ Reducers handle those actions and replace the store accordingly.
 
 <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">updateTitle</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Update</span> <span class="nx">title</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
 </span></code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Yes, names will be the same all over the place with this stuff. Just note that <code
-                  class="highlighter-rouge">props.updateTitle</code> is the action creator.</p>
-              <p>To make sure it is working, let’s add a console.log in the action creator, and log out the newTitle
-                that is passed into it. Since we don’t have a reducer to handle this action yet, we won’t see the state
-                or title updated yet. So this is the best way we can make sure it’s working.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="k">export</span> <span class="kd">function</span> <span class="nx">updateTitle</span><span class="p">(</span><span class="nx">newTitle</span><span class="p">)</span> <span class="p">{</span>
+                <p>
+                  Yes, names will be the same all over the place with this
+                  stuff. Just note that
+                  <code class="highlighter-rouge">props.updateTitle</code> is
+                  the action creator.
+                </p>
+                <p>
+                  To make sure it is working, let’s add a console.log in the
+                  action creator, and log out the newTitle that is passed into
+                  it. Since we don’t have a reducer to handle this action yet,
+                  we won’t see the state or title updated yet. So this is the
+                  best way we can make sure it’s working.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">export</span> <span class="kd">function</span> <span class="nx">updateTitle</span><span class="p">(</span><span class="nx">newTitle</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">newTitle</span><span class="p">);</span>
   <span class="k">return</span> <span class="p">{</span>
     <span class="na">type</span><span class="p">:</span> <span class="nx">UPDATE_TITLE</span><span class="p">,</span>
@@ -916,69 +1390,135 @@ Reducers handle those actions and replace the store accordingly.
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Here’s what our <a href="https://codesandbox.io/s/w2n0o4qwmw">codesandbox</a> should look like now.</p>
-              <h5>Challenge</h5>
-              <p>In the application you created earlier, look at the state you are displaying. Find something easy, like
-                a string or a number, to update. (Add a string to your state if you only have arrays or objects. This
-                will keep things simple today while we learn this brand new state management flow). Build an action
-                creator, pass it in to your component, and call that action creator (from props) after some interaction
-                like a button click. Make sure you have a console.log in the action creator so you will know if it’s
-                working.</p>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to write Reducers to respond to actions and update state</h4>
-              <p>Reducers calculate the new version of state based on the current state and a given <em>Action</em>. The
-                best way to think about Reducers is as the make-up of our state. So when we create a reducer it can be
-                described as the portion of state that it represents. Reducers are pure functions and they are the glue
-                that bind together our Actions and our Store.</p>
-              <h5>Overview</h5>
-              <p>When an action is dispatched, it flows through every reducer in a script. Redux was built on this
-                fundamental principle, among others.</p>
-              <p>Reducers are pure functions, meaning they don’t produce any side-effects. A reducer follows the key
-                principles that come from the <code class="highlighter-rouge">Array.reduce()</code> function, in that
-                they behave similarly to the callback that you would pass to <code
-                  class="highlighter-rouge">reduce</code>. They aren’t the same thing, but they behave and do similar
-                things, so that is an appropriate comparison to keep in mind.</p>
-              <p>Reducers take in two arguments, the <code class="highlighter-rouge">current state</code> from the Redux
-                store, and the <code class="highlighter-rouge">action</code> object, sent via action creator functions.
-                Remember that an action gives us a packet of information as an object with a <code
-                  class="highlighter-rouge">type</code> and <code class="highlighter-rouge">payload</code> field that we
-                can use. The <code class="highlighter-rouge">type</code> <em>tells the reducer what to do</em>, and the
-                payload tells the reducer what to update on state.</p>
-              <p><strong>Reducers will NEVER update state directly, they only return a new object</strong> Remember this
-                as you craft your reducers - that they are not only functional and pure, but they lend themselves to the
-                pattern of immutability well.</p>
-              <p>Inside reducers, we use <code class="highlighter-rouge">switch</code> statements to look at the action
-                type, then return the updated state. <code class="highlighter-rouge">switch</code> statements are like
-                long <code class="highlighter-rouge">if / else if / else if / ... / else</code> statement. If you
-                haven’t encountered a <code class="highlighter-rouge">switch</code> statement yet, read <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch">this</a>
-                before continuing.</p>
-              <h5>Follow Along</h5>
-              <p>Back in our title app, let’s create another folder inside <code class="highlighter-rouge">src</code>
-                called <code class="highlighter-rouge">reducers</code>, and inside that, a <code
-                  class="highlighter-rouge">reducer.js</code> file. To start, we will create an <code
-                  class="highlighter-rouge">initialState</code> object that looks a lot like the one returned in the
-                <code class="highlighter-rouge">reducer</code> function in <code
-                  class="highlighter-rouge">index.js</code>. (You can start <a
-                  href="https://codesandbox.io/s/w2n0o4qwmw">here</a> if you need to).</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kd">const</span> <span class="nx">initialState</span> <span class="o">=</span> <span class="p">{</span>
+                <p>
+                  Here’s what our
+                  <a href="https://codesandbox.io/s/w2n0o4qwmw">codesandbox</a>
+                  should look like now.
+                </p>
+                <h5>Challenge</h5>
+                <p>
+                  In the application you created earlier, look at the state you
+                  are displaying. Find something easy, like a string or a
+                  number, to update. (Add a string to your state if you only
+                  have arrays or objects. This will keep things simple today
+                  while we learn this brand new state management flow). Build an
+                  action creator, pass it in to your component, and call that
+                  action creator (from props) after some interaction like a
+                  button click. Make sure you have a console.log in the action
+                  creator so you will know if it’s working.
+                </p>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to write Reducers to respond to actions and update state
+                </h4>
+                <p>
+                  Reducers calculate the new version of state based on the
+                  current state and a given <em>Action</em>. The best way to
+                  think about Reducers is as the make-up of our state. So when
+                  we create a reducer it can be described as the portion of
+                  state that it represents. Reducers are pure functions and they
+                  are the glue that bind together our Actions and our Store.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  When an action is dispatched, it flows through every reducer
+                  in a script. Redux was built on this fundamental principle,
+                  among others.
+                </p>
+                <p>
+                  Reducers are pure functions, meaning they don’t produce any
+                  side-effects. A reducer follows the key principles that come
+                  from the
+                  <code class="highlighter-rouge">Array.reduce()</code>
+                  function, in that they behave similarly to the callback that
+                  you would pass to
+                  <code class="highlighter-rouge">reduce</code>. They aren’t the
+                  same thing, but they behave and do similar things, so that is
+                  an appropriate comparison to keep in mind.
+                </p>
+                <p>
+                  Reducers take in two arguments, the
+                  <code class="highlighter-rouge">current state</code> from the
+                  Redux store, and the
+                  <code class="highlighter-rouge">action</code> object, sent via
+                  action creator functions. Remember that an action gives us a
+                  packet of information as an object with a
+                  <code class="highlighter-rouge">type</code> and
+                  <code class="highlighter-rouge">payload</code> field that we
+                  can use. The <code class="highlighter-rouge">type</code>
+                  <em>tells the reducer what to do</em>, and the payload tells
+                  the reducer what to update on state.
+                </p>
+                <p>
+                  <strong
+                    >Reducers will NEVER update state directly, they only return
+                    a new object</strong
+                  >
+                  Remember this as you craft your reducers - that they are not
+                  only functional and pure, but they lend themselves to the
+                  pattern of immutability well.
+                </p>
+                <p>
+                  Inside reducers, we use
+                  <code class="highlighter-rouge">switch</code> statements to
+                  look at the action type, then return the updated state.
+                  <code class="highlighter-rouge">switch</code> statements are
+                  like long
+                  <code class="highlighter-rouge"
+                    >if / else if / else if / ... / else</code
+                  >
+                  statement. If you haven’t encountered a
+                  <code class="highlighter-rouge">switch</code> statement yet,
+                  read
+                  <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch"
+                    >this</a
+                  >
+                  before continuing.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Back in our title app, let’s create another folder inside
+                  <code class="highlighter-rouge">src</code> called
+                  <code class="highlighter-rouge">reducers</code>, and inside
+                  that, a
+                  <code class="highlighter-rouge">reducer.js</code> file. To
+                  start, we will create an
+                  <code class="highlighter-rouge">initialState</code> object
+                  that looks a lot like the one returned in the
+                  <code class="highlighter-rouge">reducer</code> function in
+                  <code class="highlighter-rouge">index.js</code>. (You can
+                  start
+                  <a href="https://codesandbox.io/s/w2n0o4qwmw">here</a> if you
+                  need to).
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">initialState</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Title from Redux store</span><span class="dl">'</span>
 <span class="p">};</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Then we’ll create the reducer function. Remember, it takes two arguments - state (with the initial
-                state as a default - <em>watch the syntax there</em>), and action. Then it will contain a <code
-                  class="highlighter-rouge">switch</code> statement that looks at <code
-                  class="highlighter-rouge">action.type</code> and return <code class="highlighter-rouge">state</code>
-                as the default.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kd">function</span> <span class="nx">reducer</span><span class="p">(</span><span class="nx">state</span> <span class="o">=</span> <span class="nx">initialState</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
+                <p>
+                  Then we’ll create the reducer function. Remember, it takes two
+                  arguments - state (with the initial state as a default -
+                  <em>watch the syntax there</em>), and action. Then it will
+                  contain a
+                  <code class="highlighter-rouge">switch</code> statement that
+                  looks at
+                  <code class="highlighter-rouge">action.type</code> and return
+                  <code class="highlighter-rouge">state</code> as the default.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">function</span> <span class="nx">reducer</span><span class="p">(</span><span class="nx">state</span> <span class="o">=</span> <span class="nx">initialState</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">switch</span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
     <span class="nl">default</span><span class="p">:</span>
       <span class="k">return</span> <span class="nx">state</span><span class="p">;</span>
@@ -987,26 +1527,40 @@ Reducers handle those actions and replace the store accordingly.
 
 <span class="k">export</span> <span class="k">default</span> <span class="nx">reducer</span><span class="p">;</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Next, we need to build a <code class="highlighter-rouge">case</code> for our action. The dispatched
-                action is the <code class="highlighter-rouge">UPDATE_TITLE</code> action. So, we’ll want to import the
-                action type from the <code class="highlighter-rouge">actions.js</code> file first. It is a named export,
-                so you need to use brackets to import it.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">UPDATE_TITLE</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">../actions/actions</span><span class="dl">'</span><span class="p">;</span>
+                <p>
+                  Next, we need to build a
+                  <code class="highlighter-rouge">case</code> for our action.
+                  The dispatched action is the
+                  <code class="highlighter-rouge">UPDATE_TITLE</code> action.
+                  So, we’ll want to import the action type from the
+                  <code class="highlighter-rouge">actions.js</code> file first.
+                  It is a named export, so you need to use brackets to import
+                  it.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="p">{</span> <span class="nx">UPDATE_TITLE</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">../actions/actions</span><span class="dl">'</span><span class="p">;</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Then, in the <code class="highlighter-rouge">case</code> for <code
-                  class="highlighter-rouge">UPDATE_TITLE</code>, we will return a new state object. We do this be
-                returning an object with <code class="highlighter-rouge">state</code> spread into it, and updating the
-                <code class="highlighter-rouge">title</code> property with <code
-                  class="highlighter-rouge">action.payload</code>.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kd">function</span> <span class="nx">reducer</span><span class="p">(</span><span class="nx">state</span> <span class="o">=</span> <span class="nx">initialState</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
+                <p>
+                  Then, in the <code class="highlighter-rouge">case</code> for
+                  <code class="highlighter-rouge">UPDATE_TITLE</code>, we will
+                  return a new state object. We do this be returning an object
+                  with <code class="highlighter-rouge">state</code> spread into
+                  it, and updating the
+                  <code class="highlighter-rouge">title</code> property with
+                  <code class="highlighter-rouge">action.payload</code>.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">function</span> <span class="nx">reducer</span><span class="p">(</span><span class="nx">state</span> <span class="o">=</span> <span class="nx">initialState</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">switch</span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">case</span> <span class="nx">UPDATE_TITLE</span><span class="p">:</span>
       <span class="k">return</span> <span class="p">{</span>
@@ -1020,300 +1574,429 @@ Reducers handle those actions and replace the store accordingly.
 
 <span class="k">export</span> <span class="k">default</span> <span class="nx">reducer</span><span class="p">;</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Take a minute to study that syntax. Here are a couple of important details:</p>
-              <ul>
-                <li>We are returning a brand new object. We do NOT update the state object and return that</li>
-                <li>We are using the <code class="highlighter-rouge">spread operator</code> to “spread” in our old state
-                </li>
-                <li>We then update the one piece of data we want to update - <code
-                    class="highlighter-rouge">title</code>
-                </li>
-              </ul>
-              <p>This syntax is the convention when building reducers. This is something that takes some good repetition
-                to get used to!</p>
-              <p>Now that we have built our reducer, we need to import it into the <code
-                  class="highlighter-rouge">index.js</code> file and pass it into the <code
-                  class="highlighter-rouge">createStore</code> function in place of the fake one we built earlier. The
-                convention for the import is to call it <code class="highlighter-rouge">rootReducer</code> inside <code
-                  class="highlighter-rouge">index.js</code>.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="k">import</span> <span class="nx">rootReducer</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./reducers/reducer</span><span class="dl">'</span><span class="p">;</span>
+                <p>
+                  Take a minute to study that syntax. Here are a couple of
+                  important details:
+                </p>
+                <ul>
+                  <li>
+                    We are returning a brand new object. We do NOT update the
+                    state object and return that
+                  </li>
+                  <li>
+                    We are using the
+                    <code class="highlighter-rouge">spread operator</code> to
+                    “spread” in our old state
+                  </li>
+                  <li>
+                    We then update the one piece of data we want to update -
+                    <code class="highlighter-rouge">title</code>
+                  </li>
+                </ul>
+                <p>
+                  This syntax is the convention when building reducers. This is
+                  something that takes some good repetition to get used to!
+                </p>
+                <p>
+                  Now that we have built our reducer, we need to import it into
+                  the <code class="highlighter-rouge">index.js</code> file and
+                  pass it into the
+                  <code class="highlighter-rouge">createStore</code> function in
+                  place of the fake one we built earlier. The convention for the
+                  import is to call it
+                  <code class="highlighter-rouge">rootReducer</code> inside
+                  <code class="highlighter-rouge">index.js</code>.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="nx">rootReducer</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./reducers/reducer</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="kd">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">createStore</span><span class="p">(</span><span class="nx">rootReducer</span><span class="p">);</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Now we have come full circle! Go ahead and test out your app to make sure it is working. Great job
-                creating your first ever React/Redux application! Here is a working <a
-                  href="https://codesandbox.io/s/j357oqxwov">codesandbox</a> with everything we have implemented for
-                this app.</p>
-              <h5>Challenge</h5>
-              <p>In your app that you were working on earlier, create a reducer that will handle state changes for
-                whatever action you are dispatching from your action creator. Pass the reducer into your <code
-                  class="highlighter-rouge">createStore</code> function and test out your app.</p>
-              <hr>
-              <h2>
-                <a id="guided-project" class="anchor" href="#guided-project" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Guided Project</h2>
-              <h3>Immutability Exercise </h3>
-              <p>A short exercise highlighting the properties of arrays and objects, in regard to passing values by
-                reference.</p>
-              <a target="_blank" href="https://repl.it/@DanFrehner/Immutabilitypractice">GitHub Repo</a>
-              <hr>
-              <h2 class="display-4">
-                <a id="project" class="anchor" href="#project" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Project</h2>
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <h5><a target="_blank" href="https://github.com/LambdaSchool/Car-Sales">Car Sales</a></h5>
-                  <p>In this project you are given the skeleton/structure/styling of a React app. There is even some
-                    state built in for you. Your job will be to implement React-Redux as the state management system for
-                    this application.</p>
-                </li>
-              </ul>
-              <h2 class="display-4">
-                <a id="review" class="anchor" href="#review" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Review</h2>
-              <h3 class="display-5">Class Recordings</h3>
-              <p class="lead">You can use class recordings to help you master the material.</p>
-              <div>
-                <ul class="list-group list-group-flush">
+                <p>
+                  Now we have come full circle! Go ahead and test out your app
+                  to make sure it is working. Great job creating your first ever
+                  React/Redux application! Here is a working
+                  <a href="https://codesandbox.io/s/j357oqxwov">codesandbox</a>
+                  with everything we have implemented for this app.
+                </p>
+                <h5>Challenge</h5>
+                <p>
+                  In your app that you were working on earlier, create a reducer
+                  that will handle state changes for whatever action you are
+                  dispatching from your action creator. Pass the reducer into
+                  your
+                  <code class="highlighter-rouge">createStore</code> function
+                  and test out your app.
+                </p>
+                <hr />
+                <h2>
+                  <a
+                    id="guided-project"
+                    class="anchor"
+                    href="#guided-project"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Guided Project
+                </h2>
+                <h3>Immutability Exercise</h3>
+                <p>
+                  A short exercise highlighting the properties of arrays and
+                  objects, in regard to passing values by reference.
+                </p>
+                <a
+                  target="_blank"
+                  href="https://repl.it/@DanFrehner/Immutabilitypractice"
+                  >GitHub Repo</a
+                >
+                <hr />
+                <h2 class="display-4">
+                  <a
+                    id="project"
+                    class="anchor"
+                    href="#project"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Project
+                </h2>
+                <ul class="list-group">
                   <li class="list-group-item">
-                    <strong><a target="_blank" href="https://youtu.be/O1-bBHYl6iY">Redux for Web35 w/ Dustin
-                        Myers</a></strong>
-                    <p>Redux</p>
-                  </li>
-                  <li class="list-group-item">
-                    <a href="/archive/FSW/module/recba2NUdVmgKYyR3">All previous recordings</a>
+                    <h5>
+                      <a
+                        target="_blank"
+                        href="https://github.com/LambdaSchool/Car-Sales"
+                        >Car Sales</a
+                      >
+                    </h5>
+                    <p>
+                      In this project you are given the
+                      skeleton/structure/styling of a React app. There is even
+                      some state built in for you. Your job will be to implement
+                      React-Redux as the state management system for this
+                      application.
+                    </p>
                   </li>
                 </ul>
+                <h2 class="display-4">
+                  <a
+                    id="review"
+                    class="anchor"
+                    href="#review"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Review
+                </h2>
+                <h3 class="display-5">Class Recordings</h3>
+                <p class="lead">
+                  You can use class recordings to help you master the material.
+                </p>
+                <div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong
+                        ><a target="_blank" href="https://youtu.be/O1-bBHYl6iY"
+                          >Redux for Web35 w/ Dustin Myers</a
+                        ></strong
+                      >
+                      <p>Redux</p>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="/archive/FSW/module/recba2NUdVmgKYyR3"
+                        >All previous recordings</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <h3 class="display-5">Demonstrate Mastery</h3>
+                <p>
+                  To demonstrate mastery of this module, you need to complete
+                  and pass a code review on each of the following:
+                </p>
+                <ul>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      Write your thoughts on why Redux exists and at least one
+                      reason to use it as well as one reason to not use it.
+                    </p>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      Let’s go ahead and take a peek at our application using
+                      the React Dev Tools now that we’ve wrapped it up in a
+                      Provider Component.
+                    </p>
+                    <p>
+                      Now, take the time to think about where and when you’ve
+                      done this before? Is there a package that we’ve used this
+                      same way? If so, which package is it? It is important to
+                      note that a large number of packages that we use in React
+                      are implemented this way.
+                    </p>
+                    <p>
+                      Write down a few thoughts on what you see, where you’ve
+                      seen similar patterns, etc, and send that to your PM.
+                    </p>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      Create a new application. Add the
+                      <code class="highlighter-rouge">redux</code> and
+                      <code class="highlighter-rouge">react-redux</code>
+                      packages. Create a redux store with some test data (have
+                      fun with this part!). Build a component and connect that
+                      component to the store using
+                      <code class="highlighter-rouge">connect</code> and a
+                      <code class="highlighter-rouge">mapStateToProps</code>
+                      function. Render the connected data from your connected
+                      component.
+                    </p>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      In the application you created earlier, look at the state
+                      you are displaying. Find something easy, like a string or
+                      a number, to update. (Add a string to your state if you
+                      only have arrays or objects. This will keep things simple
+                      today while we learn this brand new state management
+                      flow). Build an action creator, pass it in to your
+                      component, and call that action creator (from props) after
+                      some interaction like a button click. Make sure you have a
+                      console.log in the action creator so you will know if it’s
+                      working.
+                    </p>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      In your app that you were working on earlier, create a
+                      reducer that will handle state changes for whatever action
+                      you are dispatching from your action creator. Pass the
+                      reducer into your
+                      <code class="highlighter-rouge">createStore</code>
+                      function and test out your app.
+                    </p>
+                  </li>
+                  <li>Guided Project: Immutability Exercise</li>
+                  <li>Project: Car Sales</li>
+                  <li>Code Challenge: LinkedListCycle</li>
+                  <li>Code Challenge: BalancedBrackets</li>
+                </ul>
               </div>
-              <h3 class="display-5">Demonstrate Mastery</h3>
-              <p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the
-                following:</p>
-              <ul>
-                <li>Objective challenge: <p>Write your thoughts on why Redux exists and at least one reason to use it as
-                    well as one reason to not use it.</p>
-                </li>
-                <li>Objective challenge: <p>Let’s go ahead and take a peek at our application using the React Dev Tools
-                    now that we’ve wrapped it up in a Provider Component.</p>
-                  <p>Now, take the time to think about where and when you’ve done this before? Is there a package that
-                    we’ve used this same way? If so, which package is it? It is important to note that a large number of
-                    packages that we use in React are implemented this way.</p>
-                  <p>Write down a few thoughts on what you see, where you’ve seen similar patterns, etc, and send that
-                    to your PM.</p>
-                </li>
-                <li>Objective challenge: <p>Create a new application. Add the <code
-                      class="highlighter-rouge">redux</code> and <code class="highlighter-rouge">react-redux</code>
-                    packages. Create a redux store with some test data (have fun with this part!). Build a component and
-                    connect that component to the store using <code class="highlighter-rouge">connect</code> and a <code
-                      class="highlighter-rouge">mapStateToProps</code> function. Render the connected data from your
-                    connected component.</p>
-                </li>
-                <li>Objective challenge: <p>In the application you created earlier, look at the state you are
-                    displaying. Find something easy, like a string or a number, to update. (Add a string to your state
-                    if you only have arrays or objects. This will keep things simple today while we learn this brand new
-                    state management flow). Build an action creator, pass it in to your component, and call that action
-                    creator (from props) after some interaction like a button click. Make sure you have a console.log in
-                    the action creator so you will know if it’s working.</p>
-                </li>
-                <li>Objective challenge: <p>In your app that you were working on earlier, create a reducer that will
-                    handle state changes for whatever action you are dispatching from your action creator. Pass the
-                    reducer into your <code class="highlighter-rouge">createStore</code> function and test out your app.
-                  </p>
-                </li>
-                <li>Guided Project: Immutability Exercise </li>
-                <li>Project: Car Sales</li>
-                <li>Code Challenge: LinkedListCycle</li>
-                <li>Code Challenge: BalancedBrackets</li>
-              </ul>
             </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-        dataLayer.push( arguments );
-      }
-      gtag( 'js', new Date() );
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
 
-      gtag( 'config', 'UA-80850900-4' );
-    </script>
-    <script type="text/javascript">
-      function getDomain() {
-        const domainName = window.location.hostname.split( '.' )[ 1 ];
-        return `${domainName}.com`;
-      }
-    </script>
-    <script src="" integrity="" crossorigin="anonymous"></script>
-    <script>
-      window.jQuery || document.write( '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>' )
-    </script>
-    <script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script>
-    <script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
-    <script src="/assets/js/activate.js"></script>
-    <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      SimpleJekyllSearch.init( {
-        searchInput: document.getElementById( 'search-input' ),
-        resultsContainer: document.getElementById( 'results-container' ),
-        dataSource: '/search.json',
-        searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Redux">{title}</a></li>',
-        noResultsText: '',
-        limit: 10,
-        fuzzy: true,
-      } )
-    </script>
-    <script src="/assets/js/mermaid.min.js"></script>
-    <script type="text/javascript">
-      if ( window.attachEvent ) {
-        window.attachEvent( 'onload', verifySignedIn );
-      } else {
-        if ( window.onload ) {
-          var currentOnLoadFn = window.onload;
-          var newOnLoadFn = function ( evt ) {
-            currentOnLoadFn( evt );
-            verifySignedIn();
-          };
-          window.onload = newOnLoadFn;
+        gtag("config", "UA-80850900-4");
+      </script>
+      <script type="text/javascript">
+        function getDomain() {
+          const domainName = window.location.hostname.split(".")[1];
+          return `${domainName}.com`;
+        }
+      </script>
+      <script src="" integrity="" crossorigin="anonymous"></script>
+      <script>
+        window.jQuery ||
+          document.write(
+            '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>'
+          );
+      </script>
+      <script
+        src="/assets/js/vendor/popper.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="/dist/js/bootstrap.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script src="/assets/js/activate.js"></script>
+      <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        SimpleJekyllSearch.init({
+          searchInput: document.getElementById("search-input"),
+          resultsContainer: document.getElementById("results-container"),
+          dataSource: "/search.json",
+          searchResultTemplate:
+            '<li class="list-group-item"><a href="{url}" title="Redux">{title}</a></li>',
+          noResultsText: "",
+          limit: 10,
+          fuzzy: true,
+        });
+      </script>
+      <script src="/assets/js/mermaid.min.js"></script>
+      <script type="text/javascript">
+        if (window.attachEvent) {
+          window.attachEvent("onload", verifySignedIn);
         } else {
-          window.onload = verifySignedIn;
-        }
-      }
-
-      function verifySignedIn() {
-        if ( isPagePublic() ) {
-          return showPageContents();
-        }
-
-        window.__user = null;
-        isSignedIn().then( ( user ) => {
-          window.__user = user;
-
-          if ( !user.signedIn ) {
-            redirectToSignIn();
-          } else if ( !user.student && !window.__openToAdmissions ) {
-            showUnauthorizedMessage();
+          if (window.onload) {
+            var currentOnLoadFn = window.onload;
+            var newOnLoadFn = function (evt) {
+              currentOnLoadFn(evt);
+              verifySignedIn();
+            };
+            window.onload = newOnLoadFn;
           } else {
-            showPageContents();
-          }
-        } );
-      }
-
-      function isPagePublic() {
-        const openCourses = [
-          'and-pre',
-          'ds-pre',
-          'fsw-pre',
-          'help',
-          'ios-pre',
-        ];
-
-        const openPages = [
-          'cs-and',
-          'cs-fsw',
-          'cs-ios',
-          'cr',
-          'ds',
-          'jx',
-          'p4s',
-          'ux',
-        ];
-
-        const pathParts = window.location.pathname.split( '/' );
-        const courseName = pathParts[ 1 ];
-        const pageName = pathParts[ pathParts.length - 1 ];
-
-        return openCourses.includes( courseName ) || openPages.includes( pageName );
-      }
-
-      function isSignedIn() {
-        const isDeployPreview = window.location.hostname.startsWith( 'deploy-preview' ) && window.location.hostname
-          .endsWith( 'netlify.com' );
-
-        if ( isDeployPreview ) return Promise.resolve( {
-          signedIn: true,
-          student: true
-        } );
-
-        return fetch( `${getAuthBaseUrl()}/whoami`, {
-            credentials: 'include'
-          } )
-          .then( ( response ) => response.text() )
-          .then( ( userAsText ) => userAsText ? JSON.parse( userAsText ) : null )
-          .then( ( userData ) => ( {
-            signedIn: Boolean( userData ),
-            student: Boolean( userData && userData.airtableId ),
-            id: userData ? userData.id : null,
-            email: userData ? userData.email : null
-          } ) )
-          .catch( ( error ) => {} );
-      }
-
-      function redirectToSignIn() {
-        const signInUrl =
-          `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
-        const redirectMessage = document.querySelector( '#redirect-message' );
-        redirectMessage.style.display = "block";
-        redirectMessage.innerHTML =
-          `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
-        window.location = signInUrl;
-      }
-
-      function showPageContents() {
-        document.querySelector( '#content-wrapper' ).style.visibility = 'visible';
-      }
-
-      function showUnauthorizedMessage() {
-        document.querySelector( '#unauthorized-message' ).style.display = 'block';
-      }
-
-      function getAuthBaseUrl() {
-        const domain = getDomain();
-        const authBaseUrl = `https://auth.${domain}`;
-        return authBaseUrl;
-      }
-    </script>
-    <script src="/assets/js/docs.min.js"></script>
-    <script>
-      var MathJax = {
-        tex: {
-          inlineMath: [
-            [ '$$', '$$' ],
-            [ '\[', '\])' ]
-          ]
-        },
-        "HTML-CSS": {
-          styles: {
-            ".MathJax span": {
-              color: "#000000"
-            }
+            window.onload = verifySignedIn;
           }
         }
-      }
-    </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
-    </script>
-    <script>
-      handleExternalLinks();
 
-      function handleExternalLinks() {
-        const domain = getDomain();
-        const links = document.querySelectorAll( 'a' );
-        return links.forEach( ( link ) => {
-          if ( !link.host.includes( domain ) ) link.target = '_blank';
-        } )
-      };
-    </script>
-  </div>
-</body>
+        function verifySignedIn() {
+          if (isPagePublic()) {
+            return showPageContents();
+          }
 
+          window.__user = null;
+          isSignedIn().then((user) => {
+            window.__user = user;
+
+            if (!user.signedIn) {
+              redirectToSignIn();
+            } else if (!user.student && !window.__openToAdmissions) {
+              showUnauthorizedMessage();
+            } else {
+              showPageContents();
+            }
+          });
+        }
+
+        function isPagePublic() {
+          const openCourses = [
+            "and-pre",
+            "ds-pre",
+            "fsw-pre",
+            "help",
+            "ios-pre",
+          ];
+
+          const openPages = [
+            "cs-and",
+            "cs-fsw",
+            "cs-ios",
+            "cr",
+            "ds",
+            "jx",
+            "p4s",
+            "ux",
+          ];
+
+          const pathParts = window.location.pathname.split("/");
+          const courseName = pathParts[1];
+          const pageName = pathParts[pathParts.length - 1];
+
+          return (
+            openCourses.includes(courseName) || openPages.includes(pageName)
+          );
+        }
+
+        function isSignedIn() {
+          const isDeployPreview =
+            window.location.hostname.startsWith("deploy-preview") &&
+            window.location.hostname.endsWith("netlify.com");
+
+          if (isDeployPreview)
+            return Promise.resolve({
+              signedIn: true,
+              student: true,
+            });
+
+          return fetch(`${getAuthBaseUrl()}/whoami`, {
+            credentials: "include",
+          })
+            .then((response) => response.text())
+            .then((userAsText) => (userAsText ? JSON.parse(userAsText) : null))
+            .then((userData) => ({
+              signedIn: Boolean(userData),
+              student: Boolean(userData && userData.airtableId),
+              id: userData ? userData.id : null,
+              email: userData ? userData.email : null,
+            }))
+            .catch((error) => {});
+        }
+
+        function redirectToSignIn() {
+          const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(
+            window.location.href
+          )}&reason=auth_required`;
+          const redirectMessage = document.querySelector("#redirect-message");
+          redirectMessage.style.display = "block";
+          redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`;
+          window.location = signInUrl;
+        }
+
+        function showPageContents() {
+          document.querySelector("#content-wrapper").style.visibility =
+            "visible";
+        }
+
+        function showUnauthorizedMessage() {
+          document.querySelector("#unauthorized-message").style.display =
+            "block";
+        }
+
+        function getAuthBaseUrl() {
+          const domain = getDomain();
+          const authBaseUrl = `https://auth.${domain}`;
+          return authBaseUrl;
+        }
+      </script>
+      <script src="/assets/js/docs.min.js"></script>
+      <script>
+        var MathJax = {
+          tex: {
+            inlineMath: [
+              ["$$", "$$"],
+              ["\[", "\])"],
+            ],
+          },
+          "HTML-CSS": {
+            styles: {
+              ".MathJax span": {
+                color: "#000000",
+              },
+            },
+          },
+        };
+      </script>
+      <script
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+        type="text/javascript"
+      ></script>
+      <script>
+        handleExternalLinks();
+
+        function handleExternalLinks() {
+          const domain = getDomain();
+          const links = document.querySelectorAll("a");
+          return links.forEach((link) => {
+            if (!link.host.includes(domain)) link.target = "_blank";
+          });
+        }
+      </script>
+    </div>
+  </body>
 </html>

@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
@@ -39,32 +37,32 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Guided Project](#guided-project)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Guided Project](#guided-project)
+- [Project](#project)
+- [Review](#review)
 
 # Express Middleware
 
@@ -76,16 +74,16 @@ They are implemented as small functions that handle one aspect of our applicatio
 
 On this module we’ll cover:
 
--   the what, why and how of Middleware.
--   different types of Express Middleware.
--   how to create Custom Middleware.
--   error handling middleware.
+- the what, why and how of Middleware.
+- different types of Express Middleware.
+- how to create Custom Middleware.
+- error handling middleware.
 
 **At the end of this module, you should be able to:**
 
--   explain what middleware is and the different types
--   write custom middleware
--   write error handling middleware
+- explain what middleware is and the different types
+- write custom middleware
+- write error handling middleware
 
 #### Pro Tip
 
@@ -95,27 +93,21 @@ Treat everyone with as much respect and integrity as you wish to be treated with
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=EE8CId1FK_Q), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=EE8CId1FK_Q), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=7aHJz4SJT4Y), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=7aHJz4SJT4Y), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ItY7Ddzr8jA), or enable JavaScript if it is disabled in your browser.
 
--   
+- [Middleware explained](https://expressjs.com/en/guide/writing-middleware.html)
 
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ItY7Ddzr8jA), or enable JavaScript if it is disabled in your browser.
-
--   [Middleware explained](https://expressjs.com/en/guide/writing-middleware.html)
-
-    straight from the Expressjs.com docs
+  straight from the Expressjs.com docs
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -125,7 +117,7 @@ We can use Express Middleware to add features to Express. It is the biggest part
 
 We can think of middleware as array of functions that get executed in the order they are introduced into the server code.
 
-Express middleware is compatible with *connect middleware*. Connect is a web application framework for Node.js that only provides the middleware layer.
+Express middleware is compatible with _connect middleware_. Connect is a web application framework for Node.js that only provides the middleware layer.
 
 Since `Connect` has been around for longer, it has a rich ecosystem of modules and we can take advantage of that. If you can’t find an Express Middleware package with the functionality you want, try searching for a Connect Middleware module instead.
 
@@ -133,29 +125,29 @@ Since `Connect` has been around for longer, it has a rich ecosystem of modules a
 
 There are different types of middleware; for our purposes, we’ll group them into:
 
--   Built-in middleware.
--   Third-party middleware.
--   Custom middleware.
+- Built-in middleware.
+- Third-party middleware.
+- Custom middleware.
 
 **Built-in middleware** is included with Express, but not added to the application automatically. Like the other types, we need to opt-in to using it in our application.
 
 We saw an example of built-in middleware when we added support for parsing JSON content out of the request body using `server.use(express.json());`.
 
-All types of middleware work in the same way. We tell Express about the middleware we want to *turn on* for our application by making a call to `.use()` on our server and passing `.use()` the piece of middleware we want to apply. This line must come after the server has been created by calling `express()`.
+All types of middleware work in the same way. We tell Express about the middleware we want to _turn on_ for our application by making a call to `.use()` on our server and passing `.use()` the piece of middleware we want to apply. This line must come after the server has been created by calling `express()`.
 
 **Third-party middleware** are npm modules that we can install and then import into our applications using `require()`. There are thousands of middleware modules we can use, no need to write our own in most cases.
 
 Some popular middleware modules are:
 
--   [morgan](https://www.npmjs.com/package/morgan).
+- [morgan](https://www.npmjs.com/package/morgan).
 
--   [cors](https://www.npmjs.com/package/cors).
+- [cors](https://www.npmjs.com/package/cors).
 
--   [helmet](https://www.npmjs.com/package/helmet).
+- [helmet](https://www.npmjs.com/package/helmet).
 
--   add morgan to solution, *require* it `const logger = require('morgan');`
+- add morgan to solution, _require_ it `const logger = require('morgan');`
 
--   add a new `server.use(logger('short))` before our other use. Show console.
+- add a new `server.use(logger('short))` before our other use. Show console.
 
 **Custom middleware** are functions we write to perform certain tasks. We’ll learn more about how to write and use them in the next section.
 
@@ -163,21 +155,21 @@ Some popular middleware modules are:
 
 One thing that is not immediately obvious is that **route handlers are middleware**. Let’s see this in action.
 
-In our current implementation, if a client visits a non-existent endpoint, they will get a default message when a resource is not found on the server. In the case of a browser, its *Cannot Get /urlWeTriedToAccess*. This is a poor user experience. **Please code along** as we write a request handler that responds with a custom message for invalid URLs.
+In our current implementation, if a client visits a non-existent endpoint, they will get a default message when a resource is not found on the server. In the case of a browser, its _Cannot Get /urlWeTriedToAccess_. This is a poor user experience. **Please code along** as we write a request handler that responds with a custom message for invalid URLs.
 
     function(req, res) {
       res.status(404).send("Ain't nobody got time for that!");
     };
 
-This code is not complete yet, but you can see that it is, in fact, a request handler function, we know because *the homies* (req and res) are there.
+This code is not complete yet, but you can see that it is, in fact, a request handler function, we know because _the homies_ (req and res) are there.
 
-Now let’s just *use* it as if it was middleware:
+Now let’s just _use_ it as if it was middleware:
 
     server.use(function(req, res) {
       res.status(404).send("Ain't nobody got time for that!");
     });
 
-Almost there, the last step is adding this status **after each route handler**, so that if the preceding middleware or route handlers (which happen to be middleware also) do not respond to the request, then this will become our *catch-all* and respond with the correct HTTP status code and a helpful message.
+Almost there, the last step is adding this status **after each route handler**, so that if the preceding middleware or route handlers (which happen to be middleware also) do not respond to the request, then this will become our _catch-all_ and respond with the correct HTTP status code and a helpful message.
 
 Now, requests to a non-existent endpoints will result in better experience for our clients.
 
@@ -189,14 +181,14 @@ When done send your explanation to your PM on Slack.
 
 ##### Dig Deeper
 
--   [cors middleware](https://www.npmjs.com/package/cors)  
-    Third party middleware to make it easy to configure CORS in a Node.js application
--   [helmet middleware](https://www.npmjs.com/package/helmet)  
-    Third party middleware for configuring security headers in a Node.js application
--   [morgan middleware](https://www.npmjs.com/package/morgan)  
-    Third party middleware for logging in Node.js applications
+- [cors middleware](https://www.npmjs.com/package/cors)  
+  Third party middleware to make it easy to configure CORS in a Node.js application
+- [helmet middleware](https://www.npmjs.com/package/helmet)  
+  Third party middleware for configuring security headers in a Node.js application
+- [morgan middleware](https://www.npmjs.com/package/morgan)  
+  Third party middleware for logging in Node.js applications
 
-------------------------------------------------------------------------
+---
 
 #### Learn to write custom middleware
 
@@ -204,7 +196,7 @@ We can write our own `Custom Middleware` to add functionality needed by our appl
 
 This is a powerful feature that makes it really easy to extend the Express framework without the need to modify it’s source code.
 
-We’ll see some examples of the two types of custom middleware that we’ll call *regular* middleware and *error handling* middleware.
+We’ll see some examples of the two types of custom middleware that we’ll call _regular_ middleware and _error handling_ middleware.
 
 ##### Overview
 
@@ -288,24 +280,24 @@ So if a client makes any request and the server clock is at 11:10:11 or 11:10:13
 
 ##### Dig Deeper
 
--   [express.json](https://expressjs.com/en/api.html#express.json)  
-    The documentation for how to use express.json to format your requests in Node/express
+- [express.json](https://expressjs.com/en/api.html#express.json)  
+  The documentation for how to use express.json to format your requests in Node/express
 
-------------------------------------------------------------------------
+---
 
 #### Learn to write error handling middleware
 
-There are two types of middleware in Express that we’ll call *regular* middleware and *error handling* middleware.
+There are two types of middleware in Express that we’ll call _regular_ middleware and _error handling_ middleware.
 
-We have seen and worked with *regular middleware*. It is the middleware used when the application is working normally, but what happens when there is an error? That’s when *error handling middleware* comes into action and all *regular middleware* is turned off.
+We have seen and worked with _regular middleware_. It is the middleware used when the application is working normally, but what happens when there is an error? That’s when _error handling middleware_ comes into action and all _regular middleware_ is turned off.
 
-In this section we’ll cover how to write *error handling middleware* and how it works.
+In this section we’ll cover how to write _error handling middleware_ and how it works.
 
 ##### Overview
 
-When our application encounters an error in the middle of executing middleware (remember route handlers are also middleware) code, we can **choose** to hand over control to *error handling middleware* by calling `next()` with one argument. It is an unspoken convention to make that argument be an error object like this: `next(new Error("error message"))`.
+When our application encounters an error in the middle of executing middleware (remember route handlers are also middleware) code, we can **choose** to hand over control to _error handling middleware_ by calling `next()` with one argument. It is an unspoken convention to make that argument be an error object like this: `next(new Error("error message"))`.
 
-This type of middleware takes four arguments: `error`, `req`, `res`, and `next`. We pass the first argument when calling `next(new Error('error message here'))`. When the error handling code is finished, we can choose to end the request or call next without arguments to continue to the next *regular middleware*.
+This type of middleware takes four arguments: `error`, `req`, `res`, and `next`. We pass the first argument when calling `next(new Error('error message here'))`. When the error handling code is finished, we can choose to end the request or call next without arguments to continue to the next _regular middleware_.
 
 Error handling middleware CAN be placed anywhere in the stack, but it makes the most sense to place it at the end. If the intention is for middleware to handle errors that may occur elsewhere in the queue, then it needs to run after the rest of the middleware has run.
 
@@ -387,14 +379,14 @@ Open your browser and visit <http://localhost:5000/download>, and the error mess
 
 ##### Challenge
 
-Write a piece of middleware that accepts an object with two properties: `errorCode` and `errorMessage`. Your middleware should respond with different messages based on the `errorCode` provided. If the error code is `1404` return HTTP status code 404 and a `not found` message, if the code is `1500` return a *500* status code and a generic error message.
+Write a piece of middleware that accepts an object with two properties: `errorCode` and `errorMessage`. Your middleware should respond with different messages based on the `errorCode` provided. If the error code is `1404` return HTTP status code 404 and a `not found` message, if the code is `1500` return a _500_ status code and a generic error message.
 
 ##### Dig Deeper
 
--   [Error handling middleware](https://nemethgergely.com/error-handling-express-async-await/)  
-    An article on error handling using middleware.
+- [Error handling middleware](https://nemethgergely.com/error-handling-express-async-await/)  
+  An article on error handling using middleware.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
@@ -402,11 +394,11 @@ Write a piece of middleware that accepts an object with two properties: `errorCo
 
 [GitHub Repo](https://github.com/LambdaSchool/node-api3-guided)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Node API 3 Project](https://github.com/LambdaSchool/node-api3-project)
+- ##### [Node API 3 Project](https://github.com/LambdaSchool/node-api3-project)
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -414,32 +406,32 @@ Write a piece of middleware that accepts an object with two properties: `errorCo
 
 You can use class recordings to help you master the material.
 
--   **[Express Middleware for Web PT 18 w/ Jason Maurer](https://youtu.be/7MAoEoyVtkA)**
+- **[Express Middleware for Web PT 18 w/ Jason Maurer](https://youtu.be/7MAoEoyVtkA)**
 
-    Express is a minimalist framework. It doesn’t provide everything out of the box, but using middleware we can add extra functionality to our application. Middleware provide a way to extend the features provided by the Express framework. They are implemented as small functions that handle one aspect of our application. Tasks like authentication and logging are commonly handled by middleware. Another benefit of Middleware is that it provides an easy way to add modularity to our code.
+  Express is a minimalist framework. It doesn’t provide everything out of the box, but using middleware we can add extra functionality to our application. Middleware provide a way to extend the features provided by the Express framework. They are implemented as small functions that handle one aspect of our application. Tasks like authentication and logging are commonly handled by middleware. Another benefit of Middleware is that it provides an easy way to add modularity to our code.
 
--   [All previous recordings](/archive/FSW/module/recCJjYFEz0i5O5p5)
+- [All previous recordings](/archive/FSW/module/recCJjYFEz0i5O5p5)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Write a paragraph (or two) explaining what Express middleware is and what you’d use it for when writing Web APIs.
+  Write a paragraph (or two) explaining what Express middleware is and what you’d use it for when writing Web APIs.
 
-    When done send your explanation to your PM on Slack.
+  When done send your explanation to your PM on Slack.
 
--   Objective challenge:
+- Objective challenge:
 
-    Write a piece of middleware that responds with the message, “Balance is the key, making things even is the secret to success.” It should send an HTTP Status Code 403 (Forbidden) when the client makes a request, and when the seconds value in the server clock is odd. Otherwise, let the request flow through the rest of the middleware queue.
+  Write a piece of middleware that responds with the message, “Balance is the key, making things even is the secret to success.” It should send an HTTP Status Code 403 (Forbidden) when the client makes a request, and when the seconds value in the server clock is odd. Otherwise, let the request flow through the rest of the middleware queue.
 
-    So if a client makes any request and the server clock is at 11:10:11 or 11:10:13 the request is rejected, but at 11:10:12, or 11:10:14 is not.
+  So if a client makes any request and the server clock is at 11:10:11 or 11:10:13 the request is rejected, but at 11:10:12, or 11:10:14 is not.
 
--   Objective challenge:
+- Objective challenge:
 
-    Write a piece of middleware that accepts an object with two properties: `errorCode` and `errorMessage`. Your middleware should respond with different messages based on the `errorCode` provided. If the error code is `1404` return HTTP status code 404 and a `not found` message, if the code is `1500` return a *500* status code and a generic error message.
+  Write a piece of middleware that accepts an object with two properties: `errorCode` and `errorMessage`. Your middleware should respond with different messages based on the `errorCode` provided. If the error code is `1404` return HTTP status code 404 and a `not found` message, if the code is `1500` return a _500_ status code and a generic error message.
 
--   Guided Project: Node API 3 Guided Project Starter Code
+- Guided Project: Node API 3 Guided Project Starter Code
 
--   Project: Node API 3 Project
+- Project: Node API 3 Project

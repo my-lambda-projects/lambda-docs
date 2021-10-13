@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Advanced Form Management
 
@@ -71,9 +69,9 @@
 
 **At the end of this module, you should be able to:**
 
--   control forms and form inputs (checkbox, dropdown) in custom forms
--   validate user input in forms
--   make POST requests to pass data collected from a form to a database
+- control forms and form inputs (checkbox, dropdown) in custom forms
+- validate user input in forms
+- make POST requests to pass data collected from a form to a database
 
 #### Pro Tip
 
@@ -149,18 +147,18 @@ Let’s build out a form to gather user information with radio buttons, a checkl
 
 1.  **Set up form.** Using our knowledge from the “form management” module, we’ll first set up a basic form with a single text input, Name.
 
-      return (
-        <div className="App">
-          {console.log(name)}
-          <form>
-            <label>
-              Name:
-              <input type="text" onChange={event => handleChange(event)} />
-            </label>
-            <button onSubmit={() => handleSubmit()}>Submit!</button>
-          </form>
-        </div>
-      );
+    return (
+    <div className="App">
+    {console.log(name)}
+    <form>
+    <label>
+    Name:
+    <input type="text" onChange={event => handleChange(event)} />
+    </label>
+    <button onSubmit={() => handleSubmit()}>Submit!</button>
+    </form>
+    </div>
+    );
     }
 
     export default App;
@@ -206,7 +204,7 @@ Let’s build out a form to gather user information with radio buttons, a checkl
 
 Add a non-text field to a project from the form management lessons.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to validate user input in forms
 
@@ -324,10 +322,10 @@ Next up, state for error messages.
 
 We’re going to change the state of the button so that when we’re filling out the form it won’t be able to submit until the validation passes. The forms will submit even if the validation is failing, we’re using the button’s state to disable the button. Ultimately though, the form state still controls wither or not the form can be submitted.
 
-      /* Each time the form value state is updated, check to see if it is valid per our schema. 
+      /* Each time the form value state is updated, check to see if it is valid per our schema.
       This will allow us to enable/disable the submit button.*/
       useEffect(() => {
-        /* We pass the entire state into the entire schema, no need to use reach here. 
+        /* We pass the entire state into the entire schema, no need to use reach here.
         We want to make sure it is all valid before we allow a user to submit
         isValid comes from Yup directly */
         formSchema.isValid(formState).then(valid => {
@@ -357,7 +355,7 @@ Finally, lets set up our validation. This is probably the trickiest part of form
               [e.target.name]: ""
             });
           })
-          /* if the validation is unsuccessful, we can set the error message to the message 
+          /* if the validation is unsuccessful, we can set the error message to the message
             returned from yup (that we created in our schema) */
           .catch(err => {
             setErrors({
@@ -400,7 +398,7 @@ Next, we will show you how to actually DO something with this beautiful form dat
 
 Add validation to any test field from your Form Management module guided project or challenges.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to make POST requests to pass data collected from a form to a database
 
@@ -459,15 +457,15 @@ Let’s take a look at how we would integrate this `POST` request into our Yup f
 
 1.  **Create a new state called `setPost`**. This will be where we’re going to store data on a valid form submit. Once we have the data we’ll work to `console.log` it and display it to the screen.
 
-      // new state to set our post request too. So we can console.log and see it.
-      const [post, setPost] = useState([]);
+    // new state to set our post request too. So we can console.log and see it.
+    const [post, setPost] = useState([]);
 
-      useEffect(() => {
-        formSchema.isValid(formState).then(valid => {
-          // console.log(valid);
-          setButtonDisabled(!valid);
-        });
-      }, [formState]);
+    useEffect(() => {
+    formSchema.isValid(formState).then(valid => {
+    // console.log(valid);
+    setButtonDisabled(!valid);
+    });
+    }, [formState]);
 
 1.  **Post to a database from `req, res`**. Inside of our form submit event handler, we’re going to add a `post` request with `axios` and update formState. Once form state is filled out, this posts all of the input information to `setPost`.
 
@@ -489,8 +487,8 @@ For all of our examples together we are going to make use of the `reqres` API. T
 
 1.  **Display Data**. For our purposes, we’ll just display data to the DOM, instead of doing something with it on a server. For that we will use `JSON.stringify` to display our data in both the DOM and the console.
 
-    /* displaying our post request data */
-          <pre>{JSON.stringify(post, null, 2)}</pre>
+    /_ displaying our post request data _/
+    <pre>{JSON.stringify(post, null, 2)}</pre>
 
 In this example, our axios call to `https://reqres.in/api/users` now runs whenever we submit the form and run the `handleSubmit` function. Our form now takes in user data and, when the user clicks the “submit” button, it will `POST` the user’s data to the webserver.
 
@@ -500,13 +498,13 @@ This `POST` functionality will be reused innumerable times throughout your devel
 
 Go review your `GET` requests in previous homework assignments and think about how you convert them over to a `POST` request. What code would you change? How would you send your data over HTTP once you’ve converted them? What code do you need to re-write to make this happen? How do your new `POST` requests differ from your old `GET` requests?
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [User Onboarding](https://github.com/LambdaSchool/User-Onboarding)
+- ##### [User Onboarding](https://github.com/LambdaSchool/User-Onboarding)
 
-    Create a form to allow new users to sign up for your service.
+  Create a form to allow new users to sign up for your service.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -514,26 +512,26 @@ Go review your `GET` requests in previous homework assignments and think about h
 
 You can use class recordings to help you master the material.
 
--   **[Advanced Form Management for WEBPT21 w/ Emily Seibert](https://youtu.be/Awa4TsDfTgM)**
+- **[Advanced Form Management for WEBPT21 w/ Emily Seibert](https://youtu.be/Awa4TsDfTgM)**
 
-    Advanced Form Management
+  Advanced Form Management
 
--   [All previous recordings](/archive/FSW/module/recKK5C7wV0WiECfr)
+- [All previous recordings](/archive/FSW/module/recKK5C7wV0WiECfr)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Add a non-text field to a project from the form management lessons.
+  Add a non-text field to a project from the form management lessons.
 
--   Objective challenge:
+- Objective challenge:
 
-    Add validation to any test field from your Form Management module guided project or challenges.
+  Add validation to any test field from your Form Management module guided project or challenges.
 
--   Objective challenge:
+- Objective challenge:
 
-    Go review your `GET` requests in previous homework assignments and think about how you convert them over to a `POST` request. What code would you change? How would you send your data over HTTP once you’ve converted them? What code do you need to re-write to make this happen? How do your new `POST` requests differ from your old `GET` requests?
+  Go review your `GET` requests in previous homework assignments and think about how you convert them over to a `POST` request. What code would you change? How would you send your data over HTTP once you’ve converted them? What code do you need to re-write to make this happen? How do your new `POST` requests differ from your old `GET` requests?
 
--   Project: User Onboarding
+- Project: User Onboarding

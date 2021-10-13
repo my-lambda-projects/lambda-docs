@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
@@ -39,32 +37,32 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Guided Project](#guided-project)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Guided Project](#guided-project)
+- [Project](#project)
+- [Review](#review)
 
 # Testing the Back End
 
@@ -74,8 +72,8 @@ In this module, we learn how to add automated tests to an API.
 
 **At the end of this module, you should be able to:**
 
--   test Web API Endpoints
--   test Data Access Code
+- test Web API Endpoints
+- test Data Access Code
 
 #### Pro Tip
 
@@ -85,39 +83,35 @@ Celebrate wrong answers, because that means someone’s about to learn!
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Hxzh6DaZnWk), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Hxzh6DaZnWk), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=5V0sWOqTw2I), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=5V0sWOqTw2I), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
 #### Learn to test Web API Endpoints
 
-When building a Web API using *Express*, we use *unit testing* to test the application logic and *integration testing* to test the *route handlers* and *middleware*.
+When building a Web API using _Express_, we use _unit testing_ to test the application logic and _integration testing_ to test the _route handlers_ and _middleware_.
 
 We write tests to verify that the API endpoints return the expected values and HTTP status codes. We also write tests to make sure that we’re returning the data using the right format (HTML, XML, JSON) and several other things.
 
 ##### Overview
 
-The tests we write for endpoints are called *integration tests* because they test how different parts of the system work together. This is different from the *unit tests* we use to verify the correctness of one part of the system in isolation.
+The tests we write for endpoints are called _integration tests_ because they test how different parts of the system work together. This is different from the _unit tests_ we use to verify the correctness of one part of the system in isolation.
 
 We’ll use a `npm` module called [supertest](https://github.com/visionmedia/supertest) that makes it easier to write tests for Node.js HTTP servers. We can use `supertest` to load an instance of our server, send requests to the different endpoints, and make assertions about the responses.
 
-We could use `supertest` to verify that making a `POST` request to a particular endpoint returns a `201` HTTP status code after successfully creating a *resource* or, that it returns a `500` code if the server ran into an error while processing the request. Writing such a test may look like this:
+We could use `supertest` to verify that making a `POST` request to a particular endpoint returns a `201` HTTP status code after successfully creating a _resource_ or, that it returns a `500` code if the server ran into an error while processing the request. Writing such a test may look like this:
 
 1.  Save a reference to the server.
 2.  Use `supertest` to make a POST request passing correct data inside the body.
 3.  Check that the server responds with status code 201.
 
-Writing such a test verifies that all *middleware*, including the *route handler* is working as intended.
+Writing such a test verifies that all _middleware_, including the _route handler_ is working as intended.
 
 ##### Follow Along
 
@@ -125,29 +119,29 @@ Please follow along as we configure our testing environment, write a simple endp
 
 Create a folder and configure our testing environment.
 
--   Create a new folder and `cd` into it.
+- Create a new folder and `cd` into it.
 
--   Type `git init` to initialize a git repository to help *jest* detect changes.
+- Type `git init` to initialize a git repository to help _jest_ detect changes.
 
--   Initialize it with a `package.json` by running `npm init -y` in our terminal.
+- Initialize it with a `package.json` by running `npm init -y` in our terminal.
 
--   Use `npm` to add `express` as a regular dependency and `jest` and `supertest` as **development dependencies**.
+- Use `npm` to add `express` as a regular dependency and `jest` and `supertest` as **development dependencies**.
 
--   Add a *test* script inside `package.json` that runs our tests: `"test": "jest --watch --verbose"`.
+- Add a _test_ script inside `package.json` that runs our tests: `"test": "jest --watch --verbose"`.
 
--   Configure *jest* to run in *node mode* since we’ll be running in *Node.js*.
+- Configure _jest_ to run in _node mode_ since we’ll be running in _Node.js_.
 
-    -   inside `package.json` add a property called `jest` and configure it like this:
+  - inside `package.json` add a property called `jest` and configure it like this:
 
-        "jest": {
-          "testEnvironment": "node"
-        }
+    "jest": {
+    "testEnvironment": "node"
+    }
 
 We have all we need to start working on our API. Begin by adding a file that holds tests for our server, call it `server.spec.js` and add the following code.
 
     /*
-    - when making a GET request to the `/` endpoint 
-      the API should respond with status code 200 
+    - when making a GET request to the `/` endpoint
+      the API should respond with status code 200
       and the following JSON object: `{ api: 'running' }`.
     */
     const request = require('supertest'); // calling it "request" is a common practice
@@ -192,13 +186,13 @@ We have all we need to start working on our API. Begin by adding a file that hol
 
 In this code, we consider three questions commonly tested for our endpoints:
 
--   Does it return the correct status code for the input provided?
--   Does it return the data in the expected format?
--   Does the data returned, if any, have the right content?
+- Does it return the correct status code for the input provided?
+- Does it return the data in the expected format?
+- Does the data returned, if any, have the right content?
 
-We are listing them all at once, but you will write one *test case* at a time and complete any required *refactoring* before writing the next test.
+We are listing them all at once, but you will write one _test case_ at a time and complete any required _refactoring_ before writing the next test.
 
-When testing your endpoints, start with those three tests and then move on to write tests that are unique for the system you’re building. The *payroll* endpoints for an accounting system, for example, require different tests than those for an *accounts payable* module. **There is no one size fit’s all when it comes to testing**. Each system will have its own set of requirements that all require verification.
+When testing your endpoints, start with those three tests and then move on to write tests that are unique for the system you’re building. The _payroll_ endpoints for an accounting system, for example, require different tests than those for an _accounts payable_ module. **There is no one size fit’s all when it comes to testing**. Each system will have its own set of requirements that all require verification.
 
 Create the `server.js` file and add the following code to make the tests pass:
 
@@ -212,7 +206,7 @@ Create the `server.js` file and add the following code to make the tests pass:
 
     module.exports = server;
 
-Notice we are not starting the server with `server.listen(port)`, This is a common pattern. We separate the server implementation from the code that *runs* the server. If we start listening for requests in this file, then every time a test runs, it will start a new instance of the API using the specified port and run into an *“address (meaning the port number) in use”* error. Using this technique, we avoid those types of errors and decouple two different concerns: 1) building a server and 2) using a server to listen for requests.
+Notice we are not starting the server with `server.listen(port)`, This is a common pattern. We separate the server implementation from the code that _runs_ the server. If we start listening for requests in this file, then every time a test runs, it will start a new instance of the API using the specified port and run into an _“address (meaning the port number) in use”_ error. Using this technique, we avoid those types of errors and decouple two different concerns: 1) building a server and 2) using a server to listen for requests.
 
 ##### Challenge
 
@@ -220,23 +214,23 @@ Use TDD to implement a `/sing` endpoint that returns the string “I believe I c
 
 ##### Dig Deeper
 
--   [Types of Tests](https://kentcdodds.com/blog/unit-vs-integration-vs-e2e-tests)  
--   [Server Testing](https://github.com/LambdaSchool/Server-Testing)  
-    The full assignment for Server testing
+- [Types of Tests](https://kentcdodds.com/blog/unit-vs-integration-vs-e2e-tests)
+- [Server Testing](https://github.com/LambdaSchool/Server-Testing)  
+  The full assignment for Server testing
 
-------------------------------------------------------------------------
+---
 
 #### Learn to test Data Access Code
 
-Most Web APIs include a data store, often a database of some kind. It is recommended to test the code that interacts with the database to prevent defects and reduce the risk of *regressions*.
+Most Web APIs include a data store, often a database of some kind. It is recommended to test the code that interacts with the database to prevent defects and reduce the risk of _regressions_.
 
 ##### Overview
 
-To test the data access, we’ll write *end to end* tests. These types of tests run slower because they perform operations and run queries against an actual database that is similar to the one used in production.
+To test the data access, we’ll write _end to end_ tests. These types of tests run slower because they perform operations and run queries against an actual database that is similar to the one used in production.
 
 To avoid polluting the development database, we’ll use a separate database for testing. One advantage of using a dedicated testing database is that we can add and remove records without affecting the data in the development or staging databases.
 
-Next, we’ll walk through setting up our API to switch to the testing database based on an *environment variable*, including how to set a different value for that environment value only when running tests.
+Next, we’ll walk through setting up our API to switch to the testing database based on an _environment variable_, including how to set a different value for that environment value only when running tests.
 
 ##### Follow Along
 
@@ -244,7 +238,7 @@ Next, we’ll walk through setting up our API to switch to the testing database 
 
 Setting and using environment variables is different for windows and POSIX (Mac, Linux, Unix) Operating Systems. We can use [cross-env](https://www.npmjs.com/package/cross-env), an npm module that deals with the OS inconsistencies and provides a uniform way of setting environment variables across all platforms.
 
-Open `package.json` and look at the `test` script. It uses `cross-env` to set an environment variable with the key `DB_ENV` and the value: *testing*.
+Open `package.json` and look at the `test` script. It uses `cross-env` to set an environment variable with the key `DB_ENV` and the value: _testing_.
 
     "test": "cross-env DB_ENV=testing jest --watch"
 
@@ -264,7 +258,7 @@ This environment variable is available to the API as `process.env.DB_ENV`. The s
     // from knexfile.js
     module.exports = knex(config[dbEnv]);
 
-To make this work, `knexfile.js` has a dedicated configuration key for *testing*.
+To make this work, `knexfile.js` has a dedicated configuration key for _testing_.
 
     // ./knexfile.js
 
@@ -299,13 +293,13 @@ To make this work, `knexfile.js` has a dedicated configuration key for *testing*
 
 ### Using Different Environments for Knex Migrations and Seeding
 
-Different databases have different configuration objects defined within `knexfile.js`. To specify which environment to target during *migrations* and *seeding* use the `--env` command-line argument.
+Different databases have different configuration objects defined within `knexfile.js`. To specify which environment to target during _migrations_ and _seeding_ use the `--env` command-line argument.
 
-To run migrations against the *testing* database, use the following command.
+To run migrations against the _testing_ database, use the following command.
 
     npx knex migrate:latest --env=testing
 
-To run seeds against the *testing* database, use the following command.
+To run seeds against the _testing_ database, use the following command.
 
     npx knex seed:run --env=testing
 
@@ -374,10 +368,10 @@ Let’s add another test to make sure that the record is making it to the databa
 
 ##### Challenge
 
--   Write the commands to run migrations and seeds using the “production” configuration for knex.
--   Write two tests for one of the projects from past modules of this sprint.
+- Write the commands to run migrations and seeds using the “production” configuration for knex.
+- Write two tests for one of the projects from past modules of this sprint.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
@@ -387,13 +381,13 @@ Guided Project for Node Server Testing
 
 [GitHub Repo](https://github.com/LambdaSchool/node-server-testing-guided)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Node Server Testing Challenge](https://github.com/LambdaSchool/node-server-testing-challenge)
+- ##### [Node Server Testing Challenge](https://github.com/LambdaSchool/node-server-testing-challenge)
 
-    Challenge for Node Server Testing Module
+  Challenge for Node Server Testing Module
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -401,24 +395,25 @@ Guided Project for Node Server Testing
 
 You can use class recordings to help you master the material.
 
--   **[Testing the Back End for Web PT 18 w/Jason Maurer](https://youtu.be/HvFOtG35rUM)**
+- **[Testing the Back End for Web PT 18 w/Jason Maurer](https://youtu.be/HvFOtG35rUM)**
 
-    In this module, we learn how to add automated tests to an API. At the end of this module, you should be able to: test Web API Endpoints test Data Access Code
+  In this module, we learn how to add automated tests to an API. At the end of this module, you should be able to: test Web API Endpoints test Data Access Code
 
--   [All previous recordings](/archive/FSW/module/reciXdxRA8zXJXDID)
+- [All previous recordings](/archive/FSW/module/reciXdxRA8zXJXDID)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Use TDD to implement a `/sing` endpoint that returns the string “I believe I can fly, I believe I can test an A-P-I!”.
+  Use TDD to implement a `/sing` endpoint that returns the string “I believe I can fly, I believe I can test an A-P-I!”.
 
--   Objective challenge:
-    -   Write the commands to run migrations and seeds using the “production” configuration for knex.
-    -   Write two tests for one of the projects from past modules of this sprint.
+- Objective challenge:
 
--   Guided Project: Node Server Testing Guided
+  - Write the commands to run migrations and seeds using the “production” configuration for knex.
+  - Write two tests for one of the projects from past modules of this sprint.
 
--   Project: Node Server Testing Challenge
+- Guided Project: Node Server Testing Guided
+
+- Project: Node Server Testing Challenge

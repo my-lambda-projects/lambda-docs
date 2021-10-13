@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Composing and Sharing Non-Visual Behavior
 
@@ -71,9 +69,9 @@
 
 **At the end of this module, you should be able to:**
 
--   define stateful logic
--   apply non-visual behavior (stateful logic) with custom hooks
--   compose hooks in a custom hook to extend multiple pieces of stateful logic
+- define stateful logic
+- apply non-visual behavior (stateful logic) with custom hooks
+- compose hooks in a custom hook to extend multiple pieces of stateful logic
 
 #### Pro Tip
 
@@ -146,7 +144,7 @@ You are probably looking at the two functions - `handleChanges` and `changeTitle
 
 Now that you can identify stateful logic, go through a few of the React components you’ve built this week. Try to point out examples of different stateful logic. How many different examples did you find?
 
-------------------------------------------------------------------------
+---
 
 #### Learn to apply non-visual behavior (stateful logic) with custom hooks
 
@@ -328,13 +326,13 @@ Here they are again for your reference:
       setEmail("");
     };
 
-By building out a custom hook, we can skip writing out all of the stateful logic for our non-visual behavior. Custom hooks produce beautiful, `DRY` code that is easy to read *and* use. You have built a *reusable* piece of code that makes it easy for you to import anywhere in your application and build out stateful logic in any of your components.
+By building out a custom hook, we can skip writing out all of the stateful logic for our non-visual behavior. Custom hooks produce beautiful, `DRY` code that is easy to read _and_ use. You have built a _reusable_ piece of code that makes it easy for you to import anywhere in your application and build out stateful logic in any of your components.
 
 ##### Challenge
 
 Now that you can identify custom hook logic and how you might both create and use it in your components, go back to several components you’ve built over the last week and refactor the state in some forms you made to use the `useInput` custom hook from the component in the examples above.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to compose hooks in a custom hook to extend multiple pieces of stateful logic
 
@@ -413,13 +411,13 @@ One final thing to note is that we can employ the `useLocalStorage` custom hook 
 
 Try to think of different instances where you could compose different custom hooks together, particularly with the new `useLocalStorage` hook that you learned above. Be as creative as possible in the implementations that you think of.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Dark Mode](https://github.com/LambdaSchool/dark-mode)
+- ##### [Dark Mode](https://github.com/LambdaSchool/dark-mode)
 
-    In this project you’ll take this crypto currency tracker app and build two custom hooks that, when composed together, will allow users to set and persist a dark mode preference.
+  In this project you’ll take this crypto currency tracker app and build two custom hooks that, when composed together, will allow users to set and persist a dark mode preference.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -427,26 +425,26 @@ Try to think of different instances where you could compose different custom hoo
 
 You can use class recordings to help you master the material.
 
--   **[Composing and Sharing Non-Visual Behavior for Web35 w/ Warren Longmire](https://youtu.be/0VY1OzYmHr4)**
+- **[Composing and Sharing Non-Visual Behavior for Web35 w/ Warren Longmire](https://youtu.be/0VY1OzYmHr4)**
 
-    Composing and Sharing Non-Visual Behavior
+  Composing and Sharing Non-Visual Behavior
 
--   [All previous recordings](/archive/WEB3/module/recAxmnYmusEi8JuL)
+- [All previous recordings](/archive/WEB3/module/recAxmnYmusEi8JuL)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Now that you can identify stateful logic, go through a few of the React components you’ve built this week. Try to point out examples of different stateful logic. How many different examples did you find?
+  Now that you can identify stateful logic, go through a few of the React components you’ve built this week. Try to point out examples of different stateful logic. How many different examples did you find?
 
--   Objective challenge:
+- Objective challenge:
 
-    Now that you can identify custom hook logic and how you might both create and use it in your components, go back to several components you’ve built over the last week and refactor the state in some forms you made to use the `useInput` custom hook from the component in the examples above.
+  Now that you can identify custom hook logic and how you might both create and use it in your components, go back to several components you’ve built over the last week and refactor the state in some forms you made to use the `useInput` custom hook from the component in the examples above.
 
--   Objective challenge:
+- Objective challenge:
 
-    Try to think of different instances where you could compose different custom hooks together, particularly with the new `useLocalStorage` hook that you learned above. Be as creative as possible in the implementations that you think of.
+  Try to think of different instances where you could compose different custom hooks together, particularly with the new `useLocalStorage` hook that you learned above. Be as creative as possible in the implementations that you think of.
 
--   Project: Dark Mode
+- Project: Dark Mode

@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
@@ -39,32 +37,32 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Guided Project](#guided-project)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Guided Project](#guided-project)
+- [Project](#project)
+- [Review](#review)
 
 # Database Schema Design
 
@@ -74,20 +72,20 @@ In this module we’ll learn how to create schemas using both SQLite Studio and 
 
 On this lecture we will cover the following topics:
 
--   Database Management Systems (DBMS)
--   SQLite studio
--   Primary keys
--   Data Types and Column Constraints
--   Knex CLI
--   Migrations
--   Seeds
+- Database Management Systems (DBMS)
+- SQLite studio
+- Primary keys
+- Data Types and Column Constraints
+- Knex CLI
+- Migrations
+- Seeds
 
 **At the end of this module, you should be able to:**
 
--   use SQLite Studio on an existing database
--   explain what is a database schema
--   create and use knex migrations
--   create and use knex seeds
+- use SQLite Studio on an existing database
+- explain what is a database schema
+- create and use knex migrations
+- create and use knex seeds
 
 #### Pro Tip
 
@@ -97,31 +95,23 @@ Be on time. It’s a mark of respect not to keep others waiting.
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=8BwFOpLpzoE), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=8BwFOpLpzoE), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=GASfty6-KsE), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=GASfty6-KsE), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=21Vpcup6LwM), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=tZJUXxYFScU), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=21Vpcup6LwM), or enable JavaScript if it is disabled in your browser.
-
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=tZJUXxYFScU), or enable JavaScript if it is disabled in your browser.
-
--   [Knex](https://knexjs.org/)
+- [Knex](https://knexjs.org/)
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -151,7 +141,7 @@ In other words, you can expect `SELECT`, `UPDATE`, `INSERT`, `WHERE` , and the l
 
 SQLite allows us to store databases as single files. Many of the challenges and guided projects in Lambda have a `.db3` extension. That is the database.
 
-SQLite is *not a database* (like relational, graph, or document are databases) but rather *a database management system*.
+SQLite is _not a database_ (like relational, graph, or document are databases) but rather _a database management system_.
 
 ### Opening an existing database in SQLite Studio
 
@@ -165,7 +155,7 @@ For a more detailed look at SQLite Studio, follow along in the video above.
 
 Use SQLite Studio to open a database from a previous challenge. Confirm that the data displayed in SQLite Studio matches the data from the server in a `GET` request.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to explain what is a database schema
 
@@ -185,9 +175,9 @@ For a look at schema design in SQLite Studio, follow along in the video above.
 
 When designing a single table, we need to ask three things:
 
--   What fields (or columns) are present?
--   What type of data do we expect for each field?
--   Are there other restrictions needed for each column?
+- What fields (or columns) are present?
+- What type of data do we expect for each field?
+- Are there other restrictions needed for each column?
 
 Looking at the following schema diagram for an `accounts` table, we can the answer to each other those questions:
 
@@ -203,11 +193,11 @@ However, this is one requirement every table should satisfy: a **primary key**. 
 
 Each field must also have a specified datatype. The datatype available depends on our DBMS. Some supported datatype in SQLite include:
 
--   **Null:** Missing or unknown information.
--   **Integer:** Whole numbers.
--   **Real:** Any number, including decimals.
--   **Text:** Character data.
--   **\*Blob:** a large binary object that can be used to store miscellaneous data.
+- **Null:** Missing or unknown information.
+- **Integer:** Whole numbers.
+- **Real:** Any number, including decimals.
+- **Text:** Character data.
+- **\*Blob:** a large binary object that can be used to store miscellaneous data.
 
 Any data inserted into the table must match the datatypes determined in schema design.
 
@@ -215,10 +205,10 @@ Any data inserted into the table must match the datatypes determined in schema d
 
 Beyond datatypes, we may add additional **constraints** on each field. Some examples include:
 
--   **Not Null:** The field cannot be left empty
--   **Unique:** No two records can have the same value in this field
--   **Primary key:** - Indicates this field is the primary key. Both the not null and unique constraints will be enforced.
--   **Default:** - Sets a default value if none is provided.
+- **Not Null:** The field cannot be left empty
+- **Unique:** No two records can have the same value in this field
+- **Primary key:** - Indicates this field is the primary key. Both the not null and unique constraints will be enforced.
+- **Default:** - Sets a default value if none is provided.
 
 As with data types, any data that does not satisfy the schema constraints will be rejected from the database.
 
@@ -230,7 +220,7 @@ Another critical component of schema design is to understand how different table
 
 Create a new database and a design single table using SQLite Studio.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to create and use knex migrations
 
@@ -383,11 +373,11 @@ Finally, we are free to rerun that file with `knex migrate` latest.
 
 Use Knex migrations to create a products table with the following columns:
 
--   id: make this the primary key.
--   name: should be a string that is unique.
--   price: should be a number.
+- id: make this the primary key.
+- name: should be a string that is unique.
+- price: should be a number.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to create and use knex seeds
 
@@ -451,7 +441,7 @@ You can now use SQLite Studio to confirm that the accounts table has two entries
 
 Create sample data for an existing database table using seeds.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
@@ -459,13 +449,13 @@ Create sample data for an existing database table using seeds.
 
 [GitHub Repo](https://github.com/LambdaSchool/node-db2-guided)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Node DB 2 Project](https://github.com/LambdaSchool/node-db2-project)
+- ##### [Node DB 2 Project](https://github.com/LambdaSchool/node-db2-project)
 
-    Afternoon project starter for Node DB 2 Module
+  Afternoon project starter for Node DB 2 Module
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -473,36 +463,36 @@ Create sample data for an existing database table using seeds.
 
 You can use class recordings to help you master the material.
 
--   **[Database Schema Design for Web PT 18 w/Jason Maurer](https://youtu.be/sa6AEByzM_0)**
+- **[Database Schema Design for Web PT 18 w/Jason Maurer](https://youtu.be/sa6AEByzM_0)**
 
-    In this module we’ll learn how to create schemas using both SQLite Studio and Knex. On this lecture we will cover the following topics: Database Management Systems (DBMS) SQLite studio Primary keys Data Types and Column Constraints Knex CLI Migrations Seeds At the end of this module, you should be able to: use SQLite Studio on an existing database explain what is a database schema create and use knex migrations create and use knex seeds
+  In this module we’ll learn how to create schemas using both SQLite Studio and Knex. On this lecture we will cover the following topics: Database Management Systems (DBMS) SQLite studio Primary keys Data Types and Column Constraints Knex CLI Migrations Seeds At the end of this module, you should be able to: use SQLite Studio on an existing database explain what is a database schema create and use knex migrations create and use knex seeds
 
--   [All previous recordings](/archive/FSW/module/recIbfNn9xRhLTOv4)
+- [All previous recordings](/archive/FSW/module/recIbfNn9xRhLTOv4)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Use SQLite Studio to open a database from a previous challenge. Confirm that the data displayed in SQLite Studio matches the data from the server in a `GET` request.
+  Use SQLite Studio to open a database from a previous challenge. Confirm that the data displayed in SQLite Studio matches the data from the server in a `GET` request.
 
--   Objective challenge:
+- Objective challenge:
 
-    Create a new database and a design single table using SQLite Studio.
+  Create a new database and a design single table using SQLite Studio.
 
--   Objective challenge:
+- Objective challenge:
 
-    Use Knex migrations to create a products table with the following columns:
+  Use Knex migrations to create a products table with the following columns:
 
-    -   id: make this the primary key.
-    -   name: should be a string that is unique.
-    -   price: should be a number.
+  - id: make this the primary key.
+  - name: should be a string that is unique.
+  - price: should be a number.
 
--   Objective challenge:
+- Objective challenge:
 
-    Create sample data for an existing database table using seeds.
+  Create sample data for an existing database table using seeds.
 
--   Guided Project: Node DB 2 Guided Project
+- Guided Project: Node DB 2 Guided Project
 
--   Project: Node DB 2 Project
+- Project: Node DB 2 Project

@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Classes
 
@@ -71,17 +69,17 @@
 
 JavaScript IV introduces you to the powerful paradigm of Object Oriented Programming (OOP) in JavaScript. We will take a deep dive into these topics:
 
--   The JavaScript Prototype object
--   constructor functions
--   Pseudo-classical Inheritence
--   the `class` keyword
+- The JavaScript Prototype object
+- constructor functions
+- Pseudo-classical Inheritence
+- the `class` keyword
 
 By the end of the day you should be familiar with objects and how to use Constructors and Classes to build out objects and achieve inheritance across these objects.
 
 **At the end of this module, you should be able to:**
 
--   describe and demonstrate how class syntax works
--   convert a pseudo classically instantiated program into class syntax
+- describe and demonstrate how class syntax works
+- convert a pseudo classically instantiated program into class syntax
 
 #### Pro Tip
 
@@ -91,17 +89,13 @@ Accept criticism gracefully and learn from it. Criticism is valuable for growth 
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=D3Yx_ohAet4), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=D3Yx_ohAet4), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=gnDkLbeof60), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=gnDkLbeof60), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -141,7 +135,7 @@ Let us declare a `new` Rectangle and log the result.
     const newRect = new Rectangle(400, 800);
     console.log(newRect);
 
-    Logs out: 
+    Logs out:
     ​​​​​Rectangle { height: 400, width: 800 }​​​​​
 
 ### Inheritance w/ Classes
@@ -150,7 +144,7 @@ Inheritance is where classes shine. The `extends` keyword, and `super();` functi
 
 Here’s how Object inheritance works with classes:
 
-    class Animal { 
+    class Animal {
       constructor(name) {
         this.name = name;
       }
@@ -245,7 +239,7 @@ Create a `Child` class (you) who inherits from `Parent`.
 
 Be sure to log out any methods that you use for this project. Any features (i.e. eye color, hair color) that you’d inherit from your ancestors, be sure to include as attributes and pass them down the class chain. Every class should at least be instantiated with the following attributes. `name, birthPlace, eyeColor, hairColor`.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to convert a pseudo classically instantiated program into class syntax
 
@@ -257,10 +251,10 @@ Now that we have had plenty of practice with pseudo-classical inheritance. We’
 
 Some critical notes on classes:
 
--   The `object` our class returns will have attributes assigned to it from the `constructor()` function.
--   All methods attached to the class body will be stored on the `Objects` prototype in a special way. There is a bit more magic here than just `Object.create(Foo.prototype);` and `Class.call(this, attrs);` But now that we know this, we can accept that the class keyword does this gloriously for us.
--   The ‘extends’ keyword is used to `extend` a parent object. A clue to finding out if a class is a `sub-class` is to look for extends.
--   Finally, if you’re going to use `extend`, `super()` needs to be called from within the constructor function. This is to pass any new attributes back up to the constructor of the parent object.
+- The `object` our class returns will have attributes assigned to it from the `constructor()` function.
+- All methods attached to the class body will be stored on the `Objects` prototype in a special way. There is a bit more magic here than just `Object.create(Foo.prototype);` and `Class.call(this, attrs);` But now that we know this, we can accept that the class keyword does this gloriously for us.
+- The ‘extends’ keyword is used to `extend` a parent object. A clue to finding out if a class is a `sub-class` is to look for extends.
+- Finally, if you’re going to use `extend`, `super()` needs to be called from within the constructor function. This is to pass any new attributes back up to the constructor of the parent object.
 
 Examples found below as we refactor our code from the previous objective:
 
@@ -287,9 +281,9 @@ Examples found below as we refactor our code from the previous objective:
 
 Let’s review:
 
--   `speak` is now assigned to the object’s prototype. (open the console and show this off after you instantiate an object.)
--   `this` is a single class, meaning it is not `extending` a parent class. We’ll get to `extend`s soon.
--   The code is clean now! Instead of having to reference the object’s prototype over and over to create methods on it, you can just add them to the class body. This is how we use classes today. You’ll get plenty of time to use this when we get to React. React uses classes all the time.
+- `speak` is now assigned to the object’s prototype. (open the console and show this off after you instantiate an object.)
+- `this` is a single class, meaning it is not `extending` a parent class. We’ll get to `extend`s soon.
+- The code is clean now! Instead of having to reference the object’s prototype over and over to create methods on it, you can just add them to the class body. This is how we use classes today. You’ll get plenty of time to use this when we get to React. React uses classes all the time.
 
 Classes come in handy when we have children objects that will be sub-classes of their parents. We accomplished this in the previous module with `Child` (see below).
 
@@ -341,13 +335,13 @@ Following along [here](https://codepen.io/lambdaschool/pen/QJdOJa) with the reco
 
 Convert constructor functions into class syntax using `class`, `extends`, and `super()` [here](https://codepen.io/lambdaschool/pen/pOKxme).
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Classes Project](https://github.com/LambdaSchool/JS-Exercise-Classes)
+- ##### [Classes Project](https://github.com/LambdaSchool/JS-Exercise-Classes)
 
-    This challenge focuses on classes in JavaScript using the new class keyword.
+  This challenge focuses on classes in JavaScript using the new class keyword.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -355,30 +349,30 @@ Convert constructor functions into class syntax using `class`, `extends`, and `s
 
 You can use class recordings to help you master the material.
 
--   **[Classes for WebPT22 w/Nathan Braun](https://youtu.be/7liFl7fpNo0)**
+- **[Classes for WebPT22 w/Nathan Braun](https://youtu.be/7liFl7fpNo0)**
 
-    JavaScript IV introduces you to the powerful paradigm of Object Oriented Programming (OOP) in JavaScript. We will take a deep dive into these topics: The JavaScript Prototype object constructor functions Pseudo-classical Inheritence the class keyword By the end of the day you should be familiar with objects and how to use Constructors and Classes to build out objects and achieve inheritance across these objects.
+  JavaScript IV introduces you to the powerful paradigm of Object Oriented Programming (OOP) in JavaScript. We will take a deep dive into these topics: The JavaScript Prototype object constructor functions Pseudo-classical Inheritence the class keyword By the end of the day you should be familiar with objects and how to use Constructors and Classes to build out objects and achieve inheritance across these objects.
 
--   [All previous recordings](/archive/FSW/module/recyS588eOvVUKAMc)
+- [All previous recordings](/archive/FSW/module/recyS588eOvVUKAMc)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    For this challenge, we want you to build out a few classes based on your ancestral tree. (If you’re not sure about any of your family’s information go ahead and make up names like “Grandpa” and “Grandma”).
+  For this challenge, we want you to build out a few classes based on your ancestral tree. (If you’re not sure about any of your family’s information go ahead and make up names like “Grandpa” and “Grandma”).
 
-    Go back a few generations and create a `Grandpa or Grandma` class. Name either one for your parent’s parents.
+  Go back a few generations and create a `Grandpa or Grandma` class. Name either one for your parent’s parents.
 
-    Create a `Parent` class named for one of your parents. `Parent inherits from Grandpa/Grandma`.
+  Create a `Parent` class named for one of your parents. `Parent inherits from Grandpa/Grandma`.
 
-    Create a `Child` class (you) who inherits from `Parent`.
+  Create a `Child` class (you) who inherits from `Parent`.
 
-    Be sure to log out any methods that you use for this project. Any features (i.e. eye color, hair color) that you’d inherit from your ancestors, be sure to include as attributes and pass them down the class chain. Every class should at least be instantiated with the following attributes. `name, birthPlace, eyeColor, hairColor`.
+  Be sure to log out any methods that you use for this project. Any features (i.e. eye color, hair color) that you’d inherit from your ancestors, be sure to include as attributes and pass them down the class chain. Every class should at least be instantiated with the following attributes. `name, birthPlace, eyeColor, hairColor`.
 
--   Objective challenge:
+- Objective challenge:
 
-    Convert constructor functions into class syntax using `class`, `extends`, and `super()` [here](https://codepen.io/lambdaschool/pen/pOKxme).
+  Convert constructor functions into class syntax using `class`, `extends`, and `super()` [here](https://codepen.io/lambdaschool/pen/pOKxme).
 
--   Project: Classes Project
+- Project: Classes Project

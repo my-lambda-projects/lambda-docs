@@ -1,801 +1,1534 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Intended as a home for Lambda School curriculum.">
-<meta name="author" content="">
-<meta name="generator" content="Jekyll v3.8.0">
-<title>Problem Solving · Lambda School</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Intended as a home for Lambda School curriculum."
+    />
+    <meta name="author" content="" />
+    <meta name="generator" content="Jekyll v3.8.0" />
+    <title>Problem Solving · Lambda School</title>
 
-<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+    <link
+      rel="stylesheet"
+      integrity
+      crossorigin="anonymous"
+      href="https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css"
+    />
 
-<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+    <link
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css"
+    />
 
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css"
+    />
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
-  ga('send', 'pageview');
-</script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-122016605-1", "learn.lambdaschool.com");
+      ga("send", "pageview");
+    </script>
 
+    <link
+      rel="apple-touch-icon"
+      href="/assets/img/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/assets/img/favicons/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicons/safari-pinned-tab.svg"
+      color="#a0001e"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="msapplication-config"
+      content="/assets/img/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#a0001e" />
+  </head>
+  <body>
+    <noscript>Please enable JavaScript to view this page.</noscript>
+    <div id="redirect-message" style="display: none">
+      You must be logged in to view this page.
+    </div>
+    <div id="unauthorized-message" style="display: none">
+      You must be a Lambda School student to view this page.
+    </div>
+    <div id="content-wrapper" style="visibility: hidden">
+      <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+          <span class="skiplink-text">Skip to main content</span>
+        </div>
+      </a>
+      <div class="mobile-menu">
+        <div class="m-drop">
+          <div class="mobile-row">
+            <div class="header-row" style="padding: 3px 7px">
+              <a class="navbar-brand" href="/" aria-label="Lambda School"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="35"
+                  viewBox="0 0 33 35"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                    fill="#EC3944"
+                  /></svg
+              ></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#mobile-course-menu"
+                aria-controls="mobile-course-menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="30"
+                  height="30"
+                  focusable="false"
+                >
+                  <title>Menu</title>
+                  <path
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    d="M4 7h22M4 15h22M4 23h22"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="nav-row">
+            <div class="results-container">
+              <ul id="results-container" class="dropdown list-group"></ul>
+            </div>
+            <div id="mobile-course-menu" class="collapse nav-row">
+              <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+                <nav class="bd-links">
+                  <div class="bd-toc-item">
+                    <h4 class="bd-toc-link">Computer Science</h4>
+                  </div>
 
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/reckLrPDHRpFN3a6p">
+                      1.&nbsp;&nbsp;Computer Science Fundamentals
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/cs/module/recHNgXTaBpnn052p/">
+                          Python Basics
+                        </a>
+                      </li>
+                      <li class="active bd-sidenav-active">
+                        <a href="/cs/module/recagU9ihCuMePtbx/">
+                          Problem Solving
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recZ6g2C5xkxHmT16/">
+                          Time and Space Complexity
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recy2QANAS6Blpc5o/">
+                          Computer Memory Basics
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/recdbs5ZPBtMb6fou">
+                      2.&nbsp;&nbsp;Data Structures and Algorithms I
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/cs/module/recR43dkPzilEMXlE/">
+                          Array and String Manipulation
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recQJcAAjpSTtNf8A/">
+                          Linked Lists
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/rec07JKgm7ltWrPYD/">
+                          Queues and Stacks
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/rec00Cf3TiBWiCONA/">
+                          Searching and Recursion
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/recyC7E0YQc0qQgxa">
+                      3.&nbsp;&nbsp;Data Structures and Algorithms II
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/cs/module/recgJOPYUjvQaN2sa/">
+                          Binary Search Trees
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recS3C67spna4M4HU/">
+                          Tree Traversal
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recEPIaHFEriTuU2x/"> Graphs I </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recX4dkkIPeJ6JjX6/"> Graphs II </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/recsJW8CaZiKcyUZj">
+                      4.&nbsp;&nbsp;Data Structures and Algorithms III
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/cs/module/recLpJY4yFQcV3qeW/">
+                          Hash Tables I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recG6onEnlSOWziKO/">
+                          Hash Tables II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/reczaVKTynSkqN8ZS/">
+                          Technical Interview Tips I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/rec6kEjLri9SXMYdE/">
+                          Technical Interview Tips II
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="sidebar-container bd-sidebar">
+          <div class="docs-sidebar">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"
+              ><svg
+                width="135"
+                height="35"
+                viewBox="0 0 756 197"
+                fill="#ec3944"
+              >
+                <g>
+                  <path
+                    d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"
+                  ></path>
+                  <path
+                    d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"
+                  ></path>
+                  <path
+                    d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"
+                  ></path>
+                  <path
+                    d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"
+                  ></path>
+                  <path
+                    d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"
+                  ></path>
+                  <path
+                    d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"
+                  ></path>
+                </g>
+                <path
+                  d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"
+                ></path></svg
+            ></a>
+            <ul id="results-container" class="dropdown list-group"></ul>
+            <nav class="bd-links collapse" id="bd-docs-nav">
+              <div class="bd-toc-item">
+                <h4 class="bd-toc-link">Computer Science</h4>
+              </div>
 
-<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
-<link rel="icon" href="/favicon.ico">
-<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#a0001e">
-</head>
-<body>
-<noscript>Please enable JavaScript to view this page.</noscript>
-<div id="redirect-message" style="display: none;">
-You must be logged in to view this page.
-</div>
-<div id="unauthorized-message" style="display: none;">
-You must be a Lambda School student to view this page.
-</div>
-<div id="content-wrapper" style="visibility: hidden;">
-<a id="skippy" class="sr-only sr-only-focusable" href="#content">
-<div class="container">
-<span class="skiplink-text">Skip to main content</span>
-</div>
-</a>
-<div class="mobile-menu">
-<div class="m-drop">
-<div class="mobile-row">
-<div class="header-row" style="padding: 3px 7px">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
-</svg></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
-</button>
-</div>
-</div>
-<div class="nav-row">
-<div class="results-container">
-<ul id="results-container" class="dropdown list-group"></ul>
-</div>
-<div id="mobile-course-menu" class="collapse nav-row">
-<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
-<nav class="bd-links">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Computer Science</h4>
-</div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/reckLrPDHRpFN3a6p">
+                  1.&nbsp;&nbsp;Computer Science Fundamentals
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/cs/module/recHNgXTaBpnn052p/"> Python Basics </a>
+                  </li>
+                  <li class="active bd-sidenav-active">
+                    <a href="/cs/module/recagU9ihCuMePtbx/">
+                      Problem Solving
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recZ6g2C5xkxHmT16/">
+                      Time and Space Complexity
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recy2QANAS6Blpc5o/">
+                      Computer Memory Basics
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/recdbs5ZPBtMb6fou">
+                  2.&nbsp;&nbsp;Data Structures and Algorithms I
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/cs/module/recR43dkPzilEMXlE/">
+                      Array and String Manipulation
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recQJcAAjpSTtNf8A/"> Linked Lists </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/rec07JKgm7ltWrPYD/">
+                      Queues and Stacks
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/rec00Cf3TiBWiCONA/">
+                      Searching and Recursion
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/recyC7E0YQc0qQgxa">
+                  3.&nbsp;&nbsp;Data Structures and Algorithms II
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/cs/module/recgJOPYUjvQaN2sa/">
+                      Binary Search Trees
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recS3C67spna4M4HU/"> Tree Traversal </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recEPIaHFEriTuU2x/"> Graphs I </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recX4dkkIPeJ6JjX6/"> Graphs II </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/recsJW8CaZiKcyUZj">
+                  4.&nbsp;&nbsp;Data Structures and Algorithms III
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/cs/module/recLpJY4yFQcV3qeW/"> Hash Tables I </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recG6onEnlSOWziKO/"> Hash Tables II </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/reczaVKTynSkqN8ZS/">
+                      Technical Interview Tips I
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/rec6kEjLri9SXMYdE/">
+                      Technical Interview Tips II
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <main class="content-container flex-wrapper" role="main">
+          <div class="sticky-nav">
+            <div class="sprint-nav">
+              <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+                <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+                <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="wrapper limit-width">
+            <div class="flex-wrapper">
+              <div class="limit-width">
+                <div class="jumbotron">
+                  <h1 class="bd-title" id="content">Problem Solving</h1>
+                  <span class="lead">
+                    <p class="bd-lead"></p>
+                  </span>
+                  <strong
+                    >At the end of this module, you should be able to:</strong
+                  >
+                  <ul>
+                    <li>
+                      name and describe the details of each step of Lambda's
+                      Problem-Solving Framework (U.P.E.R)
+                    </li>
+                    <li>
+                      effectively ask for help by giving the expected vs.
+                      experienced behavior, explaining what specific actions
+                      they've taken so far, and providing all relevant
+                      information and code
+                    </li>
+                  </ul>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                  <h4>Pro Tip</h4>
+                  <p>
+                    No problem can withstand the assault of sustained thinking.
+                  </p>
+                  <footer class="blockquote-footer"><p>Voltaire</p></footer>
+                </div>
+                <h2 class="display-4">
+                  <a
+                    id="prepare"
+                    class="anchor"
+                    href="#prepare"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Prepare
+                </h2>
+                <p class="lead">Review each preclass resource before class.</p>
+                <div class="preclass">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/16Rja_aziWU"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/yVygkK2mTIY"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <h2 class="display-4">
+                  <a id="learn" class="anchor" href="#learn" aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Learn
+                </h2>
+                <h4 class="mark mb-3 p-2">
+                  Learn to name and describe the details of each step of
+                  Lambda's Problem-Solving Framework (U.P.E.R)
+                </h4>
+                <h5>Overview</h5>
+                <p>
+                  Many times, both as you are working through the Computer
+                  Science curriculum and when you are on the job, you will find
+                  yourself faced with large, challenging problems. There are
+                  strategies we can use to break these problems down into more
+                  manageable pieces.
+                </p>
+                <blockquote>
+                  <p>
+                    “The single most important skill for a computer scientist is
+                    problem-solving. Problem-solving means the ability to
+                    formulate problems, think creatively about solutions, and
+                    express a solution clearly and accurately. As it turns out,
+                    the process of learning to program is an excellent
+                    opportunity to practice problem-solving skills.” Think
+                    Python, 2nd Edition, by Allen B. Downey (O’Reilly).
+                    Copyright 2016 Allen Downey, 978-1-4919-3936-9.
+                  </p>
+                </blockquote>
+                <p>
+                  Every problem, large or small, can be broken into smaller
+                  chunks. Logically, if you can take a seemingly unsolvable
+                  problem and break it into smaller, more manageable chunks,
+                  once you’ve finished solving each piece of the problem, you’ll
+                  have conquered the whole thing!
+                </p>
+                <p>
+                  Throughout the Computer Science curriculum, we will reference
+                  and draw from the Lambda Problem Solving Framework, sometimes
+                  referred to as <strong>UPER</strong>. This framework is a
+                  step-by-step process:
+                </p>
+                <ol>
+                  <li><strong>U</strong>nderstand</li>
+                  <li><strong>P</strong>lan</li>
+                  <li><strong>E</strong>xecute</li>
+                  <li><strong>R</strong>eflect</li>
+                </ol>
+                <p>
+                  Almost all problems are a series of sub-problems. You will use
+                  the steps of <strong>U.P.E.R</strong> on the primary outer
+                  problem and the inner, individual sub-problems.
+                </p>
+                <h3 id="1-understand"><strong>1. Understand</strong></h3>
+                <p>
+                  Before doing anything else, make sure you understand precisely
+                  what the problem is asking. A helpful starting point could be
+                  transcribing the technical description of the problem into
+                  your own words.
+                </p>
+                <h4 id="questions"><strong>Questions</strong></h4>
+                <p>
+                  Here is a list of starter questions that might come up during
+                  this step:
+                </p>
+                <ul>
+                  <li>
+                    <em>What are the inputs your code receives?</em>
+                    <ul>
+                      <li><em>What is the range of the input?</em></li>
+                      <li>
+                        <em>How big can the input be (how much data)?</em>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <em>What are the outputs your code produces?</em>
+                    <ul>
+                      <li><em>What is the range of the output?</em></li>
+                      <li>
+                        <em>How big can the output be (how much data)?</em>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><em>How performant must the code be?</em></li>
+                  <li>
+                    <em
+                      >Is there anything missing from the task description that
+                      needs to be clarified?</em
+                    >
+                  </li>
+                  <li>
+                    <em>What assumptions are you making?</em>
+                    <ul>
+                      <li>
+                        <em
+                          >Does anyone else on the team need to validate these
+                          assumptions?</em
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <h4 id="actions"><strong>Actions</strong></h4>
+                <p>
+                  The most important thing you can <strong>do</strong> during
+                  this stage of the process is to
+                  <strong>ask questions</strong>! Be as specific as you can when
+                  you ask questions. Be clear and concise with your questions by
+                  using unambiguous language and only including necessary
+                  details.
+                </p>
+                <p>
+                  Don’t be afraid of this part of the process—enjoy it! Look at
+                  the problem as a curiosity to be explored, not just something
+                  there to torment you. Feeling frustrated and afraid won’t help
+                  you at work or in an interview. Remember, problem-solving is
+                  the fun part, so enjoy it!
+                </p>
+                <p>
+                  One approach is to identify the smaller components that make
+                  up the larger problem. If you get stuck in understanding,
+                  break the larger problem into smaller sub-problems. Then,
+                  apply this framework against each of the smaller sub-problems
+                  until you solve the larger problem.
+                </p>
+                <p>
+                  Try to digest the problem and comprehend it by rewriting the
+                  problem in your own words. If you had to describe it to
+                  someone else, how would you do it?
+                </p>
+                <p>
+                  Diagram how the data flows through the problem. Think about
+                  each stage of the journey for the data. What will happen to it
+                  as it travels from one step to another?
+                </p>
+                <p>
+                  Think like a villain. What inputs would break your program?
+                </p>
+                <p>
+                  Where is the description of the problem incomplete? If you
+                  cannot get answers on something that the specifications leave
+                  unclear, make an educated guess, and document your assumptions
+                  and decision.
+                </p>
+                <p>
+                  You are done with this step when you can explain this problem
+                  to someone who has never seen it. Your explanation should be
+                  thorough enough for the person to skip the “Understand” step
+                  and start planning right away.
+                </p>
+                <h3 id="2-plan"><strong>2. Plan</strong></h3>
+                <p>
+                  This step is where you will ask, “<em
+                    >what steps will I take to solve the problem</em
+                  >?” You will take your description of the problem and
+                  transform it into a complete, actionable plan to solve that
+                  problem. If you realize you still don’t truly understand the
+                  problem while planning, return to
+                  <strong>Understand</strong> until you resolve the ambiguity.
+                  If you have not yet completed <strong>Understand</strong>, you
+                  will end up planning to solve the wrong problem! When
+                  interviewing, you must do this step aloud!
+                </p>
+                <p>
+                  Remember, you aren’t coding during this step unless it’s a
+                  small piece of throwaway code to test a hypothesis. It would
+                  be best if you wrote pseudocode during this step, however.
+                </p>
+                <h4 id="questions-1"><strong>Questions</strong></h4>
+                <ul>
+                  <li>
+                    <em
+                      >Do you know the answer to a similar problem that has
+                      comparable inputs and outputs?</em
+                    >
+                    <ul>
+                      <li>
+                        <em>Does this problem remind you an anything else?</em>
+                      </li>
+                      <li>
+                        <em>Can you bring that knowledge to bear here?</em>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <em>Does my plan meet the performance requirements?</em>
+                    <ul>
+                      <li><em>What’s the time complexity?</em></li>
+                      <li><em>What’s the space complexity?</em></li>
+                      <li><em>How big can my input data be?</em></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <em
+                      >Can sorting the input data ahead of time lead to any
+                      improvements in time complexity?</em
+                    >
+                    <ul>
+                      <li><em>Does recursion help?</em></li>
+                      <li>
+                        <em
+                          >Is the problem made up of identical subproblems?</em
+                        >
+                      </li>
+                      <li>
+                        <em
+                          >Can you state the problem with itself in its
+                          definition?</em
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <em
+                      >Think like a villain. Does your plan cover the edge
+                      cases?</em
+                    >
+                  </li>
+                </ul>
+                <h4 id="actions-1"><strong>Actions</strong></h4>
+                <p>
+                  Solve the problem like a human. If you’re sorting something,
+                  imagine your task as a pile of blocks that you need to sort by
+                  hand. Break down the steps you take into small enough pieces
+                  for a computer to understand. Approach the problem from many
+                  angles.
+                </p>
+                <p>
+                  Get a brute-force solution as quickly as possible. Even if
+                  it’s not performant enough, it can lead you toward better
+                  solutions.
+                </p>
+                <p>
+                  Come up with as many plans of attack as you can. Choose the
+                  best one that satisfies performance needs.
+                </p>
+                <p>
+                  Try to solve a simpler version of the problem. If the input is
+                  a 2D array, can you solve it for a 1D array? If you need to
+                  count the number of ways to eat cookies 1, 2, or 3 at a time,
+                  first try to solve it for the number of ways you could eat two
+                  at a time, or even one at a time. The solution to the more
+                  straightforward problem can lead to insights on the more
+                  complex problem.
+                </p>
+                <p>
+                  List the nouns and verbs in the problem description. Map each
+                  one to an algorithm, process, data structure, object, method,
+                  function, etc.
+                </p>
+                <p>
+                  “Perfect” can be the enemy of “good.” Even if your initial
+                  workable solution isn’t performant enough, you can iterate
+                  later. “Premature optimization is the root of all evil.”
+                </p>
+                <p>
+                  You know that you completed this step when you have pseudocode
+                  that’s detailed enough to convert to real code. It would be
+                  best if you also were convinced the pseudocode represents a
+                  legitimate working solution.
+                </p>
+                <h3 id="3-execute"><strong>3. Execute</strong></h3>
+                <p>
+                  This step is where you take your plan and convert it to actual
+                  working code. This step isn’t easy, but it’s much easier if
+                  you’ve done an excellent job with the “Understand” and “Plan”
+                  steps above. If you find shortcomings in your plan while
+                  implementing the solution, return to the “Plan” phase until
+                  you resolve the ambiguity. If you have not yet completed the
+                  “Plan” step, you will spend far longer on the “Execute” step
+                  than you have to.
+                </p>
+                <h4 id="questions-2"><strong>Questions</strong></h4>
+                <ul>
+                  <li>
+                    <em
+                      >Think like a villain. Does your implementation handle all
+                      inputs?</em
+                    >
+                  </li>
+                  <li>
+                    <em
+                      >What is the best way to split this code into separate
+                      functions or classes?</em
+                    >
+                  </li>
+                  <li>
+                    <em>Does this functionality already exist?</em>
+                    <ul>
+                      <li>
+                        <em>Are there built-in libraries I can leverage?</em>
+                      </li>
+                      <li>
+                        <em>Are there third-party libraries I can leverage?</em>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <h4 id="actions-2"><strong>Actions</strong></h4>
+                <p>
+                  Convert your pseudocode and outlines into actual code. Don’t
+                  Repeat Yourself (DRY): Remove redundant code as you write it.
+                </p>
+                <p>
+                  Document code as you write it. Header blocks should contain
+                  information on how someone should use the code. Comment only
+                  when necessary; where possible, write code clearly enough that
+                  comments aren’t needed. If comments help clarify or summarize
+                  a piece of code to a reader, definitely add comments.
+                </p>
+                <p>
+                  If you write code that’s hackish or kludgy, fix it. If you
+                  don’t have time to fix it, comment it, explain why you
+                  couldn’t do it “the right way” (time constraints, etc.), and
+                  what you need to do to make it right.
+                </p>
+                <p>
+                  You know this step is complete when your solution works on
+                  good data, it doesn’t fail on flawed data or edge cases, and
+                  the program passes all of the tests.
+                </p>
+                <h3 id="4-reflect"><strong>4. Reflect</strong></h3>
+                <p>
+                  The primary question you are dealing with during this step is
+                  — “is this implementation as good as I can make it?” Would I
+                  be proud to show my code to another programmer?
+                </p>
+                <h4 id="questions-3"><strong>Questions</strong></h4>
+                <ul>
+                  <li>
+                    <em>Does your solution work in all cases?</em>
+                    <ul>
+                      <li><em>Main case?</em></li>
+                      <li><em>Edge cases?</em></li>
+                    </ul>
+                  </li>
+                  <li><em>Is the solution performant enough?</em></li>
+                  <li><em>Is the code documented?</em></li>
+                  <li>
+                    <em
+                      >In retrospect, what would you do differently? What will
+                      you do differently next time?</em
+                    >
+                    <ul>
+                      <li><em>What went right?</em></li>
+                      <li><em>What went wrong?</em></li>
+                    </ul>
+                  </li>
+                </ul>
+                <h4 id="actions-3"><strong>Actions</strong></h4>
+                <p>
+                  Adding documentation is a necessary action during this step.
+                  It would be best if you documented any future changes you plan
+                  on making. You should document any code sections that you will
+                  need to make more performant if the data size increases.
+                </p>
+                <p>
+                  Another critical action to take during this step is to remove
+                  any redundant or unnecessary code. Also, depending on your
+                  time constraints, it’s likely that you might have some hackish
+                  code that you’d like to improve in the future when time
+                  allows. Make sure to document any ideas or plans on how you
+                  might do so.
+                </p>
+                <p>
+                  You know that this step is complete when your code is
+                  adequately refactored and exhaustively documented.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Let’s use the
+                  <em
+                    ><a
+                      href="https://en.wikipedia.org/wiki/Dining_philosophers_problem"
+                      >dining philosophers problem</a
+                    ></em
+                  >
+                  as an example problem to use our Problem Solving Framework on.
+                  Here’s a short description of the problem:
+                </p>
+                <blockquote>
+                  <p>
+                    Five silent philosophers sit at a round table with bowls of
+                    noodles. One chopstick is placed between each pair of
+                    adjacent philosophers.
+                  </p>
+                  <p>
+                    Each philosopher must alternately think and eat. However, a
+                    philosopher can only eat noodles when they have both left
+                    and right chopsticks. Each chopstick can be held by only one
+                    philosopher and so a philosopher can use the chopstick only
+                    if it is not being used by another philosopher. After an
+                    individual philosopher finishes eating, they need to put
+                    down both chopsticks so that the chopsticks become available
+                    to others. A philosopher can take the chopstick on their
+                    right or the one on their left as they become available, but
+                    cannot start eating before getting both chopsticks.
+                  </p>
+                  <p>
+                    Eating is not limited by the remaining amounts of noodles or
+                    stomach space; an infinite supply and an infinite demand are
+                    assumed.
+                  </p>
+                  <p>
+                    The problem is how to design a discipline of behavior (a
+                    concurrent algorithm) such that no philosopher will starve;
+                    i.e. each can forever continue to alternate between eating
+                    and thinking, assuming that no philosopher can know when
+                    others may want to eat or think.
+                  </p>
+                </blockquote>
+                <h3 id="1-understand"><strong>1. Understand</strong></h3>
+                <p>
+                  On the surface, this seems like a straightforward problem —
+                  however, some approaches will lead to problematic results.
+                </p>
+                <p>
+                  Here are some critical pieces of information from the question
+                  we should highlight:
+                </p>
+                <ul>
+                  <li>there are <strong>5</strong> philosophers</li>
+                  <li>
+                    there are <strong>2 states</strong> (eating, thinking)
+                  </li>
+                  <li>
+                    there is precisely 1 chopstick in between each pair of
+                    philosophers (5 total)
+                  </li>
+                  <li>
+                    BOTH chopsticks are required to transition from thinking to
+                    eating
+                  </li>
+                </ul>
+                <p>
+                  Some essential questions to ask here include
+                  <em>“When should philosophers pick up a chopstick?”</em> and
+                  <em>“When should philosophers put down a chopstick?”</em>
+                </p>
+                <p>
+                  Remember that you want to establish if there are any
+                  restrictions or limitations you need to consider before you
+                  work on a solution.
+                </p>
+                <h3 id="2-plan"><strong>2. Plan</strong></h3>
+                <p>
+                  Let’s create a solution written as a set of rules that defines
+                  how philosophers should interact with chopsticks in a manner
+                  that will allow them to transition between <em>eating</em> and
+                  <em>thinking</em>.
+                </p>
+                <ol>
+                  <li>philosopher is eating (2 chopsticks)</li>
+                  <li>philosopher finishes eating and sets down chopsticks</li>
+                  <li>philosopher is thinking (0 chopsticks)</li>
+                  <li>
+                    philosopher sees his/her neighbor set down chopsticks &amp;
+                    picks them up
+                  </li>
+                  <li>repeat steps 1-4</li>
+                </ol>
+                <h3 id="3-execute"><strong>3. Execute</strong></h3>
+                <p>
+                  We could break down the general plan above into a few specific
+                  rules.
+                </p>
+                <ul>
+                  <li>
+                    eat for a set amount of time once they are holding both
+                    chopsticks
+                  </li>
+                  <li>put down the right chopstick</li>
+                  <li>put down the left chopstick</li>
+                  <li>
+                    pick up the left chopstick as soon as it becomes available
+                  </li>
+                  <li>
+                    pick up the right chopstick as soon as it becomes available
+                  </li>
+                  <li>repeat</li>
+                </ul>
+                <p>However, this solution will NOT always work.</p>
+                <h3 id="4-reflect"><strong>4. Reflect</strong></h3>
+                <p>
+                  The above solution has the potential to create a situation
+                  known in Computer Science as <strong>deadlock</strong>. A
+                  deadlock means that two processes are stuck in an eternal
+                  state of waiting. If neither has two chopsticks, they cannot
+                  eat. But they also won’t put down chopsticks they’re holding
+                  (because they haven’t eaten yet). We need to revise the rules
+                  about when philosophers should pick up / put down chopsticks
+                  to eliminate this possibility.
+                </p>
+                <h5>Challenge</h5>
+                <p>
+                  For everyone to eat, there are some situations in which
+                  philosophers <em>should</em> pick up a chopstick and some
+                  cases in which they <em>should NOT</em> (because another
+                  philosopher needs to use it).
+                </p>
+                <p>
+                  Write a better solution to the dining philosophers problem so
+                  that deadlock does NOT occur.
+                </p>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.interviewcake.com/tricks-for-getting-unstuck-programming-interview?course=fc1&amp;section=interview-tips"
+                      target="blank_"
+                      >https://www.interviewcake.com/tricks-for-getting-unstuck-programming-interview?course=fc1&amp;section=interview-tips</a
+                    ><br />
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to effectively ask for help by giving the expected vs.
+                  experienced behavior, explaining what specific actions they've
+                  taken so far, and providing all relevant information and code
+                </h4>
+                <h5>Overview</h5>
+                <p>
+                  The necessary action when asking a question is to imagine that
+                  you are trying to answer your question. Because you are deep
+                  in your problem’s weeds, it’s easy to forget that the person
+                  who answers your question does not have all the context. We
+                  should keep this general rule in mind — it’s the overarching
+                  rule for all the details we go into next.
+                </p>
+                <h3 id="search-and-research">Search and Research</h3>
+                <p>
+                  Before you do anything else, search for a solution to your
+                  problem on your own. One thing you should start doing is
+                  keeping track of all your research when solving a problem. One
+                  easy way to do this is to have a browser window represent a
+                  specific search for a solution, and each open tab represents
+                  an attempt at solving it. Keeping track of your research is
+                  vital because it’s helpful to provide examples of similar
+                  questions or similar problems and explain why those didn’t
+                  answer your specific problem or question. It also helps the
+                  person answering your question avoid pointing you toward
+                  resources you’ve already explored, and lets them know that
+                  you’ve already put in the work.
+                </p>
+                <h3 id="introduce-the-problem">Introduce the Problem</h3>
+                <p>
+                  The first thing you do when you ask a question￼￼￼￼ is to
+                  introduce the problem. The first paragraph of your written
+                  question should serve as an executive summary of the problem.
+                  All the following paragraphs should fill in the details of the
+                  problem.
+                </p>
+                <p>
+                  An important thing to include in your problem introduction is
+                  a precise explanation of how you encountered the problem.
+                  Write about the difficulties that kept you from solving it.
+                  Describe what you already tried and include the results of the
+                  research you’ve done.
+                </p>
+                <p>
+                  You should also provide as much detail about the context as
+                  possible. For instance, include the language version, the
+                  platform version, the operating system, the database type,
+                  specific IDE, and any web server information. You should also
+                  include your particular constraints. For example, you may not
+                  be allowed to use feature A or B that would provide an obvious
+                  solution. If you have an odd constraint, it may also help
+                  explain why you have that constraint.
+                </p>
+                <h3 id="help-others-reproduce-the-problem">
+                  Help Others Reproduce the Problem
+                </h3>
+                <p>
+                  One thing to remember is that not all questions benefit from
+                  including code. However, if you include code, definitely do
+                  not just copy in your entire program! By having irrelevant
+                  details, you make your question much harder to answer and
+                  decrease the chances of someone helping you.
+                </p>
+                <p>
+                  Here are some guidelines for when to include code in your
+                  question.
+                </p>
+                <h3 id="minimal"><strong>Minimal</strong></h3>
+                <p>
+                  Include just enough code to allow others to reproduce your
+                  specific problem.￼￼ One way to do this is to restart from
+                  scratch. Do not include snippets of your entire program.
+                  Instead, create a new program, but only add what’s necessary
+                  to recreate the problem.
+                </p>
+                <p>
+                  If you aren’t exactly sure where the problem code is, one way
+                  to find it is by removing code chunks one at a time until the
+                  problem disappears — then add back the last part. This way,
+                  you can deduce that the last piece of code you added back is
+                  likely the source of your problem.
+                </p>
+                <p>
+                  Be careful not to remove too much code, either. Keep your
+                  question brief, but maintain enough context for clarity.
+                </p>
+                <h3 id="complete">Complete</h3>
+                <p>
+                  Make sure you include all the portions of the code needed to
+                  reproduce the problem. It would be best if you assumed that
+                  the person who is answering your question would not write any
+                  code to reproduce your issue. Again, remember, do not use
+                  images of code—those trying to help you need direct access to
+                  the code you include in your question.
+                </p>
+                <h3 id="reproducible">Reproducible</h3>
+                <p>
+                  When you include your code, it’s also important to tell the
+                  reader exactly what you expect the behavior to be. Be sure to
+                  show the reader the exact wording of the error message you
+                  encountered (if there was one). It’s also crucial to
+                  double-check that your included example reproduces the
+                  problem.
+                </p>
+                <p>
+                  One other thing you can do is create a live example on a site
+                  like sqlfiddle.com or jsbin.com. If you do, make sure you also
+                  include a copy of your code in your question. Not everyone
+                  will utilize the link to the live example.
+                </p>
+                <p>
+                  And to reiterate, do not post images of any code, data, or
+                  error messages—reserve images for things like rendering
+                  bugs—things that are impossible to describe accurately with
+                  just text.
+                </p>
+                <h3 id="proofread">Proofread</h3>
+                <p>
+                  Don’t send a question you haven’t proofread. When you post
+                  your question, you should have already read and reread it,
+                  taking care to follow all the best practices and making sure
+                  your question makes sense. It would be best if you imagined
+                  that you’re coming to your question fresh, with no other
+                  context but the question itself. You want to make your
+                  question as easy for someone to answer as possible. Remember,
+                  the reader is likely choosing between several questions they
+                  could answer. You want your question to stand out as something
+                  concise and approachable. Don’t forget to double-check your
+                  spelling, grammar, and formatting. Keep it as straightforward
+                  as you can; you’re not writing a novel.
+                </p>
+                <h3 id="respond-to-feedback">Respond to Feedback</h3>
+                <p>
+                  As feedback and responses to your question begin coming in,
+                  respond as quickly as possible. You’ll likely receive
+                  clarifying questions, and your readers need that clarification
+                  to help you.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Now let’s look at an example of a question posted to Stack
+                  Overflow and analyze it to see if it follows the best
+                  practices outlined above.
+                </p>
+                <p>
+                  <a
+                    href="https://stackoverflow.com/questions/522563/accessing-the-index-in-for-loops"
+                    >The question</a
+                  >:
+                </p>
+                <p>
+                  <img
+                    src="https://camo.githubusercontent.com/9be35d94fd27e59fc716b00942c22b5b3438a99a/68747470733a2f2f746b2d6173736574732e6c616d6264617363686f6f6c2e636f6d2f64383031393630662d626530662d346633362d383634612d3564626666616435306631635f53637265656e53686f74323032302d30332d33306174332e31352e3330504d2e706e67"
+                    alt="https://camo.githubusercontent.com/9be35d94fd27e59fc716b00942c22b5b3438a99a/68747470733a2f2f746b2d6173736574732e6c616d6264617363686f6f6c2e636f6d2f64383031393630662d626530662d346633362d383634612d3564626666616435306631635f53637265656e53686f74323032302d30332d33306174332e31352e3330504d2e706e67"
+                  />
+                </p>
+                <p>
+                  The first thing to notice is that the post has a short but
+                  descriptive title that adequately summarizes the question.
+                </p>
+                <blockquote>
+                  <p>Accessing the index in ‘for’ loops?</p>
+                </blockquote>
+                <p>
+                  Next, did the questioner provide any additional context or
+                  proof of the research they’ve done so far? It doesn’t look
+                  like it. They could improve the question by including what
+                  they tried and the resources they explored.
+                </p>
+                <p>
+                  The questioner did an excellent job of introducing the
+                  question and including code that shows what they are trying to
+                  do. In this case, they did not need to include experience vs.
+                  expected behavior; they just needed to have the expected
+                  behavior. By clearly stating what the desired result was, it
+                  helped the person answering to respond appropriately.
+                </p>
+                <p>
+                  The code they included is a minimal and complete example,
+                  allowing someone to reproduce the problem quickly. The
+                  questioner left out irrelevant details and code that would’ve
+                  distracted from the primary question. They also included an
+                  example of what the desired output would be, which is helpful.
+                </p>
+                <p>
+                  It appears the questioner proofread their question beforehand
+                  as it does not contain any glaring spelling, grammar, or
+                  formatting problems. However, we could critique this example
+                  for including a redundant sentence at the end. Instead of
+                  including that sentence, they might have rephrased the first
+                  sentence of the question to be more precise.
+                </p>
+                <h5>Challenge</h5>
+                <ol>
+                  <li>
+                    Choose a real-world example from a recent problem/challenge.
+                    Use the guidelines and process outlined above to ask for
+                    help in your cohort-specific help channel.
+                  </li>
+                  <li>
+                    Identify an unanswered question in your cohort-specific help
+                    channel. Do your best to provide a helpful response to that
+                    question.
+                  </li>
+                  <li>
+                    Find an example of a <strong>bad</strong> question on Stack
+                    Overflow. Analyze the question using the guidelines above
+                    and write a short response explaining <em>why</em> you
+                    believe it is a <strong>bad</strong> question.
+                  </li>
+                  <li>
+                    Find an example of a <strong>good</strong> question on Stack
+                    Overflow. Analyze the question using the guidelines above
+                    and write a short response explaining <em>why</em> you
+                    believe it is a <strong>good</strong> question.
+                  </li>
+                </ol>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://stackoverflow.com/help/how-to-ask"
+                      target="blank_"
+                      >Stack Overflow: How Do I Ask a Good Question?</a
+                    ><br />
+                  </li>
+                  <li>
+                    <a
+                      href="https://codeblog.jonskeet.uk/2010/08/29/writing-the-perfect-question/"
+                      target="blank_"
+                      >Writing the Perfect Question</a
+                    ><br />
+                  </li>
+                  <li>
+                    <a
+                      href="http://catb.org/esr/faqs/smart-questions.html"
+                      target="blank_"
+                      >How to Ask Questions the Smart Way</a
+                    ><br />
+                  </li>
+                  <li>
+                    <a
+                      href="https://ericlippert.com/2014/03/05/how-to-debug-small-programs/"
+                      target="blank_"
+                      >How to Debug Small Programs</a
+                    ><br />
+                  </li>
+                </ul>
+                <hr />
+                <h2 class="display-4">
+                  <a
+                    id="review"
+                    class="anchor"
+                    href="#review"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Review
+                </h2>
+                <h3 class="display-5">Class Recordings</h3>
+                <p class="lead">
+                  You can use class recordings to help you master the material.
+                </p>
+                <div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong
+                        ><a target="_blank" href="https://youtu.be/I-CBduH1q3E"
+                          >CSPT15 Problem Solving w/Tom Tarpey</a
+                        ></strong
+                      >
+                      <p>Lecture 10/29/2020</p>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="/archive/cs/module/recagU9ihCuMePtbx"
+                        >All previous recordings</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <h3 class="display-5">Demonstrate Mastery</h3>
+                <p>
+                  To demonstrate mastery of this module, you need to complete
+                  and pass a code review on each of the following:
+                </p>
+                <ul>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      For everyone to eat, there are some situations in which
+                      philosophers <em>should</em> pick up a chopstick and some
+                      cases in which they <em>should NOT</em> (because another
+                      philosopher needs to use it).
+                    </p>
+                    <p>
+                      Write a better solution to the dining philosophers problem
+                      so that deadlock does NOT occur.
+                    </p>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <ol>
+                      <li>
+                        Choose a real-world example from a recent
+                        problem/challenge. Use the guidelines and process
+                        outlined above to ask for help in your cohort-specific
+                        help channel.
+                      </li>
+                      <li>
+                        Identify an unanswered question in your cohort-specific
+                        help channel. Do your best to provide a helpful response
+                        to that question.
+                      </li>
+                      <li>
+                        Find an example of a <strong>bad</strong> question on
+                        Stack Overflow. Analyze the question using the
+                        guidelines above and write a short response explaining
+                        <em>why</em> you believe it is a
+                        <strong>bad</strong> question.
+                      </li>
+                      <li>
+                        Find an example of a <strong>good</strong> question on
+                        Stack Overflow. Analyze the question using the
+                        guidelines above and write a short response explaining
+                        <em>why</em> you believe it is a
+                        <strong>good</strong> question.
+                      </li>
+                    </ol>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
 
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/cs/sprint/reckLrPDHRpFN3a6p">
-1.&nbsp;&nbsp;Computer Science Fundamentals
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/cs/module/recHNgXTaBpnn052p/">
-Python Basics
-</a>
-</li>
-<li class="active bd-sidenav-active">
-<a href="/cs/module/recagU9ihCuMePtbx/">
-Problem Solving
-</a>
-</li>
-<li>
-<a href="/cs/module/recZ6g2C5xkxHmT16/">
-Time and Space Complexity
-</a>
-</li>
-<li>
-<a href="/cs/module/recy2QANAS6Blpc5o/">
-Computer Memory Basics
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/cs/sprint/recdbs5ZPBtMb6fou">
-2.&nbsp;&nbsp;Data Structures and Algorithms I
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/cs/module/recR43dkPzilEMXlE/">
-Array and String Manipulation
-</a>
-</li>
-<li>
-<a href="/cs/module/recQJcAAjpSTtNf8A/">
-Linked Lists
-</a>
-</li>
-<li>
-<a href="/cs/module/rec07JKgm7ltWrPYD/">
-Queues and Stacks
-</a>
-</li>
-<li>
-<a href="/cs/module/rec00Cf3TiBWiCONA/">
-Searching and Recursion
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
- <a class="bd-toc-link" href="/cs/sprint/recyC7E0YQc0qQgxa">
-3.&nbsp;&nbsp;Data Structures and Algorithms II
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/cs/module/recgJOPYUjvQaN2sa/">
-Binary Search Trees
-</a>
-</li>
-<li>
-<a href="/cs/module/recS3C67spna4M4HU/">
-Tree Traversal
-</a>
-</li>
-<li>
-<a href="/cs/module/recEPIaHFEriTuU2x/">
-Graphs I
-</a>
-</li>
-<li>
-<a href="/cs/module/recX4dkkIPeJ6JjX6/">
-Graphs II
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/cs/sprint/recsJW8CaZiKcyUZj">
-4.&nbsp;&nbsp;Data Structures and Algorithms III
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/cs/module/recLpJY4yFQcV3qeW/">
-Hash Tables I
-</a>
-</li>
-<li>
-<a href="/cs/module/recG6onEnlSOWziKO/">
-Hash Tables II
-</a>
-</li>
-<li>
-<a href="/cs/module/reczaVKTynSkqN8ZS/">
-Technical Interview Tips I
-</a>
-</li>
-<li>
-<a href="/cs/module/rec6kEjLri9SXMYdE/">
-Technical Interview Tips II
-</a>
-</li>
-</ul>
-</div>
-</nav>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="main-container">
-<div class="sidebar-container bd-sidebar">
-<div class="docs-sidebar">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
-<ul id="results-container" class="dropdown list-group"></ul>
-<nav class="bd-links collapse" id="bd-docs-nav">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Computer Science</h4>
-</div>
-
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/cs/sprint/reckLrPDHRpFN3a6p">
-1.&nbsp;&nbsp;Computer Science Fundamentals
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/cs/module/recHNgXTaBpnn052p/">
-Python Basics
-</a>
-</li>
-<li class="active bd-sidenav-active">
-<a href="/cs/module/recagU9ihCuMePtbx/">
-Problem Solving
-</a>
-</li>
-<li>
-<a href="/cs/module/recZ6g2C5xkxHmT16/">
-Time and Space Complexity
-</a>
-</li>
-<li>
-<a href="/cs/module/recy2QANAS6Blpc5o/">
-Computer Memory Basics
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/cs/sprint/recdbs5ZPBtMb6fou">
-2.&nbsp;&nbsp;Data Structures and Algorithms I
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/cs/module/recR43dkPzilEMXlE/">
-Array and String Manipulation
-</a>
-</li>
-<li>
-<a href="/cs/module/recQJcAAjpSTtNf8A/">
-Linked Lists
-</a>
-</li>
-<li>
-<a href="/cs/module/rec07JKgm7ltWrPYD/">
-Queues and Stacks
-</a>
-</li>
-<li>
-<a href="/cs/module/rec00Cf3TiBWiCONA/">
-Searching and Recursion
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/cs/sprint/recyC7E0YQc0qQgxa">
-3.&nbsp;&nbsp;Data Structures and Algorithms II
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/cs/module/recgJOPYUjvQaN2sa/">
-Binary Search Trees
-</a>
-</li>
-<li>
-<a href="/cs/module/recS3C67spna4M4HU/">
-Tree Traversal
-</a>
-</li>
-<li>
-<a href="/cs/module/recEPIaHFEriTuU2x/">
-Graphs I
-</a>
-</li>
-<li>
-<a href="/cs/module/recX4dkkIPeJ6JjX6/">
-Graphs II
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/cs/sprint/recsJW8CaZiKcyUZj">
-4.&nbsp;&nbsp;Data Structures and Algorithms III
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/cs/module/recLpJY4yFQcV3qeW/">
-Hash Tables I
-</a>
-</li>
-<li>
-<a href="/cs/module/recG6onEnlSOWziKO/">
-Hash Tables II
-</a>
-</li>
-<li>
-<a href="/cs/module/reczaVKTynSkqN8ZS/">
-Technical Interview Tips I
-</a>
-</li>
-<li>
-<a href="/cs/module/rec6kEjLri9SXMYdE/">
-Technical Interview Tips II
-</a>
-</li>
-</ul>
-</div>
-</nav>
-</div>
-</div>
-<main class="content-container flex-wrapper" role="main">
-<div class="sticky-nav">
-<div class="sprint-nav">
-<ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
-<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
-<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
-</ul>
-</div>
-
-</div>
-<div class="wrapper limit-width">
-<div class="flex-wrapper">
-<div class="limit-width">
-<div class="jumbotron">
-<h1 class="bd-title" id="content">Problem Solving</h1>
-<span class="lead">
-<p class="bd-lead"></p>
-</span>
-<strong>At the end of this module, you should be able to:</strong>
-<ul>
-<li>name and describe the details of each step of Lambda's Problem-Solving Framework (U.P.E.R)</li>
-<li>effectively ask for help by giving the expected vs. experienced behavior, explaining what specific actions they've taken so far, and providing all relevant information and code</li>
-</ul>
-</div>
-<div class="alert alert-warning" role="alert">
-<h4>Pro Tip</h4>
-<p>No problem can withstand the assault of sustained thinking.</p>
-<footer class="blockquote-footer"><p>Voltaire</p>
-</footer>
-
-</div>
-<h2 class="display-4">
-<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
-<p class="lead">Review each preclass resource before class.</p>
-<div class="preclass">
-<ul class="list-group list-group-flush">
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/16Rja_aziWU" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/yVygkK2mTIY" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-</ul>
-</div>
-<h2 class="display-4">
-<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
-<h4 class="mark mb-3 p-2">Learn to name and describe the details of each step of Lambda's Problem-Solving Framework (U.P.E.R)</h4>
-<h5>Overview</h5>
-<p>Many times, both as you are working through the Computer Science curriculum and when you are on the job, you will find yourself faced with large, challenging problems. There are strategies we can use to break these problems down into more manageable pieces.</p>
-<blockquote>
-<p>“The single most important skill for a computer scientist is problem-solving. Problem-solving means the ability to formulate problems, think creatively about solutions, and express a solution clearly and accurately. As it turns out, the process of learning to program is an excellent opportunity to practice problem-solving skills.” Think Python, 2nd Edition, by Allen B. Downey (O’Reilly). Copyright 2016 Allen Downey, 978-1-4919-3936-9.</p>
-</blockquote>
-<p>Every problem, large or small, can be broken into smaller chunks. Logically, if you can take a seemingly unsolvable problem and break it into smaller, more manageable chunks, once you’ve finished solving each piece of the problem, you’ll have conquered the whole thing!</p>
-<p>Throughout the Computer Science curriculum, we will reference and draw from the Lambda Problem Solving Framework, sometimes referred to as <strong>UPER</strong>. This framework is a step-by-step process:</p>
-<ol>
-<li>
-<strong>U</strong>nderstand</li>
-<li>
-<strong>P</strong>lan</li>
-<li>
-<strong>E</strong>xecute</li>
-<li>
-<strong>R</strong>eflect</li>
-</ol>
-<p>Almost all problems are a series of sub-problems. You will use the steps of <strong>U.P.E.R</strong> on the primary outer problem and the inner, individual sub-problems.</p>
-<h3 id="1-understand"><strong>1. Understand</strong></h3>
-<p>Before doing anything else, make sure you understand precisely what the problem is asking. A helpful starting point could be transcribing the technical description of the problem into your own words.</p>
-<h4 id="questions"><strong>Questions</strong></h4>
-<p>Here is a list of starter questions that might come up during this step:</p>
-<ul>
-<li>
-<em>What are the inputs your code receives?</em>
-<ul>
-<li><em>What is the range of the input?</em></li>
-<li><em>How big can the input be (how much data)?</em></li>
-</ul>
-</li>
-<li>
-<em>What are the outputs your code produces?</em>
-<ul>
-<li><em>What is the range of the output?</em></li>
-<li><em>How big can the output be (how much data)?</em></li>
-</ul>
-</li>
-<li><em>How performant must the code be?</em></li>
-<li><em>Is there anything missing from the task description that needs to be clarified?</em></li>
- <li>
-<em>What assumptions are you making?</em>
-<ul>
-<li><em>Does anyone else on the team need to validate these assumptions?</em></li>
-</ul>
-</li>
-</ul>
-<h4 id="actions"><strong>Actions</strong></h4>
-<p>The most important thing you can <strong>do</strong> during this stage of the process is to <strong>ask questions</strong>! Be as specific as you can when you ask questions. Be clear and concise with your questions by using unambiguous language and only including necessary details.</p>
-<p>Don’t be afraid of this part of the process—enjoy it! Look at the problem as a curiosity to be explored, not just something there to torment you. Feeling frustrated and afraid won’t help you at work or in an interview. Remember, problem-solving is the fun part, so enjoy it!</p>
-<p>One approach is to identify the smaller components that make up the larger problem. If you get stuck in understanding, break the larger problem into smaller sub-problems. Then, apply this framework against each of the smaller sub-problems until you solve the larger problem.</p>
-<p>Try to digest the problem and comprehend it by rewriting the problem in your own words. If you had to describe it to someone else, how would you do it?</p>
-<p>Diagram how the data flows through the problem. Think about each stage of the journey for the data. What will happen to it as it travels from one step to another?</p>
-<p>Think like a villain. What inputs would break your program?</p>
-<p>Where is the description of the problem incomplete? If you cannot get answers on something that the specifications leave unclear, make an educated guess, and document your assumptions and decision.</p>
-<p>You are done with this step when you can explain this problem to someone who has never seen it. Your explanation should be thorough enough for the person to skip the “Understand” step and start planning right away.</p>
-<h3 id="2-plan"><strong>2. Plan</strong></h3>
-<p>This step is where you will ask, “<em>what steps will I take to solve the problem</em>?” You will take your description of the problem and transform it into a complete, actionable plan to solve that problem. If you realize you still don’t truly understand the problem while planning, return to <strong>Understand</strong> until you resolve the ambiguity. If you have not yet completed <strong>Understand</strong>, you will end up planning to solve the wrong problem! When interviewing, you must do this step aloud!</p>
-<p>Remember, you aren’t coding during this step unless it’s a small piece of throwaway code to test a hypothesis. It would be best if you wrote pseudocode during this step, however.</p>
-<h4 id="questions-1"><strong>Questions</strong></h4>
-<ul>
-<li>
-<em>Do you know the answer to a similar problem that has comparable inputs and outputs?</em>
-<ul>
-<li><em>Does this problem remind you an anything else?</em></li>
-<li><em>Can you bring that knowledge to bear here?</em></li>
-</ul>
-</li>
-<li>
-<em>Does my plan meet the performance requirements?</em>
-<ul>
-<li><em>What’s the time complexity?</em></li>
-<li><em>What’s the space complexity?</em></li>
-<li><em>How big can my input data be?</em></li>
-</ul>
-</li>
-<li>
-<em>Can sorting the input data ahead of time lead to any improvements in time complexity?</em>
-<ul>
-<li><em>Does recursion help?</em></li>
-<li><em>Is the problem made up of identical subproblems?</em></li>
-<li><em>Can you state the problem with itself in its definition?</em></li>
-</ul>
-</li>
-<li><em>Think like a villain. Does your plan cover the edge cases?</em></li>
-</ul>
-<h4 id="actions-1"><strong>Actions</strong></h4>
-<p>Solve the problem like a human. If you’re sorting something, imagine your task as a pile of blocks that you need to sort by hand. Break down the steps you take into small enough pieces for a computer to understand. Approach the problem from many angles.</p>
-<p>Get a brute-force solution as quickly as possible. Even if it’s not performant enough, it can lead you toward better solutions.</p>
-<p>Come up with as many plans of attack as you can. Choose the best one that satisfies performance needs.</p>
-<p>Try to solve a simpler version of the problem. If the input is a 2D array, can you solve it for a 1D array? If you need to count the number of ways to eat cookies 1, 2, or 3 at a time, first try to solve it for the number of ways you could eat two at a time, or even one at a time. The solution to the more straightforward problem can lead to insights on the more complex problem.</p>
-<p>List the nouns and verbs in the problem description. Map each one to an algorithm, process, data structure, object, method, function, etc.</p>
-<p>“Perfect” can be the enemy of “good.” Even if your initial workable solution isn’t performant enough, you can iterate later. “Premature optimization is the root of all evil.”</p>
-<p>You know that you completed this step when you have pseudocode that’s detailed enough to convert to real code. It would be best if you also were convinced the pseudocode represents a legitimate working solution.</p>
-<h3 id="3-execute"><strong>3. Execute</strong></h3>
-<p>This step is where you take your plan and convert it to actual working code. This step isn’t easy, but it’s much easier if you’ve done an excellent job with the “Understand” and “Plan” steps above. If you find shortcomings in your plan while implementing the solution, return to the “Plan” phase until you resolve the ambiguity. If you have not yet completed the “Plan” step, you will spend far longer on the “Execute” step than you have to.</p>
-<h4 id="questions-2"><strong>Questions</strong></h4>
-<ul>
-<li><em>Think like a villain. Does your implementation handle all inputs?</em></li>
-<li><em>What is the best way to split this code into separate functions or classes?</em></li>
-<li>
-<em>Does this functionality already exist?</em>
-<ul>
-<li><em>Are there built-in libraries I can leverage?</em></li>
-<li><em>Are there third-party libraries I can leverage?</em></li>
-</ul>
-</li>
-</ul>
-<h4 id="actions-2"><strong>Actions</strong></h4>
-<p>Convert your pseudocode and outlines into actual code. Don’t Repeat Yourself (DRY): Remove redundant code as you write it.</p>
-<p>Document code as you write it. Header blocks should contain information on how someone should use the code. Comment only when necessary; where possible, write code clearly enough that comments aren’t needed. If comments help clarify or summarize a piece of code to a reader, definitely add comments.</p>
-<p>If you write code that’s hackish or kludgy, fix it. If you don’t have time to fix it, comment it, explain why you couldn’t do it “the right way” (time constraints, etc.), and what you need to do to make it right.</p>
-<p>You know this step is complete when your solution works on good data, it doesn’t fail on flawed data or edge cases, and the program passes all of the tests.</p>
-<h3 id="4-reflect"><strong>4. Reflect</strong></h3>
-<p>The primary question you are dealing with during this step is — “is this implementation as good as I can make it?” Would I be proud to show my code to another programmer?</p>
-<h4 id="questions-3"><strong>Questions</strong></h4>
-<ul>
-<li>
-<em>Does your solution work in all cases?</em>
-<ul>
-<li><em>Main case?</em></li>
-<li><em>Edge cases?</em></li>
-</ul>
-</li>
-<li><em>Is the solution performant enough?</em></li>
-<li><em>Is the code documented?</em></li>
-<li>
-<em>In retrospect, what would you do differently? What will you do differently next time?</em>
-<ul>
-<li><em>What went right?</em></li>
-<li><em>What went wrong?</em></li>
-</ul>
-</li>
-</ul>
-<h4 id="actions-3"><strong>Actions</strong></h4>
-<p>Adding documentation is a necessary action during this step. It would be best if you documented any future changes you plan on making. You should document any code sections that you will need to make more performant if the data size increases.</p>
-<p>Another critical action to take during this step is to remove any redundant or unnecessary code. Also, depending on your time constraints, it’s likely that you might have some hackish code that you’d like to improve in the future when time allows. Make sure to document any ideas or plans on how you might do so.</p>
-<p>You know that this step is complete when your code is adequately refactored and exhaustively documented.</p>
-<h5>Follow Along</h5>
-<p>Let’s use the <em><a href="https://en.wikipedia.org/wiki/Dining_philosophers_problem">dining philosophers problem</a></em> as an example problem to use our Problem Solving Framework on. Here’s a short description of the problem:</p>
-<blockquote>
-<p>Five silent philosophers sit at a round table with bowls of noodles. One chopstick is placed between each pair of adjacent philosophers.</p>
-<p>Each philosopher must alternately think and eat. However, a philosopher can only eat noodles when they have both left and right chopsticks. Each chopstick can be held by only one philosopher and so a philosopher can use the chopstick only if it is not being used by another philosopher. After an individual philosopher finishes eating, they need to put down both chopsticks so that the chopsticks become available to others. A philosopher can take the chopstick on their right or the one on their left as they become available, but cannot start eating before getting both chopsticks.</p>
-<p>Eating is not limited by the remaining amounts of noodles or stomach space; an infinite supply and an infinite demand are assumed.</p>
-<p>The problem is how to design a discipline of behavior (a concurrent algorithm) such that no philosopher will starve; i.e. each can forever continue to alternate between eating and thinking, assuming that no philosopher can know when others may want to eat or think.</p>
-</blockquote>
-<h3 id="1-understand"><strong>1. Understand</strong></h3>
-<p>On the surface, this seems like a straightforward problem — however, some approaches will lead to problematic results.</p>
-<p>Here are some critical pieces of information from the question we should highlight:</p>
-<ul>
-<li>there are <strong>5</strong> philosophers</li>
-<li>there are <strong>2 states</strong> (eating, thinking)</li>
-<li>there is precisely 1 chopstick in between each pair of philosophers (5 total)</li>
-<li>BOTH chopsticks are required to transition from thinking to eating</li>
-</ul>
-<p>Some essential questions to ask here include <em>“When should philosophers pick up a chopstick?”</em> and <em>“When should philosophers put down a chopstick?”</em></p>
-<p>Remember that you want to establish if there are any restrictions or limitations you need to consider before you work on a solution.</p>
-<h3 id="2-plan"><strong>2. Plan</strong></h3>
-<p>Let’s create a solution written as a set of rules that defines how philosophers should interact with chopsticks in a manner that will allow them to transition between <em>eating</em> and <em>thinking</em>.</p>
-<ol>
-<li>philosopher is eating (2 chopsticks)</li>
-<li>philosopher finishes eating and sets down chopsticks</li>
-<li>philosopher is thinking (0 chopsticks)</li>
-<li>philosopher sees his/her neighbor set down chopsticks &amp; picks them up</li>
-<li>repeat steps 1-4</li>
-</ol>
-<h3 id="3-execute"><strong>3. Execute</strong></h3>
-<p>We could break down the general plan above into a few specific rules.</p>
-<ul>
-<li>eat for a set amount of time once they are holding both chopsticks</li>
-<li>put down the right chopstick</li>
-<li>put down the left chopstick</li>
-<li>pick up the left chopstick as soon as it becomes available</li>
-<li>pick up the right chopstick as soon as it becomes available</li>
-<li>repeat</li>
-</ul>
-<p>However, this solution will NOT always work.</p>
-<h3 id="4-reflect"><strong>4. Reflect</strong></h3>
-<p>The above solution has the potential to create a situation known in Computer Science as <strong>deadlock</strong>. A deadlock means that two processes are stuck in an eternal state of waiting. If neither has two chopsticks, they cannot eat. But they also won’t put down chopsticks they’re holding (because they haven’t eaten yet). We need to revise the rules about when philosophers should pick up / put down chopsticks to eliminate this possibility.</p>
-<h5>Challenge</h5>
-<p>For everyone to eat, there are some situations in which philosophers <em>should</em> pick up a chopstick and some cases in which they <em>should NOT</em> (because another philosopher needs to use it).</p>
-<p>Write a better solution to the dining philosophers problem so that deadlock does NOT occur.</p>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://www.interviewcake.com/tricks-for-getting-unstuck-programming-interview?course=fc1&amp;section=interview-tips" target="blank_">https://www.interviewcake.com/tricks-for-getting-unstuck-programming-interview?course=fc1&amp;section=interview-tips</a><br> </li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to effectively ask for help by giving the expected vs. experienced behavior, explaining what specific actions they've taken so far, and providing all relevant information and code</h4>
-<h5>Overview</h5>
-<p>The necessary action when asking a question is to imagine that you are trying to answer your question. Because you are deep in your problem’s weeds, it’s easy to forget that the person who answers your question does not have all the context. We should keep this general rule in mind — it’s the overarching rule for all the details we go into next.</p>
-<h3 id="search-and-research">Search and Research</h3>
-<p>Before you do anything else, search for a solution to your problem on your own. One thing you should start doing is keeping track of all your research when solving a problem. One easy way to do this is to have a browser window represent a specific search for a solution, and each open tab represents an attempt at solving it. Keeping track of your research is vital because it’s helpful to provide examples of similar questions or similar problems and explain why those didn’t answer your specific problem or question. It also helps the person answering your question avoid pointing you toward resources you’ve already explored, and lets them know that you’ve already put in the work.</p>
-<h3 id="introduce-the-problem">Introduce the Problem</h3>
-<p>The first thing you do when you ask a question￼￼￼￼ is to introduce the problem. The first paragraph of your written question should serve as an executive summary of the problem. All the following paragraphs should fill in the details of the problem.</p>
-<p>An important thing to include in your problem introduction is a precise explanation of how you encountered the problem. Write about the difficulties that kept you from solving it. Describe what you already tried and include the results of the research you’ve done.</p>
-<p>You should also provide as much detail about the context as possible. For instance, include the language version, the platform version, the operating system, the database type, specific IDE, and any web server information. You should also include your particular constraints. For example, you may not be allowed to use feature A or B that would provide an obvious solution. If you have an odd constraint, it may also help explain why you have that constraint.</p>
-<h3 id="help-others-reproduce-the-problem">Help Others Reproduce the Problem</h3>
-<p>One thing to remember is that not all questions benefit from including code. However, if you include code, definitely do not just copy in your entire program! By having irrelevant details, you make your question much harder to answer and decrease the chances of someone helping you.</p>
-<p>Here are some guidelines for when to include code in your question.</p>
-<h3 id="minimal"><strong>Minimal</strong></h3>
-<p>Include just enough code to allow others to reproduce your specific problem.￼￼ One way to do this is to restart from scratch. Do not include snippets of your entire program. Instead, create a new program, but only add what’s necessary to recreate the problem.</p>
-<p>If you aren’t exactly sure where the problem code is, one way to find it is by removing code chunks one at a time until the problem disappears — then add back the last part. This way, you can deduce that the last piece of code you added back is likely the source of your problem.</p>
-<p>Be careful not to remove too much code, either. Keep your question brief, but maintain enough context for clarity.</p>
-<h3 id="complete">Complete</h3>
-<p>Make sure you include all the portions of the code needed to reproduce the problem. It would be best if you assumed that the person who is answering your question would not write any code to reproduce your issue. Again, remember, do not use images of code—those trying to help you need direct access to the code you include in your question.</p>
-<h3 id="reproducible">Reproducible</h3>
-<p>When you include your code, it’s also important to tell the reader exactly what you expect the behavior to be. Be sure to show the reader the exact wording of the error message you encountered (if there was one). It’s also crucial to double-check that your included example reproduces the problem.</p>
-<p>One other thing you can do is create a live example on a site like sqlfiddle.com or jsbin.com. If you do, make sure you also include a copy of your code in your question. Not everyone will utilize the link to the live example.</p>
-<p>And to reiterate, do not post images of any code, data, or error messages—reserve images for things like rendering bugs—things that are impossible to describe accurately with just text.</p>
-<h3 id="proofread">Proofread</h3>
-<p>Don’t send a question you haven’t proofread. When you post your question, you should have already read and reread it, taking care to follow all the best practices and making sure your question makes sense. It would be best if you imagined that you’re coming to your question fresh, with no other context but the question itself. You want to make your question as easy for someone to answer as possible. Remember, the reader is likely choosing between several questions they could answer. You want your question to stand out as something concise and approachable. Don’t forget to double-check your spelling, grammar, and formatting. Keep it as straightforward as you can; you’re not writing a novel.</p>
-<h3 id="respond-to-feedback">Respond to Feedback</h3>
-<p>As feedback and responses to your question begin coming in, respond as quickly as possible. You’ll likely receive clarifying questions, and your readers need that clarification to help you.</p>
-<h5>Follow Along</h5>
-<p>Now let’s look at an example of a question posted to Stack Overflow and analyze it to see if it follows the best practices outlined above.</p>
-<p><a href="https://stackoverflow.com/questions/522563/accessing-the-index-in-for-loops">The question</a>:</p>
-<p><img src="https://camo.githubusercontent.com/9be35d94fd27e59fc716b00942c22b5b3438a99a/68747470733a2f2f746b2d6173736574732e6c616d6264617363686f6f6c2e636f6d2f64383031393630662d626530662d346633362d383634612d3564626666616435306631635f53637265656e53686f74323032302d30332d33306174332e31352e3330504d2e706e67" alt="https://camo.githubusercontent.com/9be35d94fd27e59fc716b00942c22b5b3438a99a/68747470733a2f2f746b2d6173736574732e6c616d6264617363686f6f6c2e636f6d2f64383031393630662d626530662d346633362d383634612d3564626666616435306631635f53637265656e53686f74323032302d30332d33306174332e31352e3330504d2e706e67"></p>
-<p>The first thing to notice is that the post has a short but descriptive title that adequately summarizes the question.</p>
-<blockquote>
-<p>Accessing the index in ‘for’ loops?</p>
-</blockquote>
-<p>Next, did the questioner provide any additional context or proof of the research they’ve done so far? It doesn’t look like it. They could improve the question by including what they tried and the resources they explored.</p>
-<p>The questioner did an excellent job of introducing the question and including code that shows what they are trying to do. In this case, they did not need to include experience vs. expected behavior; they just needed to have the expected behavior. By clearly stating what the desired result was, it helped the person answering to respond appropriately.</p>
-<p>The code they included is a minimal and complete example, allowing someone to reproduce the problem quickly. The questioner left out irrelevant details and code that would’ve distracted from the primary question. They also included an example of what the desired output would be, which is helpful.</p>
-<p>It appears the questioner proofread their question beforehand as it does not contain any glaring spelling, grammar, or formatting problems. However, we could critique this example for including a redundant sentence at the end. Instead of including that sentence, they might have rephrased the first sentence of the question to be more precise.</p>
-<h5>Challenge</h5>
-<ol>
-<li>Choose a real-world example from a recent problem/challenge. Use the guidelines and process outlined above to ask for help in your cohort-specific help channel.</li>
-<li>Identify an unanswered question in your cohort-specific help channel. Do your best to provide a helpful response to that question.</li>
-<li>Find an example of a <strong>bad</strong> question on Stack Overflow. Analyze the question using the guidelines above and write a short response explaining <em>why</em> you believe it is a <strong>bad</strong> question.</li>
-<li>Find an example of a <strong>good</strong> question on Stack Overflow. Analyze the question using the guidelines above and write a short response explaining <em>why</em> you believe it is a <strong>good</strong> question.</li>
-</ol>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://stackoverflow.com/help/how-to-ask" target="blank_">Stack Overflow: How Do I Ask a Good Question?</a><br> </li>
-<li>
-<a href="https://codeblog.jonskeet.uk/2010/08/29/writing-the-perfect-question/" target="blank_">Writing the Perfect Question</a><br> </li>
-<li>
-<a href="http://catb.org/esr/faqs/smart-questions.html" target="blank_">How to Ask Questions the Smart Way</a><br> </li>
-<li>
-<a href="https://ericlippert.com/2014/03/05/how-to-debug-small-programs/" target="blank_">How to Debug Small Programs</a><br> </li>
-</ul>
-<hr>
-<h2 class="display-4">
-<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
-<h3 class="display-5">Class Recordings</h3>
-<p class="lead">You can use class recordings to help you master the material.</p>
-<div>
-<ul class="list-group list-group-flush">
-<li class="list-group-item">
-<strong><a target="_blank" href="https://youtu.be/I-CBduH1q3E">CSPT15 Problem Solving w/Tom Tarpey</a></strong>
-<p>Lecture 10/29/2020</p>
-</li>
-<li class="list-group-item">
-<a href="/archive/cs/module/recagU9ihCuMePtbx">All previous recordings</a>
-</li>
-</ul>
-</div>
-<h3 class="display-5">Demonstrate Mastery</h3>
-<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
-<ul>
-<li>Objective challenge: <p>For everyone to eat, there are some situations in which philosophers <em>should</em> pick up a chopstick and some cases in which they <em>should NOT</em> (because another philosopher needs to use it).</p>
-<p>Write a better solution to the dining philosophers problem so that deadlock does NOT occur.</p>
-</li>
-<li>Objective challenge: <ol>
-<li>Choose a real-world example from a recent problem/challenge. Use the guidelines and process outlined above to ask for help in your cohort-specific help channel.</li>
-<li>Identify an unanswered question in your cohort-specific help channel. Do your best to provide a helpful response to that question.</li>
-<li>Find an example of a <strong>bad</strong> question on Stack Overflow. Analyze the question using the guidelines above and write a short response explaining <em>why</em> you believe it is a <strong>bad</strong> question.</li>
-<li>Find an example of a <strong>good</strong> question on Stack Overflow. Analyze the question using the guidelines above and write a short response explaining <em>why</em> you believe it is a <strong>good</strong> question.</li>
-</ol>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</main>
-</div>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'UA-80850900-4');
-</script>
-<script type="text/javascript">
-  function getDomain() {
-    const domainName = window.location.hostname.split('.')[1];
-    return `${domainName}.com`;
-  }
-</script>
-<script src="" integrity="" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
-<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
-<script type="text/javascript">
-  SimpleJekyllSearch.init({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    dataSource: '/search.json',
-    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Problem Solving">{title}</a></li>',
-    noResultsText: '',
-    limit: 10,
-    fuzzy: true,
-  })
-</script>
-<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
-  if (window.attachEvent) {
-    window.attachEvent('onload', verifySignedIn);
-  } else {
-    if (window.onload) {
-      var currentOnLoadFn = window.onload;
-      var newOnLoadFn = function (evt) {
-        currentOnLoadFn(evt);
-        verifySignedIn();
-      };
-      window.onload = newOnLoadFn;
-    } else {
-      window.onload = verifySignedIn;
-    }
-  }
-
-  function verifySignedIn() {
-    if (isPagePublic()) {
-      return showPageContents();
-    }
-
-    window.__user = null;
-    isSignedIn().then((user) => {
-      window.__user = user;
-
-      if (!user.signedIn) {
-        redirectToSignIn();
-      } else if (!user.student && !window.__openToAdmissions) {
-        showUnauthorizedMessage();
-      } else {
-        showPageContents();
-      }
-    });
-  }
-
-  function isPagePublic() {
-    const openCourses = [
-      'and-pre',
-      'ds-pre',
-      'fsw-pre',
-      'help',
-      'ios-pre',
-    ];
-
-    const openPages = [
-      'cs-and',
-      'cs-fsw',
-      'cs-ios',
-      'cr',
-      'ds',
-      'jx',
-      'p4s',
-      'ux',
-    ];
-
-    const pathParts = window.location.pathname.split('/');
-    const courseName = pathParts[1];
-    const pageName = pathParts[pathParts.length - 1];
-
-    return openCourses.includes(courseName) || openPages.includes(pageName);
-  }
-
-  function isSignedIn() {
-    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
-
-    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
-
-    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
-      .then((response) => response.text())
-      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
-      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
-      .catch((error) => {});
-  }
-
-  function redirectToSignIn() {
-    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
-    const redirectMessage = document.querySelector('#redirect-message');
-    redirectMessage.style.display = "block";
-    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
-    window.location = signInUrl;
-  }
-
-  function showPageContents() {
-    document.querySelector('#content-wrapper').style.visibility = 'visible';
-  }
-
-  function showUnauthorizedMessage() {
-    document.querySelector('#unauthorized-message').style.display = 'block';
-  }
-
-  function getAuthBaseUrl() {
-    const domain = getDomain();
-    const authBaseUrl = `https://auth.${domain}`;
-    return authBaseUrl;
-  }
-</script><script src="/assets/js/docs.min.js"></script><script>
-  var MathJax = {
-    tex: {
-      inlineMath: [['$$', '$$'], ['\[', '\])']]
-    },
-    "HTML-CSS": {
-      styles: {
-        ".MathJax span": {
-          color: "#000000"
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
         }
-      }
-    }
-  }
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<script>
-  handleExternalLinks();
+        gtag("js", new Date());
 
-  function handleExternalLinks() {
-    const domain = getDomain();
-    const links = document.querySelectorAll('a');
-    return links.forEach((link) => {
-      if (!link.host.includes(domain)) link.target = '_blank';
-    })
-  };
-</script>
-</div>
-</body>
+        gtag("config", "UA-80850900-4");
+      </script>
+      <script type="text/javascript">
+        function getDomain() {
+          const domainName = window.location.hostname.split(".")[1];
+          return `${domainName}.com`;
+        }
+      </script>
+      <script src="" integrity="" crossorigin="anonymous"></script>
+      <script>
+        window.jQuery ||
+          document.write(
+            '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>'
+          );
+      </script>
+      <script
+        src="/assets/js/vendor/popper.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="/dist/js/bootstrap.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script src="/assets/js/activate.js"></script>
+      <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        SimpleJekyllSearch.init({
+          searchInput: document.getElementById("search-input"),
+          resultsContainer: document.getElementById("results-container"),
+          dataSource: "/search.json",
+          searchResultTemplate:
+            '<li class="list-group-item"><a href="{url}" title="Problem Solving">{title}</a></li>',
+          noResultsText: "",
+          limit: 10,
+          fuzzy: true,
+        });
+      </script>
+      <script src="/assets/js/mermaid.min.js"></script>
+      <script type="text/javascript">
+        if (window.attachEvent) {
+          window.attachEvent("onload", verifySignedIn);
+        } else {
+          if (window.onload) {
+            var currentOnLoadFn = window.onload;
+            var newOnLoadFn = function (evt) {
+              currentOnLoadFn(evt);
+              verifySignedIn();
+            };
+            window.onload = newOnLoadFn;
+          } else {
+            window.onload = verifySignedIn;
+          }
+        }
+
+        function verifySignedIn() {
+          if (isPagePublic()) {
+            return showPageContents();
+          }
+
+          window.__user = null;
+          isSignedIn().then((user) => {
+            window.__user = user;
+
+            if (!user.signedIn) {
+              redirectToSignIn();
+            } else if (!user.student && !window.__openToAdmissions) {
+              showUnauthorizedMessage();
+            } else {
+              showPageContents();
+            }
+          });
+        }
+
+        function isPagePublic() {
+          const openCourses = [
+            "and-pre",
+            "ds-pre",
+            "fsw-pre",
+            "help",
+            "ios-pre",
+          ];
+
+          const openPages = [
+            "cs-and",
+            "cs-fsw",
+            "cs-ios",
+            "cr",
+            "ds",
+            "jx",
+            "p4s",
+            "ux",
+          ];
+
+          const pathParts = window.location.pathname.split("/");
+          const courseName = pathParts[1];
+          const pageName = pathParts[pathParts.length - 1];
+
+          return (
+            openCourses.includes(courseName) || openPages.includes(pageName)
+          );
+        }
+
+        function isSignedIn() {
+          const isDeployPreview =
+            window.location.hostname.startsWith("deploy-preview") &&
+            window.location.hostname.endsWith("netlify.com");
+
+          if (isDeployPreview)
+            return Promise.resolve({ signedIn: true, student: true });
+
+          return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: "include" })
+            .then((response) => response.text())
+            .then((userAsText) => (userAsText ? JSON.parse(userAsText) : null))
+            .then((userData) => ({
+              signedIn: Boolean(userData),
+              student: Boolean(userData && userData.airtableId),
+              id: userData ? userData.id : null,
+              email: userData ? userData.email : null,
+            }))
+            .catch((error) => {});
+        }
+
+        function redirectToSignIn() {
+          const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(
+            window.location.href
+          )}&reason=auth_required`;
+          const redirectMessage = document.querySelector("#redirect-message");
+          redirectMessage.style.display = "block";
+          redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`;
+          window.location = signInUrl;
+        }
+
+        function showPageContents() {
+          document.querySelector("#content-wrapper").style.visibility =
+            "visible";
+        }
+
+        function showUnauthorizedMessage() {
+          document.querySelector("#unauthorized-message").style.display =
+            "block";
+        }
+
+        function getAuthBaseUrl() {
+          const domain = getDomain();
+          const authBaseUrl = `https://auth.${domain}`;
+          return authBaseUrl;
+        }
+      </script>
+      <script src="/assets/js/docs.min.js"></script>
+      <script>
+        var MathJax = {
+          tex: {
+            inlineMath: [
+              ["$$", "$$"],
+              ["\[", "\])"],
+            ],
+          },
+          "HTML-CSS": {
+            styles: {
+              ".MathJax span": {
+                color: "#000000",
+              },
+            },
+          },
+        };
+      </script>
+      <script
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+        type="text/javascript"
+      ></script>
+      <script>
+        handleExternalLinks();
+
+        function handleExternalLinks() {
+          const domain = getDomain();
+          const links = document.querySelectorAll("a");
+          return links.forEach((link) => {
+            if (!link.host.includes(domain)) link.target = "_blank";
+          });
+        }
+      </script>
+    </div>
+  </body>
 </html>

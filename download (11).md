@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Intro to JavaScript
 
@@ -73,12 +71,12 @@ JavaScript is the backbone of interactive web pages. This module will tackle bas
 
 **At the end of this module, you should be able to:**
 
--   understand what Javascript is and explain its use in web development
--   explain global object in JavaScript and be able to use the Math object
--   write control flow using if/else statements
--   write a basic for loop and while loop
--   understand JavaScript functions, why we use them, and be able to write correct function syntax
--   write and call functions using arguments, parameters and the return statement
+- understand what Javascript is and explain its use in web development
+- explain global object in JavaScript and be able to use the Math object
+- write control flow using if/else statements
+- write a basic for loop and while loop
+- understand JavaScript functions, why we use them, and be able to write correct function syntax
+- write and call functions using arguments, parameters and the return statement
 
 #### Pro Tip
 
@@ -88,41 +86,29 @@ If you are going to copy/paste text from an email, be sure to do so without form
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=LCXNKChpc1Y), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=LCXNKChpc1Y), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=OqcOOGYCh5Q), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=OqcOOGYCh5Q), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=_HzPrfu4vaE), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=UdgNsEdJg2g), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=_HzPrfu4vaE), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=_phdtwNAAIw), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=UdgNsEdJg2g), or enable JavaScript if it is disabled in your browser.
-
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=_phdtwNAAIw), or enable JavaScript if it is disabled in your browser.
-
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Gam0D-ythdE), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Gam0D-ythdE), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -150,7 +136,7 @@ For this class, we are going to use a special code sandbox program just like we 
 
 While this is one way to run your JavaScript, most JavaScript is run from a file with the extension of `.js` (e.g., `fileName.js`) and loaded into your browser via the `script` tag in your HTML.
 
-JavaScript, being the de-facto language of the Internet, can also be run directly within an Internet browser. In fact, you can write all of the JavaScript you want and watch it run in real-time right in your browser by pressing F12 (for Windows), or Cmd+option+J (for Mac) (for Google Chrome). This will open up your *console* (we will learn more about the console later).
+JavaScript, being the de-facto language of the Internet, can also be run directly within an Internet browser. In fact, you can write all of the JavaScript you want and watch it run in real-time right in your browser by pressing F12 (for Windows), or Cmd+option+J (for Mac) (for Google Chrome). This will open up your _console_ (we will learn more about the console later).
 
 ![console](https://i.imgur.com/Q1dilaw.gif)
 
@@ -358,7 +344,7 @@ Similarly, you might create a variable called `greet` and store the value “Hel
 
 The syntax to create a variable is first the keyword, a space, the name we are giving the variable, an equal sign, the value we are assigning the variable, and then a semicolon. (A note for those with previous programming knowledge: JavaScript is a loosely-typed language, which means that a variable can be set, and reset, to any type. We do not need to declare its type when creating the variable.)
 
-There are *three* keywords used to declare variables -`var`, `let`, and `const`. Each keyword comes with slightly different use cases, mostly based around what happens when you change the value of the variable. Some examples of syntax are below.
+There are _three_ keywords used to declare variables -`var`, `let`, and `const`. Each keyword comes with slightly different use cases, mostly based around what happens when you change the value of the variable. Some examples of syntax are below.
 
     var firstName = 'John';
     let lastName = 'Smith';
@@ -393,13 +379,13 @@ Enter `let`. `let` is a new ES6 variable keyword. This will assign a variable mu
 
 To recap:
 
--   `var` can be re-assigned and changed.
--   `let` can be re-assigned but not changed.
--   `const` cannot be re-assigned nor changed.
+- `var` can be re-assigned and changed.
+- `let` can be re-assigned but not changed.
+- `const` cannot be re-assigned nor changed.
 
 Because these three keywords achieve the same thing (storing data in memory and assigning that data a ‘key’ that can be used for access) but behave very differently, there are places in this world for all three. And of course, as with everything, there are some other intricacies to learn about the `let` `const` and `var` keywords that we didn’t cover here today.
 
-**Lambda School Rule of Thumb** When defining/declaring variables *use const until you can’t, then use let*.
+**Lambda School Rule of Thumb** When defining/declaring variables _use const until you can’t, then use let_.
 
 We **highly** recommend researching the differences between `var`, `let` and `const` in terms of their scoping rules as well. We’ll cover more on this later on when talking about function vs. block scoping. But for now, I’ll point you towards the **Dig Deeper** section’s link, **How let and const are scoped in JavaScript**, for some further understanding here.
 
@@ -657,10 +643,10 @@ It’s time to check your knowledge with a [Variables Challenge](https://codepen
 
 ##### Dig Deeper
 
--   [Variables - Lambda Video](https://www.youtube.com/watch?v=EOlgY__Ml0c)  
--   [How to Use Variables in JavaScript](https://wesbos.com/javascript-scoping/)  
+- [Variables - Lambda Video](https://www.youtube.com/watch?v=EOlgY__Ml0c)
+- [How to Use Variables in JavaScript](https://wesbos.com/javascript-scoping/)
 
-------------------------------------------------------------------------
+---
 
 #### Learn to explain global object in JavaScript and be able to use the Math object
 
@@ -693,7 +679,7 @@ JavaScript can preform any standard operations - addition (`+`), subtraction (`-
 
 ### %
 
-Something you may not have seen before is the *modulo operator* (%). This math operator will divide two numbers (integers or floats) and return only the remainder. For example, `10 / 3` is 3 with a remainder of 1, so `10 % 3` (read as ‘10 mod 3’) will return `1` .
+Something you may not have seen before is the _modulo operator_ (%). This math operator will divide two numbers (integers or floats) and return only the remainder. For example, `10 / 3` is 3 with a remainder of 1, so `10 % 3` (read as ‘10 mod 3’) will return `1` .
 
     21 % 5; // returns 1
     21 % 6; // returns 3
@@ -800,9 +786,9 @@ Similarly since 1 is equal to 1 and this statement is true, `!(1===1)` would ret
 
 A couple things to note about logical operators.
 
--   The expressions are evaluated in order, and the computer will skip any redundant expressions. In an `&&` statement, if the first expression is `false`, the second expression will not be evaluated because BOTH expressions need to be `true`. Same for the `||` statement. If the first expression is `true`, the second will not be evaluated because there only needs to be one `true` statement to fulfill the requirements of the operator.
+- The expressions are evaluated in order, and the computer will skip any redundant expressions. In an `&&` statement, if the first expression is `false`, the second expression will not be evaluated because BOTH expressions need to be `true`. Same for the `||` statement. If the first expression is `true`, the second will not be evaluated because there only needs to be one `true` statement to fulfill the requirements of the operator.
 
--   Use parentheses. As we saw in the second `!` operator example, we used parentheses to evaluate what was inside of the parentheses FIRST, then applied the `!` operator. We can wrap ANY expression in parentheses and it will be evaluated before evaluating the expression as a whole.
+- Use parentheses. As we saw in the second `!` operator example, we used parentheses to evaluate what was inside of the parentheses FIRST, then applied the `!` operator. We can wrap ANY expression in parentheses and it will be evaluated before evaluating the expression as a whole.
 
 ##### Follow Along
 
@@ -1050,7 +1036,7 @@ To make this application more useful, you could create a variable called `birthM
 
 Check your knowledge with a short [math challenge](https://codepen.io/lambdaschool/pen/xxbvoLx).
 
-------------------------------------------------------------------------
+---
 
 #### Learn to write control flow using if/else statements
 
@@ -1277,10 +1263,10 @@ To add on to `if`, we can also use the `else` and `else if` statements. These st
         console.log('This code will be run.'); // since 1 + 1 is equal to 2, this will be run
     } else if (1 - 1 === 0) {
         // 1 - 1 IS 0, however, the previous if statement was already true, so this will be skipped
-        console.log('This code will NOT be run.'); 
+        console.log('This code will NOT be run.');
     }
 
-The else statement will always come at the end of an if-else if chain, and will act as a default. If *none* of the expressions returned true, the else code block will be run no matter what. If any of the previous if or else if expressions are true, the else statement code block will not be run.
+The else statement will always come at the end of an if-else if chain, and will act as a default. If _none_ of the expressions returned true, the else code block will be run no matter what. If any of the previous if or else if expressions are true, the else statement code block will not be run.
 
     if (1 + 1 === 3) {
         console.log('This will be skipped!'); // since 1 + 1 is NOT 3, this will be skipped
@@ -1296,7 +1282,7 @@ You may be thinking to yourself, “Why not just use a bunch of different if sta
 
     const age = 21;
     if(age > 20) {
-        console.log('older than 20!'); 
+        console.log('older than 20!');
     } else if (age > 15){
         console.log('older than 15!');
     } else {
@@ -1518,7 +1504,7 @@ Let’s create an algorithm to flip a coin and `console.log()` “heads” or �
 
 First lets set up a variable called `coinFlip` and give it a randomly assigned `0` or `1` value. To do this we need to use two methods of the `Math` object - `Math.round()` and `Math.random()`. `Math.random()` generates a random number between 0 and 1, and `Math.round()` rounds that decimal to the nearest whole number.
 
-In the syntax below, Javascript *first* reads `Math.random()` and generates a random number, for example, 0.56324. Then it reads `Math.round()` and applies it to the random number, giving an integer, in this example, a `1`.
+In the syntax below, Javascript _first_ reads `Math.random()` and generates a random number, for example, 0.56324. Then it reads `Math.round()` and applies it to the random number, giving an integer, in this example, a `1`.
 
     var coinFlip = Math.round(Math.random());
 
@@ -1732,7 +1718,7 @@ Copyright © 2021 Replit, Inc. All rights reserved.
 
 Check your knowledge with the [conditionals challenge](https://codepen.io/lambdaschool/pen/bGNXPxK?editors=0010).
 
-------------------------------------------------------------------------
+---
 
 #### Learn to write a basic for loop and while loop
 
@@ -2399,7 +2385,7 @@ Copyright © 2021 Replit, Inc. All rights reserved.
 
 Check your knowledge with a short [loops challenge](https://codepen.io/lambdaschool/pen/BaNBBpN?editors=0012)
 
-------------------------------------------------------------------------
+---
 
 #### Learn to understand JavaScript functions, why we use them, and be able to write correct function syntax
 
@@ -2832,14 +2818,14 @@ JavaScript utilizes a two-pass compiler when executing lines of code that we wri
 
 Function declarations are defined in the first pass. The compiler is made aware of the function declaration and adds it to the top of the execution order for your code. This concept of putting a function higher in the execution order for later use is known as hoisting.
 
-What does this mean for you? It means that function declarations can be invoked *before* they are defined! Let’s take a look at an example:
+What does this mean for you? It means that function declarations can be invoked _before_ they are defined! Let’s take a look at an example:
 
     // This code is valid above the definition!
-    console.log(add(2,4)) // 6 
+    console.log(add(2,4)) // 6
 
-    function add(a,b){ 
+    function add(a,b){
      console.log(a + b);
-    } 
+    }
 
 This is odd behavior to developers new to JavaScript. It can be used as a feature or introduce bugs if not understood properly. Be aware that hoisting applies to function declarations and not function expressions or arrow functions.
 
@@ -2849,18 +2835,18 @@ Now that we have a better understanding of how basic function syntax works, we c
 
 Function expressions have unique differences when compared against function declarations:
 
--   A variable is used to store the function for later use
--   Anonymous functions are used
--   Function expressions are not hoisted. They can only be invoked after a definition has been placed in the execution stack.
+- A variable is used to store the function for later use
+- Anonymous functions are used
+- Function expressions are not hoisted. They can only be invoked after a definition has been placed in the execution stack.
 
 Example of a function expression:
 
     const add = function(a,b){
      console.log(a + b);
-    } 
+    }
     add(2,4) // 6
 
-Notice the function doesn’t actually have a name. This is what we refer to as an *anonymous function*. Because we are using a `const` named `add` we don’t need to name our function anything. We can simply execute the function when `add` is referenced by invocation.
+Notice the function doesn’t actually have a name. This is what we refer to as an _anonymous function_. Because we are using a `const` named `add` we don’t need to name our function anything. We can simply execute the function when `add` is referenced by invocation.
 
 Why do this and not use a function declaration? Because we have more control over our code now. We will discuss this in greater detail later on with scope and closure. For now, just know that arrow functions make code more concise.
 
@@ -2869,24 +2855,24 @@ Why do this and not use a function declaration? Because we have more control ove
 Arrow functions are fancy looking function expressions with a major feature removed, the `function` keyword. We won’t focus on why this is important right now, Instead, we will start getting used to seeing the syntax of what an arrow function looks like:
 
     // function expression syntax
-    // const add = function(a,b) { 
+    // const add = function(a,b) {
     //  console.log a + b;
-    // } 
+    // }
 
     // arrow function expression syntax
-    const add = (a,b) => { 
+    const add = (a,b) => {
      console.log(a + b);
-    } 
-    add(2,4) // 6 
+    }
+    add(2,4) // 6
 
 You will notice that we removed the `function` keyword in front of our parameters and then added a `=>` token behind the parameters. This is a pretty straightforward conversion!
 
 Syntactically, we didn’t remove much, we lost a few characters in the word `function` and gained a `=>`. However, there are many sub-rules for syntax with arrow functions. Those sub-rules can create extremely streamlined syntax. This line of code is a good example.
 
     // streamlined arrow syntax
-    const add = (a,b) => console.log(a + b); 
+    const add = (a,b) => console.log(a + b);
 
-    add(2,4); // 6 
+    add(2,4); // 6
 
 Wow, there are a lot of abstractions occurring there! We do not need our `{}` because they are redundant in the rules of arrow functions. You haven’t seen `return` statements yet, but they too, are not needed in arrow functions.
 
@@ -2898,10 +2884,10 @@ Often, developers will go too far with syntactical sugar, and the code becomes v
 
 There is a time and place for arrow functions. Here is a list of times you should not be using them:
 
--   Event handlers (Unless they are inside a class constructor!)
--   Object methods
--   Prototype methods
--   Anytime you need to use arguments Object
+- Event handlers (Unless they are inside a class constructor!)
+- Object methods
+- Prototype methods
+- Anytime you need to use arguments Object
 
 ##### Follow Along
 
@@ -3303,10 +3289,10 @@ Check your knowledge with the [functions challenge.](https://codepen.io/lambdasc
 
 ##### Dig Deeper
 
--   [Function Basics - Lambda Video]()  
-    https://www.youtube.com/watch?v=A3osW\_wRH0U
+- [Function Basics - Lambda Video]()  
+  https://www.youtube.com/watch?v=A3osW\_wRH0U
 
-------------------------------------------------------------------------
+---
 
 #### Learn to write and call functions using arguments, parameters and the return statement
 
@@ -3316,7 +3302,7 @@ Parameters and arguments allow us to pass data into functions and use this data 
 
 ### Passing Data into Functions
 
-Let’s return to our cookie example. Pretend that you want your robot to bake different *types* of cookies. Do you need to write a new function for every cookie? Not at all. Instead, you could add a parameter, or variable, called `recipe` and call `bakeCookies('pecan')` or `bakeCookies('chocolateChunk')`.
+Let’s return to our cookie example. Pretend that you want your robot to bake different _types_ of cookies. Do you need to write a new function for every cookie? Not at all. Instead, you could add a parameter, or variable, called `recipe` and call `bakeCookies('pecan')` or `bakeCookies('chocolateChunk')`.
 
 Parameters are how functions accept changing data. Consider the example below.
 
@@ -3327,13 +3313,13 @@ Parameters are how functions accept changing data. Consider the example below.
     add(2,2) // returns 4
     add(4,5) // returns 9
 
-We can declare variables called `parameters` (num1 and num2 in the example above) that represent data we will use when calling the function. This is similar to algebra. `X + Y = Z` would be a pretty meaningless equation, but once we substitute *real numbers* for `X` and `Y`, we can easily solve for `Z`. Here, `X` and `Y` are analogous to parameters, and the *real numbers* to `arguments`.
+We can declare variables called `parameters` (num1 and num2 in the example above) that represent data we will use when calling the function. This is similar to algebra. `X + Y = Z` would be a pretty meaningless equation, but once we substitute _real numbers_ for `X` and `Y`, we can easily solve for `Z`. Here, `X` and `Y` are analogous to parameters, and the _real numbers_ to `arguments`.
 
 We’ll dive into details about both parameters and arguments in this section, but the differences can be summarized as follows.
 
--   Function parameters are the names listed in the function’s definition.
--   Function arguments are the real values passed to the function.
--   Parameters are initialized to the values of the arguments supplied.
+- Function parameters are the names listed in the function’s definition.
+- Function arguments are the real values passed to the function.
+- Parameters are initialized to the values of the arguments supplied.
 
 #### Parameters
 
@@ -3558,7 +3544,7 @@ We encountered an error. Please tell us what happened by opening up the sidebar 
 
 Copyright © 2021 Replit, Inc. All rights reserved.
 
-**Check For Understanding:** Call `logsPerson` to return a greeting with your name, city, and favorite color *without* changing the function itself.
+**Check For Understanding:** Call `logsPerson` to return a greeting with your name, city, and favorite color _without_ changing the function itself.
 
 #### The `return` Statement
 
@@ -3577,7 +3563,7 @@ We can also assign the value of a return statement to another variable, and we w
     console.log(sum); // returns undefined - sum exists only inside the function
     console.log(newSum); // returns 3 - value is held in newSum
 
--   Note: We will never be able to have access to the actual variable created in the function. We will only have access to the data that variable was assigned to.
+- Note: We will never be able to have access to the actual variable created in the function. We will only have access to the data that variable was assigned to.
 
 <a href="/" class="jsx-4221082569 logo"><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgNjIyIDE4NyIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0ibG9nby1zdmciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnMgY2xhc3M9ImpzeC0zODc5NzQ2NjMwIj48L2RlZnM+PHBhdGggZD0iTTEzMy40NDUgODcuMDA5Yy4xODIgMi4wMDYuMzA3IDQuMDMuMzA3IDYuMDg0IDAtMi4wNTUtLjEyNS00LjA3Ny0uMzA3LTYuMDg0eiI+PC9wYXRoPjxwYXRoIGQ9Ik0zNS4xNTUgODYuNjU5cy0xOC40MjUgNjcuODg2IDU1LjQyNCA2OC40NzdjMjMuMTctOC42MjUgNDAuMjQ0LTI5Ljc3MiA0Mi44MzEtNTUuMjY3LjE3OS0xLjc2NC4yMzItMy41NjMuMjcyLTUuMzY1LjAwOC0uNDc0LjA3MS0uOTM0LjA3MS0xLjQxMiAwLTIuMDUyLS4xMjUtNC4wNzctLjMwNy02LjA4My0xOS41MTEgNzYuODA2LTEwNS44MjMgNDYuNzIyLTk4LjI5MS0uMzV6Ij48L3BhdGg+PHBhdGggZD0iTTczLjM0IDYxLjQ2UzQuNTgxIDQyLjI2IDUuNjM4IDExNy4yMzNhNjYuNDM1IDY2LjQzNSAwIDAwMTYuMDIzIDIzLjk1MWMuMjk2LjI4LjYwMi41NDQuOS44MTlhNjYuNDA3IDY2LjQwNyAwIDAwNi4yODMgNS4xMmMuMzQxLjI0NC42NjIuNTEzIDEuMDA0Ljc1MWE2Ni4wMzUgNjYuMDM1IDAgMDA3LjI1MyA0LjMwNmMuNzI5LjM3NSAxLjQ3Ny43MTggMi4yMTYgMS4wNjhhNjUuNTQ1IDY1LjU0NSAwIDAwNi42MjQgMi42ODhjLjU1NC4xODkgMS4wODMuNDI2IDEuNjQ0LjYwMWE2NS42NyA2NS42NyAwIDAwOC4yNDYgMS45NWMuODQzLjE0OCAxLjY5NS4yNzIgMi41NDkuMzkgMi44OTIuNDE3IDUuODA4LjY0NCA4LjczLjY3OC4xMTIgMCAuMjIuMDE3LjMzMi4wMTcgMi4yMDQgMCA0LjM4LS4xMTggNi41MjYtLjMyOS03Ny4xNDctMTguMzk4LTQ3LjgyNC0xMDQuNjY0LS42My05Ny43ODF6Ij48L3BhdGg+PHBhdGggZD0iTTEwMC4xNCA5Ny4wMTVzMTYuMjY3LTY4LjU4LTU2Ljk1Ny02NS41MTdDMTguNjI4IDQxLjE5NyAxLjI0NiA2NS4wODggMS4yNDYgOTMuMDg3Yy4wMjMgMy4wMTUuMjUgNi4wMjUuNjgxIDkuMDA5IDE1LjQxLTc3LjU5IDEwMy4yMDUtNTIuNDYxIDk4LjIxMy01LjA4eiI+PC9wYXRoPjxwYXRoIGQ9Ik02NC45ODEgMTI2LjUyOHM2OC44NzggOC45OTEgNjQuNTY2LTU2LjQ5NWMtOS4zNzQtMjUuMjA3LTMzLjU3OC00My4yLTYyLjA0OC00My4yYTY2LjUwNiA2Ni41MDYgMCAwMC0xMi4wMTUgMS4xNDJjNzYuNzQ5IDkuNDIyIDU2LjgwMSA5OS4yMjMgOS40OTcgOTguNTUzeiI+PC9wYXRoPjxwYXRoIGQ9Ik04Ni42MjIgOTMuMDk0YTE4LjU1OCAxOC41NTggMCAxMS0zNy4xMTcgMCAxOC41NTggMTguNTU4IDAgMDEzNy4xMTcgMHpNMTY2LjU0OSAxNDdWNTguOTc0aDEzLjIwNHYyMS42NTRjLjQ3LTEuNTI2IDEuMzUtMy41MiAyLjY0MS01Ljk4NiAxLjQwOC0yLjU4MiAzLjQwNC01LjE2NCA1Ljk4Ni03Ljc0NiAyLjU4Mi0yLjU4MiA1LjgwOS00Ljc1MyA5LjY4My02LjUxNCAzLjk5LTEuODc4IDguNjg1LTIuODE3IDE0LjA4NC0yLjgxN2guODhWNzAuNzdoLTEuNTg0Yy02LjU3MyAwLTEyLjI2NSAxLjgyLTE3LjA3NyA1LjQ1OC00LjY5NSAzLjUyMS04LjMzNCA4LjE1Ny0xMC45MTYgMTMuOTA4LTIuNDY0IDUuNjM0LTMuNjk3IDExLjY3OC0zLjY5NyAxOC4xMzNWMTQ3aC0xMy4yMDR6bTk3LjUzOSAxLjQwOGMtOC45MiAwLTE2LjcyNS0xLjk5NS0yMy40MTUtNS45ODUtNi42OS00LjEwOC0xMS45MTMtOS42MjUtMTUuNjY5LTE2LjU0OS0zLjYzOC02LjkyNS01LjQ1Ny0xNC41NTQtNS40NTctMjIuODg3IDAtOC40NSAxLjc2LTE2LjA4IDUuMjgxLTIyLjg4NyAzLjUyMS02LjkyNSA4LjU2OC0xMi4zODIgMTUuMTQxLTE2LjM3MyA2LjU3Mi00LjEwOCAxNC4zMTktNi4xNjIgMjMuMjM5LTYuMTYyIDkuMDM3IDAgMTYuNzgzIDIuMDU0IDIzLjIzOCA2LjE2MiA2LjU3MyAzLjk5IDExLjYyIDkuNDQ4IDE1LjE0MSAxNi4zNzMgMy41MjEgNi44MDcgNS4yODIgMTQuNDM2IDUuMjgyIDIyLjg4N3Y1LjI4MWgtNzMuNzY2Yy43MDQgNS4xNjUgMi4zNDcgOS45MTggNC45MjkgMTQuMjYxIDIuNyA0LjIyNSA2LjI3OSA3LjYyOSAxMC43MzkgMTAuMjExIDQuNDYgMi40NjQgOS42MjQgMy42OTcgMTUuNDkzIDMuNjk3IDYuMjIgMCAxMS40NDMtMS4zNSAxNS42NjktNC4wNDkgNC4yMjUtMi44MTcgNy41MTEtNi4zOTcgOS44NTgtMTAuNzRoMTQuNDM3Yy0zLjA1MiA3Ljg2NC03LjkyMyAxNC4zMTktMTQuNjEzIDE5LjM2Ni02LjU3MiA0LjkzLTE1LjA4MSA3LjM5NC0yNS41MjcgNy4zOTR6bS0zMC44MDktNTIuNDYzaDU5Ljg1N2MtMS4xNzMtNy41MTItNC4zNDItMTMuNzkxLTkuNTA2LTE4LjgzOC01LjE2NS01LjA0Ny0xMS45NzItNy41Ny0yMC40MjItNy41Ny04LjQ1MSAwLTE1LjI1OCAyLjUyMy0yMC40MjMgNy41Ny01LjA0NiA1LjA0Ny04LjIxNSAxMS4zMjYtOS41MDYgMTguODM4em04OS43MjMgODUuOTEzVjU4Ljk3NGgxMy4yMDR2MTQuMDg0YzMuMjg2LTQuODEyIDcuNTEyLTguNTY4IDEyLjY3Ni0xMS4yNjcgNS4yODEtMi44MTcgMTEuNTYxLTQuMjI2IDE4LjgzNy00LjIyNiA4LjU2OCAwIDE2LjAyMSAyLjA1NCAyMi4zNTkgNi4xNjIgNi40NTUgMy45OSAxMS40NDQgOS40NDggMTQuOTY1IDE2LjM3MyAzLjUyMSA2LjgwNyA1LjI4MSAxNC40MzYgNS4yODEgMjIuODg3IDAgOC4zMzMtMS43NiAxNS45NjItNS4yODEgMjIuODg3LTMuNTIxIDYuOTI0LTguNTEgMTIuNDQxLTE0Ljk2NSAxNi41NDktNi4zMzggMy45OS0xMy43OTEgNS45ODUtMjIuMzU5IDUuOTg1LTcuMjc2IDAtMTMuNTU2LTEuNDA4LTE4LjgzNy00LjIyNS01LjE2NC0yLjkzNC05LjM5LTYuNzQ5LTEyLjY3Ni0xMS40NDN2NDkuMTE4aC0xMy4yMDR6bTQyLjk1Ny00NS40MjFjNi41NzMgMCAxMi4xNDgtMS41MjYgMTYuNzI1LTQuNTc4IDQuNjk1LTMuMDUxIDguMjc0LTcuMSAxMC43MzktMTIuMTQ3IDIuNDY1LTUuMTY0IDMuNjk3LTEwLjczOSAzLjY5Ny0xNi43MjUgMC02LjEwMy0xLjIzMi0xMS42NzgtMy42OTctMTYuNzI1LTIuNDY1LTUuMDQ3LTYuMDQ0LTkuMDk2LTEwLjczOS0xMi4xNDgtNC41NzctMy4wNTEtMTAuMTUyLTQuNTc3LTE2LjcyNS00LjU3Ny02LjQ1NSAwLTExLjk3MiAxLjUyNi0xNi41NDkgNC41NzctNC41NzcgMy4wNTItOC4wNCA3LjEwMS0xMC4zODcgMTIuMTQ4LTIuMzQ3IDUuMDQ3LTMuNTIxIDEwLjYyMi0zLjUyMSAxNi43MjUgMCA1Ljk4NiAxLjE3NCAxMS41NjEgMy41MjEgMTYuNzI1IDIuMzQ3IDUuMDQ3IDUuODEgOS4wOTYgMTAuMzg3IDEyLjE0NyA0LjU3NyAzLjA1MiAxMC4wOTQgNC41NzggMTYuNTQ5IDQuNTc4ek00MjcuNzA1IDE0N1YyMy43NjNoMTMuMjA0VjE0N2gtMTMuMjA0em0zNS41NzctMTAyLjgxNVYyNi45MzJoMTQuMjZ2MTcuMjUzaC0xNC4yNnpNNDYzLjgxIDE0N1Y1OC45NzRoMTMuMjA0VjE0N0g0NjMuODF6bTQ1LjYxMSAwVjcwLjU5M2gtMTcuOTU3di0xMS42MmgxNy45NTdWMjcuNDZoMTMuMjA0djMxLjUxNGgyMC4yNDZ2MTEuNjJoLTIwLjI0NlYxNDdoLTEzLjIwNHoiPjwvcGF0aD48ZyBjbGFzcz0icHJvbXB0IiBjbGlwLXBhdGg9InVybCgjY2xpcDApIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTU3MCA2OC41aDI2LjAwMXYyNkg2MjJ2MjZoLTI2di0yNmgtMjZ2LTI2em0yNiA1Mi4wMDFoLTI2djI2aDI2di0yNnoiPjwvcGF0aD48L2c+PGRlZnM+PGNsaXBwYXRoIGlkPSJjbGlwMCI+PHBhdGggZmlsbD0iI2ZmZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTcwIDQwLjUpIiBkPSJNMCAwaDUydjEwNkgweiI+PC9wYXRoPjwvY2xpcHBhdGg+PC9kZWZzPjwvc3ZnPg==" class="logo-svg" /></a>
 
@@ -3968,7 +3954,7 @@ Copyright © 2021 Replit, Inc. All rights reserved.
 To allow our users to flip the coin a variable number of times we can use a parameter, `repeat`.
 
     function flip(repeat){
-        // add parameter 
+        // add parameter
     }
 
 We will reference `repeat` into our conditional expression which will cause the loop to run a variable number of times.
@@ -4179,11 +4165,11 @@ Copyright © 2021 Replit, Inc. All rights reserved.
 
 Check your knowledge with the [arguments and parameters challenge](https://codepen.io/lambdaschool/pen/GRJRGxa?editors=0001).
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Intro to JavaScript](https://github.com/LambdaSchool/Introduction-to-JavaScript)
+- ##### [Intro to JavaScript](https://github.com/LambdaSchool/Introduction-to-JavaScript)
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -4191,38 +4177,38 @@ Check your knowledge with the [arguments and parameters challenge](https://codep
 
 You can use class recordings to help you master the material.
 
--   **[Intro To Javascript for WebPT22 w/Nathan Braun](https://youtu.be/98yrB_HjcmE)**
+- **[Intro To Javascript for WebPT22 w/Nathan Braun](https://youtu.be/98yrB_HjcmE)**
 
-    JavaScript is the backbone of interactive web pages. This module will tackle basic syntax and logic in JavaScript including variables, math, conditionals, loops, and functions. These building blocks will inform the rest of your career as a web developer.
+  JavaScript is the backbone of interactive web pages. This module will tackle basic syntax and logic in JavaScript including variables, math, conditionals, loops, and functions. These building blocks will inform the rest of your career as a web developer.
 
--   [All previous recordings](/archive/WEB1/module/recPmaqIfzn9NMPLY)
+- [All previous recordings](/archive/WEB1/module/recPmaqIfzn9NMPLY)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    It’s time to check your knowledge with a [Variables Challenge](https://codepen.io/lambdaschool/pen/zLydNr). There is a solution link at the bottom of the codepen to check your work.
+  It’s time to check your knowledge with a [Variables Challenge](https://codepen.io/lambdaschool/pen/zLydNr). There is a solution link at the bottom of the codepen to check your work.
 
--   Objective challenge:
+- Objective challenge:
 
-    Check your knowledge with a short [math challenge](https://codepen.io/lambdaschool/pen/xxbvoLx).
+  Check your knowledge with a short [math challenge](https://codepen.io/lambdaschool/pen/xxbvoLx).
 
--   Objective challenge:
+- Objective challenge:
 
-    Check your knowledge with the [conditionals challenge](https://codepen.io/lambdaschool/pen/bGNXPxK?editors=0010).
+  Check your knowledge with the [conditionals challenge](https://codepen.io/lambdaschool/pen/bGNXPxK?editors=0010).
 
--   Objective challenge:
+- Objective challenge:
 
-    Check your knowledge with a short [loops challenge](https://codepen.io/lambdaschool/pen/BaNBBpN?editors=0012)
+  Check your knowledge with a short [loops challenge](https://codepen.io/lambdaschool/pen/BaNBBpN?editors=0012)
 
--   Objective challenge:
+- Objective challenge:
 
-    Check your knowledge with the [functions challenge.](https://codepen.io/lambdaschool/pen/VwLwdQE?editors=0012)
+  Check your knowledge with the [functions challenge.](https://codepen.io/lambdaschool/pen/VwLwdQE?editors=0012)
 
--   Objective challenge:
+- Objective challenge:
 
-    Check your knowledge with the [arguments and parameters challenge](https://codepen.io/lambdaschool/pen/GRJRGxa?editors=0001).
+  Check your knowledge with the [arguments and parameters challenge](https://codepen.io/lambdaschool/pen/GRJRGxa?editors=0001).
 
--   Project: Intro to JavaScript
+- Project: Intro to JavaScript

@@ -1,474 +1,642 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Intended as a home for Lambda School curriculum."
+    />
+    <meta name="author" content="" />
+    <meta name="generator" content="Jekyll v3.8.0" />
+    <title>Server-Side Routing with Express · Lambda School</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Intended as a home for Lambda School curriculum.">
-  <meta name="author" content="">
-  <meta name="generator" content="Jekyll v3.8.0">
-  <title>Server-Side Routing with Express · Lambda School</title>
+    <link
+      rel="stylesheet"
+      integrity
+      crossorigin="anonymous"
+      href="https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css"
+    />
 
-  <link rel='stylesheet' integrity crossorigin='anonymous'
-    href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+    <link
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css"
+    />
 
-  <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-  <link rel='stylesheet'
-    href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css"
+    />
 
-  <link rel='stylesheet'
-    href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
 
-  <script>
-    ( function ( i, s, o, g, r, a, m ) {
-      i[ 'GoogleAnalyticsObject' ] = r;
-      i[ r ] = i[ r ] || function () {
-        ( i[ r ].q = i[ r ].q || [] ).push( arguments )
-      }, i[ r ].l = 1 * new Date();
-      a = s.createElement( o ),
-        m = s.getElementsByTagName( o )[ 0 ];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore( a, m )
-    } )( window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga' );
-    ga( 'create', 'UA-122016605-1', 'learn.lambdaschool.com' );
-    ga( 'send', 'pageview' );
-  </script>
 
-  <script>
-    ! function () {
-      var analytics = window.analytics = window.analytics || [];
-      if ( !analytics.initialize )
-        if ( analytics.invoked ) window.console && console.error && console.error( "Segment snippet included twice." );
-        else {
-          analytics.invoked = !0;
-          analytics.methods = [ "trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset",
-            "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"
-          ];
-          analytics.factory = function ( t ) {
-            return function () {
-              var e = Array.prototype.slice.call( arguments );
-              e.unshift( t );
-              analytics.push( e );
-              return analytics
+    <script>
+      !(function () {
+        var analytics = (window.analytics = window.analytics || []);
+        if (!analytics.initialize)
+          if (analytics.invoked)
+            window.console &&
+              console.error &&
+              console.error("Segment snippet included twice.");
+          else {
+            analytics.invoked = !0;
+            analytics.methods = [
+              "trackSubmit",
+              "trackClick",
+              "trackLink",
+              "trackForm",
+              "pageview",
+              "identify",
+              "reset",
+              "group",
+              "track",
+              "ready",
+              "alias",
+              "debug",
+              "page",
+              "once",
+              "off",
+              "on",
+            ];
+            analytics.factory = function (t) {
+              return function () {
+                var e = Array.prototype.slice.call(arguments);
+                e.unshift(t);
+                analytics.push(e);
+                return analytics;
+              };
+            };
+            for (var t = 0; t < analytics.methods.length; t++) {
+              var e = analytics.methods[t];
+              analytics[e] = analytics.factory(e);
             }
-          };
-          for ( var t = 0; t < analytics.methods.length; t++ ) {
-            var e = analytics.methods[ t ];
-            analytics[ e ] = analytics.factory( e )
+            analytics.load = function (t, e) {
+              var n = document.createElement("script");
+              n.type = "text/javascript";
+              n.async = !0;
+              n.src =
+                "https://cdn.segment.com/analytics.js/v1/" +
+                t +
+                "/analytics.min.js";
+              var a = document.getElementsByTagName("script")[0];
+              a.parentNode.insertBefore(n, a);
+              analytics._loadOptions = e;
+            };
+            analytics.SNIPPET_VERSION = "4.1.0";
+            analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+            analytics.page();
           }
-          analytics.load = function ( t, e ) {
-            var n = document.createElement( "script" );
-            n.type = "text/javascript";
-            n.async = !0;
-            n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
-            var a = document.getElementsByTagName( "script" )[ 0 ];
-            a.parentNode.insertBefore( n, a );
-            analytics._loadOptions = e
-          };
-          analytics.SNIPPET_VERSION = "4.1.0";
-          analytics.load( "BjKorwKrSvMamfNoGkBq9rISk7wF6QQX" );
-          analytics.page();
-        }
-    }();
-  </script>
+      })();
+    </script>
 
-  <link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-  <link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="manifest" href="/assets/img/favicons/manifest.json">
-  <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
-  <link rel="icon" href="/favicon.ico">
-  <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
-  <meta name="theme-color" content="#a0001e">
-</head>
+    <link
+      rel="apple-touch-icon"
+      href="/assets/img/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/assets/img/favicons/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicons/safari-pinned-tab.svg"
+      color="#a0001e"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="msapplication-config"
+      content="/assets/img/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#a0001e" />
+  </head>
 
-<body>
-  <noscript>Please enable JavaScript to view this page.</noscript>
-  <div id="redirect-message" style="display: none;">
-    You must be logged in to view this page.
-  </div>
-  <div id="unauthorized-message" style="display: none;">
-    You must be a Lambda School student to view this page.
-  </div>
-  <div id="content-wrapper">
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
-      <div class="container">
-        <span class="skiplink-text">Skip to main content</span>
-      </div>
-    </a>
-    <div class="mobile-menu">
-      <div class="m-drop">
-        <div class="mobile-row">
-          <div class="header-row" style="padding: 3px 7px">
-            <a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg"
-                width="33" height="35" viewBox="0 0 33 35" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
-                  fill="#EC3944" />
-              </svg></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu"
-              aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
-                <title>Menu</title>
-                <path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
-                  d="M4 7h22M4 15h22M4 23h22"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="nav-row">
-          <div class="results-container">
-            <ul id="results-container" class="dropdown list-group"></ul>
-          </div>
-          <div id="mobile-course-menu" class="collapse nav-row">
-            <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
-              <nav class="bd-links">
-                <div class="bd-toc-item">
-                  <h4 class="bd-toc-link">Web API: Node</h4>
-                </div>
-
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/web4node/sprint/reckzQd7ZgiFY5ok5">
-                    1.&nbsp;&nbsp;Build a Web API
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/web4node/module/recZiPP8Oyg1WlHxT/">
-                        Introduction to Node.js and Express
-                      </a>
-                    </li>
-                    <li class="active bd-sidenav-active">
-                      <a href="/web4node/module/recBjiSulq0PYLCIj/">
-                        Server-Side Routing with Express
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web4node/module/recCJjYFEz0i5O5p5/">
-                        Express Middleware
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web4node/module/recs9QOkOAtZhsjc4/">
-                        Web Deployment and Best Practices
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/web4node/sprint/receFLR7MpwQXesIN">
-                    2.&nbsp;&nbsp;Adding Data Persistence
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/web4node/module/recFG7SqlSCAB8iU7/">
-                        Introduction to Relational Databases
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web4node/module/recIbfNn9xRhLTOv4/">
-                        Database Schema Design
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web4node/module/recw2ezN22yjehidj/">
-                        Multi-Table Queries
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web4node/module/rec5J23yAIdjmFbgP/">
-                        Data Modeling
-                      </a>
-                    </li>
-
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/web4node/sprint/recGqGeZ7n75vZivn">
-                    3.&nbsp;&nbsp;Authentication and Testing
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/web4node/module/recQD9lnhqWEFh6g4/">
-                        Introduction to Authentication
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web4node/module/reciCHdNjavSKaaLt/">
-                        Using JSON Web Tokens (JWT)
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web4node/module/recd26oZ3GBNHh3Na/">
-                        WEB Unit Testing
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/web4node/module/reciXdxRA8zXJXDID/">
-                        Testing the Back End
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/web4node/sprint/recWkcWui91eG1s8q">
-                    4.&nbsp;&nbsp;WEB Unit 4 Node Build
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                  </ul>
-                </div>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
+  <body>
+    <noscript>Please enable JavaScript to view this page.</noscript>
+    <div id="redirect-message" style="display: none">
+      You must be logged in to view this page.
     </div>
-    <div class="main-container">
-      <div class="sidebar-container bd-sidebar">
-        <div class="docs-sidebar">
-          <a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197"
-              fill="#ec3944">
-              <g>
-                <path
-                  d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z">
-                </path>
-                <path
-                  d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z">
-                </path>
-                <path
-                  d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z">
-                </path>
-                <path
-                  d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z">
-                </path>
-                <path
-                  d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z">
-                </path>
-                <path
-                  d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z">
-                </path>
-              </g>
-              <path
-                d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z">
-              </path>
-            </svg></a>
-          <ul id="results-container" class="dropdown list-group"></ul>
-          <nav class="bd-links collapse" id="bd-docs-nav">
-            <div class="bd-toc-item">
-              <h4 class="bd-toc-link">Web API: Node</h4>
+    <div id="unauthorized-message" style="display: none">
+      You must be a Lambda School student to view this page.
+    </div>
+    <div id="content-wrapper">
+      <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+          <span class="skiplink-text">Skip to main content</span>
+        </div>
+      </a>
+      <div class="mobile-menu">
+        <div class="m-drop">
+          <div class="mobile-row">
+            <div class="header-row" style="padding: 3px 7px">
+              <a class="navbar-brand" href="/" aria-label="Lambda School"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="35"
+                  viewBox="0 0 33 35"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                    fill="#EC3944"
+                  /></svg
+              ></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#mobile-course-menu"
+                aria-controls="mobile-course-menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="30"
+                  height="30"
+                  focusable="false"
+                >
+                  <title>Menu</title>
+                  <path
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    d="M4 7h22M4 15h22M4 23h22"
+                  ></path>
+                </svg>
+              </button>
             </div>
-
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/web4node/sprint/reckzQd7ZgiFY5ok5">
-                1.&nbsp;&nbsp;Build a Web API
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/web4node/module/recZiPP8Oyg1WlHxT/">
-                    Introduction to Node.js and Express
-                  </a>
-                </li>
-                <li class="active bd-sidenav-active">
-                  <a href="/web4node/module/recBjiSulq0PYLCIj/">
-                    Server-Side Routing with Express
-                  </a>
-                </li>
-                <li>
-                  <a href="/web4node/module/recCJjYFEz0i5O5p5/">
-                    Express Middleware
-                  </a>
-                </li>
-                <li>
-                  <a href="/web4node/module/recs9QOkOAtZhsjc4/">
-                    Web Deployment and Best Practices
-                  </a>
-                </li>
-              </ul>
+          </div>
+          <div class="nav-row">
+            <div class="results-container">
+              <ul id="results-container" class="dropdown list-group"></ul>
             </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/web4node/sprint/receFLR7MpwQXesIN">
-                2.&nbsp;&nbsp;Adding Data Persistence
-              </a>
-              <ul class="nav bd-sidenav">
+            <div id="mobile-course-menu" class="collapse nav-row">
+              <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+                <nav class="bd-links">
+                  <div class="bd-toc-item">
+                    <h4 class="bd-toc-link">Web API: Node</h4>
+                  </div>
 
-                <li>
-                  <a href="/web4node/module/recFG7SqlSCAB8iU7/">
-                    Introduction to Relational Databases
-                  </a>
-                </li>
-                <li>
-                  <a href="/web4node/module/recIbfNn9xRhLTOv4/">
-                    Database Schema Design
-                  </a>
-                </li>
-                <li>
-                  <a href="/web4node/module/recw2ezN22yjehidj/">
-                    Multi-Table Queries
-                  </a>
-                </li>
-                <li>
-                  <a href="/web4node/module/rec5J23yAIdjmFbgP/">
-                    Data Modeling
-                  </a>
-                </li>
-              </ul>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web4node/sprint/reckzQd7ZgiFY5ok5"
+                    >
+                      1.&nbsp;&nbsp;Build a Web API
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web4node/module/recZiPP8Oyg1WlHxT/">
+                          Introduction to Node.js and Express
+                        </a>
+                      </li>
+                      <li class="active bd-sidenav-active">
+                        <a href="/web4node/module/recBjiSulq0PYLCIj/">
+                          Server-Side Routing with Express
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4node/module/recCJjYFEz0i5O5p5/">
+                          Express Middleware
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4node/module/recs9QOkOAtZhsjc4/">
+                          Web Deployment and Best Practices
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web4node/sprint/receFLR7MpwQXesIN"
+                    >
+                      2.&nbsp;&nbsp;Adding Data Persistence
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web4node/module/recFG7SqlSCAB8iU7/">
+                          Introduction to Relational Databases
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4node/module/recIbfNn9xRhLTOv4/">
+                          Database Schema Design
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4node/module/recw2ezN22yjehidj/">
+                          Multi-Table Queries
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4node/module/rec5J23yAIdjmFbgP/">
+                          Data Modeling
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web4node/sprint/recGqGeZ7n75vZivn"
+                    >
+                      3.&nbsp;&nbsp;Authentication and Testing
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web4node/module/recQD9lnhqWEFh6g4/">
+                          Introduction to Authentication
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4node/module/reciCHdNjavSKaaLt/">
+                          Using JSON Web Tokens (JWT)
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4node/module/recd26oZ3GBNHh3Na/">
+                          WEB Unit Testing
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4node/module/reciXdxRA8zXJXDID/">
+                          Testing the Back End
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web4node/sprint/recWkcWui91eG1s8q"
+                    >
+                      4.&nbsp;&nbsp;WEB Unit 4 Node Build
+                    </a>
+                    <ul class="nav bd-sidenav"></ul>
+                  </div>
+                </nav>
+              </div>
             </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/web4node/sprint/recGqGeZ7n75vZivn">
-                3.&nbsp;&nbsp;Authentication and Testing
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/web4node/module/recQD9lnhqWEFh6g4/">
-                    Introduction to Authentication
-                  </a>
-                </li>
-                <li>
-                  <a href="/web4node/module/reciCHdNjavSKaaLt/">
-                    Using JSON Web Tokens (JWT)
-                  </a>
-                </li>
-                <li>
-                  <a href="/web4node/module/recd26oZ3GBNHh3Na/">
-                    WEB Unit Testing
-                  </a>
-                </li>
-                <li>
-                  <a href="/web4node/module/reciXdxRA8zXJXDID/">
-                    Testing the Back End
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/web4node/sprint/recWkcWui91eG1s8q">
-                4.&nbsp;&nbsp;WEB Unit 4 Node Build
-              </a>
-              <ul class="nav bd-sidenav">
-
-              </ul>
-            </div>
-          </nav>
+          </div>
         </div>
       </div>
-      <main class="content-container flex-wrapper" role="main">
-        <div class="sticky-nav">
-          <div class="sprint-nav">
-            <ul class="section-nav">
-              <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
-              <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
-              <li class="toc-entry toc-h2"><a href="#guided-project">Guided Project</a></li>
-              <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
-              <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
-            </ul>
-          </div>
+      <div class="main-container">
+        <div class="sidebar-container bd-sidebar">
+          <div class="docs-sidebar">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"
+              ><svg
+                width="135"
+                height="35"
+                viewBox="0 0 756 197"
+                fill="#ec3944"
+              >
+                <g>
+                  <path
+                    d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"
+                  ></path>
+                  <path
+                    d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"
+                  ></path>
+                  <path
+                    d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"
+                  ></path>
+                  <path
+                    d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"
+                  ></path>
+                  <path
+                    d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"
+                  ></path>
+                  <path
+                    d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"
+                  ></path>
+                </g>
+                <path
+                  d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"
+                ></path></svg
+            ></a>
+            <ul id="results-container" class="dropdown list-group"></ul>
+            <nav class="bd-links collapse" id="bd-docs-nav">
+              <div class="bd-toc-item">
+                <h4 class="bd-toc-link">Web API: Node</h4>
+              </div>
 
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/web4node/sprint/reckzQd7ZgiFY5ok5"
+                >
+                  1.&nbsp;&nbsp;Build a Web API
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web4node/module/recZiPP8Oyg1WlHxT/">
+                      Introduction to Node.js and Express
+                    </a>
+                  </li>
+                  <li class="active bd-sidenav-active">
+                    <a href="/web4node/module/recBjiSulq0PYLCIj/">
+                      Server-Side Routing with Express
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4node/module/recCJjYFEz0i5O5p5/">
+                      Express Middleware
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4node/module/recs9QOkOAtZhsjc4/">
+                      Web Deployment and Best Practices
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/web4node/sprint/receFLR7MpwQXesIN"
+                >
+                  2.&nbsp;&nbsp;Adding Data Persistence
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web4node/module/recFG7SqlSCAB8iU7/">
+                      Introduction to Relational Databases
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4node/module/recIbfNn9xRhLTOv4/">
+                      Database Schema Design
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4node/module/recw2ezN22yjehidj/">
+                      Multi-Table Queries
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4node/module/rec5J23yAIdjmFbgP/">
+                      Data Modeling
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/web4node/sprint/recGqGeZ7n75vZivn"
+                >
+                  3.&nbsp;&nbsp;Authentication and Testing
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web4node/module/recQD9lnhqWEFh6g4/">
+                      Introduction to Authentication
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4node/module/reciCHdNjavSKaaLt/">
+                      Using JSON Web Tokens (JWT)
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4node/module/recd26oZ3GBNHh3Na/">
+                      WEB Unit Testing
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4node/module/reciXdxRA8zXJXDID/">
+                      Testing the Back End
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/web4node/sprint/recWkcWui91eG1s8q"
+                >
+                  4.&nbsp;&nbsp;WEB Unit 4 Node Build
+                </a>
+                <ul class="nav bd-sidenav"></ul>
+              </div>
+            </nav>
+          </div>
         </div>
-        <div class="wrapper limit-width">
-          <div class="flex-wrapper">
-            <div class="limit-width">
-              <div class="jumbotron">
-                <h1 class="bd-title" id="content">Server-Side Routing with Express</h1>
-                <span class="lead">
-                  <p class="bd-lead"></p>
-                  <p>Node’s HTTP server uses a single <code class="highlighter-rouge">request handler function</code>
-                    for all requests. Express provides a way to break the application into different request handlers
-                    for each URL+ HTTP method combination.</p>
-                  <p>This feature is called <strong>Routing</strong> and is one of the main features of <code
-                      class="highlighter-rouge">Express</code>.</p>
-                  <p>In this module we will take a deeper look at routing. We will:</p>
+        <main class="content-container flex-wrapper" role="main">
+          <div class="sticky-nav">
+            <div class="sprint-nav">
+              <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+                <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+                <li class="toc-entry toc-h2">
+                  <a href="#guided-project">Guided Project</a>
+                </li>
+                <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+                <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="wrapper limit-width">
+            <div class="flex-wrapper">
+              <div class="limit-width">
+                <div class="jumbotron">
+                  <h1 class="bd-title" id="content">
+                    Server-Side Routing with Express
+                  </h1>
+                  <span class="lead">
+                    <p class="bd-lead"></p>
+                    <p>
+                      Node’s HTTP server uses a single
+                      <code class="highlighter-rouge"
+                        >request handler function</code
+                      >
+                      for all requests. Express provides a way to break the
+                      application into different request handlers for each URL+
+                      HTTP method combination.
+                    </p>
+                    <p>
+                      This feature is called <strong>Routing</strong> and is one
+                      of the main features of
+                      <code class="highlighter-rouge">Express</code>.
+                    </p>
+                    <p>
+                      In this module we will take a deeper look at routing. We
+                      will:
+                    </p>
+                    <ul>
+                      <li>
+                        use the
+                        <code class="highlighter-rouge">routing</code> feature
+                        of express to build several endpoints.
+                      </li>
+                      <li>cover different ways to pass data to a Web API.</li>
+                      <li>
+                        introduce <code class="highlighter-rouge">REST</code> as
+                        a way to guide the architecture of our web
+                      </li>
+                      <li>using Express Routers to organize our code.</li>
+                    </ul>
+                  </span>
+                  <strong
+                    >At the end of this module, you should be able to:</strong
+                  >
                   <ul>
-                    <li>use the <code class="highlighter-rouge">routing</code> feature of express to build several
-                      endpoints.</li>
-                    <li>cover different ways to pass data to a Web API.</li>
-                    <li>introduce <code class="highlighter-rouge">REST</code> as a way to guide the architecture of our
-                      web</li>
-                    <li>using Express Routers to organize our code.</li>
+                    <li>explain how routing works in an express application</li>
+                    <li>
+                      read data from the query string, request body and route
+                      parameters.
+                    </li>
+                    <li>explain the basics of the REST architectural style</li>
+                    <li>use Express Routers to organize Web API code</li>
                   </ul>
-                </span>
-                <strong>At the end of this module, you should be able to:</strong>
-                <ul>
-                  <li>explain how routing works in an express application</li>
-                  <li>read data from the query string, request body and route parameters.</li>
-                  <li>explain the basics of the REST architectural style</li>
-                  <li>use Express Routers to organize Web API code</li>
-                </ul>
-              </div>
-              <div class="alert alert-warning" role="alert">
-                <h4>Pro Tip</h4>
-                <p>Life is a marathon, not a sprint.</p>
-              </div>
-              <h2 class="display-4">
-                <a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Prepare</h2>
-              <p class="lead">Review each preclass resource before class.</p>
-              <div class="preclass">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tLIzjmFxsag"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kKDB1TpL9dM"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dgkQxWnUjKE"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qFCLzVbODJM"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <a target="_blank" href="https://expressjs.com/en/starter/basic-routing.html">Basic Routing on
-                      Expressjs.com</a>
-                    <p>Getting Started with Routing from the Official Express site</p>
-                  </li>
-                  <li class="list-group-item">
-                    <a target="_blank"
-                      href="https://www.webdevdrops.com/en/http-primer-for-frontend-developers-f091a2070637/">HTTP
-                      Primer for Frontend Developers</a>
-                    <p>Simple introduction to HTTP</p>
-                  </li>
-                  <li class="list-group-item">
-                    <a target="_blank" href="https://expressjs.com/en/guide/routing.html">Express Routing Guide</a>
-                    <p>Routing Guide on Expressjs.com</p>
-                  </li>
-                </ul>
-              </div>
-              <h2 class="display-4">
-                <a id="learn" class="anchor" href="#learn" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Learn</h2>
-              <h4 class="mark mb-3 p-2">Learn to explain how routing works in an express application</h4>
-              <p>Routing is one of the main features of Express. Using <code class="highlighter-rouge">routing</code> we
-                can map incoming requests to the appropriate request handler based on the URL and HTTP Method used.</p>
-              <p>Routing makes building RESTful Web APIs a breeze. We can have a <strong>single URL per
-                  resource</strong> and execute different code based on the HTTP Method/Verb used.</p>
-              <p>Building Web APIs to perform CRUD (<strong>C</strong>reate, <strong>R</strong>ead,
-                <strong>U</strong>pdate, <strong>D</strong>estroy) operations on resources is also very straight forward
-                because there are HTTP Methods that map directly to each operation.</p>
-              <h5>Overview</h5>
-              <p>Let’s look at a basic example of routing in action.</p>
-              <p>First, to make our Express application respond to <code class="highlighter-rouge">GET</code> requests
-                on different URLs, add the following endpoints:</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="c1">// this request handler executes when making a GET request to /about</span>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                  <h4>Pro Tip</h4>
+                  <p>Life is a marathon, not a sprint.</p>
+                </div>
+                <h2 class="display-4">
+                  <a
+                    id="prepare"
+                    class="anchor"
+                    href="#prepare"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Prepare
+                </h2>
+                <p class="lead">Review each preclass resource before class.</p>
+                <div class="preclass">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/tLIzjmFxsag"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/kKDB1TpL9dM"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/dgkQxWnUjKE"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/qFCLzVbODJM"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <a
+                        target="_blank"
+                        href="https://expressjs.com/en/starter/basic-routing.html"
+                        >Basic Routing on Expressjs.com</a
+                      >
+                      <p>
+                        Getting Started with Routing from the Official Express
+                        site
+                      </p>
+                    </li>
+                    <li class="list-group-item">
+                      <a
+                        target="_blank"
+                        href="https://www.webdevdrops.com/en/http-primer-for-frontend-developers-f091a2070637/"
+                        >HTTP Primer for Frontend Developers</a
+                      >
+                      <p>Simple introduction to HTTP</p>
+                    </li>
+                    <li class="list-group-item">
+                      <a
+                        target="_blank"
+                        href="https://expressjs.com/en/guide/routing.html"
+                        >Express Routing Guide</a
+                      >
+                      <p>Routing Guide on Expressjs.com</p>
+                    </li>
+                  </ul>
+                </div>
+                <h2 class="display-4">
+                  <a id="learn" class="anchor" href="#learn" aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Learn
+                </h2>
+                <h4 class="mark mb-3 p-2">
+                  Learn to explain how routing works in an express application
+                </h4>
+                <p>
+                  Routing is one of the main features of Express. Using
+                  <code class="highlighter-rouge">routing</code> we can map
+                  incoming requests to the appropriate request handler based on
+                  the URL and HTTP Method used.
+                </p>
+                <p>
+                  Routing makes building RESTful Web APIs a breeze. We can have
+                  a <strong>single URL per resource</strong> and execute
+                  different code based on the HTTP Method/Verb used.
+                </p>
+                <p>
+                  Building Web APIs to perform CRUD (<strong>C</strong>reate,
+                  <strong>R</strong>ead, <strong>U</strong>pdate,
+                  <strong>D</strong>estroy) operations on resources is also very
+                  straight forward because there are HTTP Methods that map
+                  directly to each operation.
+                </p>
+                <h5>Overview</h5>
+                <p>Let’s look at a basic example of routing in action.</p>
+                <p>
+                  First, to make our Express application respond to
+                  <code class="highlighter-rouge">GET</code> requests on
+                  different URLs, add the following endpoints:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="c1">// this request handler executes when making a GET request to /about</span>
 <span class="nx">server</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/about</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">&lt;h1&gt;About Us&lt;/h1&gt;</span><span class="dl">'</span><span class="p">);</span>
 <span class="p">});</span>
@@ -478,110 +646,193 @@
   <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">&lt;h1&gt;Contact Form&lt;/h1&gt;</span><span class="dl">'</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Two things to note:</p>
-              <ul>
-                <li>we are using the same HTTP Method on both endpoints, but express looks at the URL and executes the
-                  corresponding request handler.</li>
-                <li>we can return a string with valid HTTP!</li>
-              </ul>
-              <p>Open a browser and navigate to the <code class="highlighter-rouge">/about</code> and <code
-                  class="highlighter-rouge">/contact</code> routes. The appropriate route handler will execute.</p>
-              <h5>Follow Along</h5>
-              <p>Now, please follow along as we write endpoints that execute different request handlers on the same URL
-                by changing the HTTP method used.</p>
-              <p>Let’s start by adding the following code after the <code class="highlighter-rouge">GET</code> endpoint
-                to <code class="highlighter-rouge">/hobbits</code>:</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="c1">// this request handler executes when making a POST request to /hobbits</span>
+                <p>Two things to note:</p>
+                <ul>
+                  <li>
+                    we are using the same HTTP Method on both endpoints, but
+                    express looks at the URL and executes the corresponding
+                    request handler.
+                  </li>
+                  <li>we can return a string with valid HTTP!</li>
+                </ul>
+                <p>
+                  Open a browser and navigate to the
+                  <code class="highlighter-rouge">/about</code> and
+                  <code class="highlighter-rouge">/contact</code> routes. The
+                  appropriate route handler will execute.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Now, please follow along as we write endpoints that execute
+                  different request handlers on the same URL by changing the
+                  HTTP method used.
+                </p>
+                <p>
+                  Let’s start by adding the following code after the
+                  <code class="highlighter-rouge">GET</code> endpoint to
+                  <code class="highlighter-rouge">/hobbits</code>:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="c1">// this request handler executes when making a POST request to /hobbits</span>
 <span class="nx">server</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">/hobbits</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">201</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span> <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/hobbits</span><span class="dl">'</span><span class="p">,</span> <span class="na">operation</span><span class="p">:</span> <span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span> <span class="p">});</span>
 <span class="p">});</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Note that we return HTTP status code 201 (created) for successful <code
-                  class="highlighter-rouge">POST</code> operations.</p>
-              <p>Next, we need to add an endpoint for <code class="highlighter-rouge">PUT</code> requests to the same
-                URL.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="c1">// this request handler executes when making a PUT request to /hobbits</span>
+                <p>
+                  Note that we return HTTP status code 201 (created) for
+                  successful
+                  <code class="highlighter-rouge">POST</code> operations.
+                </p>
+                <p>
+                  Next, we need to add an endpoint for
+                  <code class="highlighter-rouge">PUT</code> requests to the
+                  same URL.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="c1">// this request handler executes when making a PUT request to /hobbits</span>
 <span class="nx">server</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">/hobbits</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span> <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/hobbits</span><span class="dl">'</span><span class="p">,</span> <span class="na">operation</span><span class="p">:</span> <span class="dl">'</span><span class="s1">PUT</span><span class="dl">'</span> <span class="p">});</span>
 <span class="p">});</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>For successful <code class="highlighter-rouge">PUT</code> operations, we use HTTP Status Code 200 (OK).
-              </p>
-              <p>Finally, let’s write an endpoint to handle <code class="highlighter-rouge">DELETE</code> requests.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="c1">// this request handler executes when making a DELETE request to /hobbits</span>
+                <p>
+                  For successful
+                  <code class="highlighter-rouge">PUT</code> operations, we use
+                  HTTP Status Code 200 (OK).
+                </p>
+                <p>
+                  Finally, let’s write an endpoint to handle
+                  <code class="highlighter-rouge">DELETE</code> requests.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="c1">// this request handler executes when making a DELETE request to /hobbits</span>
 <span class="nx">server</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">/hobbits</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">204</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>We are returning HTTP Status Code 204 (No Content), but if you are returning any data to the client,
-                perhaps the removed resource, on successful deletes, you’d change that to be 200 instead.</p>
-              <p>You may have noticed that we are not reading any data from the request, as that is something we’ll
-                learn later in the module. Something else we are about to learn is how to use a tool called <code
-                  class="highlighter-rouge">Postman</code> to test our <code class="highlighter-rouge">POST</code>,
-                <code class="highlighter-rouge">PUT</code>, and <code class="highlighter-rouge">DELETE</code> endpoints.
-              </p>
-              <h5>Challenge</h5>
-              <p>Your assignment is to add endpoints to handle <code class="highlighter-rouge">POST</code>, <code
-                  class="highlighter-rouge">PUT</code> and <code class="highlighter-rouge">DELETE</code> for the <code
-                  class="highlighter-rouge">/users</code> route. Returning a JSON response similar to what we did in the
-                code-along is sufficient.</p>
-              <h5>Dig Deeper</h5>
-              <ul>
-                <li>
-                  <a href="https://expressjs.com/en/4x/api.html#res" target="blank_">Express Response Object API</a><br>
-                  Express Response Object API Documentation</li>
-                <li>
-                  <a href="https://expressjs.com/en/4x/api.html#req" target="blank_">Express Request Object API</a><br>
-                  Express Request Object API Documentation</li>
-                <li>
-                  <a href="https://expressjs.com/en/guide/routing.html" target="blank_">Express Routing Guide</a><br>
-                  Routing Guide on Expressjs.com</li>
-              </ul>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to read data from the query string, request body and route parameters.
-              </h4>
-              <p>Most Web APIs require data from clients. This data can come in different ways:</p>
-              <ul>
-                <li>as route parameters.</li>
-                <li>as key/value pairs inside the query string.</li>
-                <li>as the request body.</li>
-              </ul>
-              <p>In this module, we’ll cover how to read data sent by clients using all of these methods.</p>
-              <h5>Overview</h5>
-              <h3 id="reading-and-using-route-parameters">Reading and Using Route Parameters</h3>
-              <p>Let’s revisit our <code class="highlighter-rouge">DELETE</code> endpoint.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nx">server</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">/hobbits</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <p>
+                  We are returning HTTP Status Code 204 (No Content), but if you
+                  are returning any data to the client, perhaps the removed
+                  resource, on successful deletes, you’d change that to be 200
+                  instead.
+                </p>
+                <p>
+                  You may have noticed that we are not reading any data from the
+                  request, as that is something we’ll learn later in the module.
+                  Something else we are about to learn is how to use a tool
+                  called <code class="highlighter-rouge">Postman</code> to test
+                  our <code class="highlighter-rouge">POST</code>,
+                  <code class="highlighter-rouge">PUT</code>, and
+                  <code class="highlighter-rouge">DELETE</code> endpoints.
+                </p>
+                <h5>Challenge</h5>
+                <p>
+                  Your assignment is to add endpoints to handle
+                  <code class="highlighter-rouge">POST</code>,
+                  <code class="highlighter-rouge">PUT</code> and
+                  <code class="highlighter-rouge">DELETE</code> for the
+                  <code class="highlighter-rouge">/users</code> route. Returning
+                  a JSON response similar to what we did in the code-along is
+                  sufficient.
+                </p>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://expressjs.com/en/4x/api.html#res"
+                      target="blank_"
+                      >Express Response Object API</a
+                    ><br />
+                    Express Response Object API Documentation
+                  </li>
+                  <li>
+                    <a
+                      href="https://expressjs.com/en/4x/api.html#req"
+                      target="blank_"
+                      >Express Request Object API</a
+                    ><br />
+                    Express Request Object API Documentation
+                  </li>
+                  <li>
+                    <a
+                      href="https://expressjs.com/en/guide/routing.html"
+                      target="blank_"
+                      >Express Routing Guide</a
+                    ><br />
+                    Routing Guide on Expressjs.com
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to read data from the query string, request body and
+                  route parameters.
+                </h4>
+                <p>
+                  Most Web APIs require data from clients. This data can come in
+                  different ways:
+                </p>
+                <ul>
+                  <li>as route parameters.</li>
+                  <li>as key/value pairs inside the query string.</li>
+                  <li>as the request body.</li>
+                </ul>
+                <p>
+                  In this module, we’ll cover how to read data sent by clients
+                  using all of these methods.
+                </p>
+                <h5>Overview</h5>
+                <h3 id="reading-and-using-route-parameters">
+                  Reading and Using Route Parameters
+                </h3>
+                <p>
+                  Let’s revisit our
+                  <code class="highlighter-rouge">DELETE</code> endpoint.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nx">server</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">/hobbits</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">204</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>How does the client let the API know which hobbit should be deleted or updated? One way, the one we’ll
-                use, is through <code class="highlighter-rouge">route parameters</code>. Let’s add support to route
-                parameters to our <code class="highlighter-rouge">DELETE</code> endpoint.</p>
-              <p>We define route parameters by adding it to the URL with a colon (<code
-                  class="highlighter-rouge">:</code>) in front of it. Express adds it to the <code
-                  class="highlighter-rouge">.params</code> property part of the request object. Let’s see it in action:
-              </p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nx">server</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">/hobbits/:id</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <p>
+                  How does the client let the API know which hobbit should be
+                  deleted or updated? One way, the one we’ll use, is through
+                  <code class="highlighter-rouge">route parameters</code>. Let’s
+                  add support to route parameters to our
+                  <code class="highlighter-rouge">DELETE</code> endpoint.
+                </p>
+                <p>
+                  We define route parameters by adding it to the URL with a
+                  colon (<code class="highlighter-rouge">:</code>) in front of
+                  it. Express adds it to the
+                  <code class="highlighter-rouge">.params</code> property part
+                  of the request object. Let’s see it in action:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nx">server</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">/hobbits/:id</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="nx">id</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
   <span class="c1">// or we could destructure it like so: const { id } = req.params;</span>
   <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span>
@@ -590,40 +841,78 @@
   <span class="p">});</span>
 <span class="p">});</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>This route handler will execute every <code class="highlighter-rouge">DELETE</code> for a URL that
-                begins with <code class="highlighter-rouge">/hobbits/</code> followed by any value, so <code
-                  class="highlighter-rouge">DELETE</code> requests to <code
-                  class="highlighter-rouge">/hobbits/123</code> and <code
-                  class="highlighter-rouge">/hobbits/frodo</code> will both trigger this request handler. The value
-                passed after <code class="highlighter-rouge">/hobbits/</code> will end up as the <code
-                  class="highlighter-rouge">id</code> property on <code class="highlighter-rouge">req.params</code>.</p>
-              <p>The value for a route parameter will always be <code class="highlighter-rouge">string</code>, even if
-                the value passed is numeric. When hitting <code class="highlighter-rouge">/hobbits/123</code> in our
-                example, the type of <code class="highlighter-rouge">req.params.id</code> will be <code
-                  class="highlighter-rouge">string</code>.</p>
-              <p>Express routing has support for multiple route parameters. For example, defining a route URL that reads
-                <code class="highlighter-rouge">/hobbits/:id/friends/:friendId</code>, will add properties for <code
-                  class="highlighter-rouge">id</code> and <code class="highlighter-rouge">friendId</code> to <code
-                  class="highlighter-rouge">req.params</code>.</p>
-              <h3 id="using-the-query-string">Using the Query String</h3>
-              <p>The query string is another strategy using the URL to pass information from clients to the server. It
-                is structured as a set of key/value pairs, where each pair takes the form of <code
-                  class="highlighter-rouge">key=value</code> and pairs are separated by an <code
-                  class="highlighter-rouge">&amp;</code>. To mark the beginning of the query string, we add <code
-                  class="highlighter-rouge">?</code> and the end of the URL, followed by the set of key/value pairs.</p>
-              <p>An example of a query string would be: <code
-                  class="highlighter-rouge">https://www.google.com/search?q=lambda&amp;tbo=1</code>. The query string
-                portion is <code class="highlighter-rouge">?q=lambda&amp;tbo=1</code> and the key/value pairs are <code
-                  class="highlighter-rouge">q=lambda</code> and <code class="highlighter-rouge">tbo=1</code>.</p>
-              <p>Let’s add sorting capabilities to our API. We’ll provide a way for clients to hit our <code
-                  class="highlighter-rouge">/hobbits</code> and pass the field they want to use to sort the responses
-                and our API will sort the data by that field in ascending order.</p>
-              <p>Here’s the new code for the <code class="highlighter-rouge">GET /hobbits</code> endpoint:</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nx">server</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/hobbits</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <p>
+                  This route handler will execute every
+                  <code class="highlighter-rouge">DELETE</code> for a URL that
+                  begins with
+                  <code class="highlighter-rouge">/hobbits/</code> followed by
+                  any value, so
+                  <code class="highlighter-rouge">DELETE</code> requests to
+                  <code class="highlighter-rouge">/hobbits/123</code> and
+                  <code class="highlighter-rouge">/hobbits/frodo</code> will
+                  both trigger this request handler. The value passed after
+                  <code class="highlighter-rouge">/hobbits/</code> will end up
+                  as the <code class="highlighter-rouge">id</code> property on
+                  <code class="highlighter-rouge">req.params</code>.
+                </p>
+                <p>
+                  The value for a route parameter will always be
+                  <code class="highlighter-rouge">string</code>, even if the
+                  value passed is numeric. When hitting
+                  <code class="highlighter-rouge">/hobbits/123</code> in our
+                  example, the type of
+                  <code class="highlighter-rouge">req.params.id</code> will be
+                  <code class="highlighter-rouge">string</code>.
+                </p>
+                <p>
+                  Express routing has support for multiple route parameters. For
+                  example, defining a route URL that reads
+                  <code class="highlighter-rouge"
+                    >/hobbits/:id/friends/:friendId</code
+                  >, will add properties for
+                  <code class="highlighter-rouge">id</code> and
+                  <code class="highlighter-rouge">friendId</code> to
+                  <code class="highlighter-rouge">req.params</code>.
+                </p>
+                <h3 id="using-the-query-string">Using the Query String</h3>
+                <p>
+                  The query string is another strategy using the URL to pass
+                  information from clients to the server. It is structured as a
+                  set of key/value pairs, where each pair takes the form of
+                  <code class="highlighter-rouge">key=value</code> and pairs are
+                  separated by an <code class="highlighter-rouge">&amp;</code>.
+                  To mark the beginning of the query string, we add
+                  <code class="highlighter-rouge">?</code> and the end of the
+                  URL, followed by the set of key/value pairs.
+                </p>
+                <p>
+                  An example of a query string would be:
+                  <code class="highlighter-rouge"
+                    >https://www.google.com/search?q=lambda&amp;tbo=1</code
+                  >. The query string portion is
+                  <code class="highlighter-rouge">?q=lambda&amp;tbo=1</code> and
+                  the key/value pairs are
+                  <code class="highlighter-rouge">q=lambda</code> and
+                  <code class="highlighter-rouge">tbo=1</code>.
+                </p>
+                <p>
+                  Let’s add sorting capabilities to our API. We’ll provide a way
+                  for clients to hit our
+                  <code class="highlighter-rouge">/hobbits</code> and pass the
+                  field they want to use to sort the responses and our API will
+                  sort the data by that field in ascending order.
+                </p>
+                <p>
+                  Here’s the new code for the
+                  <code class="highlighter-rouge">GET /hobbits</code> endpoint:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nx">server</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/hobbits</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="c1">// query string parameters get added to req.query</span>
   <span class="kd">const</span> <span class="nx">sortField</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">sortby</span> <span class="o">||</span> <span class="dl">'</span><span class="s1">id</span><span class="dl">'</span><span class="p">;</span>
   <span class="kd">const</span> <span class="nx">hobbits</span> <span class="o">=</span> <span class="p">[</span>
@@ -645,33 +934,68 @@
   <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Visit <code class="highlighter-rouge">localhost:8000/hobbits?sortby=name</code> and the list should be
-                sorted by <code class="highlighter-rouge">name</code>. Visit <code
-                  class="highlighter-rouge">localhost:8000/hobbits?sortby=id</code> and the list should now be sorted by
-                <code class="highlighter-rouge">id</code>. If no <code class="highlighter-rouge">sortby</code> parameter
-                is provided, it should default to sorting by <code class="highlighter-rouge">id</code>.</p>
-              <p>To read values from the query string, we use the <code class="highlighter-rouge">req.query</code>
-                object added by Express. There will be a key and a value in the <code
-                  class="highlighter-rouge">req.query</code> object for each key/value pair found in the query string.
-              </p>
-              <p>The value of the parameter will be of type <code class="highlighter-rouge">array</code> if more than
-                one value is passed for the same key and <code class="highlighter-rouge">string</code> when only one
-                value is passed. This means that in the query string <code class="highlighter-rouge">?id=123</code>,
-                <code class="highlighter-rouge">req.query.id</code> will be a string, but for <code
-                  class="highlighter-rouge">?id=123&amp;id=234</code> it will be an array.</p>
-              <p>Another gotcha is that the names of query string parameters are case sensitive, <code
-                  class="highlighter-rouge">sortby</code> and <code class="highlighter-rouge">sortBy</code> are two
-                different parameters.</p>
-              <p>The rest of the code sorts the array before sending it back to the client.</p>
-              <h3 id="reading-data-from-the-request-body">Reading Data from the Request Body</h3>
-              <p>We begin by taking another look at the <code class="highlighter-rouge">POST /hobbits</code> endpoint.
-                We need to read the hobbit’s information to be able to add it to the hobbits array. Let’s do that next:
-              </p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="c1">// add this code right after const server = express();</span>
+                <p>
+                  Visit
+                  <code class="highlighter-rouge"
+                    >localhost:8000/hobbits?sortby=name</code
+                  >
+                  and the list should be sorted by
+                  <code class="highlighter-rouge">name</code>. Visit
+                  <code class="highlighter-rouge"
+                    >localhost:8000/hobbits?sortby=id</code
+                  >
+                  and the list should now be sorted by
+                  <code class="highlighter-rouge">id</code>. If no
+                  <code class="highlighter-rouge">sortby</code> parameter is
+                  provided, it should default to sorting by
+                  <code class="highlighter-rouge">id</code>.
+                </p>
+                <p>
+                  To read values from the query string, we use the
+                  <code class="highlighter-rouge">req.query</code> object added
+                  by Express. There will be a key and a value in the
+                  <code class="highlighter-rouge">req.query</code> object for
+                  each key/value pair found in the query string.
+                </p>
+                <p>
+                  The value of the parameter will be of type
+                  <code class="highlighter-rouge">array</code> if more than one
+                  value is passed for the same key and
+                  <code class="highlighter-rouge">string</code> when only one
+                  value is passed. This means that in the query string
+                  <code class="highlighter-rouge">?id=123</code>,
+                  <code class="highlighter-rouge">req.query.id</code> will be a
+                  string, but for
+                  <code class="highlighter-rouge">?id=123&amp;id=234</code> it
+                  will be an array.
+                </p>
+                <p>
+                  Another gotcha is that the names of query string parameters
+                  are case sensitive,
+                  <code class="highlighter-rouge">sortby</code> and
+                  <code class="highlighter-rouge">sortBy</code> are two
+                  different parameters.
+                </p>
+                <p>
+                  The rest of the code sorts the array before sending it back to
+                  the client.
+                </p>
+                <h3 id="reading-data-from-the-request-body">
+                  Reading Data from the Request Body
+                </h3>
+                <p>
+                  We begin by taking another look at the
+                  <code class="highlighter-rouge">POST /hobbits</code> endpoint.
+                  We need to read the hobbit’s information to be able to add it
+                  to the hobbits array. Let’s do that next:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="c1">// add this code right after const server = express();</span>
 <span class="nx">server</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span>
 
 <span class="kd">let</span> <span class="nx">hobbits</span> <span class="o">=</span> <span class="p">[</span>
@@ -698,70 +1022,124 @@
   <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">201</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span><span class="nx">hobbits</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>To make this work with the hobbits array, we first move it out of the get endpoint into the outer
-                scope. Now we have access to it from all route handlers.</p>
-              <p>Then we define a variable for manual id generation. When using a database, this is not necessary as the
-                database management system generates ids automatically.</p>
-              <p>To read data from the request body, we need to do two things:</p>
-              <ul>
-                <li>Add the line: <code class="highlighter-rouge">server.use(express.json());</code> after the express
-                  application has been created.</li>
-                <li>Read the data from the body property that Express adds to the request object. Express takes all the
-                  information that the client added to the body and makes it available as a nice JavaScript object.</li>
-              </ul>
-              <p><strong>Note that we are skipping data validation to keep this demo simple, but in a production
-                  application you would validate before attempting to save to the database.</strong></p>
-              <p>Let’s test it using Postman:</p>
-              <ul>
-                <li>Change the method to POST.</li>
-                <li>Select the <code class="highlighter-rouge">Body</code> tab underneath the address bar.</li>
-                <li>Click on the <code class="highlighter-rouge">raw</code> radio button.</li>
-                <li>From the dropdown menu to the right of the <code class="highlighter-rouge">binary</code> radio
-                  button, select `JSON (appplication/json).</li>
-                <li>Add the following JSON object as the body:</li>
-              </ul>
-              <div class="language-json highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="p">{</span><span class="w">
+                <p>
+                  To make this work with the hobbits array, we first move it out
+                  of the get endpoint into the outer scope. Now we have access
+                  to it from all route handlers.
+                </p>
+                <p>
+                  Then we define a variable for manual id generation. When using
+                  a database, this is not necessary as the database management
+                  system generates ids automatically.
+                </p>
+                <p>
+                  To read data from the request body, we need to do two things:
+                </p>
+                <ul>
+                  <li>
+                    Add the line:
+                    <code class="highlighter-rouge"
+                      >server.use(express.json());</code
+                    >
+                    after the express application has been created.
+                  </li>
+                  <li>
+                    Read the data from the body property that Express adds to
+                    the request object. Express takes all the information that
+                    the client added to the body and makes it available as a
+                    nice JavaScript object.
+                  </li>
+                </ul>
+                <p>
+                  <strong
+                    >Note that we are skipping data validation to keep this demo
+                    simple, but in a production application you would validate
+                    before attempting to save to the database.</strong
+                  >
+                </p>
+                <p>Let’s test it using Postman:</p>
+                <ul>
+                  <li>Change the method to POST.</li>
+                  <li>
+                    Select the <code class="highlighter-rouge">Body</code> tab
+                    underneath the address bar.
+                  </li>
+                  <li>
+                    Click on the
+                    <code class="highlighter-rouge">raw</code> radio button.
+                  </li>
+                  <li>
+                    From the dropdown menu to the right of the
+                    <code class="highlighter-rouge">binary</code> radio button,
+                    select `JSON (appplication/json).
+                  </li>
+                  <li>Add the following JSON object as the body:</li>
+                </ul>
+                <div class="language-json highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="p">{</span><span class="w">
   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Samwise Gamgee"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"age"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Click on <code class="highlighter-rouge">Send</code>, and the API should return the list of hobbits,
-                including Sam!</p>
-              <h5>Follow Along</h5>
-              <p>Please code along as we implement the <code class="highlighter-rouge">PUT</code> endpoint and a way for
-                the client to specify the sort direction.</p>
-              <h3 id="implement-update-functionality">Implement Update Functionality</h3>
-              <p>Let’s continue practicing reading route parameters and information from the request body. Let’s take a
-                look at our existing PUT endpoint:</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nx">server</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">/hobbits</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <p>
+                  Click on <code class="highlighter-rouge">Send</code>, and the
+                  API should return the list of hobbits, including Sam!
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Please code along as we implement the
+                  <code class="highlighter-rouge">PUT</code> endpoint and a way
+                  for the client to specify the sort direction.
+                </p>
+                <h3 id="implement-update-functionality">
+                  Implement Update Functionality
+                </h3>
+                <p>
+                  Let’s continue practicing reading route parameters and
+                  information from the request body. Let’s take a look at our
+                  existing PUT endpoint:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nx">server</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">/hobbits</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span> <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/hobbits</span><span class="dl">'</span><span class="p">,</span> <span class="na">operation</span><span class="p">:</span> <span class="dl">'</span><span class="s1">PUT</span><span class="dl">'</span> <span class="p">});</span>
 <span class="p">});</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>We start by adding support for a route parameter the clients can use to specify the id of the hobbit
-                they intend to update:</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nx">server</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">/hobbits/:id</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <p>
+                  We start by adding support for a route parameter the clients
+                  can use to specify the id of the hobbit they intend to update:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nx">server</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">/hobbits/:id</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span> <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/hobbits</span><span class="dl">'</span><span class="p">,</span> <span class="na">operation</span><span class="p">:</span> <span class="dl">'</span><span class="s1">PUT</span><span class="dl">'</span> <span class="p">});</span>
 <span class="p">});</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Next, we read the hobbit information from the request body using <code
-                  class="highlighter-rouge">req.body</code> and use it to update the existing hobbit.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="nx">server</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">/hobbits/:id</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <p>
+                  Next, we read the hobbit information from the request body
+                  using <code class="highlighter-rouge">req.body</code> and use
+                  it to update the existing hobbit.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nx">server</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">/hobbits/:id</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="nx">hobbit</span> <span class="o">=</span> <span class="nx">hobbits</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">h</span> <span class="o">=&gt;</span> <span class="nx">h</span><span class="p">.</span><span class="nx">id</span> <span class="o">==</span> <span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
 
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">hobbit</span><span class="p">)</span> <span class="p">{</span>
@@ -774,131 +1152,248 @@
   <span class="p">}</span>
 <span class="p">});</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Concentrate on the code related to reading the <code class="highlighter-rouge">id</code> from the <code
-                  class="highlighter-rouge">req.params</code> object and reading the hobbit information from <code
-                  class="highlighter-rouge">req.body</code>, the rest of the code will change as this is a simple
-                example using an in-memory array, and most production APIs will use a database.</p>
-              <h5>Challenge</h5>
-              <p>For the following exercises, use the provided database helper functions inside <code
-                  class="highlighter-rouge">/data/db.js</code> to work with the users from the database.</p>
-              <p>Implement a <code class="highlighter-rouge">GET</code> endpoint that will accept an <code
-                  class="highlighter-rouge">id</code> as a route parameter and return the user corresponding to that
-                <code class="highlighter-rouge">id</code>. If the user is not found return the correct HTTP Status Code.
-              </p>
-              <p>Implement all CRUD operations on users, including get by ID.</p>
-              <p>Add sorting and pagination support to the GET all endpoint. For pagination the client should supply the
-                API with sorting information, the number of users per page, and the page number.</p>
-              <h5>Dig Deeper</h5>
-              <ul>
-                <li>
-                  <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages" target="blank_">HTTP Messages on
-                    MDN</a><br> MDN Article about the anatomy of HTTP Requests and Responses</li>
-              </ul>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to explain the basics of the REST architectural style</h4>
-              <p><strong>RE</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer or <code
-                  class="highlighter-rouge">REST</code> is set of principles, introduced in 1999 by Roy Fielding, that
-                define a way to design distributed software. The <a
-                  href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm">original document
-                  introducing REST can be read here</a>.</p>
-              <p>In this module we’ll take a high level look at the key principles of <code
-                  class="highlighter-rouge">REST</code>.</p>
-              <h5>Overview</h5>
-              <p><code class="highlighter-rouge">REST</code> is a generally agreed-upon set of principles and
-                constraints. They are <strong>recommendations</strong>, not a standard.</p>
-              <p>When designing a RESTful Web API, keep the following principles in mind:</p>
-              <ul>
-                <li>everything is a <strong>resource</strong>.</li>
-                <li>each resource is accessible via a <strong>unique URI</strong>.</li>
-                <li>resources can have multiple <strong>representations</strong>.</li>
-                <li>communication happens over a <strong>stateless</strong> protocol (HTTP).</li>
-                <li>resource management happens via <strong>HTTP methods</strong>.</li>
-              </ul>
-              <p>By applying the <code class="highlighter-rouge">REST</code> architecture to our APIs, we can make them
-                scalable and simpler to maintain and extend.</p>
-              <h5>Follow Along</h5>
-              <p>REST APIs have six constraints:</p>
-              <ul>
-                <li>
-                  <strong>client-server</strong> architecture.</li>
-                <li>
-                  <strong>stateless</strong> architecture: each request should stand on its own, and order should not
-                  matter. No shared state.</li>
-                <li>
-                  <strong>cacheable</strong>: improves network performance.
-                  <ul>
-                    <li>
-                      <code class="highlighter-rouge">GET</code>, <code class="highlighter-rouge">PUT</code>, and <code
-                        class="highlighter-rouge">DELETE</code> should be <em>idempotent</em> (the same command executed
-                      multiple times, the state of resources on the server is exactly the same, much like pure
-                      functions)</li>
-                    <li>
-                      <code class="highlighter-rouge">POST</code> is <em>not</em> idempotent.</li>
-                    <li>Caching is a way to store and retrieve data so that future requests can be fulfilled faster
-                      without repeating expensive calculations or operations.</li>
-                  </ul>
-                </li>
-                <li>
-                  <strong>layered system</strong>: component A (a client) might or might not communicate directly with
-                  component B (the server). There may be other layers between them like logging, caching, DNS servers,
-                  load balancers, and authentication.</li>
-                <li>
-                  <strong>code on demand</strong>
-                  <ul>
-                    <li>The API returns the resource and code to act on it.</li>
-                    <li>The client only needs to know how to execute the code.</li>
-                    <li>Makes the API more flexible, upgradable and extendible.</li>
-                    <li>Most web application, send JavaScript code along with the data.</li>
-                  </ul>
-                </li>
-                <li>
-                  <strong>uniform interfaces</strong>
-                  <ul>
-                    <li>Each resource should be accesible through a single url. Not a hard requirement, but recommended.
-                    </li>
-                    <li>We should be able to manage the resources through these <em>representations</em> (the URL).</li>
-                    <li>every interaction with the resource should happen through the URL identifier we gave to it.</li>
-                    <li>Self-descriptive messages.</li>
-                    <li>
-                      <strong>HATEOAS</strong> (<strong>H</strong>yepermedia <strong>A</strong>s <strong>T</strong>he
-                      <strong>E</strong>ngine <strong>O</strong>f <strong>A</strong>pplication <strong>S</strong>tate).
-                      Much like a <em>choose your own adventure book</em>, the pages are not read in order. You start at
-                      page 1, and based on the information available, the reader (client) chooses the action to take,
-                      moving them to a different page. A good example of a hypermedia API is <a
-                        href="https://api.github.com">the GitHub API</a>.</li>
-                  </ul>
-                </li>
-              </ul>
-              <h5>Challenge</h5>
-              <p>Write a short paragraph explaining what we mean by REST in the context of web API design.</p>
-              <p>Submit your paragraph to your Project Manager.</p>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to use Express Routers to organize Web API code</h4>
-              <p>As your application matures and becomes larger, the number of resources and routes will likely follow
-                suit. This can quickly add complexity to our Web API. If you find yourself thinking <em>“this server
-                  file has too many lines of code”</em>, it’s time to brake it down into different files.</p>
-              <p>Express <strong>Routers</strong> are a way to split an application into sub-applications to make it
-                more modular and easier to maintain and reason about.</p>
-              <p>In this module we’ll:</p>
-              <ul>
-                <li>use Express Routers to reorganize our code for readability.</li>
-                <li>discuss common patterns used to structure the files and folders in our Web API.</li>
-                <li>use the <code class="highlighter-rouge">CommonJS</code> module system to share code among different
-                  files.</li>
-              </ul>
-              <h5>Overview</h5>
-              <p>An Express <code class="highlighter-rouge">Router</code> behaves like a mini Express application. It
-                can have it’s own <code class="highlighter-rouge">Routing</code> and <code
-                  class="highlighter-rouge">Middleware</code>, but it needs to exist inside of an Express application.
-                Think of routers as organizing Express applications because you write separate pieces that can later be
-                <em>composed</em> together.</p>
-              <p>This should all become clear with an example.</p>
-              <p>We’ll start with our main server file.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
+                <p>
+                  Concentrate on the code related to reading the
+                  <code class="highlighter-rouge">id</code> from the
+                  <code class="highlighter-rouge">req.params</code> object and
+                  reading the hobbit information from
+                  <code class="highlighter-rouge">req.body</code>, the rest of
+                  the code will change as this is a simple example using an
+                  in-memory array, and most production APIs will use a database.
+                </p>
+                <h5>Challenge</h5>
+                <p>
+                  For the following exercises, use the provided database helper
+                  functions inside
+                  <code class="highlighter-rouge">/data/db.js</code> to work
+                  with the users from the database.
+                </p>
+                <p>
+                  Implement a
+                  <code class="highlighter-rouge">GET</code> endpoint that will
+                  accept an <code class="highlighter-rouge">id</code> as a route
+                  parameter and return the user corresponding to that
+                  <code class="highlighter-rouge">id</code>. If the user is not
+                  found return the correct HTTP Status Code.
+                </p>
+                <p>
+                  Implement all CRUD operations on users, including get by ID.
+                </p>
+                <p>
+                  Add sorting and pagination support to the GET all endpoint.
+                  For pagination the client should supply the API with sorting
+                  information, the number of users per page, and the page
+                  number.
+                </p>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages"
+                      target="blank_"
+                      >HTTP Messages on MDN</a
+                    ><br />
+                    MDN Article about the anatomy of HTTP Requests and Responses
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to explain the basics of the REST architectural style
+                </h4>
+                <p>
+                  <strong>RE</strong>presentational <strong>S</strong>tate
+                  <strong>T</strong>ransfer or
+                  <code class="highlighter-rouge">REST</code> is set of
+                  principles, introduced in 1999 by Roy Fielding, that define a
+                  way to design distributed software. The
+                  <a
+                    href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm"
+                    >original document introducing REST can be read here</a
+                  >.
+                </p>
+                <p>
+                  In this module we’ll take a high level look at the key
+                  principles of <code class="highlighter-rouge">REST</code>.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  <code class="highlighter-rouge">REST</code> is a generally
+                  agreed-upon set of principles and constraints. They are
+                  <strong>recommendations</strong>, not a standard.
+                </p>
+                <p>
+                  When designing a RESTful Web API, keep the following
+                  principles in mind:
+                </p>
+                <ul>
+                  <li>everything is a <strong>resource</strong>.</li>
+                  <li>
+                    each resource is accessible via a
+                    <strong>unique URI</strong>.
+                  </li>
+                  <li>
+                    resources can have multiple
+                    <strong>representations</strong>.
+                  </li>
+                  <li>
+                    communication happens over a
+                    <strong>stateless</strong> protocol (HTTP).
+                  </li>
+                  <li>
+                    resource management happens via
+                    <strong>HTTP methods</strong>.
+                  </li>
+                </ul>
+                <p>
+                  By applying the
+                  <code class="highlighter-rouge">REST</code> architecture to
+                  our APIs, we can make them scalable and simpler to maintain
+                  and extend.
+                </p>
+                <h5>Follow Along</h5>
+                <p>REST APIs have six constraints:</p>
+                <ul>
+                  <li><strong>client-server</strong> architecture.</li>
+                  <li>
+                    <strong>stateless</strong> architecture: each request should
+                    stand on its own, and order should not matter. No shared
+                    state.
+                  </li>
+                  <li>
+                    <strong>cacheable</strong>: improves network performance.
+                    <ul>
+                      <li>
+                        <code class="highlighter-rouge">GET</code>,
+                        <code class="highlighter-rouge">PUT</code>, and
+                        <code class="highlighter-rouge">DELETE</code> should be
+                        <em>idempotent</em> (the same command executed multiple
+                        times, the state of resources on the server is exactly
+                        the same, much like pure functions)
+                      </li>
+                      <li>
+                        <code class="highlighter-rouge">POST</code> is
+                        <em>not</em> idempotent.
+                      </li>
+                      <li>
+                        Caching is a way to store and retrieve data so that
+                        future requests can be fulfilled faster without
+                        repeating expensive calculations or operations.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>layered system</strong>: component A (a client)
+                    might or might not communicate directly with component B
+                    (the server). There may be other layers between them like
+                    logging, caching, DNS servers, load balancers, and
+                    authentication.
+                  </li>
+                  <li>
+                    <strong>code on demand</strong>
+                    <ul>
+                      <li>
+                        The API returns the resource and code to act on it.
+                      </li>
+                      <li>
+                        The client only needs to know how to execute the code.
+                      </li>
+                      <li>
+                        Makes the API more flexible, upgradable and extendible.
+                      </li>
+                      <li>
+                        Most web application, send JavaScript code along with
+                        the data.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>uniform interfaces</strong>
+                    <ul>
+                      <li>
+                        Each resource should be accesible through a single url.
+                        Not a hard requirement, but recommended.
+                      </li>
+                      <li>
+                        We should be able to manage the resources through these
+                        <em>representations</em> (the URL).
+                      </li>
+                      <li>
+                        every interaction with the resource should happen
+                        through the URL identifier we gave to it.
+                      </li>
+                      <li>Self-descriptive messages.</li>
+                      <li>
+                        <strong>HATEOAS</strong> (<strong>H</strong>yepermedia
+                        <strong>A</strong>s <strong>T</strong>he
+                        <strong>E</strong>ngine <strong>O</strong>f
+                        <strong>A</strong>pplication <strong>S</strong>tate).
+                        Much like a <em>choose your own adventure book</em>, the
+                        pages are not read in order. You start at page 1, and
+                        based on the information available, the reader (client)
+                        chooses the action to take, moving them to a different
+                        page. A good example of a hypermedia API is
+                        <a href="https://api.github.com">the GitHub API</a>.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <h5>Challenge</h5>
+                <p>
+                  Write a short paragraph explaining what we mean by REST in the
+                  context of web API design.
+                </p>
+                <p>Submit your paragraph to your Project Manager.</p>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to use Express Routers to organize Web API code
+                </h4>
+                <p>
+                  As your application matures and becomes larger, the number of
+                  resources and routes will likely follow suit. This can quickly
+                  add complexity to our Web API. If you find yourself thinking
+                  <em>“this server file has too many lines of code”</em>, it’s
+                  time to brake it down into different files.
+                </p>
+                <p>
+                  Express <strong>Routers</strong> are a way to split an
+                  application into sub-applications to make it more modular and
+                  easier to maintain and reason about.
+                </p>
+                <p>In this module we’ll:</p>
+                <ul>
+                  <li>
+                    use Express Routers to reorganize our code for readability.
+                  </li>
+                  <li>
+                    discuss common patterns used to structure the files and
+                    folders in our Web API.
+                  </li>
+                  <li>
+                    use the
+                    <code class="highlighter-rouge">CommonJS</code> module
+                    system to share code among different files.
+                  </li>
+                </ul>
+                <h5>Overview</h5>
+                <p>
+                  An Express
+                  <code class="highlighter-rouge">Router</code> behaves like a
+                  mini Express application. It can have it’s own
+                  <code class="highlighter-rouge">Routing</code> and
+                  <code class="highlighter-rouge">Middleware</code>, but it
+                  needs to exist inside of an Express application. Think of
+                  routers as organizing Express applications because you write
+                  separate pieces that can later be <em>composed</em> together.
+                </p>
+                <p>This should all become clear with an example.</p>
+                <p>We’ll start with our main server file.</p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
 
@@ -906,21 +1401,37 @@
 
 <span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8000</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">API running on port 8000</span><span class="dl">'</span><span class="p">));</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>If our applications looked like this, we wouldn’t need routers, but now imagine that this application
-                needs endpoints to see a list of users, get details for a single user, add users, modify existing users,
-                and also inactivate users. That is at least 5 endpoints for the <code
-                  class="highlighter-rouge">users</code> resource.</p>
-              <p>Now imagine this application also needs to deal with products, orders, returns, categories, providers,
-                warehouses, clients, employees, and more. Even if we only have 5 endpoints per resource, each endpoint
-                will have many lines of code, and you can see how trying to cram all that code in a single file could
-                get unwieldy real fast.</p>
-              <p>Let’s rewrite it to separate the main server file from the file handling the routes for users.</p>
-              <p>Create a file to handle all routes related to the user resource.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="c1">// inside /users/userRoutes.js &lt;- this can be place anywhere and called anything</span>
+                <p>
+                  If our applications looked like this, we wouldn’t need
+                  routers, but now imagine that this application needs endpoints
+                  to see a list of users, get details for a single user, add
+                  users, modify existing users, and also inactivate users. That
+                  is at least 5 endpoints for the
+                  <code class="highlighter-rouge">users</code> resource.
+                </p>
+                <p>
+                  Now imagine this application also needs to deal with products,
+                  orders, returns, categories, providers, warehouses, clients,
+                  employees, and more. Even if we only have 5 endpoints per
+                  resource, each endpoint will have many lines of code, and you
+                  can see how trying to cram all that code in a single file
+                  could get unwieldy real fast.
+                </p>
+                <p>
+                  Let’s rewrite it to separate the main server file from the
+                  file handling the routes for users.
+                </p>
+                <p>
+                  Create a file to handle all routes related to the user
+                  resource.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="c1">// inside /users/userRoutes.js &lt;- this can be place anywhere and called anything</span>
 <span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Router</span><span class="p">();</span> <span class="c1">// notice the Uppercase R</span>
@@ -944,13 +1455,18 @@
 <span class="c1">// after the route has been fully configured, then we export it so it can be required where needed</span>
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">router</span><span class="p">;</span> <span class="c1">// standard convention dictates that this is the last line on the file</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Now, even if the user resource needs 8 or 10 endpoints, they are packaged neatly into this file.</p>
-              <p>How can we use it in our main file? Like so:</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
+                <p>
+                  Now, even if the user resource needs 8 or 10 endpoints, they
+                  are packaged neatly into this file.
+                </p>
+                <p>How can we use it in our main file? Like so:</p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">const</span> <span class="nx">userRoutes</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./users/userRoutes</span><span class="dl">'</span><span class="p">);</span>
 <span class="kd">const</span> <span class="nx">productRoutes</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./products/productRoutes</span><span class="dl">'</span><span class="p">);</span>
@@ -964,17 +1480,30 @@
 
 <span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8000</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">API running on port 8000</span><span class="dl">'</span><span class="p">));</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Much cleaner, we added three sets of endpoints to our server where each needs only two lines of easy to
-                read and understand code.</p>
-              <p>There is an alternative syntax for writing route handlers, but we’ll leave that for you to explore.</p>
-              <p>Also, note that <strong>it is possible to have a central router that represents our API and have that
-                  router import the routes</strong>. This logic cleans up our main server file even more. Let’s see a
-                quick example of that.</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
+                <p>
+                  Much cleaner, we added three sets of endpoints to our server
+                  where each needs only two lines of easy to read and understand
+                  code.
+                </p>
+                <p>
+                  There is an alternative syntax for writing route handlers, but
+                  we’ll leave that for you to explore.
+                </p>
+                <p>
+                  Also, note that
+                  <strong
+                    >it is possible to have a central router that represents our
+                    API and have that router import the routes</strong
+                  >. This logic cleans up our main server file even more. Let’s
+                  see a quick example of that.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">const</span> <span class="nx">apiRoutes</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./api/apiRoutes</span><span class="dl">'</span><span class="p">);</span>
 
@@ -984,12 +1513,17 @@
 
 <span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8000</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">API running on port 8000</span><span class="dl">'</span><span class="p">));</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>And the <code class="highlighter-rouge">apiRoutes</code> could look like this:</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="c1">// inside /api/apiRoutes.js &lt;- this can be place anywhere and called anything</span>
+                <p>
+                  And the <code class="highlighter-rouge">apiRoutes</code> could
+                  look like this:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="c1">// inside /api/apiRoutes.js &lt;- this can be place anywhere and called anything</span>
 <span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="c1">// if the other routers are not nested inside /api then the paths would change</span>
@@ -1010,48 +1544,95 @@
 <span class="c1">// after the route has been fully configured, then we export it so it can be required where needed</span>
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">router</span><span class="p">;</span> <span class="c1">// standard convention dictates that this is the last line on the file</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>As you can see, routers can <em>use</em> other routers.</p>
-              <p>The <code class="highlighter-rouge">userRoutes</code>, <code
-                  class="highlighter-rouge">productRoutes</code> and <code class="highlighter-rouge">clientRoutes</code>
-                remain unchanged (other than relocating them inside the API folder).</p>
-              <p>In the next section, follow along as we practice using Routers.</p>
-              <h5>Follow Along</h5>
-              <p>Let’s implement a simple API that returns strings, but takes advantage of Express Routers. Express
-                routers are overkill for such a simple application, but in larger applications, there would be many
-                benefits to taking this approach.</p>
-              <p>We’ll build it from scratch. First, follow these steps to create the folder and main server file:</p>
-              <ul>
-                <li>create an empty folder for our Web API, feel free to name it anything you’d like.</li>
-                <li>
-                  <strong>CD into the folder</strong> you just created and type <code class="highlighter-rouge">npm init
-                    -y</code> to generate a default <code class="highlighter-rouge">package.json</code> file. The <code
-                    class="highlighter-rouge">-y</code> flag saves time by answering <code
-                    class="highlighter-rouge">yes</code> to all the questions that the <code
-                    class="highlighter-rouge">npm init</code> command would ask one at a time.</li>
-                <li>open the folder in your favorite text editor.</li>
-                <li>inside the <code class="highlighter-rouge">package.json</code> file, change <code
-                    class="highlighter-rouge">"test": "echo \"Error: no test specified\" &amp;&amp; exit 1"</code>
-                  inside the <code class="highlighter-rouge">scripts</code> object to read: <code
-                    class="highlighter-rouge">"start": "nodemon index.js"</code>. This will let us run our server using
-                  <code class="highlighter-rouge">nodemon</code> by typing <code class="highlighter-rouge">npm
-                    start</code> at the command line/terminal. <strong>Make sure to save the file.</strong>
-                </li>
-                <li>we need to install <code class="highlighter-rouge">nodemon</code> as a development time dependency
-                  only because it is not needed when we deploy our server to production. Type <code
-                    class="highlighter-rouge">npm install -D nodemon</code> and that will add it to the <code
-                    class="highlighter-rouge">devDependencies</code> property in our <code
-                    class="highlighter-rouge">package.json</code> file.</li>
-                <li>create a file to host the server code, we’ll call it <code
-                    class="highlighter-rouge">index.js</code>.</li>
-                <li>add the basic code to create our Express server and have a default <code
-                    class="highlighter-rouge">/</code> endpoint we can use to test that our server is responding to
-                  requests.</li>
-              </ul>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
+                <p>As you can see, routers can <em>use</em> other routers.</p>
+                <p>
+                  The <code class="highlighter-rouge">userRoutes</code>,
+                  <code class="highlighter-rouge">productRoutes</code> and
+                  <code class="highlighter-rouge">clientRoutes</code> remain
+                  unchanged (other than relocating them inside the API folder).
+                </p>
+                <p>
+                  In the next section, follow along as we practice using
+                  Routers.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Let’s implement a simple API that returns strings, but takes
+                  advantage of Express Routers. Express routers are overkill for
+                  such a simple application, but in larger applications, there
+                  would be many benefits to taking this approach.
+                </p>
+                <p>
+                  We’ll build it from scratch. First, follow these steps to
+                  create the folder and main server file:
+                </p>
+                <ul>
+                  <li>
+                    create an empty folder for our Web API, feel free to name it
+                    anything you’d like.
+                  </li>
+                  <li>
+                    <strong>CD into the folder</strong> you just created and
+                    type <code class="highlighter-rouge">npm init -y</code> to
+                    generate a default
+                    <code class="highlighter-rouge">package.json</code> file.
+                    The <code class="highlighter-rouge">-y</code> flag saves
+                    time by answering
+                    <code class="highlighter-rouge">yes</code> to all the
+                    questions that the
+                    <code class="highlighter-rouge">npm init</code> command
+                    would ask one at a time.
+                  </li>
+                  <li>open the folder in your favorite text editor.</li>
+                  <li>
+                    inside the
+                    <code class="highlighter-rouge">package.json</code> file,
+                    change
+                    <code class="highlighter-rouge"
+                      >"test": "echo \"Error: no test specified\" &amp;&amp;
+                      exit 1"</code
+                    >
+                    inside the
+                    <code class="highlighter-rouge">scripts</code> object to
+                    read:
+                    <code class="highlighter-rouge"
+                      >"start": "nodemon index.js"</code
+                    >. This will let us run our server using
+                    <code class="highlighter-rouge">nodemon</code> by typing
+                    <code class="highlighter-rouge">npm start</code> at the
+                    command line/terminal.
+                    <strong>Make sure to save the file.</strong>
+                  </li>
+                  <li>
+                    we need to install
+                    <code class="highlighter-rouge">nodemon</code> as a
+                    development time dependency only because it is not needed
+                    when we deploy our server to production. Type
+                    <code class="highlighter-rouge"
+                      >npm install -D nodemon</code
+                    >
+                    and that will add it to the
+                    <code class="highlighter-rouge">devDependencies</code>
+                    property in our
+                    <code class="highlighter-rouge">package.json</code> file.
+                  </li>
+                  <li>
+                    create a file to host the server code, we’ll call it
+                    <code class="highlighter-rouge">index.js</code>.
+                  </li>
+                  <li>
+                    add the basic code to create our Express server and have a
+                    default <code class="highlighter-rouge">/</code> endpoint we
+                    can use to test that our server is responding to requests.
+                  </li>
+                </ul>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
 
@@ -1060,24 +1641,45 @@
 <span class="c1">// using port 9000 for this example</span>
 <span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">9000</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">API running on port 9000</span><span class="dl">'</span><span class="p">));</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <ul>
-                <li>add the <code class="highlighter-rouge">express</code> npm module: <code
-                    class="highlighter-rouge">npm install express</code>.</li>
-                <li>start the server by typing <code class="highlighter-rouge">npm start</code>.</li>
-                <li>test it by visiting: <a href="http://localhost:9000">http://localhost:9000</a>0 in your browser.
-                </li>
-              </ul>
-              <p>Let’s add our first router to manage the <code class="highlighter-rouge">races</code> resource.</p>
-              <ul>
-                <li>create a folder called <code class="highlighter-rouge">races</code> to host our router.</li>
-                <li>create a file called <code class="highlighter-rouge">raceRoutes.js</code> and add the following
-                  code:</li>
-              </ul>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
+                <ul>
+                  <li>
+                    add the <code class="highlighter-rouge">express</code> npm
+                    module:
+                    <code class="highlighter-rouge">npm install express</code>.
+                  </li>
+                  <li>
+                    start the server by typing
+                    <code class="highlighter-rouge">npm start</code>.
+                  </li>
+                  <li>
+                    test it by visiting:
+                    <a href="http://localhost:9000">http://localhost:9000</a>0
+                    in your browser.
+                  </li>
+                </ul>
+                <p>
+                  Let’s add our first router to manage the
+                  <code class="highlighter-rouge">races</code> resource.
+                </p>
+                <ul>
+                  <li>
+                    create a folder called
+                    <code class="highlighter-rouge">races</code> to host our
+                    router.
+                  </li>
+                  <li>
+                    create a file called
+                    <code class="highlighter-rouge">raceRoutes.js</code> and add
+                    the following code:
+                  </li>
+                </ul>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Router</span><span class="p">();</span>
 
@@ -1089,18 +1691,33 @@
 
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">router</span><span class="p">;</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Now open your <code class="highlighter-rouge">index.js</code> file and use the newly created router by
-                following these steps.</p>
-              <ul>
-                <li>require the <code class="highlighter-rouge">raceRoutes.js</code> file after requiring Express.</li>
-                <li>use the race router to handle the <code class="highlighter-rouge">/races</code> endpoint.</li>
-              </ul>
-              <p>Our <code class="highlighter-rouge">index.js</code> file now looks like this:</p>
-              <div class="language-js highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
+                <p>
+                  Now open your
+                  <code class="highlighter-rouge">index.js</code> file and use
+                  the newly created router by following these steps.
+                </p>
+                <ul>
+                  <li>
+                    require the
+                    <code class="highlighter-rouge">raceRoutes.js</code> file
+                    after requiring Express.
+                  </li>
+                  <li>
+                    use the race router to handle the
+                    <code class="highlighter-rouge">/races</code> endpoint.
+                  </li>
+                </ul>
+                <p>
+                  Our <code class="highlighter-rouge">index.js</code> file now
+                  looks like this:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">const</span> <span class="nx">raceRoutes</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./races/raceRoutes</span><span class="dl">'</span><span class="p">);</span>
 
@@ -1112,278 +1729,391 @@
 
 <span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">9000</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">API running on port 9000</span><span class="dl">'</span><span class="p">));</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Visiting <a href="http://localhost:9000/races">http://localhost:9000/races</a>s should return our array
-                of strings.</p>
-              <p>Great job! You are on your way to writing well-structured APIs that other team members (including your
-                future self) will love working with!</p>
-              <h5>Challenge</h5>
-              <p>Using your newly learned Express Router expertise, add a second Router to handle the <code
-                  class="highlighter-rouge">/villains</code> endpoint. Return a list of names of two or three villain
-                characters you remember (even better if it’s from the Lord of The Rings to be consistent).</p>
-              <h5>Dig Deeper</h5>
-              <ul>
-                <li>
-                  <a href="https://expressjs.com/en/4x/api.html#router" target="blank_">Express Router
-                    Documentation</a><br> Express Router Guide</li>
-              </ul>
-              <hr>
-              <h2>
-                <a id="guided-project" class="anchor" href="#guided-project" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Guided Project</h2>
-              <h3>Node API 2 Guided Project</h3>
-              <p>Starter code for Node API 2 lecture</p>
-              <a target="_blank" href="https://github.com/LambdaSchool/node-api2-guided">GitHub Repo</a>
-              <hr>
-              <h2 class="display-4">
-                <a id="project" class="anchor" href="#project" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Project</h2>
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <h5><a target="_blank" href="https://github.com/LambdaSchool/node-api2-project">Node API 2 Project</a>
-                  </h5>
-                  <p>Afternoon project for Node API 2 Module</p>
-                </li>
-              </ul>
-              <h2 class="display-4">
-                <a id="review" class="anchor" href="#review" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Review</h2>
-              <h3 class="display-5">Class Recordings</h3>
-              <p class="lead">You can use class recordings to help you master the material.</p>
-              <div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <strong><a target="_blank" href="https://youtu.be/5hM03hEC2IQ">Server-Side Routing with Express for
-                        Web PT 18 w/ Jason Maurer</a></strong>
-                    <p>Node’s HTTP server uses a single request handler function for all requests. Express provides a
-                      way to break the application into different request handlers for each URL+ HTTP method
-                      combination.</p>
-                  </li>
-                  <li class="list-group-item">
-                    <a href="/archive/FSW/module/recBjiSulq0PYLCIj">All previous recordings</a>
+                <p>
+                  Visiting
+                  <a href="http://localhost:9000/races"
+                    >http://localhost:9000/races</a
+                  >s should return our array of strings.
+                </p>
+                <p>
+                  Great job! You are on your way to writing well-structured APIs
+                  that other team members (including your future self) will love
+                  working with!
+                </p>
+                <h5>Challenge</h5>
+                <p>
+                  Using your newly learned Express Router expertise, add a
+                  second Router to handle the
+                  <code class="highlighter-rouge">/villains</code> endpoint.
+                  Return a list of names of two or three villain characters you
+                  remember (even better if it’s from the Lord of The Rings to be
+                  consistent).
+                </p>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://expressjs.com/en/4x/api.html#router"
+                      target="blank_"
+                      >Express Router Documentation</a
+                    ><br />
+                    Express Router Guide
                   </li>
                 </ul>
-              </div>
-              <h3 class="display-5">Demonstrate Mastery</h3>
-              <p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the
-                following:</p>
-              <ul>
-                <li>Objective challenge: <p>Your assignment is to add endpoints to handle <code
-                      class="highlighter-rouge">POST</code>, <code class="highlighter-rouge">PUT</code> and <code
-                      class="highlighter-rouge">DELETE</code> for the <code class="highlighter-rouge">/users</code>
-                    route. Returning a JSON response similar to what we did in the code-along is sufficient.</p>
-                </li>
-                <li>Objective challenge: <p>For the following exercises, use the provided database helper functions
-                    inside <code class="highlighter-rouge">/data/db.js</code> to work with the users from the database.
-                  </p>
-                  <p>Implement a <code class="highlighter-rouge">GET</code> endpoint that will accept an <code
-                      class="highlighter-rouge">id</code> as a route parameter and return the user corresponding to that
-                    <code class="highlighter-rouge">id</code>. If the user is not found return the correct HTTP Status
-                    Code.</p>
-                  <p>Implement all CRUD operations on users, including get by ID.</p>
-                  <p>Add sorting and pagination support to the GET all endpoint. For pagination the client should supply
-                    the API with sorting information, the number of users per page, and the page number.</p>
-                </li>
-                <li>Objective challenge: <p>Write a short paragraph explaining what we mean by REST in the context of
-                    web API design.</p>
-                  <p>Submit your paragraph to your Project Manager.</p>
-                </li>
-                <li>Objective challenge: <p>Using your newly learned Express Router expertise, add a second Router to
-                    handle the <code class="highlighter-rouge">/villains</code> endpoint. Return a list of names of two
-                    or three villain characters you remember (even better if it’s from the Lord of The Rings to be
-                    consistent).</p>
-                </li>
-                <li>Guided Project: Node API 2 Guided Project</li>
-                <li>Project: Node API 2 Project</li>
-                <li>Code Challenge: SumAndProduct</li>
+                <hr />
+                <h2>
+                  <a
+                    id="guided-project"
+                    class="anchor"
+                    href="#guided-project"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Guided Project
+                </h2>
+                <h3>Node API 2 Guided Project</h3>
+                <p>Starter code for Node API 2 lecture</p>
+                <a
+                  target="_blank"
+                  href="https://github.com/LambdaSchool/node-api2-guided"
+                  >GitHub Repo</a
+                >
+                <hr />
+                <h2 class="display-4">
+                  <a
+                    id="project"
+                    class="anchor"
+                    href="#project"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Project
+                </h2>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <h5>
+                      <a
+                        target="_blank"
+                        href="https://github.com/LambdaSchool/node-api2-project"
+                        >Node API 2 Project</a
+                      >
+                    </h5>
+                    <p>Afternoon project for Node API 2 Module</p>
+                  </li>
+                </ul>
+                <h2 class="display-4">
+                  <a
+                    id="review"
+                    class="anchor"
+                    href="#review"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Review
+                </h2>
+                <h3 class="display-5">Class Recordings</h3>
+                <p class="lead">
+                  You can use class recordings to help you master the material.
+                </p>
+                <div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong
+                        ><a target="_blank" href="https://youtu.be/5hM03hEC2IQ"
+                          >Server-Side Routing with Express for Web PT 18 w/
+                          Jason Maurer</a
+                        ></strong
+                      >
+                      <p>
+                        Node’s HTTP server uses a single request handler
+                        function for all requests. Express provides a way to
+                        break the application into different request handlers
+                        for each URL+ HTTP method combination.
+                      </p>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="/archive/FSW/module/recBjiSulq0PYLCIj"
+                        >All previous recordings</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <h3 class="display-5">Demonstrate Mastery</h3>
+                <p>
+                  To demonstrate mastery of this module, you need to complete
+                  and pass a code review on each of the following:
+                </p>
+                <ul>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      Your assignment is to add endpoints to handle
+                      <code class="highlighter-rouge">POST</code>,
+                      <code class="highlighter-rouge">PUT</code> and
+                      <code class="highlighter-rouge">DELETE</code> for the
+                      <code class="highlighter-rouge">/users</code> route.
+                      Returning a JSON response similar to what we did in the
+                      code-along is sufficient.
+                    </p>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      For the following exercises, use the provided database
+                      helper functions inside
+                      <code class="highlighter-rouge">/data/db.js</code> to work
+                      with the users from the database.
+                    </p>
+                    <p>
+                      Implement a
+                      <code class="highlighter-rouge">GET</code> endpoint that
+                      will accept an
+                      <code class="highlighter-rouge">id</code> as a route
+                      parameter and return the user corresponding to that
+                      <code class="highlighter-rouge">id</code>. If the user is
+                      not found return the correct HTTP Status Code.
+                    </p>
+                    <p>
+                      Implement all CRUD operations on users, including get by
+                      ID.
+                    </p>
+                    <p>
+                      Add sorting and pagination support to the GET all
+                      endpoint. For pagination the client should supply the API
+                      with sorting information, the number of users per page,
+                      and the page number.
+                    </p>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      Write a short paragraph explaining what we mean by REST in
+                      the context of web API design.
+                    </p>
+                    <p>Submit your paragraph to your Project Manager.</p>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      Using your newly learned Express Router expertise, add a
+                      second Router to handle the
+                      <code class="highlighter-rouge">/villains</code> endpoint.
+                      Return a list of names of two or three villain characters
+                      you remember (even better if it’s from the Lord of The
+                      Rings to be consistent).
+                    </p>
+                  </li>
+                  <li>Guided Project: Node API 2 Guided Project</li>
+                  <li>Project: Node API 2 Project</li>
+                  <li>Code Challenge: SumAndProduct</li>
 
-                <li>Code Challenge: StackMachine</li>
-              </ul>
+                  <li>Code Challenge: StackMachine</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-        dataLayer.push( arguments );
-      }
-      gtag( 'js', new Date() );
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
 
-      gtag( 'config', 'UA-80850900-4' );
-    </script>
-    <script type="text/javascript">
-      function getDomain() {
-        const domainName = window.location.hostname.split( '.' )[ 1 ];
-        return `${domainName}.com`;
-      }
-    </script>
-    <script src="" integrity="" crossorigin="anonymous"></script>
-    <script>
-      window.jQuery || document.write( '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>' )
-    </script>
-    <script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script>
-    <script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
-    <script src="/assets/js/activate.js"></script>
-    <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      SimpleJekyllSearch.init( {
-        searchInput: document.getElementById( 'search-input' ),
-        resultsContainer: document.getElementById( 'results-container' ),
-        dataSource: '/search.json',
-        searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Server-Side Routing with Express">{title}</a></li>',
-        noResultsText: '',
-        limit: 10,
-        fuzzy: true,
-      } )
-    </script>
-    <script src="/assets/js/mermaid.min.js"></script>
-    <script type="text/javascript">
-      if ( window.attachEvent ) {
-        window.attachEvent( 'onload', verifySignedIn );
-      } else {
-        if ( window.onload ) {
-          var currentOnLoadFn = window.onload;
-          var newOnLoadFn = function ( evt ) {
-            currentOnLoadFn( evt );
-            verifySignedIn();
-          };
-          window.onload = newOnLoadFn;
+        gtag("config", "UA-80850900-4");
+      </script>
+      <script type="text/javascript">
+        function getDomain() {
+          const domainName = window.location.hostname.split(".")[1];
+          return `${domainName}.com`;
+        }
+      </script>
+      <script src="" integrity="" crossorigin="anonymous"></script>
+      <script>
+        window.jQuery ||
+          document.write(
+            '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>'
+          );
+      </script>
+      <script
+        src="/assets/js/vendor/popper.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="/dist/js/bootstrap.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script src="/assets/js/activate.js"></script>
+      <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        SimpleJekyllSearch.init({
+          searchInput: document.getElementById("search-input"),
+          resultsContainer: document.getElementById("results-container"),
+          dataSource: "/search.json",
+          searchResultTemplate:
+            '<li class="list-group-item"><a href="{url}" title="Server-Side Routing with Express">{title}</a></li>',
+          noResultsText: "",
+          limit: 10,
+          fuzzy: true,
+        });
+      </script>
+      <script src="/assets/js/mermaid.min.js"></script>
+      <script type="text/javascript">
+        if (window.attachEvent) {
+          window.attachEvent("onload", verifySignedIn);
         } else {
-          window.onload = verifySignedIn;
-        }
-      }
-
-      function verifySignedIn() {
-        if ( isPagePublic() ) {
-          return showPageContents();
-        }
-
-        window.__user = null;
-        isSignedIn().then( ( user ) => {
-          window.__user = user;
-
-          if ( !user.signedIn ) {
-            redirectToSignIn();
-          } else if ( !user.student && !window.__openToAdmissions ) {
-            showUnauthorizedMessage();
+          if (window.onload) {
+            var currentOnLoadFn = window.onload;
+            var newOnLoadFn = function (evt) {
+              currentOnLoadFn(evt);
+              verifySignedIn();
+            };
+            window.onload = newOnLoadFn;
           } else {
-            showPageContents();
-          }
-        } );
-      }
-
-      function isPagePublic() {
-        const openCourses = [
-          'and-pre',
-          'ds-pre',
-          'fsw-pre',
-          'help',
-          'ios-pre',
-        ];
-
-        const openPages = [
-          'cs-and',
-          'cs-fsw',
-          'cs-ios',
-          'cr',
-          'ds',
-          'jx',
-          'p4s',
-          'ux',
-        ];
-
-        const pathParts = window.location.pathname.split( '/' );
-        const courseName = pathParts[ 1 ];
-        const pageName = pathParts[ pathParts.length - 1 ];
-
-        return openCourses.includes( courseName ) || openPages.includes( pageName );
-      }
-
-      function isSignedIn() {
-        const isDeployPreview = window.location.hostname.startsWith( 'deploy-preview' ) && window.location.hostname
-          .endsWith( 'netlify.com' );
-
-        if ( isDeployPreview ) return Promise.resolve( {
-          signedIn: true,
-          student: true
-        } );
-
-        return fetch( `${getAuthBaseUrl()}/whoami`, {
-            credentials: 'include'
-          } )
-          .then( ( response ) => response.text() )
-          .then( ( userAsText ) => userAsText ? JSON.parse( userAsText ) : null )
-          .then( ( userData ) => ( {
-            signedIn: Boolean( userData ),
-            student: Boolean( userData && userData.airtableId ),
-            id: userData ? userData.id : null,
-            email: userData ? userData.email : null
-          } ) )
-          .catch( ( error ) => {} );
-      }
-
-      function redirectToSignIn() {
-        const signInUrl =
-          `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
-        const redirectMessage = document.querySelector( '#redirect-message' );
-        redirectMessage.style.display = "block";
-        redirectMessage.innerHTML =
-          `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
-        window.location = signInUrl;
-      }
-
-      function showPageContents() {
-        document.querySelector( '#content-wrapper' ).style.visibility = 'visible';
-      }
-
-      function showUnauthorizedMessage() {
-        document.querySelector( '#unauthorized-message' ).style.display = 'block';
-      }
-
-      function getAuthBaseUrl() {
-        const domain = getDomain();
-        const authBaseUrl = `https://auth.${domain}`;
-        return authBaseUrl;
-      }
-    </script>
-    <script src="/assets/js/docs.min.js"></script>
-    <script>
-      var MathJax = {
-        tex: {
-          inlineMath: [
-            [ '$$', '$$' ],
-            [ '\[', '\])' ]
-          ]
-        },
-        "HTML-CSS": {
-          styles: {
-            ".MathJax span": {
-              color: "#000000"
-            }
+            window.onload = verifySignedIn;
           }
         }
-      }
-    </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
-    </script>
-    <script>
-      handleExternalLinks();
 
-      function handleExternalLinks() {
-        const domain = getDomain();
-        const links = document.querySelectorAll( 'a' );
-        return links.forEach( ( link ) => {
-          if ( !link.host.includes( domain ) ) link.target = '_blank';
-        } )
-      };
-    </script>
-  </div>
-</body>
+        function verifySignedIn() {
+          if (isPagePublic()) {
+            return showPageContents();
+          }
 
+          window.__user = null;
+          isSignedIn().then((user) => {
+            window.__user = user;
+
+            if (!user.signedIn) {
+              redirectToSignIn();
+            } else if (!user.student && !window.__openToAdmissions) {
+              showUnauthorizedMessage();
+            } else {
+              showPageContents();
+            }
+          });
+        }
+
+        function isPagePublic() {
+          const openCourses = [
+            "and-pre",
+            "ds-pre",
+            "fsw-pre",
+            "help",
+            "ios-pre",
+          ];
+
+          const openPages = [
+            "cs-and",
+            "cs-fsw",
+            "cs-ios",
+            "cr",
+            "ds",
+            "jx",
+            "p4s",
+            "ux",
+          ];
+
+          const pathParts = window.location.pathname.split("/");
+          const courseName = pathParts[1];
+          const pageName = pathParts[pathParts.length - 1];
+
+          return (
+            openCourses.includes(courseName) || openPages.includes(pageName)
+          );
+        }
+
+        function isSignedIn() {
+          const isDeployPreview =
+            window.location.hostname.startsWith("deploy-preview") &&
+            window.location.hostname.endsWith("netlify.com");
+
+          if (isDeployPreview)
+            return Promise.resolve({
+              signedIn: true,
+              student: true,
+            });
+
+          return fetch(`${getAuthBaseUrl()}/whoami`, {
+            credentials: "include",
+          })
+            .then((response) => response.text())
+            .then((userAsText) => (userAsText ? JSON.parse(userAsText) : null))
+            .then((userData) => ({
+              signedIn: Boolean(userData),
+              student: Boolean(userData && userData.airtableId),
+              id: userData ? userData.id : null,
+              email: userData ? userData.email : null,
+            }))
+            .catch((error) => {});
+        }
+
+        function redirectToSignIn() {
+          const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(
+            window.location.href
+          )}&reason=auth_required`;
+          const redirectMessage = document.querySelector("#redirect-message");
+          redirectMessage.style.display = "block";
+          redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`;
+          window.location = signInUrl;
+        }
+
+        function showPageContents() {
+          document.querySelector("#content-wrapper").style.visibility =
+            "visible";
+        }
+
+        function showUnauthorizedMessage() {
+          document.querySelector("#unauthorized-message").style.display =
+            "block";
+        }
+
+        function getAuthBaseUrl() {
+          const domain = getDomain();
+          const authBaseUrl = `https://auth.${domain}`;
+          return authBaseUrl;
+        }
+      </script>
+      <script src="/assets/js/docs.min.js"></script>
+      <script>
+        var MathJax = {
+          tex: {
+            inlineMath: [
+              ["$$", "$$"],
+              ["\[", "\])"],
+            ],
+          },
+          "HTML-CSS": {
+            styles: {
+              ".MathJax span": {
+                color: "#000000",
+              },
+            },
+          },
+        };
+      </script>
+      <script
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+        type="text/javascript"
+      ></script>
+      <script>
+        handleExternalLinks();
+
+        function handleExternalLinks() {
+          const domain = getDomain();
+          const links = document.querySelectorAll("a");
+          return links.forEach((link) => {
+            if (!link.host.includes(domain)) link.target = "_blank";
+          });
+        }
+      </script>
+    </div>
+  </body>
 </html>

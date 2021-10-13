@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
@@ -39,32 +37,32 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Guided Project](#guided-project)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Guided Project](#guided-project)
+- [Project](#project)
+- [Review](#review)
 
 # Introduction to Node.js and Express
 
@@ -72,20 +70,20 @@
 
 On this lecture we will:
 
--   introduce `node.js` and `Express`.
-    -   what is `node.js`, what can it do? what can’t it do?
-    -   what is `Express`? why use it?
-    -   relationship between `Express` and `node.js`.
--   see a high level overview of the main features of `Express`.
--   learn how to manually test our Web API using a tool called `Postman`.
--   create our first CRUD Web API.
+- introduce `node.js` and `Express`.
+  - what is `node.js`, what can it do? what can’t it do?
+  - what is `Express`? why use it?
+  - relationship between `Express` and `node.js`.
+- see a high level overview of the main features of `Express`.
+- learn how to manually test our Web API using a tool called `Postman`.
+- create our first CRUD Web API.
 
 **At the end of this module, you should be able to:**
 
--   explain what Node.js is and its core features
--   explain what Express is and its core features
--   create an API that can respond to GET requests
--   use postman to manually test Web APIs
+- explain what Node.js is and its core features
+- explain what Express is and its core features
+- create an API that can respond to GET requests
+- use postman to manually test Web APIs
 
 #### Pro Tip
 
@@ -95,51 +93,43 @@ Never put anything out there on social media that you wouldn’t want to come up
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Ez75BevKbi4), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Ez75BevKbi4), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=pxRHZ2WI8tc), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=pxRHZ2WI8tc), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=iNtm78tLjuo), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=kk1PcjtEPZE), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=iNtm78tLjuo), or enable JavaScript if it is disabled in your browser.
+- [Node.js Website](https://nodejs.org/en/)
 
--   
+- [Express Website](https://expressjs.com/)
 
-    # An error occurred.
+- [What is an API? In English, please](https://medium.freecodecamp.org/what-is-an-api-in-english-please-b880a3214a82)
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=kk1PcjtEPZE), or enable JavaScript if it is disabled in your browser.
+  Simple introduction what an API is
 
--   [Node.js Website](https://nodejs.org/en/)
+- [Hello World Example on Express Docs](https://expressjs.com/en/starter/hello-world.html)
 
--   [Express Website](https://expressjs.com/)
+  The hello world example provided by Expressjs.com
 
--   [What is an API? In English, please](https://medium.freecodecamp.org/what-is-an-api-in-english-please-b880a3214a82)
+- [Postman Download](https://www.getpostman.com/apps)
 
-    Simple introduction what an API is
-
--   [Hello World Example on Express Docs](https://expressjs.com/en/starter/hello-world.html)
-
-    The hello world example provided by Expressjs.com
-
--   [Postman Download](https://www.getpostman.com/apps)
-
-    Postman app download link.
+  Postman app download link.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
 #### Learn to explain what Node.js is and its core features
 
-`Node.js` is a *runtime environment* (a program that runs other programs), a platform used to execute JavaScript applications outside the browser.
+`Node.js` is a _runtime environment_ (a program that runs other programs), a platform used to execute JavaScript applications outside the browser.
 
 This opens up a new world of possibilities for JavaScript developers. We can now use JavaScript to write command line utilities, native programs that run on different operating systems, networking software, web services, web applications and more.
 
@@ -151,22 +141,22 @@ We will use Node to write server code, specifically `web services` that can comm
 
 Some of the advantages of using `Node.js` for writing server side code are:
 
--   JavaScript on the server: use the same programming language and paradigm for both client and server. This minimizes context switching and makes it easy to share code between the client and the server.
--   Single-threaded: removes the complexity involved in handling multiple threads.
--   Asynchronous: can take full advantage of the processor it’s running on. This matters because the node process will be running on a single CPU.
--   Npm repository: access the largest ecosystem of useful libraries (most of them free to use) in the form of `npm modules`.
+- JavaScript on the server: use the same programming language and paradigm for both client and server. This minimizes context switching and makes it easy to share code between the client and the server.
+- Single-threaded: removes the complexity involved in handling multiple threads.
+- Asynchronous: can take full advantage of the processor it’s running on. This matters because the node process will be running on a single CPU.
+- Npm repository: access the largest ecosystem of useful libraries (most of them free to use) in the form of `npm modules`.
 
 Some of the disadvantages of using `Node.js` for writing server-side code are:
 
--   JavaScript on the server: we lose the ability to use the right tool (language) for the job.
--   single-threaded: can’t take advantage of servers with multiple cores/processors.
--   asynchronous: it is harder to learn for developers that have only worked with languages that default to synchronous operations that block the execution thread.
--   npm repository: too many packages that do the same thing makes it harder to choose one and, in some cases, may introduce vulnerabilities into our code.
+- JavaScript on the server: we lose the ability to use the right tool (language) for the job.
+- single-threaded: can’t take advantage of servers with multiple cores/processors.
+- asynchronous: it is harder to learn for developers that have only worked with languages that default to synchronous operations that block the execution thread.
+- npm repository: too many packages that do the same thing makes it harder to choose one and, in some cases, may introduce vulnerabilities into our code.
 
 To write a simple web server with `Node.js`:
 
 1.  Use Node’s `HTTP` module to abstract away complex network-related operations.
-2.  Write the single ***request handler*** function that will handle all requests to the server.
+2.  Write the single **_request handler_** function that will handle all requests to the server.
 
 The request handler is a function that takes the `request` coming from the client and produces the `response`. The function takes two arguments: 1) an object representing the `request` and 2) an object representing the `response`.
 
@@ -195,9 +185,9 @@ Add the following code to `index.js`:
       console.log(`Server running at http://${hostname}:${port}/`);
     });
 
-Now navigate to the folder in a terminal/console window and type: `node index.js` to execute your file. A message that reads “*Server running at http://127.0.0.1:3000*” should be displayed, and the server is now waiting for connections.
+Now navigate to the folder in a terminal/console window and type: `node index.js` to execute your file. A message that reads “_Server running at http://127.0.0.1:3000_” should be displayed, and the server is now waiting for connections.
 
-Open a browser and visit: `http://localhost:3000`; `localhost` and the ip address `127.0.0.1` point to the same thing: your local computer. The browser should show the message: “*Hello World from Node*”. There you have it, your first web server, built from scratch using nothing but `Node.js`.
+Open a browser and visit: `http://localhost:3000`; `localhost` and the ip address `127.0.0.1` point to the same thing: your local computer. The browser should show the message: “_Hello World from Node_”. There you have it, your first web server, built from scratch using nothing but `Node.js`.
 
 ##### Challenge
 
@@ -207,9 +197,9 @@ Submit the paragraph to your TL.
 
 ##### Dig Deeper
 
--   [NodeJS Runtime environment for JS](https://www.infoworld.com/article/3210589/node-js/what-is-nodejs-javascript-runtime-explained.html)  
+- [NodeJS Runtime environment for JS](https://www.infoworld.com/article/3210589/node-js/what-is-nodejs-javascript-runtime-explained.html)
 
-------------------------------------------------------------------------
+---
 
 #### Learn to explain what Express is and its core features
 
@@ -227,26 +217,26 @@ Ultimately, `Express` is **just a Node.js module** like any other module.
 
 What can we do with Express? So many things! For example:
 
--   build web applications.
--   serve *Single Page Applications* (SPAs).
--   build RESTful web services that work with JSON.
--   serve static content, like HTML files, images, audio files, PDFs, and more.
--   power real-time applications using technologies like `Web Sockets` or `WebRTC`.
+- build web applications.
+- serve _Single Page Applications_ (SPAs).
+- build RESTful web services that work with JSON.
+- serve static content, like HTML files, images, audio files, PDFs, and more.
+- power real-time applications using technologies like `Web Sockets` or `WebRTC`.
 
 Some of the benefits of using Express are that it is:
 
--   Simple
--   Unopinionated
--   Extensible
--   Light-weight
--   Compatible with [connect middleware](https://www.npmjs.com/package/connect). (This means we can tap into an extensive collection of modules written for `connect`.)
--   All packaged into a clean, intuitive, and easy to use API.
--   Abstracts away common tasks (writing web applications can be verbose, hence the need for a library like this)
+- Simple
+- Unopinionated
+- Extensible
+- Light-weight
+- Compatible with [connect middleware](https://www.npmjs.com/package/connect). (This means we can tap into an extensive collection of modules written for `connect`.)
+- All packaged into a clean, intuitive, and easy to use API.
+- Abstracts away common tasks (writing web applications can be verbose, hence the need for a library like this)
 
 Some of the drawbacks of Express are:
 
--   It’s not a one-stop solution. Because of its simplicity, it does very little out of the box compared to frameworks like `Rails` and `django`.
--   We are forced to make more decisions due to the flexibility and control it provides.
+- It’s not a one-stop solution. Because of its simplicity, it does very little out of the box compared to frameworks like `Rails` and `django`.
+- We are forced to make more decisions due to the flexibility and control it provides.
 
 ### Main Features of Express
 
@@ -308,13 +298,13 @@ On your own: Write a paragraph about what Express is and explain how it is used 
 
 Submit your paragraph to your TL.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to create an API that can respond to GET requests
 
 Now that most of the basic theory is out of the way, we’ll move into building our first API (**A**pplication **P**rogramming **I**nterface).
 
-What is an API you ask? [This article defines it and plain english](https://medium.freecodecamp.org/what-is-an-api-in-english-please-b880a3214a82), but in this context an API is *server software that publishes a set of **endpoints** that clients can use to manage **resources***.
+What is an API you ask? [This article defines it and plain english](https://medium.freecodecamp.org/what-is-an-api-in-english-please-b880a3214a82), but in this context an API is \*server software that publishes a set of **endpoints** that clients can use to manage **resources\***.
 
 ##### Overview
 
@@ -341,9 +331,9 @@ To build our first API we will:
     // the second argument passed to the .get() method is the "Route Handler Function"
     // the route handler function will run on every GET request to "/"
     server.get('/', (req, res) => {
-      // express will pass the request and response objects to this function
-      // the .send() on the response object can be used to send a response to the client
-      res.send('Hello World');
+    // express will pass the request and response objects to this function
+    // the .send() on the response object can be used to send a response to the client
+    res.send('Hello World');
     });
 
     // once the server is fully configured we can have it "listen" for connections on a particular "port"
@@ -360,7 +350,7 @@ Now we’re ready to test our API!
 
 In the terminal, still at the root of our project:
 
-type: `npm run server` to run our API. The message *“Api running on port 8000”* should appear on the terminal. open a web browser and navigate to http://localhost:8000.
+type: `npm run server` to run our API. The message _“Api running on port 8000”_ should appear on the terminal. open a web browser and navigate to http://localhost:8000.
 
 There we have it, our first API!
 
@@ -386,9 +376,9 @@ Let’s try returning JSON instead of just a simple string.
 
 Please follow the steps outlined on the overview, but, to save time, copy and paste the content of `index.js` instead of typing it. Then run your API through a browser to make sure it works.
 
-Now follow along as we code a new *endpoint* that returns an array of movie characters in JSON format.
+Now follow along as we code a new _endpoint_ that returns an array of movie characters in JSON format.
 
-The first step is to define a new *route handler* to respond to `GET` requests at the `/hobbits` endpoint.
+The first step is to define a new _route handler_ to respond to `GET` requests at the `/hobbits` endpoint.
 
     server.get('/hobbits', (req, res) => {
       // route handler code here
@@ -464,14 +454,14 @@ Good luck!
 
 ##### Dig Deeper
 
--   [Express Routing Guide](https://expressjs.com/en/guide/routing.html)  
-    Routing Guide on Expressjs.com
--   [Express Request Object API](https://expressjs.com/en/4x/api.html#req)  
-    Express Request Object API Documentation
--   [Express Response Object API](https://expressjs.com/en/4x/api.html#res)  
-    Express Response Object API Documentation
+- [Express Routing Guide](https://expressjs.com/en/guide/routing.html)  
+  Routing Guide on Expressjs.com
+- [Express Request Object API](https://expressjs.com/en/4x/api.html#req)  
+  Express Request Object API Documentation
+- [Express Response Object API](https://expressjs.com/en/4x/api.html#res)  
+  Express Response Object API Documentation
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use postman to manually test Web APIs
 
@@ -497,10 +487,10 @@ Use Postman to test the endpoints you have built so far.
 
 ##### Dig Deeper
 
--   [Postman Documentation](https://www.getpostman.com/docs/v6/)  
-    Postman Documentation Site.
+- [Postman Documentation](https://www.getpostman.com/docs/v6/)  
+  Postman Documentation Site.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
@@ -510,13 +500,13 @@ Starter Code for Node API 1 Guided Project
 
 [GitHub Repo](https://github.com/LambdaSchool/node-api1-guided)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Node API 1 Project](https://github.com/LambdaSchool/node-api1-project)
+- ##### [Node API 1 Project](https://github.com/LambdaSchool/node-api1-project)
 
-    Starter Code for Node API 1 Project
+  Starter Code for Node API 1 Project
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -524,46 +514,46 @@ Starter Code for Node API 1 Guided Project
 
 You can use class recordings to help you master the material.
 
--   **[Intro to Node.js & Express for WebPT18 w/Jason Maurer](https://youtu.be/lu0UMm89Xbg)**
+- **[Intro to Node.js & Express for WebPT18 w/Jason Maurer](https://youtu.be/lu0UMm89Xbg)**
 
-    learn how to manually test our Web API using a tool called Postman.
+  learn how to manually test our Web API using a tool called Postman.
 
--   [All previous recordings](/archive/FSW/module/recZiPP8Oyg1WlHxT)
+- [All previous recordings](/archive/FSW/module/recZiPP8Oyg1WlHxT)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Write a paragraph about what `Node.js` is and explain at least 3 of its core features.
+  Write a paragraph about what `Node.js` is and explain at least 3 of its core features.
 
-    Submit the paragraph to your TL.
+  Submit the paragraph to your TL.
 
--   Objective challenge:
+- Objective challenge:
 
-    On your own: Write a paragraph about what Express is and explain how it is used in modern web application development.
+  On your own: Write a paragraph about what Express is and explain how it is used in modern web application development.
 
-    Submit your paragraph to your TL.
+  Submit your paragraph to your TL.
 
--   Objective challenge:
+- Objective challenge:
 
-    Write an endpoint that returns a list of users stored in a database. Return data in `JSON` format.
+  Write an endpoint that returns a list of users stored in a database. Return data in `JSON` format.
 
-    Production APIs return data coming from a data store or external source, not from an in-memory array like we have done so far.
+  Production APIs return data coming from a data store or external source, not from an in-memory array like we have done so far.
 
-    Your job is to create a new `/users` endpoint that returns the list of users contained in the provided database. To get the list of users, **require** the `/data/db.js` file into `index.js` and use it’s `.find()` method to get the data. The `.find()` method returns a promise, so make sure to send the response after that promise has resolved and, in case of failure, return a status code of 500 and an error message back to the client.
+  Your job is to create a new `/users` endpoint that returns the list of users contained in the provided database. To get the list of users, **require** the `/data/db.js` file into `index.js` and use it’s `.find()` method to get the data. The `.find()` method returns a promise, so make sure to send the response after that promise has resolved and, in case of failure, return a status code of 500 and an error message back to the client.
 
-    Good luck!
+  Good luck!
 
--   Objective challenge:
+- Objective challenge:
 
-    Use Postman to test the endpoints you have built so far.
+  Use Postman to test the endpoints you have built so far.
 
--   Guided Project: Node API 1 Guided Project Starter Code
+- Guided Project: Node API 1 Guided Project Starter Code
 
--   Project: Node API 1 Project
+- Project: Node API 1 Project
 
--   Code Challenge: ArmstrongNumbers
+- Code Challenge: ArmstrongNumbers
 
--   Code Challenge: RouteBetweenNodes
+- Code Challenge: RouteBetweenNodes

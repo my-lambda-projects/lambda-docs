@@ -1,381 +1,552 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Intended as a home for Lambda School curriculum.">
-<meta name="author" content="">
-<meta name="generator" content="Jekyll v3.8.0">
-<title>Hash Tables II · Lambda School</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Intended as a home for Lambda School curriculum."
+    />
+    <meta name="author" content="" />
+    <meta name="generator" content="Jekyll v3.8.0" />
+    <title>Hash Tables II · Lambda School</title>
 
-<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+    <link
+      rel="stylesheet"
+      integrity
+      crossorigin="anonymous"
+      href="https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css"
+    />
 
-<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+    <link
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css"
+    />
 
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css"
+    />
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
-  ga('send', 'pageview');
-</script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-122016605-1", "learn.lambdaschool.com");
+      ga("send", "pageview");
+    </script>
 
+    <link
+      rel="apple-touch-icon"
+      href="/assets/img/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/assets/img/favicons/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicons/safari-pinned-tab.svg"
+      color="#a0001e"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="msapplication-config"
+      content="/assets/img/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#a0001e" />
+  </head>
+  <body>
+    <noscript>Please enable JavaScript to view this page.</noscript>
+    <div id="redirect-message" style="display: none">
+      You must be logged in to view this page.
+    </div>
+    <div id="unauthorized-message" style="display: none">
+      You must be a Lambda School student to view this page.
+    </div>
+    <div id="content-wrapper" style="visibility: hidden">
+      <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+          <span class="skiplink-text">Skip to main content</span>
+        </div>
+      </a>
+      <div class="mobile-menu">
+        <div class="m-drop">
+          <div class="mobile-row">
+            <div class="header-row" style="padding: 3px 7px">
+              <a class="navbar-brand" href="/" aria-label="Lambda School"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="35"
+                  viewBox="0 0 33 35"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                    fill="#EC3944"
+                  /></svg
+              ></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#mobile-course-menu"
+                aria-controls="mobile-course-menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="30"
+                  height="30"
+                  focusable="false"
+                >
+                  <title>Menu</title>
+                  <path
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    d="M4 7h22M4 15h22M4 23h22"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="nav-row">
+            <div class="results-container">
+              <ul id="results-container" class="dropdown list-group"></ul>
+            </div>
+            <div id="mobile-course-menu" class="collapse nav-row">
+              <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+                <nav class="bd-links">
+                  <div class="bd-toc-item">
+                    <h4 class="bd-toc-link">Computer Science</h4>
+                  </div>
 
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/reckLrPDHRpFN3a6p">
+                      1.&nbsp;&nbsp;Computer Science Fundamentals
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/cs/module/recHNgXTaBpnn052p/">
+                          Python Basics
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recagU9ihCuMePtbx/">
+                          Problem Solving
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recZ6g2C5xkxHmT16/">
+                          Time and Space Complexity
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recy2QANAS6Blpc5o/">
+                          Computer Memory Basics
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/recdbs5ZPBtMb6fou">
+                      2.&nbsp;&nbsp;Data Structures and Algorithms I
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/cs/module/recR43dkPzilEMXlE/">
+                          Array and String Manipulation
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recQJcAAjpSTtNf8A/">
+                          Linked Lists
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/rec07JKgm7ltWrPYD/">
+                          Queues and Stacks
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/rec00Cf3TiBWiCONA/">
+                          Searching and Recursion
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/recyC7E0YQc0qQgxa">
+                      3.&nbsp;&nbsp;Data Structures and Algorithms II
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/cs/module/recgJOPYUjvQaN2sa/">
+                          Binary Search Trees
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recS3C67spna4M4HU/">
+                          Tree Traversal
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recEPIaHFEriTuU2x/"> Graphs I </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recX4dkkIPeJ6JjX6/"> Graphs II </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/recsJW8CaZiKcyUZj">
+                      4.&nbsp;&nbsp;Data Structures and Algorithms III
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/cs/module/recLpJY4yFQcV3qeW/">
+                          Hash Tables I
+                        </a>
+                      </li>
+                      <li class="active bd-sidenav-active">
+                        <a href="/cs/module/recG6onEnlSOWziKO/">
+                          Hash Tables II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/reczaVKTynSkqN8ZS/">
+                          Technical Interview Tips I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/rec6kEjLri9SXMYdE/">
+                          Technical Interview Tips II
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="sidebar-container bd-sidebar">
+          <div class="docs-sidebar">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"
+              ><svg
+                width="135"
+                height="35"
+                viewBox="0 0 756 197"
+                fill="#ec3944"
+              >
+                <g>
+                  <path
+                    d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"
+                  ></path>
+                  <path
+                    d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"
+                  ></path>
+                  <path
+                    d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"
+                  ></path>
+                  <path
+                    d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"
+                  ></path>
+                  <path
+                    d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"
+                  ></path>
+                  <path
+                    d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"
+                  ></path>
+                </g>
+                <path
+                  d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"
+                ></path></svg
+            ></a>
+            <ul id="results-container" class="dropdown list-group"></ul>
+            <nav class="bd-links collapse" id="bd-docs-nav">
+              <div class="bd-toc-item">
+                <h4 class="bd-toc-link">Computer Science</h4>
+              </div>
 
-<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
-<link rel="icon" href="/favicon.ico">
-<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#a0001e">
-</head>
-<body>
-<noscript>Please enable JavaScript to view this page.</noscript>
-<div id="redirect-message" style="display: none;">
-You must be logged in to view this page.
-</div>
-<div id="unauthorized-message" style="display: none;">
-You must be a Lambda School student to view this page.
-</div>
-<div id="content-wrapper" style="visibility: hidden;">
-<a id="skippy" class="sr-only sr-only-focusable" href="#content">
-<div class="container">
-<span class="skiplink-text">Skip to main content</span>
-</div>
-</a>
-<div class="mobile-menu">
-<div class="m-drop">
-<div class="mobile-row">
-<div class="header-row" style="padding: 3px 7px">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
-</svg></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
-</button>
-</div>
-</div>
-<div class="nav-row">
-<div class="results-container">
-<ul id="results-container" class="dropdown list-group"></ul>
-</div>
-<div id="mobile-course-menu" class="collapse nav-row">
-<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
-<nav class="bd-links">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Computer Science</h4>
-</div>
-
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/cs/sprint/reckLrPDHRpFN3a6p">
-1.&nbsp;&nbsp;Computer Science Fundamentals
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/cs/module/recHNgXTaBpnn052p/">
-Python Basics
-</a>
-</li>
-<li>
-<a href="/cs/module/recagU9ihCuMePtbx/">
-Problem Solving
-</a>
-</li>
-<li>
-<a href="/cs/module/recZ6g2C5xkxHmT16/">
-Time and Space Complexity
-</a>
-</li>
-<li>
-<a href="/cs/module/recy2QANAS6Blpc5o/">
-Computer Memory Basics
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/cs/sprint/recdbs5ZPBtMb6fou">
-2.&nbsp;&nbsp;Data Structures and Algorithms I
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/cs/module/recR43dkPzilEMXlE/">
-Array and String Manipulation
-</a>
-</li>
-<li>
-<a href="/cs/module/recQJcAAjpSTtNf8A/">
-Linked Lists
-</a>
-</li>
-<li>
-<a href="/cs/module/rec07JKgm7ltWrPYD/">
-Queues and Stacks
-</a>
-</li>
-<li>
-<a href="/cs/module/rec00Cf3TiBWiCONA/">
-Searching and Recursion
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/cs/sprint/recyC7E0YQc0qQgxa">
-3.&nbsp;&nbsp;Data Structures and Algorithms II
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/cs/module/recgJOPYUjvQaN2sa/">
-Binary Search Trees
-</a>
-</li>
-<li>
-<a href="/cs/module/recS3C67spna4M4HU/">
-Tree Traversal
-</a>
-</li>
-<li>
-<a href="/cs/module/recEPIaHFEriTuU2x/">
-Graphs I
-</a>
-</li>
-<li>
-<a href="/cs/module/recX4dkkIPeJ6JjX6/">
-Graphs II
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/cs/sprint/recsJW8CaZiKcyUZj">
-4.&nbsp;&nbsp;Data Structures and Algorithms III
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/cs/module/recLpJY4yFQcV3qeW/">
-Hash Tables I
-</a>
-</li>
-<li class="active bd-sidenav-active">
-<a href="/cs/module/recG6onEnlSOWziKO/">
-Hash Tables II
-</a>
-</li>
-<li>
-<a href="/cs/module/reczaVKTynSkqN8ZS/">
-Technical Interview Tips I
-</a>
-</li>
-<li>
-<a href="/cs/module/rec6kEjLri9SXMYdE/">
-Technical Interview Tips II
-</a>
-</li>
-</ul>
-</div>
-</nav>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="main-container">
-<div class="sidebar-container bd-sidebar">
-<div class="docs-sidebar">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
-<ul id="results-container" class="dropdown list-group"></ul>
-<nav class="bd-links collapse" id="bd-docs-nav">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Computer Science</h4>
-</div>
-
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/cs/sprint/reckLrPDHRpFN3a6p">
-1.&nbsp;&nbsp;Computer Science Fundamentals
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/cs/module/recHNgXTaBpnn052p/">
-Python Basics
-</a>
-</li>
-<li>
-<a href="/cs/module/recagU9ihCuMePtbx/">
-Problem Solving
-</a>
-</li>
-<li>
-<a href="/cs/module/recZ6g2C5xkxHmT16/">
-Time and Space Complexity
-</a>
-</li>
-<li>
-<a href="/cs/module/recy2QANAS6Blpc5o/">
-Computer Memory Basics
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/cs/sprint/recdbs5ZPBtMb6fou">
-2.&nbsp;&nbsp;Data Structures and Algorithms I
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/cs/module/recR43dkPzilEMXlE/">
-Array and String Manipulation
-</a>
-</li>
-<li>
-<a href="/cs/module/recQJcAAjpSTtNf8A/">
-Linked Lists
-</a>
-</li>
-<li>
-<a href="/cs/module/rec07JKgm7ltWrPYD/">
-Queues and Stacks
-</a>
-</li>
-<li>
-<a href="/cs/module/rec00Cf3TiBWiCONA/">
-Searching and Recursion
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/cs/sprint/recyC7E0YQc0qQgxa">
-3.&nbsp;&nbsp;Data Structures and Algorithms II
-</a>
- <ul class="nav bd-sidenav">
-
-<li>
-<a href="/cs/module/recgJOPYUjvQaN2sa/">
-Binary Search Trees
-</a>
-</li>
-<li>
-<a href="/cs/module/recS3C67spna4M4HU/">
-Tree Traversal
-</a>
-</li>
-<li>
-<a href="/cs/module/recEPIaHFEriTuU2x/">
-Graphs I
-</a>
-</li>
-<li>
-<a href="/cs/module/recX4dkkIPeJ6JjX6/">
-Graphs II
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/cs/sprint/recsJW8CaZiKcyUZj">
-4.&nbsp;&nbsp;Data Structures and Algorithms III
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/cs/module/recLpJY4yFQcV3qeW/">
-Hash Tables I
-</a>
-</li>
-<li class="active bd-sidenav-active">
-<a href="/cs/module/recG6onEnlSOWziKO/">
-Hash Tables II
-</a>
-</li>
-<li>
-<a href="/cs/module/reczaVKTynSkqN8ZS/">
-Technical Interview Tips I
-</a>
-</li>
-<li>
-<a href="/cs/module/rec6kEjLri9SXMYdE/">
-Technical Interview Tips II
-</a>
-</li>
-</ul>
-</div>
-</nav>
-</div>
-</div>
-<main class="content-container flex-wrapper" role="main">
-<div class="sticky-nav">
-<div class="sprint-nav">
-<ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
-<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
-<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
-</ul>
-</div>
-
-</div>
-<div class="wrapper limit-width">
-<div class="flex-wrapper">
-<div class="limit-width">
-<div class="jumbotron">
-<h1 class="bd-title" id="content">Hash Tables II</h1>
-<span class="lead">
-<p class="bd-lead"></p>
-</span>
-<strong>At the end of this module, you should be able to:</strong>
-<ul>
-<li>understand hash collisions and use a linked list for collision resolution in a user-defined HashTable class</li>
-<li>define and compute the load factor of a hash table and implement a hash table that automatically resizes based on load factor</li>
-</ul>
-</div>
-<div class="alert alert-warning" role="alert">
-<h4>Pro Tip</h4>
-<p>Treat everyone with as much respect and integrity as you wish to be treated with.</p>
-</div>
-<h2 class="display-4">
-<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
-<p class="lead">Review each preclass resource before class.</p>
-<div class="preclass">
-<ul class="list-group list-group-flush">
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Nt8s9fNbcyg" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/__oNjeaCdlI" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-</ul>
-</div>
-<h2 class="display-4">
-<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
-<h4 class="mark mb-3 p-2">Learn to understand hash collisions and use a linked list for collision resolution in a user-defined HashTable class</h4>
-<h5>Overview</h5>
-<p>Remember when we wondered what would happen if multiple keys hashed to the same index, and we said that we would worry about it later? Whelp, it’s later 🤪.</p>
-<p>Let’s say we were given the key-value pair <code class="highlighter-rouge">("Ryan", 10)</code>. Our hash code then maps “Ryan” to index 3. Excellent, that works!
-Now let’s say after we inserted <code class="highlighter-rouge">("Ryan", 10)</code>, we have to insert <code class="highlighter-rouge">("Parth", 12)</code>. Our hash code maps “Parth” to index 3. Uh oh! Ryan is already there! What do we do?? 😱</p>
-<p>Ok, let’s stop freaking out, and let’s think about this. If we don’t do anything, the value stored at index 3 will just get overwritten. Meaning if we try to retrieve the value associated with <code class="highlighter-rouge">"Ryan"</code>, 12 will be returned instead of 10. That might not seem like a big deal, but what if we were returning passwords based on a user ID, and we returned someone else’s password. That would be horrible.</p>
-<p>Let’s fix this problem. The most common way to solve this is with <strong>linked list chaining</strong>. If we see multiple values hashed to an index, we will chain them in a linked list.</p>
-<p><img src="https://tk-assets.lambdaschool.com/f952600c-f3e0-4d96-bb53-def08235c9c0_collision.gif" alt="https://tk-assets.lambdaschool.com/f952600c-f3e0-4d96-bb53-def08235c9c0_collision.gif"></p>
-<p>Ok, sounds ideal? But how does this work in code? Let’s write some of it together.</p>
-<h5>Follow Along</h5>
-<p>Below is a partially filled out hash table class where we will be using <code class="highlighter-rouge">HashTableEntry</code> as our linked list chain entries.</p>
-<p>Take a look at the code below.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">HashTableEntry</span><span class="p">:</span>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/reckLrPDHRpFN3a6p">
+                  1.&nbsp;&nbsp;Computer Science Fundamentals
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/cs/module/recHNgXTaBpnn052p/"> Python Basics </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recagU9ihCuMePtbx/">
+                      Problem Solving
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recZ6g2C5xkxHmT16/">
+                      Time and Space Complexity
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recy2QANAS6Blpc5o/">
+                      Computer Memory Basics
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/recdbs5ZPBtMb6fou">
+                  2.&nbsp;&nbsp;Data Structures and Algorithms I
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/cs/module/recR43dkPzilEMXlE/">
+                      Array and String Manipulation
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recQJcAAjpSTtNf8A/"> Linked Lists </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/rec07JKgm7ltWrPYD/">
+                      Queues and Stacks
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/rec00Cf3TiBWiCONA/">
+                      Searching and Recursion
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/recyC7E0YQc0qQgxa">
+                  3.&nbsp;&nbsp;Data Structures and Algorithms II
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/cs/module/recgJOPYUjvQaN2sa/">
+                      Binary Search Trees
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recS3C67spna4M4HU/"> Tree Traversal </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recEPIaHFEriTuU2x/"> Graphs I </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recX4dkkIPeJ6JjX6/"> Graphs II </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/recsJW8CaZiKcyUZj">
+                  4.&nbsp;&nbsp;Data Structures and Algorithms III
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/cs/module/recLpJY4yFQcV3qeW/"> Hash Tables I </a>
+                  </li>
+                  <li class="active bd-sidenav-active">
+                    <a href="/cs/module/recG6onEnlSOWziKO/"> Hash Tables II </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/reczaVKTynSkqN8ZS/">
+                      Technical Interview Tips I
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/rec6kEjLri9SXMYdE/">
+                      Technical Interview Tips II
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <main class="content-container flex-wrapper" role="main">
+          <div class="sticky-nav">
+            <div class="sprint-nav">
+              <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+                <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+                <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="wrapper limit-width">
+            <div class="flex-wrapper">
+              <div class="limit-width">
+                <div class="jumbotron">
+                  <h1 class="bd-title" id="content">Hash Tables II</h1>
+                  <span class="lead">
+                    <p class="bd-lead"></p>
+                  </span>
+                  <strong
+                    >At the end of this module, you should be able to:</strong
+                  >
+                  <ul>
+                    <li>
+                      understand hash collisions and use a linked list for
+                      collision resolution in a user-defined HashTable class
+                    </li>
+                    <li>
+                      define and compute the load factor of a hash table and
+                      implement a hash table that automatically resizes based on
+                      load factor
+                    </li>
+                  </ul>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                  <h4>Pro Tip</h4>
+                  <p>
+                    Treat everyone with as much respect and integrity as you
+                    wish to be treated with.
+                  </p>
+                </div>
+                <h2 class="display-4">
+                  <a
+                    id="prepare"
+                    class="anchor"
+                    href="#prepare"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Prepare
+                </h2>
+                <p class="lead">Review each preclass resource before class.</p>
+                <div class="preclass">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/Nt8s9fNbcyg"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/__oNjeaCdlI"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <h2 class="display-4">
+                  <a id="learn" class="anchor" href="#learn" aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Learn
+                </h2>
+                <h4 class="mark mb-3 p-2">
+                  Learn to understand hash collisions and use a linked list for
+                  collision resolution in a user-defined HashTable class
+                </h4>
+                <h5>Overview</h5>
+                <p>
+                  Remember when we wondered what would happen if multiple keys
+                  hashed to the same index, and we said that we would worry
+                  about it later? Whelp, it’s later 🤪.
+                </p>
+                <p>
+                  Let’s say we were given the key-value pair
+                  <code class="highlighter-rouge">("Ryan", 10)</code>. Our hash
+                  code then maps “Ryan” to index 3. Excellent, that works! Now
+                  let’s say after we inserted
+                  <code class="highlighter-rouge">("Ryan", 10)</code>, we have
+                  to insert
+                  <code class="highlighter-rouge">("Parth", 12)</code>. Our hash
+                  code maps “Parth” to index 3. Uh oh! Ryan is already there!
+                  What do we do?? 😱
+                </p>
+                <p>
+                  Ok, let’s stop freaking out, and let’s think about this. If we
+                  don’t do anything, the value stored at index 3 will just get
+                  overwritten. Meaning if we try to retrieve the value
+                  associated with <code class="highlighter-rouge">"Ryan"</code>,
+                  12 will be returned instead of 10. That might not seem like a
+                  big deal, but what if we were returning passwords based on a
+                  user ID, and we returned someone else’s password. That would
+                  be horrible.
+                </p>
+                <p>
+                  Let’s fix this problem. The most common way to solve this is
+                  with <strong>linked list chaining</strong>. If we see multiple
+                  values hashed to an index, we will chain them in a linked
+                  list.
+                </p>
+                <p>
+                  <img
+                    src="https://tk-assets.lambdaschool.com/f952600c-f3e0-4d96-bb53-def08235c9c0_collision.gif"
+                    alt="https://tk-assets.lambdaschool.com/f952600c-f3e0-4d96-bb53-def08235c9c0_collision.gif"
+                  />
+                </p>
+                <p>
+                  Ok, sounds ideal? But how does this work in code? Let’s write
+                  some of it together.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Below is a partially filled out hash table class where we will
+                  be using
+                  <code class="highlighter-rouge">HashTableEntry</code> as our
+                  linked list chain entries.
+                </p>
+                <p>Take a look at the code below.</p>
+                <div class="language-python highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">class</span> <span class="nc">HashTableEntry</span><span class="p">:</span>
     <span class="s">"""
     Linked List hash table key/value pair
     """</span>
@@ -460,25 +631,60 @@ Now let’s say after we inserted <code class="highlighter-rouge">("Ryan", 10)</
         Implement this.
         """</span>
         <span class="c1"># Your code here
-</span></code></pre></div></div>
-<p>Let’s implement the <code class="highlighter-rouge">put</code> method with linked list chaining. What are the two cases we need to handle?</p>
-<ol>
-<li>
-<strong>There are no entries at the index</strong>. Great! We can make the first entry in the linked list chain the key-value pair.</li>
-<li>
-<strong>There are multiple entries at the index.</strong> We need to check every entry in the chain. If the key in one of the entries is equal to the key we are passing in, we need to replace it. For instance, let’s say we pass in <code class="highlighter-rouge">("Ryan", 12),</code> and then we later pass in <code class="highlighter-rouge">("Ryan", 15)</code>. We would need to replace “Ryan”’s old value with 15. If there are no entries that match, we create a new entry at the end of the chain.</li>
-</ol>
-<p>Ok, that might sound confusing. Let’s start breaking it down into code.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+</span></code></pre>
+                  </div>
+                </div>
+                <p>
+                  Let’s implement the
+                  <code class="highlighter-rouge">put</code> method with linked
+                  list chaining. What are the two cases we need to handle?
+                </p>
+                <ol>
+                  <li>
+                    <strong>There are no entries at the index</strong>. Great!
+                    We can make the first entry in the linked list chain the
+                    key-value pair.
+                  </li>
+                  <li>
+                    <strong>There are multiple entries at the index.</strong> We
+                    need to check every entry in the chain. If the key in one of
+                    the entries is equal to the key we are passing in, we need
+                    to replace it. For instance, let’s say we pass in
+                    <code class="highlighter-rouge">("Ryan", 12),</code> and
+                    then we later pass in
+                    <code class="highlighter-rouge">("Ryan", 15)</code>. We
+                    would need to replace “Ryan”’s old value with 15. If there
+                    are no entries that match, we create a new entry at the end
+                    of the chain.
+                  </li>
+                </ol>
+                <p>
+                  Ok, that might sound confusing. Let’s start breaking it down
+                  into code.
+                </p>
+                <div class="language-python highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="s">"""
         Store the value with the given key.
         Hash collisions should be handled with Linked List Chaining.
         Implement this.
         """</span>
         <span class="c1"># Your code here
-</span></code></pre></div></div>
-<p>First, we need to hash the key and start with the first entry at that index.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+</span></code></pre>
+                  </div>
+                </div>
+                <p>
+                  First, we need to hash the key and start with the first entry
+                  at that index.
+                </p>
+                <div class="language-python highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="s">"""
         Store the value with the given key.
         Hash collisions should be handled with Linked List Chaining.
@@ -487,13 +693,25 @@ Now let’s say after we inserted <code class="highlighter-rouge">("Ryan", 10)</
         <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hash_index</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 
         <span class="n">current_entry</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
-</code></pre></div></div>
-<p>Next, we need to go through the chain. We need to check two conditions:</p>
-<ol>
-<li>The current entry is not empty.</li>
-<li>The key or the current entry is not equal to the key we are passing in.</li>
-</ol>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Next, we need to go through the chain. We need to check two
+                  conditions:
+                </p>
+                <ol>
+                  <li>The current entry is not empty.</li>
+                  <li>
+                    The key or the current entry is not equal to the key we are
+                    passing in.
+                  </li>
+                </ol>
+                <div class="language-python highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="s">"""
         Store the value with the given key.
         Hash collisions should be handled with Linked List Chaining.
@@ -505,14 +723,29 @@ Now let’s say after we inserted <code class="highlighter-rouge">("Ryan", 10)</
 
         <span class="k">while</span> <span class="n">current_entry</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">current_entry</span><span class="o">.</span><span class="n">key</span> <span class="o">!=</span> <span class="n">key</span><span class="p">:</span>
             <span class="n">current_entry</span> <span class="o">=</span> <span class="n">current_entry</span><span class="o">.</span><span class="nb">next</span>
-</code></pre></div></div>
-<p>Sweet! Now we need to check what happens when the loop breaks. It would only break for two reasons:</p>
-<ol>
-<li>We reached an entry with the same key and need to replace the value.</li>
-<li>We reached the end of the linked list and need to create a new entry.</li>
-</ol>
-<p>Let’s write that in code!</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Sweet! Now we need to check what happens when the loop breaks.
+                  It would only break for two reasons:
+                </p>
+                <ol>
+                  <li>
+                    We reached an entry with the same key and need to replace
+                    the value.
+                  </li>
+                  <li>
+                    We reached the end of the linked list and need to create a
+                    new entry.
+                  </li>
+                </ol>
+                <p>Let’s write that in code!</p>
+                <div class="language-python highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="s">"""
         Store the value with the given key.
         Hash collisions should be handled with Linked List Chaining.
@@ -531,30 +764,124 @@ Now let’s say after we inserted <code class="highlighter-rouge">("Ryan", 10)</
             <span class="n">new_entry</span> <span class="o">=</span> <span class="n">HashTableEntry</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
             <span class="n">new_entry</span><span class="o">.</span><span class="nb">next</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_entry</span>
-</code></pre></div></div>
-<p>Great! We created the <code class="highlighter-rouge">put</code> method.</p>
-<h5>Challenge</h5>
-<iframe height="400px" width="100%" src="https://repl.it/@mdmccarley89/cs-unit-1-sprint-4-module-2-hash-table-collision-resolution?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/" target="blank_">https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/</a><br> </li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to define and compute the load factor of a hash table and implement a hash table that automatically resizes based on load factor</h4>
-<h5>Overview</h5>
-<p>What does runtime look like with linked list chaining?</p>
-<p>The performance of hash tables for search, insertion, and deletion is constant time (<code class="highlighter-rouge">O(1)</code>) in the average case. However, as the chains get longer and longer, in the worst case, those same operations are done in linear time (<code class="highlighter-rouge">O(n)</code>). The more collisions that your hash table has, the less performant the hash table is. To avoid collisions, a proper hash function and maintaining a low load factor is crucial. What is a load factor?</p>
-<h5 id="load-factor">Load Factor</h5>
-<p>The load factor of a hash table is trivial to calculate. You take the number of items stored in the hash table divided by the number of slots.</p>
-<p><img src="https://tk-assets.lambdaschool.com/59d00218-52e2-4f3d-9680-2b2d8baad3ae_S5-M3-O1LoadFactor.001.jpeg" alt="https://tk-assets.lambdaschool.com/59d00218-52e2-4f3d-9680-2b2d8baad3ae_S5-M3-O1LoadFactor.001.jpeg"></p>
-<p>Hash tables use an array for storage. So, the load factor is the number of occupied slots divided by the length of the array. So, an array of length 10 with three items in it has a load factor of 0.3, and an array of length 20 with twenty items has a load factor of 1. If you use linear probing for collision resolution, then the maximum load factor is 1. If you use chaining for collision resolution, then the load factor can be greater than 1.</p>
-<p>As the load factor of your hash table increases, so does the likelihood of a collision, which reduces your hash table’s performance. Therefore, you need to monitor the load factor and resize your hash table when the load factor gets too large. The general rule of thumb is to resize your hash table when your load factor is greater than 0.7. Also, when you resize, it is common to double the size of the hash table. When you resize the array, you need to re-insert all of the items into this new hash table. You cannot simply copy the old items into the new hash table. Each item has to be rerun through the hashing function because the hashing function considers the size of the hash table when determining the index that it returns.</p>
-<p>You can see that resizing is an expensive operation, so you don’t want to resize too often. However, when we average it out, hash tables are constant time (<code class="highlighter-rouge">O(1)</code>) even with resizing.</p>
-<p>The load factor can also be too small. If the hash table is too large for the data that it is storing, then memory is being wasted. So, in addition to resizing, when the load factor gets too high, you should also resize when the load factor gets too low.</p>
-<p>One way to know when to resize your hash table is to compute the load factor whenever an item is inserted or deleted into the hash table. If the load factor is too high or too low, then you need to resize.</p>
-<p>We added a <code class="highlighter-rouge">get_load_factor</code> and <code class="highlighter-rouge">resize</code> method to calculate the load factor and resize the hash table with a new capacity when necessary.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">HashTableEntry</span><span class="p">:</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Great! We created the
+                  <code class="highlighter-rouge">put</code> method.
+                </p>
+                <h5>Challenge</h5>
+                <iframe
+                  height="400px"
+                  width="100%"
+                  src="https://repl.it/@mdmccarley89/cs-unit-1-sprint-4-module-2-hash-table-collision-resolution?lite=true"
+                  scrolling="no"
+                  frameborder="no"
+                  allowtransparency="true"
+                  allowfullscreen="true"
+                  sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+                ></iframe>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/"
+                      target="blank_"
+                      >https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/</a
+                    ><br />
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to define and compute the load factor of a hash table
+                  and implement a hash table that automatically resizes based on
+                  load factor
+                </h4>
+                <h5>Overview</h5>
+                <p>What does runtime look like with linked list chaining?</p>
+                <p>
+                  The performance of hash tables for search, insertion, and
+                  deletion is constant time (<code class="highlighter-rouge"
+                    >O(1)</code
+                  >) in the average case. However, as the chains get longer and
+                  longer, in the worst case, those same operations are done in
+                  linear time (<code class="highlighter-rouge">O(n)</code>). The
+                  more collisions that your hash table has, the less performant
+                  the hash table is. To avoid collisions, a proper hash function
+                  and maintaining a low load factor is crucial. What is a load
+                  factor?
+                </p>
+                <h5 id="load-factor">Load Factor</h5>
+                <p>
+                  The load factor of a hash table is trivial to calculate. You
+                  take the number of items stored in the hash table divided by
+                  the number of slots.
+                </p>
+                <p>
+                  <img
+                    src="https://tk-assets.lambdaschool.com/59d00218-52e2-4f3d-9680-2b2d8baad3ae_S5-M3-O1LoadFactor.001.jpeg"
+                    alt="https://tk-assets.lambdaschool.com/59d00218-52e2-4f3d-9680-2b2d8baad3ae_S5-M3-O1LoadFactor.001.jpeg"
+                  />
+                </p>
+                <p>
+                  Hash tables use an array for storage. So, the load factor is
+                  the number of occupied slots divided by the length of the
+                  array. So, an array of length 10 with three items in it has a
+                  load factor of 0.3, and an array of length 20 with twenty
+                  items has a load factor of 1. If you use linear probing for
+                  collision resolution, then the maximum load factor is 1. If
+                  you use chaining for collision resolution, then the load
+                  factor can be greater than 1.
+                </p>
+                <p>
+                  As the load factor of your hash table increases, so does the
+                  likelihood of a collision, which reduces your hash table’s
+                  performance. Therefore, you need to monitor the load factor
+                  and resize your hash table when the load factor gets too
+                  large. The general rule of thumb is to resize your hash table
+                  when your load factor is greater than 0.7. Also, when you
+                  resize, it is common to double the size of the hash table.
+                  When you resize the array, you need to re-insert all of the
+                  items into this new hash table. You cannot simply copy the old
+                  items into the new hash table. Each item has to be rerun
+                  through the hashing function because the hashing function
+                  considers the size of the hash table when determining the
+                  index that it returns.
+                </p>
+                <p>
+                  You can see that resizing is an expensive operation, so you
+                  don’t want to resize too often. However, when we average it
+                  out, hash tables are constant time (<code
+                    class="highlighter-rouge"
+                    >O(1)</code
+                  >) even with resizing.
+                </p>
+                <p>
+                  The load factor can also be too small. If the hash table is
+                  too large for the data that it is storing, then memory is
+                  being wasted. So, in addition to resizing, when the load
+                  factor gets too high, you should also resize when the load
+                  factor gets too low.
+                </p>
+                <p>
+                  One way to know when to resize your hash table is to compute
+                  the load factor whenever an item is inserted or deleted into
+                  the hash table. If the load factor is too high or too low,
+                  then you need to resize.
+                </p>
+                <p>
+                  We added a
+                  <code class="highlighter-rouge">get_load_factor</code> and
+                  <code class="highlighter-rouge">resize</code> method to
+                  calculate the load factor and resize the hash table with a new
+                  capacity when necessary.
+                </p>
+                <div class="language-python highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">class</span> <span class="nc">HashTableEntry</span><span class="p">:</span>
     <span class="s">"""
     Linked List hash table key/value pair
     """</span>
@@ -679,10 +1006,21 @@ Now let’s say after we inserted <code class="highlighter-rouge">("Ryan", 10)</
         Implement this.
         """</span>
         <span class="c1"># Your code here
-</span></code></pre></div></div>
-<h5>Follow Along</h5>
-<p>Let’s change our <code class="highlighter-rouge">put</code> method to resize when the load factor gets too high. Here’s how our current <code class="highlighter-rouge">put</code> method looks:</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+</span></code></pre>
+                  </div>
+                </div>
+                <h5>Follow Along</h5>
+                <p>
+                  Let’s change our
+                  <code class="highlighter-rouge">put</code> method to resize
+                  when the load factor gets too high. Here’s how our current
+                  <code class="highlighter-rouge">put</code> method looks:
+                </p>
+                <div class="language-python highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
     <span class="s">"""
     Store the value with the given key.
     Hash collisions should be handled with Linked List Chaining.
@@ -702,9 +1040,19 @@ Now let’s say after we inserted <code class="highlighter-rouge">("Ryan", 10)</
         <span class="n">new_entry</span><span class="o">.</span><span class="nb">next</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_entry</span>
 
-</code></pre></div></div>
-<p>To know when to resize, we need to correctly increment the count whenever we insert something new into the hash table. Let’s go ahead and add that.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  To know when to resize, we need to correctly increment the
+                  count whenever we insert something new into the hash table.
+                  Let’s go ahead and add that.
+                </p>
+                <div class="language-python highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
     <span class="s">"""
     Store the value with the given key.
     Hash collisions should be handled with Linked List Chaining.
@@ -725,9 +1073,19 @@ Now let’s say after we inserted <code class="highlighter-rouge">("Ryan", 10)</
         <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_entry</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">item_count</span> <span class="o">+=</span> <span class="mi">1</span>
-</code></pre></div></div>
-<p>Next, we need to check if the load factor is greater than or equal to 0.7. If it is, we need to double our capacity and resize.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Next, we need to check if the load factor is greater than or
+                  equal to 0.7. If it is, we need to double our capacity and
+                  resize.
+                </p>
+                <div class="language-python highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
     <span class="s">"""
     Store the value with the given key.
     Hash collisions should be handled with Linked List Chaining.
@@ -751,196 +1109,291 @@ Now let’s say after we inserted <code class="highlighter-rouge">("Ryan", 10)</
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_load_factor</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">0.7</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">capacity</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
-</code></pre></div></div>
-<p>Fantastic, we did it!</p>
-<h5>Challenge</h5>
-<ol>
-<li>Do we need to modify our <code class="highlighter-rouge">delete</code> and <code class="highlighter-rouge">get</code> methods to account for the new <code class="highlighter-rouge">get_load_factor</code> and <code class="highlighter-rouge">resize</code> methods? Why or why not?</li>
-</ol>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://courses.csail.mit.edu/6.006/spring11/rec/rec07.pdf" target="blank_">https://courses.csail.mit.edu/6.006/spring11/rec/rec07.pdf</a><br> </li>
-</ul>
-<hr>
+</code></pre>
+                  </div>
+                </div>
+                <p>Fantastic, we did it!</p>
+                <h5>Challenge</h5>
+                <ol>
+                  <li>
+                    Do we need to modify our
+                    <code class="highlighter-rouge">delete</code> and
+                    <code class="highlighter-rouge">get</code> methods to
+                    account for the new
+                    <code class="highlighter-rouge">get_load_factor</code> and
+                    <code class="highlighter-rouge">resize</code> methods? Why
+                    or why not?
+                  </li>
+                </ol>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://courses.csail.mit.edu/6.006/spring11/rec/rec07.pdf"
+                      target="blank_"
+                      >https://courses.csail.mit.edu/6.006/spring11/rec/rec07.pdf</a
+                    ><br />
+                  </li>
+                </ul>
+                <hr />
 
-<h2 class="display-4">
-<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
-<h3 class="display-5">Class Recordings</h3>
-<p class="lead">You can use class recordings to help you master the material.</p>
-<div>
-<ul class="list-group list-group-flush">
-<li class="list-group-item">
-<a href="/archive/cs/module/recG6onEnlSOWziKO">All previous recordings</a>
-</li>
-</ul>
-</div>
-<h3 class="display-5">Demonstrate Mastery</h3>
-<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
-<ul>
-<li>Objective challenge: <iframe height="400px" width="100%" src="https://repl.it/@mdmccarley89/cs-unit-1-sprint-4-module-2-hash-table-collision-resolution?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-</li>
-<li>Objective challenge: <ol>
-<li>Do we need to modify our <code class="highlighter-rouge">delete</code> and <code class="highlighter-rouge">get</code> methods to account for the new <code class="highlighter-rouge">get_load_factor</code> and <code class="highlighter-rouge">resize</code> methods? Why or why not?</li>
-</ol>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</main>
-</div>
+                <h2 class="display-4">
+                  <a
+                    id="review"
+                    class="anchor"
+                    href="#review"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Review
+                </h2>
+                <h3 class="display-5">Class Recordings</h3>
+                <p class="lead">
+                  You can use class recordings to help you master the material.
+                </p>
+                <div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <a href="/archive/cs/module/recG6onEnlSOWziKO"
+                        >All previous recordings</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <h3 class="display-5">Demonstrate Mastery</h3>
+                <p>
+                  To demonstrate mastery of this module, you need to complete
+                  and pass a code review on each of the following:
+                </p>
+                <ul>
+                  <li>
+                    Objective challenge:
+                    <iframe
+                      height="400px"
+                      width="100%"
+                      src="https://repl.it/@mdmccarley89/cs-unit-1-sprint-4-module-2-hash-table-collision-resolution?lite=true"
+                      scrolling="no"
+                      frameborder="no"
+                      allowtransparency="true"
+                      allowfullscreen="true"
+                      sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+                    ></iframe>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <ol>
+                      <li>
+                        Do we need to modify our
+                        <code class="highlighter-rouge">delete</code> and
+                        <code class="highlighter-rouge">get</code> methods to
+                        account for the new
+                        <code class="highlighter-rouge">get_load_factor</code>
+                        and
+                        <code class="highlighter-rouge">resize</code> methods?
+                        Why or why not?
+                      </li>
+                    </ol>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'UA-80850900-4');
-</script>
-<script type="text/javascript">
-  function getDomain() {
-    const domainName = window.location.hostname.split('.')[1];
-    return `${domainName}.com`;
-  }
-</script>
-<script src="" integrity="" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
-<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
-<script type="text/javascript">
-  SimpleJekyllSearch.init({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    dataSource: '/search.json',
-    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Hash Tables II">{title}</a></li>',
-    noResultsText: '',
-    limit: 10,
-    fuzzy: true,
-  })
-</script>
-<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
-  if (window.attachEvent) {
-    window.attachEvent('onload', verifySignedIn);
-  } else {
-    if (window.onload) {
-      var currentOnLoadFn = window.onload;
-      var newOnLoadFn = function (evt) {
-        currentOnLoadFn(evt);
-        verifySignedIn();
-      };
-      window.onload = newOnLoadFn;
-    } else {
-      window.onload = verifySignedIn;
-    }
-  }
-
-  function verifySignedIn() {
-    if (isPagePublic()) {
-      return showPageContents();
-    }
-
-    window.__user = null;
-    isSignedIn().then((user) => {
-      window.__user = user;
-
-      if (!user.signedIn) {
-        redirectToSignIn();
-      } else if (!user.student && !window.__openToAdmissions) {
-        showUnauthorizedMessage();
-      } else {
-        showPageContents();
-      }
-    });
-  }
-
-  function isPagePublic() {
-    const openCourses = [
-      'and-pre',
-      'ds-pre',
-      'fsw-pre',
-      'help',
-      'ios-pre',
-    ];
-
-    const openPages = [
-      'cs-and',
-      'cs-fsw',
-      'cs-ios',
-      'cr',
-      'ds',
-      'jx',
-      'p4s',
-      'ux',
-    ];
-
-    const pathParts = window.location.pathname.split('/');
-    const courseName = pathParts[1];
-    const pageName = pathParts[pathParts.length - 1];
-
-    return openCourses.includes(courseName) || openPages.includes(pageName);
-  }
-
-  function isSignedIn() {
-    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
-
-    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
-
-    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
-      .then((response) => response.text())
-      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
-      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
-      .catch((error) => {});
-  }
-
-  function redirectToSignIn() {
-    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
-    const redirectMessage = document.querySelector('#redirect-message');
-    redirectMessage.style.display = "block";
-    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
-    window.location = signInUrl;
-  }
-
-  function showPageContents() {
-    document.querySelector('#content-wrapper').style.visibility = 'visible';
-  }
-
-  function showUnauthorizedMessage() {
-    document.querySelector('#unauthorized-message').style.display = 'block';
-  }
-
-  function getAuthBaseUrl() {
-    const domain = getDomain();
-    const authBaseUrl = `https://auth.${domain}`;
-    return authBaseUrl;
-  }
-</script><script src="/assets/js/docs.min.js"></script><script>
-  var MathJax = {
-    tex: {
-      inlineMath: [['$$', '$$'], ['\[', '\])']]
-    },
-    "HTML-CSS": {
-      styles: {
-        ".MathJax span": {
-          color: "#000000"
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
         }
-      }
-    }
-  }
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<script>
-  handleExternalLinks();
+        gtag("js", new Date());
 
-  function handleExternalLinks() {
-    const domain = getDomain();
-    const links = document.querySelectorAll('a');
-    return links.forEach((link) => {
-      if (!link.host.includes(domain)) link.target = '_blank';
-    })
-  };
-</script>
-</div>
-</body>
+        gtag("config", "UA-80850900-4");
+      </script>
+      <script type="text/javascript">
+        function getDomain() {
+          const domainName = window.location.hostname.split(".")[1];
+          return `${domainName}.com`;
+        }
+      </script>
+      <script src="" integrity="" crossorigin="anonymous"></script>
+      <script>
+        window.jQuery ||
+          document.write(
+            '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>'
+          );
+      </script>
+      <script
+        src="/assets/js/vendor/popper.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="/dist/js/bootstrap.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script src="/assets/js/activate.js"></script>
+      <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        SimpleJekyllSearch.init({
+          searchInput: document.getElementById("search-input"),
+          resultsContainer: document.getElementById("results-container"),
+          dataSource: "/search.json",
+          searchResultTemplate:
+            '<li class="list-group-item"><a href="{url}" title="Hash Tables II">{title}</a></li>',
+          noResultsText: "",
+          limit: 10,
+          fuzzy: true,
+        });
+      </script>
+      <script src="/assets/js/mermaid.min.js"></script>
+      <script type="text/javascript">
+        if (window.attachEvent) {
+          window.attachEvent("onload", verifySignedIn);
+        } else {
+          if (window.onload) {
+            var currentOnLoadFn = window.onload;
+            var newOnLoadFn = function (evt) {
+              currentOnLoadFn(evt);
+              verifySignedIn();
+            };
+            window.onload = newOnLoadFn;
+          } else {
+            window.onload = verifySignedIn;
+          }
+        }
+
+        function verifySignedIn() {
+          if (isPagePublic()) {
+            return showPageContents();
+          }
+
+          window.__user = null;
+          isSignedIn().then((user) => {
+            window.__user = user;
+
+            if (!user.signedIn) {
+              redirectToSignIn();
+            } else if (!user.student && !window.__openToAdmissions) {
+              showUnauthorizedMessage();
+            } else {
+              showPageContents();
+            }
+          });
+        }
+
+        function isPagePublic() {
+          const openCourses = [
+            "and-pre",
+            "ds-pre",
+            "fsw-pre",
+            "help",
+            "ios-pre",
+          ];
+
+          const openPages = [
+            "cs-and",
+            "cs-fsw",
+            "cs-ios",
+            "cr",
+            "ds",
+            "jx",
+            "p4s",
+            "ux",
+          ];
+
+          const pathParts = window.location.pathname.split("/");
+          const courseName = pathParts[1];
+          const pageName = pathParts[pathParts.length - 1];
+
+          return (
+            openCourses.includes(courseName) || openPages.includes(pageName)
+          );
+        }
+
+        function isSignedIn() {
+          const isDeployPreview =
+            window.location.hostname.startsWith("deploy-preview") &&
+            window.location.hostname.endsWith("netlify.com");
+
+          if (isDeployPreview)
+            return Promise.resolve({ signedIn: true, student: true });
+
+          return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: "include" })
+            .then((response) => response.text())
+            .then((userAsText) => (userAsText ? JSON.parse(userAsText) : null))
+            .then((userData) => ({
+              signedIn: Boolean(userData),
+              student: Boolean(userData && userData.airtableId),
+              id: userData ? userData.id : null,
+              email: userData ? userData.email : null,
+            }))
+            .catch((error) => {});
+        }
+
+        function redirectToSignIn() {
+          const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(
+            window.location.href
+          )}&reason=auth_required`;
+          const redirectMessage = document.querySelector("#redirect-message");
+          redirectMessage.style.display = "block";
+          redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`;
+          window.location = signInUrl;
+        }
+
+        function showPageContents() {
+          document.querySelector("#content-wrapper").style.visibility =
+            "visible";
+        }
+
+        function showUnauthorizedMessage() {
+          document.querySelector("#unauthorized-message").style.display =
+            "block";
+        }
+
+        function getAuthBaseUrl() {
+          const domain = getDomain();
+          const authBaseUrl = `https://auth.${domain}`;
+          return authBaseUrl;
+        }
+      </script>
+      <script src="/assets/js/docs.min.js"></script>
+      <script>
+        var MathJax = {
+          tex: {
+            inlineMath: [
+              ["$$", "$$"],
+              ["\[", "\])"],
+            ],
+          },
+          "HTML-CSS": {
+            styles: {
+              ".MathJax span": {
+                color: "#000000",
+              },
+            },
+          },
+        };
+      </script>
+      <script
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+        type="text/javascript"
+      ></script>
+      <script>
+        handleExternalLinks();
+
+        function handleExternalLinks() {
+          const domain = getDomain();
+          const links = document.querySelectorAll("a");
+          return links.forEach((link) => {
+            if (!link.host.includes(domain)) link.target = "_blank";
+          });
+        }
+      </script>
+    </div>
+  </body>
 </html>

@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,31 +10,31 @@
 
 <a href="/cs/sprint/reckLrPDHRpFN3a6p" class="bd-toc-link">1.  Computer Science Fundamentals</a>
 
--   [Python Basics](/cs/module/recHNgXTaBpnn052p/)
--   [Problem Solving](/cs/module/recagU9ihCuMePtbx/)
--   [Time and Space Complexity](/cs/module/recZ6g2C5xkxHmT16/)
--   [Computer Memory Basics](/cs/module/recy2QANAS6Blpc5o/)
+- [Python Basics](/cs/module/recHNgXTaBpnn052p/)
+- [Problem Solving](/cs/module/recagU9ihCuMePtbx/)
+- [Time and Space Complexity](/cs/module/recZ6g2C5xkxHmT16/)
+- [Computer Memory Basics](/cs/module/recy2QANAS6Blpc5o/)
 
 <a href="/cs/sprint/recdbs5ZPBtMb6fou" class="bd-toc-link">2.  Data Structures and Algorithms I</a>
 
--   [Array and String Manipulation](/cs/module/recR43dkPzilEMXlE/)
--   [Linked Lists](/cs/module/recQJcAAjpSTtNf8A/)
--   [Queues and Stacks](/cs/module/rec07JKgm7ltWrPYD/)
--   [Searching and Recursion](/cs/module/rec00Cf3TiBWiCONA/)
+- [Array and String Manipulation](/cs/module/recR43dkPzilEMXlE/)
+- [Linked Lists](/cs/module/recQJcAAjpSTtNf8A/)
+- [Queues and Stacks](/cs/module/rec07JKgm7ltWrPYD/)
+- [Searching and Recursion](/cs/module/rec00Cf3TiBWiCONA/)
 
 <a href="/cs/sprint/recyC7E0YQc0qQgxa" class="bd-toc-link">3.  Data Structures and Algorithms II</a>
 
--   [Binary Search Trees](/cs/module/recgJOPYUjvQaN2sa/)
--   [Tree Traversal](/cs/module/recS3C67spna4M4HU/)
--   [Graphs I](/cs/module/recEPIaHFEriTuU2x/)
--   [Graphs II](/cs/module/recX4dkkIPeJ6JjX6/)
+- [Binary Search Trees](/cs/module/recgJOPYUjvQaN2sa/)
+- [Tree Traversal](/cs/module/recS3C67spna4M4HU/)
+- [Graphs I](/cs/module/recEPIaHFEriTuU2x/)
+- [Graphs II](/cs/module/recX4dkkIPeJ6JjX6/)
 
 <a href="/cs/sprint/recsJW8CaZiKcyUZj" class="bd-toc-link">4.  Data Structures and Algorithms III</a>
 
--   [Hash Tables I](/cs/module/recLpJY4yFQcV3qeW/)
--   [Hash Tables II](/cs/module/recG6onEnlSOWziKO/)
--   [Technical Interview Tips I](/cs/module/reczaVKTynSkqN8ZS/)
--   [Technical Interview Tips II](/cs/module/rec6kEjLri9SXMYdE/)
+- [Hash Tables I](/cs/module/recLpJY4yFQcV3qeW/)
+- [Hash Tables II](/cs/module/recG6onEnlSOWziKO/)
+- [Technical Interview Tips I](/cs/module/reczaVKTynSkqN8ZS/)
+- [Technical Interview Tips II](/cs/module/rec6kEjLri9SXMYdE/)
 
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjM1IiB2aWV3Ym94PSIwIDAgNzU2IDE5NyIgZmlsbD0iI2VjMzk0NCI+PGc+PHBhdGggZD0iTTI5Mi45LDEyNi42aC02LjdjLTksMC0xMi42LTEuOS0xMi42LTkuNVY0OC41YzAtNy43LDEuNi04LjYsMTEuNC05Ljd2LTQuNWgtNDEuM3Y0LjUgYzkuOCwxLjEsMTEuNCwxLjksMTEuNCw5Ljd2NjkuM2MwLDcuNy0xLjYsOC42LTExLjQsOS43djQuNWg3My43bDQuOS0yOS40aC00LjRDMzA4LjUsMTE5LjYsMzAzLjksMTI2LjYsMjkyLjksMTI2LjZ6Ij48L3BhdGg+PHBhdGggZD0iTTM4NS41LDEyMS4xVjc5LjNjMC0xNS44LTkuNC0yMi40LTI2LjYtMjIuNGMtMTUsMC0yNi44LDYuNi0yNi44LDE5LjNjMCwyLjQsMC4yLDMuMywwLjgsNWgxNi42IGMtMC41LTItMC43LTUtMC43LTcuNWMwLTkuNiwzLjYtMTIuNCw5LjQtMTIuNGM2LjQsMCw5LjcsMiw5LjcsMTQuNHYxMS4ybC0yMC44LDcuN2MtMTAuNiw0LjEtMTkuMyw4LjgtMTkuMywyMC43IGMwLDEwLjksNy41LDE3LjgsMTguNiwxNy44YzkuOSwwLDE3LjQtNi4yLDIxLjktMTIuMWwwLjEtMC4xbDAsMFYxMzJoMjZ2LTQuNEMzODcuNywxMjcuMSwzODUuNSwxMjYuMiwzODUuNSwxMjEuMXogTTM2OCwxMTcuOCBjLTQuNCwzLjMtNy42LDUuMy0xMiw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNFYxMTcuOEwzNjgsMTE3Ljh6Ij48L3BhdGg+PHBhdGggZD0iTTUxNC40LDEyMVY3OS41YzAtMTQuOC02LTIyLjQtMTguNy0yMi40Yy0xMS41LDAtMTkuNCw2LjYtMjUuNSwxMy45Yy0xLjgtOS42LTcuNy0xMy45LTE3LjgtMTMuOSBjLTExLjQsMC0xOC43LDYuMi0yNC44LDEzLjZWNTdoLTIuM2wtMjMuOCw3LjR2Mi40bDguNiw1djQ5LjRjMCw1LTIuMSw2LjEtOC45LDYuNHY0LjRoMzUuMXYtNC40Yy02LjctMC4zLTguNy0xLjMtOC43LTYuNHYtNDcgYzQuNy0zLjYsOS41LTYuNSwxNS41LTYuNWM3LjYsMCwxMC41LDQuMiwxMC41LDEyLjd2NDAuOGMwLDUtMS45LDYuMS04LjcsNi40djQuNGwzNC44LDB2LTQuNGMtNi43LTAuMy04LjYtMS4zLTguNi02LjR2LTQ3IGM0LjctMy42LDkuNS02LjUsMTUuNS02LjVjNy42LDAsMTAuNSw0LjIsMTAuNSwxMi43bC0wLjEsNDAuNWMwLDUtMS44LDYuNC04LjYsNi43bDAsNC40aDM1LjF2LTQuNCBDNTE2LjcsMTI3LjQsNTE0LjQsMTI2LjEsNTE0LjQsMTIxeiI+PC9wYXRoPjxwYXRoIGQ9Ik01NzMuMiw1Ny4zYy0xMSwwLTE4LjUsNS43LTIzLjQsMTIuOFYyMi45aC0yLjdsLTIzLjQsNi44djIuNWw4LjYsNC41VjEzMmgyLjlsOC0zLjVjNS44LDMuMywxMi4zLDUsMjAuMiw1IGMyMC44LDAsMzcuNC0xNS44LDM3LjQtNDIuNkM2MDAuOSw2OS45LDU5MC40LDU3LjMsNTczLjIsNTcuM3ogTTU2My40LDEyOC43Yy01LjQsMC0xMC4zLTIuNC0xMy43LTcuOVY3My42IGMzLjQtMy40LDguNS01LjcsMTMuNS01LjdjMTMuOSwwLDIwLDEyLjgsMjAsMjkuNUM1ODMuMywxMTQuNyw1NzUuOCwxMjguNSw1NjMuNCwxMjguN3oiPjwvcGF0aD48cGF0aCBkPSJNNjc3LDEyMS4yVjIyLjhoLTIuNkw2NTEsMjkuNlYzMmw4LjYsNC41djI1LjdjLTMuNC0zLjItOC44LTUuMS0xNS41LTUuMWMtMTkuOSwwLTM1LjIsMTUuMy0zNS4yLDQxLjMgYzAsMjAuNywxMS4yLDM0LjYsMjguMSwzNC42YzkuOCwwLDE3LTUuMywyMi42LTEzLjF2MC45VjEzMmgyNi4zbDAtNC40QzY3OS4xLDEyNy4zLDY3NywxMjYuMyw2NzcsMTIxLjJ6IE02NTkuNiwxMTcuMSBMNjU5LjYsMTE3LjFjLTMuNCwzLjQtOCw1LjEtMTMuMiw1LjFjLTEzLjIsMC0yMC40LTEyLjgtMjAuNC0yOS44YzAtMTcuOCw3LjMtMjkuMiwxOS41LTI5LjJjOC43LDAsMTQuMSw2LjksMTQuMSwxOC4zIEw2NTkuNiwxMTcuMXoiPjwvcGF0aD48cGF0aCBkPSJNNzQ3LjEsMTIxLjFWNzkuM2MwLTE1LjgtOS40LTIyLjQtMjYuNi0yMi40Yy0xNSwwLTI2LjgsNi42LTI2LjgsMTkuM2MwLDIuNCwwLjIsMy4zLDAuOCw1aDE2LjYgYy0wLjUtMi0wLjctNS0wLjctNy41YzAtOS42LDMuNi0xMi40LDkuNC0xMi40YzYuNCwwLDkuNywyLDkuNywxNC40djExLjJsLTIwLjgsNy43Yy0xMC42LDQuMS0xOS4zLDguOC0xOS4zLDIwLjcgYzAsMTAuOSw3LjUsMTcuOCwxOC42LDE3LjhjOS45LDAsMTcuNC02LjIsMjEuOS0xMi4xdi0wLjFoMC4xbDAsMTEuMWwyNiwwLjF2LTQuNUM3NDkuMywxMjcuMSw3NDcuMSwxMjYuMiw3NDcuMSwxMjEuMXogTTcyOS42LDExNy44Yy00LjQsMy4zLTcuNiw1LjMtMTIuMSw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNEw3MjkuNiwxMTcuOEw3MjkuNiwxMTcuOHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTAsMHY5MC40YzAsNjUuNyw1MC45LDg4LjUsODguMSwxMDUuMmgwLjFsMywxLjRjMC43LTAuNCwxLjQtMC43LDIuMi0xYzAuNC0wLjIsMC45LTAuNCwxLjMtMC42IGMzNy4zLTE2LjYsODguNC0zOS41LDg4LjQtMTA1VjBIMHogTTExNiwxMzJsLTItNS4zbC0yNi42LTcwYy0xLjYsNC4xLTUuMywxNC05LjMsMjQuNmwtMTUuMyw0MS4zYy0wLjcsMi0wLjMsMywwLjIsMy43IGMxLjEsMS4zLDMuNSwxLjMsNy4zLDEuM0g3MWwwLDQuNEg0Mi40bDAtNC40aDIuMmMzLjksMCw3LjEtMS43LDkuNS02LjVsMi45LTYuNmwyNi41LTY3LjhsLTQuNy0xMi41aDI0LjdsMzQuMSw4OS43bDMuMSw4LjFIMTE2eiI+PC9wYXRoPjwvc3ZnPg==" /></a>
 
@@ -44,35 +42,35 @@
 
 <a href="/cs/sprint/reckLrPDHRpFN3a6p" class="bd-toc-link">1.  Computer Science Fundamentals</a>
 
--   [Python Basics](/cs/module/recHNgXTaBpnn052p/)
--   [Problem Solving](/cs/module/recagU9ihCuMePtbx/)
--   [Time and Space Complexity](/cs/module/recZ6g2C5xkxHmT16/)
--   [Computer Memory Basics](/cs/module/recy2QANAS6Blpc5o/)
+- [Python Basics](/cs/module/recHNgXTaBpnn052p/)
+- [Problem Solving](/cs/module/recagU9ihCuMePtbx/)
+- [Time and Space Complexity](/cs/module/recZ6g2C5xkxHmT16/)
+- [Computer Memory Basics](/cs/module/recy2QANAS6Blpc5o/)
 
 <a href="/cs/sprint/recdbs5ZPBtMb6fou" class="bd-toc-link">2.  Data Structures and Algorithms I</a>
 
--   [Array and String Manipulation](/cs/module/recR43dkPzilEMXlE/)
--   [Linked Lists](/cs/module/recQJcAAjpSTtNf8A/)
--   [Queues and Stacks](/cs/module/rec07JKgm7ltWrPYD/)
--   [Searching and Recursion](/cs/module/rec00Cf3TiBWiCONA/)
+- [Array and String Manipulation](/cs/module/recR43dkPzilEMXlE/)
+- [Linked Lists](/cs/module/recQJcAAjpSTtNf8A/)
+- [Queues and Stacks](/cs/module/rec07JKgm7ltWrPYD/)
+- [Searching and Recursion](/cs/module/rec00Cf3TiBWiCONA/)
 
 <a href="/cs/sprint/recyC7E0YQc0qQgxa" class="bd-toc-link">3.  Data Structures and Algorithms II</a>
 
--   [Binary Search Trees](/cs/module/recgJOPYUjvQaN2sa/)
--   [Tree Traversal](/cs/module/recS3C67spna4M4HU/)
--   [Graphs I](/cs/module/recEPIaHFEriTuU2x/)
--   [Graphs II](/cs/module/recX4dkkIPeJ6JjX6/)
+- [Binary Search Trees](/cs/module/recgJOPYUjvQaN2sa/)
+- [Tree Traversal](/cs/module/recS3C67spna4M4HU/)
+- [Graphs I](/cs/module/recEPIaHFEriTuU2x/)
+- [Graphs II](/cs/module/recX4dkkIPeJ6JjX6/)
 
 <a href="/cs/sprint/recsJW8CaZiKcyUZj" class="bd-toc-link">4.  Data Structures and Algorithms III</a>
 
--   [Hash Tables I](/cs/module/recLpJY4yFQcV3qeW/)
--   [Hash Tables II](/cs/module/recG6onEnlSOWziKO/)
--   [Technical Interview Tips I](/cs/module/reczaVKTynSkqN8ZS/)
--   [Technical Interview Tips II](/cs/module/rec6kEjLri9SXMYdE/)
+- [Hash Tables I](/cs/module/recLpJY4yFQcV3qeW/)
+- [Hash Tables II](/cs/module/recG6onEnlSOWziKO/)
+- [Technical Interview Tips I](/cs/module/reczaVKTynSkqN8ZS/)
+- [Technical Interview Tips II](/cs/module/rec6kEjLri9SXMYdE/)
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Review](#review)
 
 # Problem Solving
 
@@ -80,8 +78,8 @@
 
 **At the end of this module, you should be able to:**
 
--   name and describe the details of each step of Lambda's Problem-Solving Framework (U.P.E.R)
--   effectively ask for help by giving the expected vs. experienced behavior, explaining what specific actions they've taken so far, and providing all relevant information and code
+- name and describe the details of each step of Lambda's Problem-Solving Framework (U.P.E.R)
+- effectively ask for help by giving the expected vs. experienced behavior, explaining what specific actions they've taken so far, and providing all relevant information and code
 
 #### Pro Tip
 
@@ -93,17 +91,13 @@ Voltaire
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=16Rja_aziWU), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=16Rja_aziWU), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=yVygkK2mTIY), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=yVygkK2mTIY), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -134,16 +128,16 @@ Before doing anything else, make sure you understand precisely what the problem 
 
 Here is a list of starter questions that might come up during this step:
 
--   *What are the inputs your code receives?*
-    -   *What is the range of the input?*
-    -   *How big can the input be (how much data)?*
--   *What are the outputs your code produces?*
-    -   *What is the range of the output?*
-    -   *How big can the output be (how much data)?*
--   *How performant must the code be?*
--   *Is there anything missing from the task description that needs to be clarified?*
--   *What assumptions are you making?*
-    -   *Does anyone else on the team need to validate these assumptions?*
+- _What are the inputs your code receives?_
+  - _What is the range of the input?_
+  - _How big can the input be (how much data)?_
+- _What are the outputs your code produces?_
+  - _What is the range of the output?_
+  - _How big can the output be (how much data)?_
+- _How performant must the code be?_
+- _Is there anything missing from the task description that needs to be clarified?_
+- _What assumptions are you making?_
+  - _Does anyone else on the team need to validate these assumptions?_
 
 #### **Actions**
 
@@ -165,24 +159,24 @@ You are done with this step when you can explain this problem to someone who has
 
 ### **2. Plan**
 
-This step is where you will ask, “*what steps will I take to solve the problem*?” You will take your description of the problem and transform it into a complete, actionable plan to solve that problem. If you realize you still don’t truly understand the problem while planning, return to **Understand** until you resolve the ambiguity. If you have not yet completed **Understand**, you will end up planning to solve the wrong problem! When interviewing, you must do this step aloud!
+This step is where you will ask, “_what steps will I take to solve the problem_?” You will take your description of the problem and transform it into a complete, actionable plan to solve that problem. If you realize you still don’t truly understand the problem while planning, return to **Understand** until you resolve the ambiguity. If you have not yet completed **Understand**, you will end up planning to solve the wrong problem! When interviewing, you must do this step aloud!
 
 Remember, you aren’t coding during this step unless it’s a small piece of throwaway code to test a hypothesis. It would be best if you wrote pseudocode during this step, however.
 
 #### **Questions**
 
--   *Do you know the answer to a similar problem that has comparable inputs and outputs?*
-    -   *Does this problem remind you an anything else?*
-    -   *Can you bring that knowledge to bear here?*
--   *Does my plan meet the performance requirements?*
-    -   *What’s the time complexity?*
-    -   *What’s the space complexity?*
-    -   *How big can my input data be?*
--   *Can sorting the input data ahead of time lead to any improvements in time complexity?*
-    -   *Does recursion help?*
-    -   *Is the problem made up of identical subproblems?*
-    -   *Can you state the problem with itself in its definition?*
--   *Think like a villain. Does your plan cover the edge cases?*
+- _Do you know the answer to a similar problem that has comparable inputs and outputs?_
+  - _Does this problem remind you an anything else?_
+  - _Can you bring that knowledge to bear here?_
+- _Does my plan meet the performance requirements?_
+  - _What’s the time complexity?_
+  - _What’s the space complexity?_
+  - _How big can my input data be?_
+- _Can sorting the input data ahead of time lead to any improvements in time complexity?_
+  - _Does recursion help?_
+  - _Is the problem made up of identical subproblems?_
+  - _Can you state the problem with itself in its definition?_
+- _Think like a villain. Does your plan cover the edge cases?_
 
 #### **Actions**
 
@@ -206,11 +200,11 @@ This step is where you take your plan and convert it to actual working code. Thi
 
 #### **Questions**
 
--   *Think like a villain. Does your implementation handle all inputs?*
--   *What is the best way to split this code into separate functions or classes?*
--   *Does this functionality already exist?*
-    -   *Are there built-in libraries I can leverage?*
-    -   *Are there third-party libraries I can leverage?*
+- _Think like a villain. Does your implementation handle all inputs?_
+- _What is the best way to split this code into separate functions or classes?_
+- _Does this functionality already exist?_
+  - _Are there built-in libraries I can leverage?_
+  - _Are there third-party libraries I can leverage?_
 
 #### **Actions**
 
@@ -228,14 +222,14 @@ The primary question you are dealing with during this step is — “is this imp
 
 #### **Questions**
 
--   *Does your solution work in all cases?*
-    -   *Main case?*
-    -   *Edge cases?*
--   *Is the solution performant enough?*
--   *Is the code documented?*
--   *In retrospect, what would you do differently? What will you do differently next time?*
-    -   *What went right?*
-    -   *What went wrong?*
+- _Does your solution work in all cases?_
+  - _Main case?_
+  - _Edge cases?_
+- _Is the solution performant enough?_
+- _Is the code documented?_
+- _In retrospect, what would you do differently? What will you do differently next time?_
+  - _What went right?_
+  - _What went wrong?_
 
 #### **Actions**
 
@@ -247,7 +241,7 @@ You know that this step is complete when your code is adequately refactored and 
 
 ##### Follow Along
 
-Let’s use the *[dining philosophers problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem)* as an example problem to use our Problem Solving Framework on. Here’s a short description of the problem:
+Let’s use the _[dining philosophers problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem)_ as an example problem to use our Problem Solving Framework on. Here’s a short description of the problem:
 
 > Five silent philosophers sit at a round table with bowls of noodles. One chopstick is placed between each pair of adjacent philosophers.
 >
@@ -263,18 +257,18 @@ On the surface, this seems like a straightforward problem — however, some appr
 
 Here are some critical pieces of information from the question we should highlight:
 
--   there are **5** philosophers
--   there are **2 states** (eating, thinking)
--   there is precisely 1 chopstick in between each pair of philosophers (5 total)
--   BOTH chopsticks are required to transition from thinking to eating
+- there are **5** philosophers
+- there are **2 states** (eating, thinking)
+- there is precisely 1 chopstick in between each pair of philosophers (5 total)
+- BOTH chopsticks are required to transition from thinking to eating
 
-Some essential questions to ask here include *“When should philosophers pick up a chopstick?”* and *“When should philosophers put down a chopstick?”*
+Some essential questions to ask here include _“When should philosophers pick up a chopstick?”_ and _“When should philosophers put down a chopstick?”_
 
 Remember that you want to establish if there are any restrictions or limitations you need to consider before you work on a solution.
 
 ### **2. Plan**
 
-Let’s create a solution written as a set of rules that defines how philosophers should interact with chopsticks in a manner that will allow them to transition between *eating* and *thinking*.
+Let’s create a solution written as a set of rules that defines how philosophers should interact with chopsticks in a manner that will allow them to transition between _eating_ and _thinking_.
 
 1.  philosopher is eating (2 chopsticks)
 2.  philosopher finishes eating and sets down chopsticks
@@ -286,12 +280,12 @@ Let’s create a solution written as a set of rules that defines how philosopher
 
 We could break down the general plan above into a few specific rules.
 
--   eat for a set amount of time once they are holding both chopsticks
--   put down the right chopstick
--   put down the left chopstick
--   pick up the left chopstick as soon as it becomes available
--   pick up the right chopstick as soon as it becomes available
--   repeat
+- eat for a set amount of time once they are holding both chopsticks
+- put down the right chopstick
+- put down the left chopstick
+- pick up the left chopstick as soon as it becomes available
+- pick up the right chopstick as soon as it becomes available
+- repeat
 
 However, this solution will NOT always work.
 
@@ -301,15 +295,15 @@ The above solution has the potential to create a situation known in Computer Sci
 
 ##### Challenge
 
-For everyone to eat, there are some situations in which philosophers *should* pick up a chopstick and some cases in which they *should NOT* (because another philosopher needs to use it).
+For everyone to eat, there are some situations in which philosophers _should_ pick up a chopstick and some cases in which they _should NOT_ (because another philosopher needs to use it).
 
 Write a better solution to the dining philosophers problem so that deadlock does NOT occur.
 
 ##### Dig Deeper
 
--   <https://www.interviewcake.com/tricks-for-getting-unstuck-programming-interview?course=fc1&section=interview-tips>  
+- <https://www.interviewcake.com/tricks-for-getting-unstuck-programming-interview?course=fc1&section=interview-tips>
 
-------------------------------------------------------------------------
+---
 
 #### Learn to effectively ask for help by giving the expected vs. experienced behavior, explaining what specific actions they've taken so far, and providing all relevant information and code
 
@@ -387,17 +381,17 @@ It appears the questioner proofread their question beforehand as it does not con
 
 1.  Choose a real-world example from a recent problem/challenge. Use the guidelines and process outlined above to ask for help in your cohort-specific help channel.
 2.  Identify an unanswered question in your cohort-specific help channel. Do your best to provide a helpful response to that question.
-3.  Find an example of a **bad** question on Stack Overflow. Analyze the question using the guidelines above and write a short response explaining *why* you believe it is a **bad** question.
-4.  Find an example of a **good** question on Stack Overflow. Analyze the question using the guidelines above and write a short response explaining *why* you believe it is a **good** question.
+3.  Find an example of a **bad** question on Stack Overflow. Analyze the question using the guidelines above and write a short response explaining _why_ you believe it is a **bad** question.
+4.  Find an example of a **good** question on Stack Overflow. Analyze the question using the guidelines above and write a short response explaining _why_ you believe it is a **good** question.
 
 ##### Dig Deeper
 
--   [Stack Overflow: How Do I Ask a Good Question?](https://stackoverflow.com/help/how-to-ask)  
--   [Writing the Perfect Question](https://codeblog.jonskeet.uk/2010/08/29/writing-the-perfect-question/)  
--   [How to Ask Questions the Smart Way](http://catb.org/esr/faqs/smart-questions.html)  
--   [How to Debug Small Programs](https://ericlippert.com/2014/03/05/how-to-debug-small-programs/)  
+- [Stack Overflow: How Do I Ask a Good Question?](https://stackoverflow.com/help/how-to-ask)
+- [Writing the Perfect Question](https://codeblog.jonskeet.uk/2010/08/29/writing-the-perfect-question/)
+- [How to Ask Questions the Smart Way](http://catb.org/esr/faqs/smart-questions.html)
+- [How to Debug Small Programs](https://ericlippert.com/2014/03/05/how-to-debug-small-programs/)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -405,24 +399,24 @@ It appears the questioner proofread their question beforehand as it does not con
 
 You can use class recordings to help you master the material.
 
--   **[CSPT15 Problem Solving w/Tom Tarpey](https://youtu.be/I-CBduH1q3E)**
+- **[CSPT15 Problem Solving w/Tom Tarpey](https://youtu.be/I-CBduH1q3E)**
 
-    Lecture 10/29/2020
+  Lecture 10/29/2020
 
--   [All previous recordings](/archive/cs/module/recagU9ihCuMePtbx)
+- [All previous recordings](/archive/cs/module/recagU9ihCuMePtbx)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    For everyone to eat, there are some situations in which philosophers *should* pick up a chopstick and some cases in which they *should NOT* (because another philosopher needs to use it).
+  For everyone to eat, there are some situations in which philosophers _should_ pick up a chopstick and some cases in which they _should NOT_ (because another philosopher needs to use it).
 
-    Write a better solution to the dining philosophers problem so that deadlock does NOT occur.
+  Write a better solution to the dining philosophers problem so that deadlock does NOT occur.
 
--   Objective challenge:
-    1.  Choose a real-world example from a recent problem/challenge. Use the guidelines and process outlined above to ask for help in your cohort-specific help channel.
-    2.  Identify an unanswered question in your cohort-specific help channel. Do your best to provide a helpful response to that question.
-    3.  Find an example of a **bad** question on Stack Overflow. Analyze the question using the guidelines above and write a short response explaining *why* you believe it is a **bad** question.
-    4.  Find an example of a **good** question on Stack Overflow. Analyze the question using the guidelines above and write a short response explaining *why* you believe it is a **good** question.
+- Objective challenge:
+  1.  Choose a real-world example from a recent problem/challenge. Use the guidelines and process outlined above to ask for help in your cohort-specific help channel.
+  2.  Identify an unanswered question in your cohort-specific help channel. Do your best to provide a helpful response to that question.
+  3.  Find an example of a **bad** question on Stack Overflow. Analyze the question using the guidelines above and write a short response explaining _why_ you believe it is a **bad** question.
+  4.  Find an example of a **good** question on Stack Overflow. Analyze the question using the guidelines above and write a short response explaining _why_ you believe it is a **good** question.

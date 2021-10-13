@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Projects](#projects)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Projects](#projects)
+- [Review](#review)
 
 # Class Components
 
@@ -73,9 +71,9 @@ Today we will learn all about `classes` in React. We will use classes to build o
 
 **At the end of this module, you should be able to:**
 
--   explain class components, and use a class component to render some state data to the DOM
--   share data between components using state and props
--   respond to events triggered by user interaction and handle user input via forms in React
+- explain class components, and use a class component to render some state data to the DOM
+- share data between components using state and props
+- respond to events triggered by user interaction and handle user input via forms in React
 
 #### Pro Tip
 
@@ -85,29 +83,23 @@ Good writing is good because it is easier to read.
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=lksl2l5sVek), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=lksl2l5sVek), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=qRPM_CWPRfM), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=qRPM_CWPRfM), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=8SELYmSaRvA), or enable JavaScript if it is disabled in your browser.
 
--   
+- [React.Component](https://reactjs.org/docs/react-component.html)
 
-    # An error occurred.
+  The documentation surrounding React.Component that we’ll be extending as our base class for class components
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=8SELYmSaRvA), or enable JavaScript if it is disabled in your browser.
-
--   [React.Component](https://reactjs.org/docs/react-component.html)
-
-    The documentation surrounding React.Component that we’ll be extending as our base class for class components
-
--   [React Synthetic Event](https://reactjs.org/docs/events.html)
+- [React Synthetic Event](https://reactjs.org/docs/events.html)
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -117,44 +109,44 @@ React comes with it a constructor class called `Component` that has some very sp
 
 ##### Overview
 
-React gave us the idea of components as independent pieces of UI. And thus far, you have learned how to build out `functional components` for use in making multiple DOM elements. Now, we’re going to be learning about the `React.Component` base class that allows us to use some of the methods that the React team has curated to tap into what we call the `Component Lifecycle`. These methods (known as life cycle hooks *more on these to come*) give us control over how our components work, and if we’d like to use them, we have to build out a class component that `extends` the `React.Component` parent class. Any time you see a line of code that looks like the following, you’re using the React.Component parent class, and you have the ability to tap into these methods.
+React gave us the idea of components as independent pieces of UI. And thus far, you have learned how to build out `functional components` for use in making multiple DOM elements. Now, we’re going to be learning about the `React.Component` base class that allows us to use some of the methods that the React team has curated to tap into what we call the `Component Lifecycle`. These methods (known as life cycle hooks _more on these to come_) give us control over how our components work, and if we’d like to use them, we have to build out a class component that `extends` the `React.Component` parent class. Any time you see a line of code that looks like the following, you’re using the React.Component parent class, and you have the ability to tap into these methods.
 
     class FooComponent extends React.Component {}
 
 By creating components as classes, you can set up a data object that your component is concerned with. This is done using `state` and setting up that object on our constructor method. Once we have some data that we can render out to the DOM, we need a vehicle that will allow us to render that data. This is achieved with the JSX method `render()` from within the life-cycle hook. We’ll walk you through the steps below.
 
-Declare your `class component` by extending the `React.Component` parent class. `class FooComponent extends React.Component {}`. Use the `constructor` function to set up some state. *because we’re calling extends, we also need to call `super();` otherwise we won’t have access the `this`* We need to render some sort of UI to the DOM. We do this by calling the life-cycle method `render`.
+Declare your `class component` by extending the `React.Component` parent class. `class FooComponent extends React.Component {}`. Use the `constructor` function to set up some state. _because we’re calling extends, we also need to call `super();` otherwise we won’t have access the `this`_ We need to render some sort of UI to the DOM. We do this by calling the life-cycle method `render`.
 
 I like to remember these steps by referencing one of my favorite bands: Creedence Clearwater Revival (CCR), which stands for class, constructor, and render/return.
 
-Declare your *class*, and extend the `React.Component` Base class.
+Declare your _class_, and extend the `React.Component` Base class.
 
     class FooComponent extends React.Component {
 
-1.  Now we’ll set up our *constructor* and add state.
+1.  Now we’ll set up our _constructor_ and add state.
 
     constructor() {
-      super();
-      this.state = {};
+    super();
+    this.state = {};
     }
 
-1.  *Render* some UI and *return* some `JSX.`
+1.  _Render_ some UI and _return_ some `JSX.`
 
     render() {
-      return <div>Hello, I am Foo Component</div>;
+    return <div>Hello, I am Foo Component</div>;
     }
 
 Our final component should look like this.
 
     class FooComponent extends React.Component {
-      constructor() { 
+      constructor() {
         super();
         this.state = {};
       }
       render() {
         return <div>Hello, I am Foo Component</div>;
       }
-    } 
+    }
 
 Now that we have constructed a skeleton for our Class component, it can be a bit more dynamic. The way we’ll achieve this will be to use some data that we’ll pre-define as some information we’d like our component to display. We’ll then take that data and do this really cool thing called `interpolation` in order to present it to the DOM within some Text.
 
@@ -184,7 +176,7 @@ When you’re done, your browser window should re-render without any errors. You
 
 Now, let’s add a property to our state data. Define a `message` property on the state object.
 
-    this.state = { 
+    this.state = {
       message: "Hello from App State!!"
     };
 
@@ -200,17 +192,17 @@ Hooray! You’ve now built your first class component, and you’re ready to roc
 
 Let’s take the functionality of this class component that we built earlier and extend it just a little bit. Declare a `Functional Component` called `RenderMessage` inside [this CodeSandbox](https://codesandbox.io/s/103jkor46q).
 
--   Make sure you declare your Props Object that will be passed into this component.
--   Return a `div` who’s child is `props.message`
--   Now inside of the `App` class pass in that `RenderMessage` component and pass down a message prop to `RenderMessage`. This message prop should be set equal to the message property on the state object.
--   Once it’s all wired up properly you’ve done it!
+- Make sure you declare your Props Object that will be passed into this component.
+- Return a `div` who’s child is `props.message`
+- Now inside of the `App` class pass in that `RenderMessage` component and pass down a message prop to `RenderMessage`. This message prop should be set equal to the message property on the state object.
+- Once it’s all wired up properly you’ve done it!
 
 ##### Dig Deeper
 
--   [Functional Components vs. Class Components](https://www.andreasreiterer.at/web-development/react-functional-components/)  
-    Learn when to use them, so when the time comes, you'll know!
+- [Functional Components vs. Class Components](https://www.andreasreiterer.at/web-development/react-functional-components/)  
+  Learn when to use them, so when the time comes, you'll know!
 
-------------------------------------------------------------------------
+---
 
 #### Learn to share data between components using state and props
 
@@ -271,9 +263,9 @@ There we have it; now we are sharing data between a component’s state and a co
 
 Let’s build out a few components and put some concepts together there.
 
--   We’re going to be updating some state on a parent component.
--   That state will be wired up to a few other components as we pass the props around.
--   We will also be passing around a few handler functions that help us update/delete our state.
+- We’re going to be updating some state on a parent component.
+- That state will be wired up to a few other components as we pass the props around.
+- We will also be passing around a few handler functions that help us update/delete our state.
 
 Lets set up a form component that we can use to update our message component from above.
 
@@ -327,10 +319,10 @@ We’re going to need to build out a change handler function on our `App` compon
 
 Using the following tools:
 
--   Class component
--   functional FormComponent, MessageComponent
--   click, and change handlers
--   `setState`
+- Class component
+- functional FormComponent, MessageComponent
+- click, and change handlers
+- `setState`
 
 Build out a form that will allow a user to handle data. You’ll need a button, input field, and some data-bound to a DOM element that displays what the user is submitting.
 
@@ -338,7 +330,7 @@ When a user clicks submit, show the data that’s on state in an `alert` stateme
 
 **Stretch** Loop over a list of items showing those items to the screen. (Can be a list of strings). When a user clicks submit, instead of logging the item, push an item into that list, and watch the magic happen.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to respond to events triggered by user interaction and handle user input via forms in React
 
@@ -352,8 +344,8 @@ Events in any programing language are unique to the language itself. When javasc
 
 > Handling events with React elements is very similar to handling events on DOM elements. There are some syntactic differences:
 >
-> -   React events are named using camelCase, rather than lowercase.
-> -   With JSX you pass a function as the event handler, rather than a string.
+> - React events are named using camelCase, rather than lowercase.
+> - With JSX you pass a function as the event handler, rather than a string.
 
 Now, let’s dive in and see what it is like to handle events in ReactJS.
 
@@ -403,9 +395,9 @@ Now, let’s build out a little Application that can handle some data that we pa
 
 We’re going to build out some event handler functions for the following events across multiple elements:
 
-    - onClick 
-    - onDoubleClick 
-    - onMouseEnter 
+    - onClick
+    - onDoubleClick
+    - onMouseEnter
     - onChange
 
 Build out a `singleClickHandler` function that will call `alert("Single Click!");`
@@ -470,18 +462,18 @@ https://codesandbox.io/s/rmnj2r1o0p Here is a working copy of what we achieved!
 
 Using this Code sandbox that we’ve been working in together, build out an app that holds a string item on the state object.
 
--   Build out a function handler that can take in the edits from an `onChange event` and then use the `setState` function to set those items on state.
--   You should have seen me do this already, so you may have to refer back to previous walk-throughs.
+- Build out a function handler that can take in the edits from an `onChange event` and then use the `setState` function to set those items on state.
+- You should have seen me do this already, so you may have to refer back to previous walk-throughs.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#projects" id="projects" class="anchor"><span class="octicon octicon-link"></span></a>Projects
 
--   ##### [React Todo](https://github.com/LambdaSchool/React-Todo)
+- ##### [React Todo](https://github.com/LambdaSchool/React-Todo)
 
--   ##### [React-Sorting-Hat](https://github.com/LambdaSchool/React-Sorting-Hat)
+- ##### [React-Sorting-Hat](https://github.com/LambdaSchool/React-Sorting-Hat)
 
-    Stretch assignment for those that have finished the Todo Project beyond MVP
+  Stretch assignment for those that have finished the Todo Project beyond MVP
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -489,49 +481,49 @@ Using this Code sandbox that we’ve been working in together, build out an app 
 
 You can use class recordings to help you master the material.
 
--   **[Class Components for Web35 w/ Warren Longmire](https://youtu.be/CDooIXMwS50)**
+- **[Class Components for Web35 w/ Warren Longmire](https://youtu.be/CDooIXMwS50)**
 
-    Class Components
+  Class Components
 
--   [All previous recordings](/archive/WEB3/module/recnDKrWb24lgaziC)
+- [All previous recordings](/archive/WEB3/module/recnDKrWb24lgaziC)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Let’s take the functionality of this class component that we built earlier and extend it just a little bit. Declare a `Functional Component` called `RenderMessage` inside [this CodeSandbox](https://codesandbox.io/s/103jkor46q).
+  Let’s take the functionality of this class component that we built earlier and extend it just a little bit. Declare a `Functional Component` called `RenderMessage` inside [this CodeSandbox](https://codesandbox.io/s/103jkor46q).
 
-    -   Make sure you declare your Props Object that will be passed into this component.
-    -   Return a `div` who’s child is `props.message`
-    -   Now inside of the `App` class pass in that `RenderMessage` component and pass down a message prop to `RenderMessage`. This message prop should be set equal to the message property on the state object.
-    -   Once it’s all wired up properly you’ve done it!
+  - Make sure you declare your Props Object that will be passed into this component.
+  - Return a `div` who’s child is `props.message`
+  - Now inside of the `App` class pass in that `RenderMessage` component and pass down a message prop to `RenderMessage`. This message prop should be set equal to the message property on the state object.
+  - Once it’s all wired up properly you’ve done it!
 
--   Objective challenge:
+- Objective challenge:
 
-    Using the following tools:
+  Using the following tools:
 
-    -   Class component
-    -   functional FormComponent, MessageComponent
-    -   click, and change handlers
-    -   `setState`
+  - Class component
+  - functional FormComponent, MessageComponent
+  - click, and change handlers
+  - `setState`
 
-    Build out a form that will allow a user to handle data. You’ll need a button, input field, and some data-bound to a DOM element that displays what the user is submitting.
+  Build out a form that will allow a user to handle data. You’ll need a button, input field, and some data-bound to a DOM element that displays what the user is submitting.
 
-    When a user clicks submit, show the data that’s on state in an `alert` statement.
+  When a user clicks submit, show the data that’s on state in an `alert` statement.
 
-    **Stretch** Loop over a list of items showing those items to the screen. (Can be a list of strings). When a user clicks submit, instead of logging the item, push an item into that list, and watch the magic happen.
+  **Stretch** Loop over a list of items showing those items to the screen. (Can be a list of strings). When a user clicks submit, instead of logging the item, push an item into that list, and watch the magic happen.
 
--   Objective challenge:
+- Objective challenge:
 
-    Using this Code sandbox that we’ve been working in together, build out an app that holds a string item on the state object.
+  Using this Code sandbox that we’ve been working in together, build out an app that holds a string item on the state object.
 
-    -   Build out a function handler that can take in the edits from an `onChange event` and then use the `setState` function to set those items on state.
-    -   You should have seen me do this already, so you may have to refer back to previous walk-throughs.
+  - Build out a function handler that can take in the edits from an `onChange event` and then use the `setState` function to set those items on state.
+  - You should have seen me do this already, so you may have to refer back to previous walk-throughs.
 
--   Project: React Todo
+- Project: React Todo
 
--   Code Challenge: MergeSort
+- Code Challenge: MergeSort
 
--   Code Challenge: BreadthFirstSearch
+- Code Challenge: BreadthFirstSearch

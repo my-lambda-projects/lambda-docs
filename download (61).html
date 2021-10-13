@@ -1,456 +1,777 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Intended as a home for Lambda School curriculum.">
-<meta name="author" content="">
-<meta name="generator" content="Jekyll v3.8.0">
-<title>Java - Data Modeling and Auditing Fields with custom querying · Lambda School</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Intended as a home for Lambda School curriculum."
+    />
+    <meta name="author" content="" />
+    <meta name="generator" content="Jekyll v3.8.0" />
+    <title>
+      Java - Data Modeling and Auditing Fields with custom querying · Lambda
+      School
+    </title>
 
-<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+    <link
+      rel="stylesheet"
+      integrity
+      crossorigin="anonymous"
+      href="https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css"
+    />
 
-<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+    <link
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css"
+    />
 
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css"
+    />
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
-  ga('send', 'pageview');
-</script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-122016605-1", "learn.lambdaschool.com");
+      ga("send", "pageview");
+    </script>
 
+    <link
+      rel="apple-touch-icon"
+      href="/assets/img/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/assets/img/favicons/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicons/safari-pinned-tab.svg"
+      color="#a0001e"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="msapplication-config"
+      content="/assets/img/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#a0001e" />
+  </head>
+  <body>
+    <noscript>Please enable JavaScript to view this page.</noscript>
+    <div id="redirect-message" style="display: none">
+      You must be logged in to view this page.
+    </div>
+    <div id="unauthorized-message" style="display: none">
+      You must be a Lambda School student to view this page.
+    </div>
+    <div id="content-wrapper" style="visibility: hidden">
+      <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+          <span class="skiplink-text">Skip to main content</span>
+        </div>
+      </a>
+      <div class="mobile-menu">
+        <div class="m-drop">
+          <div class="mobile-row">
+            <div class="header-row" style="padding: 3px 7px">
+              <a class="navbar-brand" href="/" aria-label="Lambda School"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="35"
+                  viewBox="0 0 33 35"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                    fill="#EC3944"
+                  /></svg
+              ></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#mobile-course-menu"
+                aria-controls="mobile-course-menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="30"
+                  height="30"
+                  focusable="false"
+                >
+                  <title>Menu</title>
+                  <path
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    d="M4 7h22M4 15h22M4 23h22"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="nav-row">
+            <div class="results-container">
+              <ul id="results-container" class="dropdown list-group"></ul>
+            </div>
+            <div id="mobile-course-menu" class="collapse nav-row">
+              <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+                <nav class="bd-links">
+                  <div class="bd-toc-item">
+                    <h4 class="bd-toc-link">Web API: Java</h4>
+                  </div>
 
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web4java/sprint/recnLDyTtONLTMiFJ"
+                    >
+                      1.&nbsp;&nbsp;Java Precourse Information
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web4java/module/recfnUAvFbeyIAHib/">
+                          Welcome to Java Spring
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/recjH0lMflsFIVzDM/">
+                          Java Spring Course Table of Contents
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web4java/sprint/recoJ4ZqNQWX3cy6E"
+                    >
+                      2.&nbsp;&nbsp;Java Fundamentals
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web4java/module/recAGVTYNZyJbEFpu/">
+                          Java - JDK and Java Classes
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/rec6Hrk77HupYeoN5/">
+                          Java Interfaces, Abstract Classes, Lambda Expression
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/recyJ663TrxVgpqY9/">
+                          Java - RDBMS and SQL Basics
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/recqtftA9E98qpbak/">
+                          Java - Intro to Maven, Spring, and Tomcat Using REST
+                          API
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web4java/sprint/recRVUSWQEtosl0Cz"
+                    >
+                      3.&nbsp;&nbsp;RDBMS and Intro to APIs
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web4java/module/recb0OVmRrJzqhH4D/">
+                          Java - Spring Database Creation Including Seed Data
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/rec3THcdjv8BumGCt/">
+                          Java - Read Data using CRUD Operations
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/recJihkiNn2KH2nEW/">
+                          Java - Inserting Deleting and Updating Data using CRUD
+                          Operations
+                        </a>
+                      </li>
+                      <li class="active bd-sidenav-active">
+                        <a href="/web4java/module/rec2oQCFWOVShtxIx/">
+                          Java - Data Modeling and Auditing Fields with custom
+                          querying
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web4java/sprint/recSqm5AAEkJcIl3p"
+                    >
+                      4.&nbsp;&nbsp;Java Frameworks
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web4java/module/rec3E1WYDyoiEF1e3/">
+                          Java - Exception Handling
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/rececDV2OMIUcY2eH/">
+                          Java - User Authentication
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/recDboXln5wm4aKJt/">
+                          Java - Automated Testing
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/rec7pCiBPzI4DkAJT/">
+                          Java - Java Deployment and Best Practices
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web4java/sprint/recC5dhR9menaROwx"
+                    >
+                      5.&nbsp;&nbsp;WEB Unit 4 Java Build
+                    </a>
+                    <ul class="nav bd-sidenav"></ul>
+                  </div>
+                  <hr />
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="sidebar-container bd-sidebar">
+          <div class="docs-sidebar">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"
+              ><svg
+                width="135"
+                height="35"
+                viewBox="0 0 756 197"
+                fill="#ec3944"
+              >
+                <g>
+                  <path
+                    d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"
+                  ></path>
+                  <path
+                    d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"
+                  ></path>
+                  <path
+                    d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"
+                  ></path>
+                  <path
+                    d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"
+                  ></path>
+                  <path
+                    d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"
+                  ></path>
+                  <path
+                    d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"
+                  ></path>
+                </g>
+                <path
+                  d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"
+                ></path></svg
+            ></a>
+            <ul id="results-container" class="dropdown list-group"></ul>
+            <nav class="bd-links collapse" id="bd-docs-nav">
+              <div class="bd-toc-item">
+                <h4 class="bd-toc-link">Web API: Java</h4>
+              </div>
 
-<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
-<link rel="icon" href="/favicon.ico">
-<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#a0001e">
-</head>
-<body>
-<noscript>Please enable JavaScript to view this page.</noscript>
-<div id="redirect-message" style="display: none;">
-You must be logged in to view this page.
-</div>
-<div id="unauthorized-message" style="display: none;">
-You must be a Lambda School student to view this page.
-</div>
-<div id="content-wrapper" style="visibility: hidden;">
-<a id="skippy" class="sr-only sr-only-focusable" href="#content">
-<div class="container">
-<span class="skiplink-text">Skip to main content</span>
-</div>
-</a>
-<div class="mobile-menu">
-<div class="m-drop">
-<div class="mobile-row">
-<div class="header-row" style="padding: 3px 7px">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
-</svg></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
-</button>
-</div>
-</div>
-<div class="nav-row">
-<div class="results-container">
-<ul id="results-container" class="dropdown list-group"></ul>
-</div>
-<div id="mobile-course-menu" class="collapse nav-row">
-<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
-<nav class="bd-links">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Web API: Java</h4>
-</div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/web4java/sprint/recnLDyTtONLTMiFJ"
+                >
+                  1.&nbsp;&nbsp;Java Precourse Information
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web4java/module/recfnUAvFbeyIAHib/">
+                      Welcome to Java Spring
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/recjH0lMflsFIVzDM/">
+                      Java Spring Course Table of Contents
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/web4java/sprint/recoJ4ZqNQWX3cy6E"
+                >
+                  2.&nbsp;&nbsp;Java Fundamentals
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web4java/module/recAGVTYNZyJbEFpu/">
+                      Java - JDK and Java Classes
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/rec6Hrk77HupYeoN5/">
+                      Java Interfaces, Abstract Classes, Lambda Expression
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/recyJ663TrxVgpqY9/">
+                      Java - RDBMS and SQL Basics
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/recqtftA9E98qpbak/">
+                      Java - Intro to Maven, Spring, and Tomcat Using REST API
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/web4java/sprint/recRVUSWQEtosl0Cz"
+                >
+                  3.&nbsp;&nbsp;RDBMS and Intro to APIs
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web4java/module/recb0OVmRrJzqhH4D/">
+                      Java - Spring Database Creation Including Seed Data
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/rec3THcdjv8BumGCt/">
+                      Java - Read Data using CRUD Operations
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/recJihkiNn2KH2nEW/">
+                      Java - Inserting Deleting and Updating Data using CRUD
+                      Operations
+                    </a>
+                  </li>
+                  <li class="active bd-sidenav-active">
+                    <a href="/web4java/module/rec2oQCFWOVShtxIx/">
+                      Java - Data Modeling and Auditing Fields with custom
+                      querying
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/web4java/sprint/recSqm5AAEkJcIl3p"
+                >
+                  4.&nbsp;&nbsp;Java Frameworks
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web4java/module/rec3E1WYDyoiEF1e3/">
+                      Java - Exception Handling
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/rececDV2OMIUcY2eH/">
+                      Java - User Authentication
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/recDboXln5wm4aKJt/">
+                      Java - Automated Testing
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/rec7pCiBPzI4DkAJT/">
+                      Java - Java Deployment and Best Practices
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/web4java/sprint/recC5dhR9menaROwx"
+                >
+                  5.&nbsp;&nbsp;WEB Unit 4 Java Build
+                </a>
+                <ul class="nav bd-sidenav"></ul>
+              </div>
+              <hr />
+            </nav>
+          </div>
+        </div>
+        <main class="content-container flex-wrapper" role="main">
+          <div class="sticky-nav">
+            <div class="sprint-nav">
+              <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+                <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+                <li class="toc-entry toc-h2">
+                  <a href="#guided-project">Guided Project</a>
+                </li>
+                <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+                <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="wrapper limit-width">
+            <div class="flex-wrapper">
+              <div class="limit-width">
+                <div class="jumbotron">
+                  <h1 class="bd-title" id="content">
+                    Java - Data Modeling and Auditing Fields with custom
+                    querying
+                  </h1>
+                  <span class="lead">
+                    <p class="bd-lead"></p>
+                    <style>
+                      table {
+                        font-family: arial, sans-serif;
+                        border-collapse: collapse;
+                        width: 100%;
+                      }
 
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recnLDyTtONLTMiFJ">
-1.&nbsp;&nbsp;Java Precourse Information
-</a>
-<ul class="nav bd-sidenav">
+                      td,
+                      th {
+                        border: 1px solid #dddddd;
+                        text-align: left;
+                        padding: 8px;
+                      }
 
-<li>
-<a href="/web4java/module/recfnUAvFbeyIAHib/">
-Welcome to Java Spring
-</a>
-</li>
-<li>
-<a href="/web4java/module/recjH0lMflsFIVzDM/">
-Java Spring Course Table of Contents
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recoJ4ZqNQWX3cy6E">
-2.&nbsp;&nbsp;Java Fundamentals
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/web4java/module/recAGVTYNZyJbEFpu/">
-Java - JDK and Java Classes
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec6Hrk77HupYeoN5/">
-Java Interfaces, Abstract Classes, Lambda Expression
-</a>
-</li>
-<li>
-<a href="/web4java/module/recyJ663TrxVgpqY9/">
-Java - RDBMS and SQL Basics
-</a>
-</li>
-<li>
-<a href="/web4java/module/recqtftA9E98qpbak/">
-Java - Intro to Maven, Spring, and Tomcat Using REST API
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recRVUSWQEtosl0Cz">
-3.&nbsp;&nbsp;RDBMS and Intro to APIs
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
- <a href="/web4java/module/recb0OVmRrJzqhH4D/">
-Java - Spring Database Creation Including Seed Data
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec3THcdjv8BumGCt/">
-Java - Read Data using CRUD Operations
-</a>
-</li>
-<li>
-<a href="/web4java/module/recJihkiNn2KH2nEW/">
-Java - Inserting Deleting and Updating Data using CRUD Operations
-</a>
-</li>
-<li class="active bd-sidenav-active">
-<a href="/web4java/module/rec2oQCFWOVShtxIx/">
-Java - Data Modeling and Auditing Fields with custom querying
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recSqm5AAEkJcIl3p">
-4.&nbsp;&nbsp;Java Frameworks
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/web4java/module/rec3E1WYDyoiEF1e3/">
-Java - Exception Handling
-</a>
-</li>
-<li>
-<a href="/web4java/module/rececDV2OMIUcY2eH/">
-Java - User Authentication
-</a>
-</li>
-<li>
-<a href="/web4java/module/recDboXln5wm4aKJt/">
-Java - Automated Testing
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec7pCiBPzI4DkAJT/">
-Java - Java Deployment and Best Practices
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recC5dhR9menaROwx">
-5.&nbsp;&nbsp;WEB Unit 4 Java Build
-</a>
-<ul class="nav bd-sidenav">
-
-</ul>
-</div>
-<hr>
-</nav>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="main-container">
-<div class="sidebar-container bd-sidebar">
-<div class="docs-sidebar">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
-<ul id="results-container" class="dropdown list-group"></ul>
-<nav class="bd-links collapse" id="bd-docs-nav">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Web API: Java</h4>
-</div>
-
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recnLDyTtONLTMiFJ">
-1.&nbsp;&nbsp;Java Precourse Information
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/web4java/module/recfnUAvFbeyIAHib/">
-Welcome to Java Spring
-</a>
-</li>
-<li>
-<a href="/web4java/module/recjH0lMflsFIVzDM/">
-Java Spring Course Table of Contents
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recoJ4ZqNQWX3cy6E">
-2.&nbsp;&nbsp;Java Fundamentals
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/web4java/module/recAGVTYNZyJbEFpu/">
-Java - JDK and Java Classes
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec6Hrk77HupYeoN5/">
-Java Interfaces, Abstract Classes, Lambda Expression
-</a>
-</li>
-<li>
-<a href="/web4java/module/recyJ663TrxVgpqY9/">
-Java - RDBMS and SQL Basics
-</a>
-</li>
-<li>
-<a href="/web4java/module/recqtftA9E98qpbak/">
-Java - Intro to Maven, Spring, and Tomcat Using REST API
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recRVUSWQEtosl0Cz">
-3.&nbsp;&nbsp;RDBMS and Intro to APIs
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/web4java/module/recb0OVmRrJzqhH4D/">
-Java - Spring Database Creation Including Seed Data
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec3THcdjv8BumGCt/">
-Java - Read Data using CRUD Operations
-</a>
-</li>
-<li>
-<a href="/web4java/module/recJihkiNn2KH2nEW/">
-Java - Inserting Deleting and Updating Data using CRUD Operations
-</a>
-</li>
-<li class="active bd-sidenav-active">
-<a href="/web4java/module/rec2oQCFWOVShtxIx/">
-Java - Data Modeling and Auditing Fields with custom querying
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recSqm5AAEkJcIl3p">
-4.&nbsp;&nbsp;Java Frameworks
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/web4java/module/rec3E1WYDyoiEF1e3/">
-Java - Exception Handling
-</a>
-</li>
-<li>
-<a href="/web4java/module/rececDV2OMIUcY2eH/">
-Java - User Authentication
-</a>
-</li>
-<li>
-<a href="/web4java/module/recDboXln5wm4aKJt/">
-Java - Automated Testing
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec7pCiBPzI4DkAJT/">
-Java - Java Deployment and Best Practices
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recC5dhR9menaROwx">
-5.&nbsp;&nbsp;WEB Unit 4 Java Build
-</a>
-<ul class="nav bd-sidenav">
-
-</ul>
-</div>
-<hr>
-</nav>
-</div>
-</div>
-<main class="content-container flex-wrapper" role="main">
-<div class="sticky-nav">
-<div class="sprint-nav">
-<ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
-<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
-<li class="toc-entry toc-h2"><a href="#guided-project">Guided Project</a></li>
-<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
-<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
-</ul>
-</div>
-
-</div>
-<div class="wrapper limit-width">
-<div class="flex-wrapper">
-<div class="limit-width">
-<div class="jumbotron">
- <h1 class="bd-title" id="content">Java - Data Modeling and Auditing Fields with custom querying</h1>
-<span class="lead">
-<p class="bd-lead"></p>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
-<p><a id="Data_Modeling_and_Auditing_Fields_with_Custom_Querying"></a></p>
-</span>
-<strong>At the end of this module, you should be able to:</strong>
-<ul>
-<li>add additional fields to a Many to Many Join Table</li>
-<li>add standard auditing fields to each table</li>
-<li>populate and display standard auditing fields</li>
-<li>use SQL, JPA and Hibernate to perform custom data manipulation operations on a RDBMS through a Spring Application</li>
-<li>implement default Swagger documentation</li>
-<li>print the default Swagger documentation</li>
-</ul>
-</div>
-<div class="alert alert-warning" role="alert">
-<h4>Pro Tip</h4>
-<p>Omit needless words.</p>
-<footer class="blockquote-footer"><p>Strunk and White</p>
-</footer>
-</div>
-<h2 class="display-4">
-<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
-<p class="lead">Review each preclass resource before class.</p>
-<div class="preclass">
-<ul class="list-group list-group-flush">
-</ul>
-</div>
-<h2 class="display-4">
-<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
-<h4 class="mark mb-3 p-2">Learn to add additional fields to a Many to Many Join Table</h4>
-<p><a id="Additional_fields"></a></p>
-<h5>Overview</h5>
-<ul>
-<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling</a> for the code used in the objective.</li>
-</ul>
-<h3 id="software-needed">Software Needed</h3>
-<ul>
-<li>Java Development Kit (JDK) - at least version 11</li>
-<li>JetBrains IntelliJ IDEA IDE</li>
-<li>Postman</li>
-</ul>
-<p>We have a new business rule. When an employee is added to a Job Title, we need to add the name of their manager for that Job Title. In other words, our Join Table needs an additional attribute, column. This is a very common situation so let’s do it!</p>
-<p>First, we need to know that our <code class="highlighter-rouge">@ManyToMany</code> annotation does not allow us to add additional fields to the join table. If you look at the database diagram, you can see that our Many to Many relationship gets implemented using two One to Many relations.</p>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%204%20-%20JX%20Java%20-%20Data%20Modeling%20and%20Auditing%20Fields%20with%20custom%20querying/assets/JX-SP11-M4-01.png" alt="Sample Employee Database"></p>
-<ul>
-<li>One Employee to Many employee, job titles combinations</li>
-<li>One Job title to Many employee, job titles combinations</li>
-</ul>
-<p>We will make use of this construct to add our manager column.</p>
-<p>The idea is to make changes to our database, allowing us to add this column. In making those changes, we want to impact our users, clients, as little as possible. So, we will keep our controllers the same. The data being sent to and from our application will have to change slightly to accommodate the new field. This is a great time to use the file comparison tool in IntelliJ (See the objective on IntelliJ Tips and Tricks from a previous module) -&gt; comparing the these two applications</p>
-<ul>
-<li><a href="https://github.com/LambdaSchool/java-sampleemps/tree/master/sampleemps_create_delete_update">https://github.com/LambdaSchool/java-sampleemps/tree/master/sampleemps_create_delete_update</a></li>
-<li><a href="https://github.com/LambdaSchool/java-sampleemps/tree/master/sampleemps_data_modeling">https://github.com/LambdaSchool/java-sampleemps/tree/master/sampleemps_data_modeling</a></li>
-</ul>
-<p>do note that the second application has code from several different objectives for this module!</p>
-<h5>Follow Along</h5>
-<p>Let’s take the repo <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_create_delete_update</a>t and transform it into the repo <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling</a>t step by step!</p>
-<ul>
-<li>Create the join table class <code class="highlighter-rouge">models.Employeetitles</code> with the extra manager column.</li>
-<li>This is a brand new class. Much of the code is straightforward and commented below.</li>
-<li>However, we do have a new issue, a compound primary key. This is where more than 2 or more fields are combined to make the primary key. In our case, we are combining <code class="highlighter-rouge">employeeid</code> and <code class="highlighter-rouge">jobtitleid</code>.
-<ul>
-<li>Notice that each field has the @Id annotation signifying they are part of the primary key.</li>
-<li>Since we have a compound primary key, we must implement the interface <code class="highlighter-rouge">Serializable</code> to aid in generating JSON Objects of this class.
-<ul>
-<li>When you implement Serializable, you also have to implement equals and hashCode</li>
-<li>This is done in a method similar to adding Getters and Setters
-<ul>
-<li>Right click in the class where you want to add the new code.</li>
-<li>Select <code class="highlighter-rouge">Generate...</code> -&gt; <code class="highlighter-rouge">equals() and hashCode()</code>
-</li>
-<li>In the dialog box,
-<ul>
-<li>make sure <code class="highlighter-rouge">Use getters during code generation</code> is checked</li>
-<li>make sure <code class="highlighter-rouge">Accept subclasses as parameters to equals()</code> method is NOT checked</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%204%20-%20JX%20Java%20-%20Data%20Modeling%20and%20Auditing%20Fields%20with%20custom%20querying/assets/JX-SP11-M4-02.png" alt="getters screen"></p>
-<ul>
-<li>In the next dialog box, check that all fields are included in the <code class="highlighter-rouge">equals()</code> method. This is the norm.</li>
-</ul>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%204%20-%20JX%20Java%20-%20Data%20Modeling%20and%20Auditing%20Fields%20with%20custom%20querying/assets/JX-SP11-M4-03.png" alt="equals screen"></p>
-<ul>
-<li>In the next dialog box, check that all fields are included in the <code class="highlighter-rouge">hashCode()</code> method. This is the norm.</li>
-</ul>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%204%20-%20JX%20Java%20-%20Data%20Modeling%20and%20Auditing%20Fields%20with%20custom%20querying/assets/JX-SP11-M4-04.png" alt="hashCode screen"></p>
-<ul>
-<li>The next dialog box requires some thought. You want to check all the fields that cannot be NULL. In our code, none of the fields can be NULL so I have checked all fields.</li>
-</ul>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%204%20-%20JX%20Java%20-%20Data%20Modeling%20and%20Auditing%20Fields%20with%20custom%20querying/assets/JX-SP11-M4-05.png" alt="Null screen"></p>
-<ul>
-<li>Now click finished and see the code get generated for you!</li>
-</ul>
-<details>
-<summary>Expand to see the code for models.EmployeeTitles</summary>
-<pre><code class="language-JAVA">
+                      tr:nth-child(even) {
+                        background-color: #dddddd;
+                      }
+                    </style>
+                    <p>
+                      <a
+                        id="Data_Modeling_and_Auditing_Fields_with_Custom_Querying"
+                      ></a>
+                    </p>
+                  </span>
+                  <strong
+                    >At the end of this module, you should be able to:</strong
+                  >
+                  <ul>
+                    <li>add additional fields to a Many to Many Join Table</li>
+                    <li>add standard auditing fields to each table</li>
+                    <li>populate and display standard auditing fields</li>
+                    <li>
+                      use SQL, JPA and Hibernate to perform custom data
+                      manipulation operations on a RDBMS through a Spring
+                      Application
+                    </li>
+                    <li>implement default Swagger documentation</li>
+                    <li>print the default Swagger documentation</li>
+                  </ul>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                  <h4>Pro Tip</h4>
+                  <p>Omit needless words.</p>
+                  <footer class="blockquote-footer">
+                    <p>Strunk and White</p>
+                  </footer>
+                </div>
+                <h2 class="display-4">
+                  <a
+                    id="prepare"
+                    class="anchor"
+                    href="#prepare"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Prepare
+                </h2>
+                <p class="lead">Review each preclass resource before class.</p>
+                <div class="preclass">
+                  <ul class="list-group list-group-flush"></ul>
+                </div>
+                <h2 class="display-4">
+                  <a id="learn" class="anchor" href="#learn" aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Learn
+                </h2>
+                <h4 class="mark mb-3 p-2">
+                  Learn to add additional fields to a Many to Many Join Table
+                </h4>
+                <p><a id="Additional_fields"></a></p>
+                <h5>Overview</h5>
+                <ul>
+                  <li>
+                    See the Github Repository
+                    <a
+                      href="https://github.com/LambdaSchool/java-sampleemps.git"
+                      >https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling</a
+                    >
+                    for the code used in the objective.
+                  </li>
+                </ul>
+                <h3 id="software-needed">Software Needed</h3>
+                <ul>
+                  <li>Java Development Kit (JDK) - at least version 11</li>
+                  <li>JetBrains IntelliJ IDEA IDE</li>
+                  <li>Postman</li>
+                </ul>
+                <p>
+                  We have a new business rule. When an employee is added to a
+                  Job Title, we need to add the name of their manager for that
+                  Job Title. In other words, our Join Table needs an additional
+                  attribute, column. This is a very common situation so let’s do
+                  it!
+                </p>
+                <p>
+                  First, we need to know that our
+                  <code class="highlighter-rouge">@ManyToMany</code> annotation
+                  does not allow us to add additional fields to the join table.
+                  If you look at the database diagram, you can see that our Many
+                  to Many relationship gets implemented using two One to Many
+                  relations.
+                </p>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%204%20-%20JX%20Java%20-%20Data%20Modeling%20and%20Auditing%20Fields%20with%20custom%20querying/assets/JX-SP11-M4-01.png"
+                    alt="Sample Employee Database"
+                  />
+                </p>
+                <ul>
+                  <li>
+                    One Employee to Many employee, job titles combinations
+                  </li>
+                  <li>
+                    One Job title to Many employee, job titles combinations
+                  </li>
+                </ul>
+                <p>
+                  We will make use of this construct to add our manager column.
+                </p>
+                <p>
+                  The idea is to make changes to our database, allowing us to
+                  add this column. In making those changes, we want to impact
+                  our users, clients, as little as possible. So, we will keep
+                  our controllers the same. The data being sent to and from our
+                  application will have to change slightly to accommodate the
+                  new field. This is a great time to use the file comparison
+                  tool in IntelliJ (See the objective on IntelliJ Tips and
+                  Tricks from a previous module) -&gt; comparing the these two
+                  applications
+                </p>
+                <ul>
+                  <li>
+                    <a
+                      href="https://github.com/LambdaSchool/java-sampleemps/tree/master/sampleemps_create_delete_update"
+                      >https://github.com/LambdaSchool/java-sampleemps/tree/master/sampleemps_create_delete_update</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/LambdaSchool/java-sampleemps/tree/master/sampleemps_data_modeling"
+                      >https://github.com/LambdaSchool/java-sampleemps/tree/master/sampleemps_data_modeling</a
+                    >
+                  </li>
+                </ul>
+                <p>
+                  do note that the second application has code from several
+                  different objectives for this module!
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Let’s take the repo
+                  <a href="https://github.com/LambdaSchool/java-sampleemps.git"
+                    >https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_create_delete_update</a
+                  >t and transform it into the repo
+                  <a href="https://github.com/LambdaSchool/java-sampleemps.git"
+                    >https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling</a
+                  >t step by step!
+                </p>
+                <ul>
+                  <li>
+                    Create the join table class
+                    <code class="highlighter-rouge">models.Employeetitles</code>
+                    with the extra manager column.
+                  </li>
+                  <li>
+                    This is a brand new class. Much of the code is
+                    straightforward and commented below.
+                  </li>
+                  <li>
+                    However, we do have a new issue, a compound primary key.
+                    This is where more than 2 or more fields are combined to
+                    make the primary key. In our case, we are combining
+                    <code class="highlighter-rouge">employeeid</code> and
+                    <code class="highlighter-rouge">jobtitleid</code>.
+                    <ul>
+                      <li>
+                        Notice that each field has the @Id annotation signifying
+                        they are part of the primary key.
+                      </li>
+                      <li>
+                        Since we have a compound primary key, we must implement
+                        the interface
+                        <code class="highlighter-rouge">Serializable</code> to
+                        aid in generating JSON Objects of this class.
+                        <ul>
+                          <li>
+                            When you implement Serializable, you also have to
+                            implement equals and hashCode
+                          </li>
+                          <li>
+                            This is done in a method similar to adding Getters
+                            and Setters
+                            <ul>
+                              <li>
+                                Right click in the class where you want to add
+                                the new code.
+                              </li>
+                              <li>
+                                Select
+                                <code class="highlighter-rouge"
+                                  >Generate...</code
+                                >
+                                -&gt;
+                                <code class="highlighter-rouge"
+                                  >equals() and hashCode()</code
+                                >
+                              </li>
+                              <li>
+                                In the dialog box,
+                                <ul>
+                                  <li>
+                                    make sure
+                                    <code class="highlighter-rouge"
+                                      >Use getters during code generation</code
+                                    >
+                                    is checked
+                                  </li>
+                                  <li>
+                                    make sure
+                                    <code class="highlighter-rouge"
+                                      >Accept subclasses as parameters to
+                                      equals()</code
+                                    >
+                                    method is NOT checked
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%204%20-%20JX%20Java%20-%20Data%20Modeling%20and%20Auditing%20Fields%20with%20custom%20querying/assets/JX-SP11-M4-02.png"
+                    alt="getters screen"
+                  />
+                </p>
+                <ul>
+                  <li>
+                    In the next dialog box, check that all fields are included
+                    in the
+                    <code class="highlighter-rouge">equals()</code> method. This
+                    is the norm.
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%204%20-%20JX%20Java%20-%20Data%20Modeling%20and%20Auditing%20Fields%20with%20custom%20querying/assets/JX-SP11-M4-03.png"
+                    alt="equals screen"
+                  />
+                </p>
+                <ul>
+                  <li>
+                    In the next dialog box, check that all fields are included
+                    in the
+                    <code class="highlighter-rouge">hashCode()</code> method.
+                    This is the norm.
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%204%20-%20JX%20Java%20-%20Data%20Modeling%20and%20Auditing%20Fields%20with%20custom%20querying/assets/JX-SP11-M4-04.png"
+                    alt="hashCode screen"
+                  />
+                </p>
+                <ul>
+                  <li>
+                    The next dialog box requires some thought. You want to check
+                    all the fields that cannot be NULL. In our code, none of the
+                    fields can be NULL so I have checked all fields.
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%204%20-%20JX%20Java%20-%20Data%20Modeling%20and%20Auditing%20Fields%20with%20custom%20querying/assets/JX-SP11-M4-05.png"
+                    alt="Null screen"
+                  />
+                </p>
+                <ul>
+                  <li>
+                    Now click finished and see the code get generated for you!
+                  </li>
+                </ul>
+                <details>
+                  <summary>
+                    Expand to see the code for models.EmployeeTitles
+                  </summary>
+                  <pre><code class="language-JAVA">
 package com.lambdaschool.sampleemps.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -591,11 +912,18 @@ public class EmployeeTitles implements Serializable
     }
 }
 </code></pre>
-</details>
-<p>Now we need to update equals and hashCode to work with the ids. An EmployeeTitle object is considered equal to another object when their jobtileids and employeeids are equal. So, we write our equals method to reflect this.</p>
-<details>
-<summary>Expand to see the new equals and hashcode methods</summary>
-<pre><code class="language-JAVA">
+                </details>
+                <p>
+                  Now we need to update equals and hashCode to work with the
+                  ids. An EmployeeTitle object is considered equal to another
+                  object when their jobtileids and employeeids are equal. So, we
+                  write our equals method to reflect this.
+                </p>
+                <details>
+                  <summary>
+                    Expand to see the new equals and hashcode methods
+                  </summary>
+                  <pre><code class="language-JAVA">
     /*
      * Since we have implemented Serializable - required for the compound primary key,
      * We have also Override equals and hashCode. This is done through the same menu system
@@ -635,12 +963,19 @@ public class EmployeeTitles implements Serializable
         return 34;
     }
 </code></pre>
-</details>
-<p>The Many To Many attributes in the Employee and JobTitle have to be replaced with One To Many relationships. Since we are changing the fields of the class, the Getters and Setters have to change. These changes are documented below.</p>
-<details>
-<summary>Expand to see the code changes for models.Employee</summary>
-<p>Replace the following ManyToMany Relationship</p>
-<pre><code class="language-JAVA">
+                </details>
+                <p>
+                  The Many To Many attributes in the Employee and JobTitle have
+                  to be replaced with One To Many relationships. Since we are
+                  changing the fields of the class, the Getters and Setters have
+                  to change. These changes are documented below.
+                </p>
+                <details>
+                  <summary>
+                    Expand to see the code changes for models.Employee
+                  </summary>
+                  <p>Replace the following ManyToMany Relationship</p>
+                  <pre><code class="language-JAVA">
     @ManyToMany()
     /*
      * Note: JoinTable is the name of a table that will get created in the database combining the two primary keys making up this relationship
@@ -1131,46 +1466,100 @@ We also have to make some changes to the `EmployeeServiceImpl`. See code below. 
 </details>
 
 Remember the controllers do NOT change!!!
-</employeetitles></employeetitles></employeetitles></code></pre></details></employeetitles></employeetitles></code></pre></employee></employee></code></pre></employeetitles></code></pre></employee></code></pre></details></employeetitles></employeetitles></email></email></email></employeetitles></code></pre></details></employeetitles></employeetitles></code></pre></jobtitle></jobtitle></code></pre></employeetitles></code></pre></jobtitle></code></pre></details>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://vladmihalcea.com/the-best-way-to-map-a-many-to-many-association-with-extra-columns-when-using-jpa-and-hibernate/" target="blank_">Many-to-Many Association</a><br> The best way to map a many-to-many association with extra columns when using JPA and Hibernate</li>
-<li>
-<a href="https://hellokoding.com/jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/" target="blank_">Many To Many Extra Columns Relationship</a><br> JPA and Hibernate Many To Many Extra Columns Relationship Mapping Example with Spring Boot and MySQL</li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to add standard auditing fields to each table</h4>
-<p><a id="Adding_Audit_Fields"></a></p>
-<h5>Overview</h5>
-<ul>
-<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling</a>t for the code used in the objective.</li>
-</ul>
-<h3 id="software-needed">Software Needed</h3>
-<ul>
-<li>Java Development Kit (JDK) - at least version 11</li>
-<li>JetBrains IntelliJ IDEA IDE</li>
-<li>Postman</li>
-</ul>
-<p>A very common extra set of columns that are added to tables are auditing columns.</p>
-<ul>
-<li>Who created the row</li>
-<li>When was the row created</li>
-<li>Who last modified the row</li>
-<li>When was the row last modified</li>
-</ul>
-<p>These are so common that the Spring Framework provides us with JPA Auditing Annotations. We just need to implement them as we desire. Here is the common approach:</p>
-<p>A note on the fields</p>
-<ul>
-<li>The When fields, data and time, will be read from the system date and time</li>
-<li>The Who fields, username, for now will default to something. We will be adding user authentication in the future and that is when these fields will really show their worth!</li>
-</ul>
-<h5>Follow Along</h5>
-<p>Let’s continue taking the repo <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_create_delete_update</a>t and transforming it into the repo <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling</a>t step by step!</p>
-<p>We are going to add these auditing fields to each table. Let’s first create a new Abstract Class that contains these audit fields. Take special notice of the comments around the annotations. This is boilerplate code. This abstract class can normally be added as is to any Java Spring application where you wish to implement audit fields.</p>
-<details>
-<summary>Expand to see the new abstract class models.Auditable</summary>
-<pre><code class="language-JAVA">
+</employeetitles></employeetitles></employeetitles></code></pre></details></employeetitles></employeetitles></code></pre></employee></employee></code></pre></employeetitles></code></pre></employee></code></pre></details></employeetitles></employeetitles></email></email></email></employeetitles></code></pre></details></employeetitles></employeetitles></code></pre></jobtitle></jobtitle></code></pre></employeetitles></code></pre></jobtitle></code></pre>
+                </details>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://vladmihalcea.com/the-best-way-to-map-a-many-to-many-association-with-extra-columns-when-using-jpa-and-hibernate/"
+                      target="blank_"
+                      >Many-to-Many Association</a
+                    ><br />
+                    The best way to map a many-to-many association with extra
+                    columns when using JPA and Hibernate
+                  </li>
+                  <li>
+                    <a
+                      href="https://hellokoding.com/jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/"
+                      target="blank_"
+                      >Many To Many Extra Columns Relationship</a
+                    ><br />
+                    JPA and Hibernate Many To Many Extra Columns Relationship
+                    Mapping Example with Spring Boot and MySQL
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to add standard auditing fields to each table
+                </h4>
+                <p><a id="Adding_Audit_Fields"></a></p>
+                <h5>Overview</h5>
+                <ul>
+                  <li>
+                    See the Github Repository
+                    <a
+                      href="https://github.com/LambdaSchool/java-sampleemps.git"
+                      >https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling</a
+                    >t for the code used in the objective.
+                  </li>
+                </ul>
+                <h3 id="software-needed">Software Needed</h3>
+                <ul>
+                  <li>Java Development Kit (JDK) - at least version 11</li>
+                  <li>JetBrains IntelliJ IDEA IDE</li>
+                  <li>Postman</li>
+                </ul>
+                <p>
+                  A very common extra set of columns that are added to tables
+                  are auditing columns.
+                </p>
+                <ul>
+                  <li>Who created the row</li>
+                  <li>When was the row created</li>
+                  <li>Who last modified the row</li>
+                  <li>When was the row last modified</li>
+                </ul>
+                <p>
+                  These are so common that the Spring Framework provides us with
+                  JPA Auditing Annotations. We just need to implement them as we
+                  desire. Here is the common approach:
+                </p>
+                <p>A note on the fields</p>
+                <ul>
+                  <li>
+                    The When fields, data and time, will be read from the system
+                    date and time
+                  </li>
+                  <li>
+                    The Who fields, username, for now will default to something.
+                    We will be adding user authentication in the future and that
+                    is when these fields will really show their worth!
+                  </li>
+                </ul>
+                <h5>Follow Along</h5>
+                <p>
+                  Let’s continue taking the repo
+                  <a href="https://github.com/LambdaSchool/java-sampleemps.git"
+                    >https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_create_delete_update</a
+                  >t and transforming it into the repo
+                  <a href="https://github.com/LambdaSchool/java-sampleemps.git"
+                    >https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling</a
+                  >t step by step!
+                </p>
+                <p>
+                  We are going to add these auditing fields to each table. Let’s
+                  first create a new Abstract Class that contains these audit
+                  fields. Take special notice of the comments around the
+                  annotations. This is boilerplate code. This abstract class can
+                  normally be added as is to any Java Spring application where
+                  you wish to implement audit fields.
+                </p>
+                <details>
+                  <summary>
+                    Expand to see the new abstract class models.Auditable
+                  </summary>
+                  <pre><code class="language-JAVA">
 
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
@@ -1320,36 +1709,78 @@ public class SampleempsApplication
 </code></pre>
 
 </details>
-</string></string></code></pre></details></p></code></pre></details>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://medium.com/@manika09singh/enable-auditing-using-spring-data-jpa-2f62587ccb23" target="blank_">Enable auditing</a><br> Enable auditing using Spring Data JPA</li>
-<li>
-<a href="https://dzone.com/articles/spring-data-jpa-auditing-automatically-the-good-stuff" target="blank_">Spring Data JPA Auditing</a><br> Spring Data JPA Auditing: Automatically Saving the Good Stuff. Most closely follows our plan</li>
-<li>
-<a href="https://www.baeldung.com/database-auditing-jpa" target="blank_">Baeldung</a><br> Baeldung - Auditing with JPA, Hibernate, and Spring Data JPA</li>
+</string></string></code></pre></details></p></code></pre>
+                </details>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://medium.com/@manika09singh/enable-auditing-using-spring-data-jpa-2f62587ccb23"
+                      target="blank_"
+                      >Enable auditing</a
+                    ><br />
+                    Enable auditing using Spring Data JPA
+                  </li>
+                  <li>
+                    <a
+                      href="https://dzone.com/articles/spring-data-jpa-auditing-automatically-the-good-stuff"
+                      target="blank_"
+                      >Spring Data JPA Auditing</a
+                    ><br />
+                    Spring Data JPA Auditing: Automatically Saving the Good
+                    Stuff. Most closely follows our plan
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.baeldung.com/database-auditing-jpa"
+                      target="blank_"
+                      >Baeldung</a
+                    ><br />
+                    Baeldung - Auditing with JPA, Hibernate, and Spring Data JPA
+                  </li>
 
-<li>
-<a href="https://www.baeldung.com/hibernate-inheritance" target="blank_">Baeldung</a><br> Baeldung - MappedSuperclass</li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to populate and display standard auditing fields</h4>
-<p><a id="Using_Audit_Fields"></a></p>
-<h5>Overview</h5>
-<ul>
-<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling</a> for the code used in the objective.</li>
-</ul>
-<h3 id="software-needed">Software Needed</h3>
-<ul>
-<li>Java Development Kit (JDK) - at least version 11</li>
-<li>JetBrains IntelliJ IDEA IDE</li>
-<li>Postman</li>
-</ul>
-<p>We are using Spring Data and JPA to populate our SeedData. We have extended Auditable for all our tables. We have enabled JPA Auditing in our main class. We run our application and get the following</p>
-<details>
-<summary>Expand to see http://localhost:2019/employees/employees</summary>
-<pre><code class="language-JSON">
+                  <li>
+                    <a
+                      href="https://www.baeldung.com/hibernate-inheritance"
+                      target="blank_"
+                      >Baeldung</a
+                    ><br />
+                    Baeldung - MappedSuperclass
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to populate and display standard auditing fields
+                </h4>
+                <p><a id="Using_Audit_Fields"></a></p>
+                <h5>Overview</h5>
+                <ul>
+                  <li>
+                    See the Github Repository
+                    <a
+                      href="https://github.com/LambdaSchool/java-sampleemps.git"
+                      >https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling</a
+                    >
+                    for the code used in the objective.
+                  </li>
+                </ul>
+                <h3 id="software-needed">Software Needed</h3>
+                <ul>
+                  <li>Java Development Kit (JDK) - at least version 11</li>
+                  <li>JetBrains IntelliJ IDEA IDE</li>
+                  <li>Postman</li>
+                </ul>
+                <p>
+                  We are using Spring Data and JPA to populate our SeedData. We
+                  have extended Auditable for all our tables. We have enabled
+                  JPA Auditing in our main class. We run our application and get
+                  the following
+                </p>
+                <details>
+                  <summary>
+                    Expand to see http://localhost:2019/employees/employees
+                  </summary>
+                  <pre><code class="language-JSON">
 
 [
     {
@@ -1753,15 +2184,40 @@ public class SampleempsApplication
 ]
 
 </code></pre>
-</details>
-<p>So where are the auditing fields??? We have not set up Getters for them so they do not appear in the JSON! If that is what we want, and often it is, then we are fine. As you see below the auditing fields are still in the database but do not crowd out the rest of the data in the JSON.</p>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%204%20-%20JX%20Java%20-%20Data%20Modeling%20and%20Auditing%20Fields%20with%20custom%20querying/assets/JX-SP11-M4-06.png" alt="Auditing Fields"></p>
-<p>Let’s say we do want to have the auditing fields appear in the JSON. This is simple a matter of adding the right Getters to the right spot!</p>
-<h3 id="displaying-auditing-fields-for-all-tables">Displaying Auditing fields for all tables</h3>
-<p>Let’s say you want auditing data on all the tables. Simply add Getters to your abstract class. No need to add setters. They are never used. JPA Auditing does its own thing. With the Getters added to your abstract class, your new output is</p>
-<details>
-<summary>Expand to see http://localhost:2019/employees/employees with auditing data</summary>
-<pre><code class="language-JSON">
+                </details>
+                <p>
+                  So where are the auditing fields??? We have not set up Getters
+                  for them so they do not appear in the JSON! If that is what we
+                  want, and often it is, then we are fine. As you see below the
+                  auditing fields are still in the database but do not crowd out
+                  the rest of the data in the JSON.
+                </p>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%204%20-%20JX%20Java%20-%20Data%20Modeling%20and%20Auditing%20Fields%20with%20custom%20querying/assets/JX-SP11-M4-06.png"
+                    alt="Auditing Fields"
+                  />
+                </p>
+                <p>
+                  Let’s say we do want to have the auditing fields appear in the
+                  JSON. This is simple a matter of adding the right Getters to
+                  the right spot!
+                </p>
+                <h3 id="displaying-auditing-fields-for-all-tables">
+                  Displaying Auditing fields for all tables
+                </h3>
+                <p>
+                  Let’s say you want auditing data on all the tables. Simply add
+                  Getters to your abstract class. No need to add setters. They
+                  are never used. JPA Auditing does its own thing. With the
+                  Getters added to your abstract class, your new output is
+                </p>
+                <details>
+                  <summary>
+                    Expand to see http://localhost:2019/employees/employees with
+                    auditing data
+                  </summary>
+                  <pre><code class="language-JSON">
 
 [
     {
@@ -2364,11 +2820,11 @@ public class SampleempsApplication
 ]
 
 </code></pre>
-</details>
-<p>And the new Auditable class looks like</p>
-<details>
-<summary>Expand to see models.Auditable with Getters</summary>
-<pre><code class="language-JAVA">
+                </details>
+                <p>And the new Auditable class looks like</p>
+                <details>
+                  <summary>Expand to see models.Auditable with Getters</summary>
+                  <pre><code class="language-JAVA">
 
 package com.lambdaschool.sampleemps.models;
 
@@ -3590,52 +4046,112 @@ alter sequence hibernate_sequence restart with 15;
 </details>
 
 - And now you will have auditing data using data.sql!
-</p></code></pre></details>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to use SQL, JPA and Hibernate to perform custom data manipulation operations on a RDBMS through a Spring Application</h4>
-<p><a id="Data_Manipulation_using_SQL"></a></p>
-<h5>Overview</h5>
-<ul>
-<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling</a> for the code used in the objective.</li>
-</ul>
-<h3 id="software-needed">Software Needed</h3>
-<ul>
-<li>Java Development Kit (JDK) - at least version 11</li>
-<li>JetBrains IntelliJ IDEA IDE</li>
-<li>Postman</li>
-</ul>
-<h3 id="modifying-custom-queries">Modifying Custom Queries</h3>
-<p>Sometimes we need to use custom queries to update data. This is especially true as our entity relationships get more complicated. For an example of this, let’s write a custom query to update, change, the Job Title title field without affecting any other data or relationships in the database.</p>
-<p>First, let’s write the query to make sure it does what we want</p>
-<pre><code class="language-SQL">UPDATE jobtitles
+</p></code></pre>
+                </details>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to use SQL, JPA and Hibernate to perform custom data
+                  manipulation operations on a RDBMS through a Spring
+                  Application
+                </h4>
+                <p><a id="Data_Manipulation_using_SQL"></a></p>
+                <h5>Overview</h5>
+                <ul>
+                  <li>
+                    See the Github Repository
+                    <a
+                      href="https://github.com/LambdaSchool/java-sampleemps.git"
+                      >https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling</a
+                    >
+                    for the code used in the objective.
+                  </li>
+                </ul>
+                <h3 id="software-needed">Software Needed</h3>
+                <ul>
+                  <li>Java Development Kit (JDK) - at least version 11</li>
+                  <li>JetBrains IntelliJ IDEA IDE</li>
+                  <li>Postman</li>
+                </ul>
+                <h3 id="modifying-custom-queries">Modifying Custom Queries</h3>
+                <p>
+                  Sometimes we need to use custom queries to update data. This
+                  is especially true as our entity relationships get more
+                  complicated. For an example of this, let’s write a custom
+                  query to update, change, the Job Title title field without
+                  affecting any other data or relationships in the database.
+                </p>
+                <p>
+                  First, let’s write the query to make sure it does what we want
+                </p>
+                <pre><code class="language-SQL">UPDATE jobtitles
 SET title = :ititle,
     last_modified_by = :uname,
     last_modified_date = CURRENT_TIMESTAMP
 WHERE jobtitleid = :jobtitleid
 </code></pre>
-<p>Note that the variables starting with a <code class="highlighter-rouge">:</code> are parameters we will get from Java. So we are</p>
-<ul>
-<li>Updating the <code class="highlighter-rouge">jobtitles</code> table</li>
-<li>Setting
-<ul>
-<li>
-<code class="highlighter-rouge">title</code> field to a new one coming from Java</li>
-<li>we are modifying the row outside of Spring Data JPA, so we need to manually update the modified auditing fields
-<ul>
-<li>
-<code class="highlighter-rouge">last_modified_by</code> is set to a username coming from Java</li>
-<li>
-<code class="highlighter-rouge">last_modified_date</code> is set from the system date</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Updating row where <code class="highlighter-rouge">jobtitleid</code> = some id coming from Java</li>
-</ul>
-<h5>Follow Along</h5>
-<p>We are continuing taking the repo <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_create_delete_update</a> and transforming it into the repo <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling</a> step by step! So, from the following, make the necessary changes to the code you are working through for this Module.</p>
-<p>Since this is related to the <code class="highlighter-rouge">JobTitle</code> table, let’s put this custom query in the <code class="highlighter-rouge">JobTitleRepository</code>.</p>
-<pre><code class="language-JAVA">/* ...more code... */
+                <p>
+                  Note that the variables starting with a
+                  <code class="highlighter-rouge">:</code> are parameters we
+                  will get from Java. So we are
+                </p>
+                <ul>
+                  <li>
+                    Updating the
+                    <code class="highlighter-rouge">jobtitles</code> table
+                  </li>
+                  <li>
+                    Setting
+                    <ul>
+                      <li>
+                        <code class="highlighter-rouge">title</code> field to a
+                        new one coming from Java
+                      </li>
+                      <li>
+                        we are modifying the row outside of Spring Data JPA, so
+                        we need to manually update the modified auditing fields
+                        <ul>
+                          <li>
+                            <code class="highlighter-rouge"
+                              >last_modified_by</code
+                            >
+                            is set to a username coming from Java
+                          </li>
+                          <li>
+                            <code class="highlighter-rouge"
+                              >last_modified_date</code
+                            >
+                            is set from the system date
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Updating row where
+                    <code class="highlighter-rouge">jobtitleid</code> = some id
+                    coming from Java
+                  </li>
+                </ul>
+                <h5>Follow Along</h5>
+                <p>
+                  We are continuing taking the repo
+                  <a href="https://github.com/LambdaSchool/java-sampleemps.git"
+                    >https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_create_delete_update</a
+                  >
+                  and transforming it into the repo
+                  <a href="https://github.com/LambdaSchool/java-sampleemps.git"
+                    >https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling</a
+                  >
+                  step by step! So, from the following, make the necessary
+                  changes to the code you are working through for this Module.
+                </p>
+                <p>
+                  Since this is related to the
+                  <code class="highlighter-rouge">JobTitle</code> table, let’s
+                  put this custom query in the
+                  <code class="highlighter-rouge">JobTitleRepository</code>.
+                </p>
+                <pre><code class="language-JAVA">/* ...more code... */
     @Transactional
     @Modifying
     @Query(value = "UPDATE jobtitles SET title = :ititle, last_modified_by = :uname, last_modified_date = CURRENT_TIMESTAMP WHERE jobtitleid = :jobtitleid\n",
@@ -3646,48 +4162,85 @@ WHERE jobtitleid = :jobtitleid
         String title);
 /* ...more code... */
 </code></pre>
-<p>Some notes on the query</p>
-<ul>
-<li>
-<code class="highlighter-rouge">@Transactional</code> - we are changing data in the database so best practice says to make the operation transactional.</li>
-<li>
-<code class="highlighter-rouge">@Modifying</code> - by default, a query can only read, and not manipulate, data. We have to override that behavior with this annotation.</li>
-<li>
-<code class="highlighter-rouge">@Query</code> is the notation that says we are doing a query.
-<ul>
-<li>
-<code class="highlighter-rouge">@Query</code> takes some attributes
-<ul>
-<li>
-<code class="highlighter-rouge">value</code> is the actual query in String form. Yes, the query has to be all on one line!</li>
-<li>
-<code class="highlighter-rouge">nativeQuery = true</code> means the query will be using the actual database names of things. A preference of mine.
-<ul>
-<li>native queries are usually faster</li>
-<li>can lose portability to other databases if care is not taken in naming conventions, which of course we do take care in class!</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>The Query returns nothing, hence the void. To invoke the query we call the method updateJobTitle with three parameters:
-<ul>
-<li>
-<code class="highlighter-rouge">uname</code> - the username of who is updating the date</li>
-<li>
-<code class="highlighter-rouge">jobtitleid</code> - the primary key of the row to update</li>
-<li>
-<code class="highlighter-rouge">title</code> - the new job title</li>
-<li>Note that like in controllers, these parameters match with the parameters in the query by NAME. So, <code class="highlighter-rouge">uname</code> goes with <code class="highlighter-rouge">:uname</code>!</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Now let’s use our new query. We use it like we use any regular CRUD method from our repository. We make a service call and a controller method for our clients!</p>
-<ul>
-<li>Create the services.JobTitleServices class</li>
-</ul>
-<pre><code class="language-JAVA">package com.lambdaschool.sampleemps.services;
+                <p>Some notes on the query</p>
+                <ul>
+                  <li>
+                    <code class="highlighter-rouge">@Transactional</code> - we
+                    are changing data in the database so best practice says to
+                    make the operation transactional.
+                  </li>
+                  <li>
+                    <code class="highlighter-rouge">@Modifying</code> - by
+                    default, a query can only read, and not manipulate, data. We
+                    have to override that behavior with this annotation.
+                  </li>
+                  <li>
+                    <code class="highlighter-rouge">@Query</code> is the
+                    notation that says we are doing a query.
+                    <ul>
+                      <li>
+                        <code class="highlighter-rouge">@Query</code> takes some
+                        attributes
+                        <ul>
+                          <li>
+                            <code class="highlighter-rouge">value</code> is the
+                            actual query in String form. Yes, the query has to
+                            be all on one line!
+                          </li>
+                          <li>
+                            <code class="highlighter-rouge"
+                              >nativeQuery = true</code
+                            >
+                            means the query will be using the actual database
+                            names of things. A preference of mine.
+                            <ul>
+                              <li>native queries are usually faster</li>
+                              <li>
+                                can lose portability to other databases if care
+                                is not taken in naming conventions, which of
+                                course we do take care in class!
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        The Query returns nothing, hence the void. To invoke the
+                        query we call the method updateJobTitle with three
+                        parameters:
+                        <ul>
+                          <li>
+                            <code class="highlighter-rouge">uname</code> - the
+                            username of who is updating the date
+                          </li>
+                          <li>
+                            <code class="highlighter-rouge">jobtitleid</code> -
+                            the primary key of the row to update
+                          </li>
+                          <li>
+                            <code class="highlighter-rouge">title</code> - the
+                            new job title
+                          </li>
+                          <li>
+                            Note that like in controllers, these parameters
+                            match with the parameters in the query by NAME. So,
+                            <code class="highlighter-rouge">uname</code> goes
+                            with <code class="highlighter-rouge">:uname</code>!
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  Now let’s use our new query. We use it like we use any regular
+                  CRUD method from our repository. We make a service call and a
+                  controller method for our clients!
+                </p>
+                <ul>
+                  <li>Create the services.JobTitleServices class</li>
+                </ul>
+                <pre><code class="language-JAVA">package com.lambdaschool.sampleemps.services;
 
 import com.lambdaschool.sampleemps.models.JobTitle;
 
@@ -3698,10 +4251,10 @@ public interface JobTitleService
         JobTitle jt);
 }
 </code></pre>
-<ul>
-<li>Create the services.JobTitleServiceImpl class</li>
-</ul>
-<pre><code class="language-JAVA">package com.lambdaschool.sampleemps.services;
+                <ul>
+                  <li>Create the services.JobTitleServiceImpl class</li>
+                </ul>
+                <pre><code class="language-JAVA">package com.lambdaschool.sampleemps.services;
 
 import com.lambdaschool.sampleemps.models.JobTitle;
 import com.lambdaschool.sampleemps.repositories.EmployeeRepository;
@@ -3752,19 +4305,33 @@ public class JobTitleServiceImpl
     }
 }
 </code></pre>
-<ul>
-<li>This requires some explanation:
-<ul>
-<li>First we check to make sure that a Job Title actually comes across from the client</li>
-<li>Then we make sure no Employees were sent with the Job Title object. We add Job Titles to Employees through another endpoint.</li>
-<li>Now we check to make sure we have a valid Job Title Id.</li>
-<li>If all that works, we invoke the update query</li>
-<li>Finally we find again the Job Title object in order to get a good Job Title object with the newly updated Job Title and return that Job Title object</li>
-</ul>
-</li>
-<li>Create the controllers.JobTitleController class</li>
-</ul>
-<pre><code class="language-JAVA">package com.lambdaschool.sampleemps.controllers;
+                <ul>
+                  <li>
+                    This requires some explanation:
+                    <ul>
+                      <li>
+                        First we check to make sure that a Job Title actually
+                        comes across from the client
+                      </li>
+                      <li>
+                        Then we make sure no Employees were sent with the Job
+                        Title object. We add Job Titles to Employees through
+                        another endpoint.
+                      </li>
+                      <li>
+                        Now we check to make sure we have a valid Job Title Id.
+                      </li>
+                      <li>If all that works, we invoke the update query</li>
+                      <li>
+                        Finally we find again the Job Title object in order to
+                        get a good Job Title object with the newly updated Job
+                        Title and return that Job Title object
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Create the controllers.JobTitleController class</li>
+                </ul>
+                <pre><code class="language-JAVA">package com.lambdaschool.sampleemps.controllers;
 
 import com.lambdaschool.sampleemps.models.JobTitle;
 import com.lambdaschool.sampleemps.services.JobTitleService;
@@ -3816,94 +4383,178 @@ public class JobTitleController
     }
 }
 </code></pre>
-<ul>
-<li>Some explanation
-<ul>
-<li>The body for each of these endpoints would look the same</li>
-<li>In this case since there is only 1 field to update, PUT and PATCH do exactly the same thing. I decided to provide both to prevent the client from having to remember which one is implemented.</li>
-</ul>
-</li>
-</ul>
-<p>You can use the following JSON to test the endpoints</p>
-<pre><code class="language-JSON">{
+                <ul>
+                  <li>
+                    Some explanation
+                    <ul>
+                      <li>
+                        The body for each of these endpoints would look the same
+                      </li>
+                      <li>
+                        In this case since there is only 1 field to update, PUT
+                        and PATCH do exactly the same thing. I decided to
+                        provide both to prevent the client from having to
+                        remember which one is implemented.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>You can use the following JSON to test the endpoints</p>
+                <pre><code class="language-JSON">{
   "title":"Lizard"
 }
 </code></pre>
-<h5>Challenge</h5>
-<p>Let’s try adding some code on our own. You will need to find the appropriate code from the provided repository and add it to your own application.</p>
-<p>A combination of custom Read queries and custom Modify queries are used to update the Many To Many relationship between Employee and JobTitle. You can see this code in action in the sampleemps_data_modeling application. The flow of this process is this. Since Employee is our driving table, I am putting this work with the methods for Employees</p>
-<ul>
-<li>services.EmployeeService gets the methods to delete or add an employee job title combination
-<ul>
-<li>deleteEmpJobTitle, addEmpJobTitle</li>
-<li>Both takes two parameters, the employee id and role id of the combination to delete or add</li>
-</ul>
-</li>
-<li>services.EmployeeServiceImpl
-<ul>
-<li>Implements the deleteEmpJobTitle and addEmpJobTitle methods with this process
-<ul>
-<li>Verify that the employee id is valid</li>
-<li>Verify that the job title id is valid</li>
-<li>Using a custom query, verify that the employee job title combinations
-<ul>
-<li>exists when doing a delete. We must have something to delete!</li>
-<li>does not exist when doing an add. We don’t want duplicate combinations!</li>
-</ul>
-</li>
-<li>Once all has been verified, use a custom query to actually perform the delete or add</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>controller.EmployeeController
-<ul>
-<li>We need a way for clients to delete or add the employee job title combination.</li>
-<li>We get the ids through path variables</li>
-<li>see methods deleteEmployeeJobTitlesByid and addEmployeeJobTitlesByid</li>
-</ul>
-</li>
-<li>For the above we made use of three custom queries, all of which are located in repositories.EmployeeRepository
-<ul>
-<li>checkEmpJobTitleCombo
-<ul>
-<li>Counts the number of the given employee job titles combinations in the database</li>
-<li>Uses the interface views.JustTheCount</li>
-</ul>
-</li>
-<li>deleteEmployeeJobTitleCombo
-<ul>
-<li>deletes the combination of the given employee id and job title id</li>
-</ul>
-</li>
-<li>insertEmployeeJobTitleCombo
-<ul>
-<li>inserts the given combination of the given employee id and job title id</li>
-<li>initializes the audit fields with the username sent to the query and the current system date</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to implement default Swagger documentation</h4>
-<p><a id="Swagger"></a></p>
-<h5>Overview</h5>
-<ul>
-<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling</a> for the code used in the objective.</li>
-</ul>
-<h3 id="software-needed">Software Needed</h3>
-<ul>
-<li>Java Development Kit (JDK) - at least version 11</li>
-<li>JetBrains IntelliJ IDEA IDE</li>
-<li>Postman</li>
-</ul>
-<p>The point of our Web REST API Applications is to provide endpoints that allow clients to work with our data. But how do those clients know what our endpoints are and how to use them? We need to provide them documentation. One automated way to do this is through the Swagger system. Let’s implement Swagger and see the corresponding documentation!</p>
-<h5>Follow Along</h5>
-<ul>
-<li>Swagger is implemented through a few dependencies. We are adding three. One is the base Swagger dependency. Another implements the Swagger user interface. And the third on connects Swagger to our validation constraints. Let’s add those to our POM.XML</li>
-</ul>
-<pre><code class="language-XML">        &lt;!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 --&gt;
+                <h5>Challenge</h5>
+                <p>
+                  Let’s try adding some code on our own. You will need to find
+                  the appropriate code from the provided repository and add it
+                  to your own application.
+                </p>
+                <p>
+                  A combination of custom Read queries and custom Modify queries
+                  are used to update the Many To Many relationship between
+                  Employee and JobTitle. You can see this code in action in the
+                  sampleemps_data_modeling application. The flow of this process
+                  is this. Since Employee is our driving table, I am putting
+                  this work with the methods for Employees
+                </p>
+                <ul>
+                  <li>
+                    services.EmployeeService gets the methods to delete or add
+                    an employee job title combination
+                    <ul>
+                      <li>deleteEmpJobTitle, addEmpJobTitle</li>
+                      <li>
+                        Both takes two parameters, the employee id and role id
+                        of the combination to delete or add
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    services.EmployeeServiceImpl
+                    <ul>
+                      <li>
+                        Implements the deleteEmpJobTitle and addEmpJobTitle
+                        methods with this process
+                        <ul>
+                          <li>Verify that the employee id is valid</li>
+                          <li>Verify that the job title id is valid</li>
+                          <li>
+                            Using a custom query, verify that the employee job
+                            title combinations
+                            <ul>
+                              <li>
+                                exists when doing a delete. We must have
+                                something to delete!
+                              </li>
+                              <li>
+                                does not exist when doing an add. We don’t want
+                                duplicate combinations!
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            Once all has been verified, use a custom query to
+                            actually perform the delete or add
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    controller.EmployeeController
+                    <ul>
+                      <li>
+                        We need a way for clients to delete or add the employee
+                        job title combination.
+                      </li>
+                      <li>We get the ids through path variables</li>
+                      <li>
+                        see methods deleteEmployeeJobTitlesByid and
+                        addEmployeeJobTitlesByid
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    For the above we made use of three custom queries, all of
+                    which are located in repositories.EmployeeRepository
+                    <ul>
+                      <li>
+                        checkEmpJobTitleCombo
+                        <ul>
+                          <li>
+                            Counts the number of the given employee job titles
+                            combinations in the database
+                          </li>
+                          <li>Uses the interface views.JustTheCount</li>
+                        </ul>
+                      </li>
+                      <li>
+                        deleteEmployeeJobTitleCombo
+                        <ul>
+                          <li>
+                            deletes the combination of the given employee id and
+                            job title id
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        insertEmployeeJobTitleCombo
+                        <ul>
+                          <li>
+                            inserts the given combination of the given employee
+                            id and job title id
+                          </li>
+                          <li>
+                            initializes the audit fields with the username sent
+                            to the query and the current system date
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to implement default Swagger documentation
+                </h4>
+                <p><a id="Swagger"></a></p>
+                <h5>Overview</h5>
+                <ul>
+                  <li>
+                    See the Github Repository
+                    <a
+                      href="https://github.com/LambdaSchool/java-sampleemps.git"
+                      >https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling</a
+                    >
+                    for the code used in the objective.
+                  </li>
+                </ul>
+                <h3 id="software-needed">Software Needed</h3>
+                <ul>
+                  <li>Java Development Kit (JDK) - at least version 11</li>
+                  <li>JetBrains IntelliJ IDEA IDE</li>
+                  <li>Postman</li>
+                </ul>
+                <p>
+                  The point of our Web REST API Applications is to provide
+                  endpoints that allow clients to work with our data. But how do
+                  those clients know what our endpoints are and how to use them?
+                  We need to provide them documentation. One automated way to do
+                  this is through the Swagger system. Let’s implement Swagger
+                  and see the corresponding documentation!
+                </p>
+                <h5>Follow Along</h5>
+                <ul>
+                  <li>
+                    Swagger is implemented through a few dependencies. We are
+                    adding three. One is the base Swagger dependency. Another
+                    implements the Swagger user interface. And the third on
+                    connects Swagger to our validation constraints. Let’s add
+                    those to our POM.XML
+                  </li>
+                </ul>
+                <pre><code class="language-XML">        &lt;!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 --&gt;
         &lt;dependency&gt;
             &lt;groupId&gt;io.springfox&lt;/groupId&gt;
             &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;
@@ -3923,14 +4574,23 @@ public class JobTitleController
             &lt;version&gt;2.9.2&lt;/version&gt;
         &lt;/dependency&gt;
 </code></pre>
-<ul>
-<li>Now we need to add a configuration file to connect Swagger to Spring. The file being added is config.Swagger2Config. We are using Swagger Version 2. This version is the most straightforward to configure and is the most mature, stable version of Swagger.
-<ul>
-<li>This class is boilerplate code we can add to any project where we want Swagger documentation. We do have a few items to customize to our application.</li>
-</ul>
-</li>
-</ul>
-<pre><code class="language-JAVA">/* ...some code ... */
+                <ul>
+                  <li>
+                    Now we need to add a configuration file to connect Swagger
+                    to Spring. The file being added is config.Swagger2Config. We
+                    are using Swagger Version 2. This version is the most
+                    straightforward to configure and is the most mature, stable
+                    version of Swagger.
+                    <ul>
+                      <li>
+                        This class is boilerplate code we can add to any project
+                        where we want Swagger documentation. We do have a few
+                        items to customize to our application.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <pre><code class="language-JAVA">/* ...some code ... */
 @Configuration // annotation to tell Spring this is a configuration file
 @EnableSwagger2 // annotation to enable Swagger
 @Import(BeanValidatorPluginsConfiguration.class) // connects our validation constraints to this configuration class
@@ -3962,36 +4622,91 @@ public class Swagger2Config
     }
 }
 </code></pre>
-<ul>
-<li>In the method <code class="highlighter-rouge">api()</code> we must set the <code class="highlighter-rouge">.basePackage</code> to be the base package of our application. In our current example that is <code class="highlighter-rouge">com.lambdaschool.sampleemps</code>
-</li>
-<li>In the method <code class="highlighter-rouge">apiEndPointsInfo()</code> we set
-<ul>
-<li>
-<code class="highlighter-rouge">.title("")</code> - A general short title of our application</li>
-<li>
-<code class="highlighter-rouge">.description("")</code> - A longer more descriptive explanation of our application</li>
-<li>
-<code class="highlighter-rouge">.contact()</code> - you can add only one contact for the application</li>
-<li>
-<code class="highlighter-rouge">.license("")</code> - at Lambda School we prefer the MIT license but any string will work</li>
-<li>
-<code class="highlighter-rouge">.licenseUrl("")</code> - at link to the text for your license agreement</li>
-<li>
-<code class="highlighter-rouge">.version("")</code> - any string is fine but is meant to convey a version number to the client</li>
-</ul>
-</li>
-</ul>
-<p>That is all we need to set up to generate Swagger documentation. Swagger uses our class names, method names, parameters, and annotations to generate default documentation. If we have named everything using a reasonable naming convention, then we get reasonable Swagger documentation!</p>
-<p>Annotations exist to customize your Swagger documentation but this is beyond the scope of this class :-(</p>
-<p>One you are done, the Swagger Documentation generated for our sample application can be found at</p>
-<p><a href="http://localhost:2019/swagger-ui.html">http://localhost:2019/swagger-ui.html</a>l</p>
-<p>with <code class="highlighter-rouge">/swagger-ui</code> being the default endpoint. If you fully expand all options on this page, you can generate the following PDF of the documentation:</p>
-<p><a href="https://drive.google.com/open?id=1EijscrIhpv6lbnSbLXcaH7NeLFCEpI2l">Click Here Swagger Documentation PDF</a></p>
-<p>You can also generate a full JSON representation of the documentation. You surf to the following URL. Expand to see the resulting JSON.</p>
-<details>
-<summary>http://localhost:2019/v2/api-docs</summary>
-<pre><code class="language-JSON">
+                <ul>
+                  <li>
+                    In the method
+                    <code class="highlighter-rouge">api()</code> we must set the
+                    <code class="highlighter-rouge">.basePackage</code> to be
+                    the base package of our application. In our current example
+                    that is
+                    <code class="highlighter-rouge"
+                      >com.lambdaschool.sampleemps</code
+                    >
+                  </li>
+                  <li>
+                    In the method
+                    <code class="highlighter-rouge">apiEndPointsInfo()</code> we
+                    set
+                    <ul>
+                      <li>
+                        <code class="highlighter-rouge">.title("")</code> - A
+                        general short title of our application
+                      </li>
+                      <li>
+                        <code class="highlighter-rouge">.description("")</code>
+                        - A longer more descriptive explanation of our
+                        application
+                      </li>
+                      <li>
+                        <code class="highlighter-rouge">.contact()</code> - you
+                        can add only one contact for the application
+                      </li>
+                      <li>
+                        <code class="highlighter-rouge">.license("")</code> - at
+                        Lambda School we prefer the MIT license but any string
+                        will work
+                      </li>
+                      <li>
+                        <code class="highlighter-rouge">.licenseUrl("")</code> -
+                        at link to the text for your license agreement
+                      </li>
+                      <li>
+                        <code class="highlighter-rouge">.version("")</code> -
+                        any string is fine but is meant to convey a version
+                        number to the client
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  That is all we need to set up to generate Swagger
+                  documentation. Swagger uses our class names, method names,
+                  parameters, and annotations to generate default documentation.
+                  If we have named everything using a reasonable naming
+                  convention, then we get reasonable Swagger documentation!
+                </p>
+                <p>
+                  Annotations exist to customize your Swagger documentation but
+                  this is beyond the scope of this class :-(
+                </p>
+                <p>
+                  One you are done, the Swagger Documentation generated for our
+                  sample application can be found at
+                </p>
+                <p>
+                  <a href="http://localhost:2019/swagger-ui.html"
+                    >http://localhost:2019/swagger-ui.html</a
+                  >l
+                </p>
+                <p>
+                  with <code class="highlighter-rouge">/swagger-ui</code> being
+                  the default endpoint. If you fully expand all options on this
+                  page, you can generate the following PDF of the documentation:
+                </p>
+                <p>
+                  <a
+                    href="https://drive.google.com/open?id=1EijscrIhpv6lbnSbLXcaH7NeLFCEpI2l"
+                    >Click Here Swagger Documentation PDF</a
+                  >
+                </p>
+                <p>
+                  You can also generate a full JSON representation of the
+                  documentation. You surf to the following URL. Expand to see
+                  the resulting JSON.
+                </p>
+                <details>
+                  <summary>http://localhost:2019/v2/api-docs</summary>
+                  <pre><code class="language-JSON">
 {
     "swagger": "2.0",
     "info": {
@@ -4599,354 +5314,625 @@ public class Swagger2Config
     }
 }
 </code></pre>
-</details>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://springframework.guru/spring-boot-restful-api-documentation-with-swagger-2/" target="blank_">Spring Boot RESTful API Documentation with Swagger 2</a><br> Spring Boot RESTful API Documentation with Swagger 2</li>
-<li>
-<a href="https://www.vojtechruzicka.com/documenting-spring-boot-rest-api-swagger-springfox/" target="blank_">Documenting Spring Boot REST API with Swagger and SpringFox</a><br> Documenting Spring Boot REST API with Swagger and SpringFox</li>
-<li>
-<a href="https://www.baeldung.com/spring-rest-openapi-documentation" target="blank_">A different approach</a><br> A different approach - Documenting a Spring REST API Using OpenAPI 3.0</li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to print the default Swagger documentation</h4>
-<p><a id="Printing_Swagger"></a></p>
-<h5>Overview</h5>
-<ul>
-<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-sampleemps.git">https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling</a> for the code used in the objective.</li>
-</ul>
-<h3 id="software-needed">Software Needed</h3>
-<ul>
-<li>Java Development Kit (JDK) - at least version 11</li>
-<li>JetBrains IntelliJ IDEA IDE</li>
-<li>Postman</li>
-</ul>
-<p>Once we have Swagger documentation enabled, clients can access it online. However making a printed form of the documentation available is often required. Here are ways to generate a couple of popular formats for the documentation.</p>
-<h5>Follow Along</h5>
-<h3 id="getting-started">Getting Started</h3>
-<ul>
-<li>Surf to the site <a href="https://editor.swagger.io/">https://editor.swagger.io/</a>
-</li>
-<li>On the site, goto the pull down menu <code class="highlighter-rouge">File</code> -&gt; <code class="highlighter-rouge">Clear Editor</code>
-</li>
-<li>With your application running, surf to the Swagger JSON endpoint. In our example it is<br>
-<a href="http://localhost:2019/v2/api-docs">http://localhost:2019/v2/api-docs</a>.<br>
-This will generate the JSON for the Swagger documentation for your application</li>
-<li>Select all of the generate JSON and copy it.</li>
-<li>Back on the editor.swagger.io site, paste the JSON into the editor by clicking in the editor and doing a paste.
-<ul>
-<li>You will be prompted with “Would you like convert your JSON into YAML?”. Click OK.</li>
-<li>If after pasting, error messages show at the top of your generated documentation, you can usually just collapse the section where the errors appear and ignore them.</li>
-</ul>
-</li>
-<li>What we want to do next is Generate Clients that have the format we desire.</li>
-</ul>
-<h3 id="generating-markdown-files">Generating markdown files</h3>
-<ul>
-<li>To generate markdown (*.md) files
-<ul>
-<li>Goto <code class="highlighter-rouge">Generate Client</code> -&gt; <code class="highlighter-rouge">bash</code>
-</li>
-<li>This will download a file called <code class="highlighter-rouge">bash-client-generated.zip</code> Unzip, expand, this file</li>
-</ul>
-</li>
-<li>You now have a new folder called <code class="highlighter-rouge">bash-client</code>
-<ul>
-<li>A sub folder of <code class="highlighter-rouge">bash-client</code> is <code class="highlighter-rouge">docs</code> and contains all of the markdown files for each section of your application
-<ul>
-<li>One file for each model, entity</li>
-<li>One file for each controller</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="generating-a-pdf">Generating a PDF</h3>
-<ul>
-<li>To generate a single PDF file of all your documentation
-<ul>
-<li>Goto <code class="highlighter-rouge">Generate Client</code> -&gt; <code class="highlighter-rouge">html</code>
-</li>
-<li>This will download a file <code class="highlighter-rouge">html-client-generated.zip</code> Unzip, expand, this file</li>
-<li>You now have a new folder called <code class="highlighter-rouge">html-client</code>
-</li>
-</ul>
-</li>
-<li>Under that folder, you have a file called <code class="highlighter-rouge">index.html</code>
-<ul>
-<li>Open that file in a browser. I am using Chrome and the rest of the instructions work on Chrome. You will have research how your favorite works.</li>
-<li>You now all of your documentation in a single browser window. We can print this document to a PDF and be done
-<ul>
-<li>Right click in the browser window</li>
-<li>From the context menu, select <code class="highlighter-rouge">Print</code>
-</li>
-<li>For you Destination, select <code class="highlighter-rouge">Save as PDF</code>.</li>
-<li>The rest of the options are up to you!</li>
-<li>Click save and give your new PDF documentation a name.</li>
-<li>Now distribute that PDF to your clients!</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Alternatively, you can expand all sections from the website<br>
-<a href="http://localhost:2019/swagger-ui.html">http://localhost:2019/swagger-ui.html</a><br>
-And then print that browser window to a PDF. This gives the following pdf documentation<br>
-<a href="https://drive.google.com/open?id=1EijscrIhpv6lbnSbLXcaH7NeLFCEpI2l">Click Here Swagger Documentation PDF</a><br>
-This method does require more work than the previous example and is up to you as to what you wish to give your clients!</p>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://editor.swagger.io/" target="blank_">Swagger Editor</a><br> https://editor.swagger.io/</li>
-</ul>
-<hr>
-<h2>
-<a id="guided-project" class="anchor" href="#guided-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Guided Project</h2>
-<h3>java-usermodel</h3>
-<p>We are continuing our study of Relational Database Design and custom queries. We need the usermodel - initial application from this repo. The guided project starts with this application and works toward the usermodel - final application.</p>
-<a target="_blank" href="https://github.com/LambdaSchool/java-usermodel.git">GitHub Repo</a>
-<hr>
-<h2 class="display-4">
-<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
-<ul class="list-group">
-<li class="list-group-item">
-<h5><a target="_blank" href="https://github.com/LambdaSchool/java-zoos.git">java-zoos</a></h5>
-</li>
-</ul>
-<h2 class="display-4">
-<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
-<h3 class="display-5">Class Recordings</h3>
-<p class="lead">You can use class recordings to help you master the material.</p>
-<div>
-<ul class="list-group list-group-flush">
-<li class="list-group-item">
-<strong><a target="_blank" href="https://youtu.be/oxOPY68e_Cs">Java Auditing Fields for WEB33 with John Mitchell</a></strong>
-</li>
-<li class="list-group-item">
-<a href="/archive/WEB4Java/module/rec2oQCFWOVShtxIx">All previous recordings</a>
-</li>
-</ul>
-</div>
-<h3 class="display-5">Demonstrate Mastery</h3>
-<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
-<ul>
-<li>Objective challenge: <p>Let’s try adding some code on our own. You will need to find the appropriate code from the provided repository and add it to your own application.</p>
-<p>A combination of custom Read queries and custom Modify queries are used to update the Many To Many relationship between Employee and JobTitle. You can see this code in action in the sampleemps_data_modeling application. The flow of this process is this. Since Employee is our driving table, I am putting this work with the methods for Employees</p>
-<ul>
-<li>services.EmployeeService gets the methods to delete or add an employee job title combination
-<ul>
-<li>deleteEmpJobTitle, addEmpJobTitle</li>
-<li>Both takes two parameters, the employee id and role id of the combination to delete or add</li>
-</ul>
-</li>
-<li>services.EmployeeServiceImpl
-<ul>
-<li>Implements the deleteEmpJobTitle and addEmpJobTitle methods with this process
-<ul>
-<li>Verify that the employee id is valid</li>
-<li>Verify that the job title id is valid</li>
-<li>Using a custom query, verify that the employee job title combinations
-<ul>
-<li>exists when doing a delete. We must have something to delete!</li>
-<li>does not exist when doing an add. We don’t want duplicate combinations!</li>
-</ul>
-</li>
-<li>Once all has been verified, use a custom query to actually perform the delete or add</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>controller.EmployeeController
-<ul>
-<li>We need a way for clients to delete or add the employee job title combination.</li>
-<li>We get the ids through path variables</li>
-<li>see methods deleteEmployeeJobTitlesByid and addEmployeeJobTitlesByid</li>
-</ul>
-</li>
-<li>For the above we made use of three custom queries, all of which are located in repositories.EmployeeRepository
-<ul>
-<li>checkEmpJobTitleCombo
-<ul>
-<li>Counts the number of the given employee job titles combinations in the database</li>
-<li>Uses the interface views.JustTheCount</li>
-</ul>
-</li>
-<li>deleteEmployeeJobTitleCombo
-<ul>
-<li>deletes the combination of the given employee id and job title id</li>
-</ul>
-</li>
-<li>insertEmployeeJobTitleCombo
-<ul>
-<li>inserts the given combination of the given employee id and job title id</li>
-<li>initializes the audit fields with the username sent to the query and the current system date</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Guided Project: java-usermodel</li>
-<li>Project: java-zoos</li>
+                </details>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://springframework.guru/spring-boot-restful-api-documentation-with-swagger-2/"
+                      target="blank_"
+                      >Spring Boot RESTful API Documentation with Swagger 2</a
+                    ><br />
+                    Spring Boot RESTful API Documentation with Swagger 2
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.vojtechruzicka.com/documenting-spring-boot-rest-api-swagger-springfox/"
+                      target="blank_"
+                      >Documenting Spring Boot REST API with Swagger and
+                      SpringFox</a
+                    ><br />
+                    Documenting Spring Boot REST API with Swagger and SpringFox
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.baeldung.com/spring-rest-openapi-documentation"
+                      target="blank_"
+                      >A different approach</a
+                    ><br />
+                    A different approach - Documenting a Spring REST API Using
+                    OpenAPI 3.0
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to print the default Swagger documentation
+                </h4>
+                <p><a id="Printing_Swagger"></a></p>
+                <h5>Overview</h5>
+                <ul>
+                  <li>
+                    See the Github Repository
+                    <a
+                      href="https://github.com/LambdaSchool/java-sampleemps.git"
+                      >https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling</a
+                    >
+                    for the code used in the objective.
+                  </li>
+                </ul>
+                <h3 id="software-needed">Software Needed</h3>
+                <ul>
+                  <li>Java Development Kit (JDK) - at least version 11</li>
+                  <li>JetBrains IntelliJ IDEA IDE</li>
+                  <li>Postman</li>
+                </ul>
+                <p>
+                  Once we have Swagger documentation enabled, clients can access
+                  it online. However making a printed form of the documentation
+                  available is often required. Here are ways to generate a
+                  couple of popular formats for the documentation.
+                </p>
+                <h5>Follow Along</h5>
+                <h3 id="getting-started">Getting Started</h3>
+                <ul>
+                  <li>
+                    Surf to the site
+                    <a href="https://editor.swagger.io/"
+                      >https://editor.swagger.io/</a
+                    >
+                  </li>
+                  <li>
+                    On the site, goto the pull down menu
+                    <code class="highlighter-rouge">File</code> -&gt;
+                    <code class="highlighter-rouge">Clear Editor</code>
+                  </li>
+                  <li>
+                    With your application running, surf to the Swagger JSON
+                    endpoint. In our example it is<br />
+                    <a href="http://localhost:2019/v2/api-docs"
+                      >http://localhost:2019/v2/api-docs</a
+                    >.<br />
+                    This will generate the JSON for the Swagger documentation
+                    for your application
+                  </li>
+                  <li>Select all of the generate JSON and copy it.</li>
+                  <li>
+                    Back on the editor.swagger.io site, paste the JSON into the
+                    editor by clicking in the editor and doing a paste.
+                    <ul>
+                      <li>
+                        You will be prompted with “Would you like convert your
+                        JSON into YAML?”. Click OK.
+                      </li>
+                      <li>
+                        If after pasting, error messages show at the top of your
+                        generated documentation, you can usually just collapse
+                        the section where the errors appear and ignore them.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    What we want to do next is Generate Clients that have the
+                    format we desire.
+                  </li>
+                </ul>
+                <h3 id="generating-markdown-files">
+                  Generating markdown files
+                </h3>
+                <ul>
+                  <li>
+                    To generate markdown (*.md) files
+                    <ul>
+                      <li>
+                        Goto
+                        <code class="highlighter-rouge">Generate Client</code>
+                        -&gt; <code class="highlighter-rouge">bash</code>
+                      </li>
+                      <li>
+                        This will download a file called
+                        <code class="highlighter-rouge"
+                          >bash-client-generated.zip</code
+                        >
+                        Unzip, expand, this file
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    You now have a new folder called
+                    <code class="highlighter-rouge">bash-client</code>
+                    <ul>
+                      <li>
+                        A sub folder of
+                        <code class="highlighter-rouge">bash-client</code> is
+                        <code class="highlighter-rouge">docs</code> and contains
+                        all of the markdown files for each section of your
+                        application
+                        <ul>
+                          <li>One file for each model, entity</li>
+                          <li>One file for each controller</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <h3 id="generating-a-pdf">Generating a PDF</h3>
+                <ul>
+                  <li>
+                    To generate a single PDF file of all your documentation
+                    <ul>
+                      <li>
+                        Goto
+                        <code class="highlighter-rouge">Generate Client</code>
+                        -&gt; <code class="highlighter-rouge">html</code>
+                      </li>
+                      <li>
+                        This will download a file
+                        <code class="highlighter-rouge"
+                          >html-client-generated.zip</code
+                        >
+                        Unzip, expand, this file
+                      </li>
+                      <li>
+                        You now have a new folder called
+                        <code class="highlighter-rouge">html-client</code>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Under that folder, you have a file called
+                    <code class="highlighter-rouge">index.html</code>
+                    <ul>
+                      <li>
+                        Open that file in a browser. I am using Chrome and the
+                        rest of the instructions work on Chrome. You will have
+                        research how your favorite works.
+                      </li>
+                      <li>
+                        You now all of your documentation in a single browser
+                        window. We can print this document to a PDF and be done
+                        <ul>
+                          <li>Right click in the browser window</li>
+                          <li>
+                            From the context menu, select
+                            <code class="highlighter-rouge">Print</code>
+                          </li>
+                          <li>
+                            For you Destination, select
+                            <code class="highlighter-rouge">Save as PDF</code>.
+                          </li>
+                          <li>The rest of the options are up to you!</li>
+                          <li>
+                            Click save and give your new PDF documentation a
+                            name.
+                          </li>
+                          <li>Now distribute that PDF to your clients!</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  Alternatively, you can expand all sections from the website<br />
+                  <a href="http://localhost:2019/swagger-ui.html"
+                    >http://localhost:2019/swagger-ui.html</a
+                  ><br />
+                  And then print that browser window to a PDF. This gives the
+                  following pdf documentation<br />
+                  <a
+                    href="https://drive.google.com/open?id=1EijscrIhpv6lbnSbLXcaH7NeLFCEpI2l"
+                    >Click Here Swagger Documentation PDF</a
+                  ><br />
+                  This method does require more work than the previous example
+                  and is up to you as to what you wish to give your clients!
+                </p>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a href="https://editor.swagger.io/" target="blank_"
+                      >Swagger Editor</a
+                    ><br />
+                    https://editor.swagger.io/
+                  </li>
+                </ul>
+                <hr />
+                <h2>
+                  <a
+                    id="guided-project"
+                    class="anchor"
+                    href="#guided-project"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Guided Project
+                </h2>
+                <h3>java-usermodel</h3>
+                <p>
+                  We are continuing our study of Relational Database Design and
+                  custom queries. We need the usermodel - initial application
+                  from this repo. The guided project starts with this
+                  application and works toward the usermodel - final
+                  application.
+                </p>
+                <a
+                  target="_blank"
+                  href="https://github.com/LambdaSchool/java-usermodel.git"
+                  >GitHub Repo</a
+                >
+                <hr />
+                <h2 class="display-4">
+                  <a
+                    id="project"
+                    class="anchor"
+                    href="#project"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Project
+                </h2>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <h5>
+                      <a
+                        target="_blank"
+                        href="https://github.com/LambdaSchool/java-zoos.git"
+                        >java-zoos</a
+                      >
+                    </h5>
+                  </li>
+                </ul>
+                <h2 class="display-4">
+                  <a
+                    id="review"
+                    class="anchor"
+                    href="#review"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Review
+                </h2>
+                <h3 class="display-5">Class Recordings</h3>
+                <p class="lead">
+                  You can use class recordings to help you master the material.
+                </p>
+                <div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong
+                        ><a target="_blank" href="https://youtu.be/oxOPY68e_Cs"
+                          >Java Auditing Fields for WEB33 with John Mitchell</a
+                        ></strong
+                      >
+                    </li>
+                    <li class="list-group-item">
+                      <a href="/archive/WEB4Java/module/rec2oQCFWOVShtxIx"
+                        >All previous recordings</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <h3 class="display-5">Demonstrate Mastery</h3>
+                <p>
+                  To demonstrate mastery of this module, you need to complete
+                  and pass a code review on each of the following:
+                </p>
+                <ul>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      Let’s try adding some code on our own. You will need to
+                      find the appropriate code from the provided repository and
+                      add it to your own application.
+                    </p>
+                    <p>
+                      A combination of custom Read queries and custom Modify
+                      queries are used to update the Many To Many relationship
+                      between Employee and JobTitle. You can see this code in
+                      action in the sampleemps_data_modeling application. The
+                      flow of this process is this. Since Employee is our
+                      driving table, I am putting this work with the methods for
+                      Employees
+                    </p>
+                    <ul>
+                      <li>
+                        services.EmployeeService gets the methods to delete or
+                        add an employee job title combination
+                        <ul>
+                          <li>deleteEmpJobTitle, addEmpJobTitle</li>
+                          <li>
+                            Both takes two parameters, the employee id and role
+                            id of the combination to delete or add
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        services.EmployeeServiceImpl
+                        <ul>
+                          <li>
+                            Implements the deleteEmpJobTitle and addEmpJobTitle
+                            methods with this process
+                            <ul>
+                              <li>Verify that the employee id is valid</li>
+                              <li>Verify that the job title id is valid</li>
+                              <li>
+                                Using a custom query, verify that the employee
+                                job title combinations
+                                <ul>
+                                  <li>
+                                    exists when doing a delete. We must have
+                                    something to delete!
+                                  </li>
+                                  <li>
+                                    does not exist when doing an add. We don’t
+                                    want duplicate combinations!
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                Once all has been verified, use a custom query
+                                to actually perform the delete or add
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        controller.EmployeeController
+                        <ul>
+                          <li>
+                            We need a way for clients to delete or add the
+                            employee job title combination.
+                          </li>
+                          <li>We get the ids through path variables</li>
+                          <li>
+                            see methods deleteEmployeeJobTitlesByid and
+                            addEmployeeJobTitlesByid
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        For the above we made use of three custom queries, all
+                        of which are located in repositories.EmployeeRepository
+                        <ul>
+                          <li>
+                            checkEmpJobTitleCombo
+                            <ul>
+                              <li>
+                                Counts the number of the given employee job
+                                titles combinations in the database
+                              </li>
+                              <li>Uses the interface views.JustTheCount</li>
+                            </ul>
+                          </li>
+                          <li>
+                            deleteEmployeeJobTitleCombo
+                            <ul>
+                              <li>
+                                deletes the combination of the given employee id
+                                and job title id
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            insertEmployeeJobTitleCombo
+                            <ul>
+                              <li>
+                                inserts the given combination of the given
+                                employee id and job title id
+                              </li>
+                              <li>
+                                initializes the audit fields with the username
+                                sent to the query and the current system date
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Guided Project: java-usermodel</li>
+                  <li>Project: java-zoos</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
 
-</ul>
-</div>
-</div>
-</div>
-</main>
-</div>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'UA-80850900-4');
-</script>
-<script type="text/javascript">
-  function getDomain() {
-    const domainName = window.location.hostname.split('.')[1];
-    return `${domainName}.com`;
-  }
-</script>
-<script src="" integrity="" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
-<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
-<script type="text/javascript">
-  SimpleJekyllSearch.init({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    dataSource: '/search.json',
-    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Java - Data Modeling and Auditing Fields with custom querying">{title}</a></li>',
-    noResultsText: '',
-    limit: 10,
-    fuzzy: true,
-  })
-</script>
-<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
-  if (window.attachEvent) {
-    window.attachEvent('onload', verifySignedIn);
-  } else {
-    if (window.onload) {
-      var currentOnLoadFn = window.onload;
-      var newOnLoadFn = function (evt) {
-        currentOnLoadFn(evt);
-        verifySignedIn();
-      };
-      window.onload = newOnLoadFn;
-    } else {
-      window.onload = verifySignedIn;
-    }
-  }
-
-  function verifySignedIn() {
-    if (isPagePublic()) {
-      return showPageContents();
-    }
-
-    window.__user = null;
-    isSignedIn().then((user) => {
-      window.__user = user;
-
-      if (!user.signedIn) {
-        redirectToSignIn();
-      } else if (!user.student && !window.__openToAdmissions) {
-        showUnauthorizedMessage();
-      } else {
-        showPageContents();
-      }
-    });
-  }
-
-  function isPagePublic() {
-    const openCourses = [
-      'and-pre',
-      'ds-pre',
-      'fsw-pre',
-      'help',
-      'ios-pre',
-    ];
-
-    const openPages = [
-      'cs-and',
-      'cs-fsw',
-      'cs-ios',
-      'cr',
-      'ds',
-      'jx',
-      'p4s',
-      'ux',
-    ];
-
-    const pathParts = window.location.pathname.split('/');
-    const courseName = pathParts[1];
-    const pageName = pathParts[pathParts.length - 1];
-
-    return openCourses.includes(courseName) || openPages.includes(pageName);
-  }
-
-  function isSignedIn() {
-    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
-
-    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
-
-    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
-      .then((response) => response.text())
-      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
-      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
-      .catch((error) => {});
-  }
-
-  function redirectToSignIn() {
-    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
-    const redirectMessage = document.querySelector('#redirect-message');
-    redirectMessage.style.display = "block";
-    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
-    window.location = signInUrl;
-  }
-
-  function showPageContents() {
-    document.querySelector('#content-wrapper').style.visibility = 'visible';
-  }
-
-  function showUnauthorizedMessage() {
-    document.querySelector('#unauthorized-message').style.display = 'block';
-  }
-
-  function getAuthBaseUrl() {
-    const domain = getDomain();
-    const authBaseUrl = `https://auth.${domain}`;
-    return authBaseUrl;
-  }
-</script><script src="/assets/js/docs.min.js"></script><script>
-  var MathJax = {
-    tex: {
-      inlineMath: [['$$', '$$'], ['\[', '\])']]
-    },
-    "HTML-CSS": {
-      styles: {
-        ".MathJax span": {
-          color: "#000000"
+      <script
+        data-cfasync="false"
+        src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+      ></script>
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
         }
-      }
-    }
-  }
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<script>
-  handleExternalLinks();
+        gtag("js", new Date());
 
-  function handleExternalLinks() {
-    const domain = getDomain();
-    const links = document.querySelectorAll('a');
-    return links.forEach((link) => {
-      if (!link.host.includes(domain)) link.target = '_blank';
-    })
-  };
-</script>
-</div>
-</body>
+        gtag("config", "UA-80850900-4");
+      </script>
+      <script type="text/javascript">
+        function getDomain() {
+          const domainName = window.location.hostname.split(".")[1];
+          return `${domainName}.com`;
+        }
+      </script>
+      <script src="" integrity="" crossorigin="anonymous"></script>
+      <script>
+        window.jQuery ||
+          document.write(
+            '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>'
+          );
+      </script>
+      <script
+        src="/assets/js/vendor/popper.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="/dist/js/bootstrap.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script src="/assets/js/activate.js"></script>
+      <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        SimpleJekyllSearch.init({
+          searchInput: document.getElementById("search-input"),
+          resultsContainer: document.getElementById("results-container"),
+          dataSource: "/search.json",
+          searchResultTemplate:
+            '<li class="list-group-item"><a href="{url}" title="Java - Data Modeling and Auditing Fields with custom querying">{title}</a></li>',
+          noResultsText: "",
+          limit: 10,
+          fuzzy: true,
+        });
+      </script>
+      <script src="/assets/js/mermaid.min.js"></script>
+      <script type="text/javascript">
+        if (window.attachEvent) {
+          window.attachEvent("onload", verifySignedIn);
+        } else {
+          if (window.onload) {
+            var currentOnLoadFn = window.onload;
+            var newOnLoadFn = function (evt) {
+              currentOnLoadFn(evt);
+              verifySignedIn();
+            };
+            window.onload = newOnLoadFn;
+          } else {
+            window.onload = verifySignedIn;
+          }
+        }
+
+        function verifySignedIn() {
+          if (isPagePublic()) {
+            return showPageContents();
+          }
+
+          window.__user = null;
+          isSignedIn().then((user) => {
+            window.__user = user;
+
+            if (!user.signedIn) {
+              redirectToSignIn();
+            } else if (!user.student && !window.__openToAdmissions) {
+              showUnauthorizedMessage();
+            } else {
+              showPageContents();
+            }
+          });
+        }
+
+        function isPagePublic() {
+          const openCourses = [
+            "and-pre",
+            "ds-pre",
+            "fsw-pre",
+            "help",
+            "ios-pre",
+          ];
+
+          const openPages = [
+            "cs-and",
+            "cs-fsw",
+            "cs-ios",
+            "cr",
+            "ds",
+            "jx",
+            "p4s",
+            "ux",
+          ];
+
+          const pathParts = window.location.pathname.split("/");
+          const courseName = pathParts[1];
+          const pageName = pathParts[pathParts.length - 1];
+
+          return (
+            openCourses.includes(courseName) || openPages.includes(pageName)
+          );
+        }
+
+        function isSignedIn() {
+          const isDeployPreview =
+            window.location.hostname.startsWith("deploy-preview") &&
+            window.location.hostname.endsWith("netlify.com");
+
+          if (isDeployPreview)
+            return Promise.resolve({ signedIn: true, student: true });
+
+          return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: "include" })
+            .then((response) => response.text())
+            .then((userAsText) => (userAsText ? JSON.parse(userAsText) : null))
+            .then((userData) => ({
+              signedIn: Boolean(userData),
+              student: Boolean(userData && userData.airtableId),
+              id: userData ? userData.id : null,
+              email: userData ? userData.email : null,
+            }))
+            .catch((error) => {});
+        }
+
+        function redirectToSignIn() {
+          const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(
+            window.location.href
+          )}&reason=auth_required`;
+          const redirectMessage = document.querySelector("#redirect-message");
+          redirectMessage.style.display = "block";
+          redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`;
+          window.location = signInUrl;
+        }
+
+        function showPageContents() {
+          document.querySelector("#content-wrapper").style.visibility =
+            "visible";
+        }
+
+        function showUnauthorizedMessage() {
+          document.querySelector("#unauthorized-message").style.display =
+            "block";
+        }
+
+        function getAuthBaseUrl() {
+          const domain = getDomain();
+          const authBaseUrl = `https://auth.${domain}`;
+          return authBaseUrl;
+        }
+      </script>
+      <script src="/assets/js/docs.min.js"></script>
+      <script>
+        var MathJax = {
+          tex: {
+            inlineMath: [
+              ["$$", "$$"],
+              ["\[", "\])"],
+            ],
+          },
+          "HTML-CSS": {
+            styles: {
+              ".MathJax span": {
+                color: "#000000",
+              },
+            },
+          },
+        };
+      </script>
+      <script
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+        type="text/javascript"
+      ></script>
+      <script>
+        handleExternalLinks();
+
+        function handleExternalLinks() {
+          const domain = getDomain();
+          const links = document.querySelectorAll("a");
+          return links.forEach((link) => {
+            if (!link.host.includes(domain)) link.target = "_blank";
+          });
+        }
+      </script>
+    </div>
+  </body>
 </html>

@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Composing React Components and Passing Data Via Props
 
@@ -73,10 +71,10 @@ As you build bigger applications, you’ll want to start splitting up your app i
 
 **At the end of this module, you should be able to:**
 
--   use JavaScript modules to export and import components
--   describe props and how data flows in a React application
--   demonstrate the ability to compose React components to build out a UI
--   pass props as dynamic data to a React component
+- use JavaScript modules to export and import components
+- describe props and how data flows in a React application
+- demonstrate the ability to compose React components to build out a UI
+- pass props as dynamic data to a React component
 
 #### Pro Tip
 
@@ -86,29 +84,21 @@ All things in moderation, including moderation.
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=EOuwkNt-MCU), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=EOuwkNt-MCU), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ZBzHw78nzQM), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ZBzHw78nzQM), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=5lzKaiC8ask), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=5lzKaiC8ask), or enable JavaScript if it is disabled in your browser.
-
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=PDLixDiT-BA), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=PDLixDiT-BA), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -140,13 +130,13 @@ This brings us to today. The first standardized syntax for using modules in Java
 
 Let’s go through some examples. If you open a new codesandbox and create a few different files, you can try this out.
 
-*`export` exports a single named function that can now be imported into another module using the import keyword*
+_`export` exports a single named function that can now be imported into another module using the import keyword_
 
     export const emphasize = str => {
       return str.toUpperCase();
     };
 
-*When `export default` is specified (either inline or at the end of the file) the declaration that follows is exported by default and additional modules will need to be exported (and imported) by name.*
+_When `export default` is specified (either inline or at the end of the file) the declaration that follows is exported by default and additional modules will need to be exported (and imported) by name._
 
     const emphasize = str => {
       return str.toUpperCase();
@@ -162,17 +152,17 @@ Importing a file/module starts with declaring the `import` keyword followed by t
 
 Import examples
 
--   A single named export
+- A single named export
 
-    import { a } from './directory/fileName'
+  import { a } from './directory/fileName'
 
--   Multiple named exports
+- Multiple named exports
 
-    import { item1, item2, item3 } from './directory/items.js'
+  import { item1, item2, item3 } from './directory/items.js'
 
--   Exported as default
+- Exported as default
 
-    import Component from './folderName/Component.js'
+  import Component from './folderName/Component.js'
 
 **File path specification**
 
@@ -184,7 +174,7 @@ The prefixing ‘./’ on the file URL points to a unique location of your file 
 
 Using the codesandbox you’ve been trying this out in, make a React component in one file that is exported as the default export, and see if you can import it and render it in the `App` component. This is a good chance to try it out on your own before we do it together later.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to describe props and how data flows in a React application
 
@@ -242,10 +232,10 @@ The above code block will render “Hello, my name is Hubert”
 
 So why do we pass information around in this way? A few reasons are listed below.
 
--   **Control.** As we learned with modules, when we break our components down into smaller functions, we gain greater control over what we display and how it works. By keeping state in one of a few select components and passing as props, we minimize the risk of making unintended changes to our state data.
--   **Readability.** Separate files are easy to keep in order, and make it easier for other developers to read through our code, know where our state is held, and where it’s being sent. The easier your code is to read and understand, the more likely someone is to ask you write more it for them.
--   **Maintenance.** If we want to make changes, we can find components quickly, and working in files that only manage one or two different aspects of our application is a much easier task than scrolling through hundreds of lines of code! Also, this way, we can isolate any problems that come up and debug faster.
--   **Reusability.** This is huge! Now we have reusable components, and they can render any data that we pass through, so long as it matches to type on our object. And with a few modifications, we render additional data if we added to our object. Or we could even pass in an array of hundreds of objects and render the information contained on each one. This would only require a few additional lines of code.
+- **Control.** As we learned with modules, when we break our components down into smaller functions, we gain greater control over what we display and how it works. By keeping state in one of a few select components and passing as props, we minimize the risk of making unintended changes to our state data.
+- **Readability.** Separate files are easy to keep in order, and make it easier for other developers to read through our code, know where our state is held, and where it’s being sent. The easier your code is to read and understand, the more likely someone is to ask you write more it for them.
+- **Maintenance.** If we want to make changes, we can find components quickly, and working in files that only manage one or two different aspects of our application is a much easier task than scrolling through hundreds of lines of code! Also, this way, we can isolate any problems that come up and debug faster.
+- **Reusability.** This is huge! Now we have reusable components, and they can render any data that we pass through, so long as it matches to type on our object. And with a few modifications, we render additional data if we added to our object. Or we could even pass in an array of hundreds of objects and render the information contained on each one. This would only require a few additional lines of code.
 
 ##### Challenge
 
@@ -253,7 +243,7 @@ Create a new component to render the user’s age and pass it to UserInfo.
 
 Stretch goal - Replace the single user object with an array containing several user objects with name and age properties, and any other information you would like to display. Use a map function to iterate over the props data in UserInfo and return a single DisplayUser component. Pass the iterated object data to each newly created component and render the data dynamically in your JSX.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to demonstrate the ability to compose React components to build out a UI
 
@@ -261,7 +251,7 @@ Let’s think about the Facebook web application for a minute. How many things o
 
 ##### Overview
 
-Now that we know all about functional components and how to pass arguments (props) through to those components and render those props data to the screen using JSX, we’re going to learn all about nesting components that may rely on one or another prop value from a parent component.﻿
+Now that we know all about functional components and how to pass arguments (props) through to those components and render those props data to the screen using JSX, we’re going to learn all about nesting components that may rely on one or another prop value from a parent component.
 
 Let’s take a look at the following code example and learn how we can achieve this idea of nesting components:
 
@@ -411,7 +401,7 @@ You can use CodeSandbox to build Live ReactJS applications. I recommend logging 
 
 Create an object that represents a generational tree of your family similar to the `Simpsons Object` found in our follow along example. Keep it simple. Build out a few nested components that demonstrate the ability to pass data and conditionally render components if certain props are available.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to pass props as dynamic data to a React component
 
@@ -476,15 +466,15 @@ Alright, now all we need is the button. We’ll go ahead and build it in the sam
       );
     };
 
-Now click away and watch the magic happen! The button is now dynamic because our setter function can set the color variable the button receives. Now, this might not be the most practical example, and you may not spend your career building buttons that randomly change color (although dark mode *is* pretty great), but think about the processes that led us here. We use functions, variables, and an array of data. What else could you do with these things to make changes to components? What changes could you make to the existing so instead of random color, the user can cycle through the array in order? The point is, once you have the patterns down, you’re really just writing Javascript.
+Now click away and watch the magic happen! The button is now dynamic because our setter function can set the color variable the button receives. Now, this might not be the most practical example, and you may not spend your career building buttons that randomly change color (although dark mode _is_ pretty great), but think about the processes that led us here. We use functions, variables, and an array of data. What else could you do with these things to make changes to components? What changes could you make to the existing so instead of random color, the user can cycle through the array in order? The point is, once you have the patterns down, you’re really just writing Javascript.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [React Components Instagram Clone](https://github.com/LambdaSchool/React-Components-Insta-Clone)
+- ##### [React Components Instagram Clone](https://github.com/LambdaSchool/React-Components-Insta-Clone)
 
-    Use what you have learned the last two days to create multiple components, update state, pass data via props, and put it all together to create a Instagram clone.
+  Use what you have learned the last two days to create multiple components, update state, pass data via props, and put it all together to create a Instagram clone.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -492,28 +482,28 @@ Now click away and watch the magic happen! The button is now dynamic because our
 
 You can use class recordings to help you master the material.
 
--   **[Composing React Components and Passing Data Via Props for WebPT22 w/Keiran Kozlowski](https://youtu.be/r8NChRR2HUY)**
+- **[Composing React Components and Passing Data Via Props for WebPT22 w/Keiran Kozlowski](https://youtu.be/r8NChRR2HUY)**
 
-    As you build bigger applications, you’ll want to start splitting up your app into smaller pieces so that it is easier to work on and maintain. These small pieces you will build are called components. Components will need to share state, so we will learn how to do this with a helper object called props.
+  As you build bigger applications, you’ll want to start splitting up your app into smaller pieces so that it is easier to work on and maintain. These small pieces you will build are called components. Components will need to share state, so we will learn how to do this with a helper object called props.
 
--   [All previous recordings](/archive/FSW/module/recgzSGQtp2HYwgSR)
+- [All previous recordings](/archive/FSW/module/recgzSGQtp2HYwgSR)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Using the codesandbox you’ve been trying this out in, make a React component in one file that is exported as the default export, and see if you can import it and render it in the `App` component. This is a good chance to try it out on your own before we do it together later.
+  Using the codesandbox you’ve been trying this out in, make a React component in one file that is exported as the default export, and see if you can import it and render it in the `App` component. This is a good chance to try it out on your own before we do it together later.
 
--   Objective challenge:
+- Objective challenge:
 
-    Create a new component to render the user’s age and pass it to UserInfo.
+  Create a new component to render the user’s age and pass it to UserInfo.
 
-    Stretch goal - Replace the single user object with an array containing several user objects with name and age properties, and any other information you would like to display. Use a map function to iterate over the props data in UserInfo and return a single DisplayUser component. Pass the iterated object data to each newly created component and render the data dynamically in your JSX.
+  Stretch goal - Replace the single user object with an array containing several user objects with name and age properties, and any other information you would like to display. Use a map function to iterate over the props data in UserInfo and return a single DisplayUser component. Pass the iterated object data to each newly created component and render the data dynamically in your JSX.
 
--   Objective challenge:
+- Objective challenge:
 
-    Create an object that represents a generational tree of your family similar to the `Simpsons Object` found in our follow along example. Keep it simple. Build out a few nested components that demonstrate the ability to pass data and conditionally render components if certain props are available.
+  Create an object that represents a generational tree of your family similar to the `Simpsons Object` found in our follow along example. Keep it simple. Build out a few nested components that demonstrate the ability to pass data and conditionally render components if certain props are available.
 
--   Project: React Components Instagram Clone
+- Project: React Components Instagram Clone

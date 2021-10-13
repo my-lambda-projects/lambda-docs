@@ -1,4 +1,3 @@
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -86,17 +85,13 @@ Brian Kernighan
 
 Review each preclass resource before class.
 
--
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=32NDCLaVnc4), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=32NDCLaVnc4), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=aPwDZDUpedA), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=aPwDZDUpedA), or enable JavaScript if it is disabled in your browser.
 
 - [JSON Web Tokens vs Sessions/Cookies](https://ponyfoo.com/articles/json-web-tokens-vs-session-cookies)
 
@@ -137,7 +132,7 @@ the `alg` key specifies which algorithm was used to create the token, in this ca
 
 ### Payload
 
-The payload includes *claims* (fancy name for things like permissions for the user) information or any other data we’d like to store in the token, which is most likely a user id. There are specific claims defined in the JWT standard, and you can also add custom properties to this object.
+The payload includes _claims_ (fancy name for things like permissions for the user) information or any other data we’d like to store in the token, which is most likely a user id. There are specific claims defined in the JWT standard, and you can also add custom properties to this object.
 
 An example:
 
@@ -165,7 +160,7 @@ On the left-hand side, there is a sample JWT, and on the right, we can see the d
 
 Write a paragraph describing the parts of a JWT and send it to your PM on slack.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to produce and send a JSON Web Token (JWT)
 
@@ -184,12 +179,12 @@ Let’s produce and send a token on a successful login.
 - add `jsonwebtoken` to the project and require it into `auth-router.js`.
 - change the `/login` endpoint inside the `auth-router.js` to produce and send the token.
 
-    // ./auth/auth-router.js
+  // ./auth/auth-router.js
 
-    const jwt = require('jsonwebtoken'); // installed this library
+  const jwt = require('jsonwebtoken'); // installed this library
 
-    router.post('/login', (req, res) => {
-      let { username, password } = req.body;
+  router.post('/login', (req, res) => {
+  let { username, password } = req.body;
 
       Users.findBy({ username })
         .first()
@@ -210,14 +205,15 @@ Let’s produce and send a token on a successful login.
         .catch(error => {
           res.status(500).json(error);
         });
-    });
 
-    function generateToken(user) {
-      const payload = {
-        subject: user.id, // sub in payload is what the token is about
-        username: user.username,
-        // ...otherData
-      };
+  });
+
+  function generateToken(user) {
+  const payload = {
+  subject: user.id, // sub in payload is what the token is about
+  username: user.username,
+  // ...otherData
+  };
 
       const options = {
         expiresIn: '1d', // show other available options in the library's documentation
@@ -225,16 +221,17 @@ Let’s produce and send a token on a successful login.
 
       // extract the secret away so it can be required and used where needed
       return jwt.sign(payload, secrets.jwtSecret, options); // this method is synchronous
-    }
+
+  }
 
 - add the `./config/secrets.js` file to hold the `jwtSecret`
 
-    // the secrets will be safely stored in an environment variable, these are placeholders for development.
-    module.exports = {
-      jwtSecret: process.env.JWT_SECRET || 'add a third table for many to many',
-    };
+  // the secrets will be safely stored in an environment variable, these are placeholders for development.
+  module.exports = {
+  jwtSecret: process.env.JWT_SECRET || 'add a third table for many to many',
+  };
 
-require *secrets.js* into *auth-router.js*: `const secrets = require('../config/secrets.js');`
+require _secrets.js_ into _auth-router.js_: `const secrets = require('../config/secrets.js');`
 
 - Login with the student/hired user and show the token.
 - Review the steps taken one more time.
@@ -245,7 +242,7 @@ We have a server that can produce and send JWTs on a successful login.
 
 Implement login using JWTs
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
@@ -255,7 +252,7 @@ Starter code for Node Auth 2 guided project
 
 [GitHub Repo](https://github.com/LambdaSchool/node-auth2-guided)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
@@ -269,7 +266,7 @@ You can use class recordings to help you master the material.
 
 - **[Using JSON Web Tokens (JWT) for Web PT 18 w/Jason Maurer](https://youtu.be/BRlElXWj1cQ)**
 
-    In this module the student will build a full stack (an Express API and a React web application) authentication workflow using JSON Web Tokens. At the end of this module, you should be able to: explain the three different parts of a JSON web token produce and send a JSON Web Token (JWT)
+  In this module the student will build a full stack (an Express API and a React web application) authentication workflow using JSON Web Tokens. At the end of this module, you should be able to: explain the three different parts of a JSON web token produce and send a JSON Web Token (JWT)
 
 - [All previous recordings](/archive/FSW/module/reciCHdNjavSKaaLt)
 
@@ -279,11 +276,11 @@ To demonstrate mastery of this module, you need to complete and pass a code revi
 
 - Objective challenge:
 
-    Write a paragraph describing the parts of a JWT and send it to your PM on slack.
+  Write a paragraph describing the parts of a JWT and send it to your PM on slack.
 
 - Objective challenge:
 
-    Implement login using JWTs
+  Implement login using JWTs
 
 - Guided Project: Node Auth 2 Guided Project
 

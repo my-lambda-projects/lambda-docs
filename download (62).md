@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,33 +10,33 @@
 
 <a href="/web4java/sprint/recnLDyTtONLTMiFJ" class="bd-toc-link">1.  Java Precourse Information</a>
 
--   [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
--   [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
+- [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
+- [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
 
 <a href="/web4java/sprint/recoJ4ZqNQWX3cy6E" class="bd-toc-link">2.  Java Fundamentals</a>
 
--   [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
--   [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
--   [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
--   [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
+- [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
+- [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
+- [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
+- [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
 
 <a href="/web4java/sprint/recRVUSWQEtosl0Cz" class="bd-toc-link">3.  RDBMS and Intro to APIs</a>
 
--   [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
--   [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
--   [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
--   [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
+- [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
+- [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
+- [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
+- [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
 
 <a href="/web4java/sprint/recSqm5AAEkJcIl3p" class="bd-toc-link">4.  Java Frameworks</a>
 
--   [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
--   [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
--   [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
--   [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
+- [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
+- [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
+- [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
+- [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
 
 <a href="/web4java/sprint/recC5dhR9menaROwx" class="bd-toc-link">5.  WEB Unit 4 Java Build</a>
 
-------------------------------------------------------------------------
+---
 
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjM1IiB2aWV3Ym94PSIwIDAgNzU2IDE5NyIgZmlsbD0iI2VjMzk0NCI+PGc+PHBhdGggZD0iTTI5Mi45LDEyNi42aC02LjdjLTksMC0xMi42LTEuOS0xMi42LTkuNVY0OC41YzAtNy43LDEuNi04LjYsMTEuNC05Ljd2LTQuNWgtNDEuM3Y0LjUgYzkuOCwxLjEsMTEuNCwxLjksMTEuNCw5Ljd2NjkuM2MwLDcuNy0xLjYsOC42LTExLjQsOS43djQuNWg3My43bDQuOS0yOS40aC00LjRDMzA4LjUsMTE5LjYsMzAzLjksMTI2LjYsMjkyLjksMTI2LjZ6Ij48L3BhdGg+PHBhdGggZD0iTTM4NS41LDEyMS4xVjc5LjNjMC0xNS44LTkuNC0yMi40LTI2LjYtMjIuNGMtMTUsMC0yNi44LDYuNi0yNi44LDE5LjNjMCwyLjQsMC4yLDMuMywwLjgsNWgxNi42IGMtMC41LTItMC43LTUtMC43LTcuNWMwLTkuNiwzLjYtMTIuNCw5LjQtMTIuNGM2LjQsMCw5LjcsMiw5LjcsMTQuNHYxMS4ybC0yMC44LDcuN2MtMTAuNiw0LjEtMTkuMyw4LjgtMTkuMywyMC43IGMwLDEwLjksNy41LDE3LjgsMTguNiwxNy44YzkuOSwwLDE3LjQtNi4yLDIxLjktMTIuMWwwLjEtMC4xbDAsMFYxMzJoMjZ2LTQuNEMzODcuNywxMjcuMSwzODUuNSwxMjYuMiwzODUuNSwxMjEuMXogTTM2OCwxMTcuOCBjLTQuNCwzLjMtNy42LDUuMy0xMiw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNFYxMTcuOEwzNjgsMTE3Ljh6Ij48L3BhdGg+PHBhdGggZD0iTTUxNC40LDEyMVY3OS41YzAtMTQuOC02LTIyLjQtMTguNy0yMi40Yy0xMS41LDAtMTkuNCw2LjYtMjUuNSwxMy45Yy0xLjgtOS42LTcuNy0xMy45LTE3LjgtMTMuOSBjLTExLjQsMC0xOC43LDYuMi0yNC44LDEzLjZWNTdoLTIuM2wtMjMuOCw3LjR2Mi40bDguNiw1djQ5LjRjMCw1LTIuMSw2LjEtOC45LDYuNHY0LjRoMzUuMXYtNC40Yy02LjctMC4zLTguNy0xLjMtOC43LTYuNHYtNDcgYzQuNy0zLjYsOS41LTYuNSwxNS41LTYuNWM3LjYsMCwxMC41LDQuMiwxMC41LDEyLjd2NDAuOGMwLDUtMS45LDYuMS04LjcsNi40djQuNGwzNC44LDB2LTQuNGMtNi43LTAuMy04LjYtMS4zLTguNi02LjR2LTQ3IGM0LjctMy42LDkuNS02LjUsMTUuNS02LjVjNy42LDAsMTAuNSw0LjIsMTAuNSwxMi43bC0wLjEsNDAuNWMwLDUtMS44LDYuNC04LjYsNi43bDAsNC40aDM1LjF2LTQuNCBDNTE2LjcsMTI3LjQsNTE0LjQsMTI2LjEsNTE0LjQsMTIxeiI+PC9wYXRoPjxwYXRoIGQ9Ik01NzMuMiw1Ny4zYy0xMSwwLTE4LjUsNS43LTIzLjQsMTIuOFYyMi45aC0yLjdsLTIzLjQsNi44djIuNWw4LjYsNC41VjEzMmgyLjlsOC0zLjVjNS44LDMuMywxMi4zLDUsMjAuMiw1IGMyMC44LDAsMzcuNC0xNS44LDM3LjQtNDIuNkM2MDAuOSw2OS45LDU5MC40LDU3LjMsNTczLjIsNTcuM3ogTTU2My40LDEyOC43Yy01LjQsMC0xMC4zLTIuNC0xMy43LTcuOVY3My42IGMzLjQtMy40LDguNS01LjcsMTMuNS01LjdjMTMuOSwwLDIwLDEyLjgsMjAsMjkuNUM1ODMuMywxMTQuNyw1NzUuOCwxMjguNSw1NjMuNCwxMjguN3oiPjwvcGF0aD48cGF0aCBkPSJNNjc3LDEyMS4yVjIyLjhoLTIuNkw2NTEsMjkuNlYzMmw4LjYsNC41djI1LjdjLTMuNC0zLjItOC44LTUuMS0xNS41LTUuMWMtMTkuOSwwLTM1LjIsMTUuMy0zNS4yLDQxLjMgYzAsMjAuNywxMS4yLDM0LjYsMjguMSwzNC42YzkuOCwwLDE3LTUuMywyMi42LTEzLjF2MC45VjEzMmgyNi4zbDAtNC40QzY3OS4xLDEyNy4zLDY3NywxMjYuMyw2NzcsMTIxLjJ6IE02NTkuNiwxMTcuMSBMNjU5LjYsMTE3LjFjLTMuNCwzLjQtOCw1LjEtMTMuMiw1LjFjLTEzLjIsMC0yMC40LTEyLjgtMjAuNC0yOS44YzAtMTcuOCw3LjMtMjkuMiwxOS41LTI5LjJjOC43LDAsMTQuMSw2LjksMTQuMSwxOC4zIEw2NTkuNiwxMTcuMXoiPjwvcGF0aD48cGF0aCBkPSJNNzQ3LjEsMTIxLjFWNzkuM2MwLTE1LjgtOS40LTIyLjQtMjYuNi0yMi40Yy0xNSwwLTI2LjgsNi42LTI2LjgsMTkuM2MwLDIuNCwwLjIsMy4zLDAuOCw1aDE2LjYgYy0wLjUtMi0wLjctNS0wLjctNy41YzAtOS42LDMuNi0xMi40LDkuNC0xMi40YzYuNCwwLDkuNywyLDkuNywxNC40djExLjJsLTIwLjgsNy43Yy0xMC42LDQuMS0xOS4zLDguOC0xOS4zLDIwLjcgYzAsMTAuOSw3LjUsMTcuOCwxOC42LDE3LjhjOS45LDAsMTcuNC02LjIsMjEuOS0xMi4xdi0wLjFoMC4xbDAsMTEuMWwyNiwwLjF2LTQuNUM3NDkuMywxMjcuMSw3NDcuMSwxMjYuMiw3NDcuMSwxMjEuMXogTTcyOS42LDExNy44Yy00LjQsMy4zLTcuNiw1LjMtMTIuMSw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNEw3MjkuNiwxMTcuOEw3MjkuNiwxMTcuOHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTAsMHY5MC40YzAsNjUuNyw1MC45LDg4LjUsODguMSwxMDUuMmgwLjFsMywxLjRjMC43LTAuNCwxLjQtMC43LDIuMi0xYzAuNC0wLjIsMC45LTAuNCwxLjMtMC42IGMzNy4zLTE2LjYsODguNC0zOS41LDg4LjQtMTA1VjBIMHogTTExNiwxMzJsLTItNS4zbC0yNi42LTcwYy0xLjYsNC4xLTUuMywxNC05LjMsMjQuNmwtMTUuMyw0MS4zYy0wLjcsMi0wLjMsMywwLjIsMy43IGMxLjEsMS4zLDMuNSwxLjMsNy4zLDEuM0g3MWwwLDQuNEg0Mi40bDAtNC40aDIuMmMzLjksMCw3LjEtMS43LDkuNS02LjVsMi45LTYuNmwyNi41LTY3LjhsLTQuNy0xMi41aDI0LjdsMzQuMSw4OS43bDMuMSw4LjFIMTE2eiI+PC9wYXRoPjwvc3ZnPg==" /></a>
 
@@ -46,39 +44,39 @@
 
 <a href="/web4java/sprint/recnLDyTtONLTMiFJ" class="bd-toc-link">1.  Java Precourse Information</a>
 
--   [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
--   [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
+- [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
+- [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
 
 <a href="/web4java/sprint/recoJ4ZqNQWX3cy6E" class="bd-toc-link">2.  Java Fundamentals</a>
 
--   [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
--   [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
--   [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
--   [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
+- [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
+- [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
+- [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
+- [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
 
 <a href="/web4java/sprint/recRVUSWQEtosl0Cz" class="bd-toc-link">3.  RDBMS and Intro to APIs</a>
 
--   [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
--   [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
--   [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
--   [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
+- [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
+- [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
+- [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
+- [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
 
 <a href="/web4java/sprint/recSqm5AAEkJcIl3p" class="bd-toc-link">4.  Java Frameworks</a>
 
--   [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
--   [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
--   [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
--   [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
+- [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
+- [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
+- [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
+- [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
 
 <a href="/web4java/sprint/recC5dhR9menaROwx" class="bd-toc-link">5.  WEB Unit 4 Java Build</a>
 
-------------------------------------------------------------------------
+---
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Guided Project](#guided-project)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Guided Project](#guided-project)
+- [Project](#project)
+- [Review](#review)
 
 # Java - Exception Handling
 
@@ -88,11 +86,11 @@
 
 **At the end of this module, you should be able to:**
 
--   implement industry-standard exception handling including user-friendly exception messages
--   implement exception handling using a variety of Java constructs
--   use data validation annotations to verify data prior to processing the data
--   gather and use data from other APIs
--   implement custom Swagger Documentation (\*\*\* OPTIONAL \*\*\*)
+- implement industry-standard exception handling including user-friendly exception messages
+- implement exception handling using a variety of Java constructs
+- use data validation annotations to verify data prior to processing the data
+- gather and use data from other APIs
+- implement custom Swagger Documentation (\*\*\* OPTIONAL \*\*\*)
 
 #### Pro Tip
 
@@ -112,48 +110,48 @@ Review each preclass resource before class.
 
 ##### Overview
 
--   See the Github Repository <https://github.com/LambdaSchool/java-exceptionalsampleemps.git>t for the code used in the objective.
+- See the Github Repository <https://github.com/LambdaSchool/java-exceptionalsampleemps.git>t for the code used in the objective.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   JetBrains IntelliJ IDEA IDE
--   Postman
+- Java Development Kit (JDK) - at least version 11
+- JetBrains IntelliJ IDEA IDE
+- Postman
 
 **Exceptions** are disruptions to the ordinary flow of the application. Thus when something happens that is an exception to the normal operation of your application, we have an exception! Exceptions can take on many forms
 
--   Application Error
-    -   The file, environment variable we seek is not found
-    -   The API tries doing an invalid math expression
-    -   The API loses accesses to the webserver
--   User Error
-    -   Looking for resources that are not available
-    -   Using an endpoint that does not exist
-    -   Sending the API the wrong data type
--   Aliens
-    -   Ok, maybe not aliens. However, there always seems to be some one off situation that causes a weird exception!
+- Application Error
+  - The file, environment variable we seek is not found
+  - The API tries doing an invalid math expression
+  - The API loses accesses to the webserver
+- User Error
+  - Looking for resources that are not available
+  - Using an endpoint that does not exist
+  - Sending the API the wrong data type
+- Aliens
+  - Ok, maybe not aliens. However, there always seems to be some one off situation that causes a weird exception!
 
 Spring Boot has a default way of handling exceptions. It does this fairly well. Up until now we have just used the Spring Boot defaults to handle our exceptions. What if we wanted to provide some custom error messages when our program encounters an error? What if we have custom ways we want to handle exceptions that differ from the Spring Boot Default? We will be coding some custom exception handlers below.
 
 Our application experiences two types of exceptions
 
--   System generated. Something happened we were not excepting. The client sent us a String value when we were expecting an integer. These are handled in this objective.
--   Thrown exceptions. Something happened we knew might happen so we reported manually by “throwing” an exception. The client looked for a resource that was not available. These are handled in the objective on Java Exception Constructs.
+- System generated. Something happened we were not excepting. The client sent us a String value when we were expecting an integer. These are handled in this objective.
+- Thrown exceptions. Something happened we knew might happen so we reported manually by “throwing” an exception. The client looked for a resource that was not available. These are handled in the objective on Java Exception Constructs.
 
 When we are writing our custom exception handles we need to handle both types.
 
 We also need a way to report information back to the client in a standard way. In this way, our client need only address one type of error message. We need to let the client know
 
--   What is the exception
--   What caused the exception
--   What time the exception happened
--   Any data types that are incorrect or missing
--   Among other information that might vary by exception type.
+- What is the exception
+- What caused the exception
+- What time the exception happened
+- Any data types that are incorrect or missing
+- Among other information that might vary by exception type.
 
 Terminology
 
--   When an exception happens, it is considered thrown. We throw a ResourceNotFound exception. The system throws a FileNotFound exception.
--   When we handle an exception, it is considered caught. We will catch any thrown exceptions!
+- When an exception happens, it is considered thrown. We throw a ResourceNotFound exception. The system throws a FileNotFound exception.
+- When we handle an exception, it is considered caught. We will catch any thrown exceptions!
 
 So let’s “catch” all possible exceptions and report to the client what happened. Spring Boot will handle continuing the application causing it to wait for the next request!
 
@@ -161,7 +159,7 @@ Note that another reason we look at Exception Handling is here we really take ad
 
 ##### Follow Along
 
-Open up the application `exceptionalsampleemp-initial` from the GitHub Repository <https://github.com/LambdaSchool/java-exceptionalsampleemps.git>. This application is the same as the application from [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_data\_modeling](https://github.com/LambdaSchool/java-sampleemps.git) with the addition of find employee by id endpoints and associated code.
+Open up the application `exceptionalsampleemp-initial` from the GitHub Repository <https://github.com/LambdaSchool/java-exceptionalsampleemps.git>. This application is the same as the application from [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling](https://github.com/LambdaSchool/java-sampleemps.git) with the addition of find employee by id endpoints and associated code.
 
 Run the application and surf to these endpoints to see what default exception handling looks like. You can expand each endpoint to see its output
 
@@ -595,10 +593,10 @@ Invalid endpoint: http://localhost:2019/employees/turtle
 
 ##### Dig Deeper
 
--   [Java Fundamentals Tutorial: Exceptions](https://www.protechtraining.com/content/java_fundamentals_tutorial-exceptions)  
-    Java Fundamentals Tutorial: Exceptions
+- [Java Fundamentals Tutorial: Exceptions](https://www.protechtraining.com/content/java_fundamentals_tutorial-exceptions)  
+  Java Fundamentals Tutorial: Exceptions
 
-------------------------------------------------------------------------
+---
 
 #### Learn to implement exception handling using a variety of Java constructs
 
@@ -606,13 +604,13 @@ Invalid endpoint: http://localhost:2019/employees/turtle
 
 ##### Overview
 
--   See the Github Repository <https://github.com/LambdaSchool/java-exceptionalsampleemps.git> for the code used in the objective.
+- See the Github Repository <https://github.com/LambdaSchool/java-exceptionalsampleemps.git> for the code used in the objective.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   JetBrains IntelliJ IDEA IDE
--   Postman
+- Java Development Kit (JDK) - at least version 11
+- JetBrains IntelliJ IDEA IDE
+- Postman
 
 What if we want to programmatically cause an exception? What if we want to stop the ordinary flow of our application and report that to our clients? To do this, we can throw an exception or use a try..catch statement. We have already thrown built-in exceptions. For example, look at the code for delete in the class EmployeeServiceImpl.
 
@@ -714,10 +712,10 @@ Thus we have an annotation saying which method will handle ResourceNotFoundExcep
 
 Hint to replace code, with the correct file selected,
 
--   go to `Edit` -> `Find` -> `Replace`.
--   In the find box, the first one, enter `EntityNotFoundException`
--   In the replace box, the second one, enter `ResourceNotFoundException`
--   Click on Replace all
+- go to `Edit` -> `Find` -> `Replace`.
+- In the find box, the first one, enter `EntityNotFoundException`
+- In the replace box, the second one, enter `ResourceNotFoundException`
+- Click on Replace all
 
 Let’s see what happens now when we try to find an employee that is not there. Run the application `exceptionalsampleemps`. Surf to the following endpoint. Expand the endpoint to see its output.
 
@@ -768,7 +766,7 @@ Run the application. In your IntelliJ console, you will see the value of the env
 
 Following the same process you used to create a `ResourceNotFoundException`, create a `ResourceFoundException` to be used in place of the built-in exception `EntityExistsException`.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use data validation annotations to verify data prior to processing the data
 
@@ -776,40 +774,40 @@ Following the same process you used to create a `ResourceNotFoundException`, cre
 
 ##### Overview
 
--   See the Github Repository <https://github.com/LambdaSchool/java-exceptionalsampleemps.git> for the code used in the objective.
+- See the Github Repository <https://github.com/LambdaSchool/java-exceptionalsampleemps.git> for the code used in the objective.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   JetBrains IntelliJ IDEA IDE
--   Postman
+- Java Development Kit (JDK) - at least version 11
+- JetBrains IntelliJ IDEA IDE
+- Postman
 
 We as backend developers are responsible for the integrity of the data in our systems. Clients will send up garbage at times. That might be due to a system problem or some initial act to sabotage our database. We cannot rely on the data we receive to be valid. We must first validate the data before it gets saved and used in our system.
 
--   Did the client send up a String when we needed an integer?
--   Did the client send us duplicates of a field that must be unique?
--   Did the client send us a poorly formatted email address?
--   And the list goes on.
+- Did the client send up a String when we needed an integer?
+- Did the client send us duplicates of a field that must be unique?
+- Did the client send us a poorly formatted email address?
+- And the list goes on.
 
 Do NOT rely on clients to send you reasonable data. Data validation is our responsibility. I think I have said that enough but know I have many horror stories of “interesting” data from clients. Validate your own data! We have been doing this all along. We just did not label it as data validation. For example
 
--   Java is strongly typed. If we expect an integer and get a String, Java itself will cause an exception, and we know how to handle exceptions!
--   We use the `@Column` annotation to say if a column is required or must be unique across records.
--   We use setters to convert or validate our data before it goes to the database.
+- Java is strongly typed. If we expect an integer and get a String, Java itself will cause an exception, and we know how to handle exceptions!
+- We use the `@Column` annotation to say if a column is required or must be unique across records.
+- We use setters to convert or validate our data before it goes to the database.
 
 So, much data validation we get for “free” with Java Spring. Data validation is baked into the language and framework. However, certain annotations are available for use to further validate data. These are found in the import `javax.validation.constraints` and are put right before the fields in the models whose values we want to restrict. We can even add our own exception message using the `message` attribute. Some of these include:
 
--   `@Email(message = "must be a valid email")` forces the field to be in a valid email format (<a href="/cdn-cgi/l/email-protection" class="__cf_email__">[email protected]</a>). If not, a message for “must be a valid email” is returned.
--   `@Size(min = ??, max = ??)` restricts the size of a String field.
--   `@Min(value = ??)` minimum value of an integer. Often used in conjunction with @Max
--   `@Max(value = ??)` maximum value of an integer. Often used in conjunction with @Min
--   `@DecimalMin(value = "??.??")` minimum value for doubles
--   `@DecimalMax(value = "??.??")` maximum value for doubles
--   `@Postive` must be a positive number
--   `@Negative` must be a negative number
--   `@NotNull` another way to validate whether a field can be null or not
--   `@Future` date must be in the future
--   `@Pattern(value = "regex")` allows you specific a regex pattern to use to validate the data! Discussing regex patterns are beyond the scope of this module. See additional resources for more information.
+- `@Email(message = "must be a valid email")` forces the field to be in a valid email format (<a href="/cdn-cgi/l/email-protection" class="__cf_email__">[email protected]</a>). If not, a message for “must be a valid email” is returned.
+- `@Size(min = ??, max = ??)` restricts the size of a String field.
+- `@Min(value = ??)` minimum value of an integer. Often used in conjunction with @Max
+- `@Max(value = ??)` maximum value of an integer. Often used in conjunction with @Min
+- `@DecimalMin(value = "??.??")` minimum value for doubles
+- `@DecimalMax(value = "??.??")` maximum value for doubles
+- `@Postive` must be a positive number
+- `@Negative` must be a negative number
+- `@NotNull` another way to validate whether a field can be null or not
+- `@Future` date must be in the future
+- `@Pattern(value = "regex")` allows you specific a regex pattern to use to validate the data! Discussing regex patterns are beyond the scope of this module. See additional resources for more information.
 
 ##### Follow Along
 
@@ -867,16 +865,16 @@ Add an annotation to validate the email field in the Email model. Note that sinc
 
 ##### Dig Deeper
 
--   [Baeldung](https://www.baeldung.com/javax-validation)  
-    Baeldung Java Been Validation Basics
--   [Bean Validation](https://reflectoring.io/bean-validation-with-spring-boot/)  
-    All You Need To Know About Bean Validation With Spring Boot
--   [Regular Expressions](https://www.vogella.com/tutorials/JavaRegularExpressions/article.html)  
-    Regular expressions in Java - Tutorial
--   [Regular Expressions](https://docs.oracle.com/javase/tutorial/essential/regex/index.html)  
-    Oracle's Tutorial on Regular Expressions
+- [Baeldung](https://www.baeldung.com/javax-validation)  
+  Baeldung Java Been Validation Basics
+- [Bean Validation](https://reflectoring.io/bean-validation-with-spring-boot/)  
+  All You Need To Know About Bean Validation With Spring Boot
+- [Regular Expressions](https://www.vogella.com/tutorials/JavaRegularExpressions/article.html)  
+  Regular expressions in Java - Tutorial
+- [Regular Expressions](https://docs.oracle.com/javase/tutorial/essential/regex/index.html)  
+  Oracle's Tutorial on Regular Expressions
 
-------------------------------------------------------------------------
+---
 
 #### Learn to gather and use data from other APIs
 
@@ -884,13 +882,13 @@ Add an annotation to validate the email field in the Email model. Note that sinc
 
 ##### Overview
 
--   See the Github Repository <https://github.com/LambdaSchool/java-sampleotherapis.git> for the code used in the objective.
+- See the Github Repository <https://github.com/LambdaSchool/java-sampleotherapis.git> for the code used in the objective.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   JetBrains IntelliJ IDEA IDE
--   Postman
+- Java Development Kit (JDK) - at least version 11
+- JetBrains IntelliJ IDEA IDE
+- Postman
 
 Often we need to get data from other backend APIs systems. These are either provided by other companies, data scientist people within our own company, or some other group. We become the client. We are reliant on the other system on how to retrieve the data and how the retrieved data is organized. Let’s take a look at a few examples.
 
@@ -939,14 +937,14 @@ For all the data we retrieve we need to create a model that can store the data. 
 
 ##### Follow Along
 
-Let’s learn about these by following along, coding the following examples. Open the sample-otherapis-initial application from <https://github.com/LambdaSchool/java-sampleotherapis.git>t. This application is the same as the sampleemps\_data\_modeling application from the GitHub Repository <https://github.com/LambdaSchool/java-sampleemps.git>t
+Let’s learn about these by following along, coding the following examples. Open the sample-otherapis-initial application from <https://github.com/LambdaSchool/java-sampleotherapis.git>t. This application is the same as the sampleemps_data_modeling application from the GitHub Repository <https://github.com/LambdaSchool/java-sampleemps.git>t
 
 ### Straight JSON
 
 We want to report a random fact about a year to the console on application start up. Let’s create a model to hold the data we will get back from the API. Under the `models` subpackage, create a class called `YearFact`. This will NOT be saved in our database so we will NOT use the `@Entity` annotation. We need a field to hold each one of the pieces of data we want to save. We also need an annotation to say to ignore all other pieces of data. We will be using `@JsonIgnoreProperties(ignoreUnknown = true)`
 
--   The API endpoint we are accessing is <http://numbersapi.com/random/year?json>n
--   Looking at the JSON that is returned by this endpoint we only want the data `text` and `number`. See JSON object from above.
+- The API endpoint we are accessing is <http://numbersapi.com/random/year?json>n
+- Looking at the JSON that is returned by this endpoint we only want the data `text` and `number`. See JSON object from above.
 
 So enter the following code for the class `YearFact`. Remember in adding all of this code, you will need to make sure the proper imports are done! Do note how closely this matches the layout of the JSON object!
 
@@ -991,9 +989,9 @@ So enter the following code for the class `YearFact`. Remember in adding all of 
 
 We now need to go get the data and then display it in the console. Add the following code to the `main` method in the `SampleempsApplication` class. In this code we introduce
 
--   The `RestTemplate` - creates the object that is needed to do a client side Rest API call.
--   `MappingJackson2HttpMessageConverter` - a way to configure our rest request.
--   Doing a request now instead of responding to one.
+- The `RestTemplate` - creates the object that is needed to do a client side Rest API call.
+- `MappingJackson2HttpMessageConverter` - a way to configure our rest request.
+- Doing a request now instead of responding to one.
 
 <!-- -->
 
@@ -1101,11 +1099,11 @@ Run the application and notice something similar in the console!
 
 We want an endpoint that will return the current position of the international space station.
 
-Create a model to hold the ISS Position data. We only want the fields latitude and longitude which are part of the iss\_position class embedded in the JSON Object. Let’s create a model to hold the data that is retrieved from the API. This model will include a field that is of some class type. Create a model called `IssPositionReturnData` in the subpackage `models`. Add the following code.
+Create a model to hold the ISS Position data. We only want the fields latitude and longitude which are part of the iss_position class embedded in the JSON Object. Let’s create a model to hold the data that is retrieved from the API. This model will include a field that is of some class type. Create a model called `IssPositionReturnData` in the subpackage `models`. Add the following code.
 
--   Do note how closely this matches the layout of the JSON object!
--   Do note that we do not need the `@JsonIgnoreProperties(ignoreUnknown = true)` as we are handling all incoming pieces of data. We not returning all that data to the client but we have a place in our application to store all data retrieved from the API.
--   Note that the field of the embedded class type has to match the field name from the JSON Object, just like all the other fields. Nothing special about it being a class!
+- Do note how closely this matches the layout of the JSON object!
+- Do note that we do not need the `@JsonIgnoreProperties(ignoreUnknown = true)` as we are handling all incoming pieces of data. We not returning all that data to the client but we have a place in our application to store all data retrieved from the API.
+- Note that the field of the embedded class type has to match the field name from the JSON Object, just like all the other fields. Nothing special about it being a class!
 
 <!-- -->
 
@@ -1340,10 +1338,10 @@ So go forth and gather data from other APIs!
 
 ##### Dig Deeper
 
--   [JSON to POJO](http://www.jsonschema2pojo.org/)  
-    Convert from JSON to POJO
+- [JSON to POJO](http://www.jsonschema2pojo.org/)  
+  Convert from JSON to POJO
 
-------------------------------------------------------------------------
+---
 
 #### Learn to implement custom Swagger Documentation (\*\*\* OPTIONAL \*\*\*)
 
@@ -1351,42 +1349,42 @@ So go forth and gather data from other APIs!
 
 ##### Overview
 
--   See the Github Repository \[https://github.com/LambdaSchool/java-sampleswagger.git/\](https://github.com/LambdaSchool/java-sampleswagger.git for the code used in the objective.
+- See the Github Repository \[https://github.com/LambdaSchool/java-sampleswagger.git/\](https://github.com/LambdaSchool/java-sampleswagger.git for the code used in the objective.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   JetBrains IntelliJ IDEA IDE
--   Postman
+- Java Development Kit (JDK) - at least version 11
+- JetBrains IntelliJ IDEA IDE
+- Postman
 
 We have covered how to add and print default Swagger documentation to our applications. That was good stuff! But what if we don’t like the default documentation and want to add our own? We can do that! One nice side effect of the way this works is the default documentation shows up and then if we want to customize it, we can. The parts we don’t customize will get the default documentation!
 
 We can specifically put custom Swagger documentation on the following items:
 
--   Models
-    -   At the table level including
-        -   Name
-        -   Description
-    -   At the column, field, or property level including
-        -   Name
-        -   Description (called value)
-        -   Required or not
-        -   Giving an example
--   Controller
-    -   Operation’s Level
-        -   Description (called value)
-        -   Response type (Class type)
-        -   Response container type (optional, usually a List)
-    -   ApiResponse
-        -   List of status codes
-            -   value
-                -   Status Code
-                -   Custom Message
-                -   Response (class)
-    -   Parameters
-        -   Description (called value)
-        -   Required or not
-        -   Example (if a base data type or String)
+- Models
+  - At the table level including
+    - Name
+    - Description
+  - At the column, field, or property level including
+    - Name
+    - Description (called value)
+    - Required or not
+    - Giving an example
+- Controller
+  - Operation’s Level
+    - Description (called value)
+    - Response type (Class type)
+    - Response container type (optional, usually a List)
+  - ApiResponse
+    - List of status codes
+      - value
+        - Status Code
+        - Custom Message
+        - Response (class)
+  - Parameters
+    - Description (called value)
+    - Required or not
+    - Example (if a base data type or String)
 
 Swagger can do much, much more but let’s stick with the basics for now. Remember the end result is to provide documentation to your clients on how to use your API!
 
@@ -1394,7 +1392,7 @@ Swagger can do much, much more but let’s stick with the basics for now. Rememb
 
 Let’s add some custom Swagger documentation to an existing application.
 
-Open the application java-sampleswagger-initial from the GitHub repository <https://github.com/LambdaSchool/java-sampleswagger.git>. This application is similar to the application from [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_data\_modeling](https://github.com/LambdaSchool/java-sampleemps.git) with the addition of find employee by id endpoints and associated code. I also added the ErrorDetail and ValidationError classes to show how you can customize Swagger when you have full exception handling in place.
+Open the application java-sampleswagger-initial from the GitHub repository <https://github.com/LambdaSchool/java-sampleswagger.git>. This application is similar to the application from [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling](https://github.com/LambdaSchool/java-sampleemps.git) with the addition of find employee by id endpoints and associated code. I also added the ErrorDetail and ValidationError classes to show how you can customize Swagger when you have full exception handling in place.
 
 ### Start with the defaults
 
@@ -1681,9 +1679,9 @@ Now let’s add custom Swagger documentation to the EmployeeControl, first addin
 
 Now let’s look at one slightly more involved - return a single employee based off an employee id. Here we are adding
 
--   `ApiOperation` to explain what is happening and any response types.
--   `@ApiResponses` to document how you are responding to exceptions. This only makes sense if you have full exception handling in place in your application. Otherwise I would leave this annotation out and just use the Swagger defaults for ApiResponses.
--   `@ApiParam` is needed before each parameter in the method header! Here we just have one Parameter, the employee id we are seeking. Even if the parameter is coming in through the request body, we still annotation the parameter.
+- `ApiOperation` to explain what is happening and any response types.
+- `@ApiResponses` to document how you are responding to exceptions. This only makes sense if you have full exception handling in place in your application. Otherwise I would leave this annotation out and just use the Swagger defaults for ApiResponses.
+- `@ApiParam` is needed before each parameter in the method header! Here we just have one Parameter, the employee id we are seeking. Even if the parameter is coming in through the request body, we still annotation the parameter.
 
 Add the following annotations to your employee controller for the method getEmployeeById.
 
@@ -1911,8 +1909,8 @@ The Employee Controller with Annotations in Place
 
 Run the application and surf to the site <http://localhost:2019/swagger-ui.html>.
 
--   Expand the information for the Employee Controller and notice your custom documentation is now being used!
--   Expand the information for the Employee Model and notice that custom documentation is now being used!
+- Expand the information for the Employee Controller and notice your custom documentation is now being used!
+- Expand the information for the Employee Model and notice that custom documentation is now being used!
 
 ##### Challenge
 
@@ -1920,12 +1918,12 @@ Your task is to add custom Swagger documentation to the `JobTitle` Model and to 
 
 ##### Dig Deeper
 
--   [Swagger Homepage](https://swagger.io/)  
-    Swagger Homepage
--   [Swagger Complete Example](https://springframework.guru/spring-boot-restful-api-documentation-with-swagger-2/)  
-    Swagger and Spring Boot Complete Example
+- [Swagger Homepage](https://swagger.io/)  
+  Swagger Homepage
+- [Swagger Complete Example](https://springframework.guru/spring-boot-restful-api-documentation-with-swagger-2/)  
+  Swagger and Spring Boot Complete Example
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
@@ -1935,11 +1933,11 @@ We are adding client friendly exception handling.
 
 [GitHub Repo](https://github.com/LambdaSchool/java-exceptionalusermodel.git)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Java-School](https://github.com/lambdaSchool/java-school.git)
+- ##### [Java-School](https://github.com/lambdaSchool/java-school.git)
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -1947,25 +1945,25 @@ We are adding client friendly exception handling.
 
 You can use class recordings to help you master the material.
 
--   **[Java Exception Handling for WEB33 with John Mitchell](https://youtu.be/aWL-u5TMM-Y)**
--   [All previous recordings](/archive/WEB4Java/module/rec3E1WYDyoiEF1e3)
+- **[Java Exception Handling for WEB33 with John Mitchell](https://youtu.be/aWL-u5TMM-Y)**
+- [All previous recordings](/archive/WEB4Java/module/rec3E1WYDyoiEF1e3)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Following the same process you used to create a `ResourceNotFoundException`, create a `ResourceFoundException` to be used in place of the built-in exception `EntityExistsException`.
+  Following the same process you used to create a `ResourceNotFoundException`, create a `ResourceFoundException` to be used in place of the built-in exception `EntityExistsException`.
 
--   Objective challenge:
+- Objective challenge:
 
-    Add an annotation to validate the email field in the Email model. Note that since the word email is already in use in the method, IntelliJ adds the full address of the annotation to give you something like `@javax.validation.constraints.Email`. It happens when these common words are used. We have to know which one to use at what time!
+  Add an annotation to validate the email field in the Email model. Note that since the word email is already in use in the method, IntelliJ adds the full address of the annotation to give you something like `@javax.validation.constraints.Email`. It happens when these common words are used. We have to know which one to use at what time!
 
--   Objective challenge:
+- Objective challenge:
 
-    Your task is to add custom Swagger documentation to the `JobTitle` Model and to the rest of the end points in the `EmployeeController`
+  Your task is to add custom Swagger documentation to the `JobTitle` Model and to the rest of the end points in the `EmployeeController`
 
--   Guided Project: java-exceptionalusermodel
+- Guided Project: java-exceptionalusermodel
 
--   Project: Java-School
+- Project: Java-School

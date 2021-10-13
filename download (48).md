@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
@@ -39,32 +37,32 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Guided Project](#guided-project)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Guided Project](#guided-project)
+- [Project](#project)
+- [Review](#review)
 
 # Introduction to Authentication
 
@@ -76,12 +74,12 @@ In this module we’ll get a gentle introduction into the world of authenticatio
 
 **At the end of this module, you should be able to:**
 
--   explain what is authentication and provide guidelines for password security.
--   hash passwords before saving them to the database
--   verify passwords using bcrypt
--   use in-memory sessions to persist authentication information across requests
--   implement logout using a sessions based API
--   restrict access to resources, allowing access only for authenticated users
+- explain what is authentication and provide guidelines for password security.
+- hash passwords before saving them to the database
+- verify passwords using bcrypt
+- use in-memory sessions to persist authentication information across requests
+- implement logout using a sessions based API
+- restrict access to resources, allowing access only for authenticated users
 
 #### Pro Tip
 
@@ -91,55 +89,45 @@ We all build on the work of others.
 
 Review each preclass resource before class.
 
--   [Video: Using Sessions and Cookies for FSW13 w/ Luis Hernandez](https://youtu.be/-Qyip0bKbd0)
+- [Video: Using Sessions and Cookies for FSW13 w/ Luis Hernandez](https://youtu.be/-Qyip0bKbd0)
 
-    Using Sessions and Cookies for FSW13 w/ Luis Hernandez
+  Using Sessions and Cookies for FSW13 w/ Luis Hernandez
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=XFsLtRqKpXQ), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=XFsLtRqKpXQ), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=iRanaxmN9O4), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=iRanaxmN9O4), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ke85xaOTTqg), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=aUerI0MXM1I), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ke85xaOTTqg), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=0Q3XvKqU8cI), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- [User Account Best Practices](https://cloudplatform.googleblog.com/2018/01/12-best-practices-for-user-account.html)
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=aUerI0MXM1I), or enable JavaScript if it is disabled in your browser.
+  User Account best practices by Google.
 
--   
+- [bcrypt npm module](https://www.npmjs.com/package/bcryptjs)
 
-    # An error occurred.
+  NPM module useful for hashing passwords.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=0Q3XvKqU8cI), or enable JavaScript if it is disabled in your browser.
+- [bcrypt defined](https://stackoverflow.com/questions/6832445/how-can-bcrypt-have-built-in-salts)
 
--   [User Account Best Practices](https://cloudplatform.googleblog.com/2018/01/12-best-practices-for-user-account.html)
+- [How do express sessions work?](https://nodewebapps.com/2017/06/18/how-do-nodejs-sessions-work/)
 
-    User Account best practices by Google.
+- [express-session package documentation](https://www.npmjs.com/package/express-session)
 
--   [bcrypt npm module](https://www.npmjs.com/package/bcryptjs)
-
-    NPM module useful for hashing passwords.
-
--   [bcrypt defined](https://stackoverflow.com/questions/6832445/how-can-bcrypt-have-built-in-salts)
-
--   [How do express sessions work?](https://nodewebapps.com/2017/06/18/how-do-nodejs-sessions-work/)
-
--   [express-session package documentation](https://www.npmjs.com/package/express-session)
-
-    How to install and use express-session
+  How to install and use express-session
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -155,30 +143,30 @@ We will also talk about why implementing authentication is challenging and the t
 
 Adding authentication to a Web API requires that an API can:
 
--   register user accounts.
--   login to prove identity.
--   logout of the system to invalidate the user’s access until they login again.
--   add a way for users to reset their passwords.
+- register user accounts.
+- login to prove identity.
+- logout of the system to invalidate the user’s access until they login again.
+- add a way for users to reset their passwords.
 
 Proper authentication is difficult. There is a constant race between security experts coming up with innovative ways to protect our information and attackers coming up with ways to circumvent those security measures.
 
 Some of the things we need to take into account when implementing authentication are:
 
--   Password storage.
--   Password strength.
--   Brute-force safeguards.
+- Password storage.
+- Password strength.
+- Brute-force safeguards.
 
 ##### Follow Along
 
 Let’s tackle the first one, **password storage**. The rule of thumb is: **NEVER, EVER, under no circumstances, store user passwords in plain text**. Then what are the two main options:
 
--   encryption.
--   hashing.
+- encryption.
+- hashing.
 
 ### Password Hashing vs. Encryption for password storage
 
--   Encryption goes two ways. First, it utilizes plain text and private keys to generate encrypted passwords and then reverses the process to match to an original password.
--   Cryptographic hashes only go one way: parameters + input = hash. It is pure; given the same parameters and input it generates the same hash.
+- Encryption goes two ways. First, it utilizes plain text and private keys to generate encrypted passwords and then reverses the process to match to an original password.
+- Cryptographic hashes only go one way: parameters + input = hash. It is pure; given the same parameters and input it generates the same hash.
 
 If the database of users and keys are compromised, it is possible to decrypt the passwords to their original values, and this is bad because users often share passwords across different sites. This is one reason why **cryptographic hashing is the preferred method for storing user passwords**.
 
@@ -206,13 +194,13 @@ Write a paragraph that explains the difference between authentication and author
 
 ##### Dig Deeper
 
--   [OWASP Top 10](https://www.cloudflare.com/learning/security/threats/owasp-top-10/)  
--   [Plain Text Offenders](http://plaintextoffenders.com/)  
-    A list of websites storing passwords as plain text.
--   [The Seif Project](https://www.oreilly.com/ideas/the-seif-project)  
--   [bcrypt defined](https://stackoverflow.com/questions/6832445/how-can-bcrypt-have-built-in-salts)  
+- [OWASP Top 10](https://www.cloudflare.com/learning/security/threats/owasp-top-10/)
+- [Plain Text Offenders](http://plaintextoffenders.com/)  
+  A list of websites storing passwords as plain text.
+- [The Seif Project](https://www.oreilly.com/ideas/the-seif-project)
+- [bcrypt defined](https://stackoverflow.com/questions/6832445/how-can-bcrypt-have-built-in-salts)
 
-------------------------------------------------------------------------
+---
 
 #### Learn to hash passwords before saving them to the database
 
@@ -222,13 +210,13 @@ In this section we’ll learn how to save passwords in a secure manner.
 
 ##### Overview
 
-Instead of writing our own *key derivation function* (fancy name for hashing function), we’ll use a well known and popular module called [bcryptjs](https://www.npmjs.com/package/bcryptjs). This module is well supported and stable, but there are other options you can explore.
+Instead of writing our own _key derivation function_ (fancy name for hashing function), we’ll use a well known and popular module called [bcryptjs](https://www.npmjs.com/package/bcryptjs). This module is well supported and stable, but there are other options you can explore.
 
 Bcryptjs features include:
 
--   password hashing function.
--   implements salting both manually and automatically.
--   accumulative hashing rounds.
+- password hashing function.
+- implements salting both manually and automatically.
+- accumulative hashing rounds.
 
 Having an algorithm that hashes the information multiple times (rounds) means an attacker needs to have the hash, know the algorithm used, and how many rounds were used to generate the hash in the first place.
 
@@ -269,10 +257,10 @@ Use bcrypt to add password hashing functionality to your user registration.
 
 ##### Dig Deeper
 
--   [Rainbow Table Attacks](https://en.wikipedia.org/wiki/Rainbow_table)  
-    Just a Wiki on what this can be.
+- [Rainbow Table Attacks](https://en.wikipedia.org/wiki/Rainbow_table)  
+  Just a Wiki on what this can be.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to verify passwords using bcrypt
 
@@ -306,13 +294,13 @@ Let’s see an example.
         .catch(error => {
           res.status(500).json(error);
         });
-    }); 
+    });
 
 ##### Challenge
 
 Add login to one of your prior module challenges.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use in-memory sessions to persist authentication information across requests
 
@@ -330,24 +318,24 @@ Now that we have a solution for keeping authentication information, we need a wa
 
 ### Authentication Workflow for sessions
 
-The basic workflow when using a combination of *cookies* and *sessions* for authentication is:
+The basic workflow when using a combination of _cookies_ and _sessions_ for authentication is:
 
--   Client sends credentials.
--   Server verify credentials.
--   Server creates a session for the client.
--   Server produces and sends back cookie.
--   Client stores the cookie.
--   Client sends cookie on every request.
--   Server verifies that cookie is valid.
--   Server provides access to resource.
+- Client sends credentials.
+- Server verify credentials.
+- Server creates a session for the client.
+- Server produces and sends back cookie.
+- Client stores the cookie.
+- Client sends cookie on every request.
+- Server verifies that cookie is valid.
+- Server provides access to resource.
 
-To understand how cookies are transmitted and stored in the browser, we need to look at the basic structure of an HTTP message. Every HTTP message, be it a request or a response, has two main parts: the *headers* and the *body*.
+To understand how cookies are transmitted and stored in the browser, we need to look at the basic structure of an HTTP message. Every HTTP message, be it a request or a response, has two main parts: the _headers_ and the _body_.
 
-The *headers* are a set of key/value stores that include information about the request. There are several standard headers, but we can add our own if needed.
+The _headers_ are a set of key/value stores that include information about the request. There are several standard headers, but we can add our own if needed.
 
-To send *cookies*, the server adds the `Set-Cookie` header to the response like so: `"Set-Cookie": "session=12345"`. Notice how the value of a header is just a string. The browser will read the header and save a cookie called `session` with the value `12345` in this example. We will use a library that takes care of creating and sending the cookie.
+To send _cookies_, the server adds the `Set-Cookie` header to the response like so: `"Set-Cookie": "session=12345"`. Notice how the value of a header is just a string. The browser will read the header and save a cookie called `session` with the value `12345` in this example. We will use a library that takes care of creating and sending the cookie.
 
-The *body* contains the data portion of the message.
+The _body_ contains the data portion of the message.
 
 The browser will add the `"Cookie": "session=12345"` header on every subsequent request and the server.
 
@@ -355,80 +343,80 @@ Cookies are not accessible from JavaScript or anywhere because they are cryptogr
 
 There are sever libraries for handling sessions in Node.js, below are two examples:
 
--   [client-sessions](https://www.npmjs.com/package/client-sessions)
--   [express-session](https://www.npmjs.com/package/express-session)
+- [client-sessions](https://www.npmjs.com/package/client-sessions)
+- [express-session](https://www.npmjs.com/package/express-session)
 
 We will use the latter.
 
 #### Common ways to store session data on the server:
 
--   Memory.
--   Memory cache (like Redis and Memcached).
--   Database.
+- Memory.
+- Memory cache (like Redis and Memcached).
+- Database.
 
 ##### Cookies
 
--   Automatically included on every request.
--   Unique to each domain + device pair.
--   Cannot be sent to a different domain.
--   Sent in the cookie header.
--   Has a body that can have extra identifying information.
--   Max size around 4KB.
+- Automatically included on every request.
+- Unique to each domain + device pair.
+- Cannot be sent to a different domain.
+- Sent in the cookie header.
+- Has a body that can have extra identifying information.
+- Max size around 4KB.
 
 ##### Storing session data in memory
 
--   Data stored in memory is wiped when the server restarts.
--   Causes memory leaks as more and more memory is used as the application continues to store data in session for different clients.
--   Good for development due to its simplicity.
+- Data stored in memory is wiped when the server restarts.
+- Causes memory leaks as more and more memory is used as the application continues to store data in session for different clients.
+- Good for development due to its simplicity.
 
 ##### Using cookies to transfer session data.
 
 Advantages when using cookies:
 
--   a cookie is a small key/value pair data structure that is passed back and forth between client and server and stored in the browser.
--   the server uses it to store information about a particular client/user.
--   workflow for using cookies as session storage:
-    -   the server issues a cookie with an expiration time and sends it with the response.
-    -   browsers automatically store the cookie and send it on every request to the same domain.
-    -   the server can read the information contained in the cookie (like the username).
-    -   the server can make changes to the cookie before sending it back on the response.
-    -   rinse and repeat.
+- a cookie is a small key/value pair data structure that is passed back and forth between client and server and stored in the browser.
+- the server uses it to store information about a particular client/user.
+- workflow for using cookies as session storage:
+  - the server issues a cookie with an expiration time and sends it with the response.
+  - browsers automatically store the cookie and send it on every request to the same domain.
+  - the server can read the information contained in the cookie (like the username).
+  - the server can make changes to the cookie before sending it back on the response.
+  - rinse and repeat.
 
 **Express-session uses cookies for session management**.
 
 Drawbacks when using cookies:
 
--   small size, around 4KB.
--   sent in every request, increasing the size of the request if too much information is stored in them.
--   if an attacker gets a hold of the private key used to encrypt the cookie, they could read the cookie data.
+- small size, around 4KB.
+- sent in every request, increasing the size of the request if too much information is stored in them.
+- if an attacker gets a hold of the private key used to encrypt the cookie, they could read the cookie data.
 
 ##### Storing session data in Memory Cache (preferred way of storing sessions in production applications)
 
--   stored as key-value pair data in a separate server.
--   the server still uses a cookie, but it only contains the session id.
--   the memory cache server uses that session id to find the session data.
+- stored as key-value pair data in a separate server.
+- the server still uses a cookie, but it only contains the session id.
+- the memory cache server uses that session id to find the session data.
 
 Advantages:
 
--   Quick lookups.
--   Decoupled from the API server.
--   A single memory cache server can serve many applications.
--   Automatically remove old session data.
+- Quick lookups.
+- Decoupled from the API server.
+- A single memory cache server can serve many applications.
+- Automatically remove old session data.
 
 Drawbacks:
 
--   another server to set up and manage.
--   extra complexity for small applications.
--   hard to reset the cache without losing all session data.
+- another server to set up and manage.
+- extra complexity for small applications.
+- hard to reset the cache without losing all session data.
 
 ##### Storing session data in a database
 
--   Similar to storing data in a memory store.
--   The session cookie still holds the session id.
--   The server uses the session id to find the session data in the database.
--   Retrieving data from a database is slower than reading from a memory cache.
--   Causes chatter between the server and the database.
--   **Need to manage/remove old sessions manually** or the database will be filled with unused session data. Most libraries now manage this for you.
+- Similar to storing data in a memory store.
+- The session cookie still holds the session id.
+- The server uses the session id to find the session data in the database.
+- Retrieving data from a database is slower than reading from a memory cache.
+- Causes chatter between the server and the database.
+- **Need to manage/remove old sessions manually** or the database will be filled with unused session data. Most libraries now manage this for you.
 
 Here is a list of [express-session compatible stores.](https://github.com/expressjs/session#compatible-session-stores)
 
@@ -479,7 +467,7 @@ Note how we generalize the session cookie’s name, to make it harder for attack
 
 Implement session storage in your Web API using the [client-sessions](https://www.npmjs.com/package/client-sessions) library instead of `express-session`.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to implement logout using a sessions based API
 
@@ -511,7 +499,7 @@ Add the following code for the logout endpoint:
 
 Implement logout using the [client-sessions](https://www.npmjs.com/package/client-sessions) library instead of `express-session`.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to restrict access to resources, allowing access only for authenticated users
 
@@ -523,8 +511,8 @@ In this section we’ll see how we can use Express local middleware to implement
 
 Restricting access to endpoints is a two-step process:
 
--   We write middleware to check that there is a *session* for the client.
--   We place that middleware in front of the endpoints we want to restrict.
+- We write middleware to check that there is a _session_ for the client.
+- We place that middleware in front of the endpoints we want to restrict.
 
 ##### Follow Along
 
@@ -543,7 +531,7 @@ This middleware verifies that we have a session and that the `userId` is set. We
 Then, we add that middleware to the endpoints we’d like to protect.
 
     server.get('/api/users', protected, (req, res) => {
-      db('users') 
+      db('users')
         .then(users => res.json(users))
         .catch(err => res.json(err));
     });
@@ -554,7 +542,7 @@ The `/api/users` endpoint is only accessible when the client is logged in.
 
 Add a piece of global middleware that restricts access to all endpoints, but the `/register` and `/login` endpoints.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
@@ -564,13 +552,13 @@ Starter code for Node Auth 1 guided project
 
 [GitHub Repo](https://github.com/LambdaSchool/node-auth1-guided)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Web Auth 1 Module Project](https://github.com/LambdaSchool/node-auth1-project)
+- ##### [Web Auth 1 Module Project](https://github.com/LambdaSchool/node-auth1-project)
 
-    Afternoon project for “Node Auth 1” Module
+  Afternoon project for “Node Auth 1” Module
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -578,40 +566,40 @@ Starter code for Node Auth 1 guided project
 
 You can use class recordings to help you master the material.
 
--   **[Introduction to Authentication for Web PT 18 w/Jason Maurer](https://youtu.be/tjmZWGR4PPM)**
+- **[Introduction to Authentication for Web PT 18 w/Jason Maurer](https://youtu.be/tjmZWGR4PPM)**
 
-    Authentication is a complex and important topic. Complex because new threats surface every day that challenge our security strategies and standards. It is important because most of our lives depend on online services and computer systems that hold our sensitive data. In this module we’ll get a gentle introduction into the world of authentication, what it is and isn’t, as well as some strategies to protect the keys to our data: our credentials. At the end of this module, you should be able to: explain what is authentication and provide guidelines for password security. hash passwords before saving them to the database verify passwords using bcrypt use in-memory sessions to persist authentication information across requests implement logout using a sessions based API restrict access to resources, allowing access only for authenticated users
+  Authentication is a complex and important topic. Complex because new threats surface every day that challenge our security strategies and standards. It is important because most of our lives depend on online services and computer systems that hold our sensitive data. In this module we’ll get a gentle introduction into the world of authentication, what it is and isn’t, as well as some strategies to protect the keys to our data: our credentials. At the end of this module, you should be able to: explain what is authentication and provide guidelines for password security. hash passwords before saving them to the database verify passwords using bcrypt use in-memory sessions to persist authentication information across requests implement logout using a sessions based API restrict access to resources, allowing access only for authenticated users
 
--   [All previous recordings](/archive/FSW/module/recQD9lnhqWEFh6g4)
+- [All previous recordings](/archive/FSW/module/recQD9lnhqWEFh6g4)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Write a paragraph that explains the difference between authentication and authorization and send it to your PM on slack.
+  Write a paragraph that explains the difference between authentication and authorization and send it to your PM on slack.
 
--   Objective challenge:
+- Objective challenge:
 
-    Use bcrypt to add password hashing functionality to your user registration.
+  Use bcrypt to add password hashing functionality to your user registration.
 
--   Objective challenge:
+- Objective challenge:
 
-    Add login to one of your prior module challenges.
+  Add login to one of your prior module challenges.
 
--   Objective challenge:
+- Objective challenge:
 
-    Implement session storage in your Web API using the [client-sessions](https://www.npmjs.com/package/client-sessions) library instead of `express-session`.
+  Implement session storage in your Web API using the [client-sessions](https://www.npmjs.com/package/client-sessions) library instead of `express-session`.
 
--   Objective challenge:
+- Objective challenge:
 
-    Implement logout using the [client-sessions](https://www.npmjs.com/package/client-sessions) library instead of `express-session`.
+  Implement logout using the [client-sessions](https://www.npmjs.com/package/client-sessions) library instead of `express-session`.
 
--   Objective challenge:
+- Objective challenge:
 
-    Add a piece of global middleware that restricts access to all endpoints, but the `/register` and `/login` endpoints.
+  Add a piece of global middleware that restricts access to all endpoints, but the `/register` and `/login` endpoints.
 
--   Guided Project: Node Auth 1 Guided Project
+- Guided Project: Node Auth 1 Guided Project
 
--   Project: Web Auth 1 Module Project
+- Project: Web Auth 1 Module Project

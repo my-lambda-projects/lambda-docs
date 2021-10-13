@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
@@ -39,32 +37,32 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Guided Project](#guided-project)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Guided Project](#guided-project)
+- [Project](#project)
+- [Review](#review)
 
 # Server-Side Routing with Express
 
@@ -76,17 +74,17 @@ This feature is called **Routing** and is one of the main features of `Express`.
 
 In this module we will take a deeper look at routing. We will:
 
--   use the `routing` feature of express to build several endpoints.
--   cover different ways to pass data to a Web API.
--   introduce `REST` as a way to guide the architecture of our web
--   using Express Routers to organize our code.
+- use the `routing` feature of express to build several endpoints.
+- cover different ways to pass data to a Web API.
+- introduce `REST` as a way to guide the architecture of our web
+- using Express Routers to organize our code.
 
 **At the end of this module, you should be able to:**
 
--   explain how routing works in an express application
--   read data from the query string, request body and route parameters.
--   explain the basics of the REST architectural style
--   use Express Routers to organize Web API code
+- explain how routing works in an express application
+- read data from the query string, request body and route parameters.
+- explain the basics of the REST architectural style
+- use Express Routers to organize Web API code
 
 #### Pro Tip
 
@@ -96,41 +94,33 @@ Life is a marathon, not a sprint.
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=tLIzjmFxsag), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=tLIzjmFxsag), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=kKDB1TpL9dM), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=kKDB1TpL9dM), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=dgkQxWnUjKE), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=qFCLzVbODJM), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=dgkQxWnUjKE), or enable JavaScript if it is disabled in your browser.
+- [Basic Routing on Expressjs.com](https://expressjs.com/en/starter/basic-routing.html)
 
--   
+  Getting Started with Routing from the Official Express site
 
-    # An error occurred.
+- [HTTP Primer for Frontend Developers](https://www.webdevdrops.com/en/http-primer-for-frontend-developers-f091a2070637/)
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=qFCLzVbODJM), or enable JavaScript if it is disabled in your browser.
+  Simple introduction to HTTP
 
--   [Basic Routing on Expressjs.com](https://expressjs.com/en/starter/basic-routing.html)
+- [Express Routing Guide](https://expressjs.com/en/guide/routing.html)
 
-    Getting Started with Routing from the Official Express site
-
--   [HTTP Primer for Frontend Developers](https://www.webdevdrops.com/en/http-primer-for-frontend-developers-f091a2070637/)
-
-    Simple introduction to HTTP
-
--   [Express Routing Guide](https://expressjs.com/en/guide/routing.html)
-
-    Routing Guide on Expressjs.com
+  Routing Guide on Expressjs.com
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -160,8 +150,8 @@ First, to make our Express application respond to `GET` requests on different UR
 
 Two things to note:
 
--   we are using the same HTTP Method on both endpoints, but express looks at the URL and executes the corresponding request handler.
--   we can return a string with valid HTTP!
+- we are using the same HTTP Method on both endpoints, but express looks at the URL and executes the corresponding request handler.
+- we can return a string with valid HTTP!
 
 Open a browser and navigate to the `/about` and `/contact` routes. The appropriate route handler will execute.
 
@@ -204,22 +194,22 @@ Your assignment is to add endpoints to handle `POST`, `PUT` and `DELETE` for the
 
 ##### Dig Deeper
 
--   [Express Response Object API](https://expressjs.com/en/4x/api.html#res)  
-    Express Response Object API Documentation
--   [Express Request Object API](https://expressjs.com/en/4x/api.html#req)  
-    Express Request Object API Documentation
--   [Express Routing Guide](https://expressjs.com/en/guide/routing.html)  
-    Routing Guide on Expressjs.com
+- [Express Response Object API](https://expressjs.com/en/4x/api.html#res)  
+  Express Response Object API Documentation
+- [Express Request Object API](https://expressjs.com/en/4x/api.html#req)  
+  Express Request Object API Documentation
+- [Express Routing Guide](https://expressjs.com/en/guide/routing.html)  
+  Routing Guide on Expressjs.com
 
-------------------------------------------------------------------------
+---
 
 #### Learn to read data from the query string, request body and route parameters.
 
 Most Web APIs require data from clients. This data can come in different ways:
 
--   as route parameters.
--   as key/value pairs inside the query string.
--   as the request body.
+- as route parameters.
+- as key/value pairs inside the query string.
+- as the request body.
 
 In this module, we’ll cover how to read data sent by clients using all of these methods.
 
@@ -331,23 +321,23 @@ Then we define a variable for manual id generation. When using a database, this 
 
 To read data from the request body, we need to do two things:
 
--   Add the line: `server.use(express.json());` after the express application has been created.
--   Read the data from the body property that Express adds to the request object. Express takes all the information that the client added to the body and makes it available as a nice JavaScript object.
+- Add the line: `server.use(express.json());` after the express application has been created.
+- Read the data from the body property that Express adds to the request object. Express takes all the information that the client added to the body and makes it available as a nice JavaScript object.
 
 **Note that we are skipping data validation to keep this demo simple, but in a production application you would validate before attempting to save to the database.**
 
 Let’s test it using Postman:
 
--   Change the method to POST.
--   Select the `Body` tab underneath the address bar.
--   Click on the `raw` radio button.
--   From the dropdown menu to the right of the `binary` radio button, select \`JSON (appplication/json).
--   Add the following JSON object as the body:
+- Change the method to POST.
+- Select the `Body` tab underneath the address bar.
+- Click on the `raw` radio button.
+- From the dropdown menu to the right of the `binary` radio button, select \`JSON (appplication/json).
+- Add the following JSON object as the body:
 
-    {
-      "name": "Samwise Gamgee",
-      "age": 30
-    }
+  {
+  "name": "Samwise Gamgee",
+  "age": 30
+  }
 
 Click on `Send`, and the API should return the list of hobbits, including Sam!
 
@@ -398,10 +388,10 @@ Add sorting and pagination support to the GET all endpoint. For pagination the c
 
 ##### Dig Deeper
 
--   [HTTP Messages on MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages)  
-    MDN Article about the anatomy of HTTP Requests and Responses
+- [HTTP Messages on MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages)  
+  MDN Article about the anatomy of HTTP Requests and Responses
 
-------------------------------------------------------------------------
+---
 
 #### Learn to explain the basics of the REST architectural style
 
@@ -415,11 +405,11 @@ In this module we’ll take a high level look at the key principles of `REST`.
 
 When designing a RESTful Web API, keep the following principles in mind:
 
--   everything is a **resource**.
--   each resource is accessible via a **unique URI**.
--   resources can have multiple **representations**.
--   communication happens over a **stateless** protocol (HTTP).
--   resource management happens via **HTTP methods**.
+- everything is a **resource**.
+- each resource is accessible via a **unique URI**.
+- resources can have multiple **representations**.
+- communication happens over a **stateless** protocol (HTTP).
+- resource management happens via **HTTP methods**.
 
 By applying the `REST` architecture to our APIs, we can make them scalable and simpler to maintain and extend.
 
@@ -427,24 +417,24 @@ By applying the `REST` architecture to our APIs, we can make them scalable and s
 
 REST APIs have six constraints:
 
--   **client-server** architecture.
--   **stateless** architecture: each request should stand on its own, and order should not matter. No shared state.
--   **cacheable**: improves network performance.
-    -   `GET`, `PUT`, and `DELETE` should be *idempotent* (the same command executed multiple times, the state of resources on the server is exactly the same, much like pure functions)
-    -   `POST` is *not* idempotent.
-    -   Caching is a way to store and retrieve data so that future requests can be fulfilled faster without repeating expensive calculations or operations.
--   **layered system**: component A (a client) might or might not communicate directly with component B (the server). There may be other layers between them like logging, caching, DNS servers, load balancers, and authentication.
--   **code on demand**
-    -   The API returns the resource and code to act on it.
-    -   The client only needs to know how to execute the code.
-    -   Makes the API more flexible, upgradable and extendible.
-    -   Most web application, send JavaScript code along with the data.
--   **uniform interfaces**
-    -   Each resource should be accesible through a single url. Not a hard requirement, but recommended.
-    -   We should be able to manage the resources through these *representations* (the URL).
-    -   every interaction with the resource should happen through the URL identifier we gave to it.
-    -   Self-descriptive messages.
-    -   **HATEOAS** (**H**yepermedia **A**s **T**he **E**ngine **O**f **A**pplication **S**tate). Much like a *choose your own adventure book*, the pages are not read in order. You start at page 1, and based on the information available, the reader (client) chooses the action to take, moving them to a different page. A good example of a hypermedia API is [the GitHub API](https://api.github.com).
+- **client-server** architecture.
+- **stateless** architecture: each request should stand on its own, and order should not matter. No shared state.
+- **cacheable**: improves network performance.
+  - `GET`, `PUT`, and `DELETE` should be _idempotent_ (the same command executed multiple times, the state of resources on the server is exactly the same, much like pure functions)
+  - `POST` is _not_ idempotent.
+  - Caching is a way to store and retrieve data so that future requests can be fulfilled faster without repeating expensive calculations or operations.
+- **layered system**: component A (a client) might or might not communicate directly with component B (the server). There may be other layers between them like logging, caching, DNS servers, load balancers, and authentication.
+- **code on demand**
+  - The API returns the resource and code to act on it.
+  - The client only needs to know how to execute the code.
+  - Makes the API more flexible, upgradable and extendible.
+  - Most web application, send JavaScript code along with the data.
+- **uniform interfaces**
+  - Each resource should be accesible through a single url. Not a hard requirement, but recommended.
+  - We should be able to manage the resources through these _representations_ (the URL).
+  - every interaction with the resource should happen through the URL identifier we gave to it.
+  - Self-descriptive messages.
+  - **HATEOAS** (**H**yepermedia **A**s **T**he **E**ngine **O**f **A**pplication **S**tate). Much like a _choose your own adventure book_, the pages are not read in order. You start at page 1, and based on the information available, the reader (client) chooses the action to take, moving them to a different page. A good example of a hypermedia API is [the GitHub API](https://api.github.com).
 
 ##### Challenge
 
@@ -452,23 +442,23 @@ Write a short paragraph explaining what we mean by REST in the context of web AP
 
 Submit your paragraph to your Project Manager.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use Express Routers to organize Web API code
 
-As your application matures and becomes larger, the number of resources and routes will likely follow suit. This can quickly add complexity to our Web API. If you find yourself thinking *“this server file has too many lines of code”*, it’s time to brake it down into different files.
+As your application matures and becomes larger, the number of resources and routes will likely follow suit. This can quickly add complexity to our Web API. If you find yourself thinking _“this server file has too many lines of code”_, it’s time to brake it down into different files.
 
 Express **Routers** are a way to split an application into sub-applications to make it more modular and easier to maintain and reason about.
 
 In this module we’ll:
 
--   use Express Routers to reorganize our code for readability.
--   discuss common patterns used to structure the files and folders in our Web API.
--   use the `CommonJS` module system to share code among different files.
+- use Express Routers to reorganize our code for readability.
+- discuss common patterns used to structure the files and folders in our Web API.
+- use the `CommonJS` module system to share code among different files.
 
 ##### Overview
 
-An Express `Router` behaves like a mini Express application. It can have it’s own `Routing` and `Middleware`, but it needs to exist inside of an Express application. Think of routers as organizing Express applications because you write separate pieces that can later be *composed* together.
+An Express `Router` behaves like a mini Express application. It can have it’s own `Routing` and `Middleware`, but it needs to exist inside of an Express application. Think of routers as organizing Express applications because you write separate pieces that can later be _composed_ together.
 
 This should all become clear with an example.
 
@@ -571,7 +561,7 @@ And the `apiRoutes` could look like this:
     // after the route has been fully configured, then we export it so it can be required where needed
     module.exports = router; // standard convention dictates that this is the last line on the file
 
-As you can see, routers can *use* other routers.
+As you can see, routers can _use_ other routers.
 
 The `userRoutes`, `productRoutes` and `clientRoutes` remain unchanged (other than relocating them inside the API folder).
 
@@ -583,48 +573,48 @@ Let’s implement a simple API that returns strings, but takes advantage of Expr
 
 We’ll build it from scratch. First, follow these steps to create the folder and main server file:
 
--   create an empty folder for our Web API, feel free to name it anything you’d like.
--   **CD into the folder** you just created and type `npm init -y` to generate a default `package.json` file. The `-y` flag saves time by answering `yes` to all the questions that the `npm init` command would ask one at a time.
--   open the folder in your favorite text editor.
--   inside the `package.json` file, change `"test": "echo \"Error: no test specified\" && exit 1"` inside the `scripts` object to read: `"start": "nodemon index.js"`. This will let us run our server using `nodemon` by typing `npm start` at the command line/terminal. **Make sure to save the file.**
--   we need to install `nodemon` as a development time dependency only because it is not needed when we deploy our server to production. Type `npm install -D nodemon` and that will add it to the `devDependencies` property in our `package.json` file.
--   create a file to host the server code, we’ll call it `index.js`.
--   add the basic code to create our Express server and have a default `/` endpoint we can use to test that our server is responding to requests.
+- create an empty folder for our Web API, feel free to name it anything you’d like.
+- **CD into the folder** you just created and type `npm init -y` to generate a default `package.json` file. The `-y` flag saves time by answering `yes` to all the questions that the `npm init` command would ask one at a time.
+- open the folder in your favorite text editor.
+- inside the `package.json` file, change `"test": "echo \"Error: no test specified\" && exit 1"` inside the `scripts` object to read: `"start": "nodemon index.js"`. This will let us run our server using `nodemon` by typing `npm start` at the command line/terminal. **Make sure to save the file.**
+- we need to install `nodemon` as a development time dependency only because it is not needed when we deploy our server to production. Type `npm install -D nodemon` and that will add it to the `devDependencies` property in our `package.json` file.
+- create a file to host the server code, we’ll call it `index.js`.
+- add the basic code to create our Express server and have a default `/` endpoint we can use to test that our server is responding to requests.
 
-    const express = require('express');
+  const express = require('express');
 
-    const server = express();
+  const server = express();
 
-    server.use('/', (req, res) => res.send('API up and running!'));
+  server.use('/', (req, res) => res.send('API up and running!'));
 
-    // using port 9000 for this example
-    server.listen(9000, () => console.log('API running on port 9000'));
+  // using port 9000 for this example
+  server.listen(9000, () => console.log('API running on port 9000'));
 
--   add the `express` npm module: `npm install express`.
--   start the server by typing `npm start`.
--   test it by visiting: <http://localhost:9000>0 in your browser.
+- add the `express` npm module: `npm install express`.
+- start the server by typing `npm start`.
+- test it by visiting: <http://localhost:9000>0 in your browser.
 
 Let’s add our first router to manage the `races` resource.
 
--   create a folder called `races` to host our router.
--   create a file called `raceRoutes.js` and add the following code:
+- create a folder called `races` to host our router.
+- create a file called `raceRoutes.js` and add the following code:
 
-    const express = require('express');
+  const express = require('express');
 
-    const router = express.Router();
+  const router = express.Router();
 
-    router.get('/', (req, res) => {
-      const races = ['human', 'elf', 'hobbit', 'wizard', 'dwarf', 'orc'];
+  router.get('/', (req, res) => {
+  const races = ['human', 'elf', 'hobbit', 'wizard', 'dwarf', 'orc'];
 
-      res.status(200).json(races);
-    });
+  res.status(200).json(races);
+  });
 
-    module.exports = router;
+  module.exports = router;
 
 Now open your `index.js` file and use the newly created router by following these steps.
 
--   require the `raceRoutes.js` file after requiring Express.
--   use the race router to handle the `/races` endpoint.
+- require the `raceRoutes.js` file after requiring Express.
+- use the race router to handle the `/races` endpoint.
 
 Our `index.js` file now looks like this:
 
@@ -650,10 +640,10 @@ Using your newly learned Express Router expertise, add a second Router to handle
 
 ##### Dig Deeper
 
--   [Express Router Documentation](https://expressjs.com/en/4x/api.html#router)  
-    Express Router Guide
+- [Express Router Documentation](https://expressjs.com/en/4x/api.html#router)  
+  Express Router Guide
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
@@ -663,13 +653,13 @@ Starter code for Node API 2 lecture
 
 [GitHub Repo](https://github.com/LambdaSchool/node-api2-guided)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Node API 2 Project](https://github.com/LambdaSchool/node-api2-project)
+- ##### [Node API 2 Project](https://github.com/LambdaSchool/node-api2-project)
 
-    Afternoon project for Node API 2 Module
+  Afternoon project for Node API 2 Module
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -677,44 +667,44 @@ Starter code for Node API 2 lecture
 
 You can use class recordings to help you master the material.
 
--   **[Server-Side Routing with Express for Web PT 18 w/ Jason Maurer](https://youtu.be/5hM03hEC2IQ)**
+- **[Server-Side Routing with Express for Web PT 18 w/ Jason Maurer](https://youtu.be/5hM03hEC2IQ)**
 
-    Node’s HTTP server uses a single request handler function for all requests. Express provides a way to break the application into different request handlers for each URL+ HTTP method combination.
+  Node’s HTTP server uses a single request handler function for all requests. Express provides a way to break the application into different request handlers for each URL+ HTTP method combination.
 
--   [All previous recordings](/archive/FSW/module/recBjiSulq0PYLCIj)
+- [All previous recordings](/archive/FSW/module/recBjiSulq0PYLCIj)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Your assignment is to add endpoints to handle `POST`, `PUT` and `DELETE` for the `/users` route. Returning a JSON response similar to what we did in the code-along is sufficient.
+  Your assignment is to add endpoints to handle `POST`, `PUT` and `DELETE` for the `/users` route. Returning a JSON response similar to what we did in the code-along is sufficient.
 
--   Objective challenge:
+- Objective challenge:
 
-    For the following exercises, use the provided database helper functions inside `/data/db.js` to work with the users from the database.
+  For the following exercises, use the provided database helper functions inside `/data/db.js` to work with the users from the database.
 
-    Implement a `GET` endpoint that will accept an `id` as a route parameter and return the user corresponding to that `id`. If the user is not found return the correct HTTP Status Code.
+  Implement a `GET` endpoint that will accept an `id` as a route parameter and return the user corresponding to that `id`. If the user is not found return the correct HTTP Status Code.
 
-    Implement all CRUD operations on users, including get by ID.
+  Implement all CRUD operations on users, including get by ID.
 
-    Add sorting and pagination support to the GET all endpoint. For pagination the client should supply the API with sorting information, the number of users per page, and the page number.
+  Add sorting and pagination support to the GET all endpoint. For pagination the client should supply the API with sorting information, the number of users per page, and the page number.
 
--   Objective challenge:
+- Objective challenge:
 
-    Write a short paragraph explaining what we mean by REST in the context of web API design.
+  Write a short paragraph explaining what we mean by REST in the context of web API design.
 
-    Submit your paragraph to your Project Manager.
+  Submit your paragraph to your Project Manager.
 
--   Objective challenge:
+- Objective challenge:
 
-    Using your newly learned Express Router expertise, add a second Router to handle the `/villains` endpoint. Return a list of names of two or three villain characters you remember (even better if it’s from the Lord of The Rings to be consistent).
+  Using your newly learned Express Router expertise, add a second Router to handle the `/villains` endpoint. Return a list of names of two or three villain characters you remember (even better if it’s from the Lord of The Rings to be consistent).
 
--   Guided Project: Node API 2 Guided Project
+- Guided Project: Node API 2 Guided Project
 
--   Project: Node API 2 Project
+- Project: Node API 2 Project
 
--   Code Challenge: SumAndProduct
+- Code Challenge: SumAndProduct
 
--   Code Challenge: StackMachine
+- Code Challenge: StackMachine

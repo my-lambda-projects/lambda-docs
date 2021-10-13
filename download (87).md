@@ -16,38 +16,38 @@ You must be a Lambda School student to view this page.
 
 <a href="/webannex/sprint/recfwZvI7QhMa7xbG" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
--   [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
--   [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
+- [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
+- [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
+- [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
 
 <a href="/webannex/sprint/recIXiQgpgMdJ81ms" class="bd-toc-link">2.  Advanced CSS</a>
 
--   [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
--   [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
--   [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
--   [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
+- [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
+- [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
+- [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
+- [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
 
 <a href="/webannex/sprint/recclZwJxMU8kUngT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
--   [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
--   [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
--   [Classes](/webannex/module/recyS588eOvVUKAMc/)
+- [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
+- [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
+- [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
+- [Classes](/webannex/module/recyS588eOvVUKAMc/)
 
 <a href="/webannex/sprint/recRT8JKvbTiGaosk" class="bd-toc-link">4.  Single Page Applications</a>
 
--   [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
--   [React Router II](/webannex/module/recYkF1FDilIedmwX/)
--   [Form Management](/webannex/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
+- [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
+- [React Router II](/webannex/module/recYkF1FDilIedmwX/)
+- [Form Management](/webannex/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
 
 <a href="/webannex/sprint/recozTHaHJe6L1ThN" class="bd-toc-link">5.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
--   [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
--   [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
--   [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
+- [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
+- [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
+- [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
 
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjM1IiB2aWV3Ym94PSIwIDAgNzU2IDE5NyIgZmlsbD0iI2VjMzk0NCI+PGc+PHBhdGggZD0iTTI5Mi45LDEyNi42aC02LjdjLTksMC0xMi42LTEuOS0xMi42LTkuNVY0OC41YzAtNy43LDEuNi04LjYsMTEuNC05Ljd2LTQuNWgtNDEuM3Y0LjUgYzkuOCwxLjEsMTEuNCwxLjksMTEuNCw5Ljd2NjkuM2MwLDcuNy0xLjYsOC42LTExLjQsOS43djQuNWg3My43bDQuOS0yOS40aC00LjRDMzA4LjUsMTE5LjYsMzAzLjksMTI2LjYsMjkyLjksMTI2LjZ6Ij48L3BhdGg+PHBhdGggZD0iTTM4NS41LDEyMS4xVjc5LjNjMC0xNS44LTkuNC0yMi40LTI2LjYtMjIuNGMtMTUsMC0yNi44LDYuNi0yNi44LDE5LjNjMCwyLjQsMC4yLDMuMywwLjgsNWgxNi42IGMtMC41LTItMC43LTUtMC43LTcuNWMwLTkuNiwzLjYtMTIuNCw5LjQtMTIuNGM2LjQsMCw5LjcsMiw5LjcsMTQuNHYxMS4ybC0yMC44LDcuN2MtMTAuNiw0LjEtMTkuMyw4LjgtMTkuMywyMC43IGMwLDEwLjksNy41LDE3LjgsMTguNiwxNy44YzkuOSwwLDE3LjQtNi4yLDIxLjktMTIuMWwwLjEtMC4xbDAsMFYxMzJoMjZ2LTQuNEMzODcuNywxMjcuMSwzODUuNSwxMjYuMiwzODUuNSwxMjEuMXogTTM2OCwxMTcuOCBjLTQuNCwzLjMtNy42LDUuMy0xMiw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNFYxMTcuOEwzNjgsMTE3Ljh6Ij48L3BhdGg+PHBhdGggZD0iTTUxNC40LDEyMVY3OS41YzAtMTQuOC02LTIyLjQtMTguNy0yMi40Yy0xMS41LDAtMTkuNCw2LjYtMjUuNSwxMy45Yy0xLjgtOS42LTcuNy0xMy45LTE3LjgtMTMuOSBjLTExLjQsMC0xOC43LDYuMi0yNC44LDEzLjZWNTdoLTIuM2wtMjMuOCw3LjR2Mi40bDguNiw1djQ5LjRjMCw1LTIuMSw2LjEtOC45LDYuNHY0LjRoMzUuMXYtNC40Yy02LjctMC4zLTguNy0xLjMtOC43LTYuNHYtNDcgYzQuNy0zLjYsOS41LTYuNSwxNS41LTYuNWM3LjYsMCwxMC41LDQuMiwxMC41LDEyLjd2NDAuOGMwLDUtMS45LDYuMS04LjcsNi40djQuNGwzNC44LDB2LTQuNGMtNi43LTAuMy04LjYtMS4zLTguNi02LjR2LTQ3IGM0LjctMy42LDkuNS02LjUsMTUuNS02LjVjNy42LDAsMTAuNSw0LjIsMTAuNSwxMi43bC0wLjEsNDAuNWMwLDUtMS44LDYuNC04LjYsNi43bDAsNC40aDM1LjF2LTQuNCBDNTE2LjcsMTI3LjQsNTE0LjQsMTI2LjEsNTE0LjQsMTIxeiI+PC9wYXRoPjxwYXRoIGQ9Ik01NzMuMiw1Ny4zYy0xMSwwLTE4LjUsNS43LTIzLjQsMTIuOFYyMi45aC0yLjdsLTIzLjQsNi44djIuNWw4LjYsNC41VjEzMmgyLjlsOC0zLjVjNS44LDMuMywxMi4zLDUsMjAuMiw1IGMyMC44LDAsMzcuNC0xNS44LDM3LjQtNDIuNkM2MDAuOSw2OS45LDU5MC40LDU3LjMsNTczLjIsNTcuM3ogTTU2My40LDEyOC43Yy01LjQsMC0xMC4zLTIuNC0xMy43LTcuOVY3My42IGMzLjQtMy40LDguNS01LjcsMTMuNS01LjdjMTMuOSwwLDIwLDEyLjgsMjAsMjkuNUM1ODMuMywxMTQuNyw1NzUuOCwxMjguNSw1NjMuNCwxMjguN3oiPjwvcGF0aD48cGF0aCBkPSJNNjc3LDEyMS4yVjIyLjhoLTIuNkw2NTEsMjkuNlYzMmw4LjYsNC41djI1LjdjLTMuNC0zLjItOC44LTUuMS0xNS41LTUuMWMtMTkuOSwwLTM1LjIsMTUuMy0zNS4yLDQxLjMgYzAsMjAuNywxMS4yLDM0LjYsMjguMSwzNC42YzkuOCwwLDE3LTUuMywyMi42LTEzLjF2MC45VjEzMmgyNi4zbDAtNC40QzY3OS4xLDEyNy4zLDY3NywxMjYuMyw2NzcsMTIxLjJ6IE02NTkuNiwxMTcuMSBMNjU5LjYsMTE3LjFjLTMuNCwzLjQtOCw1LjEtMTMuMiw1LjFjLTEzLjIsMC0yMC40LTEyLjgtMjAuNC0yOS44YzAtMTcuOCw3LjMtMjkuMiwxOS41LTI5LjJjOC43LDAsMTQuMSw2LjksMTQuMSwxOC4zIEw2NTkuNiwxMTcuMXoiPjwvcGF0aD48cGF0aCBkPSJNNzQ3LjEsMTIxLjFWNzkuM2MwLTE1LjgtOS40LTIyLjQtMjYuNi0yMi40Yy0xNSwwLTI2LjgsNi42LTI2LjgsMTkuM2MwLDIuNCwwLjIsMy4zLDAuOCw1aDE2LjYgYy0wLjUtMi0wLjctNS0wLjctNy41YzAtOS42LDMuNi0xMi40LDkuNC0xMi40YzYuNCwwLDkuNywyLDkuNywxNC40djExLjJsLTIwLjgsNy43Yy0xMC42LDQuMS0xOS4zLDguOC0xOS4zLDIwLjcgYzAsMTAuOSw3LjUsMTcuOCwxOC42LDE3LjhjOS45LDAsMTcuNC02LjIsMjEuOS0xMi4xdi0wLjFoMC4xbDAsMTEuMWwyNiwwLjF2LTQuNUM3NDkuMywxMjcuMSw3NDcuMSwxMjYuMiw3NDcuMSwxMjEuMXogTTcyOS42LDExNy44Yy00LjQsMy4zLTcuNiw1LjMtMTIuMSw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNEw3MjkuNiwxMTcuOEw3MjkuNiwxMTcuOHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTAsMHY5MC40YzAsNjUuNyw1MC45LDg4LjUsODguMSwxMDUuMmgwLjFsMywxLjRjMC43LTAuNCwxLjQtMC43LDIuMi0xYzAuNC0wLjIsMC45LTAuNCwxLjMtMC42IGMzNy4zLTE2LjYsODguNC0zOS41LDg4LjQtMTA1VjBIMHogTTExNiwxMzJsLTItNS4zbC0yNi42LTcwYy0xLjYsNC4xLTUuMywxNC05LjMsMjQuNmwtMTUuMyw0MS4zYy0wLjcsMi0wLjMsMywwLjIsMy43IGMxLjEsMS4zLDMuNSwxLjMsNy4zLDEuM0g3MWwwLDQuNEg0Mi40bDAtNC40aDIuMmMzLjksMCw3LjEtMS43LDkuNS02LjVsMi45LTYuNmwyNi41LTY3LjhsLTQuNy0xMi41aDI0LjdsMzQuMSw4OS43bDMuMSw4LjFIMTE2eiI+PC9wYXRoPjwvc3ZnPg==" /></a>
 
@@ -55,43 +55,43 @@ You must be a Lambda School student to view this page.
 
 <a href="/webannex/sprint/recfwZvI7QhMa7xbG" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
--   [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
--   [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
+- [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
+- [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
+- [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
 
 <a href="/webannex/sprint/recIXiQgpgMdJ81ms" class="bd-toc-link">2.  Advanced CSS</a>
 
--   [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
--   [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
--   [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
--   [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
+- [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
+- [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
+- [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
+- [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
 
 <a href="/webannex/sprint/recclZwJxMU8kUngT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
--   [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
--   [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
--   [Classes](/webannex/module/recyS588eOvVUKAMc/)
+- [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
+- [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
+- [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
+- [Classes](/webannex/module/recyS588eOvVUKAMc/)
 
 <a href="/webannex/sprint/recRT8JKvbTiGaosk" class="bd-toc-link">4.  Single Page Applications</a>
 
--   [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
--   [React Router II](/webannex/module/recYkF1FDilIedmwX/)
--   [Form Management](/webannex/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
+- [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
+- [React Router II](/webannex/module/recYkF1FDilIedmwX/)
+- [Form Management](/webannex/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
 
 <a href="/webannex/sprint/recozTHaHJe6L1ThN" class="bd-toc-link">5.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
--   [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
--   [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
--   [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
+- [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
+- [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
+- [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Responsive Design II
 
@@ -101,8 +101,8 @@ Understanding the problem vs fixing a problem are two different things. We aim t
 
 **At the end of this module, you should be able to:**
 
--   describe and use responsive units to create a fully responsive website
--   describe why responsive design impacts accessibility
+- describe and use responsive units to create a fully responsive website
+- describe why responsive design impacts accessibility
 
 #### Pro Tip
 
@@ -112,25 +112,21 @@ Write all code knowing someone else will be working on it after you.
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=H376eVtXfYg), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=H376eVtXfYg), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=hPLesMhuVR8), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- [Rem font-size study](https://snook.ca/archives/html_and_css/font-size-with-rem)
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=hPLesMhuVR8), or enable JavaScript if it is disabled in your browser.
+  This is one of the first articles on the internet to suggest making the root font-size match the users settings. It’s old but still very relevant.
 
--   [Rem font-size study](https://snook.ca/archives/html_and_css/font-size-with-rem)
+- [A guide to em, rem, and px units](https://engageinteractive.co.uk/blog/em-vs-rem-vs-px)
 
-    This is one of the first articles on the internet to suggest making the root font-size match the users settings. It’s old but still very relevant.
-
--   [A guide to em, rem, and px units](https://engageinteractive.co.uk/blog/em-vs-rem-vs-px)
-
-    This quick read takes you though some modern considerations for responsive units.
+  This quick read takes you though some modern considerations for responsive units.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -154,14 +150,14 @@ The `px` unit is referred to as an `absolute length unit`. This means that `px` 
 
 #### Pros
 
--   Easiest unit for developers to read from design files
--   Modern browsers now allow `px` units to grow with built in zoom features
--   No reliance on cascade for sizing
+- Easiest unit for developers to read from design files
+- Modern browsers now allow `px` units to grow with built in zoom features
+- No reliance on cascade for sizing
 
 #### Cons
 
--   Rigid unit that is not responsive in layouts
--   Hard coded font size values are not accessible for users that change their default settings
+- Rigid unit that is not responsive in layouts
+- Hard coded font size values are not accessible for users that change their default settings
 
 ### em
 
@@ -188,12 +184,12 @@ One of the issues with `em` is its inherited calculation. Sometimes changing jus
 
 #### Pros
 
--   Responsive to its surroundings
+- Responsive to its surroundings
 
 #### Cons
 
--   Can be too flexible at times and create cascading font sizes that weren’t expected
--   Converting `px` to `em` when creating code from a design file usually requires a calculator or memorization that can feel cumbersome
+- Can be too flexible at times and create cascading font sizes that weren’t expected
+- Converting `px` to `em` when creating code from a design file usually requires a calculator or memorization that can feel cumbersome
 
 ### rem
 
@@ -238,13 +234,13 @@ Take a look at these examples:
 
 #### Pros
 
--   Responsive to `root` element only
--   If you use a % based unit, you can achieve accessibility gains and eliminate the awkward conversion system of 16px (the browser’s default font-size)
+- Responsive to `root` element only
+- If you use a % based unit, you can achieve accessibility gains and eliminate the awkward conversion system of 16px (the browser’s default font-size)
 
 #### Cons
 
--   If you don’t make the root element flexible, you will hurt accessibility by overwriting default user settings in the browser
--   Converting `px` to `rem` when creating code from a design file usually requires a calculator or memorization that can feel cumbersome
+- If you don’t make the root element flexible, you will hurt accessibility by overwriting default user settings in the browser
+- Converting `px` to `rem` when creating code from a design file usually requires a calculator or memorization that can feel cumbersome
 
 ### %
 
@@ -274,12 +270,12 @@ You can see how this would compound very quickly! You need to make sure that you
 
 #### Pros
 
--   Responsiveness starts at the viewport level and cascades down to nested elements helping you build layouts to adjust to any size
+- Responsiveness starts at the viewport level and cascades down to nested elements helping you build layouts to adjust to any size
 
 #### Cons
 
--   You have to be careful with `%` based layout as widths can get too small very fast
--   If you don’t add everything up to 100% when building layout, `%` can cause a lot of frustration searching the box model to see where the math went wrong
+- You have to be careful with `%` based layout as widths can get too small very fast
+- If you don’t add everything up to 100% when building layout, `%` can cause a lot of frustration searching the box model to see where the math went wrong
 
 ### vw / vh
 
@@ -293,19 +289,19 @@ There are many other absolute and responsive units. You can take a look at them 
 
 Currently the most popular units of length in CSS are `rem, em, px, %` with some newer units making waves like `vw and vh`. You are encouraged to try out other units and see how they behave compared the units we have discussed here.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to describe why responsive design impacts accessibility
 
 The choices we make as web developers directly impact our user’s experience everyday on the internet. We need to know why it is important we make the best decisions we can.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Portfolio Website](https://github.com/LambdaSchool/portfolio-website)
+- ##### [Portfolio Website](https://github.com/LambdaSchool/portfolio-website)
 
-    You will be building a portfolio website from a template. Once you get your content in the site, you will be able to host it using GitHub pages.
+  You will be building a portfolio website from a template. Once you get your content in the site, you will be able to host it using GitHub pages.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -313,14 +309,14 @@ The choices we make as web developers directly impact our user’s experience ev
 
 You can use class recordings to help you master the material.
 
--   **[Responsive Design II for WEBPT17 w/ Pace Ellsworth](https://youtu.be/RWW1vHiGNbQ)**
+- **[Responsive Design II for WEBPT17 w/ Pace Ellsworth](https://youtu.be/RWW1vHiGNbQ)**
 
-    Lecture covering more advanced responsive design curriculum
+  Lecture covering more advanced responsive design curriculum
 
--   [All previous recordings](/archive/WebAnnex/module/recE3IqPtDxaVI0DW)
+- [All previous recordings](/archive/WebAnnex/module/recE3IqPtDxaVI0DW)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Project: Portfolio Website
+- Project: Portfolio Website

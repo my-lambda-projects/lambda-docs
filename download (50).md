@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
@@ -39,32 +37,32 @@
 
 <a href="/web4node/sprint/reckzQd7ZgiFY5ok5" class="bd-toc-link">1.  Build a Web API</a>
 
--   [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
--   [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
--   [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
--   [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
+- [Introduction to Node.js and Express](/web4node/module/recZiPP8Oyg1WlHxT/)
+- [Server-Side Routing with Express](/web4node/module/recBjiSulq0PYLCIj/)
+- [Express Middleware](/web4node/module/recCJjYFEz0i5O5p5/)
+- [Web Deployment and Best Practices](/web4node/module/recs9QOkOAtZhsjc4/)
 
 <a href="/web4node/sprint/receFLR7MpwQXesIN" class="bd-toc-link">2.  Adding Data Persistence</a>
 
--   [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
--   [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
--   [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
--   [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
+- [Introduction to Relational Databases](/web4node/module/recFG7SqlSCAB8iU7/)
+- [Database Schema Design](/web4node/module/recIbfNn9xRhLTOv4/)
+- [Multi-Table Queries](/web4node/module/recw2ezN22yjehidj/)
+- [Data Modeling](/web4node/module/rec5J23yAIdjmFbgP/)
 
 <a href="/web4node/sprint/recGqGeZ7n75vZivn" class="bd-toc-link">3.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
--   [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
--   [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
--   [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/web4node/module/recQD9lnhqWEFh6g4/)
+- [Using JSON Web Tokens (JWT)](/web4node/module/reciCHdNjavSKaaLt/)
+- [WEB Unit Testing](/web4node/module/recd26oZ3GBNHh3Na/)
+- [Testing the Back End](/web4node/module/reciXdxRA8zXJXDID/)
 
 <a href="/web4node/sprint/recWkcWui91eG1s8q" class="bd-toc-link">4.  WEB Unit 4 Node Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Guided Project](#guided-project)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Guided Project](#guided-project)
+- [Project](#project)
+- [Review](#review)
 
 # WEB Unit Testing
 
@@ -74,9 +72,9 @@ In this module, you will learn what a unit test is, and how to write them using 
 
 **At the end of this module, you should be able to:**
 
--   configure tools for adding automated tests to a JS project
--   use Jest to write unit tests
--   use Test Driven Development
+- configure tools for adding automated tests to a JS project
+- use Jest to write unit tests
+- use Test Driven Development
 
 #### Pro Tip
 
@@ -86,17 +84,13 @@ If you have questions about how to do something, try to batch them so you only i
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=jyWUNzzV29U), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=jyWUNzzV29U), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Rg-BErMc8Fo), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Rg-BErMc8Fo), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -106,31 +100,31 @@ Review each preclass resource before class.
 
 ### Why Do We Test?
 
-Testing is an important skill for a web developer to have. Its hard to anticipate *every* way that a user might interact with your site, not to mention it is incredibly time-consuming to manually test all of those options. That’s where automated testing comes in. Any major company will use automated testing on its websites as a safety net, to prevent regressions, and to get a better overall understanding of how an application works. As such, testing is a great thing to have on your resume!
+Testing is an important skill for a web developer to have. Its hard to anticipate _every_ way that a user might interact with your site, not to mention it is incredibly time-consuming to manually test all of those options. That’s where automated testing comes in. Any major company will use automated testing on its websites as a safety net, to prevent regressions, and to get a better overall understanding of how an application works. As such, testing is a great thing to have on your resume!
 
 We’ll quickly review what testing is before jumping into tooling we can use for automated testing. Generally speaking, testing is code that checks if the application code is correct.
 
 If we don’t have tests, it’s safe to assume the following:
 
--   application code has to be tested manually
--   there is no way to know if a change broke another piece of code
--   you cannot be sure if the code is correct
--   manually testing takes a lot of unnecessary time
--   adding new features becomes slow
+- application code has to be tested manually
+- there is no way to know if a change broke another piece of code
+- you cannot be sure if the code is correct
+- manually testing takes a lot of unnecessary time
+- adding new features becomes slow
 
 #### Advantages of Testing
 
--   verifies edge cases
--   developer can concentrate on current changes (safety net)
+- verifies edge cases
+- developer can concentrate on current changes (safety net)
 
 #### Drawbacks of Testing
 
--   more code to write and maintain
--   more tooling
--   additional dependencies
--   may provide a false sense of security
--   trivial test failures may break the build
--   regressions (when a new feature breaks existing code)
+- more code to write and maintain
+- more tooling
+- additional dependencies
+- may provide a false sense of security
+- trivial test failures may break the build
+- regressions (when a new feature breaks existing code)
 
 ### What tools do we use for testing?
 
@@ -155,8 +149,8 @@ You’ll learn how to install and configure Jest in the tutorial below, but firs
     npm install -D jest
 
 1.  **Add test script**. In `package.json` we’ll need to indicate that we’re using jest for testing. This can be done by simply adding `"test": "jest --watch",` to your “scripts” object.
-2.  **Run Tests**. We can start Jest by typing `npm test` in a terminal window at the root of the project. However, since there are no tests written, it will return an error “No tests found” because we haven’t actually written any tests yet, so let’s move on.
-3.  **Create test files.** By convention, Jest will find your tests in two ways: 1) by placing `.js` files inside a folder called `__tests__` or 2) by ending the name of a file in `.test.js` or `.spec.js`. Technically, you could give the `__tests__` folder a different name, but then you’d need to manually change where Jest looks for test files.
+1.  **Run Tests**. We can start Jest by typing `npm test` in a terminal window at the root of the project. However, since there are no tests written, it will return an error “No tests found” because we haven’t actually written any tests yet, so let’s move on.
+1.  **Create test files.** By convention, Jest will find your tests in two ways: 1) by placing `.js` files inside a folder called `__tests__` or 2) by ending the name of a file in `.test.js` or `.spec.js`. Technically, you could give the `__tests__` folder a different name, but then you’d need to manually change where Jest looks for test files.
 
 Here we aren’t going to write tests, but at this point you are all set up to do so.
 
@@ -164,7 +158,7 @@ Here we aren’t going to write tests, but at this point you are all set up to d
 
 Install and configure jest into your project from yesterday afternoon. Dig into the Jest Documentation [here](https://jestjs.io/docs/en/configuration) for more specific configuration details you could use.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use Jest to write unit tests
 
@@ -184,8 +178,8 @@ Another important consideration with testing is that you should try to avoid unn
 
 ### Jest Globals
 
--   the `it` global is a method you pass a function to; that function is executed as a block of tests by the test runner.
--   the `describe` is optional for grouping a number of related `it` statements; this is also known as a `test suite`.
+- the `it` global is a method you pass a function to; that function is executed as a block of tests by the test runner.
+- the `describe` is optional for grouping a number of related `it` statements; this is also known as a `test suite`.
 
 ### Hello World Test
 
@@ -284,7 +278,7 @@ After we’ve created the `it.todo()` statements its time to write the actual te
 
 Write a unit test on one function from yesterday’s project.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use Test Driven Development
 
@@ -296,10 +290,10 @@ Let’s consider some unit of code. We want this function to take 2 numbers and 
 
 Some assertions we might want to check are:
 
--   The function returns a number
--   The function returns a to the power of b
--   The function does not return b to the power of a
--   The function returns undefined if one parameter is not a number
+- The function returns a number
+- The function returns a to the power of b
+- The function does not return b to the power of a
+- The function returns undefined if one parameter is not a number
 
 There’s really an endless amount of assertions we could check, but for test driven development it helps to think of the most-likely scenarios where the unit could fail.
 
@@ -313,42 +307,42 @@ In this tutorial, let’s consider an example where we want to write a function 
 
 Your list may contain some of the following ideas, more or less is fine:
 
--   The function should return an array shorter than the original array
--   The array should contain numbers
--   The function should remove all salaries less than 50,000
--   The function should allow for type coercion (“1” = 1)
--   The function should not remove 50,000
--   The function should not remove any salary above 50,000
+- The function should return an array shorter than the original array
+- The array should contain numbers
+- The function should remove all salaries less than 50,000
+- The function should allow for type coercion (“1” = 1)
+- The function should not remove 50,000
+- The function should not remove any salary above 50,000
 
 1.  From the list generated above, we’ll want to start by writing a single assertion. That might look something like this:
 
     describe("removeSalaries", () => {
-      it("should return an array of shorter length", () => {
-        // assertions and matchers here
-      });
+    it("should return an array of shorter length", () => {
+    // assertions and matchers here
+    });
 
 1.  Next we want to write the test. This is good practice for test writing from logic you are already familiar with. The final result will look something like this:
 
     describe('removeSalaries', () => {
-        it('should return an array of shorter length', () => {
-            const salaries = [50000, 45000, 60000];
-            expect(removeSalaries(salaries).toHaveLength(1);
-        });
+    it('should return an array of shorter length', () => {
+    const salaries = [50000, 45000, 60000];
+    expect(removeSalaries(salaries).toHaveLength(1);
+    });
 
 1.  Once we’ve written a test we can start writing code to make the test pass. Based on the test we’ve generated so far we have a rudimentary idea of what our function needs to contain. We’ll want to return an array of shorter length than our original array, and that return should filter based on salaries. One version of such a function is below, but there are plenty of options to make our test pass.
 
     // name function based on test
     const removeSalaries = salaries => {
-      //create an empty array
-      const higherSalaries = [];
-      //use conditional logic to add salaries to the new array
-      for (x in salaries) {
-        if (salaries[x] < 50000) {
-          higherSalaries.append(salaries[x]);
-        }
-      }
-      // return new array
-      return higherSalaries;
+    //create an empty array
+    const higherSalaries = [];
+    //use conditional logic to add salaries to the new array
+    for (x in salaries) {
+    if (salaries[x] < 50000) {
+    higherSalaries.append(salaries[x]);
+    }
+    }
+    // return new array
+    return higherSalaries;
     };
 
 5Design a series of tests for a function that accepts an array of objects with the format `{name: "string", age: number}` and returns the names of all people who are over the age of `18`. . Once our first test is passing, the process repeats over and over again! As we write tests and refactor code, we develop something thorough and complete. If you need any extra JavaScript practice, feel free to work on it here.
@@ -383,7 +377,7 @@ A final test file might look like this:
 
 Design a series of tests for a function that accepts an array of objects with the format `{name: "string", age: number}` and returns the names of all people who are over the age of `18`.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
@@ -391,11 +385,11 @@ Design a series of tests for a function that accepts an array of objects with th
 
 [GitHub Repo](https://github.com/LambdaSchool/webtesting-i-guided)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Unit Testing](https://github.com/LambdaSchool/webtesting-i-challenge)
+- ##### [Unit Testing](https://github.com/LambdaSchool/webtesting-i-challenge)
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -403,28 +397,28 @@ Design a series of tests for a function that accepts an array of objects with th
 
 You can use class recordings to help you master the material.
 
--   **[WEB Unit Testing for Web PT 18 w/Jason Maurer](https://youtu.be/iD9GVaBTMSw)**
+- **[WEB Unit Testing for Web PT 18 w/Jason Maurer](https://youtu.be/iD9GVaBTMSw)**
 
-    In this module, you will learn what a unit test is, and how to write them using Jest. At the end of this module, you should be able to: configure tools for adding automated tests to a JS project use Jest to write unit tests use Test Driven Development
+  In this module, you will learn what a unit test is, and how to write them using Jest. At the end of this module, you should be able to: configure tools for adding automated tests to a JS project use Jest to write unit tests use Test Driven Development
 
--   [All previous recordings](/archive/WEB4Node/module/recd26oZ3GBNHh3Na)
+- [All previous recordings](/archive/WEB4Node/module/recd26oZ3GBNHh3Na)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Install and configure jest into your project from yesterday afternoon. Dig into the Jest Documentation [here](https://jestjs.io/docs/en/configuration) for more specific configuration details you could use.
+  Install and configure jest into your project from yesterday afternoon. Dig into the Jest Documentation [here](https://jestjs.io/docs/en/configuration) for more specific configuration details you could use.
 
--   Objective challenge:
+- Objective challenge:
 
-    Write a unit test on one function from yesterday’s project.
+  Write a unit test on one function from yesterday’s project.
 
--   Objective challenge:
+- Objective challenge:
 
-    Design a series of tests for a function that accepts an array of objects with the format `{name: "string", age: number}` and returns the names of all people who are over the age of `18`.
+  Design a series of tests for a function that accepts an array of objects with the format `{name: "string", age: number}` and returns the names of all people who are over the age of `18`.
 
--   Guided Project: Web Testing I
+- Guided Project: Web Testing I
 
--   Project: Unit Testing
+- Project: Unit Testing

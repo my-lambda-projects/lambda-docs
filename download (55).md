@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,29 +10,29 @@
 
 <a href="/web4java/sprint/recnLDyTtONLTMiFJ" class="bd-toc-link">1.  Java Precourse Information</a>
 
--   [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
--   [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
+- [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
+- [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
 
 <a href="/web4java/sprint/recoJ4ZqNQWX3cy6E" class="bd-toc-link">2.  Java Fundamentals</a>
 
--   [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
--   [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
--   [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
--   [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
+- [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
+- [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
+- [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
+- [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
 
 <a href="/web4java/sprint/recRVUSWQEtosl0Cz" class="bd-toc-link">3.  RDBMS and Intro to APIs</a>
 
--   [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
--   [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
--   [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
--   [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
+- [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
+- [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
+- [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
+- [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
 
 <a href="/web4java/sprint/recSqm5AAEkJcIl3p" class="bd-toc-link">4.  Java Frameworks</a>
 
--   [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
--   [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
--   [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
--   [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
+- [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
+- [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
+- [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
+- [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
 
 <a href="/web4java/sprint/recC5dhR9menaROwx" class="bd-toc-link">5.  WEB Unit 4 Java Build</a>
 
@@ -44,37 +42,37 @@
 
 <a href="/web4java/sprint/recnLDyTtONLTMiFJ" class="bd-toc-link">1.  Java Precourse Information</a>
 
--   [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
--   [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
+- [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
+- [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
 
 <a href="/web4java/sprint/recoJ4ZqNQWX3cy6E" class="bd-toc-link">2.  Java Fundamentals</a>
 
--   [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
--   [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
--   [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
--   [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
+- [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
+- [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
+- [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
+- [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
 
 <a href="/web4java/sprint/recRVUSWQEtosl0Cz" class="bd-toc-link">3.  RDBMS and Intro to APIs</a>
 
--   [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
--   [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
--   [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
--   [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
+- [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
+- [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
+- [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
+- [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
 
 <a href="/web4java/sprint/recSqm5AAEkJcIl3p" class="bd-toc-link">4.  Java Frameworks</a>
 
--   [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
--   [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
--   [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
--   [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
+- [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
+- [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
+- [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
+- [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
 
 <a href="/web4java/sprint/recC5dhR9menaROwx" class="bd-toc-link">5.  WEB Unit 4 Java Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Guided Project](#guided-project)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Guided Project](#guided-project)
+- [Project](#project)
+- [Review](#review)
 
 # Java Interfaces, Abstract Classes, Lambda Expression
 
@@ -84,14 +82,14 @@
 
 **At the end of this module, you should be able to:**
 
--   craft and manipulate Collections
--   craft and manipulate ArrayList Collections
--   use and implement interfaces
--   use and implement abstract classes
--   use and implement Lambda Expressions
--   craft and manipulate Arrays Collections (\*\*\* OPTIONAL \*\*\*)
--   craft and manipulate HashMap Collections (\*\*\* OPTIONAL \*\*\*)
--   craft and manipulate HashSet Collections (\*\*\* OPTIONAL \*\*\*)
+- craft and manipulate Collections
+- craft and manipulate ArrayList Collections
+- use and implement interfaces
+- use and implement abstract classes
+- use and implement Lambda Expressions
+- craft and manipulate Arrays Collections (\*\*\* OPTIONAL \*\*\*)
+- craft and manipulate HashMap Collections (\*\*\* OPTIONAL \*\*\*)
+- craft and manipulate HashSet Collections (\*\*\* OPTIONAL \*\*\*)
 
 #### Pro Tip
 
@@ -115,10 +113,10 @@ A collection is a way of storing a series of related data under one variable nam
 
 Which collection you use depends on what you are trying to accomplish. We will be studying 4 different collections:
 
--   Array
--   ArrayList (the one we will use the most in Java Web Programming)
--   HashMap
--   HashSet
+- Array
+- ArrayList (the one we will use the most in Java Web Programming)
+- HashMap
+- HashSet
 
 Below is a brief chart comparing the collections we will be studying in class. These collections are the most common in Java Web Programming.
 
@@ -126,22 +124,22 @@ Below is a brief chart comparing the collections we will be studying in class. T
 
 For each collection we will look at:
 
--   How to declare and initialize the collection
--   Accessing a specific value
--   Adding an element, value
--   Removing an element, value
--   Displaying the values for the collection
--   Sorting the collection if possible
--   Clearing the collection
+- How to declare and initialize the collection
+- Accessing a specific value
+- Adding an element, value
+- Removing an element, value
+- Displaying the values for the collection
+- Sorting the collection if possible
+- Clearing the collection
 
 ##### Dig Deeper
 
--   [Java Collections](https://youtu.be/VvDTro4Shzg)  
-    Youtube - Understanding Java Collections
--   [Collections.sort()](https://www.geeksforgeeks.org/collections-sort-java-examples/)  
-    GeeksForGeeks Collections.sort() in Java
+- [Java Collections](https://youtu.be/VvDTro4Shzg)  
+  Youtube - Understanding Java Collections
+- [Collections.sort()](https://www.geeksforgeeks.org/collections-sort-java-examples/)  
+  GeeksForGeeks Collections.sort() in Java
 
-------------------------------------------------------------------------
+---
 
 #### Learn to craft and manipulate ArrayList Collections
 
@@ -151,8 +149,8 @@ For each collection we will look at:
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   Text Editor
+- Java Development Kit (JDK) - at least version 11
+- Text Editor
 
 ### ArrayLists
 
@@ -160,8 +158,8 @@ Arrays in Java are great except for one issue: they are fixed size. When dealing
 
 ArrayLists have the same characteristics as an Array:
 
--   Fixed data types - Usually we deal with ArrayList of some type of Class. They can also contain primitive types.
--   Order maintained - We can sort and filter ArrayList in a straightforward fashion.
+- Fixed data types - Usually we deal with ArrayList of some type of Class. They can also contain primitive types.
+- Order maintained - We can sort and filter ArrayList in a straightforward fashion.
 
 ArrayLists do differ from Arrays in that they can grow and shrink in size. There is performance and memory overhead in dealing with this freedom compared to using arrays of fixed size. The larger the ArrayList, the less impact this overhead has on overall performance. Also, ArrayList collections are not as straightforward to manipulate as Arrays.
 
@@ -407,10 +405,10 @@ The following shows the execution of this code.
 
 ##### Dig Deeper
 
--   [ArrayList](https://beginnersbook.com/2013/12/java-arraylist/)  
-    Beginners Book ArrayList
+- [ArrayList](https://beginnersbook.com/2013/12/java-arraylist/)  
+  Beginners Book ArrayList
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use and implement interfaces
 
@@ -420,8 +418,8 @@ The following shows the execution of this code.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   Text Editor
+- Java Development Kit (JDK) - at least version 11
+- Text Editor
 
 **Interfaces** defines a formal way for objects to handle interaction with the rest of the application. Interfaces are a way for the programmer to define what behaviors, methods, an object should have. Any class that **implements** an interface must include an implementation for each method in the interface. Interfaces thus give us a standard list of method headers that MUST be implemented in classes that use the interface. Classes that use the interface can include additional methods but must include the ones from the interface.
 
@@ -429,16 +427,16 @@ For example: We have an interface called **vehicles** where all vehicles move an
 
 All classes will use this interface. So all vehicles must move and use fuel but how they move and use fuel varies by vehicle. They can do other things as well!
 
--   Car is a vehicle
-    -   *all vehicles move:* Moves on land with wheels
-    -   *use fuel:* Uses gasoline
-    -   Says “honk”
--   Airplane is a vehicle
-    -   *all vehicles move:* Moves through air on wings
-    -   *use fuel:* Uses Jet Fuel
--   Sailboat is a vehicle
-    -   *all vehicles move:* Moves through water on a hull
-    -   *use fuel:* Uses Wind
+- Car is a vehicle
+  - _all vehicles move:_ Moves on land with wheels
+  - _use fuel:_ Uses gasoline
+  - Says “honk”
+- Airplane is a vehicle
+  - _all vehicles move:_ Moves through air on wings
+  - _use fuel:_ Uses Jet Fuel
+- Sailboat is a vehicle
+  - _all vehicles move:_ Moves through water on a hull
+  - _use fuel:_ Uses Wind
 
 For a Java example, let’s say we have the following interface:
 
@@ -450,18 +448,18 @@ For a Java example, let’s say we have the following interface:
 
 This is a Java interface:
 
--   an Interface is a class so its name must start with a capital letter
--   an Interface is a class so its file name must match the interface name
--   the key word **interface** is used in place of **class** to say this class is special. It is an interface
--   interfaces can implement other interfaces and can extend an abstract class.
+- an Interface is a class so its name must start with a capital letter
+- an Interface is a class so its file name must match the interface name
+- the key word **interface** is used in place of **class** to say this class is special. It is an interface
+- interfaces can implement other interfaces and can extend an abstract class.
 
 The interface defines 2 methods:
 
--   the methods are defined simply with their method header
-    -   Thus methods in the interface are considered **abstract** meaning they have no implementation, just the header
-    -   The class that implements the interface must provide the body for the method
--   Normally we do not give an access modifier for a method header in an interface
-    -   methods default to public
+- the methods are defined simply with their method header
+  - Thus methods in the interface are considered **abstract** meaning they have no implementation, just the header
+  - The class that implements the interface must provide the body for the method
+- Normally we do not give an access modifier for a method header in an interface
+  - methods default to public
 
 Let’s implement the above interface. Let’s create a class that implements the interface thus giving a body to the method headers from the interface.
 
@@ -513,11 +511,11 @@ Both of the above classes are valid and can be used in the same application!
 
 Note that interfaces:
 
--   Cannot be used to create objects directly. Other classes must implement them
--   Do not have the body implement methods just give structure
--   Classes implementing interfaces must implement ALL interface methods. Classes can add their own methods as well
--   Interface methods by default are abstract and public
--   The main purpose of interfaces is to provide uniformity of behaviors among a group of classes. These classes all can do the same thing!
+- Cannot be used to create objects directly. Other classes must implement them
+- Do not have the body implement methods just give structure
+- Classes implementing interfaces must implement ALL interface methods. Classes can add their own methods as well
+- Interface methods by default are abstract and public
+- The main purpose of interfaces is to provide uniformity of behaviors among a group of classes. These classes all can do the same thing!
 
 ##### Follow Along
 
@@ -615,10 +613,10 @@ So we get the following output:
 
 ##### Dig Deeper
 
--   [Interfaces](https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html)  
-    The Java Tutorials: Interfaces
+- [Interfaces](https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html)  
+  The Java Tutorials: Interfaces
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use and implement abstract classes
 
@@ -628,8 +626,8 @@ So we get the following output:
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   Text Editor
+- Java Development Kit (JDK) - at least version 11
+- Text Editor
 
 If we have a group of classes that share similar methods and / or fields, using **abstract** classes would make sense. The idea is that our group of classes could inherit from our abstract class, our parent class, all those standard methods or fields. That way, the group of classes could worry about just implementing what is different in each class.
 
@@ -637,16 +635,16 @@ Abstraction is the process of hiding certain details and showing only the essent
 
 **abstract** is a keyword used for classes and methods:
 
--   Abstract classes cannot be used to create objects. Abstract classes are used to create uniform subclasses.
-    -   These subclass `extends` the abstract class thus inheriting all the fields and methods from the abstract class and still being able to create their own.
-    -   A subclass can only `extends` a single abstract class.
--   Abstract methods do not have a body, only a method header.
+- Abstract classes cannot be used to create objects. Abstract classes are used to create uniform subclasses.
+  - These subclass `extends` the abstract class thus inheriting all the fields and methods from the abstract class and still being able to create their own.
+  - A subclass can only `extends` a single abstract class.
+- Abstract methods do not have a body, only a method header.
 
 So why should we use abstract classes?
 
--   They enforce a common method and field implementation across subclasses.
--   Subclasses can be combined into a single list, like an ArrayList under the parent, abstract class, data type!
--   The abstract classes forces subclasses to have certain fields and implements of methods. Abstract classes do NOT require abstract methods.
+- They enforce a common method and field implementation across subclasses.
+- Subclasses can be combined into a single list, like an ArrayList under the parent, abstract class, data type!
+- The abstract classes forces subclasses to have certain fields and implements of methods. Abstract classes do NOT require abstract methods.
 
 Let’s look at a Java example:
 
@@ -663,9 +661,9 @@ Let’s look at a Java example:
 
 The above is a Java abstract class. Notice that it contains:
 
--   A field `anInt` that will be known to all subclasses
--   A method `amethod` already defined that can be used directly by all subclasses
--   An abstract method `operation` that subclasses MUST implement
+- A field `anInt` that will be known to all subclasses
+- A method `amethod` already defined that can be used directly by all subclasses
+- An abstract method `operation` that subclasses MUST implement
 
 <!-- -->
 
@@ -681,10 +679,10 @@ Now we have the class `ASampleClass` extending the abstract class including fini
 
 ### Overview Abstract Class vs Interfaces
 
--   Classes can inherit from multiple interfaces but only a single abstract class
--   Abstract classes can contain fields; interfaces should not
--   Abstract classes can implement methods that get shared across classes; interfaces give method headers but not actual implementations.
--   Java with the Spring Framework uses interfaces much more than abstract classes!
+- Classes can inherit from multiple interfaces but only a single abstract class
+- Abstract classes can contain fields; interfaces should not
+- Abstract classes can implement methods that get shared across classes; interfaces give method headers but not actual implementations.
+- Java with the Spring Framework uses interfaces much more than abstract classes!
 
 ##### Follow Along
 
@@ -760,10 +758,10 @@ So we get the following output:
 
 ##### Dig Deeper
 
--   [Abstract Class](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)  
-    The Java Tutorials: Abstract Methods and Classes
+- [Abstract Class](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)  
+  The Java Tutorials: Abstract Methods and Classes
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use and implement Lambda Expressions
 
@@ -773,16 +771,16 @@ So we get the following output:
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   Text Editor
+- Java Development Kit (JDK) - at least version 11
+- Text Editor
 
 **Lambda Expressions** are anonymous functions similar to arrow functions in JavaScript, although not as robust or as widely used. Lambda Expressions are functions:
 
--   without a name
--   do not belong to any class
--   may or may not have parameters
--   have no stated return type
--   with syntax of `(parameter list) -> {body; function; statements;}`
+- without a name
+- do not belong to any class
+- may or may not have parameters
+- have no stated return type
+- with syntax of `(parameter list) -> {body; function; statements;}`
 
 ### Using a Lambda Expression with 1 parameter: Iterating through a collection
 
@@ -894,11 +892,11 @@ Now let’s create the `Main.java` file
 
 Our main method:
 
--   Creates a list of integers 0 through 6.
--   Then we call a function with two parameters: one, the list we just created, the other a lambda expression that will implement the method from the interface we just created.
--   The function loops through the ArrayList. If the lambda expression evaluates to true, that element is added to a temporary list.
--   The temporary list is then returned to the main method.
--   Now the main method displays the returned list using a lambda expression!
+- Creates a list of integers 0 through 6.
+- Then we call a function with two parameters: one, the list we just created, the other a lambda expression that will implement the method from the interface we just created.
+- The function loops through the ArrayList. If the lambda expression evaluates to true, that element is added to a temporary list.
+- The temporary list is then returned to the main method.
+- Now the main method displays the returned list using a lambda expression!
 
 To run our code, we go through the following steps, running these commands from the `src` directory.
 
@@ -917,16 +915,16 @@ So we get the following output:
 
 ##### Dig Deeper
 
--   [Lambda Expressions](https://www.callicoder.com/java-lambda-expression-tutorial/)  
-    Callicoder Introduction to Lambda Expressions
--   [Lambda Expressions](http://tutorials.jenkov.com/java/lambda-expressions.html)  
-    Jenkov Lambda Expressions
--   [Lambda Basics](https://javabrains.io/courses/java_lambdabasics/)  
-    Javabrains - Java 8 Lambda Basic
--   [Lambda Calculus](https://en.wikipedia.org/wiki/Lambda_calculus)  
-    Wikipedia's Lambda Calculus
+- [Lambda Expressions](https://www.callicoder.com/java-lambda-expression-tutorial/)  
+  Callicoder Introduction to Lambda Expressions
+- [Lambda Expressions](http://tutorials.jenkov.com/java/lambda-expressions.html)  
+  Jenkov Lambda Expressions
+- [Lambda Basics](https://javabrains.io/courses/java_lambdabasics/)  
+  Javabrains - Java 8 Lambda Basic
+- [Lambda Calculus](https://en.wikipedia.org/wiki/Lambda_calculus)  
+  Wikipedia's Lambda Calculus
 
-------------------------------------------------------------------------
+---
 
 #### Learn to craft and manipulate Arrays Collections (\*\*\* OPTIONAL \*\*\*)
 
@@ -936,15 +934,15 @@ So we get the following output:
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   Text Editor
+- Java Development Kit (JDK) - at least version 11
+- Text Editor
 
 Java is a strongly typed language. This is especially noticed when working with arrays. When compared to Java, other languages handling of arrays seems like sorcery! In Java, the important characteristics of arrays are:
 
--   arrays have a fixed length that is created when the array is declared
-    -   When the array is created a fixed amount of memory, the size of which cannot change, is reserved for the array.
--   arrays have a single type
-    -   when the array is created, you say what data type the array’s elements will contain. Arrays can only contain one type of data and that type of data cannot change for the life of the array.
+- arrays have a fixed length that is created when the array is declared
+  - When the array is created a fixed amount of memory, the size of which cannot change, is reserved for the array.
+- arrays have a single type
+  - when the array is created, you say what data type the array’s elements will contain. Arrays can only contain one type of data and that type of data cannot change for the life of the array.
 
 So what does this mean in practice? Let’s take a look.
 
@@ -1110,10 +1108,10 @@ Arrays are very common in Core Java. In Java Web Programming ArrayLists are the 
 
 ##### Dig Deeper
 
--   [Arrays](https://codegym.cc/groups/posts/arrays-in-java)  
-    Arrays in Java with a good resource list as well
+- [Arrays](https://codegym.cc/groups/posts/arrays-in-java)  
+  Arrays in Java with a good resource list as well
 
-------------------------------------------------------------------------
+---
 
 #### Learn to craft and manipulate HashMap Collections (\*\*\* OPTIONAL \*\*\*)
 
@@ -1123,15 +1121,15 @@ Arrays are very common in Core Java. In Java Web Programming ArrayLists are the 
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   Text Editor
+- Java Development Kit (JDK) - at least version 11
+- Text Editor
 
 ### HashMaps
 
 After ArrayLists, the next most popular collection to use with Java Spring is the HashMap. HashMaps, like other collections, are a group of elements stored under a single variable name. We call each element in a HashMap an **entry** in the HashMap. This entry in the HashMap is a pair of data consisting of:
 
--   **key** must be unique and is used as the index into the HashMap. We look up things based on keys. It can be any data type but is usually a primitive type or String.
--   **value** can be any valid piece of data. This is the data we want to find when we look up the key.
+- **key** must be unique and is used as the index into the HashMap. We look up things based on keys. It can be any data type but is usually a primitive type or String.
+- **value** can be any valid piece of data. This is the data we want to find when we look up the key.
 
 So we end up with the syntax HashMap(key, value). To declare a HashMap we say:
 
@@ -1147,9 +1145,9 @@ HashMaps have a unique issue when wanting to sort them. First they have to be co
 
 To help us with sorting, we are going to use a **Lambda Expression**. We will be discussing Lambda Expressions in depth later in the course but for now: A Lambda Expression is short cut way to write a function. They are similar to the arrow functions in JavaScript. Some methods can take a function as a parameter. In these cases, Lambda Expressions are the way to go. Sort happens to be one such method. For example, to sort a HashMap that has been put into an ArrayList:
 
--   given that myList is an ArrayList containing entries for a HashMap
--   use the sort method from ArrayList
--   As the argument, use a Lambda Expression to say how to sort
+- given that myList is an ArrayList containing entries for a HashMap
+- use the sort method from ArrayList
+- As the argument, use a Lambda Expression to say how to sort
 
 <!-- -->
 
@@ -1157,19 +1155,19 @@ To help us with sorting, we are going to use a **Lambda Expression**. We will be
 
 In the above example:
 
--   The parameter is another method, `Comparator.comparing`. This method will actually do the sort for us.
--   `Comparator.comparing` takes a parameter saying what to sort; in our case we want to sort based off of the keys in the entry so we use a getKey().
--   getKey() returns an object. We cannot compare data types of objects so we have to convert that object to a String, the data type of the keys
--   This will sort the ArrayList in ascending order. The original HashMap remains unchanged.
+- The parameter is another method, `Comparator.comparing`. This method will actually do the sort for us.
+- `Comparator.comparing` takes a parameter saying what to sort; in our case we want to sort based off of the keys in the entry so we use a getKey().
+- getKey() returns an object. We cannot compare data types of objects so we have to convert that object to a String, the data type of the keys
+- This will sort the ArrayList in ascending order. The original HashMap remains unchanged.
 
 For another example:
 
      myList.sort(Comparator.comparing(o -> (int) o.getValue(), Comparator.reverseOrder()));
 
--   The parameter is another method, `Comparator.comparing`. This method will actually do the sort for us.
--   `Comparator.comparing` takes a parameter saying what to sort, in our case we want to sort based off of the value in the entry. We use a getValue()
--   getValue() returns an object. We cannot compare data types of objects so we type caste the object to an `int`, the data type of the value
--   We have added another argument to our Comparator.comparing method, Comparator.reverseOrder(). This will sort the ArrayList in descending order! The original HashMap remains unchanged.
+- The parameter is another method, `Comparator.comparing`. This method will actually do the sort for us.
+- `Comparator.comparing` takes a parameter saying what to sort, in our case we want to sort based off of the value in the entry. We use a getValue()
+- getValue() returns an object. We cannot compare data types of objects so we type caste the object to an `int`, the data type of the value
+- We have added another argument to our Comparator.comparing method, Comparator.reverseOrder(). This will sort the ArrayList in descending order! The original HashMap remains unchanged.
 
 ##### Follow Along
 
@@ -1323,16 +1321,16 @@ The following shows the execution of this code.
 
 ##### Dig Deeper
 
--   [HashMaps](https://beginnersbook.com/2013/12/hashmap-in-java-with-example/)  
-    Beginners Book HashMaps
--   [Iterate over a Map](https://www.baeldung.com/java-iterate-map)  
-    Baeldung Iterate over a Map in Java
--   [HashMap.put](https://www.geeksforgeeks.org/hashmap-put-method-in-java/)  
-    GeeksForGeeks HashMap.put Method in Java
--   [HashMap.containsKey](https://www.geeksforgeeks.org/hashmap-containskey-method-in-java/)  
-    GeeksForGeeks HashMap.containsKey() Method in Java
+- [HashMaps](https://beginnersbook.com/2013/12/hashmap-in-java-with-example/)  
+  Beginners Book HashMaps
+- [Iterate over a Map](https://www.baeldung.com/java-iterate-map)  
+  Baeldung Iterate over a Map in Java
+- [HashMap.put](https://www.geeksforgeeks.org/hashmap-put-method-in-java/)  
+  GeeksForGeeks HashMap.put Method in Java
+- [HashMap.containsKey](https://www.geeksforgeeks.org/hashmap-containskey-method-in-java/)  
+  GeeksForGeeks HashMap.containsKey() Method in Java
 
-------------------------------------------------------------------------
+---
 
 #### Learn to craft and manipulate HashSet Collections (\*\*\* OPTIONAL \*\*\*)
 
@@ -1342,8 +1340,8 @@ The following shows the execution of this code.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   Text Editor
+- Java Development Kit (JDK) - at least version 11
+- Text Editor
 
 ### HashSets
 
@@ -1483,10 +1481,10 @@ The following shows the execution or flow of this code.
 
 ##### Dig Deeper
 
--   [HashSet](https://www.javatpoint.com/working-of-hashset-in-java)  
-    Working of HashSet in Java
+- [HashSet](https://www.javatpoint.com/working-of-hashset-in-java)  
+  Working of HashSet in Java
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
@@ -1496,13 +1494,13 @@ With this project, we will discover some unique object oriented constructs, inte
 
 [GitHub Repo](https://github.com/LambdaSchool/java-transportation.git)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Animal Kingdom](https://github.com/LambdaSchool/java-AnimalKingdom.git)
+- ##### [Animal Kingdom](https://github.com/LambdaSchool/java-AnimalKingdom.git)
 
-    This project will help you practice using interfaces, abstract classes, inheritance, and Lambda expressions in Java.
+  This project will help you practice using interfaces, abstract classes, inheritance, and Lambda expressions in Java.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -1510,12 +1508,12 @@ With this project, we will discover some unique object oriented constructs, inte
 
 You can use class recordings to help you master the material.
 
--   **[Abstract Classes, Interfaces, Lambda Expressions for WEB33 with John Mitchell](https://youtu.be/3mFJWXBh_YI)**
--   [All previous recordings](/archive/WEB4Java/module/rec6Hrk77HupYeoN5)
+- **[Abstract Classes, Interfaces, Lambda Expressions for WEB33 with John Mitchell](https://youtu.be/3mFJWXBh_YI)**
+- [All previous recordings](/archive/WEB4Java/module/rec6Hrk77HupYeoN5)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Guided Project: java-transportation
--   Project: Animal Kingdom
+- Guided Project: java-transportation
+- Project: Animal Kingdom

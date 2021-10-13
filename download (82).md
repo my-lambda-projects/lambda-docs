@@ -16,40 +16,40 @@ You must be a Lambda School student to view this page.
 
 <a href="/webannex/sprint/recfwZvI7QhMa7xbG" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
--   [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
--   [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
+- [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
+- [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
+- [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
 
 <a href="/webannex/sprint/recIXiQgpgMdJ81ms" class="bd-toc-link">2.  Advanced CSS</a>
 
--   [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
--   [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
--   [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
--   [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
+- [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
+- [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
+- [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
+- [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
 
 <a href="/webannex/sprint/recclZwJxMU8kUngT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
--   [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
--   [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
--   [Classes](/webannex/module/recyS588eOvVUKAMc/)
+- [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
+- [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
+- [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
+- [Classes](/webannex/module/recyS588eOvVUKAMc/)
 
 <a href="/webannex/sprint/recRT8JKvbTiGaosk" class="bd-toc-link">4.  Single Page Applications</a>
 
--   [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
--   [React Router II](/webannex/module/recYkF1FDilIedmwX/)
--   [Form Management](/webannex/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
+- [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
+- [React Router II](/webannex/module/recYkF1FDilIedmwX/)
+- [Form Management](/webannex/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
 
 <a href="/webannex/sprint/recozTHaHJe6L1ThN" class="bd-toc-link">5.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
--   [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
--   [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
--   [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
+- [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
+- [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
+- [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
 
-------------------------------------------------------------------------
+---
 
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjM1IiB2aWV3Ym94PSIwIDAgNzU2IDE5NyIgZmlsbD0iI2VjMzk0NCI+PGc+PHBhdGggZD0iTTI5Mi45LDEyNi42aC02LjdjLTksMC0xMi42LTEuOS0xMi42LTkuNVY0OC41YzAtNy43LDEuNi04LjYsMTEuNC05Ljd2LTQuNWgtNDEuM3Y0LjUgYzkuOCwxLjEsMTEuNCwxLjksMTEuNCw5Ljd2NjkuM2MwLDcuNy0xLjYsOC42LTExLjQsOS43djQuNWg3My43bDQuOS0yOS40aC00LjRDMzA4LjUsMTE5LjYsMzAzLjksMTI2LjYsMjkyLjksMTI2LjZ6Ij48L3BhdGg+PHBhdGggZD0iTTM4NS41LDEyMS4xVjc5LjNjMC0xNS44LTkuNC0yMi40LTI2LjYtMjIuNGMtMTUsMC0yNi44LDYuNi0yNi44LDE5LjNjMCwyLjQsMC4yLDMuMywwLjgsNWgxNi42IGMtMC41LTItMC43LTUtMC43LTcuNWMwLTkuNiwzLjYtMTIuNCw5LjQtMTIuNGM2LjQsMCw5LjcsMiw5LjcsMTQuNHYxMS4ybC0yMC44LDcuN2MtMTAuNiw0LjEtMTkuMyw4LjgtMTkuMywyMC43IGMwLDEwLjksNy41LDE3LjgsMTguNiwxNy44YzkuOSwwLDE3LjQtNi4yLDIxLjktMTIuMWwwLjEtMC4xbDAsMFYxMzJoMjZ2LTQuNEMzODcuNywxMjcuMSwzODUuNSwxMjYuMiwzODUuNSwxMjEuMXogTTM2OCwxMTcuOCBjLTQuNCwzLjMtNy42LDUuMy0xMiw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNFYxMTcuOEwzNjgsMTE3Ljh6Ij48L3BhdGg+PHBhdGggZD0iTTUxNC40LDEyMVY3OS41YzAtMTQuOC02LTIyLjQtMTguNy0yMi40Yy0xMS41LDAtMTkuNCw2LjYtMjUuNSwxMy45Yy0xLjgtOS42LTcuNy0xMy45LTE3LjgtMTMuOSBjLTExLjQsMC0xOC43LDYuMi0yNC44LDEzLjZWNTdoLTIuM2wtMjMuOCw3LjR2Mi40bDguNiw1djQ5LjRjMCw1LTIuMSw2LjEtOC45LDYuNHY0LjRoMzUuMXYtNC40Yy02LjctMC4zLTguNy0xLjMtOC43LTYuNHYtNDcgYzQuNy0zLjYsOS41LTYuNSwxNS41LTYuNWM3LjYsMCwxMC41LDQuMiwxMC41LDEyLjd2NDAuOGMwLDUtMS45LDYuMS04LjcsNi40djQuNGwzNC44LDB2LTQuNGMtNi43LTAuMy04LjYtMS4zLTguNi02LjR2LTQ3IGM0LjctMy42LDkuNS02LjUsMTUuNS02LjVjNy42LDAsMTAuNSw0LjIsMTAuNSwxMi43bC0wLjEsNDAuNWMwLDUtMS44LDYuNC04LjYsNi43bDAsNC40aDM1LjF2LTQuNCBDNTE2LjcsMTI3LjQsNTE0LjQsMTI2LjEsNTE0LjQsMTIxeiI+PC9wYXRoPjxwYXRoIGQ9Ik01NzMuMiw1Ny4zYy0xMSwwLTE4LjUsNS43LTIzLjQsMTIuOFYyMi45aC0yLjdsLTIzLjQsNi44djIuNWw4LjYsNC41VjEzMmgyLjlsOC0zLjVjNS44LDMuMywxMi4zLDUsMjAuMiw1IGMyMC44LDAsMzcuNC0xNS44LDM3LjQtNDIuNkM2MDAuOSw2OS45LDU5MC40LDU3LjMsNTczLjIsNTcuM3ogTTU2My40LDEyOC43Yy01LjQsMC0xMC4zLTIuNC0xMy43LTcuOVY3My42IGMzLjQtMy40LDguNS01LjcsMTMuNS01LjdjMTMuOSwwLDIwLDEyLjgsMjAsMjkuNUM1ODMuMywxMTQuNyw1NzUuOCwxMjguNSw1NjMuNCwxMjguN3oiPjwvcGF0aD48cGF0aCBkPSJNNjc3LDEyMS4yVjIyLjhoLTIuNkw2NTEsMjkuNlYzMmw4LjYsNC41djI1LjdjLTMuNC0zLjItOC44LTUuMS0xNS41LTUuMWMtMTkuOSwwLTM1LjIsMTUuMy0zNS4yLDQxLjMgYzAsMjAuNywxMS4yLDM0LjYsMjguMSwzNC42YzkuOCwwLDE3LTUuMywyMi42LTEzLjF2MC45VjEzMmgyNi4zbDAtNC40QzY3OS4xLDEyNy4zLDY3NywxMjYuMyw2NzcsMTIxLjJ6IE02NTkuNiwxMTcuMSBMNjU5LjYsMTE3LjFjLTMuNCwzLjQtOCw1LjEtMTMuMiw1LjFjLTEzLjIsMC0yMC40LTEyLjgtMjAuNC0yOS44YzAtMTcuOCw3LjMtMjkuMiwxOS41LTI5LjJjOC43LDAsMTQuMSw2LjksMTQuMSwxOC4zIEw2NTkuNiwxMTcuMXoiPjwvcGF0aD48cGF0aCBkPSJNNzQ3LjEsMTIxLjFWNzkuM2MwLTE1LjgtOS40LTIyLjQtMjYuNi0yMi40Yy0xNSwwLTI2LjgsNi42LTI2LjgsMTkuM2MwLDIuNCwwLjIsMy4zLDAuOCw1aDE2LjYgYy0wLjUtMi0wLjctNS0wLjctNy41YzAtOS42LDMuNi0xMi40LDkuNC0xMi40YzYuNCwwLDkuNywyLDkuNywxNC40djExLjJsLTIwLjgsNy43Yy0xMC42LDQuMS0xOS4zLDguOC0xOS4zLDIwLjcgYzAsMTAuOSw3LjUsMTcuOCwxOC42LDE3LjhjOS45LDAsMTcuNC02LjIsMjEuOS0xMi4xdi0wLjFoMC4xbDAsMTEuMWwyNiwwLjF2LTQuNUM3NDkuMywxMjcuMSw3NDcuMSwxMjYuMiw3NDcuMSwxMjEuMXogTTcyOS42LDExNy44Yy00LjQsMy4zLTcuNiw1LjMtMTIuMSw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNEw3MjkuNiwxMTcuOEw3MjkuNiwxMTcuOHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTAsMHY5MC40YzAsNjUuNyw1MC45LDg4LjUsODguMSwxMDUuMmgwLjFsMywxLjRjMC43LTAuNCwxLjQtMC43LDIuMi0xYzAuNC0wLjIsMC45LTAuNCwxLjMtMC42IGMzNy4zLTE2LjYsODguNC0zOS41LDg4LjQtMTA1VjBIMHogTTExNiwxMzJsLTItNS4zbC0yNi42LTcwYy0xLjYsNC4xLTUuMywxNC05LjMsMjQuNmwtMTUuMyw0MS4zYy0wLjcsMi0wLjMsMywwLjIsMy43IGMxLjEsMS4zLDMuNSwxLjMsNy4zLDEuM0g3MWwwLDQuNEg0Mi40bDAtNC40aDIuMmMzLjksMCw3LjEtMS43LDkuNS02LjVsMi45LTYuNmwyNi41LTY3LjhsLTQuNy0xMi41aDI0LjdsMzQuMSw4OS43bDMuMSw4LjFIMTE2eiI+PC9wYXRoPjwvc3ZnPg==" /></a>
 
@@ -57,45 +57,45 @@ You must be a Lambda School student to view this page.
 
 <a href="/webannex/sprint/recfwZvI7QhMa7xbG" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
--   [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
--   [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
+- [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
+- [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
+- [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
 
 <a href="/webannex/sprint/recIXiQgpgMdJ81ms" class="bd-toc-link">2.  Advanced CSS</a>
 
--   [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
--   [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
--   [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
--   [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
+- [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
+- [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
+- [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
+- [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
 
 <a href="/webannex/sprint/recclZwJxMU8kUngT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
--   [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
--   [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
--   [Classes](/webannex/module/recyS588eOvVUKAMc/)
+- [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
+- [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
+- [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
+- [Classes](/webannex/module/recyS588eOvVUKAMc/)
 
 <a href="/webannex/sprint/recRT8JKvbTiGaosk" class="bd-toc-link">4.  Single Page Applications</a>
 
--   [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
--   [React Router II](/webannex/module/recYkF1FDilIedmwX/)
--   [Form Management](/webannex/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
+- [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
+- [React Router II](/webannex/module/recYkF1FDilIedmwX/)
+- [Form Management](/webannex/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
 
 <a href="/webannex/sprint/recozTHaHJe6L1ThN" class="bd-toc-link">5.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
--   [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
--   [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
--   [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
+- [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
+- [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
+- [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
 
-------------------------------------------------------------------------
+---
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Git for Web Development
 
@@ -107,13 +107,13 @@ Git can be overwhelming at first, but if we break it down concept by concept, it
 
 **At the end of this module, you should be able to:**
 
--   explain why we use the command line interface (CLI), and demonstrate use of basic CLI commands
--   sufficiently explain what version control and Git are, and why as software engineers we use them
--   demonstrate an ability to fork and clone a repo
--   understand branching, and be able to create a branch locally
--   explain and properly utilize the git commands: \`status\`, \`add\`, \`commit\`, and \`push\`
--   submit a Pull Request
--   demonstrate their ability to use the Lambda School Git Workflow to submit an assignment to your Team Lead
+- explain why we use the command line interface (CLI), and demonstrate use of basic CLI commands
+- sufficiently explain what version control and Git are, and why as software engineers we use them
+- demonstrate an ability to fork and clone a repo
+- understand branching, and be able to create a branch locally
+- explain and properly utilize the git commands: \`status\`, \`add\`, \`commit\`, and \`push\`
+- submit a Pull Request
+- demonstrate their ability to use the Lambda School Git Workflow to submit an assignment to your Team Lead
 
 #### Pro Tip
 
@@ -123,49 +123,37 @@ Read error messages carefully - computers are always right (from the state they 
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=vJ-9Fh2KbXk), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=vJ-9Fh2KbXk), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=a8e3kF2zYtk), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=a8e3kF2zYtk), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=TfcuaW-YjwQ), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=TIsXqSNFSV0), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=TfcuaW-YjwQ), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=GFdOSl-Zmlo), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=TIsXqSNFSV0), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=cSoHP7WSsEg), or enable JavaScript if it is disabled in your browser.
 
--   
+- [CLI Cheat Sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/)
 
-    # An error occurred.
+  This cheat sheet will give you the basics to navigate around your CLI
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=GFdOSl-Zmlo), or enable JavaScript if it is disabled in your browser.
+- [Git Cheat Sheet](https://www.git-tower.com/blog/git-cheat-sheet)
 
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=cSoHP7WSsEg), or enable JavaScript if it is disabled in your browser.
-
--   [CLI Cheat Sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/)
-
-    This cheat sheet will give you the basics to navigate around your CLI
-
--   [Git Cheat Sheet](https://www.git-tower.com/blog/git-cheat-sheet)
-
-    A simple git cheat sheet for when you start writing your commands
+  A simple git cheat sheet for when you start writing your commands
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -239,27 +227,27 @@ Now run:
 
 You probably got yourself an error. That’s because the directory we’re trying to move into is not created yet. But there is a way we can create a directory using the command line.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to sufficiently explain what version control and Git are, and why as software engineers we use them
 
-------------------------------------------------------------------------
+---
 
 #### Learn to demonstrate an ability to fork and clone a repo
 
-------------------------------------------------------------------------
+---
 
 #### Learn to understand branching, and be able to create a branch locally
 
-------------------------------------------------------------------------
+---
 
 #### Learn to explain and properly utilize the git commands: \`status\`, \`add\`, \`commit\`, and \`push\`
 
-------------------------------------------------------------------------
+---
 
 #### Learn to submit a Pull Request
 
-------------------------------------------------------------------------
+---
 
 #### Learn to demonstrate their ability to use the Lambda School Git Workflow to submit an assignment to your Team Lead
 
@@ -271,7 +259,7 @@ At Lambda School we’re doing everything we can to get you to practice what it�
 
 The Lambda School Git Flow is how you will access and submit all of your projects from this point forward. Using what you’ve learned so far about git and the command line you will be able to fork a repo, clone it to your local machine, work on the project, then create a pull request for submission.
 
-### Why would you learn *this* flow?
+### Why would you learn _this_ flow?
 
 You will work in a specific environment when you go out and get a job as a software developer. Learning a broad approach to different git strategies will help you thrive in any specific environment. By learning this flow, you will become a master of both forking and branching, common strategies in “the real world”.
 
@@ -313,7 +301,7 @@ This project is designed for you to practice the Git/Github workflow here at Lam
 
 **Step 1:** Create YOUR OWN version of Repo —> (Fork)
 
-![Fork\_LI](https://tk-assets.lambdaschool.com/883ddcb8-be8f-46f0-bc63-5f3b2a64aee7_Fork_LI1.jpg)
+![Fork_LI](https://tk-assets.lambdaschool.com/883ddcb8-be8f-46f0-bc63-5f3b2a64aee7_Fork_LI1.jpg)
 
 Click the Fork Button to fork the Repo
 
@@ -325,7 +313,7 @@ Notice it says ‘forked from’ and then has a link to the original Repo.
 
 **Step 3:** Add your TL as a collaborator on your forked Repo.
 
--   **\*\*Settings\*\*** → **\*\*Collaborators\*\*** → **\*\*Add Collaborator\*\*** (use my Github handle)
+- **\*\*Settings\*\*** → **\*\*Collaborators\*\*** → **\*\*Add Collaborator\*\*** (use my Github handle)
 
 ![Collab 1](https://tk-assets.lambdaschool.com/83c7b452-c8ed-4bc0-8dab-dbe89626c2a2_screencapture-github-MileyWright-Git-for-Web-Development-Project-2019-12-01-00_24_106.png)
 
@@ -355,11 +343,11 @@ Here you can either highlight the link and copy the text OR click Clipboard icon
 
 Notice we are in the directory **\*\*Documents/Git**\*\*, this could be different for you depending on where you want your repo to be cloned to.
 
-**Step 6:** Use the *\*\**git clone \*\*\*\* command to clone the repo to the directory you are currently in.
+**Step 6:** Use the \*\*\*\*git clone \*\*\*\* command to clone the repo to the directory you are currently in.
 
 ![git clone](https://tk-assets.lambdaschool.com/91e7eaad-ae52-4fa8-9426-56af2a3fbbd1_Untitled19.png)
 
-**Step 7:** **\*\*cd**\*\* into the newly created repo using the *\*\**cd \*\*\*\* command
+**Step 7:** **\*\*cd**\*\* into the newly created repo using the \*\*\*\*cd \*\*\*\* command
 
 ![cd into repo](https://tk-assets.lambdaschool.com/915f6d16-d5f4-44e4-82ae-4ca908fe2ffb_Untitled18.png)
 
@@ -375,37 +363,37 @@ notice that after you checkout the branch name changes from **\*\*master**\*\* t
 
 **Step 10:** To add and commit changes on your branch you can do the following
 
--   **\*\*git add .**\*\* will add the repo changes and make them ready for committing
+- **\*\*git add .**\*\* will add the repo changes and make them ready for committing
 
--   **\*\*git commit -m “Your helpful commit message here”**\*\* will commit the changes with your specified commit message (commit message should explain what changes you’ve added to the repo that you are committing)
+- **\*\*git commit -m “Your helpful commit message here”**\*\* will commit the changes with your specified commit message (commit message should explain what changes you’ve added to the repo that you are committing)
 
 **Step 11:** Push your changes back up to your Github repo
 
--   **\*\*git push -u origin branch-name**\*\* will push all of your commits from your local machine up onto github
+- **\*\*git push -u origin branch-name**\*\* will push all of your commits from your local machine up onto github
 
--   Remember that **\*\*branch-name**\*\* here will be whatever name you specified when you did **\*\*git checkout -b**\*\* (in the case it should be your firstname-lastname)
+- Remember that **\*\*branch-name**\*\* here will be whatever name you specified when you did **\*\*git checkout -b**\*\* (in the case it should be your firstname-lastname)
 
 **Step 12:** Now that the changes are on github you can submit a PR (Pull Request)
 
 **Step 13:** Go back to your forked Project repo on github (make sure you are on YOUR FORKED copy NOT the original Lambda one)
 
--   Click on the **\*\*Branch:master**\*\* button on the left side (see picture)
+- Click on the **\*\*Branch:master**\*\* button on the left side (see picture)
 
 ![Branch Master](https://tk-assets.lambdaschool.com/71ebb334-bcb9-44a6-a055-b4d1eb5d01c3_screencapture-github-MileyWright-Git-for-Web-Development-Project-2019-12-01-00_24_104.png)
 
--   This will create a dropdown where you should be able to select your name-branch now
+- This will create a dropdown where you should be able to select your name-branch now
 
--   Click your name-branch and then click the **\*\*New pull request**\*\* button to make a pull request on your name branch
+- Click your name-branch and then click the **\*\*New pull request**\*\* button to make a pull request on your name branch
 
 ![New Pull Request](https://tk-assets.lambdaschool.com/9888f606-8729-4d06-96ae-ba26255188cc_screencapture-github-MileyWright-Git-for-Web-Development-Project-tree-Miley-Wright-2019-12-02-01_39_48.png)
 
--   After you click new pull request it should redirect you to the pull request page
+- After you click new pull request it should redirect you to the pull request page
 
--   IT IS IMPORTANT THAT YOU DO NOT CLICK THE **\*\*Create pull request**\*\* BUTTON UNTIL AFTER YOU’VE COMPLETED THE NEXT STEP
+- IT IS IMPORTANT THAT YOU DO NOT CLICK THE **\*\*Create pull request**\*\* BUTTON UNTIL AFTER YOU’VE COMPLETED THE NEXT STEP
 
 ![Create Pull Request](https://tk-assets.lambdaschool.com/69335f91-34e9-494c-8a08-5d158298edf2_screencapture-github-LambdaSchool-Git-for-Web-Development-Project-compare-master-MileyWright-Miley-Wright-2019-12-02-01_46_10.png)
 
--   When you get to the PR page, make sure to click the dropdown button that says **\*\*base repository**\*\* and CHANGE it to be your FORKED REPO instead of the original Lambda repo (when submitting PR it will default to the original Repo this is why it needs to be changed)
+- When you get to the PR page, make sure to click the dropdown button that says **\*\*base repository**\*\* and CHANGE it to be your FORKED REPO instead of the original Lambda repo (when submitting PR it will default to the original Repo this is why it needs to be changed)
 
 ![](https://tk-assets.lambdaschool.com/ec9c0472-63a0-491a-8a2e-9f07648dd735_screencapture-github-LambdaSchool-Git-for-Web-Development-Project-compare-master-MileyWright-Miley-Wright-2019-12-02-01_46_38.png)gg
 
@@ -427,11 +415,11 @@ Your TL will merge the PR after they have done a review.
 
 Now that you have demonstrated your ability to work within this flow. Use this flow to turn in your afternoon assignment today and for the rest of your time here at Lambda School.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Git for Web Development Project](https://github.com/LambdaSchool/Git-for-Web-Development-Project)
+- ##### [Git for Web Development Project](https://github.com/LambdaSchool/Git-for-Web-Development-Project)
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -439,18 +427,18 @@ Now that you have demonstrated your ability to work within this flow. Use this f
 
 You can use class recordings to help you master the material.
 
--   **[Git for Web Development for WebPT22 w/Nathan Braun](https://youtu.be/gPUzjC99I5I)**
+- **[Git for Web Development for WebPT22 w/Nathan Braun](https://youtu.be/gPUzjC99I5I)**
 
-    Git is a distributed version control system. What does that mean to a new web developer? It means that git is used to monitor and control code changes made during development across several people or teams. Git can be overwhelming at first, but if we break it down concept by concept, it should start to become clear why almost everyone in the industry uses it every day.
+  Git is a distributed version control system. What does that mean to a new web developer? It means that git is used to monitor and control code changes made during development across several people or teams. Git can be overwhelming at first, but if we break it down concept by concept, it should start to become clear why almost everyone in the industry uses it every day.
 
--   [All previous recordings](/archive/FSW/module/rect59e95N6OSvoCd)
+- [All previous recordings](/archive/FSW/module/rect59e95N6OSvoCd)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Now that you have demonstrated your ability to work within this flow. Use this flow to turn in your afternoon assignment today and for the rest of your time here at Lambda School.
+  Now that you have demonstrated your ability to work within this flow. Use this flow to turn in your afternoon assignment today and for the rest of your time here at Lambda School.
 
--   Project: Git for Web Development Project
+- Project: Git for Web Development Project

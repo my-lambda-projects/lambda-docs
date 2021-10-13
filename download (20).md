@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # React Components and Component State
 
@@ -73,10 +71,10 @@ Components are the building blocks of React applications. We use components to d
 
 **At the end of this module, you should be able to:**
 
--   describe ReactJS and the problems that it tries to solve
--   explain what components are and how they work in React
--   explain what state is in web applications and demonstrate how to make a React component stateful
--   change the state of the component with a click listener
+- describe ReactJS and the problems that it tries to solve
+- explain what components are and how they work in React
+- explain what state is in web applications and demonstrate how to make a React component stateful
+- change the state of the component with a click listener
 
 #### Pro Tip
 
@@ -86,29 +84,21 @@ Treat everyone with as much respect and integrity as you wish to be treated with
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=moTpUR8I6-I), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=moTpUR8I6-I), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=njU-xhnlze8), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=njU-xhnlze8), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=vF4vKyhRff8), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=vF4vKyhRff8), or enable JavaScript if it is disabled in your browser.
-
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=J3mKJbudYDQ), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=J3mKJbudYDQ), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -134,7 +124,7 @@ Today, web applications are enormous, complex pieces of software that millions a
 
 Please read through the ‘Try React’ tutorial found [here](https://reactjs.org/docs/try-react.html) and follow along with the documentation there. Take it as far as you’d like. But we’d love for you to come into class on Monday having played around with React and seen some React code.
 
--   Read through [this portion](https://reactjs.org/docs/thinking-in-react.html) of the React documentation.
+- Read through [this portion](https://reactjs.org/docs/thinking-in-react.html) of the React documentation.
 
 ##### Challenge
 
@@ -144,10 +134,10 @@ Submit that paragraph to your Team Lead via Slack.
 
 ##### Dig Deeper
 
--   [What problems does React JS solve?](https://scotch.io/@anitashah/what-problems-does-reactjs-solve-when-must-you-select-reactjs)  
-    This article describes some of the reasons one would consider adopting react as their UI library
+- [What problems does React JS solve?](https://scotch.io/@anitashah/what-problems-does-reactjs-solve-when-must-you-select-reactjs)  
+  This article describes some of the reasons one would consider adopting react as their UI library
 
-------------------------------------------------------------------------
+---
 
 #### Learn to explain what components are and how they work in React
 
@@ -236,9 +226,9 @@ In the above example, we’ve hardcoded the text of our `h1` tag to read `Hi Lam
 
 Our code changed, but our output is the same. Because we’re just in a regular JavaScript function, we’re free to declare a variable the way we normally do: `const greeting = "Hi Lambda!";`
 
-Once we’re in our JSX, React gives us the power to *escape* back into regular JavaScript and refer to that variable by using the curly brackets `<h1>{greeting}</h1>`.
+Once we’re in our JSX, React gives us the power to _escape_ back into regular JavaScript and refer to that variable by using the curly brackets `<h1>{greeting}</h1>`.
 
-These curly brakets will evaluate *any* valid JavaScript expression. So if we change`<h1>{greeting}</h1>` to `<h1>{2 + 2}</h1>`
+These curly brakets will evaluate _any_ valid JavaScript expression. So if we change`<h1>{greeting}</h1>` to `<h1>{2 + 2}</h1>`
 
 We get:
 
@@ -254,11 +244,11 @@ We’re going to focus on two major pillars of React’s design philosophy for n
 
 #### Separation of concerns
 
-*How can We know the dancer from the dance*
+_How can We know the dancer from the dance_
 
 In computer programming, “the separation of concerns” refers to a design philosophy that each piece of your code should do one and only one thing. Functions with a lot of moving parts are hard to debug. One large function might be tricky to test. If we can split that function apart into smaller pieces that are easy to test individually, our application will be more robust and easier to understand.
 
-At first glance, it might appear that putting our markup right next to our JavaScript is a violation of this principle, but the React team thinks otherwise. They argue that we can’t *truly* separate a `<button>` tag from the function the button invokes. Separating the two, one in an HTML file and another in a JavaScript file, isn’t a separation of concerns, it’s cutting one concern in half and then putting one half in the bedroom and the other half in the garage. It’s a headache we don’t need.
+At first glance, it might appear that putting our markup right next to our JavaScript is a violation of this principle, but the React team thinks otherwise. They argue that we can’t _truly_ separate a `<button>` tag from the function the button invokes. Separating the two, one in an HTML file and another in a JavaScript file, isn’t a separation of concerns, it’s cutting one concern in half and then putting one half in the bedroom and the other half in the garage. It’s a headache we don’t need.
 
 Consider the difference between this, the way you’re used to doing it:
 
@@ -293,15 +283,15 @@ Or:
 
     myArray.map(double);
 
-The first approach is an example of *imperative* code, and this is the kind of approach we’re most familiar with. There’s nothing wrong with imperative code, it’s very explicit, and at a lower level, *all* code is ultimately imperative. The problem with imperative code is it’s pretty difficult and in more complex examples, it can be hard to understand what the code does at a glance.
+The first approach is an example of _imperative_ code, and this is the kind of approach we’re most familiar with. There’s nothing wrong with imperative code, it’s very explicit, and at a lower level, _all_ code is ultimately imperative. The problem with imperative code is it’s pretty difficult and in more complex examples, it can be hard to understand what the code does at a glance.
 
-The second approach is an example of *declarative* code. Instead of telling the computer, step by step, *how* we want it to do something, we just tell it *what* we want it to do.
+The second approach is an example of _declarative_ code. Instead of telling the computer, step by step, _how_ we want it to do something, we just tell it _what_ we want it to do.
 
 `myArray.map(double)`
 
 **“Map over my array and double everything inside of it.”**
 
-With practice, declarative code is easier to parse. This is important because, believe it or not, as a programmer, most of your time isn’t spent writing code. It’s spent *reading other people’s code and trying to understand what it does*. If you can grasp this distinction, and appreciate its value, congratulations. You now understand the basis of functional programming, the programming paradigm that React is modeled after.
+With practice, declarative code is easier to parse. This is important because, believe it or not, as a programmer, most of your time isn’t spent writing code. It’s spent _reading other people’s code and trying to understand what it does_. If you can grasp this distinction, and appreciate its value, congratulations. You now understand the basis of functional programming, the programming paradigm that React is modeled after.
 
 So now we know the very basics of what React does and why it does it this way. In the next objective, we’re going to introduce one of the single most important concepts in programming: state.
 
@@ -350,7 +340,7 @@ JSX is so powerful!
 
 Start to build out React components from scratch. Have fun with this. Experiment with different elements.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to explain what state is in web applications and demonstrate how to make a React component stateful
 
@@ -496,7 +486,7 @@ A ternary operator acts as a single line `if/else` statment. This line:
 
 `{lightOn === false ? <img src={white} /> : <img src={yellow} />}`
 
-It’s saying *“Is the `lightOn` state variable set to `false`? If so render `<img src={white} />`, otherwise render `<img src={yellow} />`*
+It’s saying _“Is the `lightOn` state variable set to `false`? If so render `<img src={white} />`, otherwise render `<img src={yellow} />`_
 
 Remember this pattern, you’ll use it a lot.
 
@@ -512,7 +502,7 @@ The result?
 
 <img src="https://tk-assets.lambdaschool.com/782b4acd-8006-4578-8f88-133c7f2b2220_lit-bulb.png" width="1000" alt="drawing" />
 
-Victory is nearly ours. We setup up a condition on which to render one bulb or the other. That condition was based on our application’s state. When we forced the state of the application to change what appeared on the page *reacted* to that change. That’s what React is really all about. Your state changes and your application *reacts*.
+Victory is nearly ours. We setup up a condition on which to render one bulb or the other. That condition was based on our application’s state. When we forced the state of the application to change what appeared on the page _reacted_ to that change. That’s what React is really all about. Your state changes and your application _reacts_.
 
 The last step is figuring out how to change the state.
 
@@ -526,7 +516,7 @@ You’ll recall that `setLightOn` is a function that can change the value of `li
 
 Build a component that holds a `person` object in state. Display the person’s data in the component.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to change the state of the component with a click listener
 
@@ -653,13 +643,13 @@ It’s glorious.
 
 Build a counter app that keeps track of how many times you click on a button and displays that count in the component.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [React Stateful Widgets](https://github.com/LambdaSchool/react-stateful-widgets)
+- ##### [React Stateful Widgets](https://github.com/LambdaSchool/react-stateful-widgets)
 
-    React Stateful Widgets is an application containing 6 components displaying hard-coded information. We will make the app interactive by adding state to each component, and by implementing event handlers that allow the user to update state.
+  React Stateful Widgets is an application containing 6 components displaying hard-coded information. We will make the app interactive by adding state to each component, and by implementing event handlers that allow the user to update state.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -667,32 +657,32 @@ Build a counter app that keeps track of how many times you click on a button and
 
 You can use class recordings to help you master the material.
 
--   **[React Components and Component State for WebPT22 w/Keiran Kozlowski](https://youtu.be/In0AvH4VHQw)**
+- **[React Components and Component State for WebPT22 w/Keiran Kozlowski](https://youtu.be/In0AvH4VHQw)**
 
-    Components are the building blocks of React applications. We use components to display some data (often called “state”) to the screen for our users. In this module, we will learn how to build components that can hold state to create a great experience for our end users.
+  Components are the building blocks of React applications. We use components to display some data (often called “state”) to the screen for our users. In this module, we will learn how to build components that can hold state to create a great experience for our end users.
 
--   [All previous recordings](/archive/FSW/module/recZau7hH8vzww14N)
+- [All previous recordings](/archive/FSW/module/recZau7hH8vzww14N)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    In your own, write a paragraph about what ReactJS is and what problems that it tries to solve.
+  In your own, write a paragraph about what ReactJS is and what problems that it tries to solve.
 
-    Submit that paragraph to your Team Lead via Slack.
+  Submit that paragraph to your Team Lead via Slack.
 
--   Objective challenge:
+- Objective challenge:
 
-    Start to build out React components from scratch. Have fun with this. Experiment with different elements.
+  Start to build out React components from scratch. Have fun with this. Experiment with different elements.
 
--   Objective challenge:
+- Objective challenge:
 
-    Build a component that holds a `person` object in state. Display the person’s data in the component.
+  Build a component that holds a `person` object in state. Display the person’s data in the component.
 
--   Objective challenge:
+- Objective challenge:
 
-    Build a counter app that keeps track of how many times you click on a button and displays that count in the component.
+  Build a counter app that keeps track of how many times you click on a button and displays that count in the component.
 
--   Project: React Stateful Widgets
+- Project: React Stateful Widgets

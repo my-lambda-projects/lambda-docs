@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Components I
 
@@ -73,9 +71,9 @@ As we build larger and more feature rich web pages, we may notice a trend in our
 
 **At the end of this module, you should be able to:**
 
--   describe what a component is and identify different parts of a component
--   write a function that utilizes createElement and returns a new DOM element
--   iterate over a list of data creating a new component for each item and attaching that component to the DOM
+- describe what a component is and identify different parts of a component
+- write a function that utilizes createElement and returns a new DOM element
+- iterate over a list of data creating a new component for each item and attaching that component to the DOM
 
 #### Pro Tip
 
@@ -87,23 +85,17 @@ Go proverb
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=1Z775bFt6xs), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=1Z775bFt6xs), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=EKjI2jX0R2E), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=EKjI2jX0R2E), or enable JavaScript if it is disabled in your browser.
-
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=vu_bl_vHJcg), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=vu_bl_vHJcg), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -147,7 +139,7 @@ One way that can help you control your styles is to use a specificity chain that
       <button class="custom-btn">Button 4</button>
     </div>
 
-*Naming conventions vary wildly in the work place. The recommendation is to adjust to the standards decided on by your employer.*
+_Naming conventions vary wildly in the work place. The recommendation is to adjust to the standards decided on by your employer._
 
 If you’re using a preprocessor, a common practice is to have your preprocessed file named after the component. You could then import your component name into the main file. Here is an example of the import you could use and then what the file could look like:
 
@@ -171,7 +163,7 @@ Let’s identify component patterns in the wild. Lets go to a social media platf
 
 Go to your favorite social media platform and practice identifying how components are used throughout the app. Screenshot a component and try recreating the HTML, CSS. You could even try to create simple DOM interactions in JavaScript.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to write a function that utilizes createElement and returns a new DOM element
 
@@ -226,7 +218,7 @@ Now, sticking with that last example, let’s imagine we want to create many but
 
 And just like that, we can create as many new `button` components we want without repeating ourselves!
 
-------------------------------------------------------------------------
+---
 
 #### Learn to iterate over a list of data creating a new component for each item and attaching that component to the DOM
 
@@ -288,13 +280,13 @@ Now that we have an array of DOM elements (components), we can do whatever we’
       parent.appendChild(component);
     });
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Newsfeed](https://github.com/LambdaSchool/Newsfeed-Components)
+- ##### [Newsfeed](https://github.com/LambdaSchool/Newsfeed-Components)
 
-    You will build components using Javascript class syntax.
+  You will build components using Javascript class syntax.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -302,18 +294,18 @@ Now that we have an array of DOM elements (components), we can do whatever we’
 
 You can use class recordings to help you master the material.
 
--   **[Components I for WebPT22 w/ Ben Schinn](https://youtu.be/_WA73bIdHoQ)**
+- **[Components I for WebPT22 w/ Ben Schinn](https://youtu.be/_WA73bIdHoQ)**
 
-    As we build larger and more feature rich web pages, we may notice a trend in our code; elements that are essentially using the same functionality and styling with minor differences in the data they present. In an effort to keep our code readable, reusable, and most of all DRY, we can build on these repeating patterns and create components. Components are reusable pieces of code that can be used to build elements sharing functionality and styling. Components are the heart of any dynamic web application and JavaScript framework.
+  As we build larger and more feature rich web pages, we may notice a trend in our code; elements that are essentially using the same functionality and styling with minor differences in the data they present. In an effort to keep our code readable, reusable, and most of all DRY, we can build on these repeating patterns and create components. Components are reusable pieces of code that can be used to build elements sharing functionality and styling. Components are the heart of any dynamic web application and JavaScript framework.
 
--   [All previous recordings](/archive/FSW/module/rec847sNXZX9CVDNl)
+- [All previous recordings](/archive/FSW/module/rec847sNXZX9CVDNl)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Go to your favorite social media platform and practice identifying how components are used throughout the app. Screenshot a component and try recreating the HTML, CSS. You could even try to create simple DOM interactions in JavaScript.
+  Go to your favorite social media platform and practice identifying how components are used throughout the app. Screenshot a component and try recreating the HTML, CSS. You could even try to create simple DOM interactions in JavaScript.
 
--   Project: Newsfeed
+- Project: Newsfeed

@@ -16,38 +16,38 @@ You must be a Lambda School student to view this page.
 
 <a href="/webannex/sprint/recfwZvI7QhMa7xbG" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
--   [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
--   [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
+- [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
+- [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
+- [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
 
 <a href="/webannex/sprint/recIXiQgpgMdJ81ms" class="bd-toc-link">2.  Advanced CSS</a>
 
--   [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
--   [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
--   [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
--   [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
+- [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
+- [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
+- [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
+- [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
 
 <a href="/webannex/sprint/recclZwJxMU8kUngT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
--   [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
--   [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
--   [Classes](/webannex/module/recyS588eOvVUKAMc/)
+- [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
+- [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
+- [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
+- [Classes](/webannex/module/recyS588eOvVUKAMc/)
 
 <a href="/webannex/sprint/recRT8JKvbTiGaosk" class="bd-toc-link">4.  Single Page Applications</a>
 
--   [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
--   [React Router II](/webannex/module/recYkF1FDilIedmwX/)
--   [Form Management](/webannex/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
+- [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
+- [React Router II](/webannex/module/recYkF1FDilIedmwX/)
+- [Form Management](/webannex/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
 
 <a href="/webannex/sprint/recozTHaHJe6L1ThN" class="bd-toc-link">5.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
--   [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
--   [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
--   [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
+- [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
+- [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
+- [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
 
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjM1IiB2aWV3Ym94PSIwIDAgNzU2IDE5NyIgZmlsbD0iI2VjMzk0NCI+PGc+PHBhdGggZD0iTTI5Mi45LDEyNi42aC02LjdjLTksMC0xMi42LTEuOS0xMi42LTkuNVY0OC41YzAtNy43LDEuNi04LjYsMTEuNC05Ljd2LTQuNWgtNDEuM3Y0LjUgYzkuOCwxLjEsMTEuNCwxLjksMTEuNCw5Ljd2NjkuM2MwLDcuNy0xLjYsOC42LTExLjQsOS43djQuNWg3My43bDQuOS0yOS40aC00LjRDMzA4LjUsMTE5LjYsMzAzLjksMTI2LjYsMjkyLjksMTI2LjZ6Ij48L3BhdGg+PHBhdGggZD0iTTM4NS41LDEyMS4xVjc5LjNjMC0xNS44LTkuNC0yMi40LTI2LjYtMjIuNGMtMTUsMC0yNi44LDYuNi0yNi44LDE5LjNjMCwyLjQsMC4yLDMuMywwLjgsNWgxNi42IGMtMC41LTItMC43LTUtMC43LTcuNWMwLTkuNiwzLjYtMTIuNCw5LjQtMTIuNGM2LjQsMCw5LjcsMiw5LjcsMTQuNHYxMS4ybC0yMC44LDcuN2MtMTAuNiw0LjEtMTkuMyw4LjgtMTkuMywyMC43IGMwLDEwLjksNy41LDE3LjgsMTguNiwxNy44YzkuOSwwLDE3LjQtNi4yLDIxLjktMTIuMWwwLjEtMC4xbDAsMFYxMzJoMjZ2LTQuNEMzODcuNywxMjcuMSwzODUuNSwxMjYuMiwzODUuNSwxMjEuMXogTTM2OCwxMTcuOCBjLTQuNCwzLjMtNy42LDUuMy0xMiw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNFYxMTcuOEwzNjgsMTE3Ljh6Ij48L3BhdGg+PHBhdGggZD0iTTUxNC40LDEyMVY3OS41YzAtMTQuOC02LTIyLjQtMTguNy0yMi40Yy0xMS41LDAtMTkuNCw2LjYtMjUuNSwxMy45Yy0xLjgtOS42LTcuNy0xMy45LTE3LjgtMTMuOSBjLTExLjQsMC0xOC43LDYuMi0yNC44LDEzLjZWNTdoLTIuM2wtMjMuOCw3LjR2Mi40bDguNiw1djQ5LjRjMCw1LTIuMSw2LjEtOC45LDYuNHY0LjRoMzUuMXYtNC40Yy02LjctMC4zLTguNy0xLjMtOC43LTYuNHYtNDcgYzQuNy0zLjYsOS41LTYuNSwxNS41LTYuNWM3LjYsMCwxMC41LDQuMiwxMC41LDEyLjd2NDAuOGMwLDUtMS45LDYuMS04LjcsNi40djQuNGwzNC44LDB2LTQuNGMtNi43LTAuMy04LjYtMS4zLTguNi02LjR2LTQ3IGM0LjctMy42LDkuNS02LjUsMTUuNS02LjVjNy42LDAsMTAuNSw0LjIsMTAuNSwxMi43bC0wLjEsNDAuNWMwLDUtMS44LDYuNC04LjYsNi43bDAsNC40aDM1LjF2LTQuNCBDNTE2LjcsMTI3LjQsNTE0LjQsMTI2LjEsNTE0LjQsMTIxeiI+PC9wYXRoPjxwYXRoIGQ9Ik01NzMuMiw1Ny4zYy0xMSwwLTE4LjUsNS43LTIzLjQsMTIuOFYyMi45aC0yLjdsLTIzLjQsNi44djIuNWw4LjYsNC41VjEzMmgyLjlsOC0zLjVjNS44LDMuMywxMi4zLDUsMjAuMiw1IGMyMC44LDAsMzcuNC0xNS44LDM3LjQtNDIuNkM2MDAuOSw2OS45LDU5MC40LDU3LjMsNTczLjIsNTcuM3ogTTU2My40LDEyOC43Yy01LjQsMC0xMC4zLTIuNC0xMy43LTcuOVY3My42IGMzLjQtMy40LDguNS01LjcsMTMuNS01LjdjMTMuOSwwLDIwLDEyLjgsMjAsMjkuNUM1ODMuMywxMTQuNyw1NzUuOCwxMjguNSw1NjMuNCwxMjguN3oiPjwvcGF0aD48cGF0aCBkPSJNNjc3LDEyMS4yVjIyLjhoLTIuNkw2NTEsMjkuNlYzMmw4LjYsNC41djI1LjdjLTMuNC0zLjItOC44LTUuMS0xNS41LTUuMWMtMTkuOSwwLTM1LjIsMTUuMy0zNS4yLDQxLjMgYzAsMjAuNywxMS4yLDM0LjYsMjguMSwzNC42YzkuOCwwLDE3LTUuMywyMi42LTEzLjF2MC45VjEzMmgyNi4zbDAtNC40QzY3OS4xLDEyNy4zLDY3NywxMjYuMyw2NzcsMTIxLjJ6IE02NTkuNiwxMTcuMSBMNjU5LjYsMTE3LjFjLTMuNCwzLjQtOCw1LjEtMTMuMiw1LjFjLTEzLjIsMC0yMC40LTEyLjgtMjAuNC0yOS44YzAtMTcuOCw3LjMtMjkuMiwxOS41LTI5LjJjOC43LDAsMTQuMSw2LjksMTQuMSwxOC4zIEw2NTkuNiwxMTcuMXoiPjwvcGF0aD48cGF0aCBkPSJNNzQ3LjEsMTIxLjFWNzkuM2MwLTE1LjgtOS40LTIyLjQtMjYuNi0yMi40Yy0xNSwwLTI2LjgsNi42LTI2LjgsMTkuM2MwLDIuNCwwLjIsMy4zLDAuOCw1aDE2LjYgYy0wLjUtMi0wLjctNS0wLjctNy41YzAtOS42LDMuNi0xMi40LDkuNC0xMi40YzYuNCwwLDkuNywyLDkuNywxNC40djExLjJsLTIwLjgsNy43Yy0xMC42LDQuMS0xOS4zLDguOC0xOS4zLDIwLjcgYzAsMTAuOSw3LjUsMTcuOCwxOC42LDE3LjhjOS45LDAsMTcuNC02LjIsMjEuOS0xMi4xdi0wLjFoMC4xbDAsMTEuMWwyNiwwLjF2LTQuNUM3NDkuMywxMjcuMSw3NDcuMSwxMjYuMiw3NDcuMSwxMjEuMXogTTcyOS42LDExNy44Yy00LjQsMy4zLTcuNiw1LjMtMTIuMSw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNEw3MjkuNiwxMTcuOEw3MjkuNiwxMTcuOHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTAsMHY5MC40YzAsNjUuNyw1MC45LDg4LjUsODguMSwxMDUuMmgwLjFsMywxLjRjMC43LTAuNCwxLjQtMC43LDIuMi0xYzAuNC0wLjIsMC45LTAuNCwxLjMtMC42IGMzNy4zLTE2LjYsODguNC0zOS41LDg4LjQtMTA1VjBIMHogTTExNiwxMzJsLTItNS4zbC0yNi42LTcwYy0xLjYsNC4xLTUuMywxNC05LjMsMjQuNmwtMTUuMyw0MS4zYy0wLjcsMi0wLjMsMywwLjIsMy43IGMxLjEsMS4zLDMuNSwxLjMsNy4zLDEuM0g3MWwwLDQuNEg0Mi40bDAtNC40aDIuMmMzLjksMCw3LjEtMS43LDkuNS02LjVsMi45LTYuNmwyNi41LTY3LjhsLTQuNy0xMi41aDI0LjdsMzQuMSw4OS43bDMuMSw4LjFIMTE2eiI+PC9wYXRoPjwvc3ZnPg==" /></a>
 
@@ -55,43 +55,43 @@ You must be a Lambda School student to view this page.
 
 <a href="/webannex/sprint/recfwZvI7QhMa7xbG" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
--   [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
--   [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
+- [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
+- [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
+- [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
 
 <a href="/webannex/sprint/recIXiQgpgMdJ81ms" class="bd-toc-link">2.  Advanced CSS</a>
 
--   [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
--   [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
--   [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
--   [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
+- [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
+- [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
+- [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
+- [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
 
 <a href="/webannex/sprint/recclZwJxMU8kUngT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
--   [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
--   [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
--   [Classes](/webannex/module/recyS588eOvVUKAMc/)
+- [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
+- [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
+- [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
+- [Classes](/webannex/module/recyS588eOvVUKAMc/)
 
 <a href="/webannex/sprint/recRT8JKvbTiGaosk" class="bd-toc-link">4.  Single Page Applications</a>
 
--   [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
--   [React Router II](/webannex/module/recYkF1FDilIedmwX/)
--   [Form Management](/webannex/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
+- [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
+- [React Router II](/webannex/module/recYkF1FDilIedmwX/)
+- [Form Management](/webannex/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
 
 <a href="/webannex/sprint/recozTHaHJe6L1ThN" class="bd-toc-link">5.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
--   [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
--   [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
--   [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
+- [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
+- [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
+- [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Preprocessing II
 
@@ -101,8 +101,8 @@ Preprocessing opens up tools earlier web developers could never dream of. Mixins
 
 **At the end of this module, you should be able to:**
 
--   create parametric mixins, use functions, and incorporate escaping
--   create a master LESS file and use importing to create a project.
+- create parametric mixins, use functions, and incorporate escaping
+- create a master LESS file and use importing to create a project.
 
 #### Pro Tip
 
@@ -112,17 +112,13 @@ All things in moderation, including moderation.
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=WStXamzwi_8), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=WStXamzwi_8), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=JwDYMcnXiSo), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=JwDYMcnXiSo), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -174,7 +170,7 @@ You will run into situations in your career where one of your team members will 
       cursor: pointer;
 
       &:hover {
-        // The compiled color returned is #006667 
+        // The compiled color returned is #006667
         background-color: darken(teal, 5%)
       }
     }
@@ -231,7 +227,7 @@ Lets go back to our previous issue where the marketing team wanted to update the
 
 Escaping is really only used for this exact scenario in the LESS ecosystem, but it’s so powerful it’s worth learning and using. Play around with the code above and see how it all works together.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to create a master LESS file and use importing to create a project.
 
@@ -274,13 +270,13 @@ You can see how organized our code is now! Instead of scrolling through thousand
 
 The best way to understand how imports work is to try it out yourself. Go to a project you have worked on in the past weeks and refactor it using LESS and imports.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Preprocessing II - Fun Bus Website](https://github.com/LambdaSchool/Preprocessing-II)
+- ##### [Preprocessing II - Fun Bus Website](https://github.com/LambdaSchool/Preprocessing-II)
 
-    Fun Bus is a travel agency looking for some updates to their marketing page. Review the readme file to see what they need to see done.
+  Fun Bus is a travel agency looking for some updates to their marketing page. Review the readme file to see what they need to see done.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -288,18 +284,18 @@ The best way to understand how imports work is to try it out yourself. Go to a p
 
 You can use class recordings to help you master the material.
 
--   **[Preprocessing II for WEBPT19 w/ Pace Ellsworth](https://youtu.be/1pp0B-tsClU)**
+- **[Preprocessing II for WEBPT19 w/ Pace Ellsworth](https://youtu.be/1pp0B-tsClU)**
 
-    Preprocessing opens up tools earlier web developers could never dream of. Mixins, functions, and namespaces were never available to CSS until preprocessors came along.
+  Preprocessing opens up tools earlier web developers could never dream of. Mixins, functions, and namespaces were never available to CSS until preprocessors came along.
 
--   [All previous recordings](/archive/WebAnnex/module/rec1hRu3bO6L0uxn2)
+- [All previous recordings](/archive/WebAnnex/module/rec1hRu3bO6L0uxn2)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    The best way to understand how imports work is to try it out yourself. Go to a project you have worked on in the past weeks and refactor it using LESS and imports.
+  The best way to understand how imports work is to try it out yourself. Go to a project you have worked on in the past weeks and refactor it using LESS and imports.
 
--   Project: Preprocessing II - Fun Bus Website
+- Project: Preprocessing II - Fun Bus Website

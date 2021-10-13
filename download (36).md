@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Testing React
 
@@ -73,9 +71,9 @@ In this module we introduce common techniques used for testing React components.
 
 **At the end of this module, you should be able to:**
 
--   test React components as the props change
--   use mocks in web application tests
--   test asynchronous API calls that are made in a component
+- test React components as the props change
+- use mocks in web application tests
+- test asynchronous API calls that are made in a component
 
 #### Pro Tip
 
@@ -85,7 +83,7 @@ Know your audience.
 
 Review each preclass resource before class.
 
--   [Jest Documentation on Testing Asynchronous Code](https://jestjs.io/docs/en/asynchronous)
+- [Jest Documentation on Testing Asynchronous Code](https://jestjs.io/docs/en/asynchronous)
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -120,7 +118,7 @@ How does this work in practice? In the example above we are interested in a comp
 
 ### Assert Content is not Rendered
 
-In some cases, we want to make sure that content is *not* rendering on the DOM. For example, if a component should show up on click or, really any time after pageload. React testing library isn’t exactly built for this as all `getBy` assertions return an error if they can’t find the thing they’re searching for (if a return is `null`). Luckily there is a workaround here - the assertion called `queryByRoll` (or any `queryBy` assertion), will return `null` instead of an error. This let’s us query for something this *isn’t* supposed to be on the DOM. It also allows us to use an assertion like `.toBeNull()` or `toBeFalsy()`, and then tests will start passing even when no content is rendered.
+In some cases, we want to make sure that content is _not_ rendering on the DOM. For example, if a component should show up on click or, really any time after pageload. React testing library isn’t exactly built for this as all `getBy` assertions return an error if they can’t find the thing they’re searching for (if a return is `null`). Luckily there is a workaround here - the assertion called `queryByRoll` (or any `queryBy` assertion), will return `null` instead of an error. This let’s us query for something this _isn’t_ supposed to be on the DOM. It also allows us to use an assertion like `.toBeNull()` or `toBeFalsy()`, and then tests will start passing even when no content is rendered.
 
     test("entering an invalid value shows an error message", () => {
       // pull in testing properties - add rerender
@@ -143,7 +141,7 @@ In this section we will continue building tests for dog images app from the prev
 
 This means we want to test the child component. We will test that it renders a “getting data” message when it is passed an empty array as a prop. Then we will re-render the component and pass down our actual data, to simulate the parent component receiving data from the API and passing that data down to this child component.
 
-*Note that this means we don’t have to test the async function, or even the event that kicked off the API call. We just render what this component looks like when it first mounts with no data, and what it looks like when it receives new props and re-renders.*
+_Note that this means we don’t have to test the async function, or even the event that kicked off the API call. We just render what this component looks like when it first mounts with no data, and what it looks like when it receives new props and re-renders._
 
 1.  Create test and pull in relevant matchers from react testing library.
 
@@ -153,11 +151,11 @@ This means we want to test the child component. We will test that it renders a �
     import DoggoImages from "./DoggoImages";
 
     test("renders dog images from API", () => {
-      // Render the component with an empty array
-      const { getAllByTestId, rerender } = render(<Doggos images={[]} />);
+    // Render the component with an empty array
+    const { getAllByTestId, rerender } = render(<Doggos images={[]} />);
 
-      // Assert that there are no dog images rendered yet
-      expect(getAllByTestId(/doggo images/i)).toHaveLength(0);
+    // Assert that there are no dog images rendered yet
+    expect(getAllByTestId(/doggo images/i)).toHaveLength(0);
     });
 
 1.  Update prop by passing a user input. Test updated prop using `rerender`.
@@ -168,25 +166,25 @@ This means we want to test the child component. We will test that it renders a �
     import DoggoImages from "./DoggoImages";
 
     test("renders dog images from API", () => {
-      const doggoUrls = [
-        'url-one.jpg', 'url-two.jpeg', 'url-three.jpg'
-      ]
-      const { getAllByTestId, rerender } = render(<DoggoImages images={[]} />);
+    const doggoUrls = [
+    'url-one.jpg', 'url-two.jpeg', 'url-three.jpg'
+    ]
+    const { getAllByTestId, rerender } = render(<DoggoImages images={[]} />);
 
-      expect(getAllByTestId(/doggo images/i)).toHaveLength(0);
+    expect(getAllByTestId(/doggo images/i)).toHaveLength(0);
 
-      // We will rerender the component with our dummy data passed in as the new props
-      rerender(<DoggoImages images={doggoUrls} />);
+    // We will rerender the component with our dummy data passed in as the new props
+    rerender(<DoggoImages images={doggoUrls} />);
 
-      // Assert that we now have dog images rendering!
-      expect(getAllByTestId(/doggo images/i)).toHaveLength(3);
+    // Assert that we now have dog images rendering!
+    expect(getAllByTestId(/doggo images/i)).toHaveLength(3);
     });
 
 ##### Challenge
 
 Find an example of updating props in a previous project. Design a test using `rerender` that will assert one state after the component first renders, and assert a different state after he component renders again with new props.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use mocks in web application tests
 
@@ -200,7 +198,7 @@ Another use of mocks is as “spies” because they let us spy on the behavior o
 
 ##### Follow Along
 
-Let’s implement a helper function with an uncomfortable dependency that makes the helper *impure* (reliant on something outside of its scope) and, therefore, harder to test **(you’ll need to install the `uuid` npm module)**.
+Let’s implement a helper function with an uncomfortable dependency that makes the helper _impure_ (reliant on something outside of its scope) and, therefore, harder to test **(you’ll need to install the `uuid` npm module)**.
 
        import uuid from "uuid";
 
@@ -228,19 +226,19 @@ Let’s implement a helper function with an uncomfortable dependency that makes 
 
     ![alt text](https://tk-assets.lambdaschool.com/6db480a0-84b6-4210-91a2-091475a1c731_ScreenShot2019-04-16at19.33.30.png)
 
-*By the way, this kind of test is called a **unit test** - a test for a single unit of code, like an isolated function like `makeUser`. You’ll learn more about unit testing in the backend unit, but we can see what happening here with the AAA framework.*
+_By the way, this kind of test is called a **unit test** - a test for a single unit of code, like an isolated function like `makeUser`. You’ll learn more about unit testing in the backend unit, but we can see what happening here with the AAA framework._
 
 1.  To get around this problem, we can stub out (create) a fake version of `uuid` that will replace the real one during the execution of the test. Outside of the `test` block, at the top level of the test file, place the following code:
 
         jest.mock("uuid", () => () => "abcde");
 
-Let’s break it down. As the first argument to `jest.mock()`, we pass the path to the module we want to replace. As the second argument, we pass a callback that *returns* whatever it is *we want the faked thing to be*. We wish for `uuid` to become a silly stub function that always returns the same string: `uuid() // "abcde"`. Our tests should be passing now!
+Let’s break it down. As the first argument to `jest.mock()`, we pass the path to the module we want to replace. As the second argument, we pass a callback that _returns_ whatever it is _we want the faked thing to be_. We wish for `uuid` to become a silly stub function that always returns the same string: `uuid() // "abcde"`. Our tests should be passing now!
 
 ##### Challenge
 
 There is a way to centralize mocks that are used often (think `uuid`, or `axios`) in external files, so that they are used in test suites without even bothering with imports. Go to the Jest docs and see if you can find out how!
 
-------------------------------------------------------------------------
+---
 
 #### Learn to test asynchronous API calls that are made in a component
 
@@ -264,19 +262,19 @@ Let’s say we have a component that fetches data from the dog.ceo API when the 
 
 As usual, we need to **import the required libraries** for testing. In addition to our normal libraries, we’ll import `wait` to make our function run asynchronously, and we’ll import our component `fetchDoggos` as `mockFetchDoggos` so that we don’t have to wait for the actual call to be made.
 
--   Import the regular `react` and `@testing-library/react` dependencies
--   Also import `wait` from rtl
--   Import `fetchDoggos` from the `/api` directory, and rename it to `mockFetchDoggos` so we know that it will be mocked - remember that a mock allows us to isolate a function from its dependencies.
+- Import the regular `react` and `@testing-library/react` dependencies
+- Also import `wait` from rtl
+- Import `fetchDoggos` from the `/api` directory, and rename it to `mockFetchDoggos` so we know that it will be mocked - remember that a mock allows us to isolate a function from its dependencies.
 
-    // import libraries
+  // import libraries
 
-    import React from "react";
-    import { render, fireEvent, waitFor } from "@testing-library/react";
-    import { fetchDoggos as mockFetchDoggos } from "../api/fetchDoggos";
-    import Doggos from "./Doggos";
+  import React from "react";
+  import { render, fireEvent, waitFor } from "@testing-library/react";
+  import { fetchDoggos as mockFetchDoggos } from "../api/fetchDoggos";
+  import Doggos from "./Doggos";
 
-    // set up test
-    test("renders dog images from API", async () => {});
+  // set up test
+  test("renders dog images from API", async () => {});
 
 **Mocking the Async Function**
 
@@ -356,26 +354,26 @@ At this point, the async call has been made. We need to tell our test that it is
 
 Tell the function which async operation it needs to wait for. There are two related parts we need to set up here, then we’ll be able to make our assertion.
 
--   Use the `await` keyword to tell the function we’re awaiting for the async operation to finish
--   Use the `wait` function from RTL to wait for RTL to update the DOM so we can query for the dog images
--   Write an assertion in the `wait` functions callback function. Note that wait is usually required but certain assertions can work without it, you’ll need to do research on a case by case basis to determine wither or not wait is required.
+- Use the `await` keyword to tell the function we’re awaiting for the async operation to finish
+- Use the `wait` function from RTL to wait for RTL to update the DOM so we can query for the dog images
+- Write an assertion in the `wait` functions callback function. Note that wait is usually required but certain assertions can work without it, you’ll need to do research on a case by case basis to determine wither or not wait is required.
 
-    test("renders dog images from API", async () => {
-      mockFetchDoggos.mockResolvedValueOnce({
-        message: [
-          "https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg",
-          "https://images.dog.ceo/breeds/hound-afghan/n02088094_1007.jpg",
-          "https://images.dog.ceo/breeds/hound-afghan/n02088094_1023.jpg"
-        ]
-      });
+  test("renders dog images from API", async () => {
+  mockFetchDoggos.mockResolvedValueOnce({
+  message: [
+  "https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg",
+  "https://images.dog.ceo/breeds/hound-afghan/n02088094_1007.jpg",
+  "https://images.dog.ceo/breeds/hound-afghan/n02088094_1023.jpg"
+  ]
+  });
 
-      const { getByText, getAllByTestId } = render(<Doggos />);
+  const { getByText, getAllByTestId } = render(<Doggos />);
 
-      const fetchDoggosButton = getByText(/fetch doggos/i);
-      fireEvent.click(fetchDoggosButton);
-      // add await
-      await waitFor(() => expect(getAllByTestId(/doggo-images/i)).toHaveLength(3));
-    });
+  const fetchDoggosButton = getByText(/fetch doggos/i);
+  fireEvent.click(fetchDoggosButton);
+  // add await
+  await waitFor(() => expect(getAllByTestId(/doggo-images/i)).toHaveLength(3));
+  });
 
 **One Last Assertion**
 
@@ -405,11 +403,11 @@ Finally, we will make sure that the correct function was called by adding an ext
 
 Research on your own how to test async code using `jest-axe` and `toHaveNoViolations` for accessibility.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [React Testing - TV Show](https://github.com/LambdaSchool/React-Testing-TV-Show)
+- ##### [React Testing - TV Show](https://github.com/LambdaSchool/React-Testing-TV-Show)
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -417,26 +415,26 @@ Research on your own how to test async code using `jest-axe` and `toHaveNoViolat
 
 You can use class recordings to help you master the material.
 
--   **[Testing React for Web35 w/Warren Longmire](https://youtu.be/_sPYk32r_r8)**
+- **[Testing React for Web35 w/Warren Longmire](https://youtu.be/_sPYk32r_r8)**
 
-    Testing React
+  Testing React
 
--   [All previous recordings](/archive/WEB3/module/recS9H6qCj0dQe32B)
+- [All previous recordings](/archive/WEB3/module/recS9H6qCj0dQe32B)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Find an example of updating props in a previous project. Design a test using `rerender` that will assert one state after the component first renders, and assert a different state after he component renders again with new props.
+  Find an example of updating props in a previous project. Design a test using `rerender` that will assert one state after the component first renders, and assert a different state after he component renders again with new props.
 
--   Objective challenge:
+- Objective challenge:
 
-    There is a way to centralize mocks that are used often (think `uuid`, or `axios`) in external files, so that they are used in test suites without even bothering with imports. Go to the Jest docs and see if you can find out how!
+  There is a way to centralize mocks that are used often (think `uuid`, or `axios`) in external files, so that they are used in test suites without even bothering with imports. Go to the Jest docs and see if you can find out how!
 
--   Objective challenge:
+- Objective challenge:
 
-    Research on your own how to test async code using `jest-axe` and `toHaveNoViolations` for accessibility.
+  Research on your own how to test async code using `jest-axe` and `toHaveNoViolations` for accessibility.
 
--   Project: React Testing - TV Show
+- Project: React Testing - TV Show

@@ -16,24 +16,24 @@ You must be a Lambda School student to view this page.
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
@@ -43,31 +43,31 @@ You must be a Lambda School student to view this page.
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Responsive Design
 
@@ -77,9 +77,9 @@ Responsive design covers topics that range from fixed layouts to fully responsiv
 
 **At the end of this module, you should be able to:**
 
--   describe the differences in fixed, fluid, adaptive, and responsive layouts
--   demonstrate knowledge of media queries by correctly implementing them in a project
--   describe how using scalable units for font sizes impacts accessibility and why designing accessible web pages is important
+- describe the differences in fixed, fluid, adaptive, and responsive layouts
+- demonstrate knowledge of media queries by correctly implementing them in a project
+- describe how using scalable units for font sizes impacts accessibility and why designing accessible web pages is important
 
 #### Pro Tip
 
@@ -91,27 +91,21 @@ Voltaire
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=qfEicK3gJ9E), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=qfEicK3gJ9E), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=q3TcW9mTklU), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=q3TcW9mTklU), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=hPLesMhuVR8), or enable JavaScript if it is disabled in your browser.
 
--   
+- [Fixed vs. Fluid vs. Elastic Layout: What’s The Right One For You?](https://www.smashingmagazine.com/2009/06/fixed-vs-fluid-vs-elastic-layout-whats-the-right-one-for-you/)
 
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=hPLesMhuVR8), or enable JavaScript if it is disabled in your browser.
-
--   [Fixed vs. Fluid vs. Elastic Layout: What’s The Right One For You?](https://www.smashingmagazine.com/2009/06/fixed-vs-fluid-vs-elastic-layout-whats-the-right-one-for-you/)
-
--   [Fixed vs Fluid vs Adaptive vs Responsive](https://www.markupbox.com/blog/fixed-vs-fluid-vs-adaptive-vs-responsive-layout/)
+- [Fixed vs Fluid vs Adaptive vs Responsive](https://www.markupbox.com/blog/fixed-vs-fluid-vs-adaptive-vs-responsive-layout/)
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -133,11 +127,11 @@ The user experience on multiple devices is usually poor, so why are fixed design
 
 ##### Features of Fixed Layout
 
--   Design is usually desktop only.
--   CSS widths are usually hardcoded pixels.
--   Horizontal scroll bars appear as the viewport shrinks smaller than the website’s design.
--   No media queries are used.
--   Quicker deployment.
+- Design is usually desktop only.
+- CSS widths are usually hardcoded pixels.
+- Horizontal scroll bars appear as the viewport shrinks smaller than the website’s design.
+- No media queries are used.
+- Quicker deployment.
 
 #### Fluid Layout
 
@@ -147,10 +141,10 @@ Some of the problems of a fluid layout include: images getting too small, button
 
 ##### Features of Fluid Layout
 
--   Design is often divided among desktop, tablet, or phone
--   Percent based units instead of hard coded pixels
--   Everything is designed to proportionally shrink
--   No media queries are used
+- Design is often divided among desktop, tablet, or phone
+- Percent based units instead of hard coded pixels
+- Everything is designed to proportionally shrink
+- No media queries are used
 
 #### Adaptive Layout
 
@@ -160,10 +154,10 @@ Adaptive layout is another cheap and easy way to get more content out quickly fo
 
 ##### Features of Adaptive Layout
 
--   Design is often divided among desktop, tablet, or phone
--   Media queries are used
--   Layout widths are still hardcoded at each media query
--   Quick deployment for specific devices
+- Design is often divided among desktop, tablet, or phone
+- Media queries are used
+- Layout widths are still hardcoded at each media query
+- Quick deployment for specific devices
 
 #### Responsive Layout
 
@@ -173,10 +167,10 @@ Responsive sites take more time and effort to create and are the standard long t
 
 ##### Features of Responsive Layout
 
--   Design is often divided among desktop, tablet, or phone.
--   Responsive units are used throughout the site.
--   Media queries are used.
--   Site accommodates thousands of devices and takes longer to build.
+- Design is often divided among desktop, tablet, or phone.
+- Responsive units are used throughout the site.
+- Media queries are used.
+- Site accommodates thousands of devices and takes longer to build.
 
 ##### Follow Along
 
@@ -306,10 +300,10 @@ Take note of things you found that were interesting or confusing. Bring those qu
 
 ##### Dig Deeper
 
--   [Deep Dive on Responsive Web Design with Google](https://developers.google.com/web/fundamentals/design-and-ux/responsive/)  
-    Read through a design and UX guide for RWD from google.
+- [Deep Dive on Responsive Web Design with Google](https://developers.google.com/web/fundamentals/design-and-ux/responsive/)  
+  Read through a design and UX guide for RWD from google.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to demonstrate knowledge of media queries by correctly implementing them in a project
 
@@ -327,34 +321,31 @@ Media queries use max and min width to determine where breakpoints are introduce
 
 ##### Follow Along
 
-Let’s put media queries to work by working on a desktop-down approach.  
-  
+Let’s put media queries to work by working on a desktop-down approach.
 
-Go to this codepen: https://codepen.io/bigknell/pen/GQjGgr?editors=1100  
-  
+Go to this codepen: https://codepen.io/bigknell/pen/GQjGgr?editors=1100
+
 Base colors:  
 box1: aqua  
 box2: azure  
-box3: cadetblue  
-  
-At 1000px and below:  
+box3: cadetblue
 
--   Change the width to 80% for ALL boxes  
--   box1: blue  
--   box2: green  
--   box3: red  
-      
-    At 768px and below:  
--   Change the width to 60% for ALL boxes  
--   box1: teal  
--   box2: gold  
--   box3: pink  
-      
-    At 400px and below:  
--   Change the width to 60% for ALL boxes  
--   box1: purple  
--   box2: black  
--   box3: gray  
+At 1000px and below:
+
+- Change the width to 80% for ALL boxes
+- box1: blue
+- box2: green
+- box3: red
+  At 768px and below:
+- Change the width to 60% for ALL boxes
+- box1: teal
+- box2: gold
+- box3: pink
+  At 400px and below:
+- Change the width to 60% for ALL boxes
+- box1: purple
+- box2: black
+- box3: gray
 
 ##### Challenge
 
@@ -370,14 +361,14 @@ https://codepen.io/bigknell/pen/GQjGgr?editors=1100
 
 ##### Dig Deeper
 
--   [Screen Resolution to Viewport Dimensions](https://mediag.com/blog/popular-screen-resolutions-designing-for-all/)  
-    This is an awesome breakdown of why things work and also a great table of information at the bottom of the site showing pixel to viewport for popular devices.
--   [Learn about your device's screen width in CSS](https://www.mydevice.io/)  
-    Ever wondered why we use smaller pixels than the resolution? Check out this awesome site and see the differences between popular devices.
--   [Media Query Deep Dive: 100% Correct Way to do CSS Breakpoints](https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862)  
-    This article is opinionated but I agree with the sentiments. Worth a read as you learn the "why" around media queries.
+- [Screen Resolution to Viewport Dimensions](https://mediag.com/blog/popular-screen-resolutions-designing-for-all/)  
+  This is an awesome breakdown of why things work and also a great table of information at the bottom of the site showing pixel to viewport for popular devices.
+- [Learn about your device's screen width in CSS](https://www.mydevice.io/)  
+  Ever wondered why we use smaller pixels than the resolution? Check out this awesome site and see the differences between popular devices.
+- [Media Query Deep Dive: 100% Correct Way to do CSS Breakpoints](https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862)  
+  This article is opinionated but I agree with the sentiments. Worth a read as you learn the "why" around media queries.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to describe how using scalable units for font sizes impacts accessibility and why designing accessible web pages is important
 
@@ -385,7 +376,7 @@ https://codepen.io/bigknell/pen/GQjGgr?editors=1100
 
 ### What is Accessibility?
 
-Web accessibility, as you might expect, deals with making web pages and the internet accessible to all people, regardless of how they need to interact with the page. As web developers you should be designing web pages with *all* people in mind. Including, but not limited to: those with slow internet connection, those on mobile devices, those with auditory, cognitive, neurological, or physical disabilities,and those with visual needs. Recent studies show that up to 2.5% of all internet users interact with the web using a screen reader, which is a considerable number of people.
+Web accessibility, as you might expect, deals with making web pages and the internet accessible to all people, regardless of how they need to interact with the page. As web developers you should be designing web pages with _all_ people in mind. Including, but not limited to: those with slow internet connection, those on mobile devices, those with auditory, cognitive, neurological, or physical disabilities,and those with visual needs. Recent studies show that up to 2.5% of all internet users interact with the web using a screen reader, which is a considerable number of people.
 
 ### Universal Design Theory
 
@@ -407,7 +398,7 @@ This same logic applies to images and buttons, or really anything and everything
 
 Screen readers are a great thing to keep top of mind while designing for accessibility. A screen reader is a tool (a browser extension or app) that transmits web page data for people with visual impairments, learning disabilities, or other needs; They usually operate by verbalizing the content or sometimes translating into braille. Screen readers read content based on how the HTML is coded, starting with `<h1>` headings, and navigating through other elements accordingly.
 
-As a web developer, it is important to make sure that your tags are *semantic* so that users who rely on screen readers can navigate accordingly. A webpage made entirely with `<div>` for example, would provide no hierarchy to the screen reader or the user, and would prevent them from being able to navigate the site.
+As a web developer, it is important to make sure that your tags are _semantic_ so that users who rely on screen readers can navigate accordingly. A webpage made entirely with `<div>` for example, would provide no hierarchy to the screen reader or the user, and would prevent them from being able to navigate the site.
 
 Semantic tags typically have english meaning, like `<header>`, `<main>`, `<nav>`, `<button>` and `<article>`. Non-semantic tags are those without any english meaning, like `<div>` and `<span>`.
 
@@ -469,16 +460,16 @@ Hint: start with the image and the text colors.
 
 ##### Dig Deeper
 
--   [Designing for Screen Reader Compatibility](https://webaim.org/techniques/screenreader/)  
--   [7 Things Every Designer Needs to Know about Accessibility](https://medium.com/salesforce-ux/7-things-every-designer-needs-to-know-about-accessibility-64f105f0881b)  
+- [Designing for Screen Reader Compatibility](https://webaim.org/techniques/screenreader/)
+- [7 Things Every Designer Needs to Know about Accessibility](https://medium.com/salesforce-ux/7-things-every-designer-needs-to-know-about-accessibility-64f105f0881b)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Make Portfolio Responsive](https://github.com/LambdaSchool/Responsive-Design)
+- ##### [Make Portfolio Responsive](https://github.com/LambdaSchool/Responsive-Design)
 
-    In this module challenge you will continue working on your portfolio website to make it compatible for different browser widths.
+  In this module challenge you will continue working on your portfolio website to make it compatible for different browser widths.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -486,42 +477,42 @@ Hint: start with the image and the text colors.
 
 You can use class recordings to help you master the material.
 
--   **[Responsive Design for WEBPT19 w/Dan Frehner](https://youtu.be/9jUWcnYcF6w)**
+- **[Responsive Design for WEBPT19 w/Dan Frehner](https://youtu.be/9jUWcnYcF6w)**
 
-    Learn Responsive Design with Dan Frehner and WEBPT19
+  Learn Responsive Design with Dan Frehner and WEBPT19
 
--   [All previous recordings](/archive/WEB1/module/recUPpx89Z2uWzkzU)
+- [All previous recordings](/archive/WEB1/module/recUPpx89Z2uWzkzU)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    ### Responsive Web Design Layout Challenge
+  ### Responsive Web Design Layout Challenge
 
-    Go to some of your favorite websites and use your browser’s developer tools to inspect their layouts.
+  Go to some of your favorite websites and use your browser’s developer tools to inspect their layouts.
 
-    Study the HTML and CSS and see how they made their site responsive. You may find responsive units you have never seen before!
+  Study the HTML and CSS and see how they made their site responsive. You may find responsive units you have never seen before!
 
-    Take note of things you found that were interesting or confusing. Bring those questions or observations to your group and discuss them in standup.
+  Take note of things you found that were interesting or confusing. Bring those questions or observations to your group and discuss them in standup.
 
--   Objective challenge:
+- Objective challenge:
 
-    Keep the color and width requirements we just did as a group, but take a mobile first approach by using min-width.
+  Keep the color and width requirements we just did as a group, but take a mobile first approach by using min-width.
 
-    That means the base colors of: box1: aqua box2: azure box3: cadetblue
+  That means the base colors of: box1: aqua box2: azure box3: cadetblue
 
-    Need to show up AFTER 1000px and up. This also means the boxes should go back to 100px at 1000px and up as well.
+  Need to show up AFTER 1000px and up. This also means the boxes should go back to 100px at 1000px and up as well.
 
-    This is a solo challenge, please don’t share code until the solution is presented!
+  This is a solo challenge, please don’t share code until the solution is presented!
 
-    https://codepen.io/bigknell/pen/GQjGgr?editors=1100
+  https://codepen.io/bigknell/pen/GQjGgr?editors=1100
 
--   Objective challenge:
+- Objective challenge:
 
-    There are a few more non-accessible pieces in the pen above. Make changes according to what you learned today.
+  There are a few more non-accessible pieces in the pen above. Make changes according to what you learned today.
 
-    Hint: start with the image and the text colors.
+  Hint: start with the image and the text colors.
 
--   Project: Make Portfolio Responsive
+- Project: Make Portfolio Responsive

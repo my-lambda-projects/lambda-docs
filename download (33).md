@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Async Redux
 
@@ -73,9 +71,9 @@ By nature Redux is synchronous. Because of this we need to apply some middleware
 
 **At the end of this module, you should be able to:**
 
--   describe the Finite State Machine pattern and it's relationship to building Redux applications
--   implement Redux Middleware libraries into a Redux Store using \`applyMiddleware\`
--   effectively use \`redux-thunk\` and asynchronous action creators to consume data from external API's
+- describe the Finite State Machine pattern and it's relationship to building Redux applications
+- implement Redux Middleware libraries into a Redux Store using \`applyMiddleware\`
+- effectively use \`redux-thunk\` and asynchronous action creators to consume data from external API's
 
 #### Pro Tip
 
@@ -85,41 +83,35 @@ When raising a problem with a supervisor, provide potential solutions to the pro
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=g57ZVWD4HFo), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=g57ZVWD4HFo), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=yTOVUuFX5TU), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=yTOVUuFX5TU), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=hb_ghK58_A8), or enable JavaScript if it is disabled in your browser.
 
--   
+- [Introduction to Finite State Machines](https://www.smashingmagazine.com/2018/01/rise-state-machines/)
 
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=hb_ghK58_A8), or enable JavaScript if it is disabled in your browser.
-
--   [Introduction to Finite State Machines](https://www.smashingmagazine.com/2018/01/rise-state-machines/)
-
--   [From Redux to State Machine](http://krasimirtsonev.com/blog/article/getting-from-redux-to-state-machine-with-stent)
+- [From Redux to State Machine](http://krasimirtsonev.com/blog/article/getting-from-redux-to-state-machine-with-stent)
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
 #### Learn to describe the Finite State Machine pattern and it's relationship to building Redux applications
 
-Have you ever wondered why most buggy behaviors in software can be *corrected* by restarting the software?
+Have you ever wondered why most buggy behaviors in software can be _corrected_ by restarting the software?
 
 Bugs are often caused by the software getting into an inconsistent **state** and **restarting it resets the state**.
 
-That implies that most software at it’s core happens to be a *Finite State Machine*. Throughout this objective we’re going to learn all about what Finite State Machines are, how they work and how we as developers can utilize them to create more consistent/fluid software.
+That implies that most software at it’s core happens to be a _Finite State Machine_. Throughout this objective we’re going to learn all about what Finite State Machines are, how they work and how we as developers can utilize them to create more consistent/fluid software.
 
 ##### Overview
 
-A *state machine* is a mathematical model of computation.
+A _state machine_ is a mathematical model of computation.
 
 A machine can have a finite number of states, but it can only operate in one state at a given time.
 
@@ -127,11 +119,11 @@ There are different types of state machines, but for building UIs (and understan
 
 For our purposes, a State Machine has:
 
--   initial state (store).
--   current state (store).
--   inputs or actions (action creators) that trigger transitions (reducers) to the next state.
+- initial state (store).
+- current state (store).
+- inputs or actions (action creators) that trigger transitions (reducers) to the next state.
 
-It helps to think in terms of *states* instead of *transitions*.
+It helps to think in terms of _states_ instead of _transitions_.
 
 Redux is **NOT** a finite state machine, but the thinking in states helps our understanding of how Redux works.
 
@@ -151,7 +143,7 @@ graph LR A(isLoggedOut) -- HTTP Request Login --> B(pendingLoginState) B -- Succ
 
 On your own: Write a paragraph that tells us what you know about the finite state machine pattern. It doesn’t have to be long, just a few sentences on the subject. Submit that paragraph to your PM.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to implement Redux Middleware libraries into a Redux Store using \`applyMiddleware\`
 
@@ -173,10 +165,10 @@ Middleware intercepts every action **before** it flows through to the Reducers.
 
 Middleware can:
 
--   stop actions.
--   forward an action untouched.
--   dispatch a different action.
--   dispatch multiple actions.
+- stop actions.
+- forward an action untouched.
+- dispatch a different action.
+- dispatch multiple actions.
 
 We can have multiple middleware.
 
@@ -194,7 +186,7 @@ graph LR A\[Component\] -- calls --> B\[Action Creator\] B -- returns an --> C\[
 
 ##### Follow Along
 
-Let’s add a logger middleware library to any React/Redux app you have in codesandbox. It can be *any* sandbox you have with Redux implemented as long as the app is working.
+Let’s add a logger middleware library to any React/Redux app you have in codesandbox. It can be _any_ sandbox you have with Redux implemented as long as the app is working.
 
 Next, we want to add `redux-logger` as a dependency. In codesandbox, you add it from the dependency button. In a normal app, you would run `npm install redux-logger`.
 
@@ -216,17 +208,17 @@ Finally, we need to import a helper function from redux. This function is the `a
 
 Go ahead and try it out. Open your console (it will look better if it is in its own window, and not in the codesandbox page), open the console, and then interact with your app. You will see the actions as they are logged, the state tree before the action passes to the reducer, and the resulting state tree after the action passes to the reducer!
 
-*Note: if you use redux-logger with other middleware packages, make sure logger is passed to applyMiddleware last.*
+_Note: if you use redux-logger with other middleware packages, make sure logger is passed to applyMiddleware last._
 
 ##### Challenge
 
 Look at this package - https://github.com/elgerlambert/redux-localstorage. Try to now implement this so that your store is saved to `localStorage`. The configuration is a little different than what we did above, so you will have to follow what the docs show.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to effectively use \`redux-thunk\` and asynchronous action creators to consume data from external API's
 
-In Redux the *Reducers* are **synchronous** by default. If we need to perform asynchronous operations, they need to happen before the actions flow through the reducers stack.
+In Redux the _Reducers_ are **synchronous** by default. If we need to perform asynchronous operations, they need to happen before the actions flow through the reducers stack.
 
 We can use middleware to handle asynchronous requests.
 
@@ -297,7 +289,7 @@ Now, go ahead and remove the entire return statement out of the action creator. 
 
     };
 
-Now, inside the action creator, we have access to dispatch. So, what is this action creator going to do? It is going to fetch pokemon data from the API. So, before we fetch data, let’s remember the finite state machine and dispatch an action that can tell the reducer that we are starting the fetch. (And let’s change the action type to ‘FETCH\_POKEMON\_START’).
+Now, inside the action creator, we have access to dispatch. So, what is this action creator going to do? It is going to fetch pokemon data from the API. So, before we fetch data, let’s remember the finite state machine and dispatch an action that can tell the reducer that we are starting the fetch. (And let’s change the action type to ‘FETCH_POKEMON_START’).
 
     export const FETCH_POKEMON_START = 'FETCH_POKEMON_START';
 
@@ -402,16 +394,16 @@ Build out a simple React/Redux app that displays dog images from the dogs API.
 
 ##### Dig Deeper
 
--   [Async Redux Dogs](https://codesandbox.io/s/1vzyproz5j)  
-    Link to code sandbox for Doggos during AsyncRedux discussion
+- [Async Redux Dogs](https://codesandbox.io/s/1vzyproz5j)  
+  Link to code sandbox for Doggos during AsyncRedux discussion
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [React-Redux App](https://github.com/LambdaSchool/React-Redux-App)
+- ##### [React-Redux App](https://github.com/LambdaSchool/React-Redux-App)
 
-    Build a React-Redux app that consumes data from an API of your choosing.
+  Build a React-Redux app that consumes data from an API of your choosing.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -419,34 +411,34 @@ Build out a simple React/Redux app that displays dog images from the dogs API.
 
 You can use class recordings to help you master the material.
 
--   **[Async Redux for Web35 w/ Dustin Myers](https://youtu.be/EBxWcr2JCOU)**
+- **[Async Redux for Web35 w/ Dustin Myers](https://youtu.be/EBxWcr2JCOU)**
 
-    Async Redux
+  Async Redux
 
--   [All previous recordings](/archive/FSW/module/recSoiWNJzGURrXYh)
+- [All previous recordings](/archive/FSW/module/recSoiWNJzGURrXYh)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Consider the following Diagram:
+  Consider the following Diagram:
 
-    graph LR A(isLoggedOut) -- HTTP Request Login --> B(pendingLoginState) B -- Success/Failure --> C(isLoggedIn) C -- HTTP Request Logout --> B B -- Success/Failure --> A
+  graph LR A(isLoggedOut) -- HTTP Request Login --> B(pendingLoginState) B -- Success/Failure --> C(isLoggedIn) C -- HTTP Request Logout --> B B -- Success/Failure --> A
 
-    On your own: Write a paragraph that tells us what you know about the finite state machine pattern. It doesn’t have to be long, just a few sentences on the subject. Submit that paragraph to your PM.
+  On your own: Write a paragraph that tells us what you know about the finite state machine pattern. It doesn’t have to be long, just a few sentences on the subject. Submit that paragraph to your PM.
 
--   Objective challenge:
+- Objective challenge:
 
-    Look at this package - https://github.com/elgerlambert/redux-localstorage. Try to now implement this so that your store is saved to `localStorage`. The configuration is a little different than what we did above, so you will have to follow what the docs show.
+  Look at this package - https://github.com/elgerlambert/redux-localstorage. Try to now implement this so that your store is saved to `localStorage`. The configuration is a little different than what we did above, so you will have to follow what the docs show.
 
--   Objective challenge:
+- Objective challenge:
 
-    Build out a simple React/Redux app that displays dog images from the dogs API.
+  Build out a simple React/Redux app that displays dog images from the dogs API.
 
--   Project: React-Redux App
+- Project: React-Redux App
 
--   Code Challenge: GetAllProductExceptAtIndex
+- Code Challenge: GetAllProductExceptAtIndex
 
--   Code Challenge: BinaryArraySortInLinearTime
+- Code Challenge: BinaryArraySortInLinearTime

@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # The Reducer Pattern
 
@@ -73,9 +71,9 @@ The difficulties of storing and efficiently performing logic on data within comp
 
 **At the end of this module, you should be able to:**
 
--   explain what immutability is in programming and demonstrate its benefits
--   describe reducer functions
--   employ the \`useReducer\` hook to manage state in a component
+- explain what immutability is in programming and demonstrate its benefits
+- describe reducer functions
+- employ the \`useReducer\` hook to manage state in a component
 
 #### Pro Tip
 
@@ -85,11 +83,9 @@ We all build on the work of others.
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=EY8lIHdBA-w), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=EY8lIHdBA-w), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -125,7 +121,7 @@ Follow along with the exercises [here](https://repl.it/@snowkid314/understanding
 
 Read [this article](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0). Write a paragaraph or two explaining what you learned. Send that paragraph to your PM.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to describe reducer functions
 
@@ -159,7 +155,7 @@ Consider the previous example, where component’s state utilizes an object as i
       return { count: state.count + 1 }
     }
 
-Again, we are returning a *new* object and are not directly mutating or overriding the `initialState` object.
+Again, we are returning a _new_ object and are not directly mutating or overriding the `initialState` object.
 
 This reducer function is a pure function without any side-effects. Reducer functions are the perfect fit for managing changes in state while maintaining the immutability we want in our components.
 
@@ -182,7 +178,7 @@ Looking again at reducer above, let’s show it that we want to increment our co
 
     reducer(initialState, { type: 'increment' })
 
-This strategy is especially powerful when we want our reducer to be able to *reduce* the state. Take a look at our reducer now:
+This strategy is especially powerful when we want our reducer to be able to _reduce_ the state. Take a look at our reducer now:
 
     const initialState = { count: 0 }
     const reducer = (state, action) => {
@@ -196,7 +192,7 @@ This strategy is especially powerful when we want our reducer to be able to *red
     reducer(initialState, { type: 'increment' });
     reducer(initialState, { type: 'decrement' });
 
-Now our state management is *very* predictable. Our current state passes into the reducer, and an action follows to tell the reducer *how* to update the state.
+Now our state management is _very_ predictable. Our current state passes into the reducer, and an action follows to tell the reducer _how_ to update the state.
 
 We can also add a `payload` property to our action objects (sometimes called `data`). Our reducer needs to have some data passed into it through the action to be able to update the state correctly, and this is where that data would live.
 
@@ -272,11 +268,11 @@ Create a reducer function that can do the following:
 
 For additional practice, and challenge, how might you implement logic that would contain a type of ‘DELETE’ or ‘EDIT’?
 
-------------------------------------------------------------------------
+---
 
 #### Learn to employ the \`useReducer\` hook to manage state in a component
 
-Writing reducers from the ground up can end up being a lot of boilerplate and time spent for a React developer. The goal is the make state management *easier* in components. With that said, the `useReducer` hook provides a nice abstraction that allows a developer to efficiently `use` the power of `reducers` in React components, quite easily.
+Writing reducers from the ground up can end up being a lot of boilerplate and time spent for a React developer. The goal is the make state management _easier_ in components. With that said, the `useReducer` hook provides a nice abstraction that allows a developer to efficiently `use` the power of `reducers` in React components, quite easily.
 
 The React documentation is an excellent resource for information about this hook and something to keep in your collection of references moving forward: [React docs - useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer)
 
@@ -338,13 +334,13 @@ Create a component which demonstrates the following MVP expectations and uses a 
 
 For fun, you could go as far as you would like for stretch, but the main goal of MVP here for this mini-exercise, is just to be able to locally maintain a list of strings, entered by a user, by using a reducer function.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Reducer Todo](https://github.com/LambdaSchool/reducer-todo)
+- ##### [Reducer Todo](https://github.com/LambdaSchool/reducer-todo)
 
-    Create a todo list app (I know, I know - but it really is a *great* pattern to learn a new thing…) that uses the reducer pattern to manage the component state.
+  Create a todo list app (I know, I know - but it really is a _great_ pattern to learn a new thing…) that uses the reducer pattern to manage the component state.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -352,42 +348,42 @@ For fun, you could go as far as you would like for stretch, but the main goal of
 
 You can use class recordings to help you master the material.
 
--   **[The Reducer Pattern for WebPT18 w/Josh Jacobson](https://youtu.be/RdkEbMxDiA8)**
+- **[The Reducer Pattern for WebPT18 w/Josh Jacobson](https://youtu.be/RdkEbMxDiA8)**
 
-    Reducers offer one possible way to address this problem within the component. At the level of the application, an elegant combination of the Context API with reducers provides one possible way that React developers can manage global state.
+  Reducers offer one possible way to address this problem within the component. At the level of the application, an elegant combination of the Context API with reducers provides one possible way that React developers can manage global state.
 
--   [All previous recordings](/archive/WEB3/module/rectpk6uIV3pCHJh8)
+- [All previous recordings](/archive/WEB3/module/rectpk6uIV3pCHJh8)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Read [this article](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0). Write a paragaraph or two explaining what you learned. Send that paragraph to your PM.
+  Read [this article](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0). Write a paragaraph or two explaining what you learned. Send that paragraph to your PM.
 
--   Objective challenge:
+- Objective challenge:
 
-    Create a reducer function that can do the following:
+  Create a reducer function that can do the following:
 
-    1.  Take in an `initialState` value of an array of objects. Each object should represent a to-do item, and should contain only one property, `description`, which should be a string, a short description of the to-do item.
+  1.  Take in an `initialState` value of an array of objects. Each object should represent a to-do item, and should contain only one property, `description`, which should be a string, a short description of the to-do item.
 
-    2.  Take in an action object with a `type` property and a `payload` property. The `payload` property should have a description key and a value equal to a new description entered by a user. (Don’t worry about making inputs now, just write the reducer.)
+  2.  Take in an action object with a `type` property and a `payload` property. The `payload` property should have a description key and a value equal to a new description entered by a user. (Don’t worry about making inputs now, just write the reducer.)
 
-    3.  If the type is equal to ‘ADD’, then return a new array with a shallow copy of the previous state, and spread in a new object that contains the new description key and its corresponding value.
+  3.  If the type is equal to ‘ADD’, then return a new array with a shallow copy of the previous state, and spread in a new object that contains the new description key and its corresponding value.
 
-    4.  Return the previous state as a default case.
+  4.  Return the previous state as a default case.
 
-    For additional practice, and challenge, how might you implement logic that would contain a type of ‘DELETE’ or ‘EDIT’?
+  For additional practice, and challenge, how might you implement logic that would contain a type of ‘DELETE’ or ‘EDIT’?
 
--   Objective challenge:
+- Objective challenge:
 
-    Create a component which demonstrates the following MVP expectations and uses a reducer function and the `useReducer` hook to implement the required logic and maintain the state of the component:
+  Create a component which demonstrates the following MVP expectations and uses a reducer function and the `useReducer` hook to implement the required logic and maintain the state of the component:
 
-    1.  User should be able to input a string of text that represents a ‘todo item.’
-    2.  User should be able to press a button to submit that ‘todo item.’
-    3.  User should be able to submit a ‘todo item’ and view it on the screen.
+  1.  User should be able to input a string of text that represents a ‘todo item.’
+  2.  User should be able to press a button to submit that ‘todo item.’
+  3.  User should be able to submit a ‘todo item’ and view it on the screen.
 
-    For fun, you could go as far as you would like for stretch, but the main goal of MVP here for this mini-exercise, is just to be able to locally maintain a list of strings, entered by a user, by using a reducer function.
+  For fun, you could go as far as you would like for stretch, but the main goal of MVP here for this mini-exercise, is just to be able to locally maintain a list of strings, entered by a user, by using a reducer function.
 
--   Project: Reducer Todo
+- Project: Reducer Todo

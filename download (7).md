@@ -16,24 +16,24 @@ You must be a Lambda School student to view this page.
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
@@ -43,31 +43,31 @@ You must be a Lambda School student to view this page.
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Intro CSS
 
@@ -77,10 +77,10 @@ In this module we will dive deeper into the world of CSS to learn about the box 
 
 **At the end of this module, you should be able to:**
 
--   learn about the box model and be able to explain its properties
--   demonstrate CSS specificity and inheritance to create and update styles
--   implement a CSS reset and understand why it’s important for cross browser development
--   describe and use responsive units to create a fully responsive website
+- learn about the box model and be able to explain its properties
+- demonstrate CSS specificity and inheritance to create and update styles
+- implement a CSS reset and understand why it’s important for cross browser development
+- describe and use responsive units to create a fully responsive website
 
 #### Pro Tip
 
@@ -90,45 +90,37 @@ Keep in mind that anything you put on social media reflects your brand. Consider
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=quEisuPangM), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=quEisuPangM), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=uN-yD5usiR0), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=uN-yD5usiR0), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=-TVGmd81Vow), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=H376eVtXfYg), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=-TVGmd81Vow), or enable JavaScript if it is disabled in your browser.
+- [Specificity Weight](http://www.htmldog.com/guides/css/intermediate/specificity/)
 
--   
+  By simply adding numbers to elements, classes, and IDs we can make specificity weight problems a thing of the past.
 
-    # An error occurred.
+- [Eric Meyer Reset](https://meyerweb.com/eric/tools/css/reset/)
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=H376eVtXfYg), or enable JavaScript if it is disabled in your browser.
+  One of the first main stream resets used in web development.
 
--   [Specificity Weight](http://www.htmldog.com/guides/css/intermediate/specificity/)
+- [Rem font-size study](https://snook.ca/archives/html_and_css/font-size-with-rem)
 
-    By simply adding numbers to elements, classes, and IDs we can make specificity weight problems a thing of the past.
+  This is one of the first articles on the internet to suggest making the root font-size match the users settings. It’s old but still very relevant.
 
--   [Eric Meyer Reset](https://meyerweb.com/eric/tools/css/reset/)
+- [A guide to em, rem, and px units](https://engageinteractive.co.uk/blog/em-vs-rem-vs-px)
 
-    One of the first main stream resets used in web development.
-
--   [Rem font-size study](https://snook.ca/archives/html_and_css/font-size-with-rem)
-
-    This is one of the first articles on the internet to suggest making the root font-size match the users settings. It’s old but still very relevant.
-
--   [A guide to em, rem, and px units](https://engageinteractive.co.uk/blog/em-vs-rem-vs-px)
-
-    This quick read takes you though some modern considerations for responsive units.
+  This quick read takes you though some modern considerations for responsive units.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -142,30 +134,33 @@ The box model places all html elements into boxes. The make-up of each box is th
 
 ![Image of the box model](https://i.imgur.com/jZrYyQV.gif)
 
--   `height` and `width`
-    -   We can tell the browser exactly how wide and how tall we want our element (content) to be. This is used in `div`s, `img`s, and other height-based elements (in order to determine the size of text, we will need to use a different styling property). Size values can be in lots of different measures, but the most common are the pixel (“px”) and relative percent of screen (%).
+- `height` and `width`
+
+  - We can tell the browser exactly how wide and how tall we want our element (content) to be. This is used in `div`s, `img`s, and other height-based elements (in order to determine the size of text, we will need to use a different styling property). Size values can be in lots of different measures, but the most common are the pixel (“px”) and relative percent of screen (%).
+
+  div {
+  height: 400px;
+  width: 400px;
+  }
 
       div {
-        height: 400px;
-        width: 400px;
-      }
-      
-        div {
-        height: 100%;
-        width: auto;
-      }
+      height: 100%;
+      width: auto;
 
--   `margin`
-    -   The margin is an invisible area that surrounds your content, padding, and border. This is the outermost area in the box model.
--   `border`
-    -   Border will set a border around your element. You can determine the size, color, and style of the border. It will be set up in this order: width, style, color (a list of border styles can be found [here](https://developer.mozilla.org/en-US/docs/Web/CSS/border). The border is outside the padding, but inside the margin.
+  }
 
-      div {
-        border: 1px solid black;
-      }
+- `margin`
+  - The margin is an invisible area that surrounds your content, padding, and border. This is the outermost area in the box model.
+- `border`
 
--   `padding`
-    -   The padding is the transparent area between the border and the content. It is very similar to the margin.
+  - Border will set a border around your element. You can determine the size, color, and style of the border. It will be set up in this order: width, style, color (a list of border styles can be found [here](https://developer.mozilla.org/en-US/docs/Web/CSS/border). The border is outside the padding, but inside the margin.
+
+  div {
+  border: 1px solid black;
+  }
+
+- `padding`
+  - The padding is the transparent area between the border and the content. It is very similar to the margin.
 
 See the Pen [Precourse Box Model](https://codepen.io/lambdaschool/pen/6e4b0e0e1fe78c145cdbd47e92b05a88) by Lambda School ([@lambdaschool](https://codepen.io/lambdaschool)) on [CodePen](https://codepen.io).
 
@@ -193,7 +188,7 @@ Let’s add padding to the #image-container as well.
     #image-container {
       background: url("https://assets-global.website-files.com/5cd091cfb5499f22bdf72905/5d1133da829994859a190d12_website-home4.jpg");
       padding: 200px;
-      background-position: center; 
+      background-position: center;
     }
 
 Finally, let’s change the width of our text so that it cuts off right around this smiling student’s shoulder. To do that, we’re going to cheat a little and use a responsive design trick that you’ll learn later on. Instead of sizing our #home-page-text div with pixels, we’re going to use a percentage so that no matter what width the page is, the text always looks right.
@@ -212,7 +207,7 @@ We’re not going to build the whole website here, but with some research, at th
 
 Continue to add style to your personal webpage with the box model where applicable. If you haven’t added an image yet, now is a good time to do so and practice styling.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to demonstrate CSS specificity and inheritance to create and update styles
 
@@ -230,21 +225,21 @@ Lets look at an example to demonstrate inheritance:
 
 **HTML Structure:**
 
-    <div class="parent">  
-      <p>Parent</p>  
-      <div class="child">  
-        <p>Child</p>  
-        <div class="grandchild">  
-          <p>Grandchild</p>  
-        </div>  
-      </div>  
-    </div>  
+    <div class="parent">
+      <p>Parent</p>
+      <div class="child">
+        <p>Child</p>
+        <div class="grandchild">
+          <p>Grandchild</p>
+        </div>
+      </div>
+    </div>
 
 **CSS:**
 
-    .parent {  
-      color: red;  
-    }  
+    .parent {
+      color: red;
+    }
 
 Notice that by styling the `.parent` class, all of our `p` tags nested inside of the parent class turn red. Using inheritance this way is extremely powerful and allows for more natural development when building user interfaces. However, we don’t always want to change everything at once. What if we only wanted two elements to turn red and not all 3? This problem can be solved with specificity and understanding selectors.
 
@@ -269,8 +264,8 @@ There are occasions you would want to select every element on a web page. The un
 ##### CSS Syntax example:
 
     * {
-      color: red;  
-    }  
+      color: red;
+    }
 
 #### Element Selectors `<h1></h1>`
 
@@ -280,13 +275,13 @@ When styling elements, we are basically telling the browser: “I want every sin
 
 ##### HTML Syntax example:
 
-    <h1>I'm a h1 element</h1>  
+    <h1>I'm a h1 element</h1>
 
 ##### CSS Syntax example:
 
-    h1 {  
-      color: blue;  
-    }  
+    h1 {
+      color: blue;
+    }
 
 #### Class Selector `.class`
 
@@ -296,17 +291,17 @@ Class selectors begin to introduce a heavier specificity compared to the element
 
 ##### HTML Syntax example:
 
-    <h1 class="example-class">I'm a class</h1>  
-    <h1 class="example-class">I'm a duplicate class</h1> 
-    <div class="another-class">New class selector</div> 
+    <h1 class="example-class">I'm a class</h1>
+    <h1 class="example-class">I'm a duplicate class</h1>
+    <div class="another-class">New class selector</div>
 
 ##### CSS Syntax example:
 
-    .example-class {  
-      color: green;  
-      font-size: 16rem;  
-      text-align: center;  
-    }  
+    .example-class {
+      color: green;
+      font-size: 16rem;
+      text-align: center;
+    }
 
 #### Multiple Classes
 
@@ -331,15 +326,15 @@ Less specific than ID, inline styles, and important.
 
 ##### HTML Syntax example:
 
-    <h1 class="normal">Normal class here</h1>  
-    <h1 class="normal">Normal class here</h1>  
-    <h1 class="normal">Psuedo class found here!</h1>  
+    <h1 class="normal">Normal class here</h1>
+    <h1 class="normal">Normal class here</h1>
+    <h1 class="normal">Psuedo class found here!</h1>
 
 ##### CSS Syntax example:
 
-    h1:last-child {  
-      color: orange;  
-    }  
+    h1:last-child {
+      color: orange;
+    }
 
 #### ID Selectors
 
@@ -347,18 +342,18 @@ IDs are only allowed to be used once per HTML page. Use IDs for very specific re
 
 ##### Specificity Weight:
 
--   More than universal, element, pseudo-classes, and classes.
--   Less than inline styles, and important.
+- More than universal, element, pseudo-classes, and classes.
+- Less than inline styles, and important.
 
 ##### HTML Syntax example:
 
-    <h1 id="example-id">I have an ID</h1>  
+    <h1 id="example-id">I have an ID</h1>
 
 ##### CSS Syntax example:
 
-    #example-id {  
-      color: gold;  
-    } 
+    #example-id {
+      color: gold;
+    }
 
 #### 3 Different Style Integrations
 
@@ -378,7 +373,7 @@ For this tutorial, you will be building CSS selector chains to demonstrate speci
 
 CSS specificity begins with HTML structure. Before we write any CSS, study the HTML nesting below:
 
-    <div class="container"> 
+    <div class="container">
       <header>
         <h1 class="main-header">Lambda School</h1>
         <nav>
@@ -451,14 +446,14 @@ Follow the instructions [here](https://codepen.io/lambdaschool/pen/rddroJ) to ch
 
 ##### Dig Deeper
 
--   [Centering things in CSS](https://css-tricks.com/centering-css-complete-guide/)  
-    Center anything, vertically or horizontally using CSS.
--   [Check your code: CSS](https://jigsaw.w3.org/css-validator/)  
-    You can check your CSS validation against current standards. Open bracket? Missing semicolon? This validator will find it.
--   [Check your code: HTML Validator](https://validator.w3.org/)  
-    You can check your code against the W3 standards by using their HTML validator. Remember, this is just HTML and doesn't include CSS or JavaScript.
+- [Centering things in CSS](https://css-tricks.com/centering-css-complete-guide/)  
+  Center anything, vertically or horizontally using CSS.
+- [Check your code: CSS](https://jigsaw.w3.org/css-validator/)  
+  You can check your CSS validation against current standards. Open bracket? Missing semicolon? This validator will find it.
+- [Check your code: HTML Validator](https://validator.w3.org/)  
+  You can check your code against the W3 standards by using their HTML validator. Remember, this is just HTML and doesn't include CSS or JavaScript.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to implement a CSS reset and understand why it’s important for cross browser development
 
@@ -472,25 +467,25 @@ A CSS reset is when a developer will remove all default styling provided by brow
 
 Example code from Eric Meyer’s popular CSS reset:
 
-    html, body, div, span, applet, object, iframe,  
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,  
-    a, abbr, acronym, address, big, cite, code,  
-    del, dfn, em, img, ins, kbd, q, s, samp,  
-    small, strike, strong, sub, sup, tt, var,  
-    b, u, i, center,  
-    dl, dt, dd, ol, ul, li,  
-    fieldset, form, label, legend,  
-    table, caption, tbody, tfoot, thead, tr, th, td,  
-    article, aside, canvas, details, embed,  
-    figure, figcaption, footer, header, hgroup,  
-    menu, nav, output, ruby, section, summary,  
-    time, mark, audio, video {  
-    margin: 0;  
-    padding: 0;  
-    border: 0;  
-    font-size: 100%;  
-    font: inherit;  
-    vertical-align: baseline;  
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
     }
 
 This type of reset is beginner-friendly because it forces you to create your own styles from scratch.
@@ -515,11 +510,11 @@ If you choose to use a CSS reset, make it your first priority to use it at the t
 
 The best way to see a reset in action is to use existing code with default settings in it. Then, add a reset to see the difference. Follow these instructions to see how impactful a reset it:
 
--   Open this codepen: https://codepen.io/lambdaschool/pen/bjWbrx?editors=1000
--   Go to Eric Meyer’s reset page: https://meyerweb.com/eric/tools/css/reset/
--   Copy and paste the CSS reset code
--   Paste the code in the CSS section of the codepen you have open
--   Observe the huge changes that just occurred
+- Open this codepen: https://codepen.io/lambdaschool/pen/bjWbrx?editors=1000
+- Go to Eric Meyer’s reset page: https://meyerweb.com/eric/tools/css/reset/
+- Copy and paste the CSS reset code
+- Paste the code in the CSS section of the codepen you have open
+- Observe the huge changes that just occurred
 
 Notice how your code is now looking lifeless. This is pretty jarring at first, but it gives us an opportunity now style these tags the way the designer wants without being worried about cross browser issues.
 
@@ -531,7 +526,7 @@ Use this codepen: https://codepen.io/lambdaschool/pen/bjWbrx?editors=1000
 
 Implement the eric meyer reset and take note of how much changed. Then implement normalize instead of the eric meyer reset. Notice the subtle but important differences. Make a list of changes you see between the two approaches by inspecting the code in your web developer tools and looking at the CSS properties on each element.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to describe and use responsive units to create a fully responsive website
 
@@ -553,14 +548,14 @@ The `px` unit is referred to as an `absolute length unit`. This means that `px` 
 
 #### Pros
 
--   Easiest unit for developers to read from design files
--   Modern browsers now allow `px` units to grow with built in zoom features
--   No reliance on cascade for sizing
+- Easiest unit for developers to read from design files
+- Modern browsers now allow `px` units to grow with built in zoom features
+- No reliance on cascade for sizing
 
 #### Cons
 
--   Rigid unit that is not responsive in layouts
--   Hard coded font size values are not accessible for users that change their default settings
+- Rigid unit that is not responsive in layouts
+- Hard coded font size values are not accessible for users that change their default settings
 
 ### em
 
@@ -587,12 +582,12 @@ One of the issues with `em` is its inherited calculation. Sometimes changing jus
 
 #### Pros
 
--   Responsive to its surroundings
+- Responsive to its surroundings
 
 #### Cons
 
--   Can be too flexible at times and create cascading font sizes that weren’t expected
--   Converting `px` to `em` when creating code from a design file usually requires a calculator or memorization that can feel cumbersome
+- Can be too flexible at times and create cascading font sizes that weren’t expected
+- Converting `px` to `em` when creating code from a design file usually requires a calculator or memorization that can feel cumbersome
 
 ### rem
 
@@ -637,13 +632,13 @@ Take a look at these examples:
 
 #### Pros
 
--   Responsive to `root` element only
--   If you use a % based unit, you can achieve accessibility gains and eliminate the awkward conversion system of 16px (the browser’s default font-size)
+- Responsive to `root` element only
+- If you use a % based unit, you can achieve accessibility gains and eliminate the awkward conversion system of 16px (the browser’s default font-size)
 
 #### Cons
 
--   If you don’t make the root element flexible, you will hurt accessibility by overwriting default user settings in the browser
--   Converting `px` to `rem` when creating code from a design file usually requires a calculator or memorization that can feel cumbersome
+- If you don’t make the root element flexible, you will hurt accessibility by overwriting default user settings in the browser
+- Converting `px` to `rem` when creating code from a design file usually requires a calculator or memorization that can feel cumbersome
 
 ### %
 
@@ -673,12 +668,12 @@ You can see how this would compound very quickly! You need to make sure that you
 
 #### Pros
 
--   Responsiveness starts at the viewport level and cascades down to nested elements helping you build layouts to adjust to any size
+- Responsiveness starts at the viewport level and cascades down to nested elements helping you build layouts to adjust to any size
 
 #### Cons
 
--   You have to be careful with `%` based layout as widths can get too small very fast
--   If you don’t add everything up to 100% when building layout, `%` can cause a lot of frustration searching the box model to see where the math went wrong
+- You have to be careful with `%` based layout as widths can get too small very fast
+- If you don’t add everything up to 100% when building layout, `%` can cause a lot of frustration searching the box model to see where the math went wrong
 
 ### vw / vh
 
@@ -692,13 +687,13 @@ There are many other absolute and responsive units. You can take a look at them 
 
 Currently the most popular units of length in CSS are `rem, em, px, %` with some newer units making waves like `vw and vh`. You are encouraged to try out other units and see how they behave compared the units we have discussed here.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Intro CSS](https://github.com/LambdaSchool/web-module-project-intro-css)
+- ##### [Intro CSS](https://github.com/LambdaSchool/web-module-project-intro-css)
 
-    Practice specificity and styling with responsive units by writing CSS to match a design file.
+  Practice specificity and styling with responsive units by writing CSS to match a design file.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -706,30 +701,30 @@ Currently the most popular units of length in CSS are `rem, em, px, %` with some
 
 You can use class recordings to help you master the material.
 
--   **[Intro CSS for WebPT22 w/Nathan Braun](https://youtu.be/4M3me5XVj2A)**
+- **[Intro CSS for WebPT22 w/Nathan Braun](https://youtu.be/4M3me5XVj2A)**
 
-    In this module we will dive deeper into the world of CSS to learn about the box model, specificity, and responsive units. These tools will help you to write professional-quality CSS that will be mostly compatible across browser types and screen sizes.
+  In this module we will dive deeper into the world of CSS to learn about the box model, specificity, and responsive units. These tools will help you to write professional-quality CSS that will be mostly compatible across browser types and screen sizes.
 
--   [All previous recordings](/archive/WEB1/module/rec6KMj0W3ukhYeWv)
+- [All previous recordings](/archive/WEB1/module/rec6KMj0W3ukhYeWv)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Continue to add style to your personal webpage with the box model where applicable. If you haven’t added an image yet, now is a good time to do so and practice styling.
+  Continue to add style to your personal webpage with the box model where applicable. If you haven’t added an image yet, now is a good time to do so and practice styling.
 
--   Objective challenge:
+- Objective challenge:
 
-    Follow the instructions [here](https://codepen.io/lambdaschool/pen/rddroJ) to challenge yourself using CSS specificity and inheritance.
+  Follow the instructions [here](https://codepen.io/lambdaschool/pen/rddroJ) to challenge yourself using CSS specificity and inheritance.
 
--   Objective challenge:
+- Objective challenge:
 
-    ### See The Difference: Reset vs Normalize
+  ### See The Difference: Reset vs Normalize
 
-    Use this codepen: https://codepen.io/lambdaschool/pen/bjWbrx?editors=1000
+  Use this codepen: https://codepen.io/lambdaschool/pen/bjWbrx?editors=1000
 
-    Implement the eric meyer reset and take note of how much changed. Then implement normalize instead of the eric meyer reset. Notice the subtle but important differences. Make a list of changes you see between the two approaches by inspecting the code in your web developer tools and looking at the CSS properties on each element.
+  Implement the eric meyer reset and take note of how much changed. Then implement normalize instead of the eric meyer reset. Notice the subtle but important differences. Make a list of changes you see between the two approaches by inspecting the code in your web developer tools and looking at the CSS properties on each element.
 
--   Project: Intro CSS
+- Project: Intro CSS

@@ -1,483 +1,704 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Intended as a home for Lambda School curriculum.">
-<meta name="author" content="">
-<meta name="generator" content="Jekyll v3.8.0">
-<title>Java Interfaces, Abstract Classes, Lambda Expression · Lambda School</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Intended as a home for Lambda School curriculum."
+    />
+    <meta name="author" content="" />
+    <meta name="generator" content="Jekyll v3.8.0" />
+    <title>
+      Java Interfaces, Abstract Classes, Lambda Expression · Lambda School
+    </title>
 
-<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+    <link
+      rel="stylesheet"
+      integrity
+      crossorigin="anonymous"
+      href="https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css"
+    />
 
-<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+    <link
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css"
+    />
 
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
-  ga('send', 'pageview');
-</script>
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css"
+    />
 
 
 
-<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
-<link rel="icon" href="/favicon.ico">
-<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#a0001e">
-</head>
-<body>
-<noscript>Please enable JavaScript to view this page.</noscript>
-<div id="redirect-message" style="display: none;">
-You must be logged in to view this page.
-</div>
-<div id="unauthorized-message" style="display: none;">
-You must be a Lambda School student to view this page.
-</div>
-<div id="content-wrapper" style="visibility: hidden;">
-<a id="skippy" class="sr-only sr-only-focusable" href="#content">
-<div class="container">
-<span class="skiplink-text">Skip to main content</span>
-</div>
-</a>
-<div class="mobile-menu">
-<div class="m-drop">
-<div class="mobile-row">
-<div class="header-row" style="padding: 3px 7px">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
-</svg></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
-</button>
-</div>
-</div>
-<div class="nav-row">
-<div class="results-container">
-<ul id="results-container" class="dropdown list-group"></ul>
-</div>
-<div id="mobile-course-menu" class="collapse nav-row">
-<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
-<nav class="bd-links">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Web API: Java</h4>
-</div>
+    <link
+      rel="apple-touch-icon"
+      href="/assets/img/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/assets/img/favicons/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicons/safari-pinned-tab.svg"
+      color="#a0001e"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="msapplication-config"
+      content="/assets/img/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#a0001e" />
+  </head>
+  <body>
+    <noscript>Please enable JavaScript to view this page.</noscript>
+    <div id="redirect-message" style="display: none">
+      You must be logged in to view this page.
+    </div>
+    <div id="unauthorized-message" style="display: none">
+      You must be a Lambda School student to view this page.
+    </div>
+    <div id="content-wrapper" style="visibility: hidden">
+      <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+          <span class="skiplink-text">Skip to main content</span>
+        </div>
+      </a>
+      <div class="mobile-menu">
+        <div class="m-drop">
+          <div class="mobile-row">
+            <div class="header-row" style="padding: 3px 7px">
+              <a class="navbar-brand" href="/" aria-label="Lambda School"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="35"
+                  viewBox="0 0 33 35"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                    fill="#EC3944"
+                  /></svg
+              ></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#mobile-course-menu"
+                aria-controls="mobile-course-menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="30"
+                  height="30"
+                  focusable="false"
+                >
+                  <title>Menu</title>
+                  <path
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    d="M4 7h22M4 15h22M4 23h22"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="nav-row">
+            <div class="results-container">
+              <ul id="results-container" class="dropdown list-group"></ul>
+            </div>
+            <div id="mobile-course-menu" class="collapse nav-row">
+              <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+                <nav class="bd-links">
+                  <div class="bd-toc-item">
+                    <h4 class="bd-toc-link">Web API: Java</h4>
+                  </div>
 
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recnLDyTtONLTMiFJ">
-1.&nbsp;&nbsp;Java Precourse Information
-</a>
-<ul class="nav bd-sidenav">
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web4java/sprint/recnLDyTtONLTMiFJ"
+                    >
+                      1.&nbsp;&nbsp;Java Precourse Information
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web4java/module/recfnUAvFbeyIAHib/">
+                          Welcome to Java Spring
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/recjH0lMflsFIVzDM/">
+                          Java Spring Course Table of Contents
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web4java/sprint/recoJ4ZqNQWX3cy6E"
+                    >
+                      2.&nbsp;&nbsp;Java Fundamentals
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web4java/module/recAGVTYNZyJbEFpu/">
+                          Java - JDK and Java Classes
+                        </a>
+                      </li>
+                      <li class="active bd-sidenav-active">
+                        <a href="/web4java/module/rec6Hrk77HupYeoN5/">
+                          Java Interfaces, Abstract Classes, Lambda Expression
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/recyJ663TrxVgpqY9/">
+                          Java - RDBMS and SQL Basics
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/recqtftA9E98qpbak/">
+                          Java - Intro to Maven, Spring, and Tomcat Using REST
+                          API
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web4java/sprint/recRVUSWQEtosl0Cz"
+                    >
+                      3.&nbsp;&nbsp;RDBMS and Intro to APIs
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web4java/module/recb0OVmRrJzqhH4D/">
+                          Java - Spring Database Creation Including Seed Data
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/rec3THcdjv8BumGCt/">
+                          Java - Read Data using CRUD Operations
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/recJihkiNn2KH2nEW/">
+                          Java - Inserting Deleting and Updating Data using CRUD
+                          Operations
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/rec2oQCFWOVShtxIx/">
+                          Java - Data Modeling and Auditing Fields with custom
+                          querying
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web4java/sprint/recSqm5AAEkJcIl3p"
+                    >
+                      4.&nbsp;&nbsp;Java Frameworks
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web4java/module/rec3E1WYDyoiEF1e3/">
+                          Java - Exception Handling
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/rececDV2OMIUcY2eH/">
+                          Java - User Authentication
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/recDboXln5wm4aKJt/">
+                          Java - Automated Testing
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/rec7pCiBPzI4DkAJT/">
+                          Java - Java Deployment and Best Practices
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web4java/sprint/recC5dhR9menaROwx"
+                    >
+                      5.&nbsp;&nbsp;WEB Unit 4 Java Build
+                    </a>
+                    <ul class="nav bd-sidenav"></ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="sidebar-container bd-sidebar">
+          <div class="docs-sidebar">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"
+              ><svg
+                width="135"
+                height="35"
+                viewBox="0 0 756 197"
+                fill="#ec3944"
+              >
+                <g>
+                  <path
+                    d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"
+                  ></path>
+                  <path
+                    d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"
+                  ></path>
+                  <path
+                    d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"
+                  ></path>
+                  <path
+                    d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"
+                  ></path>
+                  <path
+                    d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"
+                  ></path>
+                  <path
+                    d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"
+                  ></path>
+                </g>
+                <path
+                  d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"
+                ></path></svg
+            ></a>
+            <ul id="results-container" class="dropdown list-group"></ul>
+            <nav class="bd-links collapse" id="bd-docs-nav">
+              <div class="bd-toc-item">
+                <h4 class="bd-toc-link">Web API: Java</h4>
+              </div>
 
-<li>
-<a href="/web4java/module/recfnUAvFbeyIAHib/">
-Welcome to Java Spring
-</a>
-</li>
-<li>
-<a href="/web4java/module/recjH0lMflsFIVzDM/">
-Java Spring Course Table of Contents
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recoJ4ZqNQWX3cy6E">
-2.&nbsp;&nbsp;Java Fundamentals
-</a>
-<ul class="nav bd-sidenav">
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/web4java/sprint/recnLDyTtONLTMiFJ"
+                >
+                  1.&nbsp;&nbsp;Java Precourse Information
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web4java/module/recfnUAvFbeyIAHib/">
+                      Welcome to Java Spring
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/recjH0lMflsFIVzDM/">
+                      Java Spring Course Table of Contents
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/web4java/sprint/recoJ4ZqNQWX3cy6E"
+                >
+                  2.&nbsp;&nbsp;Java Fundamentals
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web4java/module/recAGVTYNZyJbEFpu/">
+                      Java - JDK and Java Classes
+                    </a>
+                  </li>
+                  <li class="active bd-sidenav-active">
+                    <a href="/web4java/module/rec6Hrk77HupYeoN5/">
+                      Java Interfaces, Abstract Classes, Lambda Expression
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/recyJ663TrxVgpqY9/">
+                      Java - RDBMS and SQL Basics
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/recqtftA9E98qpbak/">
+                      Java - Intro to Maven, Spring, and Tomcat Using REST API
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/web4java/sprint/recRVUSWQEtosl0Cz"
+                >
+                  3.&nbsp;&nbsp;RDBMS and Intro to APIs
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web4java/module/recb0OVmRrJzqhH4D/">
+                      Java - Spring Database Creation Including Seed Data
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/rec3THcdjv8BumGCt/">
+                      Java - Read Data using CRUD Operations
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/recJihkiNn2KH2nEW/">
+                      Java - Inserting Deleting and Updating Data using CRUD
+                      Operations
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/rec2oQCFWOVShtxIx/">
+                      Java - Data Modeling and Auditing Fields with custom
+                      querying
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/web4java/sprint/recSqm5AAEkJcIl3p"
+                >
+                  4.&nbsp;&nbsp;Java Frameworks
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web4java/module/rec3E1WYDyoiEF1e3/">
+                      Java - Exception Handling
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/rececDV2OMIUcY2eH/">
+                      Java - User Authentication
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/recDboXln5wm4aKJt/">
+                      Java - Automated Testing
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/rec7pCiBPzI4DkAJT/">
+                      Java - Java Deployment and Best Practices
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/web4java/sprint/recC5dhR9menaROwx"
+                >
+                  5.&nbsp;&nbsp;WEB Unit 4 Java Build
+                </a>
+                <ul class="nav bd-sidenav"></ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <main class="content-container flex-wrapper" role="main">
+          <div class="sticky-nav">
+            <div class="sprint-nav">
+              <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+                <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+                <li class="toc-entry toc-h2">
+                  <a href="#guided-project">Guided Project</a>
+                </li>
+                <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+                <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="wrapper limit-width">
+            <div class="flex-wrapper">
+              <div class="limit-width">
+                <div class="jumbotron">
+                  <h1 class="bd-title" id="content">
+                    Java Interfaces, Abstract Classes, Lambda Expression
+                  </h1>
+                  <span class="lead">
+                    <p class="bd-lead"></p>
+                    <style>
+                      table {
+                        font-family: arial, sans-serif;
+                        border-collapse: collapse;
+                        width: 100%;
+                      }
 
-<li>
-<a href="/web4java/module/recAGVTYNZyJbEFpu/">
-Java - JDK and Java Classes
-</a>
-</li>
-<li class="active bd-sidenav-active">
-<a href="/web4java/module/rec6Hrk77HupYeoN5/">
-Java Interfaces, Abstract Classes, Lambda Expression
-</a>
-</li>
-<li>
-<a href="/web4java/module/recyJ663TrxVgpqY9/">
-Java - RDBMS and SQL Basics
-</a>
-</li>
-<li>
-<a href="/web4java/module/recqtftA9E98qpbak/">
-Java - Intro to Maven, Spring, and Tomcat Using REST API
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recRVUSWQEtosl0Cz">
-3.&nbsp;&nbsp;RDBMS and Intro to APIs
-</a>
-<ul class="nav bd-sidenav">
+                      td,
+                      th {
+                        border: 1px solid #dddddd;
+                        text-align: left;
+                        padding: 8px;
+                      }
 
- <li>
-<a href="/web4java/module/recb0OVmRrJzqhH4D/">
-Java - Spring Database Creation Including Seed Data
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec3THcdjv8BumGCt/">
-Java - Read Data using CRUD Operations
-</a>
-</li>
-<li>
-<a href="/web4java/module/recJihkiNn2KH2nEW/">
-Java - Inserting Deleting and Updating Data using CRUD Operations
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec2oQCFWOVShtxIx/">
-Java - Data Modeling and Auditing Fields with custom querying
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recSqm5AAEkJcIl3p">
-4.&nbsp;&nbsp;Java Frameworks
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/web4java/module/rec3E1WYDyoiEF1e3/">
-Java - Exception Handling
-</a>
-</li>
-<li>
-<a href="/web4java/module/rececDV2OMIUcY2eH/">
-Java - User Authentication
-</a>
-</li>
-<li>
-<a href="/web4java/module/recDboXln5wm4aKJt/">
-Java - Automated Testing
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec7pCiBPzI4DkAJT/">
-Java - Java Deployment and Best Practices
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recC5dhR9menaROwx">
-5.&nbsp;&nbsp;WEB Unit 4 Java Build
-</a>
-<ul class="nav bd-sidenav">
-
-</ul>
-</div>
-</nav>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="main-container">
-<div class="sidebar-container bd-sidebar">
-<div class="docs-sidebar">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
-<ul id="results-container" class="dropdown list-group"></ul>
-<nav class="bd-links collapse" id="bd-docs-nav">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Web API: Java</h4>
-</div>
-
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recnLDyTtONLTMiFJ">
-1.&nbsp;&nbsp;Java Precourse Information
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/web4java/module/recfnUAvFbeyIAHib/">
-Welcome to Java Spring
-</a>
-</li>
-<li>
-<a href="/web4java/module/recjH0lMflsFIVzDM/">
-Java Spring Course Table of Contents
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recoJ4ZqNQWX3cy6E">
-2.&nbsp;&nbsp;Java Fundamentals
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/web4java/module/recAGVTYNZyJbEFpu/">
-Java - JDK and Java Classes
-</a>
-</li>
-<li class="active bd-sidenav-active">
-<a href="/web4java/module/rec6Hrk77HupYeoN5/">
-Java Interfaces, Abstract Classes, Lambda Expression
-</a>
-</li>
-<li>
-<a href="/web4java/module/recyJ663TrxVgpqY9/">
-Java - RDBMS and SQL Basics
-</a>
-</li>
-<li>
-<a href="/web4java/module/recqtftA9E98qpbak/">
-Java - Intro to Maven, Spring, and Tomcat Using REST API
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recRVUSWQEtosl0Cz">
- 3.&nbsp;&nbsp;RDBMS and Intro to APIs
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/web4java/module/recb0OVmRrJzqhH4D/">
-Java - Spring Database Creation Including Seed Data
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec3THcdjv8BumGCt/">
-Java - Read Data using CRUD Operations
-</a>
-</li>
-<li>
-<a href="/web4java/module/recJihkiNn2KH2nEW/">
-Java - Inserting Deleting and Updating Data using CRUD Operations
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec2oQCFWOVShtxIx/">
-Java - Data Modeling and Auditing Fields with custom querying
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recSqm5AAEkJcIl3p">
-4.&nbsp;&nbsp;Java Frameworks
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/web4java/module/rec3E1WYDyoiEF1e3/">
-Java - Exception Handling
-</a>
-</li>
-<li>
-<a href="/web4java/module/rececDV2OMIUcY2eH/">
-Java - User Authentication
-</a>
-</li>
-<li>
-<a href="/web4java/module/recDboXln5wm4aKJt/">
-Java - Automated Testing
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec7pCiBPzI4DkAJT/">
-Java - Java Deployment and Best Practices
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recC5dhR9menaROwx">
-5.&nbsp;&nbsp;WEB Unit 4 Java Build
-</a>
-<ul class="nav bd-sidenav">
-
-</ul>
-</div>
-</nav>
-</div>
-</div>
-<main class="content-container flex-wrapper" role="main">
-<div class="sticky-nav">
-<div class="sprint-nav">
-<ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
-<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
-<li class="toc-entry toc-h2"><a href="#guided-project">Guided Project</a></li>
-<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
-<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
-</ul>
-</div>
-
-</div>
-<div class="wrapper limit-width">
-<div class="flex-wrapper">
-<div class="limit-width">
-<div class="jumbotron">
-<h1 class="bd-title" id="content">Java Interfaces, Abstract Classes, Lambda Expression</h1>
-<span class="lead">
-<p class="bd-lead"></p>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
-<p><a id="Interfaces_Abstract_Classes_Lambda_Expressions"></a></p>
-</span>
-<strong>At the end of this module, you should be able to:</strong>
-<ul>
-<li>craft and manipulate Collections</li>
-<li>craft and manipulate ArrayList Collections</li>
-<li>use and implement interfaces</li>
-<li>use and implement abstract classes</li>
-<li>use and implement Lambda Expressions</li>
-<li>craft and manipulate Arrays Collections (*** OPTIONAL ***)</li>
-<li>craft and manipulate HashMap Collections (*** OPTIONAL ***)</li>
-<li>craft and manipulate HashSet Collections (*** OPTIONAL ***)</li>
-</ul>
-</div>
-<div class="alert alert-warning" role="alert">
-<h4>Pro Tip</h4>
-<p>A quick temper will make a fool of you soon enough.</p>
-<footer class="blockquote-footer"><p>Bruce Lee</p>
-</footer>
-</div>
-<h2 class="display-4">
-<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
-<p class="lead">Review each preclass resource before class.</p>
-<div class="preclass">
-<ul class="list-group list-group-flush">
-</ul>
-</div>
-<h2 class="display-4">
-<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
-<h4 class="mark mb-3 p-2">Learn to craft and manipulate Collections</h4>
-<p><a id="Collections_Overview"></a></p>
-<h5>Overview</h5>
-<p>A collection is a way of storing a series of related data under one variable name. You “collect” the data under a single variable to make data manipulation easier. Thus you have a “collection” of data under one name.</p>
-<p>Which collection you use depends on what you are trying to accomplish. We will be studying 4 different collections:</p>
-<ul>
-<li>Array</li>
-<li>ArrayList (the one we will use the most in Java Web Programming)</li>
-<li>HashMap</li>
-<li>HashSet</li>
-</ul>
-<p>Below is a brief chart comparing the collections we will be studying in class. These collections are the most common in Java Web Programming.</p>
-<table>
-<thead>
-<tr>
-<th>Collection</th>
-<th>Length</th>
-<th>element types</th>
-<th>unique values enforced</th>
-<th>accessed via</th>
-<th>maintains order (sortable)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Array</td>
-<td>fixed</td>
-<td>single</td>
-<td>no</td>
-<td>index</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>ArrayList</td>
-<td>variable</td>
-<td>single</td>
-<td>no</td>
-<td>index</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>HashMap</td>
-<td>variable</td>
-<td>&lt; key, value &gt; pair</td>
-<td>no</td>
-<td>key value</td>
-<td>no</td>
-</tr>
-<tr>
-<td>HashSet</td>
-<td>variable</td>
-<td>single</td>
-<td>yes</td>
-<td>value itself</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<p>For each collection we will look at:</p>
-<ul>
-<li>How to declare and initialize the collection</li>
-<li>Accessing a specific value</li>
-<li>Adding an element, value</li>
-<li>Removing an element, value</li>
-<li>Displaying the values for the collection</li>
-<li>Sorting the collection if possible</li>
-<li>Clearing the collection</li>
-</ul>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://youtu.be/VvDTro4Shzg" target="blank_">Java Collections</a><br> Youtube - Understanding Java Collections</li>
-<li>
-<a href="https://www.geeksforgeeks.org/collections-sort-java-examples/" target="blank_">Collections.sort()</a><br> GeeksForGeeks Collections.sort() in Java</li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to craft and manipulate ArrayList Collections</h4>
-<p><a id="ArrayList"></a></p>
-<h5>Overview</h5>
-<h3 id="software-needed">Software Needed</h3>
-<ul>
-<li>Java Development Kit (JDK) - at least version 11</li>
-<li>Text Editor</li>
-</ul>
-<h3 id="arraylists">ArrayLists</h3>
-<p>Arrays in Java are great except for one issue: they are fixed size. When dealing with data from the web, we don’t know how many elements we are dealing with. We certainly don’t want to reserve 1,000,000 elements for an array that might only use 10. Likewise, we have to make sure we have enough elements in our array to save what we need. ArrayLists to the rescue! ArrayLists are the most common collection we will be using in Java Web Programming. You can create an ArrayList with no elements and let it grow up to whatever the computer can handle.</p>
-<p>ArrayLists have the same characteristics as an Array:</p>
-<ul>
-<li>Fixed data types - Usually we deal with ArrayList of some type of Class. They can also contain primitive types.</li>
-<li>Order maintained - We can sort and filter ArrayList in a straightforward fashion.</li>
-</ul>
-<p>ArrayLists do differ from Arrays in that they can grow and shrink in size. There is performance and memory overhead in dealing with this freedom compared to using arrays of fixed size. The larger the ArrayList, the less impact this overhead has on overall performance. Also, ArrayList collections are not as straightforward to manipulate as Arrays.</p>
-<p>ArrayLists are derived from Lists in Java. Often you will see in Java programs a variable being declared as the general type List followed by being initialized with an ArrayList. This is a common practice when using the Spring Framework.</p>
-<p>Now let’s see these ArrayList collections in action!</p>
-<h5>Follow Along</h5>
-<p>If you have not already, create an application called <code class="highlighter-rouge">samplecollectionswithloops</code> in your work folder. We are going to create a package called <code class="highlighter-rouge">arraylist</code>. So you will end up with the directory:</p>
-<pre><code class="language-BASH">&lt;home dir&gt;&lt;work dir&gt;/samplecollectionswithloops/src/arraylist
+                      tr:nth-child(even) {
+                        background-color: #dddddd;
+                      }
+                    </style>
+                    <p>
+                      <a
+                        id="Interfaces_Abstract_Classes_Lambda_Expressions"
+                      ></a>
+                    </p>
+                  </span>
+                  <strong
+                    >At the end of this module, you should be able to:</strong
+                  >
+                  <ul>
+                    <li>craft and manipulate Collections</li>
+                    <li>craft and manipulate ArrayList Collections</li>
+                    <li>use and implement interfaces</li>
+                    <li>use and implement abstract classes</li>
+                    <li>use and implement Lambda Expressions</li>
+                    <li>
+                      craft and manipulate Arrays Collections (*** OPTIONAL ***)
+                    </li>
+                    <li>
+                      craft and manipulate HashMap Collections (*** OPTIONAL
+                      ***)
+                    </li>
+                    <li>
+                      craft and manipulate HashSet Collections (*** OPTIONAL
+                      ***)
+                    </li>
+                  </ul>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                  <h4>Pro Tip</h4>
+                  <p>A quick temper will make a fool of you soon enough.</p>
+                  <footer class="blockquote-footer"><p>Bruce Lee</p></footer>
+                </div>
+                <h2 class="display-4">
+                  <a
+                    id="prepare"
+                    class="anchor"
+                    href="#prepare"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Prepare
+                </h2>
+                <p class="lead">Review each preclass resource before class.</p>
+                <div class="preclass">
+                  <ul class="list-group list-group-flush"></ul>
+                </div>
+                <h2 class="display-4">
+                  <a id="learn" class="anchor" href="#learn" aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Learn
+                </h2>
+                <h4 class="mark mb-3 p-2">
+                  Learn to craft and manipulate Collections
+                </h4>
+                <p><a id="Collections_Overview"></a></p>
+                <h5>Overview</h5>
+                <p>
+                  A collection is a way of storing a series of related data
+                  under one variable name. You “collect” the data under a single
+                  variable to make data manipulation easier. Thus you have a
+                  “collection” of data under one name.
+                </p>
+                <p>
+                  Which collection you use depends on what you are trying to
+                  accomplish. We will be studying 4 different collections:
+                </p>
+                <ul>
+                  <li>Array</li>
+                  <li>
+                    ArrayList (the one we will use the most in Java Web
+                    Programming)
+                  </li>
+                  <li>HashMap</li>
+                  <li>HashSet</li>
+                </ul>
+                <p>
+                  Below is a brief chart comparing the collections we will be
+                  studying in class. These collections are the most common in
+                  Java Web Programming.
+                </p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Collection</th>
+                      <th>Length</th>
+                      <th>element types</th>
+                      <th>unique values enforced</th>
+                      <th>accessed via</th>
+                      <th>maintains order (sortable)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Array</td>
+                      <td>fixed</td>
+                      <td>single</td>
+                      <td>no</td>
+                      <td>index</td>
+                      <td>yes</td>
+                    </tr>
+                    <tr>
+                      <td>ArrayList</td>
+                      <td>variable</td>
+                      <td>single</td>
+                      <td>no</td>
+                      <td>index</td>
+                      <td>yes</td>
+                    </tr>
+                    <tr>
+                      <td>HashMap</td>
+                      <td>variable</td>
+                      <td>&lt; key, value &gt; pair</td>
+                      <td>no</td>
+                      <td>key value</td>
+                      <td>no</td>
+                    </tr>
+                    <tr>
+                      <td>HashSet</td>
+                      <td>variable</td>
+                      <td>single</td>
+                      <td>yes</td>
+                      <td>value itself</td>
+                      <td>no</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>For each collection we will look at:</p>
+                <ul>
+                  <li>How to declare and initialize the collection</li>
+                  <li>Accessing a specific value</li>
+                  <li>Adding an element, value</li>
+                  <li>Removing an element, value</li>
+                  <li>Displaying the values for the collection</li>
+                  <li>Sorting the collection if possible</li>
+                  <li>Clearing the collection</li>
+                </ul>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a href="https://youtu.be/VvDTro4Shzg" target="blank_"
+                      >Java Collections</a
+                    ><br />
+                    Youtube - Understanding Java Collections
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.geeksforgeeks.org/collections-sort-java-examples/"
+                      target="blank_"
+                      >Collections.sort()</a
+                    ><br />
+                    GeeksForGeeks Collections.sort() in Java
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to craft and manipulate ArrayList Collections
+                </h4>
+                <p><a id="ArrayList"></a></p>
+                <h5>Overview</h5>
+                <h3 id="software-needed">Software Needed</h3>
+                <ul>
+                  <li>Java Development Kit (JDK) - at least version 11</li>
+                  <li>Text Editor</li>
+                </ul>
+                <h3 id="arraylists">ArrayLists</h3>
+                <p>
+                  Arrays in Java are great except for one issue: they are fixed
+                  size. When dealing with data from the web, we don’t know how
+                  many elements we are dealing with. We certainly don’t want to
+                  reserve 1,000,000 elements for an array that might only use
+                  10. Likewise, we have to make sure we have enough elements in
+                  our array to save what we need. ArrayLists to the rescue!
+                  ArrayLists are the most common collection we will be using in
+                  Java Web Programming. You can create an ArrayList with no
+                  elements and let it grow up to whatever the computer can
+                  handle.
+                </p>
+                <p>ArrayLists have the same characteristics as an Array:</p>
+                <ul>
+                  <li>
+                    Fixed data types - Usually we deal with ArrayList of some
+                    type of Class. They can also contain primitive types.
+                  </li>
+                  <li>
+                    Order maintained - We can sort and filter ArrayList in a
+                    straightforward fashion.
+                  </li>
+                </ul>
+                <p>
+                  ArrayLists do differ from Arrays in that they can grow and
+                  shrink in size. There is performance and memory overhead in
+                  dealing with this freedom compared to using arrays of fixed
+                  size. The larger the ArrayList, the less impact this overhead
+                  has on overall performance. Also, ArrayList collections are
+                  not as straightforward to manipulate as Arrays.
+                </p>
+                <p>
+                  ArrayLists are derived from Lists in Java. Often you will see
+                  in Java programs a variable being declared as the general type
+                  List followed by being initialized with an ArrayList. This is
+                  a common practice when using the Spring Framework.
+                </p>
+                <p>Now let’s see these ArrayList collections in action!</p>
+                <h5>Follow Along</h5>
+                <p>
+                  If you have not already, create an application called
+                  <code class="highlighter-rouge"
+                    >samplecollectionswithloops</code
+                  >
+                  in your work folder. We are going to create a package called
+                  <code class="highlighter-rouge">arraylist</code>. So you will
+                  end up with the directory:
+                </p>
+                <pre><code class="language-BASH">&lt;home dir&gt;&lt;work dir&gt;/samplecollectionswithloops/src/arraylist
 </code></pre>
-<p>Now in the <code class="highlighter-rouge">arraylist</code> directory, use your text editor to create the following code in a file called <code class="highlighter-rouge">Main.java</code>. Note you do not have to enter the comments! The code is broken into 3 parts.</p>
-<h3 id="part-1">Part 1</h3>
-<pre><code class="language-JAVA">package arraylist;
+                <p>
+                  Now in the
+                  <code class="highlighter-rouge">arraylist</code> directory,
+                  use your text editor to create the following code in a file
+                  called <code class="highlighter-rouge">Main.java</code>. Note
+                  you do not have to enter the comments! The code is broken into
+                  3 parts.
+                </p>
+                <h3 id="part-1">Part 1</h3>
+                <pre><code class="language-JAVA">package arraylist;
 
 import java.util.ArrayList;   // the ArrayList requires this import
 import java.util.Collections; // required import for sorting the ArrayList
@@ -549,14 +770,18 @@ public class Main
         System.out.println("After adding \"Austin\" element at index 3");
         System.out.println(cities);
 </code></pre>
-<p>To run our code, we go through the following steps, running these commands from the <code class="highlighter-rouge">src</code> directory:</p>
-<pre><code class="language-BASH">javac arraylist/*.java
+                <p>
+                  To run our code, we go through the following steps, running
+                  these commands from the
+                  <code class="highlighter-rouge">src</code> directory:
+                </p>
+                <pre><code class="language-BASH">javac arraylist/*.java
 jar cvfe arraylist.jar arraylist.Main arraylist/*.class
 java -jar arraylist.jar
 </code></pre>
-<p>Fix any errors you might encounter and try again.</p>
-<p>So we get the following output:</p>
-<pre><code class="language-TEXT">*** The ArrayList ***
+                <p>Fix any errors you might encounter and try again.</p>
+                <p>So we get the following output:</p>
+                <pre><code class="language-TEXT">*** The ArrayList ***
 [Lehi, Seattle, San Francisco, Austin, Denver, Raleigh, New York City, Austin]
 The element at index 0 is Lehi
 
@@ -572,11 +797,16 @@ Before adding element at index 3
 After adding "Austin" element at index 3
 [Lehi, Seattle, San Francisco, Austin, Portland, Denver, Raleigh, New York City, Austin]
 </code></pre>
-<p>The following shows the execution of this code.</p>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%202%20-%20JX%20Java%20-%20II%20Language%20Fundamentals/assets/JX-SP10-M2-16.gif" alt="Array execution"></p>
-<h3 id="part-2">Part 2</h3>
-<p>Add this to the bottom of your Main class:</p>
-<pre><code class="language-JAVA">        // use remove(index) to remove an element. All elements after the one removed are moved one index lower
+                <p>The following shows the execution of this code.</p>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%202%20-%20JX%20Java%20-%20II%20Language%20Fundamentals/assets/JX-SP10-M2-16.gif"
+                    alt="Array execution"
+                  />
+                </p>
+                <h3 id="part-2">Part 2</h3>
+                <p>Add this to the bottom of your Main class:</p>
+                <pre><code class="language-JAVA">        // use remove(index) to remove an element. All elements after the one removed are moved one index lower
         cities.remove(3);
         System.out.println("\nRemoved index 3 so the first \"Austin\"");
         // We are looping through the elements in the ArrayList
@@ -595,14 +825,21 @@ After adding "Austin" element at index 3
             System.out.println("Index: " + i + " Value: " + cities.get(i));
         }
 </code></pre>
-<p>To run our code, we go through the following steps, running these commands from the <code class="highlighter-rouge">src</code> directory:</p>
-<pre><code class="language-BASH">javac arraylist/*.java
+                <p>
+                  To run our code, we go through the following steps, running
+                  these commands from the
+                  <code class="highlighter-rouge">src</code> directory:
+                </p>
+                <pre><code class="language-BASH">javac arraylist/*.java
 jar cvfe arraylist.jar arraylist.Main arraylist/*.class
 java -jar arraylist.jar
 </code></pre>
-<p>Fix any errors you might encounter and try again.</p>
-<p>So we get the following output minus the parts from previous sections:</p>
-<pre><code class="language-TEXT">Removed index 3 so the first "Austin"
+                <p>Fix any errors you might encounter and try again.</p>
+                <p>
+                  So we get the following output minus the parts from previous
+                  sections:
+                </p>
+                <pre><code class="language-TEXT">Removed index 3 so the first "Austin"
 Lehi
 Seattle
 San Francisco
@@ -622,11 +859,16 @@ Index: 5 Value: Raleigh
 Index: 6 Value: New York City
 Index: 7 Value: Austin
 </code></pre>
-<p>The following shows the execution of this code.</p>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%202%20-%20JX%20Java%20-%20II%20Language%20Fundamentals/assets/JX-SP10-M2-17.gif" alt="Array execution"></p>
-<h3 id="part-3">Part 3</h3>
-<p>Add this to the bottom of your Main class:</p>
-<pre><code class="language-JAVA">        System.out.println("\nSort in Alphabetical Order");
+                <p>The following shows the execution of this code.</p>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%202%20-%20JX%20Java%20-%20II%20Language%20Fundamentals/assets/JX-SP10-M2-17.gif"
+                    alt="Array execution"
+                  />
+                </p>
+                <h3 id="part-3">Part 3</h3>
+                <p>Add this to the bottom of your Main class:</p>
+                <pre><code class="language-JAVA">        System.out.println("\nSort in Alphabetical Order");
         // Use the Collections.sort(ArrayList) method to sort the ArrayList in ascending order. This actually changes the order of the ArrayList.
         Collections.sort(cities);
         for (int i = 0; i &lt; cities.size(); i++)
@@ -652,14 +894,21 @@ Index: 7 Value: Austin
     }
 }
 </code></pre>
-<p>To run our code, we go through the following steps, running these commands from the <code class="highlighter-rouge">src</code> directory:</p>
-<pre><code class="language-BASH">javac arraylist/*.java
+                <p>
+                  To run our code, we go through the following steps, running
+                  these commands from the
+                  <code class="highlighter-rouge">src</code> directory:
+                </p>
+                <pre><code class="language-BASH">javac arraylist/*.java
 jar cvfe arraylist.jar arraylist.Main arraylist/*.class
 java -jar arraylist.jar
 </code></pre>
-<p>Fix any errors you might encounter and try again.</p>
-<p>So we get the following output minus the parts from previous sections:</p>
-<pre><code class="language-TEXT">Sort in Alphabetical Order
+                <p>Fix any errors you might encounter and try again.</p>
+                <p>
+                  So we get the following output minus the parts from previous
+                  sections:
+                </p>
+                <pre><code class="language-TEXT">Sort in Alphabetical Order
 Index: 0 Value: Austin
 Index: 1 Value: Denver
 Index: 2 Value: Lehi
@@ -682,82 +931,147 @@ Index: 7 Value: Austin
 The empty ArrayList
 []
 </code></pre>
-<p>The following shows the execution of this code.</p>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%202%20-%20JX%20Java%20-%20II%20Language%20Fundamentals/assets/JX-SP10-M2-18.gif" alt="Array execution"></p>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://beginnersbook.com/2013/12/java-arraylist/" target="blank_">ArrayList</a><br> Beginners Book ArrayList</li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to use and implement interfaces</h4>
-<p><a id="Interfaces"></a></p>
-<h5>Overview</h5>
-<h3 id="software-needed">Software Needed</h3>
-<ul>
-<li>Java Development Kit (JDK) - at least version 11</li>
-<li>Text Editor</li>
-</ul>
-<p><strong>Interfaces</strong> defines a formal way for objects to handle interaction with the rest of the application. Interfaces are a way for the programmer to define what behaviors, methods, an object should have. Any class that <strong>implements</strong> an interface must include an implementation for each method in the interface. Interfaces thus give us a standard list of method headers that MUST be implemented in classes that use the interface. Classes that use the interface can include additional methods but must include the ones from the interface.</p>
-<p>For example: We have an interface called <strong>vehicles</strong> where all vehicles move and use fuel.</p>
-<p>All classes will use this interface. So all vehicles must move and use fuel but how they move and use fuel varies by vehicle. They can do other things as well!</p>
-<ul>
-<li>Car is a vehicle
-<ul>
-<li>
-<em>all vehicles move:</em> Moves on land with wheels</li>
-<li>
-<em>use fuel:</em> Uses gasoline</li>
-<li>Says “honk”</li>
-</ul>
-</li>
-<li>Airplane is a vehicle
-<ul>
-<li>
-<em>all vehicles move:</em> Moves through air on wings</li>
-<li>
-<em>use fuel:</em> Uses Jet Fuel</li>
-</ul>
-</li>
-<li>Sailboat is a vehicle
-<ul>
-<li>
-<em>all vehicles move:</em> Moves through water on a hull</li>
-<li>
-<em>use fuel:</em> Uses Wind</li>
-</ul>
-</li>
-</ul>
-<p>For a Java example, let’s say we have the following interface:</p>
-<pre><code class="language-JAVA">public interface SampleInterface
+                <p>The following shows the execution of this code.</p>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%202%20-%20JX%20Java%20-%20II%20Language%20Fundamentals/assets/JX-SP10-M2-18.gif"
+                    alt="Array execution"
+                  />
+                </p>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://beginnersbook.com/2013/12/java-arraylist/"
+                      target="blank_"
+                      >ArrayList</a
+                    ><br />
+                    Beginners Book ArrayList
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to use and implement interfaces
+                </h4>
+                <p><a id="Interfaces"></a></p>
+                <h5>Overview</h5>
+                <h3 id="software-needed">Software Needed</h3>
+                <ul>
+                  <li>Java Development Kit (JDK) - at least version 11</li>
+                  <li>Text Editor</li>
+                </ul>
+                <p>
+                  <strong>Interfaces</strong> defines a formal way for objects
+                  to handle interaction with the rest of the application.
+                  Interfaces are a way for the programmer to define what
+                  behaviors, methods, an object should have. Any class that
+                  <strong>implements</strong> an interface must include an
+                  implementation for each method in the interface. Interfaces
+                  thus give us a standard list of method headers that MUST be
+                  implemented in classes that use the interface. Classes that
+                  use the interface can include additional methods but must
+                  include the ones from the interface.
+                </p>
+                <p>
+                  For example: We have an interface called
+                  <strong>vehicles</strong> where all vehicles move and use
+                  fuel.
+                </p>
+                <p>
+                  All classes will use this interface. So all vehicles must move
+                  and use fuel but how they move and use fuel varies by vehicle.
+                  They can do other things as well!
+                </p>
+                <ul>
+                  <li>
+                    Car is a vehicle
+                    <ul>
+                      <li>
+                        <em>all vehicles move:</em> Moves on land with wheels
+                      </li>
+                      <li><em>use fuel:</em> Uses gasoline</li>
+                      <li>Says “honk”</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Airplane is a vehicle
+                    <ul>
+                      <li>
+                        <em>all vehicles move:</em> Moves through air on wings
+                      </li>
+                      <li><em>use fuel:</em> Uses Jet Fuel</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Sailboat is a vehicle
+                    <ul>
+                      <li>
+                        <em>all vehicles move:</em> Moves through water on a
+                        hull
+                      </li>
+                      <li><em>use fuel:</em> Uses Wind</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  For a Java example, let’s say we have the following interface:
+                </p>
+                <pre><code class="language-JAVA">public interface SampleInterface
 {
     void amethod(String parameter);
     int operation(int a, int b);
 }
 </code></pre>
-<p>This is a Java interface:</p>
-<ul>
-<li>an Interface is a class so its name must start with a capital letter</li>
-<li>an Interface is a class so its file name must match the interface name</li>
-<li>the key word <strong>interface</strong> is used in place of <strong>class</strong> to say this class is special. It is an interface</li>
-<li>interfaces can implement other interfaces and can extend an abstract class.</li>
-</ul>
-<p>The interface defines 2 methods:</p>
-<ul>
-<li>the methods are defined simply with their method header
-<ul>
-<li>Thus methods in the interface are considered <strong>abstract</strong> meaning they have no implementation, just the header</li>
-<li>The class that implements the interface must provide the body for the method</li>
-</ul>
-</li>
-<li>Normally we do not give an access modifier for a method header in an interface
-<ul>
-<li>methods default to public</li>
-</ul>
-</li>
-</ul>
-<p>Let’s implement the above interface. Let’s create a class that implements the interface thus giving a body to the method headers from the interface.</p>
-<pre><code class="language-JAVA">public class ASampleClass implements SampleInterface
+                <p>This is a Java interface:</p>
+                <ul>
+                  <li>
+                    an Interface is a class so its name must start with a
+                    capital letter
+                  </li>
+                  <li>
+                    an Interface is a class so its file name must match the
+                    interface name
+                  </li>
+                  <li>
+                    the key word <strong>interface</strong> is used in place of
+                    <strong>class</strong> to say this class is special. It is
+                    an interface
+                  </li>
+                  <li>
+                    interfaces can implement other interfaces and can extend an
+                    abstract class.
+                  </li>
+                </ul>
+                <p>The interface defines 2 methods:</p>
+                <ul>
+                  <li>
+                    the methods are defined simply with their method header
+                    <ul>
+                      <li>
+                        Thus methods in the interface are considered
+                        <strong>abstract</strong> meaning they have no
+                        implementation, just the header
+                      </li>
+                      <li>
+                        The class that implements the interface must provide the
+                        body for the method
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Normally we do not give an access modifier for a method
+                    header in an interface
+                    <ul>
+                      <li>methods default to public</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  Let’s implement the above interface. Let’s create a class that
+                  implements the interface thus giving a body to the method
+                  headers from the interface.
+                </p>
+                <pre><code class="language-JAVA">public class ASampleClass implements SampleInterface
 {
     String aStringField;
     int anIntField;
@@ -784,9 +1098,16 @@ The empty ArrayList
     }
 }
 </code></pre>
-<p>We have a class with two fields that implements both of the methods from the interface. The class also adds its own method.</p>
-<p>Now let’s implement another class that implements the interface but in a completely new way:</p>
-<pre><code class="language-JAVA">public class AnotherClass implements SampleInterface
+                <p>
+                  We have a class with two fields that implements both of the
+                  methods from the interface. The class also adds its own
+                  method.
+                </p>
+                <p>
+                  Now let’s implement another class that implements the
+                  interface but in a completely new way:
+                </p>
+                <pre><code class="language-JAVA">public class AnotherClass implements SampleInterface
 {
     @Override public void amethod(String parameter)
     {
@@ -799,22 +1120,48 @@ The empty ArrayList
     }
 }
 </code></pre>
-<p>Both of the above classes are valid and can be used in the same application!</p>
-<p>Note that interfaces:</p>
-<ul>
-<li>Cannot be used to create objects directly. Other classes must implement them</li>
-<li>Do not have the body implement methods just give structure</li>
-<li>Classes implementing interfaces must implement ALL interface methods. Classes can add their own methods as well</li>
-<li>Interface methods by default are abstract and public</li>
-<li>The main purpose of interfaces is to provide uniformity of behaviors among a group of classes. These classes all can do the same thing!</li>
-</ul>
-<h5>Follow Along</h5>
-<p>Let’s create an application that uses interfaces!</p>
-<p>If you have not already, create an application called <code class="highlighter-rouge">sampleoop</code> in your work folder. We are going to create a package called <code class="highlighter-rouge">interfaces</code>. So you will end up with the directory</p>
-<pre><code class="language-BASH">&lt;home dir&gt;&lt;work dir&gt;/sampleoop/src/branching
+                <p>
+                  Both of the above classes are valid and can be used in the
+                  same application!
+                </p>
+                <p>Note that interfaces:</p>
+                <ul>
+                  <li>
+                    Cannot be used to create objects directly. Other classes
+                    must implement them
+                  </li>
+                  <li>
+                    Do not have the body implement methods just give structure
+                  </li>
+                  <li>
+                    Classes implementing interfaces must implement ALL interface
+                    methods. Classes can add their own methods as well
+                  </li>
+                  <li>Interface methods by default are abstract and public</li>
+                  <li>
+                    The main purpose of interfaces is to provide uniformity of
+                    behaviors among a group of classes. These classes all can do
+                    the same thing!
+                  </li>
+                </ul>
+                <h5>Follow Along</h5>
+                <p>Let’s create an application that uses interfaces!</p>
+                <p>
+                  If you have not already, create an application called
+                  <code class="highlighter-rouge">sampleoop</code> in your work
+                  folder. We are going to create a package called
+                  <code class="highlighter-rouge">interfaces</code>. So you will
+                  end up with the directory
+                </p>
+                <pre><code class="language-BASH">&lt;home dir&gt;&lt;work dir&gt;/sampleoop/src/branching
 </code></pre>
-<p>Now in the the <code class="highlighter-rouge">interfaces</code> directory, use your text editor to create the following code in a file called <code class="highlighter-rouge">Animal.java</code></p>
-<pre><code class="language-JAVA">package interfaces;
+                <p>
+                  Now in the the
+                  <code class="highlighter-rouge">interfaces</code> directory,
+                  use your text editor to create the following code in a file
+                  called <code class="highlighter-rouge">Animal.java</code>
+                </p>
+                <pre><code class="language-JAVA">package interfaces;
 
 public interface Animal
 {
@@ -822,8 +1169,12 @@ public interface Animal
     void sleep();
 }
 </code></pre>
-<p>Create a file called <code class="highlighter-rouge">Pig.java</code> with the following code:</p>
-<pre><code class="language-JAVA">package interfaces;
+                <p>
+                  Create a file called
+                  <code class="highlighter-rouge">Pig.java</code> with the
+                  following code:
+                </p>
+                <pre><code class="language-JAVA">package interfaces;
 
 class Pig implements Animal
 {
@@ -838,8 +1189,12 @@ class Pig implements Animal
     }
 }
 </code></pre>
-<p>Create a file called <code class="highlighter-rouge">Dog.java</code> with the following code:</p>
-<pre><code class="language-JAVA">package interfaces;
+                <p>
+                  Create a file called
+                  <code class="highlighter-rouge">Dog.java</code> with the
+                  following code:
+                </p>
+                <pre><code class="language-JAVA">package interfaces;
 
 public class Dog implements Animal
 {
@@ -859,8 +1214,12 @@ public class Dog implements Animal
     }
 }
 </code></pre>
-<p>And finally create your <code class="highlighter-rouge">Main.java</code> file, your main class, with the following code:</p>
-<pre><code class="language-JAVA">package interfaces;
+                <p>
+                  And finally create your
+                  <code class="highlighter-rouge">Main.java</code> file, your
+                  main class, with the following code:
+                </p>
+                <pre><code class="language-JAVA">package interfaces;
 
 public class Main
 {
@@ -879,53 +1238,102 @@ public class Main
     }
 }
 </code></pre>
-<p>To run our code, we go through the following steps, running these commands from the <code class="highlighter-rouge">src</code> directory.</p>
-<pre><code class="language-BASH">javac interfaces/*.java
+                <p>
+                  To run our code, we go through the following steps, running
+                  these commands from the
+                  <code class="highlighter-rouge">src</code> directory.
+                </p>
+                <pre><code class="language-BASH">javac interfaces/*.java
 jar cvfe interfaces.jar interfaces.Main interfaces/*.class
 java -jar interfaces.jar
 </code></pre>
-<p>Fix any errors you might encounter and try again.</p>
-<p>So we get the following output:</p>
-<pre><code class="language-TEXT">Oink Oink
+                <p>Fix any errors you might encounter and try again.</p>
+                <p>So we get the following output:</p>
+                <pre><code class="language-TEXT">Oink Oink
 ZZZ
 Woof
 Snore...
 chomp chomp chomp
 </code></pre>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html" target="blank_">Interfaces</a><br> The Java Tutorials: Interfaces</li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to use and implement abstract classes</h4>
-<p><a id="Abstract_Classes"></a></p>
-<h5>Overview</h5>
-<h3 id="software-needed">Software Needed</h3>
-<ul>
-<li>Java Development Kit (JDK) - at least version 11</li>
- <li>Text Editor</li>
-</ul>
-<p>If we have a group of classes that share similar methods and / or fields, using <strong>abstract</strong> classes would make sense. The idea is that our group of classes could inherit from our abstract class, our parent class, all those standard methods or fields. That way, the group of classes could worry about just implementing what is different in each class.</p>
-<p>Abstraction is the process of hiding certain details and showing only the essential information to the sub class.</p>
-<p><strong>abstract</strong> is a keyword used for classes and methods:</p>
-<ul>
-<li>Abstract classes cannot be used to create objects. Abstract classes are used to create uniform subclasses.
-<ul>
-<li>These subclass <code class="highlighter-rouge">extends</code> the abstract class thus inheriting all the fields and methods from the abstract class and still being able to create their own.</li>
-<li>A subclass can only <code class="highlighter-rouge">extends</code> a single abstract class.</li>
-</ul>
-</li>
-<li>Abstract methods do not have a body, only a method header.</li>
-</ul>
-<p>So why should we use abstract classes?</p>
-<ul>
-<li>They enforce a common method and field implementation across subclasses.</li>
-<li>Subclasses can be combined into a single list, like an ArrayList under the parent, abstract class, data type!</li>
-<li>The abstract classes forces subclasses to have certain fields and implements of methods. Abstract classes do NOT require abstract methods.</li>
-</ul>
-<p>Let’s look at a Java example:</p>
-<pre><code class="language-JAVA">abstract class AnAbstractClass
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html"
+                      target="blank_"
+                      >Interfaces</a
+                    ><br />
+                    The Java Tutorials: Interfaces
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to use and implement abstract classes
+                </h4>
+                <p><a id="Abstract_Classes"></a></p>
+                <h5>Overview</h5>
+                <h3 id="software-needed">Software Needed</h3>
+                <ul>
+                  <li>Java Development Kit (JDK) - at least version 11</li>
+                  <li>Text Editor</li>
+                </ul>
+                <p>
+                  If we have a group of classes that share similar methods and /
+                  or fields, using <strong>abstract</strong> classes would make
+                  sense. The idea is that our group of classes could inherit
+                  from our abstract class, our parent class, all those standard
+                  methods or fields. That way, the group of classes could worry
+                  about just implementing what is different in each class.
+                </p>
+                <p>
+                  Abstraction is the process of hiding certain details and
+                  showing only the essential information to the sub class.
+                </p>
+                <p>
+                  <strong>abstract</strong> is a keyword used for classes and
+                  methods:
+                </p>
+                <ul>
+                  <li>
+                    Abstract classes cannot be used to create objects. Abstract
+                    classes are used to create uniform subclasses.
+                    <ul>
+                      <li>
+                        These subclass
+                        <code class="highlighter-rouge">extends</code> the
+                        abstract class thus inheriting all the fields and
+                        methods from the abstract class and still being able to
+                        create their own.
+                      </li>
+                      <li>
+                        A subclass can only
+                        <code class="highlighter-rouge">extends</code> a single
+                        abstract class.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Abstract methods do not have a body, only a method header.
+                  </li>
+                </ul>
+                <p>So why should we use abstract classes?</p>
+                <ul>
+                  <li>
+                    They enforce a common method and field implementation across
+                    subclasses.
+                  </li>
+                  <li>
+                    Subclasses can be combined into a single list, like an
+                    ArrayList under the parent, abstract class, data type!
+                  </li>
+                  <li>
+                    The abstract classes forces subclasses to have certain
+                    fields and implements of methods. Abstract classes do NOT
+                    require abstract methods.
+                  </li>
+                </ul>
+                <p>Let’s look at a Java example:</p>
+                <pre><code class="language-JAVA">abstract class AnAbstractClass
 {
     protected int anInt = 7;
 
@@ -936,13 +1344,26 @@ chomp chomp chomp
     abstract int operation(int a, int b);
 }
 </code></pre>
-<p>The above is a Java abstract class. Notice that it contains:</p>
-<ul>
-<li>A field <code class="highlighter-rouge">anInt</code> that will be known to all subclasses</li>
-<li>A method <code class="highlighter-rouge">amethod</code> already defined that can be used directly by all subclasses</li>
-<li>An abstract method <code class="highlighter-rouge">operation</code> that subclasses MUST implement</li>
-</ul>
-<pre><code class="language-JAVA">public class ASampleClass extends AnAbstractClass
+                <p>
+                  The above is a Java abstract class. Notice that it contains:
+                </p>
+                <ul>
+                  <li>
+                    A field <code class="highlighter-rouge">anInt</code> that
+                    will be known to all subclasses
+                  </li>
+                  <li>
+                    A method
+                    <code class="highlighter-rouge">amethod</code> already
+                    defined that can be used directly by all subclasses
+                  </li>
+                  <li>
+                    An abstract method
+                    <code class="highlighter-rouge">operation</code> that
+                    subclasses MUST implement
+                  </li>
+                </ul>
+                <pre><code class="language-JAVA">public class ASampleClass extends AnAbstractClass
 {
     @Override int operation(int a, int b)
     {
@@ -950,21 +1371,56 @@ chomp chomp chomp
     }
 }
 </code></pre>
-<p>Now we have the class <code class="highlighter-rouge">ASampleClass</code> extending the abstract class including finishing the declaration of the method <code class="highlighter-rouge">operation</code>. Inside the method <code class="highlighter-rouge">operation</code>, <code class="highlighter-rouge">ASampleClass</code> uses the field <code class="highlighter-rouge">anInt</code> inherited from <code class="highlighter-rouge">AnAbstractClass</code>!</p>
-<h3 id="overview-abstract-class-vs-interfaces">Overview Abstract Class vs Interfaces</h3>
-<ul>
-<li>Classes can inherit from multiple interfaces but only a single abstract class</li>
-<li>Abstract classes can contain fields; interfaces should not</li>
-<li>Abstract classes can implement methods that get shared across classes; interfaces give method headers but not actual implementations.</li>
-<li>Java with the Spring Framework uses interfaces much more than abstract classes!</li>
-</ul>
-<h5>Follow Along</h5>
-<p>Let’s create an application that uses an abstract class!</p>
-<p>If you have not already, create an application called <code class="highlighter-rouge">sampleoop</code> in your work folder. We are going to create a package called <code class="highlighter-rouge">abstraction</code>. So you will end up with the directory:</p>
-<pre><code class="language-BASH">&lt;home dir&gt;&lt;work dir&gt;/sampleoop/src/abstraction
+                <p>
+                  Now we have the class
+                  <code class="highlighter-rouge">ASampleClass</code> extending
+                  the abstract class including finishing the declaration of the
+                  method <code class="highlighter-rouge">operation</code>.
+                  Inside the method
+                  <code class="highlighter-rouge">operation</code>,
+                  <code class="highlighter-rouge">ASampleClass</code> uses the
+                  field <code class="highlighter-rouge">anInt</code> inherited
+                  from <code class="highlighter-rouge">AnAbstractClass</code>!
+                </p>
+                <h3 id="overview-abstract-class-vs-interfaces">
+                  Overview Abstract Class vs Interfaces
+                </h3>
+                <ul>
+                  <li>
+                    Classes can inherit from multiple interfaces but only a
+                    single abstract class
+                  </li>
+                  <li>
+                    Abstract classes can contain fields; interfaces should not
+                  </li>
+                  <li>
+                    Abstract classes can implement methods that get shared
+                    across classes; interfaces give method headers but not
+                    actual implementations.
+                  </li>
+                  <li>
+                    Java with the Spring Framework uses interfaces much more
+                    than abstract classes!
+                  </li>
+                </ul>
+                <h5>Follow Along</h5>
+                <p>Let’s create an application that uses an abstract class!</p>
+                <p>
+                  If you have not already, create an application called
+                  <code class="highlighter-rouge">sampleoop</code> in your work
+                  folder. We are going to create a package called
+                  <code class="highlighter-rouge">abstraction</code>. So you
+                  will end up with the directory:
+                </p>
+                <pre><code class="language-BASH">&lt;home dir&gt;&lt;work dir&gt;/sampleoop/src/abstraction
 </code></pre>
-<p>Now in the <code class="highlighter-rouge">abstraction</code> directory, use your text editor to create the following code in a file called <code class="highlighter-rouge">Animal.java</code>.</p>
-<pre><code class="language-JAVA">package abstraction;
+                <p>
+                  Now in the
+                  <code class="highlighter-rouge">abstraction</code> directory,
+                  use your text editor to create the following code in a file
+                  called <code class="highlighter-rouge">Animal.java</code>.
+                </p>
+                <pre><code class="language-JAVA">package abstraction;
 
 abstract class Animal
 {
@@ -983,8 +1439,12 @@ abstract class Animal
     }
 }
 </code></pre>
-<p>Create a file called <code class="highlighter-rouge">Pig.java</code> with the following code:</p>
-<pre><code class="language-JAVA">package abstraction;
+                <p>
+                  Create a file called
+                  <code class="highlighter-rouge">Pig.java</code> with the
+                  following code:
+                </p>
+                <pre><code class="language-JAVA">package abstraction;
 
 public class Pig extends Animal
 {
@@ -996,8 +1456,12 @@ public class Pig extends Animal
     }
 }
 </code></pre>
-<p>And finally create your <code class="highlighter-rouge">Main.java</code> file, your main class, with the following code:</p>
-<pre><code class="language-JAVA">package abstraction;
+                <p>
+                  And finally create your
+                  <code class="highlighter-rouge">Main.java</code> file, your
+                  main class, with the following code:
+                </p>
+                <pre><code class="language-JAVA">package abstraction;
 
 public class Main
 {
@@ -1010,47 +1474,87 @@ public class Main
     }
 }
 </code></pre>
-<p>To run our code, we go through the following steps, running these commands from the <code class="highlighter-rouge">src</code> directory.</p>
-<pre><code class="language-BASH">javac abstraction/*.java
+                <p>
+                  To run our code, we go through the following steps, running
+                  these commands from the
+                  <code class="highlighter-rouge">src</code> directory.
+                </p>
+                <pre><code class="language-BASH">javac abstraction/*.java
 jar cvfe abstraction.jar abstraction.Main abstraction/*.class
 java -jar abstraction.jar
 </code></pre>
-<p>Fix any errors you might encounter and try again.</p>
-<p>So we get the following output:</p>
-<pre><code class="language-TEXT">Oink Oink
+                <p>Fix any errors you might encounter and try again.</p>
+                <p>So we get the following output:</p>
+                <pre><code class="language-TEXT">Oink Oink
 ZZZ
 Weight 50
 </code></pre>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html" target="blank_">Abstract Class</a><br> The Java Tutorials: Abstract Methods and Classes</li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to use and implement Lambda Expressions</h4>
-<p><a id="Lambda_Expressions"></a></p>
-<h5>Overview</h5>
-<h3 id="software-needed">Software Needed</h3>
-<ul>
-<li>Java Development Kit (JDK) - at least version 11</li>
-<li>Text Editor</li>
-</ul>
-<p><strong>Lambda Expressions</strong> are anonymous functions similar to arrow functions in JavaScript, although not as robust or as widely used. Lambda Expressions are functions:</p>
-<ul>
-<li>without a name</li>
-<li>do not belong to any class</li>
-<li>may or may not have parameters</li>
-<li>have no stated return type</li>
-<li>with syntax of <code class="highlighter-rouge">(parameter list) -&gt; {body; function; statements;}</code>
-</li>
-</ul>
-<h3 id="using-a-lambda-expression-with-1-parameter-iterating-through-a-collection">Using a Lambda Expression with 1 parameter: Iterating through a collection</h3>
-<p>A very common use of Lambda Expressions is to iterate through a collection. So for example if <code class="highlighter-rouge">list</code> was ArrayList, this lambda expression would display each element of the ArrayList in order. <code class="highlighter-rouge">name</code> is our parameter in the lambda expression.</p>
-<pre><code class="language-JAVA">list.forEach (name -&gt; System.out.println (name));
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html"
+                      target="blank_"
+                      >Abstract Class</a
+                    ><br />
+                    The Java Tutorials: Abstract Methods and Classes
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to use and implement Lambda Expressions
+                </h4>
+                <p><a id="Lambda_Expressions"></a></p>
+                <h5>Overview</h5>
+                <h3 id="software-needed">Software Needed</h3>
+                <ul>
+                  <li>Java Development Kit (JDK) - at least version 11</li>
+                  <li>Text Editor</li>
+                </ul>
+                <p>
+                  <strong>Lambda Expressions</strong> are anonymous functions
+                  similar to arrow functions in JavaScript, although not as
+                  robust or as widely used. Lambda Expressions are functions:
+                </p>
+                <ul>
+                  <li>without a name</li>
+                  <li>do not belong to any class</li>
+                  <li>may or may not have parameters</li>
+                  <li>have no stated return type</li>
+                  <li>
+                    with syntax of
+                    <code class="highlighter-rouge"
+                      >(parameter list) -&gt; {body; function;
+                      statements;}</code
+                    >
+                  </li>
+                </ul>
+                <h3
+                  id="using-a-lambda-expression-with-1-parameter-iterating-through-a-collection"
+                >
+                  Using a Lambda Expression with 1 parameter: Iterating through
+                  a collection
+                </h3>
+                <p>
+                  A very common use of Lambda Expressions is to iterate through
+                  a collection. So for example if
+                  <code class="highlighter-rouge">list</code> was ArrayList,
+                  this lambda expression would display each element of the
+                  ArrayList in order.
+                  <code class="highlighter-rouge">name</code> is our parameter
+                  in the lambda expression.
+                </p>
+                <pre><code class="language-JAVA">list.forEach (name -&gt; System.out.println (name));
 </code></pre>
-<h3 id="using-a-lambda-expression-with-no-parameters">Using a Lambda Expression with no parameters</h3>
-<p>No parameters for the lambda expression is shown through the use of <code class="highlighter-rouge">()</code> to take the place of parameters.</p>
-<pre><code class="language-JAVA">public interface MyInterface
+                <h3 id="using-a-lambda-expression-with-no-parameters">
+                  Using a Lambda Expression with no parameters
+                </h3>
+                <p>
+                  No parameters for the lambda expression is shown through the
+                  use of <code class="highlighter-rouge">()</code> to take the
+                  place of parameters.
+                </p>
+                <pre><code class="language-JAVA">public interface MyInterface
 {
     int operation ();
 }
@@ -1064,9 +1568,14 @@ public class Main
     }
 }
 </code></pre>
-<h3 id="using-a-lambda-expression-with-multiple-parameters">Using a Lambda Expression with multiple parameters</h3>
-<p>Note the two parameters in <code class="highlighter-rouge">()</code></p>
-<pre><code class="language-JAVA">public interface MyInterface
+                <h3 id="using-a-lambda-expression-with-multiple-parameters">
+                  Using a Lambda Expression with multiple parameters
+                </h3>
+                <p>
+                  Note the two parameters in
+                  <code class="highlighter-rouge">()</code>
+                </p>
+                <pre><code class="language-JAVA">public interface MyInterface
 {
     String operation (int num, String msg);
 }
@@ -1080,23 +1589,53 @@ public class Main
     }
 }
 </code></pre>
-<h3 id="used-when-you-have-a-single-interface-method-or-abstract-method">Used when you have a single interface method or abstract method</h3>
-<p>As shown in the previous two examples, often we use lambda expressions to implement abstract methods. Let’s work through an example together that does just that.</p>
-<h5>Follow Along</h5>
-<p>By combining an interface and lambda expressions we can easily filter an ArrayList. We will be creating a copy of the ArrayList that contains the items we want. Then we use a lambda expression to print the filtered list!</p>
-<p>If you have not already, create an application called <code class="highlighter-rouge">sampleoop</code> in your work folder. We are going to create a package called <code class="highlighter-rouge">lambdaexpress</code>. So you will end up with the directory</p>
-<pre><code class="language-BASH">&lt;home dir&gt;&lt;work dir&gt;/sampleoop/src/lambdaexpress
+                <h3
+                  id="used-when-you-have-a-single-interface-method-or-abstract-method"
+                >
+                  Used when you have a single interface method or abstract
+                  method
+                </h3>
+                <p>
+                  As shown in the previous two examples, often we use lambda
+                  expressions to implement abstract methods. Let’s work through
+                  an example together that does just that.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  By combining an interface and lambda expressions we can easily
+                  filter an ArrayList. We will be creating a copy of the
+                  ArrayList that contains the items we want. Then we use a
+                  lambda expression to print the filtered list!
+                </p>
+                <p>
+                  If you have not already, create an application called
+                  <code class="highlighter-rouge">sampleoop</code> in your work
+                  folder. We are going to create a package called
+                  <code class="highlighter-rouge">lambdaexpress</code>. So you
+                  will end up with the directory
+                </p>
+                <pre><code class="language-BASH">&lt;home dir&gt;&lt;work dir&gt;/sampleoop/src/lambdaexpress
 </code></pre>
-<p>Create an interface that has one method. It’s one method will take as a parameter an object of the data type we wish to check. The method will be implemented using a lambda expression. Create the file <code class="highlighter-rouge">CheckNumber.java</code> with the following code</p>
-<pre><code class="language-JAVA">package lambdaexpress;
+                <p>
+                  Create an interface that has one method. It’s one method will
+                  take as a parameter an object of the data type we wish to
+                  check. The method will be implemented using a lambda
+                  expression. Create the file
+                  <code class="highlighter-rouge">CheckNumber.java</code> with
+                  the following code
+                </p>
+                <pre><code class="language-JAVA">package lambdaexpress;
 
 public interface CheckNumber
 {
     boolean test(int testNum);
 }
 </code></pre>
-<p>Now let’s create the <code class="highlighter-rouge">Main.java</code> file</p>
-<pre><code class="language-JAVA">package lambdaexpress;
+                <p>
+                  Now let’s create the
+                  <code class="highlighter-rouge">Main.java</code> file
+                </p>
+                <pre><code class="language-JAVA">package lambdaexpress;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -1139,66 +1678,140 @@ public class Main
     }
 }
 </code></pre>
-<p>Our main method:</p>
-<ul>
-<li>Creates a list of integers 0 through 6.</li>
-<li>Then we call a function with two parameters: one, the list we just created, the other a lambda expression that will implement the method from the interface we just created.</li>
-<li>The function loops through the ArrayList. If the lambda expression evaluates to true, that element is added to a temporary list.</li>
-<li>The temporary list is then returned to the main method.</li>
-<li>Now the main method displays the returned list using a lambda expression!</li>
-</ul>
-<p>To run our code, we go through the following steps, running these commands from the <code class="highlighter-rouge">src</code> directory.</p>
-<pre><code class="language-BASH">javac lambdaexpress/*.java
+                <p>Our main method:</p>
+                <ul>
+                  <li>Creates a list of integers 0 through 6.</li>
+                  <li>
+                    Then we call a function with two parameters: one, the list
+                    we just created, the other a lambda expression that will
+                    implement the method from the interface we just created.
+                  </li>
+                  <li>
+                    The function loops through the ArrayList. If the lambda
+                    expression evaluates to true, that element is added to a
+                    temporary list.
+                  </li>
+                  <li>
+                    The temporary list is then returned to the main method.
+                  </li>
+                  <li>
+                    Now the main method displays the returned list using a
+                    lambda expression!
+                  </li>
+                </ul>
+                <p>
+                  To run our code, we go through the following steps, running
+                  these commands from the
+                  <code class="highlighter-rouge">src</code> directory.
+                </p>
+                <pre><code class="language-BASH">javac lambdaexpress/*.java
 jar cvfe lambdaexpress.jar lambdaexpress.Main lambdaexpress/*.class
 java -jar lambdaexpress.jar
 </code></pre>
-<p>Fix any errors you might encounter and try again.</p>
-<p>So we get the following output:</p>
-<pre><code class="language-TEXT">0
+                <p>Fix any errors you might encounter and try again.</p>
+                <p>So we get the following output:</p>
+                <pre><code class="language-TEXT">0
 2
 4
 6
 </code></pre>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://www.callicoder.com/java-lambda-expression-tutorial/" target="blank_">Lambda Expressions</a><br> Callicoder Introduction to Lambda Expressions</li>
-<li>
-<a href="http://tutorials.jenkov.com/java/lambda-expressions.html" target="blank_">Lambda Expressions</a><br> Jenkov Lambda Expressions</li>
-<li>
-<a href="https://javabrains.io/courses/java_lambdabasics/" target="blank_">Lambda Basics</a><br> Javabrains - Java 8 Lambda Basic</li>
-<li>
-<a href="https://en.wikipedia.org/wiki/Lambda_calculus" target="blank_">Lambda Calculus</a><br> Wikipedia's Lambda Calculus</li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to craft and manipulate Arrays Collections (*** OPTIONAL ***)</h4>
-<p><a id="Arrays"></a></p>
-<h5>Overview</h5>
-<h3 id="software-needed">Software Needed</h3>
-<ul>
-<li>Java Development Kit (JDK) - at least version 11</li>
-<li>Text Editor</li>
-</ul>
-<p>Java is a strongly typed language. This is especially noticed when working with arrays. When compared to Java, other languages handling of arrays seems like sorcery! In Java, the important characteristics of arrays are:</p>
-<ul>
-<li>arrays have a fixed length that is created when the array is declared
-<ul>
-<li>When the array is created a fixed amount of memory, the size of which cannot change, is reserved for the array.</li>
-</ul>
-</li>
-<li>arrays have a single type
-<ul>
-<li>when the array is created, you say what data type the array’s elements will contain. Arrays can only contain one type of data and that type of data cannot change for the life of the array.</li>
-</ul>
-</li>
-</ul>
-<p>So what does this mean in practice? Let’s take a look.</p>
-<h5>Follow Along</h5>
-<p>If you have not already, create an application called <code class="highlighter-rouge">samplecollectionswithloops</code> in your work folder. We are going to create a package called <code class="highlighter-rouge">arrays</code>. So you will end up with the directory:</p>
-<pre><code class="language-BASH">&lt;home dir&gt;&lt;work dir&gt;/samplecollectionswithloops/src/arrays
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.callicoder.com/java-lambda-expression-tutorial/"
+                      target="blank_"
+                      >Lambda Expressions</a
+                    ><br />
+                    Callicoder Introduction to Lambda Expressions
+                  </li>
+                  <li>
+                    <a
+                      href="http://tutorials.jenkov.com/java/lambda-expressions.html"
+                      target="blank_"
+                      >Lambda Expressions</a
+                    ><br />
+                    Jenkov Lambda Expressions
+                  </li>
+                  <li>
+                    <a
+                      href="https://javabrains.io/courses/java_lambdabasics/"
+                      target="blank_"
+                      >Lambda Basics</a
+                    ><br />
+                    Javabrains - Java 8 Lambda Basic
+                  </li>
+                  <li>
+                    <a
+                      href="https://en.wikipedia.org/wiki/Lambda_calculus"
+                      target="blank_"
+                      >Lambda Calculus</a
+                    ><br />
+                    Wikipedia's Lambda Calculus
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to craft and manipulate Arrays Collections (*** OPTIONAL
+                  ***)
+                </h4>
+                <p><a id="Arrays"></a></p>
+                <h5>Overview</h5>
+                <h3 id="software-needed">Software Needed</h3>
+                <ul>
+                  <li>Java Development Kit (JDK) - at least version 11</li>
+                  <li>Text Editor</li>
+                </ul>
+                <p>
+                  Java is a strongly typed language. This is especially noticed
+                  when working with arrays. When compared to Java, other
+                  languages handling of arrays seems like sorcery! In Java, the
+                  important characteristics of arrays are:
+                </p>
+                <ul>
+                  <li>
+                    arrays have a fixed length that is created when the array is
+                    declared
+                    <ul>
+                      <li>
+                        When the array is created a fixed amount of memory, the
+                        size of which cannot change, is reserved for the array.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    arrays have a single type
+                    <ul>
+                      <li>
+                        when the array is created, you say what data type the
+                        array’s elements will contain. Arrays can only contain
+                        one type of data and that type of data cannot change for
+                        the life of the array.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>So what does this mean in practice? Let’s take a look.</p>
+                <h5>Follow Along</h5>
+                <p>
+                  If you have not already, create an application called
+                  <code class="highlighter-rouge"
+                    >samplecollectionswithloops</code
+                  >
+                  in your work folder. We are going to create a package called
+                  <code class="highlighter-rouge">arrays</code>. So you will end
+                  up with the directory:
+                </p>
+                <pre><code class="language-BASH">&lt;home dir&gt;&lt;work dir&gt;/samplecollectionswithloops/src/arrays
 </code></pre>
-<p>Now in the <code class="highlighter-rouge">arrays</code> directory, use your text editor to create the following code in a file called <code class="highlighter-rouge">Main.java</code>. Note you do not have to enter the comments!</p>
-<pre><code class="language-JAVA">package arrays;
+                <p>
+                  Now in the
+                  <code class="highlighter-rouge">arrays</code> directory, use
+                  your text editor to create the following code in a file called
+                  <code class="highlighter-rouge">Main.java</code>. Note you do
+                  not have to enter the comments!
+                </p>
+                <pre><code class="language-JAVA">package arrays;
 
 import java.util.Random;
 import java.util.Collections;
@@ -1248,14 +1861,18 @@ public class Main
     }
 }
 </code></pre>
-<p>To run our code, we go through the following steps, running these commands from the <code class="highlighter-rouge">src</code> directory:</p>
-<pre><code class="language-BASH">javac arrays/*.java
+                <p>
+                  To run our code, we go through the following steps, running
+                  these commands from the
+                  <code class="highlighter-rouge">src</code> directory:
+                </p>
+                <pre><code class="language-BASH">javac arrays/*.java
 jar cvfe arrays.jar arrays.Main arrays/*.class
 java -jar arrays.jar
 </code></pre>
-<p>Fix any errors you might encounter and try again.</p>
-<p>So the above code produces the following output:</p>
-<pre><code class="language-TEXT">*** Array Example ***
+                <p>Fix any errors you might encounter and try again.</p>
+                <p>So the above code produces the following output:</p>
+                <pre><code class="language-TEXT">*** Array Example ***
 The third element of the array is 3
 
 Print using a for each loop
@@ -1276,12 +1893,25 @@ Array Element 4 = 7
 Array Element 5 = 0
 Array Element 6 = 0
 </code></pre>
-<p>The following shows the execution of this code.</p>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%202%20-%20JX%20Java%20-%20II%20Language%20Fundamentals/assets/JX-SP10-M2-12.gif" alt="Array execution"></p>
-<h3 id="another-example">Another Example</h3>
-<p>We are still working with the <code class="highlighter-rouge">Main.java</code> file in the directory <code class="highlighter-rouge">&lt;home dir&gt;&lt;work dir&gt;/samplecollectionswithloops/src/arrays</code>.</p>
-<p>Add the following to the end of your Main class:</p>
-<pre><code class="language-JAVA">        System.out.println();
+                <p>The following shows the execution of this code.</p>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%202%20-%20JX%20Java%20-%20II%20Language%20Fundamentals/assets/JX-SP10-M2-12.gif"
+                    alt="Array execution"
+                  />
+                </p>
+                <h3 id="another-example">Another Example</h3>
+                <p>
+                  We are still working with the
+                  <code class="highlighter-rouge">Main.java</code> file in the
+                  directory
+                  <code class="highlighter-rouge"
+                    >&lt;home dir&gt;&lt;work
+                    dir&gt;/samplecollectionswithloops/src/arrays</code
+                  >.
+                </p>
+                <p>Add the following to the end of your Main class:</p>
+                <pre><code class="language-JAVA">        System.out.println();
         System.out.println("*** Another Way Example ***");
         // let's handle an array of Strings
         // We can initialize an array using a list of values
@@ -1316,14 +1946,21 @@ Array Element 6 = 0
         // we can print the elements in the array using the Arrays class
         System.out.println(Arrays.toString(cars));
 </code></pre>
-<p>To run our code, we go through the following steps, running these commands from the <code class="highlighter-rouge">src</code> directory:</p>
-<pre><code class="language-BASH">javac arrays/*.java
+                <p>
+                  To run our code, we go through the following steps, running
+                  these commands from the
+                  <code class="highlighter-rouge">src</code> directory:
+                </p>
+                <pre><code class="language-BASH">javac arrays/*.java
 jar cvfe arrays.jar arrays.Main arrays/*.class
 java -jar arrays.jar
 </code></pre>
-<p>Fix any errors you might encounter and try again.</p>
-<p>So the above code produces the following output, minus output from previous sections:</p>
-<pre><code class="language-TEXT">*** Another Way Example ***
+                <p>Fix any errors you might encounter and try again.</p>
+                <p>
+                  So the above code produces the following output, minus output
+                  from previous sections:
+                </p>
+                <pre><code class="language-TEXT">*** Another Way Example ***
 4
 Volvo
 [Ljava.lang.String;@73a8dfcc
@@ -1333,70 +1970,182 @@ After sort Element index 2 Mazda
 Array in descending order
 [Volvo, Mazda, Honda, Ford]
 </code></pre>
-<p>The following shows the execution of this code.</p>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%202%20-%20JX%20Java%20-%20II%20Language%20Fundamentals/assets/JX-SP10-M2-13.gif" alt="Array execution"></p>
-<p>Arrays are very common in Core Java. In Java Web Programming ArrayLists are the most commonly used collection.</p>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://codegym.cc/groups/posts/arrays-in-java" target="blank_">Arrays</a><br> Arrays in Java with a good resource list as well</li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to craft and manipulate HashMap Collections (*** OPTIONAL ***)</h4>
-<p><a id="HashMap"></a></p>
-<h5>Overview</h5>
-<h3 id="software-needed">Software Needed</h3>
-<ul>
-<li>Java Development Kit (JDK) - at least version 11</li>
-<li>Text Editor</li>
-</ul>
-<h3 id="hashmaps">HashMaps</h3>
-<p>After ArrayLists, the next most popular collection to use with Java Spring is the HashMap. HashMaps, like other collections, are a group of elements stored under a single variable name. We call each element in a HashMap an <strong>entry</strong> in the HashMap. This entry in the HashMap is a pair of data consisting of:</p>
-<ul>
-<li>
-<strong>key</strong> must be unique and is used as the index into the HashMap. We look up things based on keys. It can be any data type but is usually a primitive type or String.</li>
-<li>
-<strong>value</strong> can be any valid piece of data. This is the data we want to find when we look up the key.</li>
-</ul>
-<p>So we end up with the syntax HashMap(key, value). To declare a HashMap we say:</p>
-<pre><code class="language-JAVA">Map&lt;String, Integer&gt; ourHashMap = new HashMap&lt;&gt;();
+                <p>The following shows the execution of this code.</p>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%202%20-%20JX%20Java%20-%20II%20Language%20Fundamentals/assets/JX-SP10-M2-13.gif"
+                    alt="Array execution"
+                  />
+                </p>
+                <p>
+                  Arrays are very common in Core Java. In Java Web Programming
+                  ArrayLists are the most commonly used collection.
+                </p>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://codegym.cc/groups/posts/arrays-in-java"
+                      target="blank_"
+                      >Arrays</a
+                    ><br />
+                    Arrays in Java with a good resource list as well
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to craft and manipulate HashMap Collections (***
+                  OPTIONAL ***)
+                </h4>
+                <p><a id="HashMap"></a></p>
+                <h5>Overview</h5>
+                <h3 id="software-needed">Software Needed</h3>
+                <ul>
+                  <li>Java Development Kit (JDK) - at least version 11</li>
+                  <li>Text Editor</li>
+                </ul>
+                <h3 id="hashmaps">HashMaps</h3>
+                <p>
+                  After ArrayLists, the next most popular collection to use with
+                  Java Spring is the HashMap. HashMaps, like other collections,
+                  are a group of elements stored under a single variable name.
+                  We call each element in a HashMap an <strong>entry</strong> in
+                  the HashMap. This entry in the HashMap is a pair of data
+                  consisting of:
+                </p>
+                <ul>
+                  <li>
+                    <strong>key</strong> must be unique and is used as the index
+                    into the HashMap. We look up things based on keys. It can be
+                    any data type but is usually a primitive type or String.
+                  </li>
+                  <li>
+                    <strong>value</strong> can be any valid piece of data. This
+                    is the data we want to find when we look up the key.
+                  </li>
+                </ul>
+                <p>
+                  So we end up with the syntax HashMap(key, value). To declare a
+                  HashMap we say:
+                </p>
+                <pre><code class="language-JAVA">Map&lt;String, Integer&gt; ourHashMap = new HashMap&lt;&gt;();
 </code></pre>
-<p>In this case, the key to the HashMap are Strings, the values are Integers. Notice that both the data type for keys and values must be classes. This is why we use the class wrapper <code class="highlighter-rouge">Integer</code> for the primitive data type <code class="highlighter-rouge">int</code>.</p>
-<p>Notice that HashMaps are a combination of key, value - just like JSON objects have a key, value combination. If you are unclear as to what JSON objects are, no worries, they will be covered soon.</p>
-<h3 id="sorting-hashmaps">Sorting HashMaps</h3>
-<p>HashMaps have a unique issue when wanting to sort them. First they have to be converted to an ArrayList. HashMaps themselves do not maintain order. After converting to the ArrayList, we now have elements in our ArrayList that have multiple data, a key and a value. So which one are we sorting on?</p>
-<p>To help us with sorting, we are going to use a <strong>Lambda Expression</strong>. We will be discussing Lambda Expressions in depth later in the course but for now: A Lambda Expression is short cut way to write a function. They are similar to the arrow functions in JavaScript. Some methods can take a function as a parameter. In these cases, Lambda Expressions are the way to go. Sort happens to be one such method. For example, to sort a HashMap that has been put into an ArrayList:</p>
-<ul>
-<li>given that myList is an ArrayList containing entries for a HashMap</li>
-<li>use the sort method from ArrayList</li>
-<li>As the argument, use a Lambda Expression to say how to sort</li>
-</ul>
-<pre><code class="language-JAVA">myList.sort(Comparator.comparing(o -&gt; o.getKey().toString()));
+                <p>
+                  In this case, the key to the HashMap are Strings, the values
+                  are Integers. Notice that both the data type for keys and
+                  values must be classes. This is why we use the class wrapper
+                  <code class="highlighter-rouge">Integer</code> for the
+                  primitive data type
+                  <code class="highlighter-rouge">int</code>.
+                </p>
+                <p>
+                  Notice that HashMaps are a combination of key, value - just
+                  like JSON objects have a key, value combination. If you are
+                  unclear as to what JSON objects are, no worries, they will be
+                  covered soon.
+                </p>
+                <h3 id="sorting-hashmaps">Sorting HashMaps</h3>
+                <p>
+                  HashMaps have a unique issue when wanting to sort them. First
+                  they have to be converted to an ArrayList. HashMaps themselves
+                  do not maintain order. After converting to the ArrayList, we
+                  now have elements in our ArrayList that have multiple data, a
+                  key and a value. So which one are we sorting on?
+                </p>
+                <p>
+                  To help us with sorting, we are going to use a
+                  <strong>Lambda Expression</strong>. We will be discussing
+                  Lambda Expressions in depth later in the course but for now: A
+                  Lambda Expression is short cut way to write a function. They
+                  are similar to the arrow functions in JavaScript. Some methods
+                  can take a function as a parameter. In these cases, Lambda
+                  Expressions are the way to go. Sort happens to be one such
+                  method. For example, to sort a HashMap that has been put into
+                  an ArrayList:
+                </p>
+                <ul>
+                  <li>
+                    given that myList is an ArrayList containing entries for a
+                    HashMap
+                  </li>
+                  <li>use the sort method from ArrayList</li>
+                  <li>
+                    As the argument, use a Lambda Expression to say how to sort
+                  </li>
+                </ul>
+                <pre><code class="language-JAVA">myList.sort(Comparator.comparing(o -&gt; o.getKey().toString()));
 </code></pre>
-<p>In the above example:</p>
-<ul>
-<li>The parameter is another method, <code class="highlighter-rouge">Comparator.comparing</code>. This method will actually do the sort for us.</li>
-<li>
-<code class="highlighter-rouge">Comparator.comparing</code> takes a parameter saying what to sort; in our case we want to sort based off of the keys in the entry so we use a getKey().</li>
-<li>getKey() returns an object. We cannot compare data types of objects so we have to convert that object to a String, the data type of the keys</li>
-<li>This will sort the ArrayList in ascending order. The original HashMap remains unchanged.</li>
-</ul>
-<p>For another example:</p>
-<pre><code class="language-JAVA"> myList.sort(Comparator.comparing(o -&gt; (int) o.getValue(), Comparator.reverseOrder()));
+                <p>In the above example:</p>
+                <ul>
+                  <li>
+                    The parameter is another method,
+                    <code class="highlighter-rouge">Comparator.comparing</code>.
+                    This method will actually do the sort for us.
+                  </li>
+                  <li>
+                    <code class="highlighter-rouge">Comparator.comparing</code>
+                    takes a parameter saying what to sort; in our case we want
+                    to sort based off of the keys in the entry so we use a
+                    getKey().
+                  </li>
+                  <li>
+                    getKey() returns an object. We cannot compare data types of
+                    objects so we have to convert that object to a String, the
+                    data type of the keys
+                  </li>
+                  <li>
+                    This will sort the ArrayList in ascending order. The
+                    original HashMap remains unchanged.
+                  </li>
+                </ul>
+                <p>For another example:</p>
+                <pre><code class="language-JAVA"> myList.sort(Comparator.comparing(o -&gt; (int) o.getValue(), Comparator.reverseOrder()));
 </code></pre>
-<ul>
-<li>The parameter is another method, <code class="highlighter-rouge">Comparator.comparing</code>. This method will actually do the sort for us.</li>
-<li>
-<code class="highlighter-rouge">Comparator.comparing</code> takes a parameter saying what to sort, in our case we want to sort based off of the value in the entry. We use a getValue()</li>
-<li>getValue() returns an object. We cannot compare data types of objects so we type caste the object to an <code class="highlighter-rouge">int</code>, the data type of the value</li>
-<li>We have added another argument to our Comparator.comparing method, Comparator.reverseOrder(). This will sort the ArrayList in descending order! The original HashMap remains unchanged.</li>
-</ul>
-<h5>Follow Along</h5>
-<p>If you have not already, create an application called <code class="highlighter-rouge">samplecollectionswithloops</code> in your work folder. We are going to create a package called <code class="highlighter-rouge">hashmap</code>. So you will end up with the directory:</p>
-<pre><code class="language-BASH">&lt;home dir&gt;&lt;work dir&gt;/samplecollectionswithloops/src/hashmap
+                <ul>
+                  <li>
+                    The parameter is another method,
+                    <code class="highlighter-rouge">Comparator.comparing</code>.
+                    This method will actually do the sort for us.
+                  </li>
+                  <li>
+                    <code class="highlighter-rouge">Comparator.comparing</code>
+                    takes a parameter saying what to sort, in our case we want
+                    to sort based off of the value in the entry. We use a
+                    getValue()
+                  </li>
+                  <li>
+                    getValue() returns an object. We cannot compare data types
+                    of objects so we type caste the object to an
+                    <code class="highlighter-rouge">int</code>, the data type of
+                    the value
+                  </li>
+                  <li>
+                    We have added another argument to our Comparator.comparing
+                    method, Comparator.reverseOrder(). This will sort the
+                    ArrayList in descending order! The original HashMap remains
+                    unchanged.
+                  </li>
+                </ul>
+                <h5>Follow Along</h5>
+                <p>
+                  If you have not already, create an application called
+                  <code class="highlighter-rouge"
+                    >samplecollectionswithloops</code
+                  >
+                  in your work folder. We are going to create a package called
+                  <code class="highlighter-rouge">hashmap</code>. So you will
+                  end up with the directory:
+                </p>
+                <pre><code class="language-BASH">&lt;home dir&gt;&lt;work dir&gt;/samplecollectionswithloops/src/hashmap
 </code></pre>
-<p>Now in the the <code class="highlighter-rouge">hashmap</code> directory, use your text editor to create the following code in a file called <code class="highlighter-rouge">Main.java</code>. Note: you do not have to enter the comments.</p>
-<pre><code class="language-JAVA">package hashmap;
+                <p>
+                  Now in the the
+                  <code class="highlighter-rouge">hashmap</code> directory, use
+                  your text editor to create the following code in a file called
+                  <code class="highlighter-rouge">Main.java</code>. Note: you do
+                  not have to enter the comments.
+                </p>
+                <pre><code class="language-JAVA">package hashmap;
 
 import java.util.ArrayList;  // ArrayList needed for sorting requires this import
 import java.util.Comparator; // When we sort, we use Comparator which requires this import
@@ -1499,14 +2248,18 @@ public class Main
     }
 }
 </code></pre>
-<p>To run our code, we go through the following steps, running these commands from the <code class="highlighter-rouge">src</code> directory:</p>
-<pre><code class="language-BASH">javac hashmap/*.java
+                <p>
+                  To run our code, we go through the following steps, running
+                  these commands from the
+                  <code class="highlighter-rouge">src</code> directory:
+                </p>
+                <pre><code class="language-BASH">javac hashmap/*.java
 jar cvfe hashmap.jar hashmap.Main hashmap/*.class
 java -jar hashmap.jar
 </code></pre>
-<p>Fix any errors you might encounter and try again.</p>
-<p>So we get the following output:</p>
-<pre><code class="language-TEXT">*** The HashMap ***
+                <p>Fix any errors you might encounter and try again.</p>
+                <p>So we get the following output:</p>
+                <pre><code class="language-TEXT">*** The HashMap ***
 {San Francisco=884363, New York City=8623000, Seattle=724745, Raleigh=464758, Denver=619968, Austin=950715, Lehi=62712}
 
 HashMap contains Raleigh as a key: true
@@ -1531,38 +2284,105 @@ Sort by Value
 The HashMap Cleared
 {}
 </code></pre>
-<p>The following shows the execution of this code.</p>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%202%20-%20JX%20Java%20-%20II%20Language%20Fundamentals/assets/JX-SP10-M2-15.gif" alt="HashMap execution"></p>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://beginnersbook.com/2013/12/hashmap-in-java-with-example/" target="blank_">HashMaps</a><br> Beginners Book HashMaps</li>
-<li>
-<a href="https://www.baeldung.com/java-iterate-map" target="blank_">Iterate over a Map</a><br> Baeldung Iterate over a Map in Java</li>
-<li>
-<a href="https://www.geeksforgeeks.org/hashmap-put-method-in-java/" target="blank_">HashMap.put</a><br> GeeksForGeeks HashMap.put Method in Java</li>
-<li>
-<a href="https://www.geeksforgeeks.org/hashmap-containskey-method-in-java/" target="blank_">HashMap.containsKey</a><br> GeeksForGeeks HashMap.containsKey() Method in Java</li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to craft and manipulate HashSet Collections (*** OPTIONAL ***)</h4>
-<p><a id="HashSet"></a></p>
-<h5>Overview</h5>
-<h3 id="software-needed">Software Needed</h3>
-<ul>
-<li>Java Development Kit (JDK) - at least version 11</li>
-<li>Text Editor</li>
-</ul>
-<h3 id="hashsets">HashSets</h3>
-<p>HashSets contain a collection of values. These values can be of primitive types or Classes. However, HashSets force the values to be unique. Our main use of HashSets will be to create unique lists of things. When you are adding elements to a HashSet, if the HashSet already contains the element, nothing happens. The program just goes on executing, ignoring the add statement. This is very useful when we need to generate, for example, a unique random list of names. We can randomly generate the names, add them to a HashSet and if by chance we generate a duplicate, adding to the HashSet is simply ignored.</p>
-<p>HashSets do not maintain order. Java maintains the set in whatever order is most efficient. So to sort a HashSet, we must first convert it to an ArrayList.</p>
-<p>HashSets are derived from Sets in Java. Often you will see in Java programs a variable being declared as the general type Set followed by being initialized with a HashSet. This is a common practice when using the Spring Framework.</p>
-<h5>Follow Along</h5>
-<p>If you have not already, create an application called <code class="highlighter-rouge">samplecollectionswithloops</code> in your work folder. We are going to create a package called <code class="highlighter-rouge">hashset</code>. So you will end up with the directory:</p>
-<pre><code class="language-BASH">&lt;home dir&gt;&lt;work dir&gt;/samplecollectionswithloops/src/hashset
+                <p>The following shows the execution of this code.</p>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%202%20-%20JX%20Java%20-%20II%20Language%20Fundamentals/assets/JX-SP10-M2-15.gif"
+                    alt="HashMap execution"
+                  />
+                </p>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://beginnersbook.com/2013/12/hashmap-in-java-with-example/"
+                      target="blank_"
+                      >HashMaps</a
+                    ><br />
+                    Beginners Book HashMaps
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.baeldung.com/java-iterate-map"
+                      target="blank_"
+                      >Iterate over a Map</a
+                    ><br />
+                    Baeldung Iterate over a Map in Java
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.geeksforgeeks.org/hashmap-put-method-in-java/"
+                      target="blank_"
+                      >HashMap.put</a
+                    ><br />
+                    GeeksForGeeks HashMap.put Method in Java
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.geeksforgeeks.org/hashmap-containskey-method-in-java/"
+                      target="blank_"
+                      >HashMap.containsKey</a
+                    ><br />
+                    GeeksForGeeks HashMap.containsKey() Method in Java
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to craft and manipulate HashSet Collections (***
+                  OPTIONAL ***)
+                </h4>
+                <p><a id="HashSet"></a></p>
+                <h5>Overview</h5>
+                <h3 id="software-needed">Software Needed</h3>
+                <ul>
+                  <li>Java Development Kit (JDK) - at least version 11</li>
+                  <li>Text Editor</li>
+                </ul>
+                <h3 id="hashsets">HashSets</h3>
+                <p>
+                  HashSets contain a collection of values. These values can be
+                  of primitive types or Classes. However, HashSets force the
+                  values to be unique. Our main use of HashSets will be to
+                  create unique lists of things. When you are adding elements to
+                  a HashSet, if the HashSet already contains the element,
+                  nothing happens. The program just goes on executing, ignoring
+                  the add statement. This is very useful when we need to
+                  generate, for example, a unique random list of names. We can
+                  randomly generate the names, add them to a HashSet and if by
+                  chance we generate a duplicate, adding to the HashSet is
+                  simply ignored.
+                </p>
+                <p>
+                  HashSets do not maintain order. Java maintains the set in
+                  whatever order is most efficient. So to sort a HashSet, we
+                  must first convert it to an ArrayList.
+                </p>
+                <p>
+                  HashSets are derived from Sets in Java. Often you will see in
+                  Java programs a variable being declared as the general type
+                  Set followed by being initialized with a HashSet. This is a
+                  common practice when using the Spring Framework.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  If you have not already, create an application called
+                  <code class="highlighter-rouge"
+                    >samplecollectionswithloops</code
+                  >
+                  in your work folder. We are going to create a package called
+                  <code class="highlighter-rouge">hashset</code>. So you will
+                  end up with the directory:
+                </p>
+                <pre><code class="language-BASH">&lt;home dir&gt;&lt;work dir&gt;/samplecollectionswithloops/src/hashset
 </code></pre>
-<p>Now in the the <code class="highlighter-rouge">hashset</code> directory, use your text editor to create the following code in a file called <code class="highlighter-rouge">Main.java</code>. Note: you do not have to enter the comments.</p>
-<pre><code class="language-JAVA">package hashset;
+                <p>
+                  Now in the the
+                  <code class="highlighter-rouge">hashset</code> directory, use
+                  your text editor to create the following code in a file called
+                  <code class="highlighter-rouge">Main.java</code>. Note: you do
+                  not have to enter the comments.
+                </p>
+                <pre><code class="language-JAVA">package hashset;
 
 import java.util.ArrayList;   // ArrayList needed for sorting requires this import
 import java.util.HashSet;     // HashSet requires this import
@@ -1647,14 +2467,18 @@ public class Main
     }
 }
 </code></pre>
-<p>To run our code, we go through the following steps, running these commands from the <code class="highlighter-rouge">src</code> directory:</p>
-<pre><code class="language-BASH">javac hashset/*.java
+                <p>
+                  To run our code, we go through the following steps, running
+                  these commands from the
+                  <code class="highlighter-rouge">src</code> directory:
+                </p>
+                <pre><code class="language-BASH">javac hashset/*.java
 jar cvfe hashset.jar hashset.Main hashset/*.class
 java -jar hashset.jar
 </code></pre>
-<p>Fix any errors you might encounter and try again.</p>
-<p>So we get the following output:</p>
-<pre><code class="language-TEXT">*** The HashSet ***
+                <p>Fix any errors you might encounter and try again.</p>
+                <p>So we get the following output:</p>
+                <pre><code class="language-TEXT">*** The HashSet ***
 [San Francisco, New York City, Seattle, Raleigh, Denver, Austin, Lehi]
 
 HashSet contains Raleigh or not: true
@@ -1675,204 +2499,311 @@ The Sorted HashSet
 The HashSet Cleared
 []
 </code></pre>
-<p>The following shows the execution or flow of this code.</p>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%202%20-%20JX%20Java%20-%20II%20Language%20Fundamentals/assets/JX-SP10-M2-14.gif" alt="Array execution"></p>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://www.javatpoint.com/working-of-hashset-in-java" target="blank_">HashSet</a><br> Working of HashSet in Java</li>
-</ul>
-<hr>
-<h2>
-<a id="guided-project" class="anchor" href="#guided-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Guided Project</h2>
-<h3>java-transportation</h3>
-<p>With this project, we will discover some unique object oriented constructs, interfaces and abstract classes, and discuss Lambda Express - a way in Java to pass a function as a parameter.</p>
-<a target="_blank" href="https://github.com/LambdaSchool/java-transportation.git">GitHub Repo</a>
-<hr>
-<h2 class="display-4">
-<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
-<ul class="list-group">
-<li class="list-group-item">
-<h5><a target="_blank" href="https://github.com/LambdaSchool/java-AnimalKingdom.git">Animal Kingdom</a></h5>
-<p>This project will help you practice using interfaces, abstract classes, inheritance, and Lambda expressions in Java.</p>
-</li>
-</ul>
-<h2 class="display-4">
-<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
-<h3 class="display-5">Class Recordings</h3>
-<p class="lead">You can use class recordings to help you master the material.</p>
-<div>
-<ul class="list-group list-group-flush">
-<li class="list-group-item">
-<strong><a target="_blank" href="https://youtu.be/3mFJWXBh_YI">Abstract Classes, Interfaces, Lambda Expressions for WEB33 with John Mitchell</a></strong>
-</li>
-<li class="list-group-item">
-<a href="/archive/WEB4Java/module/rec6Hrk77HupYeoN5">All previous recordings</a>
-</li>
-</ul>
-</div>
-<h3 class="display-5">Demonstrate Mastery</h3>
-<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
-<ul>
-<li>Guided Project: java-transportation</li>
-<li>Project: Animal Kingdom</li>
-</ul>
-</div>
-</div>
-</div>
-</main>
-</div>
+                <p>The following shows the execution or flow of this code.</p>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2010%20-%20WEB%20Java%20Fundamentals/Module%202%20-%20JX%20Java%20-%20II%20Language%20Fundamentals/assets/JX-SP10-M2-14.gif"
+                    alt="Array execution"
+                  />
+                </p>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.javatpoint.com/working-of-hashset-in-java"
+                      target="blank_"
+                      >HashSet</a
+                    ><br />
+                    Working of HashSet in Java
+                  </li>
+                </ul>
+                <hr />
+                <h2>
+                  <a
+                    id="guided-project"
+                    class="anchor"
+                    href="#guided-project"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Guided Project
+                </h2>
+                <h3>java-transportation</h3>
+                <p>
+                  With this project, we will discover some unique object
+                  oriented constructs, interfaces and abstract classes, and
+                  discuss Lambda Express - a way in Java to pass a function as a
+                  parameter.
+                </p>
+                <a
+                  target="_blank"
+                  href="https://github.com/LambdaSchool/java-transportation.git"
+                  >GitHub Repo</a
+                >
+                <hr />
+                <h2 class="display-4">
+                  <a
+                    id="project"
+                    class="anchor"
+                    href="#project"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Project
+                </h2>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <h5>
+                      <a
+                        target="_blank"
+                        href="https://github.com/LambdaSchool/java-AnimalKingdom.git"
+                        >Animal Kingdom</a
+                      >
+                    </h5>
+                    <p>
+                      This project will help you practice using interfaces,
+                      abstract classes, inheritance, and Lambda expressions in
+                      Java.
+                    </p>
+                  </li>
+                </ul>
+                <h2 class="display-4">
+                  <a
+                    id="review"
+                    class="anchor"
+                    href="#review"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Review
+                </h2>
+                <h3 class="display-5">Class Recordings</h3>
+                <p class="lead">
+                  You can use class recordings to help you master the material.
+                </p>
+                <div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong
+                        ><a target="_blank" href="https://youtu.be/3mFJWXBh_YI"
+                          >Abstract Classes, Interfaces, Lambda Expressions for
+                          WEB33 with John Mitchell</a
+                        ></strong
+                      >
+                    </li>
+                    <li class="list-group-item">
+                      <a href="/archive/WEB4Java/module/rec6Hrk77HupYeoN5"
+                        >All previous recordings</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <h3 class="display-5">Demonstrate Mastery</h3>
+                <p>
+                  To demonstrate mastery of this module, you need to complete
+                  and pass a code review on each of the following:
+                </p>
+                <ul>
+                  <li>Guided Project: java-transportation</li>
+                  <li>Project: Animal Kingdom</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'UA-80850900-4');
-</script>
-<script type="text/javascript">
-  function getDomain() {
-    const domainName = window.location.hostname.split('.')[1];
-    return `${domainName}.com`;
-  }
-</script>
-<script src="" integrity="" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
-<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
-<script type="text/javascript">
-  SimpleJekyllSearch.init({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    dataSource: '/search.json',
-    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Java Interfaces, Abstract Classes, Lambda Expression">{title}</a></li>',
-    noResultsText: '',
-    limit: 10,
-    fuzzy: true,
-  })
-</script>
-<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
-  if (window.attachEvent) {
-    window.attachEvent('onload', verifySignedIn);
-  } else {
-    if (window.onload) {
-      var currentOnLoadFn = window.onload;
-      var newOnLoadFn = function (evt) {
-        currentOnLoadFn(evt);
-        verifySignedIn();
-      };
-      window.onload = newOnLoadFn;
-    } else {
-      window.onload = verifySignedIn;
-    }
-  }
-
-  function verifySignedIn() {
-    if (isPagePublic()) {
-      return showPageContents();
-    }
-
-    window.__user = null;
-    isSignedIn().then((user) => {
-      window.__user = user;
-
-      if (!user.signedIn) {
-        redirectToSignIn();
-      } else if (!user.student && !window.__openToAdmissions) {
-        showUnauthorizedMessage();
-      } else {
-        showPageContents();
-      }
-    });
-  }
-
-  function isPagePublic() {
-    const openCourses = [
-      'and-pre',
-      'ds-pre',
-      'fsw-pre',
-      'help',
-      'ios-pre',
-    ];
-
-    const openPages = [
-      'cs-and',
-      'cs-fsw',
-      'cs-ios',
-      'cr',
-      'ds',
-      'jx',
-      'p4s',
-      'ux',
-    ];
-
-    const pathParts = window.location.pathname.split('/');
-    const courseName = pathParts[1];
-    const pageName = pathParts[pathParts.length - 1];
-
-    return openCourses.includes(courseName) || openPages.includes(pageName);
-  }
-
-  function isSignedIn() {
-    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
-
-    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
-
-    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
-      .then((response) => response.text())
-      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
-      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
-      .catch((error) => {});
-  }
-
-  function redirectToSignIn() {
-    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
-    const redirectMessage = document.querySelector('#redirect-message');
-    redirectMessage.style.display = "block";
-    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
-    window.location = signInUrl;
-  }
-
-  function showPageContents() {
-    document.querySelector('#content-wrapper').style.visibility = 'visible';
-  }
-
-  function showUnauthorizedMessage() {
-    document.querySelector('#unauthorized-message').style.display = 'block';
-  }
-
-  function getAuthBaseUrl() {
-    const domain = getDomain();
-    const authBaseUrl = `https://auth.${domain}`;
-    return authBaseUrl;
-  }
-</script><script src="/assets/js/docs.min.js"></script><script>
-  var MathJax = {
-    tex: {
-      inlineMath: [['$$', '$$'], ['\[', '\])']]
-    },
-    "HTML-CSS": {
-      styles: {
-        ".MathJax span": {
-          color: "#000000"
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
         }
-      }
-    }
-  }
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<script>
-  handleExternalLinks();
+        gtag("js", new Date());
 
-  function handleExternalLinks() {
-    const domain = getDomain();
-    const links = document.querySelectorAll('a');
-    return links.forEach((link) => {
-      if (!link.host.includes(domain)) link.target = '_blank';
-    })
-  };
-</script>
-</div>
-</body>
+        gtag("config", "UA-80850900-4");
+      </script>
+      <script type="text/javascript">
+        function getDomain() {
+          const domainName = window.location.hostname.split(".")[1];
+          return `${domainName}.com`;
+        }
+      </script>
+      <script src="" integrity="" crossorigin="anonymous"></script>
+      <script>
+        window.jQuery ||
+          document.write(
+            '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>'
+          );
+      </script>
+      <script
+        src="/assets/js/vendor/popper.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="/dist/js/bootstrap.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script src="/assets/js/activate.js"></script>
+      <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        SimpleJekyllSearch.init({
+          searchInput: document.getElementById("search-input"),
+          resultsContainer: document.getElementById("results-container"),
+          dataSource: "/search.json",
+          searchResultTemplate:
+            '<li class="list-group-item"><a href="{url}" title="Java Interfaces, Abstract Classes, Lambda Expression">{title}</a></li>',
+          noResultsText: "",
+          limit: 10,
+          fuzzy: true,
+        });
+      </script>
+      <script src="/assets/js/mermaid.min.js"></script>
+      <script type="text/javascript">
+        if (window.attachEvent) {
+          window.attachEvent("onload", verifySignedIn);
+        } else {
+          if (window.onload) {
+            var currentOnLoadFn = window.onload;
+            var newOnLoadFn = function (evt) {
+              currentOnLoadFn(evt);
+              verifySignedIn();
+            };
+            window.onload = newOnLoadFn;
+          } else {
+            window.onload = verifySignedIn;
+          }
+        }
+
+        function verifySignedIn() {
+          if (isPagePublic()) {
+            return showPageContents();
+          }
+
+          window.__user = null;
+          isSignedIn().then((user) => {
+            window.__user = user;
+
+            if (!user.signedIn) {
+              redirectToSignIn();
+            } else if (!user.student && !window.__openToAdmissions) {
+              showUnauthorizedMessage();
+            } else {
+              showPageContents();
+            }
+          });
+        }
+
+        function isPagePublic() {
+          const openCourses = [
+            "and-pre",
+            "ds-pre",
+            "fsw-pre",
+            "help",
+            "ios-pre",
+          ];
+
+          const openPages = [
+            "cs-and",
+            "cs-fsw",
+            "cs-ios",
+            "cr",
+            "ds",
+            "jx",
+            "p4s",
+            "ux",
+          ];
+
+          const pathParts = window.location.pathname.split("/");
+          const courseName = pathParts[1];
+          const pageName = pathParts[pathParts.length - 1];
+
+          return (
+            openCourses.includes(courseName) || openPages.includes(pageName)
+          );
+        }
+
+        function isSignedIn() {
+          const isDeployPreview =
+            window.location.hostname.startsWith("deploy-preview") &&
+            window.location.hostname.endsWith("netlify.com");
+
+          if (isDeployPreview)
+            return Promise.resolve({ signedIn: true, student: true });
+
+          return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: "include" })
+            .then((response) => response.text())
+            .then((userAsText) => (userAsText ? JSON.parse(userAsText) : null))
+            .then((userData) => ({
+              signedIn: Boolean(userData),
+              student: Boolean(userData && userData.airtableId),
+              id: userData ? userData.id : null,
+              email: userData ? userData.email : null,
+            }))
+            .catch((error) => {});
+        }
+
+        function redirectToSignIn() {
+          const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(
+            window.location.href
+          )}&reason=auth_required`;
+          const redirectMessage = document.querySelector("#redirect-message");
+          redirectMessage.style.display = "block";
+          redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`;
+          window.location = signInUrl;
+        }
+
+        function showPageContents() {
+          document.querySelector("#content-wrapper").style.visibility =
+            "visible";
+        }
+
+        function showUnauthorizedMessage() {
+          document.querySelector("#unauthorized-message").style.display =
+            "block";
+        }
+
+        function getAuthBaseUrl() {
+          const domain = getDomain();
+          const authBaseUrl = `https://auth.${domain}`;
+          return authBaseUrl;
+        }
+      </script>
+      <script src="/assets/js/docs.min.js"></script>
+      <script>
+        var MathJax = {
+          tex: {
+            inlineMath: [
+              ["$$", "$$"],
+              ["\[", "\])"],
+            ],
+          },
+          "HTML-CSS": {
+            styles: {
+              ".MathJax span": {
+                color: "#000000",
+              },
+            },
+          },
+        };
+      </script>
+      <script
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+        type="text/javascript"
+      ></script>
+      <script>
+        handleExternalLinks();
+
+        function handleExternalLinks() {
+          const domain = getDomain();
+          const links = document.querySelectorAll("a");
+          return links.forEach((link) => {
+            if (!link.host.includes(domain)) link.target = "_blank";
+          });
+        }
+      </script>
+    </div>
+  </body>
 </html>

@@ -16,38 +16,38 @@ You must be a Lambda School student to view this page.
 
 <a href="/webannex/sprint/recfwZvI7QhMa7xbG" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
--   [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
--   [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
+- [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
+- [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
+- [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
 
 <a href="/webannex/sprint/recIXiQgpgMdJ81ms" class="bd-toc-link">2.  Advanced CSS</a>
 
--   [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
--   [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
--   [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
--   [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
+- [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
+- [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
+- [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
+- [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
 
 <a href="/webannex/sprint/recclZwJxMU8kUngT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
--   [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
--   [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
--   [Classes](/webannex/module/recyS588eOvVUKAMc/)
+- [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
+- [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
+- [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
+- [Classes](/webannex/module/recyS588eOvVUKAMc/)
 
 <a href="/webannex/sprint/recRT8JKvbTiGaosk" class="bd-toc-link">4.  Single Page Applications</a>
 
--   [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
--   [React Router II](/webannex/module/recYkF1FDilIedmwX/)
--   [Form Management](/webannex/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
+- [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
+- [React Router II](/webannex/module/recYkF1FDilIedmwX/)
+- [Form Management](/webannex/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
 
 <a href="/webannex/sprint/recozTHaHJe6L1ThN" class="bd-toc-link">5.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
--   [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
--   [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
--   [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
+- [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
+- [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
+- [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
 
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjM1IiB2aWV3Ym94PSIwIDAgNzU2IDE5NyIgZmlsbD0iI2VjMzk0NCI+PGc+PHBhdGggZD0iTTI5Mi45LDEyNi42aC02LjdjLTksMC0xMi42LTEuOS0xMi42LTkuNVY0OC41YzAtNy43LDEuNi04LjYsMTEuNC05Ljd2LTQuNWgtNDEuM3Y0LjUgYzkuOCwxLjEsMTEuNCwxLjksMTEuNCw5Ljd2NjkuM2MwLDcuNy0xLjYsOC42LTExLjQsOS43djQuNWg3My43bDQuOS0yOS40aC00LjRDMzA4LjUsMTE5LjYsMzAzLjksMTI2LjYsMjkyLjksMTI2LjZ6Ij48L3BhdGg+PHBhdGggZD0iTTM4NS41LDEyMS4xVjc5LjNjMC0xNS44LTkuNC0yMi40LTI2LjYtMjIuNGMtMTUsMC0yNi44LDYuNi0yNi44LDE5LjNjMCwyLjQsMC4yLDMuMywwLjgsNWgxNi42IGMtMC41LTItMC43LTUtMC43LTcuNWMwLTkuNiwzLjYtMTIuNCw5LjQtMTIuNGM2LjQsMCw5LjcsMiw5LjcsMTQuNHYxMS4ybC0yMC44LDcuN2MtMTAuNiw0LjEtMTkuMyw4LjgtMTkuMywyMC43IGMwLDEwLjksNy41LDE3LjgsMTguNiwxNy44YzkuOSwwLDE3LjQtNi4yLDIxLjktMTIuMWwwLjEtMC4xbDAsMFYxMzJoMjZ2LTQuNEMzODcuNywxMjcuMSwzODUuNSwxMjYuMiwzODUuNSwxMjEuMXogTTM2OCwxMTcuOCBjLTQuNCwzLjMtNy42LDUuMy0xMiw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNFYxMTcuOEwzNjgsMTE3Ljh6Ij48L3BhdGg+PHBhdGggZD0iTTUxNC40LDEyMVY3OS41YzAtMTQuOC02LTIyLjQtMTguNy0yMi40Yy0xMS41LDAtMTkuNCw2LjYtMjUuNSwxMy45Yy0xLjgtOS42LTcuNy0xMy45LTE3LjgtMTMuOSBjLTExLjQsMC0xOC43LDYuMi0yNC44LDEzLjZWNTdoLTIuM2wtMjMuOCw3LjR2Mi40bDguNiw1djQ5LjRjMCw1LTIuMSw2LjEtOC45LDYuNHY0LjRoMzUuMXYtNC40Yy02LjctMC4zLTguNy0xLjMtOC43LTYuNHYtNDcgYzQuNy0zLjYsOS41LTYuNSwxNS41LTYuNWM3LjYsMCwxMC41LDQuMiwxMC41LDEyLjd2NDAuOGMwLDUtMS45LDYuMS04LjcsNi40djQuNGwzNC44LDB2LTQuNGMtNi43LTAuMy04LjYtMS4zLTguNi02LjR2LTQ3IGM0LjctMy42LDkuNS02LjUsMTUuNS02LjVjNy42LDAsMTAuNSw0LjIsMTAuNSwxMi43bC0wLjEsNDAuNWMwLDUtMS44LDYuNC04LjYsNi43bDAsNC40aDM1LjF2LTQuNCBDNTE2LjcsMTI3LjQsNTE0LjQsMTI2LjEsNTE0LjQsMTIxeiI+PC9wYXRoPjxwYXRoIGQ9Ik01NzMuMiw1Ny4zYy0xMSwwLTE4LjUsNS43LTIzLjQsMTIuOFYyMi45aC0yLjdsLTIzLjQsNi44djIuNWw4LjYsNC41VjEzMmgyLjlsOC0zLjVjNS44LDMuMywxMi4zLDUsMjAuMiw1IGMyMC44LDAsMzcuNC0xNS44LDM3LjQtNDIuNkM2MDAuOSw2OS45LDU5MC40LDU3LjMsNTczLjIsNTcuM3ogTTU2My40LDEyOC43Yy01LjQsMC0xMC4zLTIuNC0xMy43LTcuOVY3My42IGMzLjQtMy40LDguNS01LjcsMTMuNS01LjdjMTMuOSwwLDIwLDEyLjgsMjAsMjkuNUM1ODMuMywxMTQuNyw1NzUuOCwxMjguNSw1NjMuNCwxMjguN3oiPjwvcGF0aD48cGF0aCBkPSJNNjc3LDEyMS4yVjIyLjhoLTIuNkw2NTEsMjkuNlYzMmw4LjYsNC41djI1LjdjLTMuNC0zLjItOC44LTUuMS0xNS41LTUuMWMtMTkuOSwwLTM1LjIsMTUuMy0zNS4yLDQxLjMgYzAsMjAuNywxMS4yLDM0LjYsMjguMSwzNC42YzkuOCwwLDE3LTUuMywyMi42LTEzLjF2MC45VjEzMmgyNi4zbDAtNC40QzY3OS4xLDEyNy4zLDY3NywxMjYuMyw2NzcsMTIxLjJ6IE02NTkuNiwxMTcuMSBMNjU5LjYsMTE3LjFjLTMuNCwzLjQtOCw1LjEtMTMuMiw1LjFjLTEzLjIsMC0yMC40LTEyLjgtMjAuNC0yOS44YzAtMTcuOCw3LjMtMjkuMiwxOS41LTI5LjJjOC43LDAsMTQuMSw2LjksMTQuMSwxOC4zIEw2NTkuNiwxMTcuMXoiPjwvcGF0aD48cGF0aCBkPSJNNzQ3LjEsMTIxLjFWNzkuM2MwLTE1LjgtOS40LTIyLjQtMjYuNi0yMi40Yy0xNSwwLTI2LjgsNi42LTI2LjgsMTkuM2MwLDIuNCwwLjIsMy4zLDAuOCw1aDE2LjYgYy0wLjUtMi0wLjctNS0wLjctNy41YzAtOS42LDMuNi0xMi40LDkuNC0xMi40YzYuNCwwLDkuNywyLDkuNywxNC40djExLjJsLTIwLjgsNy43Yy0xMC42LDQuMS0xOS4zLDguOC0xOS4zLDIwLjcgYzAsMTAuOSw3LjUsMTcuOCwxOC42LDE3LjhjOS45LDAsMTcuNC02LjIsMjEuOS0xMi4xdi0wLjFoMC4xbDAsMTEuMWwyNiwwLjF2LTQuNUM3NDkuMywxMjcuMSw3NDcuMSwxMjYuMiw3NDcuMSwxMjEuMXogTTcyOS42LDExNy44Yy00LjQsMy4zLTcuNiw1LjMtMTIuMSw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNEw3MjkuNiwxMTcuOEw3MjkuNiwxMTcuOHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTAsMHY5MC40YzAsNjUuNyw1MC45LDg4LjUsODguMSwxMDUuMmgwLjFsMywxLjRjMC43LTAuNCwxLjQtMC43LDIuMi0xYzAuNC0wLjIsMC45LTAuNCwxLjMtMC42IGMzNy4zLTE2LjYsODguNC0zOS41LDg4LjQtMTA1VjBIMHogTTExNiwxMzJsLTItNS4zbC0yNi42LTcwYy0xLjYsNC4xLTUuMywxNC05LjMsMjQuNmwtMTUuMyw0MS4zYy0wLjcsMi0wLjMsMywwLjIsMy43IGMxLjEsMS4zLDMuNSwxLjMsNy4zLDEuM0g3MWwwLDQuNEg0Mi40bDAtNC40aDIuMmMzLjksMCw3LjEtMS43LDkuNS02LjVsMi45LTYuNmwyNi41LTY3LjhsLTQuNy0xMi41aDI0LjdsMzQuMSw4OS43bDMuMSw4LjFIMTE2eiI+PC9wYXRoPjwvc3ZnPg==" /></a>
 
@@ -55,43 +55,43 @@ You must be a Lambda School student to view this page.
 
 <a href="/webannex/sprint/recfwZvI7QhMa7xbG" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
--   [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
--   [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
+- [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
+- [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
+- [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
 
 <a href="/webannex/sprint/recIXiQgpgMdJ81ms" class="bd-toc-link">2.  Advanced CSS</a>
 
--   [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
--   [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
--   [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
--   [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
+- [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
+- [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
+- [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
+- [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
 
 <a href="/webannex/sprint/recclZwJxMU8kUngT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
--   [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
--   [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
--   [Classes](/webannex/module/recyS588eOvVUKAMc/)
+- [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
+- [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
+- [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
+- [Classes](/webannex/module/recyS588eOvVUKAMc/)
 
 <a href="/webannex/sprint/recRT8JKvbTiGaosk" class="bd-toc-link">4.  Single Page Applications</a>
 
--   [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
--   [React Router II](/webannex/module/recYkF1FDilIedmwX/)
--   [Form Management](/webannex/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
+- [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
+- [React Router II](/webannex/module/recYkF1FDilIedmwX/)
+- [Form Management](/webannex/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
 
 <a href="/webannex/sprint/recozTHaHJe6L1ThN" class="bd-toc-link">5.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
--   [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
--   [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
--   [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
+- [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
+- [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
+- [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # User Interface III
 
@@ -101,9 +101,9 @@ As we progress into more advanced UI layout techniques we learn about the Flexib
 
 **At the end of this module, you should be able to:**
 
--   describe and understand that flexbox is a module
--   demonstrate understanding of flex container properties in flex box
--   demonstrate understanding of flex item properties in flexbox
+- describe and understand that flexbox is a module
+- demonstrate understanding of flex container properties in flex box
+- demonstrate understanding of flex item properties in flexbox
 
 #### Pro Tip
 
@@ -113,29 +113,25 @@ Remember that everyone around you is human and will make mistakes. Try to build 
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=mUZTNxqZnB8), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=mUZTNxqZnB8), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=VcIcankxOfo), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- [GIF visualization of flexbox](https://medium.freecodecamp.org/an-animated-guide-to-flexbox-d280cf6afc35)
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=VcIcankxOfo), or enable JavaScript if it is disabled in your browser.
+  This quick guide is hugely important to see flexbox in action.
 
--   [GIF visualization of flexbox](https://medium.freecodecamp.org/an-animated-guide-to-flexbox-d280cf6afc35)
+- [CSS Tricks - Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-    This quick guide is hugely important to see flexbox in action.
+  This is a great reference to remember the differences between containers and items in flexbox
 
--   [CSS Tricks - Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Flexbox Froggy](http://flexboxfroggy.com/)
 
-    This is a great reference to remember the differences between containers and items in flexbox
-
--   [Flexbox Froggy](http://flexboxfroggy.com/)
-
-    Learn flexbox through a fun and interactive online game!
+  Learn flexbox through a fun and interactive online game!
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -193,16 +189,16 @@ Declaring multiple flex modules within nested elements is perfectly fine!
 
 Let’s recap the most important items when using flex box modules in our code:
 
--   A flex box module introduces many new properties and rules which you can fully study by [heading over to CSS Tricks and studying the Basics and Terminology](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
--   Whenever you `display: flex` on an element, that element becomes a `flex container`
--   Any element nested one level deep within the `flex container` automatically becomes a `flex item`
--   Any element nested inside of a `flex item` does **NOT** become part of the flex box module
+- A flex box module introduces many new properties and rules which you can fully study by [heading over to CSS Tricks and studying the Basics and Terminology](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
+- Whenever you `display: flex` on an element, that element becomes a `flex container`
+- Any element nested one level deep within the `flex container` automatically becomes a `flex item`
+- Any element nested inside of a `flex item` does **NOT** become part of the flex box module
 
 ##### Follow Along
 
 ### Flex Box Module Tutorial
 
-*Use your own code editor or codepen to follow along with this tutorial.*
+_Use your own code editor or codepen to follow along with this tutorial._
 
 #### Step 1: HTML
 
@@ -249,16 +245,16 @@ Note that the content inside of the gray squares had no changes! This is because
 
 ##### Dig Deeper
 
--   [CSS Grid With Wes Bos](https://cssgrid.io/)  
-    If you have inline-block and flexbox down, it's time to take a look at CSS Grid. Wes Bos is an amazing online instructor and this course is completely free.
--   [Flexbox Cheatsheet](http://jonibologna.com/flexbox-cheatsheet/)  
-    This is an awesome visual cheatsheet to help you when you're working through a flexbox problem.
--   [A Visual Tutorial With Flexbox](https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties)  
-    This is a great resource to visualize flexbox properties in action.
--   [Flexbox With Wes Bos](https://flexbox.io/)  
-    This is one of the best free online tutorials on flexbox on the internet.
+- [CSS Grid With Wes Bos](https://cssgrid.io/)  
+  If you have inline-block and flexbox down, it's time to take a look at CSS Grid. Wes Bos is an amazing online instructor and this course is completely free.
+- [Flexbox Cheatsheet](http://jonibologna.com/flexbox-cheatsheet/)  
+  This is an awesome visual cheatsheet to help you when you're working through a flexbox problem.
+- [A Visual Tutorial With Flexbox](https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties)  
+  This is a great resource to visualize flexbox properties in action.
+- [Flexbox With Wes Bos](https://flexbox.io/)  
+  This is one of the best free online tutorials on flexbox on the internet.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to demonstrate understanding of flex container properties in flex box
 
@@ -474,14 +470,14 @@ Top to bottom in a column, our items are now reversed how we probably expected t
 
 For this example we’ll change our container a bit. Add the following items to our flex container:
 
-      <div class="item">Item 5</div> 
-      <div class="item">Item 6</div> 
-      <div class="item">Item 7</div> 
-      <div class="item">Item 8</div> 
-      <div class="item">Item 9</div> 
-      <div class="item">Item 10</div> 
-      <div class="item">Item 11</div> 
-      <div class="item">Item 12</div> 
+      <div class="item">Item 5</div>
+      <div class="item">Item 6</div>
+      <div class="item">Item 7</div>
+      <div class="item">Item 8</div>
+      <div class="item">Item 9</div>
+      <div class="item">Item 10</div>
+      <div class="item">Item 11</div>
+      <div class="item">Item 12</div>
 
 Give the container a `width of 300px;`
 
@@ -514,10 +510,10 @@ As you can se we’re starting to gain massive amounts of power.
 
     <div class="container">
       <div class="item">Item 1 <br> Item A <br> Item A</div>
-      <div class="item">Item 2</div>  
+      <div class="item">Item 2</div>
       <div class="item">Item 3 <br> Item B</div>
       <div class="item">Item 4</div>
-      <div class="item">Item 5</div> 
+      <div class="item">Item 5</div>
     </span>
 
 ### Step 6 - Align Content
@@ -532,19 +528,19 @@ Go through this guide and take the following code into a text editor and start a
 
 [Link to flexbox cheat sheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-------------------------------------------------------------------------
+---
 
 #### Learn to demonstrate understanding of flex item properties in flexbox
 
 Flex items represent the fine tune styling that the flexbox module has to offer. Knowing what you can style and how flex items work in relation to the flex container is fundamental to your success with the flexbox module.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [User Interface Project: Services Page](https://github.com/LambdaSchool/UI-II-Flexbox)
+- ##### [User Interface Project: Services Page](https://github.com/LambdaSchool/UI-II-Flexbox)
 
-    It’s time to push your CSS skills forward and see how far you can get with flexbox!
+  It’s time to push your CSS skills forward and see how far you can get with flexbox!
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -552,24 +548,24 @@ Flex items represent the fine tune styling that the flexbox module has to offer.
 
 You can use class recordings to help you master the material.
 
--   **[User Interface III for WEBPT17 w/ Pace Ellsworth](https://youtu.be/vCRS6YcU6vc)**
+- **[User Interface III for WEBPT17 w/ Pace Ellsworth](https://youtu.be/vCRS6YcU6vc)**
 
-    User Interface III lecture going over Flexbox
+  User Interface III lecture going over Flexbox
 
--   [All previous recordings](/archive/FSW/module/recaVbBZhh8BTyMdM)
+- [All previous recordings](/archive/FSW/module/recaVbBZhh8BTyMdM)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    [Go to CSS Tricks and read the sections “Background” and “Basics and Terminology.”](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). Study the diagram and get familiar with the terminology used to describe the flex container and flex items.
+  [Go to CSS Tricks and read the sections “Background” and “Basics and Terminology.”](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). Study the diagram and get familiar with the terminology used to describe the flex container and flex items.
 
--   Objective challenge:
+- Objective challenge:
 
-    Go through this guide and take the following code into a text editor and start applying the principles that you’ve learned thus far to flex out some layout.
+  Go through this guide and take the following code into a text editor and start applying the principles that you’ve learned thus far to flex out some layout.
 
-    [Link to flexbox cheat sheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+  [Link to flexbox cheat sheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
--   Project: User Interface Project: Services Page
+- Project: User Interface Project: Services Page

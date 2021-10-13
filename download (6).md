@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
@@ -39,32 +37,32 @@
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Guided Project](#guided-project)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Guided Project](#guided-project)
+- [Project](#project)
+- [Review](#review)
 
 # CSS Layouts
 
@@ -74,8 +72,8 @@ Basic HTML and CSS are fundamental to any web site or web app on the internet. B
 
 **At the end of this module, you should be able to:**
 
--   describe and understand that flexbox is a module
--   demonstrate understanding of flex container properties in flex box
+- describe and understand that flexbox is a module
+- demonstrate understanding of flex container properties in flex box
 
 #### Pro Tip
 
@@ -85,29 +83,25 @@ Celebrate wrong answers, because that means someone’s about to learn!
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=mUZTNxqZnB8), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=mUZTNxqZnB8), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=VcIcankxOfo), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- [GIF visualization of flexbox](https://medium.freecodecamp.org/an-animated-guide-to-flexbox-d280cf6afc35)
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=VcIcankxOfo), or enable JavaScript if it is disabled in your browser.
+  This quick guide is hugely important to see flexbox in action.
 
--   [GIF visualization of flexbox](https://medium.freecodecamp.org/an-animated-guide-to-flexbox-d280cf6afc35)
+- [CSS Tricks - Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-    This quick guide is hugely important to see flexbox in action.
+  This is a great reference to remember the differences between containers and items in flexbox
 
--   [CSS Tricks - Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Flexbox Froggy](http://flexboxfroggy.com/)
 
-    This is a great reference to remember the differences between containers and items in flexbox
-
--   [Flexbox Froggy](http://flexboxfroggy.com/)
-
-    Learn flexbox through a fun and interactive online game!
+  Learn flexbox through a fun and interactive online game!
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -165,16 +159,16 @@ Declaring multiple flex modules within nested elements is perfectly fine!
 
 Let’s recap the most important items when using flex box modules in our code:
 
--   A flex box module introduces many new properties and rules which you can fully study by [heading over to CSS Tricks and studying the Basics and Terminology](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
--   Whenever you `display: flex` on an element, that element becomes a `flex container`
--   Any element nested one level deep within the `flex container` automatically becomes a `flex item`
--   Any element nested inside of a `flex item` does **NOT** become part of the flex box module
+- A flex box module introduces many new properties and rules which you can fully study by [heading over to CSS Tricks and studying the Basics and Terminology](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
+- Whenever you `display: flex` on an element, that element becomes a `flex container`
+- Any element nested one level deep within the `flex container` automatically becomes a `flex item`
+- Any element nested inside of a `flex item` does **NOT** become part of the flex box module
 
 ##### Follow Along
 
 ### Flex Box Module Tutorial
 
-*Use your own code editor or codepen to follow along with this tutorial.*
+_Use your own code editor or codepen to follow along with this tutorial._
 
 #### Step 1: HTML
 
@@ -221,16 +215,16 @@ Note that the content inside of the gray squares had no changes! This is because
 
 ##### Dig Deeper
 
--   [CSS Grid With Wes Bos](https://cssgrid.io/)  
-    If you have inline-block and flexbox down, it's time to take a look at CSS Grid. Wes Bos is an amazing online instructor and this course is completely free.
--   [Flexbox Cheatsheet](http://jonibologna.com/flexbox-cheatsheet/)  
-    This is an awesome visual cheatsheet to help you when you're working through a flexbox problem.
--   [A Visual Tutorial With Flexbox](https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties)  
-    This is a great resource to visualize flexbox properties in action.
--   [Flexbox With Wes Bos](https://flexbox.io/)  
-    This is one of the best free online tutorials on flexbox on the internet.
+- [CSS Grid With Wes Bos](https://cssgrid.io/)  
+  If you have inline-block and flexbox down, it's time to take a look at CSS Grid. Wes Bos is an amazing online instructor and this course is completely free.
+- [Flexbox Cheatsheet](http://jonibologna.com/flexbox-cheatsheet/)  
+  This is an awesome visual cheatsheet to help you when you're working through a flexbox problem.
+- [A Visual Tutorial With Flexbox](https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties)  
+  This is a great resource to visualize flexbox properties in action.
+- [Flexbox With Wes Bos](https://flexbox.io/)  
+  This is one of the best free online tutorials on flexbox on the internet.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to demonstrate understanding of flex container properties in flex box
 
@@ -446,14 +440,14 @@ Top to bottom in a column, our items are now reversed how we probably expected t
 
 For this example we’ll change our container a bit. Add the following items to our flex container:
 
-      <div class="item">Item 5</div> 
-      <div class="item">Item 6</div> 
-      <div class="item">Item 7</div> 
-      <div class="item">Item 8</div> 
-      <div class="item">Item 9</div> 
-      <div class="item">Item 10</div> 
-      <div class="item">Item 11</div> 
-      <div class="item">Item 12</div> 
+      <div class="item">Item 5</div>
+      <div class="item">Item 6</div>
+      <div class="item">Item 7</div>
+      <div class="item">Item 8</div>
+      <div class="item">Item 9</div>
+      <div class="item">Item 10</div>
+      <div class="item">Item 11</div>
+      <div class="item">Item 12</div>
 
 Give the container a `width of 300px;`
 
@@ -486,10 +480,10 @@ As you can se we’re starting to gain massive amounts of power.
 
     <div class="container">
       <div class="item">Item 1 <br> Item A <br> Item A</div>
-      <div class="item">Item 2</div>  
+      <div class="item">Item 2</div>
       <div class="item">Item 3 <br> Item B</div>
       <div class="item">Item 4</div>
-      <div class="item">Item 5</div> 
+      <div class="item">Item 5</div>
     </span>
 
 ### Step 6 - Align Content
@@ -504,7 +498,7 @@ Go through this guide and take the following code into a text editor and start a
 
 [Link to flexbox cheat sheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
@@ -512,13 +506,13 @@ Go through this guide and take the following code into a text editor and start a
 
 [GitHub Repo](https://codepen.io/BritHemming/pen/gObpOGd)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Portfolio Website](https://github.com/LambdaSchool/User-Interface-II)
+- ##### [Portfolio Website](https://github.com/LambdaSchool/User-Interface-II)
 
-    It’s time to push your CSS skills forward and see how far you can get with flexbox!
+  It’s time to push your CSS skills forward and see how far you can get with flexbox!
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -526,26 +520,26 @@ Go through this guide and take the following code into a text editor and start a
 
 You can use class recordings to help you master the material.
 
--   **[CSS Layouts for WEBPT19 w/ Dan Frehner](https://youtu.be/MJsl-WbYzso)**
+- **[CSS Layouts for WEBPT19 w/ Dan Frehner](https://youtu.be/MJsl-WbYzso)**
 
-    Learn CSS Layouts with Dan Frehner & WebPT19
+  Learn CSS Layouts with Dan Frehner & WebPT19
 
--   [All previous recordings](/archive/WEB1/module/recYyDfYS2UmsvquL)
+- [All previous recordings](/archive/WEB1/module/recYyDfYS2UmsvquL)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    [Go to CSS Tricks and read the sections “Background” and “Basics and Terminology.”](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). Study the diagram and get familiar with the terminology used to describe the flex container and flex items.
+  [Go to CSS Tricks and read the sections “Background” and “Basics and Terminology.”](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). Study the diagram and get familiar with the terminology used to describe the flex container and flex items.
 
--   Objective challenge:
+- Objective challenge:
 
-    Go through this guide and take the following code into a text editor and start applying the principles that you’ve learned thus far to flex out some layout.
+  Go through this guide and take the following code into a text editor and start applying the principles that you’ve learned thus far to flex out some layout.
 
-    [Link to flexbox cheat sheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+  [Link to flexbox cheat sheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
--   Guided Project: CSS Layouts Starter
+- Guided Project: CSS Layouts Starter
 
--   Project: Portfolio Website
+- Project: Portfolio Website

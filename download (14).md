@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Prototypes and Inheritance
 
@@ -73,8 +71,8 @@ This lesson introduces us to the `this` keyword and it’s many uses. After we l
 
 **At the end of this module, you should be able to:**
 
--   explain the four principles of the 'this' keyword and demonstrate each explanation with an example of their uses
--   describe, and use prototypes, constructor functions the new keyword, and pseudo-classical inheritance to build a small object based video game
+- explain the four principles of the 'this' keyword and demonstrate each explanation with an example of their uses
+- describe, and use prototypes, constructor functions the new keyword, and pseudo-classical inheritance to build a small object based video game
 
 #### Pro Tip
 
@@ -84,21 +82,17 @@ Code is easy, people are hard.
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=RivFFKFbpXo), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=RivFFKFbpXo), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=5jjDXm-f0SI), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- [WTF is \`this\`](https://youtu.be/zE9iro4r918)
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=5jjDXm-f0SI), or enable JavaScript if it is disabled in your browser.
-
--   [WTF is \`this\`](https://youtu.be/zE9iro4r918)
-
-    Tyler McGinnis breaks down this
+  Tyler McGinnis breaks down this
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -110,7 +104,7 @@ The this keyword is a very important part of the JavaScript language. Understand
 
 To understand `this` you can consider the following bullet points.
 
--   You can think of this, as a Pointer to an object. *For example*: you can use the this keyword to reference an object without having to refer to that object’s name.
+- You can think of this, as a Pointer to an object. _For example_: you can use the this keyword to reference an object without having to refer to that object’s name.
 
 ##### Overview
 
@@ -126,26 +120,26 @@ Open up your console and type in `window` and see what you get. The **giant** ob
 
 ### Principle 1: **Window/Global Object Binding**
 
--   When in the global scope, the value of “this” will be the window/console Object;
+- When in the global scope, the value of “this” will be the window/console Object;
 
-    function sayName(name) {
-      console.log(this);
-      return name;
-    }
-    sayName("D'Artagnan");
+  function sayName(name) {
+  console.log(this);
+  return name;
+  }
+  sayName("D'Artagnan");
 
 ### Principle 2: **Implicit Binding**
 
--   Whenever a preceding dot calls a function, the object before the dot is this.
+- Whenever a preceding dot calls a function, the object before the dot is this.
 
-    const myObj = {
-      greeting: 'Hello',
-      sayHello: function(name) {
-        console.log(`${this.greeting} my name is ${name}`);
-        console.log(this);
-      }
-    };
-    myObj.sayHello('Ryan');
+  const myObj = {
+  greeting: 'Hello',
+  sayHello: function(name) {
+  console.log(`${this.greeting} my name is ${name}`);
+  console.log(this);
+  }
+  };
+  myObj.sayHello('Ryan');
 
 This principle is one of the most commonly used applications of the `this` keyword. Here is another example for use to play with.
 
@@ -168,7 +162,7 @@ In this previous example, You see that we have a function that receives an objec
 
 ### Principle 3: **New binding**
 
--   Whenever we use a constructor function, `this` refers to the specific instance of the object that is created and returned by the constructor function.
+- Whenever we use a constructor function, `this` refers to the specific instance of the object that is created and returned by the constructor function.
 
 This principle is a doozy because we have to learn about `constructor functions` here. Don’t worry if a lot of this stuff goes over your head, be a sponge right now. Absorb as much of this as you can, and we cover `constructors` in-depth tomorrow.
 
@@ -207,10 +201,10 @@ Complete this simple repl.it assignment: https://repl.it/@dfrehner1/Practice-Exp
 
 ##### Dig Deeper
 
--   [When not to use arrow functions](https://wesbos.com/arrow-function-no-no/)  
-    The arrow function is great in most cases but there are times we should not use it. This article from Wes Bos explains in great detail when NOT to use an arrow function.
+- [When not to use arrow functions](https://wesbos.com/arrow-function-no-no/)  
+  The arrow function is great in most cases but there are times we should not use it. This article from Wes Bos explains in great detail when NOT to use an arrow function.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to describe, and use prototypes, constructor functions the new keyword, and pseudo-classical inheritance to build a small object based video game
 
@@ -247,13 +241,13 @@ Now that we have created our constructor function as a template for object creat
 
 We call `Person` with the `new` keyword, and we feed it an object literal that will map to those attributes specified in the `Person` block. A note on the new keyword:
 
--   When `new` is called, the `constructor function` can essentially create a context for a `this` object. Then what gets returned from that `constructor function` is that particular `this` object with the new properties added to it.
+- When `new` is called, the `constructor function` can essentially create a context for a `this` object. Then what gets returned from that `constructor function` is that particular `this` object with the new properties added to it.
 
-    const fred = new Person({
-      age: 35,
-      name: 'Fred',
-      homeTown: 'Bedrock'
-    });
+  const fred = new Person({
+  age: 35,
+  name: 'Fred',
+  homeTown: 'Bedrock'
+  });
 
 `console.log(fred);` `console.log(fred.speak());`
 
@@ -283,7 +277,7 @@ Let’s refactor the constructor function `Person` and remove the `speak` functi
 
 Now that we have added the `speak` function to the prototype of `Person`, it will no longer be on the object `fred`. The `Person` prototype wholly owns `speak`. `Person` is now able to pass down `speak` to each instance of `Person` without creating a new property on any new objects.
 
-![fred\_\_proto\_\_](https://ibin.co/w800/3o4SA5WLlTVV.png)
+![fred__proto__](https://ibin.co/w800/3o4SA5WLlTVV.png)
 
 You will notice when we log the `fred` object out in the console, we see this `__proto__` thing. `__proto__` is helpful for us to see inheritance in the browser’s specific JavaScript engine.
 
@@ -328,15 +322,15 @@ To further illustrate how detached `pebbles` and `fred` are, let’s add a speci
 
 Now! Let us dive deep into some object creation together. We’re going to be creating a `Fruit` constructor function that can build all instances of fruit. Our constructor should have four properties to create our objects.
 
--   type
--   name
--   isRipe
--   calories
+- type
+- name
+- isRipe
+- calories
 
 After those properties, our object should have two prototype methods added to it.
 
--   calculateCalories - which logs the number of calories in a specified fruit \* 100
--   shipped - which takes in a `destination` and logs out `the fruit's name was shipped to destination`
+- calculateCalories - which logs the number of calories in a specified fruit \* 100
+- shipped - which takes in a `destination` and logs out `the fruit's name was shipped to destination`
 
 Our code should look something like this:
 
@@ -432,13 +426,13 @@ And check if things are all linked up properly.
 
 Work through this prototypes challenge by studying two constructors and filling in the missing pieces: [Prototypes Challenge](https://codepen.io/lambdaschool/pen/GXdXYX).
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Prototypes and Inheritance Project](https://github.com/LambdaSchool/JS-Exercise-Prototype)
+- ##### [Prototypes and Inheritance Project](https://github.com/LambdaSchool/JS-Exercise-Prototype)
 
-    Today we take a break from the usual Git flow and tackle our project using Code Sandbox. Make sure to sign up for an account!
+  Today we take a break from the usual Git flow and tackle our project using Code Sandbox. Make sure to sign up for an account!
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -446,22 +440,22 @@ Work through this prototypes challenge by studying two constructors and filling 
 
 You can use class recordings to help you master the material.
 
--   **[Prototypes and Inheritance for Web35 w/ Brit Hemming](https://youtu.be/NMGeAfpIxN8)**
+- **[Prototypes and Inheritance for Web35 w/ Brit Hemming](https://youtu.be/NMGeAfpIxN8)**
 
-    Prototypes and Inheritance
+  Prototypes and Inheritance
 
--   [All previous recordings](/archive/FSW/module/rec0AWuNLezbpit7m)
+- [All previous recordings](/archive/FSW/module/rec0AWuNLezbpit7m)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Complete this simple repl.it assignment: https://repl.it/@dfrehner1/Practice-Explicit-binding
+  Complete this simple repl.it assignment: https://repl.it/@dfrehner1/Practice-Explicit-binding
 
--   Objective challenge:
+- Objective challenge:
 
-    Work through this prototypes challenge by studying two constructors and filling in the missing pieces: [Prototypes Challenge](https://codepen.io/lambdaschool/pen/GXdXYX).
+  Work through this prototypes challenge by studying two constructors and filling in the missing pieces: [Prototypes Challenge](https://codepen.io/lambdaschool/pen/GXdXYX).
 
--   Project: Prototypes and Inheritance Project
+- Project: Prototypes and Inheritance Project

@@ -1,730 +1,933 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Intended as a home for Lambda School curriculum."
+    />
+    <meta name="author" content="" />
+    <meta name="generator" content="Jekyll v3.8.0" />
+    <title>Computer Architecture: Basics, Number Bases · Lambda School</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Intended as a home for Lambda School curriculum.">
-  <meta name="author" content="">
-  <meta name="generator" content="Jekyll v3.8.0">
-  <title>Computer Architecture: Basics, Number Bases · Lambda School</title>
+    <link
+      rel="stylesheet"
+      integrity
+      crossorigin="anonymous"
+      href="https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css"
+    />
 
-  <link rel='stylesheet' integrity crossorigin='anonymous'
-    href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+    <link
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css"
+    />
 
-  <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-  <link rel='stylesheet'
-    href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css"
+    />
 
-  <link rel='stylesheet'
-    href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-122016605-1", "learn.lambdaschool.com");
+      ga("send", "pageview");
+    </script>
 
-  <script>
-    ( function ( i, s, o, g, r, a, m ) {
-      i[ 'GoogleAnalyticsObject' ] = r;
-      i[ r ] = i[ r ] || function () {
-        ( i[ r ].q = i[ r ].q || [] ).push( arguments )
-      }, i[ r ].l = 1 * new Date();
-      a = s.createElement( o ),
-        m = s.getElementsByTagName( o )[ 0 ];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore( a, m )
-    } )( window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga' );
-    ga( 'create', 'UA-122016605-1', 'learn.lambdaschool.com' );
-    ga( 'send', 'pageview' );
-  </script>
-
-  <script>
-    ! function () {
-      var analytics = window.analytics = window.analytics || [];
-      if ( !analytics.initialize )
-        if ( analytics.invoked ) window.console && console.error && console.error( "Segment snippet included twice." );
-        else {
-          analytics.invoked = !0;
-          analytics.methods = [ "trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset",
-            "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"
-          ];
-          analytics.factory = function ( t ) {
-            return function () {
-              var e = Array.prototype.slice.call( arguments );
-              e.unshift( t );
-              analytics.push( e );
-              return analytics
+    <script>
+      !(function () {
+        var analytics = (window.analytics = window.analytics || []);
+        if (!analytics.initialize)
+          if (analytics.invoked)
+            window.console &&
+              console.error &&
+              console.error("Segment snippet included twice.");
+          else {
+            analytics.invoked = !0;
+            analytics.methods = [
+              "trackSubmit",
+              "trackClick",
+              "trackLink",
+              "trackForm",
+              "pageview",
+              "identify",
+              "reset",
+              "group",
+              "track",
+              "ready",
+              "alias",
+              "debug",
+              "page",
+              "once",
+              "off",
+              "on",
+            ];
+            analytics.factory = function (t) {
+              return function () {
+                var e = Array.prototype.slice.call(arguments);
+                e.unshift(t);
+                analytics.push(e);
+                return analytics;
+              };
+            };
+            for (var t = 0; t < analytics.methods.length; t++) {
+              var e = analytics.methods[t];
+              analytics[e] = analytics.factory(e);
             }
-          };
-          for ( var t = 0; t < analytics.methods.length; t++ ) {
-            var e = analytics.methods[ t ];
-            analytics[ e ] = analytics.factory( e )
+            analytics.load = function (t, e) {
+              var n = document.createElement("script");
+              n.type = "text/javascript";
+              n.async = !0;
+              n.src =
+                "https://cdn.segment.com/analytics.js/v1/" +
+                t +
+                "/analytics.min.js";
+              var a = document.getElementsByTagName("script")[0];
+              a.parentNode.insertBefore(n, a);
+              analytics._loadOptions = e;
+            };
+            analytics.SNIPPET_VERSION = "4.1.0";
+            analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+            analytics.page();
           }
-          analytics.load = function ( t, e ) {
-            var n = document.createElement( "script" );
-            n.type = "text/javascript";
-            n.async = !0;
-            n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
-            var a = document.getElementsByTagName( "script" )[ 0 ];
-            a.parentNode.insertBefore( n, a );
-            analytics._loadOptions = e
-          };
-          analytics.SNIPPET_VERSION = "4.1.0";
-          analytics.load( "BjKorwKrSvMamfNoGkBq9rISk7wF6QQX" );
-          analytics.page();
-        }
-    }();
-  </script>
+      })();
+    </script>
 
-  <link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-  <link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="manifest" href="/assets/img/favicons/manifest.json">
-  <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
-  <link rel="icon" href="/favicon.ico">
-  <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
-  <meta name="theme-color" content="#a0001e">
-</head>
+    <link
+      rel="apple-touch-icon"
+      href="/assets/img/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/assets/img/favicons/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicons/safari-pinned-tab.svg"
+      color="#a0001e"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="msapplication-config"
+      content="/assets/img/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#a0001e" />
+  </head>
 
-<body>
-  <noscript>Please enable JavaScript to view this page.</noscript>
-  <div id="redirect-message" style="display: none;">
-    You must be logged in to view this page.
-  </div>
-  <div id="unauthorized-message" style="display: none;">
-    You must be a Lambda School student to view this page.
-  </div>
-  <div id="content-wrapper" style="visibility: hidden;">
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
-      <div class="container">
-        <span class="skiplink-text">Skip to main content</span>
-      </div>
-    </a>
-    <div class="mobile-menu">
-      <div class="m-drop">
-        <div class="mobile-row">
-          <div class="header-row" style="padding: 3px 7px">
-            <a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg"
-                width="33" height="35" viewBox="0 0 33 35" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
-                  fill="#EC3944" />
-              </svg></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu"
-              aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
-                <title>Menu</title>
-                <path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
-                  d="M4 7h22M4 15h22M4 23h22"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="nav-row">
-          <div class="results-container">
-            <ul id="results-container" class="dropdown list-group"></ul>
-          </div>
-          <div id="mobile-course-menu" class="collapse nav-row">
-            <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
-              <nav class="bd-links">
-                <div class="bd-toc-item">
-                  <h4 class="bd-toc-link">Computer Science Legacy</h4>
-                </div>
-
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/cs/sprint/recd4D4w3QrigPqUF">
-                    1.&nbsp;&nbsp;Intro to Python and OOP
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/cs/module/recay2erzDlYUPSeO/">
-                        Introduction to Python I
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recwpe3Y9TVWrGT8L/">
-                        Introduction to Python II
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/reca7NYptklr7F403/">
-                        Introduction to Python III
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recc3eWphKVYd0oHT/">
-                        Introduction to Python IV
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/cs/sprint/recR4gHcvD21ziR9a">
-                    2.&nbsp;&nbsp;Data Structures
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/cs/module/rec3MaMAY78iDm7ax/">
-                        Data Structures I
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recMcvOrFw5BWUku3/">
-                        Data Structures II
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recx53S3pYfDfvFDm/">
-                        Data Structures III
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recHdwPne4Xt3A7lk/">
-                        Data Structures IV
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/cs/sprint/recd9grrKlURJ453N">
-                    3.&nbsp;&nbsp;Algorithms
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/cs/module/reck76SPX26beGSqE/">
-                        Iterative Sorting
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/reccRh9h6ccXghfA4/">
-                        Recursive Sorting
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recrCuZQMVI6LvxhD/">
-                        A First-Pass Solution
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recsvJCzPlM2X63ZX/">
-                        Writing Better Solutions
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/cs/sprint/recvDjRQEq49uoWsU">
-                    4.&nbsp;&nbsp;CS Unit 1 Build
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/cs/sprint/recAr3gdL8U57eho1">
-                    5.&nbsp;&nbsp;Hash Tables
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/cs/module/recSwIvbSV630gdVk/">
-                        Hash Tables I
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recHzCwboKBLBB0Re/">
-                        Hash Tables II
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recsEDFseukQWg92c/">
-                        Hash Tables III & IV
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/cs/sprint/rec7U9K7OCL5ihj0t">
-                    6.&nbsp;&nbsp;Graphs
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/cs/module/recBMbHtb8AOXq3UL/">
-                        Graphs I
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recZL2m6Gx7B4dU3G/">
-                        Graphs II
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/reck4RVWsg82eiYPZ/">
-                        Graphs III
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recoGWlBHjuJxkL1y/">
-                        Graphs IV
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/cs/sprint/recndTnO1V8oDbBPb">
-                    7.&nbsp;&nbsp;Computer Architecture
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li class="active bd-sidenav-active">
-                      <a href="/cs/module/recsuJbrrFgbFUCRX/">
-                        Computer Architecture: Basics, Number Bases
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/rec2NHr4Eyib7XdED/">
-                        Computer Architecture: Bitwise Operations
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recvQUkzz23NTj20G/">
-                        Computer Architecture: The System Stack
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recGPVAdvQcmopSIO/">
-                        Computer Architecture: Subroutines, CALL/RET
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/cs/sprint/reco0t22NdXmr8VyL">
-                    8.&nbsp;&nbsp;CS Unit 2 Build
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                  </ul>
-                </div>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
+  <body>
+    <noscript>Please enable JavaScript to view this page.</noscript>
+    <div id="redirect-message" style="display: none">
+      You must be logged in to view this page.
     </div>
-    <div class="main-container">
-      <div class="sidebar-container bd-sidebar">
-        <div class="docs-sidebar">
-          <a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197"
-              fill="#ec3944">
-              <g>
-                <path
-                  d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z">
-                </path>
-                <path
-                  d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z">
-                </path>
-                <path
-                  d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z">
-                </path>
-                <path
-                  d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z">
-                </path>
-                <path
-                  d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z">
-                </path>
-                <path
-                  d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z">
-                </path>
-              </g>
-              <path
-                d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z">
-              </path>
-            </svg></a>
-          <ul id="results-container" class="dropdown list-group"></ul>
-          <nav class="bd-links collapse" id="bd-docs-nav">
-            <div class="bd-toc-item">
-              <h4 class="bd-toc-link">Computer Science Legacy</h4>
+    <div id="unauthorized-message" style="display: none">
+      You must be a Lambda School student to view this page.
+    </div>
+    <div id="content-wrapper" style="visibility: hidden">
+      <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+          <span class="skiplink-text">Skip to main content</span>
+        </div>
+      </a>
+      <div class="mobile-menu">
+        <div class="m-drop">
+          <div class="mobile-row">
+            <div class="header-row" style="padding: 3px 7px">
+              <a class="navbar-brand" href="/" aria-label="Lambda School"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="35"
+                  viewBox="0 0 33 35"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                    fill="#EC3944"
+                  /></svg
+              ></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#mobile-course-menu"
+                aria-controls="mobile-course-menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="30"
+                  height="30"
+                  focusable="false"
+                >
+                  <title>Menu</title>
+                  <path
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    d="M4 7h22M4 15h22M4 23h22"
+                  ></path>
+                </svg>
+              </button>
             </div>
-
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/cs/sprint/recd4D4w3QrigPqUF">
-                1.&nbsp;&nbsp;Intro to Python and OOP
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/cs/module/recay2erzDlYUPSeO/">
-                    Introduction to Python I
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recwpe3Y9TVWrGT8L/">
-                    Introduction to Python II
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/reca7NYptklr7F403/">
-                    Introduction to Python III
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recc3eWphKVYd0oHT/">
-                    Introduction to Python IV
-                  </a>
-                </li>
-              </ul>
+          </div>
+          <div class="nav-row">
+            <div class="results-container">
+              <ul id="results-container" class="dropdown list-group"></ul>
             </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/cs/sprint/recR4gHcvD21ziR9a">
-                2.&nbsp;&nbsp;Data Structures
-              </a>
-              <ul class="nav bd-sidenav">
+            <div id="mobile-course-menu" class="collapse nav-row">
+              <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+                <nav class="bd-links">
+                  <div class="bd-toc-item">
+                    <h4 class="bd-toc-link">Computer Science Legacy</h4>
+                  </div>
 
-                <li>
-                  <a href="/cs/module/rec3MaMAY78iDm7ax/">
-                    Data Structures I
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recMcvOrFw5BWUku3/">
-                    Data Structures II
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recx53S3pYfDfvFDm/">
-                    Data Structures III
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recHdwPne4Xt3A7lk/">
-                    Data Structures IV
-                  </a>
-                </li>
-              </ul>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/recd4D4w3QrigPqUF">
+                      1.&nbsp;&nbsp;Intro to Python and OOP
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/cs/module/recay2erzDlYUPSeO/">
+                          Introduction to Python I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recwpe3Y9TVWrGT8L/">
+                          Introduction to Python II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/reca7NYptklr7F403/">
+                          Introduction to Python III
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recc3eWphKVYd0oHT/">
+                          Introduction to Python IV
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/recR4gHcvD21ziR9a">
+                      2.&nbsp;&nbsp;Data Structures
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/cs/module/rec3MaMAY78iDm7ax/">
+                          Data Structures I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recMcvOrFw5BWUku3/">
+                          Data Structures II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recx53S3pYfDfvFDm/">
+                          Data Structures III
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recHdwPne4Xt3A7lk/">
+                          Data Structures IV
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/recd9grrKlURJ453N">
+                      3.&nbsp;&nbsp;Algorithms
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/cs/module/reck76SPX26beGSqE/">
+                          Iterative Sorting
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/reccRh9h6ccXghfA4/">
+                          Recursive Sorting
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recrCuZQMVI6LvxhD/">
+                          A First-Pass Solution
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recsvJCzPlM2X63ZX/">
+                          Writing Better Solutions
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/recvDjRQEq49uoWsU">
+                      4.&nbsp;&nbsp;CS Unit 1 Build
+                    </a>
+                    <ul class="nav bd-sidenav"></ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/recAr3gdL8U57eho1">
+                      5.&nbsp;&nbsp;Hash Tables
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/cs/module/recSwIvbSV630gdVk/">
+                          Hash Tables I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recHzCwboKBLBB0Re/">
+                          Hash Tables II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recsEDFseukQWg92c/">
+                          Hash Tables III & IV
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/rec7U9K7OCL5ihj0t">
+                      6.&nbsp;&nbsp;Graphs
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/cs/module/recBMbHtb8AOXq3UL/"> Graphs I </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recZL2m6Gx7B4dU3G/"> Graphs II </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/reck4RVWsg82eiYPZ/"> Graphs III </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recoGWlBHjuJxkL1y/"> Graphs IV </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/recndTnO1V8oDbBPb">
+                      7.&nbsp;&nbsp;Computer Architecture
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li class="active bd-sidenav-active">
+                        <a href="/cs/module/recsuJbrrFgbFUCRX/">
+                          Computer Architecture: Basics, Number Bases
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/rec2NHr4Eyib7XdED/">
+                          Computer Architecture: Bitwise Operations
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recvQUkzz23NTj20G/">
+                          Computer Architecture: The System Stack
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recGPVAdvQcmopSIO/">
+                          Computer Architecture: Subroutines, CALL/RET
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/reco0t22NdXmr8VyL">
+                      8.&nbsp;&nbsp;CS Unit 2 Build
+                    </a>
+                    <ul class="nav bd-sidenav"></ul>
+                  </div>
+                </nav>
+              </div>
             </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/cs/sprint/recd9grrKlURJ453N">
-                3.&nbsp;&nbsp;Algorithms
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/cs/module/reck76SPX26beGSqE/">
-                    Iterative Sorting
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/reccRh9h6ccXghfA4/">
-                    Recursive Sorting
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recrCuZQMVI6LvxhD/">
-                    A First-Pass Solution
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recsvJCzPlM2X63ZX/">
-                    Writing Better Solutions
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/cs/sprint/recvDjRQEq49uoWsU">
-                4.&nbsp;&nbsp;CS Unit 1 Build
-              </a>
-              <ul class="nav bd-sidenav">
-
-              </ul>
-            </div>
-
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/cs/sprint/recAr3gdL8U57eho1">
-                5.&nbsp;&nbsp;Hash Tables
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/cs/module/recSwIvbSV630gdVk/">
-                    Hash Tables I
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recHzCwboKBLBB0Re/">
-                    Hash Tables II
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recsEDFseukQWg92c/">
-                    Hash Tables III & IV
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/cs/sprint/rec7U9K7OCL5ihj0t">
-                6.&nbsp;&nbsp;Graphs
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/cs/module/recBMbHtb8AOXq3UL/">
-                    Graphs I
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recZL2m6Gx7B4dU3G/">
-                    Graphs II
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/reck4RVWsg82eiYPZ/">
-                    Graphs III
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recoGWlBHjuJxkL1y/">
-                    Graphs IV
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/cs/sprint/recndTnO1V8oDbBPb">
-                7.&nbsp;&nbsp;Computer Architecture
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li class="active bd-sidenav-active">
-                  <a href="/cs/module/recsuJbrrFgbFUCRX/">
-                    Computer Architecture: Basics, Number Bases
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/rec2NHr4Eyib7XdED/">
-                    Computer Architecture: Bitwise Operations
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recvQUkzz23NTj20G/">
-                    Computer Architecture: The System Stack
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recGPVAdvQcmopSIO/">
-                    Computer Architecture: Subroutines, CALL/RET
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/cs/sprint/reco0t22NdXmr8VyL">
-                8.&nbsp;&nbsp;CS Unit 2 Build
-              </a>
-              <ul class="nav bd-sidenav">
-
-              </ul>
-            </div>
-          </nav>
+          </div>
         </div>
       </div>
-      <main class="content-container flex-wrapper" role="main">
-        <div class="sticky-nav">
-          <div class="sprint-nav">
-            <ul class="section-nav">
-              <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
-              <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
-              <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
-              <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
-            </ul>
-          </div>
+      <div class="main-container">
+        <div class="sidebar-container bd-sidebar">
+          <div class="docs-sidebar">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"
+              ><svg
+                width="135"
+                height="35"
+                viewBox="0 0 756 197"
+                fill="#ec3944"
+              >
+                <g>
+                  <path
+                    d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"
+                  ></path>
+                  <path
+                    d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"
+                  ></path>
+                  <path
+                    d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"
+                  ></path>
+                  <path
+                    d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"
+                  ></path>
+                  <path
+                    d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"
+                  ></path>
+                  <path
+                    d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"
+                  ></path>
+                </g>
+                <path
+                  d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"
+                ></path></svg
+            ></a>
+            <ul id="results-container" class="dropdown list-group"></ul>
+            <nav class="bd-links collapse" id="bd-docs-nav">
+              <div class="bd-toc-item">
+                <h4 class="bd-toc-link">Computer Science Legacy</h4>
+              </div>
 
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/recd4D4w3QrigPqUF">
+                  1.&nbsp;&nbsp;Intro to Python and OOP
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/cs/module/recay2erzDlYUPSeO/">
+                      Introduction to Python I
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recwpe3Y9TVWrGT8L/">
+                      Introduction to Python II
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/reca7NYptklr7F403/">
+                      Introduction to Python III
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recc3eWphKVYd0oHT/">
+                      Introduction to Python IV
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/recR4gHcvD21ziR9a">
+                  2.&nbsp;&nbsp;Data Structures
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/cs/module/rec3MaMAY78iDm7ax/">
+                      Data Structures I
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recMcvOrFw5BWUku3/">
+                      Data Structures II
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recx53S3pYfDfvFDm/">
+                      Data Structures III
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recHdwPne4Xt3A7lk/">
+                      Data Structures IV
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/recd9grrKlURJ453N">
+                  3.&nbsp;&nbsp;Algorithms
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/cs/module/reck76SPX26beGSqE/">
+                      Iterative Sorting
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/reccRh9h6ccXghfA4/">
+                      Recursive Sorting
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recrCuZQMVI6LvxhD/">
+                      A First-Pass Solution
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recsvJCzPlM2X63ZX/">
+                      Writing Better Solutions
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/recvDjRQEq49uoWsU">
+                  4.&nbsp;&nbsp;CS Unit 1 Build
+                </a>
+                <ul class="nav bd-sidenav"></ul>
+              </div>
+
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/recAr3gdL8U57eho1">
+                  5.&nbsp;&nbsp;Hash Tables
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/cs/module/recSwIvbSV630gdVk/"> Hash Tables I </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recHzCwboKBLBB0Re/"> Hash Tables II </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recsEDFseukQWg92c/">
+                      Hash Tables III & IV
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/rec7U9K7OCL5ihj0t">
+                  6.&nbsp;&nbsp;Graphs
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/cs/module/recBMbHtb8AOXq3UL/"> Graphs I </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recZL2m6Gx7B4dU3G/"> Graphs II </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/reck4RVWsg82eiYPZ/"> Graphs III </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recoGWlBHjuJxkL1y/"> Graphs IV </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/recndTnO1V8oDbBPb">
+                  7.&nbsp;&nbsp;Computer Architecture
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li class="active bd-sidenav-active">
+                    <a href="/cs/module/recsuJbrrFgbFUCRX/">
+                      Computer Architecture: Basics, Number Bases
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/rec2NHr4Eyib7XdED/">
+                      Computer Architecture: Bitwise Operations
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recvQUkzz23NTj20G/">
+                      Computer Architecture: The System Stack
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recGPVAdvQcmopSIO/">
+                      Computer Architecture: Subroutines, CALL/RET
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/reco0t22NdXmr8VyL">
+                  8.&nbsp;&nbsp;CS Unit 2 Build
+                </a>
+                <ul class="nav bd-sidenav"></ul>
+              </div>
+            </nav>
+          </div>
         </div>
-        <div class="wrapper limit-width">
-          <div class="flex-wrapper">
-            <div class="limit-width">
-              <div class="jumbotron">
-                <h1 class="bd-title" id="content">Computer Architecture: Basics, Number Bases</h1>
-                <span class="lead">
-                  <p class="bd-lead"></p>
-                  <p>In this module, we will learn the basics of how a computer is constructed and functions.
-                    Additionally we’ll practice manipulating numbers in binary and hexadecimal.</p>
-                  <p>The week-long project is an implementation of an emulator for the LS-8 computer.</p>
-                </span>
-                <strong>At the end of this module, you should be able to:</strong>
-                <ul>
-                  <li>describe the functional components of a CPU</li>
-                  <li>convert between and understand decimal, binary, and hexadecimal</li>
-                </ul>
-              </div>
-              <div class="alert alert-warning" role="alert">
-                <h4>Pro Tip</h4>
-                <p>Keep in mind that anything you put on social media reflects your brand. Consider what is important
-                  for you to say and for other people to hear you say, and use this to shape a social media presence
-                  that is both professional and authentic to you.</p>
-              </div>
-              <h2 class="display-4">
-                <a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Prepare</h2>
-              <p class="lead">Review each preclass resource before class.</p>
-              <div class="preclass">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Ae6zRhgMatc"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/umwSs9fNegY"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <h2 class="display-4">
-                <a id="learn" class="anchor" href="#learn" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Learn</h2>
-              <h4 class="mark mb-3 p-2">Learn to describe the functional components of a CPU</h4>
-              <p>Part of demystifying the black box that is the computer involves learning what the individual
-                components are within it, the composition of those components, and the communication links between them.
-              </p>
-              <p>We’ll investigate the basics of computers from the ground up. We’ll learn about common boolean
-                operations in hardware, and how components work together to make computation possible.</p>
-              <h5>Overview</h5>
-              <p>We’ll walk through several definitions and diagrams of how computers are constructed, including:</p>
-              <ul>
-                <li>what a CPU word is</li>
-                <li>how RAM works</li>
-                <li>how different parts of the CPU communicate</li>
-                <li>what a CPU instruction is</li>
-                <li>what a CPU register is</li>
-                <li>what the CPU clock represents</li>
-                <li>what the system bus is and what size it is</li>
-                <li>how the CPU provides concurrency</li>
+        <main class="content-container flex-wrapper" role="main">
+          <div class="sticky-nav">
+            <div class="sprint-nav">
+              <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+                <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+                <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+                <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
               </ul>
-              <h5>Follow Along</h5>
-              <ul>
-                <li>
-                  <strong>CPU word</strong>: The natural size of a piece of data with which the CPU can interact.
-                  Usually written down in the bit “size” of the CPU, i.e., “This is a 64-bit CPU.”</li>
-              </ul>
-              <p>The CPU can quickly perform math and other operations on data of its word size.</p>
-              <p>It can also work with other size data, though it might not be as speedy about it.</p>
-              <ul>
-                <li>
-                  <strong>Random Access Memory (RAM)</strong>: Your computer needs a place to keep track of variables to
-                  run your code. RAM is where these variables are stored.</li>
-              </ul>
-              <p>One way to conceptualize your RAM is like a large bookcase with billions and billions of shelves. Each
-                shelf has a number (like the index of an array). The number of a shelf is called an address. Each shelf
-                in RAM can hold 8 bits (1 byte).</p>
-              <p>The middleman between your computer’s processor and RAM is the Memory Controller. The Memory Controller
-                can directly access any address in RAM. It can jump between addresses 1 and 10,000 exceptionally
-                quickly.</p>
-              <p>Your processor also has a series of caches where it can store a copy of the things it has recently
-                accessed in RAM. If your processor asks for the contents of address 500, the memory controller will also
-                send along the contents of the nearby addresses. That way, if the processor requests the contents of
-                address 500, 501, 502, and 503, it will only have to access RAM on the first request, and the nearby
-                addresses can be accessed from the even faster cache. This fact explains why even though the memory
-                controller has direct access to every address in RAM, reading from sequential memory is still quicker
-                than jumping around to different addresses.</p>
-              <ul>
-                <li>
-                  <strong>CPU instruction</strong>: A byte or sequence of bytes in RAM that the computer knows how to
-                  interpret and perform actions based on.</li>
-              </ul>
-              <p>There are instructions to do math, like <code class="highlighter-rouge">ADD</code> and <code
-                  class="highlighter-rouge">SUB</code>, instructions for comparing values like <code
-                  class="highlighter-rouge">CMP</code>, instructions for jumping to other parts of memory like <code
-                  class="highlighter-rouge">JMP</code>, and many more.</p>
-              <p>The exact instruction names and values vary depending on architecture.</p>
-              <ul>
-                <li>
-                  <strong>CPU register</strong>: The CPU has a fixed, small number of special storage locations
-                  built-in. Usually, there are 16 or 32 of these, and they have set names, such as <code
-                    class="highlighter-rouge">R0</code>, <code class="highlighter-rouge">R1</code>, <code
-                    class="highlighter-rouge">R2</code>, and so on. (Details vary by architecture.)</li>
-              </ul>
-              <p>Think of them like variables you have at your disposal to use with the various instructions.</p>
-              <ul>
-                <li>
-                  <strong>CPU clock</strong>: When they say your CPU is 3.2 GHz, this is what they are referencing. It’s
-                  the number of times per second the CPU does some processing.</li>
-              </ul>
-              <p>Each time the clock cycles, the CPU does a bit more work.</p>
-              <p>Some instructions take one clock cycle to complete, but others might take several.</p>
-              <ul>
-                <li>
-                  <p><strong>System bus</strong>: A collection of wires on the motherboard between the CPU, memory, and
-                    peripherals.</p>
+            </div>
+          </div>
+          <div class="wrapper limit-width">
+            <div class="flex-wrapper">
+              <div class="limit-width">
+                <div class="jumbotron">
+                  <h1 class="bd-title" id="content">
+                    Computer Architecture: Basics, Number Bases
+                  </h1>
+                  <span class="lead">
+                    <p class="bd-lead"></p>
+                    <p>
+                      In this module, we will learn the basics of how a computer
+                      is constructed and functions. Additionally we’ll practice
+                      manipulating numbers in binary and hexadecimal.
+                    </p>
+                    <p>
+                      The week-long project is an implementation of an emulator
+                      for the LS-8 computer.
+                    </p>
+                  </span>
+                  <strong
+                    >At the end of this module, you should be able to:</strong
+                  >
                   <ul>
-                    <li>The memory bus connects the CPU to RAM.</li>
-                    <li>The I/O bus connects the CPU to peripherals.</li>
-                    <li>The control bus allows the CPU to precisely say what it wants to do on the bus, e.g., read or
-                      write a word or byte.</li>
+                    <li>describe the functional components of a CPU</li>
+                    <li>
+                      convert between and understand decimal, binary, and
+                      hexadecimal
+                    </li>
                   </ul>
-                </li>
-                <li>
-                  <p><strong>Concurrency</strong> and <strong>Parallelism</strong>: The CPU can do multiple things at
-                    once through a variety of mechanisms, including having multiple cores, or other features such as
-                    <em>pipelining</em> or <em>hyperthreading</em> (both out of scope for us.)</p>
-                </li>
-              </ul>
-              <p>Additionally, by using interrupts, a single CPU can execute one program for a while (like 50 ms), and
-                then switch to running another program for a while. While not true parallelism, this is how modern
-                operating systems appear to do so much at once.</p>
-              <h5>Challenge</h5>
-              <ul>
-                <li>How long does it take the number of transistors on a CPU to double? What is the common name for this
-                  rule of thumb?</li>
-                <li>Why are registers necessary? Why not just use RAM?</li>
-                <li>Why is cache useful?</li>
-                <li>What is a CPU word?</li>
-                <li>What is the system bus and how wide is it?</li>
-                <li>Describe the pins that are on a CPU chip</li>
-                <li>What is a CPU instruction?</li>
-              </ul>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to convert between and understand decimal, binary, and hexadecimal</h4>
-              <p>All major programming languages allow the user a method for converting between different number bases.
-                Some number bases are more convenient to use and easier to understand than others in specific
-                circumstances.</p>
-              <p>Being able to use binary, decimal, and hex effectively in an important skill that can speed
-                development, and help programmers understand existing code and systems that use those number bases.</p>
-              <h5>Overview</h5>
-              <p>We’ll see how number bases work, how to count in them, and how to convert between bases.</p>
-              <h5>Follow Along</h5>
-              <h4 id="on-numbers">On Numbers</h4>
-              <p>It’s important to understand that when you have 12 apples on the table, it’s
-                still the same number of apples regardless of whether or not you say there are
-                “12 apples” (decimal), or “C apples” (hexadecimal), or “1100 apples” (binary).</p>
-              <p>The <em>count</em> of the number of items doesn’t change just because we refer to it in
-                a numbering system of a different <em>base</em>.</p>
-              <p>In fact, the only place the numbering system matters is when we write down the
-                number someplace (e.g. print it on the screen or write it in source code, etc.).
-                And remember that when you do write it down, the <em>count</em> of what the number
-                refers to remains the same regardless of the base you choose to write it down
-                in.</p>
-              <p>Re-read the last paragraph for good measure and keep it in mind in the following
-                review.</p>
-              <h4 id="on-bases">On Bases</h4>
-              <p>The <em>base</em> of a numbering system refers to how many digits the numbering system
-                has. <em>Decimal</em> numbers like we’re used to have 10 digits: 0 through 9. Decimal
-                numbers are <em>base-10</em>.</p>
-              <p>Similarly, <em>binary</em> numbers have two digits: 0 and 1. Binary is <em>base-2</em>.</p>
-              <p>And <em>hexadecimal</em> had 16 digits: 0-9 then A-F. It’s <em>base-16</em>.</p>
-              <p>Rarely you might come across <em>octal</em>; it’s <em>base-8</em>. (In Unix when you issue a
-                command like <code class="highlighter-rouge">chmod 755</code> or <code class="highlighter-rouge">chmod
-                  644</code>, those numbers are octal.)</p>
-              <p>These different bases have different ways of being represented in JavaScript:</p>
-              <div class="language-javascript highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="c1">// All of these represent the number of apples on the table:</span>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                  <h4>Pro Tip</h4>
+                  <p>
+                    Keep in mind that anything you put on social media reflects
+                    your brand. Consider what is important for you to say and
+                    for other people to hear you say, and use this to shape a
+                    social media presence that is both professional and
+                    authentic to you.
+                  </p>
+                </div>
+                <h2 class="display-4">
+                  <a
+                    id="prepare"
+                    class="anchor"
+                    href="#prepare"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Prepare
+                </h2>
+                <p class="lead">Review each preclass resource before class.</p>
+                <div class="preclass">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/Ae6zRhgMatc"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/umwSs9fNegY"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <h2 class="display-4">
+                  <a id="learn" class="anchor" href="#learn" aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Learn
+                </h2>
+                <h4 class="mark mb-3 p-2">
+                  Learn to describe the functional components of a CPU
+                </h4>
+                <p>
+                  Part of demystifying the black box that is the computer
+                  involves learning what the individual components are within
+                  it, the composition of those components, and the communication
+                  links between them.
+                </p>
+                <p>
+                  We’ll investigate the basics of computers from the ground up.
+                  We’ll learn about common boolean operations in hardware, and
+                  how components work together to make computation possible.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  We’ll walk through several definitions and diagrams of how
+                  computers are constructed, including:
+                </p>
+                <ul>
+                  <li>what a CPU word is</li>
+                  <li>how RAM works</li>
+                  <li>how different parts of the CPU communicate</li>
+                  <li>what a CPU instruction is</li>
+                  <li>what a CPU register is</li>
+                  <li>what the CPU clock represents</li>
+                  <li>what the system bus is and what size it is</li>
+                  <li>how the CPU provides concurrency</li>
+                </ul>
+                <h5>Follow Along</h5>
+                <ul>
+                  <li>
+                    <strong>CPU word</strong>: The natural size of a piece of
+                    data with which the CPU can interact. Usually written down
+                    in the bit “size” of the CPU, i.e., “This is a 64-bit CPU.”
+                  </li>
+                </ul>
+                <p>
+                  The CPU can quickly perform math and other operations on data
+                  of its word size.
+                </p>
+                <p>
+                  It can also work with other size data, though it might not be
+                  as speedy about it.
+                </p>
+                <ul>
+                  <li>
+                    <strong>Random Access Memory (RAM)</strong>: Your computer
+                    needs a place to keep track of variables to run your code.
+                    RAM is where these variables are stored.
+                  </li>
+                </ul>
+                <p>
+                  One way to conceptualize your RAM is like a large bookcase
+                  with billions and billions of shelves. Each shelf has a number
+                  (like the index of an array). The number of a shelf is called
+                  an address. Each shelf in RAM can hold 8 bits (1 byte).
+                </p>
+                <p>
+                  The middleman between your computer’s processor and RAM is the
+                  Memory Controller. The Memory Controller can directly access
+                  any address in RAM. It can jump between addresses 1 and 10,000
+                  exceptionally quickly.
+                </p>
+                <p>
+                  Your processor also has a series of caches where it can store
+                  a copy of the things it has recently accessed in RAM. If your
+                  processor asks for the contents of address 500, the memory
+                  controller will also send along the contents of the nearby
+                  addresses. That way, if the processor requests the contents of
+                  address 500, 501, 502, and 503, it will only have to access
+                  RAM on the first request, and the nearby addresses can be
+                  accessed from the even faster cache. This fact explains why
+                  even though the memory controller has direct access to every
+                  address in RAM, reading from sequential memory is still
+                  quicker than jumping around to different addresses.
+                </p>
+                <ul>
+                  <li>
+                    <strong>CPU instruction</strong>: A byte or sequence of
+                    bytes in RAM that the computer knows how to interpret and
+                    perform actions based on.
+                  </li>
+                </ul>
+                <p>
+                  There are instructions to do math, like
+                  <code class="highlighter-rouge">ADD</code> and
+                  <code class="highlighter-rouge">SUB</code>, instructions for
+                  comparing values like
+                  <code class="highlighter-rouge">CMP</code>, instructions for
+                  jumping to other parts of memory like
+                  <code class="highlighter-rouge">JMP</code>, and many more.
+                </p>
+                <p>
+                  The exact instruction names and values vary depending on
+                  architecture.
+                </p>
+                <ul>
+                  <li>
+                    <strong>CPU register</strong>: The CPU has a fixed, small
+                    number of special storage locations built-in. Usually, there
+                    are 16 or 32 of these, and they have set names, such as
+                    <code class="highlighter-rouge">R0</code>,
+                    <code class="highlighter-rouge">R1</code>,
+                    <code class="highlighter-rouge">R2</code>, and so on.
+                    (Details vary by architecture.)
+                  </li>
+                </ul>
+                <p>
+                  Think of them like variables you have at your disposal to use
+                  with the various instructions.
+                </p>
+                <ul>
+                  <li>
+                    <strong>CPU clock</strong>: When they say your CPU is 3.2
+                    GHz, this is what they are referencing. It’s the number of
+                    times per second the CPU does some processing.
+                  </li>
+                </ul>
+                <p>Each time the clock cycles, the CPU does a bit more work.</p>
+                <p>
+                  Some instructions take one clock cycle to complete, but others
+                  might take several.
+                </p>
+                <ul>
+                  <li>
+                    <p>
+                      <strong>System bus</strong>: A collection of wires on the
+                      motherboard between the CPU, memory, and peripherals.
+                    </p>
+                    <ul>
+                      <li>The memory bus connects the CPU to RAM.</li>
+                      <li>The I/O bus connects the CPU to peripherals.</li>
+                      <li>
+                        The control bus allows the CPU to precisely say what it
+                        wants to do on the bus, e.g., read or write a word or
+                        byte.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p>
+                      <strong>Concurrency</strong> and
+                      <strong>Parallelism</strong>: The CPU can do multiple
+                      things at once through a variety of mechanisms, including
+                      having multiple cores, or other features such as
+                      <em>pipelining</em> or <em>hyperthreading</em> (both out
+                      of scope for us.)
+                    </p>
+                  </li>
+                </ul>
+                <p>
+                  Additionally, by using interrupts, a single CPU can execute
+                  one program for a while (like 50 ms), and then switch to
+                  running another program for a while. While not true
+                  parallelism, this is how modern operating systems appear to do
+                  so much at once.
+                </p>
+                <h5>Challenge</h5>
+                <ul>
+                  <li>
+                    How long does it take the number of transistors on a CPU to
+                    double? What is the common name for this rule of thumb?
+                  </li>
+                  <li>Why are registers necessary? Why not just use RAM?</li>
+                  <li>Why is cache useful?</li>
+                  <li>What is a CPU word?</li>
+                  <li>What is the system bus and how wide is it?</li>
+                  <li>Describe the pins that are on a CPU chip</li>
+                  <li>What is a CPU instruction?</li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to convert between and understand decimal, binary, and
+                  hexadecimal
+                </h4>
+                <p>
+                  All major programming languages allow the user a method for
+                  converting between different number bases. Some number bases
+                  are more convenient to use and easier to understand than
+                  others in specific circumstances.
+                </p>
+                <p>
+                  Being able to use binary, decimal, and hex effectively in an
+                  important skill that can speed development, and help
+                  programmers understand existing code and systems that use
+                  those number bases.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  We’ll see how number bases work, how to count in them, and how
+                  to convert between bases.
+                </p>
+                <h5>Follow Along</h5>
+                <h4 id="on-numbers">On Numbers</h4>
+                <p>
+                  It’s important to understand that when you have 12 apples on
+                  the table, it’s still the same number of apples regardless of
+                  whether or not you say there are “12 apples” (decimal), or “C
+                  apples” (hexadecimal), or “1100 apples” (binary).
+                </p>
+                <p>
+                  The <em>count</em> of the number of items doesn’t change just
+                  because we refer to it in a numbering system of a different
+                  <em>base</em>.
+                </p>
+                <p>
+                  In fact, the only place the numbering system matters is when
+                  we write down the number someplace (e.g. print it on the
+                  screen or write it in source code, etc.). And remember that
+                  when you do write it down, the <em>count</em> of what the
+                  number refers to remains the same regardless of the base you
+                  choose to write it down in.
+                </p>
+                <p>
+                  Re-read the last paragraph for good measure and keep it in
+                  mind in the following review.
+                </p>
+                <h4 id="on-bases">On Bases</h4>
+                <p>
+                  The <em>base</em> of a numbering system refers to how many
+                  digits the numbering system has. <em>Decimal</em> numbers like
+                  we’re used to have 10 digits: 0 through 9. Decimal numbers are
+                  <em>base-10</em>.
+                </p>
+                <p>
+                  Similarly, <em>binary</em> numbers have two digits: 0 and 1.
+                  Binary is <em>base-2</em>.
+                </p>
+                <p>
+                  And <em>hexadecimal</em> had 16 digits: 0-9 then A-F. It’s
+                  <em>base-16</em>.
+                </p>
+                <p>
+                  Rarely you might come across <em>octal</em>; it’s
+                  <em>base-8</em>. (In Unix when you issue a command like
+                  <code class="highlighter-rouge">chmod 755</code> or
+                  <code class="highlighter-rouge">chmod 644</code>, those
+                  numbers are octal.)
+                </p>
+                <p>
+                  These different bases have different ways of being represented
+                  in JavaScript:
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="c1">// All of these represent the number of apples on the table:</span>
 
 <span class="kd">let</span> <span class="nx">numA</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>     <span class="c1">// decimal</span>
 <span class="kd">let</span> <span class="nx">numB</span> <span class="o">=</span> <span class="mh">0xC</span><span class="p">;</span>    <span class="c1">// hexadecimal, leading 0x</span>
@@ -732,41 +935,70 @@
 
 <span class="nx">numA</span> <span class="o">===</span> <span class="nx">numB</span> <span class="o">===</span> <span class="nx">numC</span><span class="p">;</span> <span class="c1">// TRUE!</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h4 id="on-binary">On Binary</h4>
-              <p>In decimal, we have 10 digits, 0-9. Multi-digit numbers have the 1’s place, the
-                10’s place, and the 100’s place, etc.</p>
-              <p>E.g. 123 has <code class="highlighter-rouge">1</code> in the 100’s place, <code
-                  class="highlighter-rouge">2</code> in the 10’s place, and <code class="highlighter-rouge">3</code> in
-                the 1’s place.</p>
-              <p>In binary, we only have two digits, 0-1. Multi-digit numbers have the 1’s place,
-                the 2’s place, the 4’s place, the 8’s place, the 16’s place, etc.</p>
-              <p>It’s convenient, as a developer, to have this sequence of powers of two
-                memorized at least up to 1024:</p>
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>1 2 4 8 16 32 64 128 256 512 1024
+                <h4 id="on-binary">On Binary</h4>
+                <p>
+                  In decimal, we have 10 digits, 0-9. Multi-digit numbers have
+                  the 1’s place, the 10’s place, and the 100’s place, etc.
+                </p>
+                <p>
+                  E.g. 123 has <code class="highlighter-rouge">1</code> in the
+                  100’s place, <code class="highlighter-rouge">2</code> in the
+                  10’s place, and <code class="highlighter-rouge">3</code> in
+                  the 1’s place.
+                </p>
+                <p>
+                  In binary, we only have two digits, 0-1. Multi-digit numbers
+                  have the 1’s place, the 2’s place, the 4’s place, the 8’s
+                  place, the 16’s place, etc.
+                </p>
+                <p>
+                  It’s convenient, as a developer, to have this sequence of
+                  powers of two memorized at least up to 1024:
+                </p>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>1 2 4 8 16 32 64 128 256 512 1024
 2048 4096 8192 16384 32768 65536
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>These are all powers of 2. 2^0 = 1, 2^1 = 2, 2^2 = 4, 2^3 = 8, etc.</p>
-              <p>Computers find it convenient to represent numbers in base 2 for a variety of
-                reasons. One is that it’s easy to represent as a voltage on a wire: 0 volts is a
-                <code class="highlighter-rouge">0</code> and 5 volts (or whatever) is a <code
-                  class="highlighter-rouge">1</code>. Another is that you can do boolean logic
-                with <code class="highlighter-rouge">0</code> being <code class="highlighter-rouge">FALSE</code> and
-                <code class="highlighter-rouge">1</code> being <code class="highlighter-rouge">TRUE</code>.</p>
-              <blockquote>
-                <p><em>There are 10 kinds of people in the world: those who understand binary and
-                    those who don’t.</em></p>
-              </blockquote>
-              <h4 id="convert-binary-to-decimal">Convert Binary to Decimal</h4>
-              <h5 id="in-javascript">In JavaScript:</h5>
-              <div class="language-javascript highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="c1">// Binary constants:</span>
+                <p>
+                  These are all powers of 2. 2^0 = 1, 2^1 = 2, 2^2 = 4, 2^3 = 8,
+                  etc.
+                </p>
+                <p>
+                  Computers find it convenient to represent numbers in base 2
+                  for a variety of reasons. One is that it’s easy to represent
+                  as a voltage on a wire: 0 volts is a
+                  <code class="highlighter-rouge">0</code> and 5 volts (or
+                  whatever) is a <code class="highlighter-rouge">1</code>.
+                  Another is that you can do boolean logic with
+                  <code class="highlighter-rouge">0</code> being
+                  <code class="highlighter-rouge">FALSE</code> and
+                  <code class="highlighter-rouge">1</code> being
+                  <code class="highlighter-rouge">TRUE</code>.
+                </p>
+                <blockquote>
+                  <p>
+                    <em
+                      >There are 10 kinds of people in the world: those who
+                      understand binary and those who don’t.</em
+                    >
+                  </p>
+                </blockquote>
+                <h4 id="convert-binary-to-decimal">
+                  Convert Binary to Decimal
+                </h4>
+                <h5 id="in-javascript">In JavaScript:</h5>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="c1">// Binary constants:</span>
 
 <span class="kd">let</span> <span class="nx">myBinary</span> <span class="o">=</span> <span class="mb">0b101</span><span class="p">;</span> <span class="c1">// 101 binary is 5 decimal</span>
 
@@ -783,29 +1015,38 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myValue1</span><span class="p">);</span> <span class="c1">// 5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myValue2</span><span class="p">);</span> <span class="c1">// 5</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h5 id="by-hand">By hand:</h5>
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>+------ 8's place
+                <h5 id="by-hand">By hand:</h5>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>+------ 8's place
 |+----- 4's place
 ||+---- 2's place
 |||+--- 1's place
 ||||
 1010
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>The above example has one 8, zero 4s, one 2, and zero 1s. That is, it has one 8
-                and one 2. One 8 and one 2 is 10, <code class="highlighter-rouge">8+2=10</code>, so:</p>
-              <p><code class="highlighter-rouge">1010</code> binary == <code class="highlighter-rouge">10</code>
-                decimal.</p>
-              <h4 id="convert-decimal-to-binary">Convert Decimal to Binary</h4>
-              <h5 id="in-javascript-1">In Javascript</h5>
-              <div class="language-javascript highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="c1">// Decimal constants (just like normal)</span>
+                <p>
+                  The above example has one 8, zero 4s, one 2, and zero 1s. That
+                  is, it has one 8 and one 2. One 8 and one 2 is 10,
+                  <code class="highlighter-rouge">8+2=10</code>, so:
+                </p>
+                <p>
+                  <code class="highlighter-rouge">1010</code> binary ==
+                  <code class="highlighter-rouge">10</code> decimal.
+                </p>
+                <h4 id="convert-decimal-to-binary">
+                  Convert Decimal to Binary
+                </h4>
+                <h5 id="in-javascript-1">In Javascript</h5>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="c1">// Decimal constants (just like normal)</span>
 
 <span class="kd">const</span> <span class="nx">val</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span>
 
@@ -815,506 +1056,751 @@
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">val</span><span class="p">}</span><span class="s2"> decimal is </span><span class="p">${</span><span class="nx">binVal</span><span class="p">}</span><span class="s2"> in binary`</span><span class="p">);</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Note that the result is a string. This makes sense because you already
-                had the number in <code class="highlighter-rouge">val</code> as a <code
-                  class="highlighter-rouge">Number</code> type; the only other way to
-                represent it is as a <code class="highlighter-rouge">string</code>.</p>
-              <h5 id="by-hand-1">By Hand</h5>
-              <p>This one’s a little trickier, since you have to work the binary-to-decimal
-                conversion backwards.</p>
-              <p>Example: convert <code class="highlighter-rouge">123</code> decimal into binary. You have to come up
-                with sum of the
-                powers of two that add up to it.</p>
-              <p>Start with the highest power of two that’s lower than the number: 64. We
-                know we have zero 128s in the number, because it’s only 123. But there
-                must be a 64 in there.</p>
-              <p>So let’s put a 1 in the 64s place:</p>
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>1xxxxxx     All the x's are unknown
+                <p>
+                  Note that the result is a string. This makes sense because you
+                  already had the number in
+                  <code class="highlighter-rouge">val</code> as a
+                  <code class="highlighter-rouge">Number</code> type; the only
+                  other way to represent it is as a
+                  <code class="highlighter-rouge">string</code>.
+                </p>
+                <h5 id="by-hand-1">By Hand</h5>
+                <p>
+                  This one’s a little trickier, since you have to work the
+                  binary-to-decimal conversion backwards.
+                </p>
+                <p>
+                  Example: convert
+                  <code class="highlighter-rouge">123</code> decimal into
+                  binary. You have to come up with sum of the powers of two that
+                  add up to it.
+                </p>
+                <p>
+                  Start with the highest power of two that’s lower than the
+                  number: 64. We know we have zero 128s in the number, because
+                  it’s only 123. But there must be a 64 in there.
+                </p>
+                <p>So let’s put a 1 in the 64s place:</p>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>1xxxxxx     All the x's are unknown
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Now we compute <code class="highlighter-rouge">123-64</code> because we’ve taken the 64 out of there.
-                <code class="highlighter-rouge">123-64=59</code>. So let’s go to the next power of two down: 32.</p>
-              <p>59 has a 32 in it, so that must be a 1 in the 32’s place, as well:</p>
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>11xxxxx     All the x's are unknown
+                <p>
+                  Now we compute
+                  <code class="highlighter-rouge">123-64</code> because we’ve
+                  taken the 64 out of there.
+                  <code class="highlighter-rouge">123-64=59</code>. So let’s go
+                  to the next power of two down: 32.
+                </p>
+                <p>
+                  59 has a 32 in it, so that must be a 1 in the 32’s place, as
+                  well:
+                </p>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>11xxxxx     All the x's are unknown
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Then we compute <code class="highlighter-rouge">59-32=27</code> and go down to the next power of two:
-                16. There’s one
-                16 in 27, so that’s a 1 in the 16s place:</p>
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>111xxxx     All the x's are unknown
+                <p>
+                  Then we compute
+                  <code class="highlighter-rouge">59-32=27</code> and go down to
+                  the next power of two: 16. There’s one 16 in 27, so that’s a 1
+                  in the 16s place:
+                </p>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>111xxxx     All the x's are unknown
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Then we compute <code class="highlighter-rouge">27-16=11</code> and do the next power of two: 8.
-                There’s 1 8 in 11,
-                so that’s 1, too:</p>
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>1111xxx     All the x's are unknown
+                <p>
+                  Then we compute
+                  <code class="highlighter-rouge">27-16=11</code> and do the
+                  next power of two: 8. There’s 1 8 in 11, so that’s 1, too:
+                </p>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>1111xxx     All the x's are unknown
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Then we compute <code class="highlighter-rouge">11-8=3</code> and do the next power of two: 4. There
-                are zero 4s in</p>
-              <ol>
-                <li>
-                  <p>so that’s a 0 for a change:</p>
-                  <p>11110xx All the x’s are unknown</p>
-                </li>
-              </ol>
-              <p>We’re still at 3 decimal, but we drop to the next power of two: 2. There is one
-                2 in 3, so that’s a 1:</p>
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>111101x     All the x's are unknown
+                <p>
+                  Then we compute
+                  <code class="highlighter-rouge">11-8=3</code> and do the next
+                  power of two: 4. There are zero 4s in
+                </p>
+                <ol>
+                  <li>
+                    <p>so that’s a 0 for a change:</p>
+                    <p>11110xx All the x’s are unknown</p>
+                  </li>
+                </ol>
+                <p>
+                  We’re still at 3 decimal, but we drop to the next power of
+                  two: 2. There is one 2 in 3, so that’s a 1:
+                </p>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>111101x     All the x's are unknown
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>And we compute <code class="highlighter-rouge">3-2=1</code>, and drop to the last power of two: 1.
-                There is
-                one 1 in 1, so that’s a 1:</p>
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>1111011 binary is 123 decimal
+                <p>
+                  And we compute <code class="highlighter-rouge">3-2=1</code>,
+                  and drop to the last power of two: 1. There is one 1 in 1, so
+                  that’s a 1:
+                </p>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>1111011 binary is 123 decimal
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <h4 id="hexadecimal">Hexadecimal</h4>
-              <p>Hex is a base-16 numbering system. It has 6 more digits than decimal
-                (which is base 10). These 6 digits, which come after 9, are A, B, C, D,
-                E, and F.</p>
-              <p>Counting to decimal 16 in hexadecimal goes like this:</p>
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>0 1 2 3 4 5 6 7 8 9 A B C D E F 10
+                <h4 id="hexadecimal">Hexadecimal</h4>
+                <p>
+                  Hex is a base-16 numbering system. It has 6 more digits than
+                  decimal (which is base 10). These 6 digits, which come after
+                  9, are A, B, C, D, E, and F.
+                </p>
+                <p>Counting to decimal 16 in hexadecimal goes like this:</p>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>0 1 2 3 4 5 6 7 8 9 A B C D E F 10
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>You might have already seen hexadecimal numbers in CSS colors, such as
-                <code class="highlighter-rouge">#ccff00</code>.</p>
-              <h3 id="converting-binary-to-hex">Converting Binary to Hex</h3>
-              <p>Fortunately, since 16 and 2 are powers of two, there are an even number
-                of binary bits per hex digit: 4 bits per hex digit.</p>
-              <p>So if we have a 1-byte number, like <code class="highlighter-rouge">01101100</code>, we split it in
-                segments
-                of 4 bits and convert each of those to a hex digit. It might be more
-                convenient to convert do decimal first for numbers over 9 decimal.</p>
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>00111100
+                <p>
+                  You might have already seen hexadecimal numbers in CSS colors,
+                  such as <code class="highlighter-rouge">#ccff00</code>.
+                </p>
+                <h3 id="converting-binary-to-hex">Converting Binary to Hex</h3>
+                <p>
+                  Fortunately, since 16 and 2 are powers of two, there are an
+                  even number of binary bits per hex digit: 4 bits per hex
+                  digit.
+                </p>
+                <p>
+                  So if we have a 1-byte number, like
+                  <code class="highlighter-rouge">01101100</code>, we split it
+                  in segments of 4 bits and convert each of those to a hex
+                  digit. It might be more convenient to convert do decimal first
+                  for numbers over 9 decimal.
+                </p>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>00111100
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>split into sequences of 4 bits.</p>
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>0011 1100
+                <p>split into sequences of 4 bits.</p>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>0011 1100
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>convert to hex (or decimal then hex, if more convenient):</p>
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>0011 1100
+                <p>convert to hex (or decimal then hex, if more convenient):</p>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>0011 1100
  3    C      (C hex == 12 decimal == 1100 binary)
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>So <code class="highlighter-rouge">0b00111100</code> is equivalent to <code
-                  class="highlighter-rouge">0x3c</code>. (Hex constants are written with
-                a leading <code class="highlighter-rouge">0x</code> in JS, C, and many other languages.)</p>
-              <p>Converting hex to binary is the same in reverse. 4 bits per hex digit.</p>
-              <h5>Challenge</h5>
-              <ul>
-                <li>
-                  <p>Count to <code class="highlighter-rouge">0x20</code> in hex</p>
-                </li>
-                <li>
-                  <p>What is <code class="highlighter-rouge">0x2F</code> in binary?</p>
-                </li>
-                <li>
-                  <p>Convert <code class="highlighter-rouge">0b11011</code> to decimal</p>
-                </li>
-                <li>
-                  <p>What is <code class="highlighter-rouge">0b11100111</code> in hex?</p>
-                </li>
-                <li>
-                  <p>What is <code class="highlighter-rouge">27</code> in binary?</p>
-                </li>
-                <li>
-                  <p>Write a program that outputs a value in binary. Hint: <code
-                      class="highlighter-rouge">&gt;&gt;</code> and <code class="highlighter-rouge">&amp;</code></p>
-                </li>
-              </ul>
-              <h5>Dig Deeper</h5>
-              <ul>
-                <li>
-                  <a href="https://arstechnica.com/information-technology/2014/12/gangnam-style-overflows-int_max-forces-youtube-to-go-64-bit/"
-                    target="blank_">Ars Technica: Gangnam Style overflows INT_MAX, forces YouTube to go 64-bit</a><br>
-                </li>
-              </ul>
-              <hr>
-              <h2 class="display-4">
-                <a id="project" class="anchor" href="#project" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Project</h2>
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <h5><a target="_blank" href="https://github.com/LambdaSchool/Computer-Architecture">LS-8 Emulator
-                      Multiply</a></h5>
-                  <h5 id="step-0-important-inventory-what-is-here">Step 0: IMPORTANT: inventory what is here!</h5>
-                  <ul>
-                    <li>Make a list of files here.</li>
-                    <li>Write a short 3-10-word description of what each file does.</li>
-                    <li>Note what has been implemented, and what hasn’t.</li>
-                    <li>Read this whole file.</li>
-                    <li>Skim the spec.</li>
-                  </ul>
-                  <h5 id="step-1-add-the-constructor-to-cpupy">Step 1: Add the constructor to <code
-                      class="highlighter-rouge">cpu.py</code>
-                  </h5>
-                  <p>Add list properties to the <code class="highlighter-rouge">CPU</code> class to hold 256 bytes of
-                    memory and 8
-                    general-purpose registers.</p>
-                  <blockquote>
-                    <p>Hint: you can make a list of a certain numeber of zeros with this syntax:</p>
-                    <div class="language-python highlighter-rouge">
-                      <div class="highlight">
-                        <pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">25</span>  <span class="c1"># x is a list of 25 zeroes
-</span></code></pre>
-                      </div>
-                    </div>
-                  </blockquote>
-                  <p>Also add properties for any internal registers you need, e.g. <code
-                      class="highlighter-rouge">PC</code>.</p>
-                  <p>Later on, you might do further initialization here, e.g. setting the initial
-                    value of the stack pointer.</p>
-                  <h5 id="step-2-add-ram-functions">Step 2: Add RAM functions</h5>
-                  <p>In <code class="highlighter-rouge">CPU</code>, add method <code
-                      class="highlighter-rouge">ram_read()</code> and <code class="highlighter-rouge">ram_write()</code>
-                    that access the RAM inside
-                    the <code class="highlighter-rouge">CPU</code> object.</p>
-                  <p><code class="highlighter-rouge">ram_read()</code> should accept the address to read and return the
-                    value stored
-                    there.</p>
-                  <p><code class="highlighter-rouge">raw_write()</code> should accept a value to write, and the address
-                    to write it to.</p>
-                  <blockquote>
-                    <p>Inside the CPU, there are two internal registers used for memory operations:
-                      the <em>Memory Address Register</em> (MAR) and the <em>Memory Data Register</em> (MDR). The
-                      MAR contains the address that is being read or written to. The MDR contains
-                      the data that was read or the data to write. You don’t need to add the MAR or
-                      MDR to your <code class="highlighter-rouge">CPU</code> class, but they would make handy paramter
-                      names for
-                      <code class="highlighter-rouge">ram_read()</code> and <code
-                        class="highlighter-rouge">ram_write()</code>, if you wanted.</p>
-                  </blockquote>
-                  <p>We’ll make use of these helper function later.</p>
-                  <p>Later on, you might do further initialization here, e.g. setting the initial
-                    value of the stack pointer.</p>
-                  <h5 id="step-3-implement-the-core-of-cpus-run-method">Step 3: Implement the core of <code
-                      class="highlighter-rouge">CPU</code>’s <code class="highlighter-rouge">run()</code> method</h5>
-                  <p>This is the workhorse function of the entire processor. It’s the most difficult
-                    part to write.</p>
-                  <p>It needs to read the memory address that’s stored in register <code
-                      class="highlighter-rouge">PC</code>, and store
-                    that result in <code class="highlighter-rouge">IR</code>, the <em>Instruction Register</em>. This
-                    can just be a local
-                    variable in <code class="highlighter-rouge">run()</code>.</p>
-                  <p>Some instructions requires up to the next two bytes of data <em>after</em> the <code
-                      class="highlighter-rouge">PC</code> in
-                    memory to perform operations on. Sometimes the byte value is a register number,
-                    other times it’s a constant value (in the case of <code class="highlighter-rouge">LDI</code>). Using
-                    <code class="highlighter-rouge">ram_read()</code>,
-                    read the bytes at <code class="highlighter-rouge">PC+1</code> and <code
-                      class="highlighter-rouge">PC+2</code> from RAM into variables <code
-                      class="highlighter-rouge">operand_a</code> and
-                    <code class="highlighter-rouge">operand_b</code> in case the instruction needs them.</p>
-                  <p>Then, depending on the value of the opcode, perform the actions needed for the
-                    instruction per the LS-8 spec. Maybe an <code class="highlighter-rouge">if-elif</code> cascade…?
-                    There are other
-                    options, too.</p>
-                  <p>After running code for any particular instruction, the <code class="highlighter-rouge">PC</code>
-                    needs to be updated
-                    to point to the next instruction for the next iteration of the loop in <code
-                      class="highlighter-rouge">run()</code>.
-                    The number of bytes an instruction uses can be determined from the two high bits
-                    (bits 6-7) of the instruction opcode. See the LS-8 spec for details.</p>
-                  <h5 id="step-4-implement-the-hlt-instruction-handler">Step 4: Implement the <code
-                      class="highlighter-rouge">HLT</code> instruction handler</h5>
-                  <p>Add the <code class="highlighter-rouge">HLT</code> instruction define to <code
-                      class="highlighter-rouge">cpu.h</code>.</p>
-                  <p>In <code class="highlighter-rouge">run()</code> in your switch, exit the loop if a <code
-                      class="highlighter-rouge">HLT</code> instruction is encountered,
-                    regardless of whether or not there are more lines of code in the LS-8 program
-                    you loaded.</p>
-                  <p>We can consider <code class="highlighter-rouge">HLT</code> to be similar to Python’s <code
-                      class="highlighter-rouge">exit()</code> in that we stop
-                    whatever we are doing, wherever we are.</p>
-                  <h5 id="step-5-add-the-ldi-instruction">Step 5: Add the <code class="highlighter-rouge">LDI</code>
-                    instruction</h5>
-                  <p>This instruction sets a specified register to a specified value.</p>
-                  <p>See the LS-8 spec for the details of what this instructions does and its opcode
-                    value.</p>
-                  <h5 id="step-6-add-the-prn-instruction">Step 6: Add the <code class="highlighter-rouge">PRN</code>
-                    instruction</h5>
-                  <p>This is a very similar process to adding <code class="highlighter-rouge">LDI</code>, but the
-                    handler is simpler. See
-                    the LS-8 spec.</p>
-                  <p><em>At this point, you should be able to run the program and have it print <code
-                        class="highlighter-rouge">8</code> to
-                      the console!</em></p>
-                </li>
-              </ul>
-              <h2 class="display-4">
-                <a id="review" class="anchor" href="#review" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Review</h2>
-              <h3 class="display-5">Class Recordings</h3>
-              <p class="lead">You can use class recordings to help you master the material.</p>
-              <div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <strong><a target="_blank" href="https://youtu.be/9Pyi64vlqgQ">Computer Architecture: Basic Number
-                        Bases for CSPT8 w/Artem Litchmanov </a></strong>
-                    <p>Basic Number Bases</p>
+                <p>
+                  So <code class="highlighter-rouge">0b00111100</code> is
+                  equivalent to <code class="highlighter-rouge">0x3c</code>.
+                  (Hex constants are written with a leading
+                  <code class="highlighter-rouge">0x</code> in JS, C, and many
+                  other languages.)
+                </p>
+                <p>
+                  Converting hex to binary is the same in reverse. 4 bits per
+                  hex digit.
+                </p>
+                <h5>Challenge</h5>
+                <ul>
+                  <li>
+                    <p>
+                      Count to <code class="highlighter-rouge">0x20</code> in
+                      hex
+                    </p>
                   </li>
-                  <li class="list-group-item">
-                    <a href="/archive/CS/module/recsuJbrrFgbFUCRX">All previous recordings</a>
+                  <li>
+                    <p>
+                      What is <code class="highlighter-rouge">0x2F</code> in
+                      binary?
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Convert <code class="highlighter-rouge">0b11011</code> to
+                      decimal
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      What is
+                      <code class="highlighter-rouge">0b11100111</code> in hex?
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      What is <code class="highlighter-rouge">27</code> in
+                      binary?
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Write a program that outputs a value in binary. Hint:
+                      <code class="highlighter-rouge">&gt;&gt;</code> and
+                      <code class="highlighter-rouge">&amp;</code>
+                    </p>
                   </li>
                 </ul>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://arstechnica.com/information-technology/2014/12/gangnam-style-overflows-int_max-forces-youtube-to-go-64-bit/"
+                      target="blank_"
+                      >Ars Technica: Gangnam Style overflows INT_MAX, forces
+                      YouTube to go 64-bit</a
+                    ><br />
+                  </li>
+                </ul>
+                <hr />
+                <h2 class="display-4">
+                  <a
+                    id="project"
+                    class="anchor"
+                    href="#project"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Project
+                </h2>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <h5>
+                      <a
+                        target="_blank"
+                        href="https://github.com/LambdaSchool/Computer-Architecture"
+                        >LS-8 Emulator Multiply</a
+                      >
+                    </h5>
+                    <h5 id="step-0-important-inventory-what-is-here">
+                      Step 0: IMPORTANT: inventory what is here!
+                    </h5>
+                    <ul>
+                      <li>Make a list of files here.</li>
+                      <li>
+                        Write a short 3-10-word description of what each file
+                        does.
+                      </li>
+                      <li>Note what has been implemented, and what hasn’t.</li>
+                      <li>Read this whole file.</li>
+                      <li>Skim the spec.</li>
+                    </ul>
+                    <h5 id="step-1-add-the-constructor-to-cpupy">
+                      Step 1: Add the constructor to
+                      <code class="highlighter-rouge">cpu.py</code>
+                    </h5>
+                    <p>
+                      Add list properties to the
+                      <code class="highlighter-rouge">CPU</code> class to hold
+                      256 bytes of memory and 8 general-purpose registers.
+                    </p>
+                    <blockquote>
+                      <p>
+                        Hint: you can make a list of a certain numeber of zeros
+                        with this syntax:
+                      </p>
+                      <div class="language-python highlighter-rouge">
+                        <div class="highlight">
+                          <pre
+                            class="highlight"
+                          ><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">25</span>  <span class="c1"># x is a list of 25 zeroes
+</span></code></pre>
+                        </div>
+                      </div>
+                    </blockquote>
+                    <p>
+                      Also add properties for any internal registers you need,
+                      e.g. <code class="highlighter-rouge">PC</code>.
+                    </p>
+                    <p>
+                      Later on, you might do further initialization here, e.g.
+                      setting the initial value of the stack pointer.
+                    </p>
+                    <h5 id="step-2-add-ram-functions">
+                      Step 2: Add RAM functions
+                    </h5>
+                    <p>
+                      In <code class="highlighter-rouge">CPU</code>, add method
+                      <code class="highlighter-rouge">ram_read()</code> and
+                      <code class="highlighter-rouge">ram_write()</code> that
+                      access the RAM inside the
+                      <code class="highlighter-rouge">CPU</code> object.
+                    </p>
+                    <p>
+                      <code class="highlighter-rouge">ram_read()</code> should
+                      accept the address to read and return the value stored
+                      there.
+                    </p>
+                    <p>
+                      <code class="highlighter-rouge">raw_write()</code> should
+                      accept a value to write, and the address to write it to.
+                    </p>
+                    <blockquote>
+                      <p>
+                        Inside the CPU, there are two internal registers used
+                        for memory operations: the
+                        <em>Memory Address Register</em> (MAR) and the
+                        <em>Memory Data Register</em> (MDR). The MAR contains
+                        the address that is being read or written to. The MDR
+                        contains the data that was read or the data to write.
+                        You don’t need to add the MAR or MDR to your
+                        <code class="highlighter-rouge">CPU</code> class, but
+                        they would make handy paramter names for
+                        <code class="highlighter-rouge">ram_read()</code> and
+                        <code class="highlighter-rouge">ram_write()</code>, if
+                        you wanted.
+                      </p>
+                    </blockquote>
+                    <p>We’ll make use of these helper function later.</p>
+                    <p>
+                      Later on, you might do further initialization here, e.g.
+                      setting the initial value of the stack pointer.
+                    </p>
+                    <h5 id="step-3-implement-the-core-of-cpus-run-method">
+                      Step 3: Implement the core of
+                      <code class="highlighter-rouge">CPU</code>’s
+                      <code class="highlighter-rouge">run()</code> method
+                    </h5>
+                    <p>
+                      This is the workhorse function of the entire processor.
+                      It’s the most difficult part to write.
+                    </p>
+                    <p>
+                      It needs to read the memory address that’s stored in
+                      register <code class="highlighter-rouge">PC</code>, and
+                      store that result in
+                      <code class="highlighter-rouge">IR</code>, the
+                      <em>Instruction Register</em>. This can just be a local
+                      variable in <code class="highlighter-rouge">run()</code>.
+                    </p>
+                    <p>
+                      Some instructions requires up to the next two bytes of
+                      data <em>after</em> the
+                      <code class="highlighter-rouge">PC</code> in memory to
+                      perform operations on. Sometimes the byte value is a
+                      register number, other times it’s a constant value (in the
+                      case of <code class="highlighter-rouge">LDI</code>). Using
+                      <code class="highlighter-rouge">ram_read()</code>, read
+                      the bytes at
+                      <code class="highlighter-rouge">PC+1</code> and
+                      <code class="highlighter-rouge">PC+2</code> from RAM into
+                      variables
+                      <code class="highlighter-rouge">operand_a</code> and
+                      <code class="highlighter-rouge">operand_b</code> in case
+                      the instruction needs them.
+                    </p>
+                    <p>
+                      Then, depending on the value of the opcode, perform the
+                      actions needed for the instruction per the LS-8 spec.
+                      Maybe an
+                      <code class="highlighter-rouge">if-elif</code> cascade…?
+                      There are other options, too.
+                    </p>
+                    <p>
+                      After running code for any particular instruction, the
+                      <code class="highlighter-rouge">PC</code> needs to be
+                      updated to point to the next instruction for the next
+                      iteration of the loop in
+                      <code class="highlighter-rouge">run()</code>. The number
+                      of bytes an instruction uses can be determined from the
+                      two high bits (bits 6-7) of the instruction opcode. See
+                      the LS-8 spec for details.
+                    </p>
+                    <h5 id="step-4-implement-the-hlt-instruction-handler">
+                      Step 4: Implement the
+                      <code class="highlighter-rouge">HLT</code> instruction
+                      handler
+                    </h5>
+                    <p>
+                      Add the
+                      <code class="highlighter-rouge">HLT</code> instruction
+                      define to <code class="highlighter-rouge">cpu.h</code>.
+                    </p>
+                    <p>
+                      In <code class="highlighter-rouge">run()</code> in your
+                      switch, exit the loop if a
+                      <code class="highlighter-rouge">HLT</code> instruction is
+                      encountered, regardless of whether or not there are more
+                      lines of code in the LS-8 program you loaded.
+                    </p>
+                    <p>
+                      We can consider
+                      <code class="highlighter-rouge">HLT</code> to be similar
+                      to Python’s
+                      <code class="highlighter-rouge">exit()</code> in that we
+                      stop whatever we are doing, wherever we are.
+                    </p>
+                    <h5 id="step-5-add-the-ldi-instruction">
+                      Step 5: Add the
+                      <code class="highlighter-rouge">LDI</code> instruction
+                    </h5>
+                    <p>
+                      This instruction sets a specified register to a specified
+                      value.
+                    </p>
+                    <p>
+                      See the LS-8 spec for the details of what this
+                      instructions does and its opcode value.
+                    </p>
+                    <h5 id="step-6-add-the-prn-instruction">
+                      Step 6: Add the
+                      <code class="highlighter-rouge">PRN</code> instruction
+                    </h5>
+                    <p>
+                      This is a very similar process to adding
+                      <code class="highlighter-rouge">LDI</code>, but the
+                      handler is simpler. See the LS-8 spec.
+                    </p>
+                    <p>
+                      <em
+                        >At this point, you should be able to run the program
+                        and have it print
+                        <code class="highlighter-rouge">8</code> to the
+                        console!</em
+                      >
+                    </p>
+                  </li>
+                </ul>
+                <h2 class="display-4">
+                  <a
+                    id="review"
+                    class="anchor"
+                    href="#review"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Review
+                </h2>
+                <h3 class="display-5">Class Recordings</h3>
+                <p class="lead">
+                  You can use class recordings to help you master the material.
+                </p>
+                <div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong
+                        ><a target="_blank" href="https://youtu.be/9Pyi64vlqgQ"
+                          >Computer Architecture: Basic Number Bases for CSPT8
+                          w/Artem Litchmanov
+                        </a></strong
+                      >
+                      <p>Basic Number Bases</p>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="/archive/CS/module/recsuJbrrFgbFUCRX"
+                        >All previous recordings</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <h3 class="display-5">Demonstrate Mastery</h3>
+                <p>
+                  To demonstrate mastery of this module, you need to complete
+                  and pass a code review on each of the following:
+                </p>
+                <ul>
+                  <li>
+                    Objective challenge:
+                    <ul>
+                      <li>
+                        How long does it take the number of transistors on a CPU
+                        to double? What is the common name for this rule of
+                        thumb?
+                      </li>
+                      <li>
+                        Why are registers necessary? Why not just use RAM?
+                      </li>
+                      <li>Why is cache useful?</li>
+                      <li>What is a CPU word?</li>
+                      <li>What is the system bus and how wide is it?</li>
+                      <li>Describe the pins that are on a CPU chip</li>
+                      <li>What is a CPU instruction?</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <ul>
+                      <li>
+                        <p>
+                          Count to
+                          <code class="highlighter-rouge">0x20</code> in hex
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          What is <code class="highlighter-rouge">0x2F</code> in
+                          binary?
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Convert
+                          <code class="highlighter-rouge">0b11011</code> to
+                          decimal
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          What is
+                          <code class="highlighter-rouge">0b11100111</code> in
+                          hex?
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          What is <code class="highlighter-rouge">27</code> in
+                          binary?
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Write a program that outputs a value in binary. Hint:
+                          <code class="highlighter-rouge">&gt;&gt;</code> and
+                          <code class="highlighter-rouge">&amp;</code>
+                        </p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Project: LS-8 Emulator Multiply</li>
+                </ul>
               </div>
-              <h3 class="display-5">Demonstrate Mastery</h3>
-              <p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the
-                following:</p>
-              <ul>
-                <li>Objective challenge: <ul>
-                    <li>How long does it take the number of transistors on a CPU to double? What is the common name for
-                      this rule of thumb?</li>
-                    <li>Why are registers necessary? Why not just use RAM?</li>
-                    <li>Why is cache useful?</li>
-                    <li>What is a CPU word?</li>
-                    <li>What is the system bus and how wide is it?</li>
-                    <li>Describe the pins that are on a CPU chip</li>
-                    <li>What is a CPU instruction?</li>
-                  </ul>
-                </li>
-                <li>Objective challenge: <ul>
-                    <li>
-                      <p>Count to <code class="highlighter-rouge">0x20</code> in hex</p>
-                    </li>
-                    <li>
-                      <p>What is <code class="highlighter-rouge">0x2F</code> in binary?</p>
-                    </li>
-                    <li>
-                      <p>Convert <code class="highlighter-rouge">0b11011</code> to decimal</p>
-                    </li>
-                    <li>
-                      <p>What is <code class="highlighter-rouge">0b11100111</code> in hex?</p>
-                    </li>
-                    <li>
-                      <p>What is <code class="highlighter-rouge">27</code> in binary?</p>
-                    </li>
-                    <li>
-                      <p>Write a program that outputs a value in binary. Hint: <code
-                          class="highlighter-rouge">&gt;&gt;</code> and <code class="highlighter-rouge">&amp;</code></p>
-                    </li>
-                  </ul>
-                </li>
-                <li>Project: LS-8 Emulator Multiply</li>
-              </ul>
             </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-        dataLayer.push( arguments );
-      }
-      gtag( 'js', new Date() );
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
 
-      gtag( 'config', 'UA-80850900-4' );
-    </script>
-    <script type="text/javascript">
-      function getDomain() {
-        const domainName = window.location.hostname.split( '.' )[ 1 ];
-        return `${domainName}.com`;
-      }
-    </script>
-    <script src="" integrity="" crossorigin="anonymous"></script>
-    <script>
-      window.jQuery || document.write( '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>' )
-    </script>
-    <script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script>
-    <script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
-    <script src="/assets/js/activate.js"></script>
-    <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      SimpleJekyllSearch.init( {
-        searchInput: document.getElementById( 'search-input' ),
-        resultsContainer: document.getElementById( 'results-container' ),
-        dataSource: '/search.json',
-        searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Computer Architecture: Basics, Number Bases">{title}</a></li>',
-        noResultsText: '',
-        limit: 10,
-        fuzzy: true,
-      } )
-    </script>
-    <script src="/assets/js/mermaid.min.js"></script>
-    <script type="text/javascript">
-      if ( window.attachEvent ) {
-        window.attachEvent( 'onload', verifySignedIn );
-      } else {
-        if ( window.onload ) {
-          var currentOnLoadFn = window.onload;
-          var newOnLoadFn = function ( evt ) {
-            currentOnLoadFn( evt );
-            verifySignedIn();
-          };
-          window.onload = newOnLoadFn;
+        gtag("config", "UA-80850900-4");
+      </script>
+      <script type="text/javascript">
+        function getDomain() {
+          const domainName = window.location.hostname.split(".")[1];
+          return `${domainName}.com`;
+        }
+      </script>
+      <script src="" integrity="" crossorigin="anonymous"></script>
+      <script>
+        window.jQuery ||
+          document.write(
+            '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>'
+          );
+      </script>
+      <script
+        src="/assets/js/vendor/popper.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="/dist/js/bootstrap.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script src="/assets/js/activate.js"></script>
+      <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        SimpleJekyllSearch.init({
+          searchInput: document.getElementById("search-input"),
+          resultsContainer: document.getElementById("results-container"),
+          dataSource: "/search.json",
+          searchResultTemplate:
+            '<li class="list-group-item"><a href="{url}" title="Computer Architecture: Basics, Number Bases">{title}</a></li>',
+          noResultsText: "",
+          limit: 10,
+          fuzzy: true,
+        });
+      </script>
+      <script src="/assets/js/mermaid.min.js"></script>
+      <script type="text/javascript">
+        if (window.attachEvent) {
+          window.attachEvent("onload", verifySignedIn);
         } else {
-          window.onload = verifySignedIn;
-        }
-      }
-
-      function verifySignedIn() {
-        if ( isPagePublic() ) {
-          return showPageContents();
-        }
-
-        window.__user = null;
-        isSignedIn().then( ( user ) => {
-          window.__user = user;
-
-          if ( !user.signedIn ) {
-            redirectToSignIn();
-          } else if ( !user.student && !window.__openToAdmissions ) {
-            showUnauthorizedMessage();
+          if (window.onload) {
+            var currentOnLoadFn = window.onload;
+            var newOnLoadFn = function (evt) {
+              currentOnLoadFn(evt);
+              verifySignedIn();
+            };
+            window.onload = newOnLoadFn;
           } else {
-            showPageContents();
-          }
-        } );
-      }
-
-      function isPagePublic() {
-        const openCourses = [
-          'and-pre',
-          'ds-pre',
-          'fsw-pre',
-          'help',
-          'ios-pre',
-        ];
-
-        const openPages = [
-          'cs-and',
-          'cs-fsw',
-          'cs-ios',
-          'cr',
-          'ds',
-          'jx',
-          'p4s',
-          'ux',
-        ];
-
-        const pathParts = window.location.pathname.split( '/' );
-        const courseName = pathParts[ 1 ];
-        const pageName = pathParts[ pathParts.length - 1 ];
-
-        return openCourses.includes( courseName ) || openPages.includes( pageName );
-      }
-
-      function isSignedIn() {
-        const isDeployPreview = window.location.hostname.startsWith( 'deploy-preview' ) && window.location.hostname
-          .endsWith( 'netlify.com' );
-
-        if ( isDeployPreview ) return Promise.resolve( {
-          signedIn: true,
-          student: true
-        } );
-
-        return fetch( `${getAuthBaseUrl()}/whoami`, {
-            credentials: 'include'
-          } )
-          .then( ( response ) => response.text() )
-          .then( ( userAsText ) => userAsText ? JSON.parse( userAsText ) : null )
-          .then( ( userData ) => ( {
-            signedIn: Boolean( userData ),
-            student: Boolean( userData && userData.airtableId ),
-            id: userData ? userData.id : null,
-            email: userData ? userData.email : null
-          } ) )
-          .catch( ( error ) => {} );
-      }
-
-      function redirectToSignIn() {
-        const signInUrl =
-          `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
-        const redirectMessage = document.querySelector( '#redirect-message' );
-        redirectMessage.style.display = "block";
-        redirectMessage.innerHTML =
-          `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
-        window.location = signInUrl;
-      }
-
-      function showPageContents() {
-        document.querySelector( '#content-wrapper' ).style.visibility = 'visible';
-      }
-
-      function showUnauthorizedMessage() {
-        document.querySelector( '#unauthorized-message' ).style.display = 'block';
-      }
-
-      function getAuthBaseUrl() {
-        const domain = getDomain();
-        const authBaseUrl = `https://auth.${domain}`;
-        return authBaseUrl;
-      }
-    </script>
-    <script src="/assets/js/docs.min.js"></script>
-    <script>
-      var MathJax = {
-        tex: {
-          inlineMath: [
-            [ '$$', '$$' ],
-            [ '\[', '\])' ]
-          ]
-        },
-        "HTML-CSS": {
-          styles: {
-            ".MathJax span": {
-              color: "#000000"
-            }
+            window.onload = verifySignedIn;
           }
         }
-      }
-    </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
-    </script>
-    <script>
-      handleExternalLinks();
 
-      function handleExternalLinks() {
-        const domain = getDomain();
-        const links = document.querySelectorAll( 'a' );
-        return links.forEach( ( link ) => {
-          if ( !link.host.includes( domain ) ) link.target = '_blank';
-        } )
-      };
-    </script>
-  </div>
-</body>
+        function verifySignedIn() {
+          if (isPagePublic()) {
+            return showPageContents();
+          }
 
+          window.__user = null;
+          isSignedIn().then((user) => {
+            window.__user = user;
+
+            if (!user.signedIn) {
+              redirectToSignIn();
+            } else if (!user.student && !window.__openToAdmissions) {
+              showUnauthorizedMessage();
+            } else {
+              showPageContents();
+            }
+          });
+        }
+
+        function isPagePublic() {
+          const openCourses = [
+            "and-pre",
+            "ds-pre",
+            "fsw-pre",
+            "help",
+            "ios-pre",
+          ];
+
+          const openPages = [
+            "cs-and",
+            "cs-fsw",
+            "cs-ios",
+            "cr",
+            "ds",
+            "jx",
+            "p4s",
+            "ux",
+          ];
+
+          const pathParts = window.location.pathname.split("/");
+          const courseName = pathParts[1];
+          const pageName = pathParts[pathParts.length - 1];
+
+          return (
+            openCourses.includes(courseName) || openPages.includes(pageName)
+          );
+        }
+
+        function isSignedIn() {
+          const isDeployPreview =
+            window.location.hostname.startsWith("deploy-preview") &&
+            window.location.hostname.endsWith("netlify.com");
+
+          if (isDeployPreview)
+            return Promise.resolve({
+              signedIn: true,
+              student: true,
+            });
+
+          return fetch(`${getAuthBaseUrl()}/whoami`, {
+            credentials: "include",
+          })
+            .then((response) => response.text())
+            .then((userAsText) => (userAsText ? JSON.parse(userAsText) : null))
+            .then((userData) => ({
+              signedIn: Boolean(userData),
+              student: Boolean(userData && userData.airtableId),
+              id: userData ? userData.id : null,
+              email: userData ? userData.email : null,
+            }))
+            .catch((error) => {});
+        }
+
+        function redirectToSignIn() {
+          const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(
+            window.location.href
+          )}&reason=auth_required`;
+          const redirectMessage = document.querySelector("#redirect-message");
+          redirectMessage.style.display = "block";
+          redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`;
+          window.location = signInUrl;
+        }
+
+        function showPageContents() {
+          document.querySelector("#content-wrapper").style.visibility =
+            "visible";
+        }
+
+        function showUnauthorizedMessage() {
+          document.querySelector("#unauthorized-message").style.display =
+            "block";
+        }
+
+        function getAuthBaseUrl() {
+          const domain = getDomain();
+          const authBaseUrl = `https://auth.${domain}`;
+          return authBaseUrl;
+        }
+      </script>
+      <script src="/assets/js/docs.min.js"></script>
+      <script>
+        var MathJax = {
+          tex: {
+            inlineMath: [
+              ["$$", "$$"],
+              ["\[", "\])"],
+            ],
+          },
+          "HTML-CSS": {
+            styles: {
+              ".MathJax span": {
+                color: "#000000",
+              },
+            },
+          },
+        };
+      </script>
+      <script
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+        type="text/javascript"
+      ></script>
+      <script>
+        handleExternalLinks();
+
+        function handleExternalLinks() {
+          const domain = getDomain();
+          const links = document.querySelectorAll("a");
+          return links.forEach((link) => {
+            if (!link.host.includes(domain)) link.target = "_blank";
+          });
+        }
+      </script>
+    </div>
+  </body>
 </html>

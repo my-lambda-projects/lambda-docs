@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,9 +10,9 @@
 
 <a href="/ll/sprint/recQf3zxkHFPeRABL" class="bd-toc-link">1.  Lambda Orientation</a>
 
--   [Learning at Lambda](/ll/module/recBC1BCvLsTSiaLS/)
--   [Labs and Beyond](/ll/module/recnBWTWXqXWjWCUd/)
--   [Values and Support](/ll/module/rec7Vyq18G1tytzyk/)
+- [Learning at Lambda](/ll/module/recBC1BCvLsTSiaLS/)
+- [Labs and Beyond](/ll/module/recnBWTWXqXWjWCUd/)
+- [Values and Support](/ll/module/rec7Vyq18G1tytzyk/)
 
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjM1IiB2aWV3Ym94PSIwIDAgNzU2IDE5NyIgZmlsbD0iI2VjMzk0NCI+PGc+PHBhdGggZD0iTTI5Mi45LDEyNi42aC02LjdjLTksMC0xMi42LTEuOS0xMi42LTkuNVY0OC41YzAtNy43LDEuNi04LjYsMTEuNC05Ljd2LTQuNWgtNDEuM3Y0LjUgYzkuOCwxLjEsMTEuNCwxLjksMTEuNCw5Ljd2NjkuM2MwLDcuNy0xLjYsOC42LTExLjQsOS43djQuNWg3My43bDQuOS0yOS40aC00LjRDMzA4LjUsMTE5LjYsMzAzLjksMTI2LjYsMjkyLjksMTI2LjZ6Ij48L3BhdGg+PHBhdGggZD0iTTM4NS41LDEyMS4xVjc5LjNjMC0xNS44LTkuNC0yMi40LTI2LjYtMjIuNGMtMTUsMC0yNi44LDYuNi0yNi44LDE5LjNjMCwyLjQsMC4yLDMuMywwLjgsNWgxNi42IGMtMC41LTItMC43LTUtMC43LTcuNWMwLTkuNiwzLjYtMTIuNCw5LjQtMTIuNGM2LjQsMCw5LjcsMiw5LjcsMTQuNHYxMS4ybC0yMC44LDcuN2MtMTAuNiw0LjEtMTkuMyw4LjgtMTkuMywyMC43IGMwLDEwLjksNy41LDE3LjgsMTguNiwxNy44YzkuOSwwLDE3LjQtNi4yLDIxLjktMTIuMWwwLjEtMC4xbDAsMFYxMzJoMjZ2LTQuNEMzODcuNywxMjcuMSwzODUuNSwxMjYuMiwzODUuNSwxMjEuMXogTTM2OCwxMTcuOCBjLTQuNCwzLjMtNy42LDUuMy0xMiw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNFYxMTcuOEwzNjgsMTE3Ljh6Ij48L3BhdGg+PHBhdGggZD0iTTUxNC40LDEyMVY3OS41YzAtMTQuOC02LTIyLjQtMTguNy0yMi40Yy0xMS41LDAtMTkuNCw2LjYtMjUuNSwxMy45Yy0xLjgtOS42LTcuNy0xMy45LTE3LjgtMTMuOSBjLTExLjQsMC0xOC43LDYuMi0yNC44LDEzLjZWNTdoLTIuM2wtMjMuOCw3LjR2Mi40bDguNiw1djQ5LjRjMCw1LTIuMSw2LjEtOC45LDYuNHY0LjRoMzUuMXYtNC40Yy02LjctMC4zLTguNy0xLjMtOC43LTYuNHYtNDcgYzQuNy0zLjYsOS41LTYuNSwxNS41LTYuNWM3LjYsMCwxMC41LDQuMiwxMC41LDEyLjd2NDAuOGMwLDUtMS45LDYuMS04LjcsNi40djQuNGwzNC44LDB2LTQuNGMtNi43LTAuMy04LjYtMS4zLTguNi02LjR2LTQ3IGM0LjctMy42LDkuNS02LjUsMTUuNS02LjVjNy42LDAsMTAuNSw0LjIsMTAuNSwxMi43bC0wLjEsNDAuNWMwLDUtMS44LDYuNC04LjYsNi43bDAsNC40aDM1LjF2LTQuNCBDNTE2LjcsMTI3LjQsNTE0LjQsMTI2LjEsNTE0LjQsMTIxeiI+PC9wYXRoPjxwYXRoIGQ9Ik01NzMuMiw1Ny4zYy0xMSwwLTE4LjUsNS43LTIzLjQsMTIuOFYyMi45aC0yLjdsLTIzLjQsNi44djIuNWw4LjYsNC41VjEzMmgyLjlsOC0zLjVjNS44LDMuMywxMi4zLDUsMjAuMiw1IGMyMC44LDAsMzcuNC0xNS44LDM3LjQtNDIuNkM2MDAuOSw2OS45LDU5MC40LDU3LjMsNTczLjIsNTcuM3ogTTU2My40LDEyOC43Yy01LjQsMC0xMC4zLTIuNC0xMy43LTcuOVY3My42IGMzLjQtMy40LDguNS01LjcsMTMuNS01LjdjMTMuOSwwLDIwLDEyLjgsMjAsMjkuNUM1ODMuMywxMTQuNyw1NzUuOCwxMjguNSw1NjMuNCwxMjguN3oiPjwvcGF0aD48cGF0aCBkPSJNNjc3LDEyMS4yVjIyLjhoLTIuNkw2NTEsMjkuNlYzMmw4LjYsNC41djI1LjdjLTMuNC0zLjItOC44LTUuMS0xNS41LTUuMWMtMTkuOSwwLTM1LjIsMTUuMy0zNS4yLDQxLjMgYzAsMjAuNywxMS4yLDM0LjYsMjguMSwzNC42YzkuOCwwLDE3LTUuMywyMi42LTEzLjF2MC45VjEzMmgyNi4zbDAtNC40QzY3OS4xLDEyNy4zLDY3NywxMjYuMyw2NzcsMTIxLjJ6IE02NTkuNiwxMTcuMSBMNjU5LjYsMTE3LjFjLTMuNCwzLjQtOCw1LjEtMTMuMiw1LjFjLTEzLjIsMC0yMC40LTEyLjgtMjAuNC0yOS44YzAtMTcuOCw3LjMtMjkuMiwxOS41LTI5LjJjOC43LDAsMTQuMSw2LjksMTQuMSwxOC4zIEw2NTkuNiwxMTcuMXoiPjwvcGF0aD48cGF0aCBkPSJNNzQ3LjEsMTIxLjFWNzkuM2MwLTE1LjgtOS40LTIyLjQtMjYuNi0yMi40Yy0xNSwwLTI2LjgsNi42LTI2LjgsMTkuM2MwLDIuNCwwLjIsMy4zLDAuOCw1aDE2LjYgYy0wLjUtMi0wLjctNS0wLjctNy41YzAtOS42LDMuNi0xMi40LDkuNC0xMi40YzYuNCwwLDkuNywyLDkuNywxNC40djExLjJsLTIwLjgsNy43Yy0xMC42LDQuMS0xOS4zLDguOC0xOS4zLDIwLjcgYzAsMTAuOSw3LjUsMTcuOCwxOC42LDE3LjhjOS45LDAsMTcuNC02LjIsMjEuOS0xMi4xdi0wLjFoMC4xbDAsMTEuMWwyNiwwLjF2LTQuNUM3NDkuMywxMjcuMSw3NDcuMSwxMjYuMiw3NDcuMSwxMjEuMXogTTcyOS42LDExNy44Yy00LjQsMy4zLTcuNiw1LjMtMTIuMSw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNEw3MjkuNiwxMTcuOEw3MjkuNiwxMTcuOHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTAsMHY5MC40YzAsNjUuNyw1MC45LDg4LjUsODguMSwxMDUuMmgwLjFsMywxLjRjMC43LTAuNCwxLjQtMC43LDIuMi0xYzAuNC0wLjIsMC45LTAuNCwxLjMtMC42IGMzNy4zLTE2LjYsODguNC0zOS41LDg4LjQtMTA1VjBIMHogTTExNiwxMzJsLTItNS4zbC0yNi42LTcwYy0xLjYsNC4xLTUuMywxNC05LjMsMjQuNmwtMTUuMyw0MS4zYy0wLjcsMi0wLjMsMywwLjIsMy43IGMxLjEsMS4zLDMuNSwxLjMsNy4zLDEuM0g3MWwwLDQuNEg0Mi40bDAtNC40aDIuMmMzLjksMCw3LjEtMS43LDkuNS02LjVsMi45LTYuNmwyNi41LTY3LjhsLTQuNy0xMi41aDI0LjdsMzQuMSw4OS43bDMuMSw4LjFIMTE2eiI+PC9wYXRoPjwvc3ZnPg==" /></a>
 
@@ -22,14 +20,14 @@
 
 <a href="/ll/sprint/recQf3zxkHFPeRABL" class="bd-toc-link">1.  Lambda Orientation</a>
 
--   [Learning at Lambda](/ll/module/recBC1BCvLsTSiaLS/)
--   [Labs and Beyond](/ll/module/recnBWTWXqXWjWCUd/)
--   [Values and Support](/ll/module/rec7Vyq18G1tytzyk/)
+- [Learning at Lambda](/ll/module/recBC1BCvLsTSiaLS/)
+- [Labs and Beyond](/ll/module/recnBWTWXqXWjWCUd/)
+- [Values and Support](/ll/module/rec7Vyq18G1tytzyk/)
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Labs and Beyond
 
@@ -39,11 +37,11 @@ Lambda Launch material is now updated and available in Canvas. As of August, all
 
 **At the end of this module, you should be able to:**
 
--   develop a framework of success through explaining careers lessons, Lambda X and endorsements.
--   understand the basics of the career and professional development curriculum
--   articulate how Lambda supports them in their job search and the importance of becoming endorsed
--   understand that the Lambda curriculum has a singular focus on career readiness.
--   know how to access and participate in school engagement opportunities.
+- develop a framework of success through explaining careers lessons, Lambda X and endorsements.
+- understand the basics of the career and professional development curriculum
+- articulate how Lambda supports them in their job search and the importance of becoming endorsed
+- understand that the Lambda curriculum has a singular focus on career readiness.
+- know how to access and participate in school engagement opportunities.
 
 #### Pro Tip
 
@@ -53,17 +51,13 @@ Testing will happen. The choice you make is who does the testing and when it hap
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=VG-C9Ue6xuk), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=VG-C9Ue6xuk), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=qchq6fbEirk), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=qchq6fbEirk), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -81,7 +75,7 @@ Each week there is a careers lesson presented. These lessons cover a wide variet
 
 ### Lambda X
 
-***Lambda X*** is comprised of ***Build Weeks***, ***Labs*** and ***Lambda X***.
+**_Lambda X_** is comprised of **_Build Weeks_**, **_Labs_** and **_Lambda X_**.
 
 Our program helps you reach your full potential by creating meaningful products using all the skills you will learn at Lambda. Lambda X gives students the real-world knowledge, training, an assigned team, and product specifications to simulate what their life will be like as a developer or data scientist in a company/organization. In Lambda X you will receive targeted support and lessons on teamwork.
 
@@ -101,15 +95,15 @@ Lambda X is 40% weekly guided job search activities designed to help you do the 
 
 The Lambda Endorsement is the definitive signal you’re ready to crush it on the job. Endorsed Lambda students didn’t just make it to the end of an online course, they showed up day in and day out, learning and proving mastery across a wide range of technical, career, and collaborative skills. Lambda Endorsement is our guarantee to you as the student that you’re ready to land a great job in the industry, and our guarantee to hiring managers that you’ve nailed every expectation they could have for you. In addition to proving to yourself and to hiring managers that you’ve graduated from Lambda School, here are a few more benefits to getting endorsed.
 
--   Lifetime access to Lambda X for portfolio building and job search support
--   Priority for flexible PM roles during job search
--   Weekly sessions with local industry mentors
--   Guaranteed interviews with matched hiring partners
--   Featured profiles on upcoming hiring company portal
--   Offer negotiation support (average of 17% additional compensation)
--   Lifetime access to updated track curriculum, career workshops, and coach support
+- Lifetime access to Lambda X for portfolio building and job search support
+- Priority for flexible PM roles during job search
+- Weekly sessions with local industry mentors
+- Guaranteed interviews with matched hiring partners
+- Featured profiles on upcoming hiring company portal
+- Offer negotiation support (average of 17% additional compensation)
+- Lifetime access to updated track curriculum, career workshops, and coach support
 
-------------------------------------------------------------------------
+---
 
 #### Learn to understand the basics of the career and professional development curriculum
 
@@ -139,10 +133,10 @@ Starting day one at Lambda, you can start working with our Career Coach team. Ca
 
 How to get help from a Career Coach:
 
--   Stop by Career Office Hours. These happen Sunday - Friday and the schedule is both posted daily in the **#career\_help** channel and in the [calendar](https://calendar.google.com/calendar/embed?src=lambdaschool.com_h86abn6o840diu4p1aeual9m90@group.calendar.google.com&ctz=America/Los_Angeles), which is also pinned to the top of the channel.
--   Submit a /frontdesk ticket. This will get a direct response from a career coach within 24 business hours. *Please [see our FAQ](https://www.notion.so/lambdaschool/Career-FAQs-e2209a95d19a46eeacca69936655336e) for frequently asked questions like Lambda’s phone number/address, how to get a transcript for job applications, etc.*
+- Stop by Career Office Hours. These happen Sunday - Friday and the schedule is both posted daily in the **#career_help** channel and in the [calendar](https://calendar.google.com/calendar/embed?src=lambdaschool.com_h86abn6o840diu4p1aeual9m90@group.calendar.google.com&ctz=America/Los_Angeles), which is also pinned to the top of the channel.
+- Submit a /frontdesk ticket. This will get a direct response from a career coach within 24 business hours. _Please [see our FAQ](https://www.notion.so/lambdaschool/Career-FAQs-e2209a95d19a46eeacca69936655336e) for frequently asked questions like Lambda’s phone number/address, how to get a transcript for job applications, etc._
 
-------------------------------------------------------------------------
+---
 
 #### Learn to articulate how Lambda supports them in their job search and the importance of becoming endorsed
 
@@ -166,11 +160,11 @@ To keep Students on track towards full endorsement, there are multiple checkpoin
 
 Once a Student completes the Lambda School coursework, a member of the Careers team will review and sign off on the following:
 
--   Resume
--   LinkedIn
--   GitHub (Web, iOS, AND, DS tracks only)
--   Portfolio and artifacts for the Student’s track
--   1:1 behavioral interview
+- Resume
+- LinkedIn
+- GitHub (Web, iOS, AND, DS tracks only)
+- Portfolio and artifacts for the Student’s track
+- 1:1 behavioral interview
 
 Students can find detailed expectations and requirements, along with checklists to complete all of the above: [Professional Endorsement Review](https://www.notion.so/Professional-Endorsement-Review-a97a2001310f4fb3b8ef1222e68dc4e7)
 
@@ -180,27 +174,27 @@ Each of the above endorsement categories will be evaluated as a Student moves th
 
 Once endorsed, it is expected that a student will;
 
--   Maintain communication with career coaches, updating them on upcoming interviews and offers
--   Request a coach look over their resume, LinkedIn, portfolio or other artifacts when making changes or updates to gain another set of eyes to catch formatting or grammatical errors
--   Communicate with hiring partners who reach out, ensuring they always receive a reply or update to any communications within 24 hours
--   Uphold scheduled interviews, and professionally communicate if they need to cancel or rearrange the interview to a different time
--   Continuously work on new projects or maintain old projects to stay fresh on technical abilities.
+- Maintain communication with career coaches, updating them on upcoming interviews and offers
+- Request a coach look over their resume, LinkedIn, portfolio or other artifacts when making changes or updates to gain another set of eyes to catch formatting or grammatical errors
+- Communicate with hiring partners who reach out, ensuring they always receive a reply or update to any communications within 24 hours
+- Uphold scheduled interviews, and professionally communicate if they need to cancel or rearrange the interview to a different time
+- Continuously work on new projects or maintain old projects to stay fresh on technical abilities.
 
 ### Benefits of Endorsement
 
 Working toward your Lambda School Endorsement opens a variety of doors simply by you continually leveling up your skills to meet the high bar required for endorsement. Additionally, getting endorsed gives you the following exclusive benefits:
 
--   Sessions with local industry mentors
--   Interviews with matched hiring partners
--   Featured profiles on upcoming hiring company portal
--   Offer negotiation support (avg 17% additional comp)
--   Lifetime access to updated track curriculum, career workshops, and coach support
+- Sessions with local industry mentors
+- Interviews with matched hiring partners
+- Featured profiles on upcoming hiring company portal
+- Offer negotiation support (avg 17% additional comp)
+- Lifetime access to updated track curriculum, career workshops, and coach support
 
 ### Hiring Solutions
 
 There is a whole team at Lambda whose focus is on getting students hired. This team reaches out to companies to tell them about Lambda School and why they should hire you. This team can help you reach out to companies, just like they do, to assist you in making your job search more effective. This team has talked to hundreds of companies and are building relationships with hiring managers. If they talk to a company that is looking for someone like you (and you are endorsed) they will introduce you.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to understand that the Lambda curriculum has a singular focus on career readiness.
 
@@ -216,21 +210,21 @@ The very first step when starting to design curriculum, is to work with these pa
 
 Once we have this large list of objectives, we can work backwards from there to design our modules, module projects, sprints, sprint challenges, units, and build week projects. This ensures that we engineer every moment of a student’s Lambda journey with the most important outcome in mind: getting the student a job!
 
-------------------------------------------------------------------------
+---
 
 #### Learn to know how to access and participate in school engagement opportunities.
 
 ##### Overview
 
-As a student we want you to form a connection with Lambda school, with Lambda school staff and with your fellow students. These connections help provide the social interaction and support you will need to be successful. In Slack, there are channels set up to allow you to reach out to other Lambda students in your physical area, chat about your favorite TV shows and share your favorite hobbies. Lambda School is encouraging local meetups of students and is even willing to pitch in some money for food. You can find information about local meetups by joining your state channel in Slack. Do you have a beautiful yard and want to share pictures? There is a Slack channel for that #gardens\_and\_yards. Are you focused on improving your body as you improve your mind? There is a Slack channel for that; #fitness or even #biohacking. In a more educational related channel, you can share your favorite books in the Slack channel #books. Find a few that interest you to join. If you want to keep up with Lambda School as a company there is a blog on the main website or there is an active Lambda School Twitter account https://twitter.com/lambdaschool or follow our CEO Austen Allred at https://twitter.com/Austen. We hope that you’ll be a part of the Lambda School community far into the future as alumni working as a professional in the tech industry.
+As a student we want you to form a connection with Lambda school, with Lambda school staff and with your fellow students. These connections help provide the social interaction and support you will need to be successful. In Slack, there are channels set up to allow you to reach out to other Lambda students in your physical area, chat about your favorite TV shows and share your favorite hobbies. Lambda School is encouraging local meetups of students and is even willing to pitch in some money for food. You can find information about local meetups by joining your state channel in Slack. Do you have a beautiful yard and want to share pictures? There is a Slack channel for that #gardens_and_yards. Are you focused on improving your body as you improve your mind? There is a Slack channel for that; #fitness or even #biohacking. In a more educational related channel, you can share your favorite books in the Slack channel #books. Find a few that interest you to join. If you want to keep up with Lambda School as a company there is a blog on the main website or there is an active Lambda School Twitter account https://twitter.com/lambdaschool or follow our CEO Austen Allred at https://twitter.com/Austen. We hope that you’ll be a part of the Lambda School community far into the future as alumni working as a professional in the tech industry.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [LL Module 2 Project](https://docs.google.com/document/d/1F0BPlMdDn6U6Y9IZGSRtdvZm_XDc3mCQSRjT7Gk3NL0/edit?usp=sharing)
+- ##### [LL Module 2 Project](https://docs.google.com/document/d/1F0BPlMdDn6U6Y9IZGSRtdvZm_XDc3mCQSRjT7Gk3NL0/edit?usp=sharing)
 
-    These tasks are to be completed during the project time for your track. For full time these tasks will be completed in the afternoons after lunch. For part time these tasks are completed every other day, on the opposite days of the guided project instruction.
+  These tasks are to be completed during the project time for your track. For full time these tasks will be completed in the afternoons after lunch. For part time these tasks are completed every other day, on the opposite days of the guided project instruction.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -238,14 +232,14 @@ As a student we want you to form a connection with Lambda school, with Lambda sc
 
 You can use class recordings to help you master the material.
 
--   **[Labs and Beyond for LS200803FT w/James Pacheco](https://youtu.be/v0qH7LVVMmc)**
+- **[Labs and Beyond for LS200803FT w/James Pacheco](https://youtu.be/v0qH7LVVMmc)**
 
-    An overview of Labs, Lambda X, Career and Professional Development, and Getting a Job.
+  An overview of Labs, Lambda X, Career and Professional Development, and Getting a Job.
 
--   [All previous recordings](/archive/LL/module/recnBWTWXqXWjWCUd)
+- [All previous recordings](/archive/LL/module/recnBWTWXqXWjWCUd)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Project: LL Module 2 Project
+- Project: LL Module 2 Project

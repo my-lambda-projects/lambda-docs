@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # HTTP / AJAX II
 
@@ -71,8 +69,8 @@
 
 **At the end of this module, you should be able to:**
 
--   make PUT requests to an external API using axios
--   make DELETE requests to an external API using axios
+- make PUT requests to an external API using axios
+- make DELETE requests to an external API using axios
 
 #### Pro Tip
 
@@ -82,21 +80,17 @@ Be on time. It’s a mark of respect not to keep others waiting.
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=BSB1qeIaQ5w), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=BSB1qeIaQ5w), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=pK05EUuPipU), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- [Axios PUT](https://github.com/axios/axios/issues/897#issuecomment-343715381)
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=pK05EUuPipU), or enable JavaScript if it is disabled in your browser.
-
--   [Axios PUT](https://github.com/axios/axios/issues/897#issuecomment-343715381)
-
--   [Axios Delete](https://github.com/axios/axios/issues/897#issuecomment-343715381)
+- [Axios Delete](https://github.com/axios/axios/issues/897#issuecomment-343715381)
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -108,7 +102,7 @@ When data needs to be `UPDATED` somewhere we use a PUT `HTTP resource` method to
 
 `PUT` is the “U” in CRUD, and it stands for `UPDATE`. We use the `PUT` method to change a resource’s information. `PUT` takes in a body object like `POST` and identifies data that needs to be updated somewhere.
 
-     axios     
+     axios
         .put(`http://somecoolurl.com/${couldHaveDynamicId}`, updatedData)
            .then(response => {
              response is the response we get back from the server
@@ -186,24 +180,24 @@ Open the project in the browser, click on the network tab. Make a successful req
 
 ### Header tab
 
--   Request url (notice the id there)
--   Request method
--   Status code
--   Request Payload
+- Request url (notice the id there)
+- Request method
+- Status code
+- Request Payload
 
 ### Preview tab
 
--   Server response
+- Server response
 
 ### Reponse tab
 
--   Raw server response
+- Raw server response
 
 ### Timing
 
--   Total request time in ms
+- Total request time in ms
 
-------------------------------------------------------------------------
+---
 
 #### Learn to make DELETE requests to an external API using axios
 
@@ -213,9 +207,9 @@ When we need to tell our server that we want some data that we’re working with
 
 The `DELETE` `HTTP request` method is the “D” in CRUD. We use this to delete or destroy data that lives away from our webpage. When we call .delete, we’re instructing the server to remove some information somewhere. Typically we initiate deletion by sending some identifying piece of information on the URL parameter along with our requested URL string. The URL string will be a dynamic field that we’ll need to ensure matches the resource that we want to be destroyed.
 
-**REMEMBER** *body objects (or data) objects are to be used with PUT, POST and PATCH (we don’t need to go into patch here). Don’t expect the `axios.delete()` method to be able to take in a data object*
+**REMEMBER** _body objects (or data) objects are to be used with PUT, POST and PATCH (we don’t need to go into patch here). Don’t expect the `axios.delete()` method to be able to take in a data object_
 
-      axios     
+      axios
         .delete(`http://somecoolurl.com/${someDynamicId}`)
            .then(response => {
              response is the response we get back from the server
@@ -231,7 +225,7 @@ The last part of our app will be the delete functionality. Here is the [codesand
 
 We are going to work on deleting a quote. To set this up, we have a quote displayed in the delete tab. In real-world apps, you would get to this page by clicking on a quote in some quotes list. On this page, there is a delete button, and in that real-world app, there may also be a way to delete a quote straight from the quote list.
 
-There is one final thing to note. Deleting is dangerous. Often times delete buttons invoke some kind of confirmation message, usually in a modal, that asks if you are *sure* you want to delete that thing. We won’t worry about that here, but consider it that when you are implementing deletes in the future.
+There is one final thing to note. Deleting is dangerous. Often times delete buttons invoke some kind of confirmation message, usually in a modal, that asks if you are _sure_ you want to delete that thing. We won’t worry about that here, but consider it that when you are implementing deletes in the future.
 
 In `index.js`, there is a `deleteMessage` function. Let’s call `axios.delete` and pass in the URL. The endpoint will be `/quote/:id`. Like the put function, `:id` here is a dynamic variable that will be the id of whatever item you are deleting. Just hardcode any number in there for this example. Also, add your `.then()` and `.catch()` and console.log the `response` and `err` inside those:
 
@@ -290,30 +284,30 @@ With the app finished, you can open the dev tools one last time and watch the ne
 
 ### Header tab
 
--   Request url (notice the id there)
--   Request method
--   Status code
--   Request Payload (or lack thereof…)
+- Request url (notice the id there)
+- Request method
+- Status code
+- Request Payload (or lack thereof…)
 
 ### Preview tab
 
--   Server response
+- Server response
 
 ### Reponse tab
 
--   Raw server response
+- Raw server response
 
 ### Timing
 
--   Total request time in ms
+- Total request time in ms
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [HTTP Movies - Assignment](https://github.com/LambdaSchool/HTTP-Movies-Assignment)
+- ##### [HTTP Movies - Assignment](https://github.com/LambdaSchool/HTTP-Movies-Assignment)
 
-    Expound upon the knowledge you’ve gained thus far and add some functionality into your `Movies` assignment you spent time with during React Router.
+  Expound upon the knowledge you’ve gained thus far and add some functionality into your `Movies` assignment you spent time with during React Router.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -321,60 +315,60 @@ With the app finished, you can open the dev tools one last time and watch the ne
 
 You can use class recordings to help you master the material.
 
--   **[HTTP / AJAX II for Web35 w/ Warren Longmire](https://youtu.be/0EhBn5-Nh28)**
+- **[HTTP / AJAX II for Web35 w/ Warren Longmire](https://youtu.be/0EhBn5-Nh28)**
 
-    HTTP / AJAX II
+  HTTP / AJAX II
 
--   [All previous recordings](/archive/WEB3/module/recupVjaAKPqbuk7Y)
+- [All previous recordings](/archive/WEB3/module/recupVjaAKPqbuk7Y)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Open the project in the browser, click on the network tab. Make a successful request and a bad request. Click on the requests and explore the tabs that show up to the right again. Note the following:
+  Open the project in the browser, click on the network tab. Make a successful request and a bad request. Click on the requests and explore the tabs that show up to the right again. Note the following:
 
-    ### Header tab
+  ### Header tab
 
-    -   Request url (notice the id there)
-    -   Request method
-    -   Status code
-    -   Request Payload
+  - Request url (notice the id there)
+  - Request method
+  - Status code
+  - Request Payload
 
-    ### Preview tab
+  ### Preview tab
 
-    -   Server response
+  - Server response
 
-    ### Reponse tab
+  ### Reponse tab
 
-    -   Raw server response
+  - Raw server response
 
-    ### Timing
+  ### Timing
 
-    -   Total request time in ms
+  - Total request time in ms
 
--   Objective challenge:
+- Objective challenge:
 
-    With the app finished, you can open the dev tools one last time and watch the network requests going out to our server. Note the following:
+  With the app finished, you can open the dev tools one last time and watch the network requests going out to our server. Note the following:
 
-    ### Header tab
+  ### Header tab
 
-    -   Request url (notice the id there)
-    -   Request method
-    -   Status code
-    -   Request Payload (or lack thereof…)
+  - Request url (notice the id there)
+  - Request method
+  - Status code
+  - Request Payload (or lack thereof…)
 
-    ### Preview tab
+  ### Preview tab
 
-    -   Server response
+  - Server response
 
-    ### Reponse tab
+  ### Reponse tab
 
-    -   Raw server response
+  - Raw server response
 
-    ### Timing
+  ### Timing
 
-    -   Total request time in ms
+  - Total request time in ms
 
--   Project: HTTP Movies - Assignment
+- Project: HTTP Movies - Assignment

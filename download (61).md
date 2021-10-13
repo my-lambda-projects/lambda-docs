@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,33 +10,33 @@
 
 <a href="/web4java/sprint/recnLDyTtONLTMiFJ" class="bd-toc-link">1.  Java Precourse Information</a>
 
--   [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
--   [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
+- [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
+- [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
 
 <a href="/web4java/sprint/recoJ4ZqNQWX3cy6E" class="bd-toc-link">2.  Java Fundamentals</a>
 
--   [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
--   [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
--   [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
--   [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
+- [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
+- [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
+- [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
+- [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
 
 <a href="/web4java/sprint/recRVUSWQEtosl0Cz" class="bd-toc-link">3.  RDBMS and Intro to APIs</a>
 
--   [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
--   [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
--   [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
--   [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
+- [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
+- [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
+- [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
+- [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
 
 <a href="/web4java/sprint/recSqm5AAEkJcIl3p" class="bd-toc-link">4.  Java Frameworks</a>
 
--   [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
--   [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
--   [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
--   [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
+- [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
+- [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
+- [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
+- [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
 
 <a href="/web4java/sprint/recC5dhR9menaROwx" class="bd-toc-link">5.  WEB Unit 4 Java Build</a>
 
-------------------------------------------------------------------------
+---
 
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjM1IiB2aWV3Ym94PSIwIDAgNzU2IDE5NyIgZmlsbD0iI2VjMzk0NCI+PGc+PHBhdGggZD0iTTI5Mi45LDEyNi42aC02LjdjLTksMC0xMi42LTEuOS0xMi42LTkuNVY0OC41YzAtNy43LDEuNi04LjYsMTEuNC05Ljd2LTQuNWgtNDEuM3Y0LjUgYzkuOCwxLjEsMTEuNCwxLjksMTEuNCw5Ljd2NjkuM2MwLDcuNy0xLjYsOC42LTExLjQsOS43djQuNWg3My43bDQuOS0yOS40aC00LjRDMzA4LjUsMTE5LjYsMzAzLjksMTI2LjYsMjkyLjksMTI2LjZ6Ij48L3BhdGg+PHBhdGggZD0iTTM4NS41LDEyMS4xVjc5LjNjMC0xNS44LTkuNC0yMi40LTI2LjYtMjIuNGMtMTUsMC0yNi44LDYuNi0yNi44LDE5LjNjMCwyLjQsMC4yLDMuMywwLjgsNWgxNi42IGMtMC41LTItMC43LTUtMC43LTcuNWMwLTkuNiwzLjYtMTIuNCw5LjQtMTIuNGM2LjQsMCw5LjcsMiw5LjcsMTQuNHYxMS4ybC0yMC44LDcuN2MtMTAuNiw0LjEtMTkuMyw4LjgtMTkuMywyMC43IGMwLDEwLjksNy41LDE3LjgsMTguNiwxNy44YzkuOSwwLDE3LjQtNi4yLDIxLjktMTIuMWwwLjEtMC4xbDAsMFYxMzJoMjZ2LTQuNEMzODcuNywxMjcuMSwzODUuNSwxMjYuMiwzODUuNSwxMjEuMXogTTM2OCwxMTcuOCBjLTQuNCwzLjMtNy42LDUuMy0xMiw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNFYxMTcuOEwzNjgsMTE3Ljh6Ij48L3BhdGg+PHBhdGggZD0iTTUxNC40LDEyMVY3OS41YzAtMTQuOC02LTIyLjQtMTguNy0yMi40Yy0xMS41LDAtMTkuNCw2LjYtMjUuNSwxMy45Yy0xLjgtOS42LTcuNy0xMy45LTE3LjgtMTMuOSBjLTExLjQsMC0xOC43LDYuMi0yNC44LDEzLjZWNTdoLTIuM2wtMjMuOCw3LjR2Mi40bDguNiw1djQ5LjRjMCw1LTIuMSw2LjEtOC45LDYuNHY0LjRoMzUuMXYtNC40Yy02LjctMC4zLTguNy0xLjMtOC43LTYuNHYtNDcgYzQuNy0zLjYsOS41LTYuNSwxNS41LTYuNWM3LjYsMCwxMC41LDQuMiwxMC41LDEyLjd2NDAuOGMwLDUtMS45LDYuMS04LjcsNi40djQuNGwzNC44LDB2LTQuNGMtNi43LTAuMy04LjYtMS4zLTguNi02LjR2LTQ3IGM0LjctMy42LDkuNS02LjUsMTUuNS02LjVjNy42LDAsMTAuNSw0LjIsMTAuNSwxMi43bC0wLjEsNDAuNWMwLDUtMS44LDYuNC04LjYsNi43bDAsNC40aDM1LjF2LTQuNCBDNTE2LjcsMTI3LjQsNTE0LjQsMTI2LjEsNTE0LjQsMTIxeiI+PC9wYXRoPjxwYXRoIGQ9Ik01NzMuMiw1Ny4zYy0xMSwwLTE4LjUsNS43LTIzLjQsMTIuOFYyMi45aC0yLjdsLTIzLjQsNi44djIuNWw4LjYsNC41VjEzMmgyLjlsOC0zLjVjNS44LDMuMywxMi4zLDUsMjAuMiw1IGMyMC44LDAsMzcuNC0xNS44LDM3LjQtNDIuNkM2MDAuOSw2OS45LDU5MC40LDU3LjMsNTczLjIsNTcuM3ogTTU2My40LDEyOC43Yy01LjQsMC0xMC4zLTIuNC0xMy43LTcuOVY3My42IGMzLjQtMy40LDguNS01LjcsMTMuNS01LjdjMTMuOSwwLDIwLDEyLjgsMjAsMjkuNUM1ODMuMywxMTQuNyw1NzUuOCwxMjguNSw1NjMuNCwxMjguN3oiPjwvcGF0aD48cGF0aCBkPSJNNjc3LDEyMS4yVjIyLjhoLTIuNkw2NTEsMjkuNlYzMmw4LjYsNC41djI1LjdjLTMuNC0zLjItOC44LTUuMS0xNS41LTUuMWMtMTkuOSwwLTM1LjIsMTUuMy0zNS4yLDQxLjMgYzAsMjAuNywxMS4yLDM0LjYsMjguMSwzNC42YzkuOCwwLDE3LTUuMywyMi42LTEzLjF2MC45VjEzMmgyNi4zbDAtNC40QzY3OS4xLDEyNy4zLDY3NywxMjYuMyw2NzcsMTIxLjJ6IE02NTkuNiwxMTcuMSBMNjU5LjYsMTE3LjFjLTMuNCwzLjQtOCw1LjEtMTMuMiw1LjFjLTEzLjIsMC0yMC40LTEyLjgtMjAuNC0yOS44YzAtMTcuOCw3LjMtMjkuMiwxOS41LTI5LjJjOC43LDAsMTQuMSw2LjksMTQuMSwxOC4zIEw2NTkuNiwxMTcuMXoiPjwvcGF0aD48cGF0aCBkPSJNNzQ3LjEsMTIxLjFWNzkuM2MwLTE1LjgtOS40LTIyLjQtMjYuNi0yMi40Yy0xNSwwLTI2LjgsNi42LTI2LjgsMTkuM2MwLDIuNCwwLjIsMy4zLDAuOCw1aDE2LjYgYy0wLjUtMi0wLjctNS0wLjctNy41YzAtOS42LDMuNi0xMi40LDkuNC0xMi40YzYuNCwwLDkuNywyLDkuNywxNC40djExLjJsLTIwLjgsNy43Yy0xMC42LDQuMS0xOS4zLDguOC0xOS4zLDIwLjcgYzAsMTAuOSw3LjUsMTcuOCwxOC42LDE3LjhjOS45LDAsMTcuNC02LjIsMjEuOS0xMi4xdi0wLjFoMC4xbDAsMTEuMWwyNiwwLjF2LTQuNUM3NDkuMywxMjcuMSw3NDcuMSwxMjYuMiw3NDcuMSwxMjEuMXogTTcyOS42LDExNy44Yy00LjQsMy4zLTcuNiw1LjMtMTIuMSw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNEw3MjkuNiwxMTcuOEw3MjkuNiwxMTcuOHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTAsMHY5MC40YzAsNjUuNyw1MC45LDg4LjUsODguMSwxMDUuMmgwLjFsMywxLjRjMC43LTAuNCwxLjQtMC43LDIuMi0xYzAuNC0wLjIsMC45LTAuNCwxLjMtMC42IGMzNy4zLTE2LjYsODguNC0zOS41LDg4LjQtMTA1VjBIMHogTTExNiwxMzJsLTItNS4zbC0yNi42LTcwYy0xLjYsNC4xLTUuMywxNC05LjMsMjQuNmwtMTUuMyw0MS4zYy0wLjcsMi0wLjMsMywwLjIsMy43IGMxLjEsMS4zLDMuNSwxLjMsNy4zLDEuM0g3MWwwLDQuNEg0Mi40bDAtNC40aDIuMmMzLjksMCw3LjEtMS43LDkuNS02LjVsMi45LTYuNmwyNi41LTY3LjhsLTQuNy0xMi41aDI0LjdsMzQuMSw4OS43bDMuMSw4LjFIMTE2eiI+PC9wYXRoPjwvc3ZnPg==" /></a>
 
@@ -46,39 +44,39 @@
 
 <a href="/web4java/sprint/recnLDyTtONLTMiFJ" class="bd-toc-link">1.  Java Precourse Information</a>
 
--   [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
--   [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
+- [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
+- [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
 
 <a href="/web4java/sprint/recoJ4ZqNQWX3cy6E" class="bd-toc-link">2.  Java Fundamentals</a>
 
--   [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
--   [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
--   [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
--   [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
+- [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
+- [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
+- [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
+- [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
 
 <a href="/web4java/sprint/recRVUSWQEtosl0Cz" class="bd-toc-link">3.  RDBMS and Intro to APIs</a>
 
--   [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
--   [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
--   [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
--   [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
+- [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
+- [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
+- [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
+- [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
 
 <a href="/web4java/sprint/recSqm5AAEkJcIl3p" class="bd-toc-link">4.  Java Frameworks</a>
 
--   [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
--   [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
--   [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
--   [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
+- [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
+- [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
+- [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
+- [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
 
 <a href="/web4java/sprint/recC5dhR9menaROwx" class="bd-toc-link">5.  WEB Unit 4 Java Build</a>
 
-------------------------------------------------------------------------
+---
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Guided Project](#guided-project)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Guided Project](#guided-project)
+- [Project](#project)
+- [Review](#review)
 
 # Java - Data Modeling and Auditing Fields with custom querying
 
@@ -88,12 +86,12 @@
 
 **At the end of this module, you should be able to:**
 
--   add additional fields to a Many to Many Join Table
--   add standard auditing fields to each table
--   populate and display standard auditing fields
--   use SQL, JPA and Hibernate to perform custom data manipulation operations on a RDBMS through a Spring Application
--   implement default Swagger documentation
--   print the default Swagger documentation
+- add additional fields to a Many to Many Join Table
+- add standard auditing fields to each table
+- populate and display standard auditing fields
+- use SQL, JPA and Hibernate to perform custom data manipulation operations on a RDBMS through a Spring Application
+- implement default Swagger documentation
+- print the default Swagger documentation
 
 #### Pro Tip
 
@@ -113,13 +111,13 @@ Review each preclass resource before class.
 
 ##### Overview
 
--   See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_data\_modeling](https://github.com/LambdaSchool/java-sampleemps.git) for the code used in the objective.
+- See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling](https://github.com/LambdaSchool/java-sampleemps.git) for the code used in the objective.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   JetBrains IntelliJ IDEA IDE
--   Postman
+- Java Development Kit (JDK) - at least version 11
+- JetBrains IntelliJ IDEA IDE
+- Postman
 
 We have a new business rule. When an employee is added to a Job Title, we need to add the name of their manager for that Job Title. In other words, our Join Table needs an additional attribute, column. This is a very common situation so let’s do it!
 
@@ -127,50 +125,50 @@ First, we need to know that our `@ManyToMany` annotation does not allow us to ad
 
 ![Sample Employee Database](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%204%20-%20JX%20Java%20-%20Data%20Modeling%20and%20Auditing%20Fields%20with%20custom%20querying/assets/JX-SP11-M4-01.png)
 
--   One Employee to Many employee, job titles combinations
--   One Job title to Many employee, job titles combinations
+- One Employee to Many employee, job titles combinations
+- One Job title to Many employee, job titles combinations
 
 We will make use of this construct to add our manager column.
 
 The idea is to make changes to our database, allowing us to add this column. In making those changes, we want to impact our users, clients, as little as possible. So, we will keep our controllers the same. The data being sent to and from our application will have to change slightly to accommodate the new field. This is a great time to use the file comparison tool in IntelliJ (See the objective on IntelliJ Tips and Tricks from a previous module) -> comparing the these two applications
 
--   <https://github.com/LambdaSchool/java-sampleemps/tree/master/sampleemps_create_delete_update>
--   <https://github.com/LambdaSchool/java-sampleemps/tree/master/sampleemps_data_modeling>
+- <https://github.com/LambdaSchool/java-sampleemps/tree/master/sampleemps_create_delete_update>
+- <https://github.com/LambdaSchool/java-sampleemps/tree/master/sampleemps_data_modeling>
 
 do note that the second application has code from several different objectives for this module!
 
 ##### Follow Along
 
-Let’s take the repo [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_create\_delete\_update](https://github.com/LambdaSchool/java-sampleemps.git)t and transform it into the repo [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_data\_modeling](https://github.com/LambdaSchool/java-sampleemps.git)t step by step!
+Let’s take the repo [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_create_delete_update](https://github.com/LambdaSchool/java-sampleemps.git)t and transform it into the repo [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling](https://github.com/LambdaSchool/java-sampleemps.git)t step by step!
 
--   Create the join table class `models.Employeetitles` with the extra manager column.
--   This is a brand new class. Much of the code is straightforward and commented below.
--   However, we do have a new issue, a compound primary key. This is where more than 2 or more fields are combined to make the primary key. In our case, we are combining `employeeid` and `jobtitleid`.
-    -   Notice that each field has the @Id annotation signifying they are part of the primary key.
-    -   Since we have a compound primary key, we must implement the interface `Serializable` to aid in generating JSON Objects of this class.
-        -   When you implement Serializable, you also have to implement equals and hashCode
-        -   This is done in a method similar to adding Getters and Setters
-            -   Right click in the class where you want to add the new code.
-            -   Select `Generate...` -> `equals() and hashCode()`
-            -   In the dialog box,
-                -   make sure `Use getters during code generation` is checked
-                -   make sure `Accept subclasses as parameters to equals()` method is NOT checked
+- Create the join table class `models.Employeetitles` with the extra manager column.
+- This is a brand new class. Much of the code is straightforward and commented below.
+- However, we do have a new issue, a compound primary key. This is where more than 2 or more fields are combined to make the primary key. In our case, we are combining `employeeid` and `jobtitleid`.
+  - Notice that each field has the @Id annotation signifying they are part of the primary key.
+  - Since we have a compound primary key, we must implement the interface `Serializable` to aid in generating JSON Objects of this class.
+    - When you implement Serializable, you also have to implement equals and hashCode
+    - This is done in a method similar to adding Getters and Setters
+      - Right click in the class where you want to add the new code.
+      - Select `Generate...` -> `equals() and hashCode()`
+      - In the dialog box,
+        - make sure `Use getters during code generation` is checked
+        - make sure `Accept subclasses as parameters to equals()` method is NOT checked
 
 ![getters screen](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%204%20-%20JX%20Java%20-%20Data%20Modeling%20and%20Auditing%20Fields%20with%20custom%20querying/assets/JX-SP11-M4-02.png)
 
--   In the next dialog box, check that all fields are included in the `equals()` method. This is the norm.
+- In the next dialog box, check that all fields are included in the `equals()` method. This is the norm.
 
 ![equals screen](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%204%20-%20JX%20Java%20-%20Data%20Modeling%20and%20Auditing%20Fields%20with%20custom%20querying/assets/JX-SP11-M4-03.png)
 
--   In the next dialog box, check that all fields are included in the `hashCode()` method. This is the norm.
+- In the next dialog box, check that all fields are included in the `hashCode()` method. This is the norm.
 
 ![hashCode screen](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%204%20-%20JX%20Java%20-%20Data%20Modeling%20and%20Auditing%20Fields%20with%20custom%20querying/assets/JX-SP11-M4-04.png)
 
--   The next dialog box requires some thought. You want to check all the fields that cannot be NULL. In our code, none of the fields can be NULL so I have checked all fields.
+- The next dialog box requires some thought. You want to check all the fields that cannot be NULL. In our code, none of the fields can be NULL so I have checked all fields.
 
 ![Null screen](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%204%20-%20JX%20Java%20-%20Data%20Modeling%20and%20Auditing%20Fields%20with%20custom%20querying/assets/JX-SP11-M4-05.png)
 
--   Now click finished and see the code get generated for you!
+- Now click finished and see the code get generated for you!
 
 Expand to see the code for models.EmployeeTitles
 
@@ -848,12 +846,12 @@ Remember the controllers do NOT change!!!
 
 ##### Dig Deeper
 
--   [Many-to-Many Association](https://vladmihalcea.com/the-best-way-to-map-a-many-to-many-association-with-extra-columns-when-using-jpa-and-hibernate/)  
-    The best way to map a many-to-many association with extra columns when using JPA and Hibernate
--   [Many To Many Extra Columns Relationship](https://hellokoding.com/jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/)  
-    JPA and Hibernate Many To Many Extra Columns Relationship Mapping Example with Spring Boot and MySQL
+- [Many-to-Many Association](https://vladmihalcea.com/the-best-way-to-map-a-many-to-many-association-with-extra-columns-when-using-jpa-and-hibernate/)  
+  The best way to map a many-to-many association with extra columns when using JPA and Hibernate
+- [Many To Many Extra Columns Relationship](https://hellokoding.com/jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/)  
+  JPA and Hibernate Many To Many Extra Columns Relationship Mapping Example with Spring Boot and MySQL
 
-------------------------------------------------------------------------
+---
 
 #### Learn to add standard auditing fields to each table
 
@@ -861,36 +859,35 @@ Remember the controllers do NOT change!!!
 
 ##### Overview
 
--   See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_data\_modeling](https://github.com/LambdaSchool/java-sampleemps.git)t for the code used in the objective.
+- See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling](https://github.com/LambdaSchool/java-sampleemps.git)t for the code used in the objective.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   JetBrains IntelliJ IDEA IDE
--   Postman
+- Java Development Kit (JDK) - at least version 11
+- JetBrains IntelliJ IDEA IDE
+- Postman
 
 A very common extra set of columns that are added to tables are auditing columns.
 
--   Who created the row
--   When was the row created
--   Who last modified the row
--   When was the row last modified
+- Who created the row
+- When was the row created
+- Who last modified the row
+- When was the row last modified
 
 These are so common that the Spring Framework provides us with JPA Auditing Annotations. We just need to implement them as we desire. Here is the common approach:
 
 A note on the fields
 
--   The When fields, data and time, will be read from the system date and time
--   The Who fields, username, for now will default to something. We will be adding user authentication in the future and that is when these fields will really show their worth!
+- The When fields, data and time, will be read from the system date and time
+- The Who fields, username, for now will default to something. We will be adding user authentication in the future and that is when these fields will really show their worth!
 
 ##### Follow Along
 
-Let’s continue taking the repo [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_create\_delete\_update](https://github.com/LambdaSchool/java-sampleemps.git)t and transforming it into the repo [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_data\_modeling](https://github.com/LambdaSchool/java-sampleemps.git)t step by step!
+Let’s continue taking the repo [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_create_delete_update](https://github.com/LambdaSchool/java-sampleemps.git)t and transforming it into the repo [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling](https://github.com/LambdaSchool/java-sampleemps.git)t step by step!
 
 We are going to add these auditing fields to each table. Let’s first create a new Abstract Class that contains these audit fields. Take special notice of the comments around the annotations. This is boilerplate code. This abstract class can normally be added as is to any Java Spring application where you wish to implement audit fields.
 
 Expand to see the new abstract class models.Auditable
-
 
     import org.springframework.data.annotation.CreatedBy;
     import org.springframework.data.annotation.CreatedDate;
@@ -928,7 +925,7 @@ Expand to see the new abstract class models.Auditable
 
         /**
          * Date field containing the date and time when the row was created
-         * 
+         *
          * Temporal(TIMESTAMP) - Sets the precision of the date being saved. In this case Date and Time
          */
         @CreatedDate
@@ -943,7 +940,7 @@ Expand to see the new abstract class models.Auditable
 
         /**
          * Date field containing the data and time when the row was last modified
-         * 
+         *
 
          * Temporal(TIMESTAMP) - Sets the precision of the date being saved. In this case Date and Time
          */
@@ -1039,16 +1036,16 @@ Expand to see the new abstract class models.Auditable
 
 ##### Dig Deeper
 
--   [Enable auditing](https://medium.com/@manika09singh/enable-auditing-using-spring-data-jpa-2f62587ccb23)  
-    Enable auditing using Spring Data JPA
--   [Spring Data JPA Auditing](https://dzone.com/articles/spring-data-jpa-auditing-automatically-the-good-stuff)  
-    Spring Data JPA Auditing: Automatically Saving the Good Stuff. Most closely follows our plan
--   [Baeldung](https://www.baeldung.com/database-auditing-jpa)  
-    Baeldung - Auditing with JPA, Hibernate, and Spring Data JPA
--   [Baeldung](https://www.baeldung.com/hibernate-inheritance)  
-    Baeldung - MappedSuperclass
+- [Enable auditing](https://medium.com/@manika09singh/enable-auditing-using-spring-data-jpa-2f62587ccb23)  
+  Enable auditing using Spring Data JPA
+- [Spring Data JPA Auditing](https://dzone.com/articles/spring-data-jpa-auditing-automatically-the-good-stuff)  
+  Spring Data JPA Auditing: Automatically Saving the Good Stuff. Most closely follows our plan
+- [Baeldung](https://www.baeldung.com/database-auditing-jpa)  
+  Baeldung - Auditing with JPA, Hibernate, and Spring Data JPA
+- [Baeldung](https://www.baeldung.com/hibernate-inheritance)  
+  Baeldung - MappedSuperclass
 
-------------------------------------------------------------------------
+---
 
 #### Learn to populate and display standard auditing fields
 
@@ -1056,18 +1053,17 @@ Expand to see the new abstract class models.Auditable
 
 ##### Overview
 
--   See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_data\_modeling](https://github.com/LambdaSchool/java-sampleemps.git) for the code used in the objective.
+- See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling](https://github.com/LambdaSchool/java-sampleemps.git) for the code used in the objective.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   JetBrains IntelliJ IDEA IDE
--   Postman
+- Java Development Kit (JDK) - at least version 11
+- JetBrains IntelliJ IDEA IDE
+- Postman
 
 We are using Spring Data and JPA to populate our SeedData. We have extended Auditable for all our tables. We have enabled JPA Auditing in our main class. We run our application and get the following
 
 Expand to see http://localhost:2019/employees/employees
-
 
     [
         {
@@ -1481,7 +1477,6 @@ Let’s say we do want to have the auditing fields appear in the JSON. This is s
 Let’s say you want auditing data on all the tables. Simply add Getters to your abstract class. No need to add setters. They are never used. JPA Auditing does its own thing. With the Getters added to your abstract class, your new output is
 
 Expand to see http://localhost:2019/employees/employees with auditing data
-
 
     [
         {
@@ -2087,7 +2082,6 @@ And the new Auditable class looks like
 
 Expand to see models.Auditable with Getters
 
-
     package com.lambdaschool.sampleemps.models;
 
     import org.springframework.data.annotation.CreatedBy;
@@ -2126,7 +2120,7 @@ Expand to see models.Auditable with Getters
 
         /**
          * Date field containing the date and time when the row was created
-         * 
+         *
          * Temporal(TIMESTAMP) - Sets the precision of the date being saved. In this case Date and Time
          */
         @CreatedDate
@@ -2141,7 +2135,7 @@ Expand to see models.Auditable with Getters
 
         /**
          * Date field containing the data and time when the row was last modified
-         * 
+         *
 
          * Temporal(TIMESTAMP) - Sets the precision of the date being saved. In this case Date and Time
          */
@@ -2572,10 +2566,9 @@ Expand to see models.Auditable with Getters
         }
     ]
 
-But what if we don't like the date format. We can change that by adding these two lines to our \`application.properties\` file \`\`\`TEXT spring.jackson.date-format=yyyy-MM-dd HH:mm:ss spring.jackson.time-zone=America/Los\_Angeles \`\`\` Of course we change the pattern using standard date formatting. See \[https://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html\](https://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html) for more information on date formatting! Now when we run our application, our date format is updated for all our dates!
+But what if we don't like the date format. We can change that by adding these two lines to our \`application.properties\` file \`\`\`TEXT spring.jackson.date-format=yyyy-MM-dd HH:mm:ss spring.jackson.time-zone=America/Los_Angeles \`\`\` Of course we change the pattern using standard date formatting. See \[https://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html\](https://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html) for more information on date formatting! Now when we run our application, our date format is updated for all our dates!
 
 Expand to see http://localhost:2019/employees/employees with updated date format
-
 
     [
         {
@@ -3232,7 +3225,6 @@ Expand to see http://localhost:2019/employees/employees with updated date format
 
 data.sql with Auditing Data
 
-
     DELETE
     FROM EMPLOYEETITLES;
 
@@ -3272,7 +3264,7 @@ data.sql with Auditing Data
 
 \- And now you will have auditing data using data.sql!
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use SQL, JPA and Hibernate to perform custom data manipulation operations on a RDBMS through a Spring Application
 
@@ -3280,13 +3272,13 @@ data.sql with Auditing Data
 
 ##### Overview
 
--   See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_data\_modeling](https://github.com/LambdaSchool/java-sampleemps.git) for the code used in the objective.
+- See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling](https://github.com/LambdaSchool/java-sampleemps.git) for the code used in the objective.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   JetBrains IntelliJ IDEA IDE
--   Postman
+- Java Development Kit (JDK) - at least version 11
+- JetBrains IntelliJ IDEA IDE
+- Postman
 
 ### Modifying Custom Queries
 
@@ -3302,17 +3294,17 @@ First, let’s write the query to make sure it does what we want
 
 Note that the variables starting with a `:` are parameters we will get from Java. So we are
 
--   Updating the `jobtitles` table
--   Setting
-    -   `title` field to a new one coming from Java
-    -   we are modifying the row outside of Spring Data JPA, so we need to manually update the modified auditing fields
-        -   `last_modified_by` is set to a username coming from Java
-        -   `last_modified_date` is set from the system date
--   Updating row where `jobtitleid` = some id coming from Java
+- Updating the `jobtitles` table
+- Setting
+  - `title` field to a new one coming from Java
+  - we are modifying the row outside of Spring Data JPA, so we need to manually update the modified auditing fields
+    - `last_modified_by` is set to a username coming from Java
+    - `last_modified_date` is set from the system date
+- Updating row where `jobtitleid` = some id coming from Java
 
 ##### Follow Along
 
-We are continuing taking the repo [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_create\_delete\_update](https://github.com/LambdaSchool/java-sampleemps.git) and transforming it into the repo [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_data\_modeling](https://github.com/LambdaSchool/java-sampleemps.git) step by step! So, from the following, make the necessary changes to the code you are working through for this Module.
+We are continuing taking the repo [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_create_delete_update](https://github.com/LambdaSchool/java-sampleemps.git) and transforming it into the repo [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling](https://github.com/LambdaSchool/java-sampleemps.git) step by step! So, from the following, make the necessary changes to the code you are working through for this Module.
 
 Since this is related to the `JobTitle` table, let’s put this custom query in the `JobTitleRepository`.
 
@@ -3329,23 +3321,23 @@ Since this is related to the `JobTitle` table, let’s put this custom query in 
 
 Some notes on the query
 
--   `@Transactional` - we are changing data in the database so best practice says to make the operation transactional.
--   `@Modifying` - by default, a query can only read, and not manipulate, data. We have to override that behavior with this annotation.
--   `@Query` is the notation that says we are doing a query.
-    -   `@Query` takes some attributes
-        -   `value` is the actual query in String form. Yes, the query has to be all on one line!
-        -   `nativeQuery = true` means the query will be using the actual database names of things. A preference of mine.
-            -   native queries are usually faster
-            -   can lose portability to other databases if care is not taken in naming conventions, which of course we do take care in class!
-    -   The Query returns nothing, hence the void. To invoke the query we call the method updateJobTitle with three parameters:
-        -   `uname` - the username of who is updating the date
-        -   `jobtitleid` - the primary key of the row to update
-        -   `title` - the new job title
-        -   Note that like in controllers, these parameters match with the parameters in the query by NAME. So, `uname` goes with `:uname`!
+- `@Transactional` - we are changing data in the database so best practice says to make the operation transactional.
+- `@Modifying` - by default, a query can only read, and not manipulate, data. We have to override that behavior with this annotation.
+- `@Query` is the notation that says we are doing a query.
+  - `@Query` takes some attributes
+    - `value` is the actual query in String form. Yes, the query has to be all on one line!
+    - `nativeQuery = true` means the query will be using the actual database names of things. A preference of mine.
+      - native queries are usually faster
+      - can lose portability to other databases if care is not taken in naming conventions, which of course we do take care in class!
+  - The Query returns nothing, hence the void. To invoke the query we call the method updateJobTitle with three parameters:
+    - `uname` - the username of who is updating the date
+    - `jobtitleid` - the primary key of the row to update
+    - `title` - the new job title
+    - Note that like in controllers, these parameters match with the parameters in the query by NAME. So, `uname` goes with `:uname`!
 
 Now let’s use our new query. We use it like we use any regular CRUD method from our repository. We make a service call and a controller method for our clients!
 
--   Create the services.JobTitleServices class
+- Create the services.JobTitleServices class
 
 <!-- -->
 
@@ -3360,7 +3352,7 @@ Now let’s use our new query. We use it like we use any regular CRUD method fro
             JobTitle jt);
     }
 
--   Create the services.JobTitleServiceImpl class
+- Create the services.JobTitleServiceImpl class
 
 <!-- -->
 
@@ -3415,13 +3407,13 @@ Now let’s use our new query. We use it like we use any regular CRUD method fro
         }
     }
 
--   This requires some explanation:
-    -   First we check to make sure that a Job Title actually comes across from the client
-    -   Then we make sure no Employees were sent with the Job Title object. We add Job Titles to Employees through another endpoint.
-    -   Now we check to make sure we have a valid Job Title Id.
-    -   If all that works, we invoke the update query
-    -   Finally we find again the Job Title object in order to get a good Job Title object with the newly updated Job Title and return that Job Title object
--   Create the controllers.JobTitleController class
+- This requires some explanation:
+  - First we check to make sure that a Job Title actually comes across from the client
+  - Then we make sure no Employees were sent with the Job Title object. We add Job Titles to Employees through another endpoint.
+  - Now we check to make sure we have a valid Job Title Id.
+  - If all that works, we invoke the update query
+  - Finally we find again the Job Title object in order to get a good Job Title object with the newly updated Job Title and return that Job Title object
+- Create the controllers.JobTitleController class
 
 <!-- -->
 
@@ -3477,9 +3469,9 @@ Now let’s use our new query. We use it like we use any regular CRUD method fro
         }
     }
 
--   Some explanation
-    -   The body for each of these endpoints would look the same
-    -   In this case since there is only 1 field to update, PUT and PATCH do exactly the same thing. I decided to provide both to prevent the client from having to remember which one is implemented.
+- Some explanation
+  - The body for each of these endpoints would look the same
+  - In this case since there is only 1 field to update, PUT and PATCH do exactly the same thing. I decided to provide both to prevent the client from having to remember which one is implemented.
 
 You can use the following JSON to test the endpoints
 
@@ -3491,34 +3483,34 @@ You can use the following JSON to test the endpoints
 
 Let’s try adding some code on our own. You will need to find the appropriate code from the provided repository and add it to your own application.
 
-A combination of custom Read queries and custom Modify queries are used to update the Many To Many relationship between Employee and JobTitle. You can see this code in action in the sampleemps\_data\_modeling application. The flow of this process is this. Since Employee is our driving table, I am putting this work with the methods for Employees
+A combination of custom Read queries and custom Modify queries are used to update the Many To Many relationship between Employee and JobTitle. You can see this code in action in the sampleemps_data_modeling application. The flow of this process is this. Since Employee is our driving table, I am putting this work with the methods for Employees
 
--   services.EmployeeService gets the methods to delete or add an employee job title combination
-    -   deleteEmpJobTitle, addEmpJobTitle
-    -   Both takes two parameters, the employee id and role id of the combination to delete or add
--   services.EmployeeServiceImpl
-    -   Implements the deleteEmpJobTitle and addEmpJobTitle methods with this process
-        -   Verify that the employee id is valid
-        -   Verify that the job title id is valid
-        -   Using a custom query, verify that the employee job title combinations
-            -   exists when doing a delete. We must have something to delete!
-            -   does not exist when doing an add. We don’t want duplicate combinations!
-        -   Once all has been verified, use a custom query to actually perform the delete or add
--   controller.EmployeeController
-    -   We need a way for clients to delete or add the employee job title combination.
-    -   We get the ids through path variables
-    -   see methods deleteEmployeeJobTitlesByid and addEmployeeJobTitlesByid
--   For the above we made use of three custom queries, all of which are located in repositories.EmployeeRepository
-    -   checkEmpJobTitleCombo
-        -   Counts the number of the given employee job titles combinations in the database
-        -   Uses the interface views.JustTheCount
-    -   deleteEmployeeJobTitleCombo
-        -   deletes the combination of the given employee id and job title id
-    -   insertEmployeeJobTitleCombo
-        -   inserts the given combination of the given employee id and job title id
-        -   initializes the audit fields with the username sent to the query and the current system date
+- services.EmployeeService gets the methods to delete or add an employee job title combination
+  - deleteEmpJobTitle, addEmpJobTitle
+  - Both takes two parameters, the employee id and role id of the combination to delete or add
+- services.EmployeeServiceImpl
+  - Implements the deleteEmpJobTitle and addEmpJobTitle methods with this process
+    - Verify that the employee id is valid
+    - Verify that the job title id is valid
+    - Using a custom query, verify that the employee job title combinations
+      - exists when doing a delete. We must have something to delete!
+      - does not exist when doing an add. We don’t want duplicate combinations!
+    - Once all has been verified, use a custom query to actually perform the delete or add
+- controller.EmployeeController
+  - We need a way for clients to delete or add the employee job title combination.
+  - We get the ids through path variables
+  - see methods deleteEmployeeJobTitlesByid and addEmployeeJobTitlesByid
+- For the above we made use of three custom queries, all of which are located in repositories.EmployeeRepository
+  - checkEmpJobTitleCombo
+    - Counts the number of the given employee job titles combinations in the database
+    - Uses the interface views.JustTheCount
+  - deleteEmployeeJobTitleCombo
+    - deletes the combination of the given employee id and job title id
+  - insertEmployeeJobTitleCombo
+    - inserts the given combination of the given employee id and job title id
+    - initializes the audit fields with the username sent to the query and the current system date
 
-------------------------------------------------------------------------
+---
 
 #### Learn to implement default Swagger documentation
 
@@ -3526,19 +3518,19 @@ A combination of custom Read queries and custom Modify queries are used to updat
 
 ##### Overview
 
--   See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_data\_modeling](https://github.com/LambdaSchool/java-sampleemps.git) for the code used in the objective.
+- See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling](https://github.com/LambdaSchool/java-sampleemps.git) for the code used in the objective.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   JetBrains IntelliJ IDEA IDE
--   Postman
+- Java Development Kit (JDK) - at least version 11
+- JetBrains IntelliJ IDEA IDE
+- Postman
 
 The point of our Web REST API Applications is to provide endpoints that allow clients to work with our data. But how do those clients know what our endpoints are and how to use them? We need to provide them documentation. One automated way to do this is through the Swagger system. Let’s implement Swagger and see the corresponding documentation!
 
 ##### Follow Along
 
--   Swagger is implemented through a few dependencies. We are adding three. One is the base Swagger dependency. Another implements the Swagger user interface. And the third on connects Swagger to our validation constraints. Let’s add those to our POM.XML
+- Swagger is implemented through a few dependencies. We are adding three. One is the base Swagger dependency. Another implements the Swagger user interface. And the third on connects Swagger to our validation constraints. Let’s add those to our POM.XML
 
 <!-- -->
 
@@ -3562,8 +3554,8 @@ The point of our Web REST API Applications is to provide endpoints that allow cl
                 <version>2.9.2</version>
             </dependency>
 
--   Now we need to add a configuration file to connect Swagger to Spring. The file being added is config.Swagger2Config. We are using Swagger Version 2. This version is the most straightforward to configure and is the most mature, stable version of Swagger.
-    -   This class is boilerplate code we can add to any project where we want Swagger documentation. We do have a few items to customize to our application.
+- Now we need to add a configuration file to connect Swagger to Spring. The file being added is config.Swagger2Config. We are using Swagger Version 2. This version is the most straightforward to configure and is the most mature, stable version of Swagger.
+  - This class is boilerplate code we can add to any project where we want Swagger documentation. We do have a few items to customize to our application.
 
 <!-- -->
 
@@ -3599,14 +3591,14 @@ The point of our Web REST API Applications is to provide endpoints that allow cl
         }
     }
 
--   In the method `api()` we must set the `.basePackage` to be the base package of our application. In our current example that is `com.lambdaschool.sampleemps`
--   In the method `apiEndPointsInfo()` we set
-    -   `.title("")` - A general short title of our application
-    -   `.description("")` - A longer more descriptive explanation of our application
-    -   `.contact()` - you can add only one contact for the application
-    -   `.license("")` - at Lambda School we prefer the MIT license but any string will work
-    -   `.licenseUrl("")` - at link to the text for your license agreement
-    -   `.version("")` - any string is fine but is meant to convey a version number to the client
+- In the method `api()` we must set the `.basePackage` to be the base package of our application. In our current example that is `com.lambdaschool.sampleemps`
+- In the method `apiEndPointsInfo()` we set
+  - `.title("")` - A general short title of our application
+  - `.description("")` - A longer more descriptive explanation of our application
+  - `.contact()` - you can add only one contact for the application
+  - `.license("")` - at Lambda School we prefer the MIT license but any string will work
+  - `.licenseUrl("")` - at link to the text for your license agreement
+  - `.version("")` - any string is fine but is meant to convey a version number to the client
 
 That is all we need to set up to generate Swagger documentation. Swagger uses our class names, method names, parameters, and annotations to generate default documentation. If we have named everything using a reasonable naming convention, then we get reasonable Swagger documentation!
 
@@ -4233,14 +4225,14 @@ http://localhost:2019/v2/api-docs
 
 ##### Dig Deeper
 
--   [Spring Boot RESTful API Documentation with Swagger 2](https://springframework.guru/spring-boot-restful-api-documentation-with-swagger-2/)  
-    Spring Boot RESTful API Documentation with Swagger 2
--   [Documenting Spring Boot REST API with Swagger and SpringFox](https://www.vojtechruzicka.com/documenting-spring-boot-rest-api-swagger-springfox/)  
-    Documenting Spring Boot REST API with Swagger and SpringFox
--   [A different approach](https://www.baeldung.com/spring-rest-openapi-documentation)  
-    A different approach - Documenting a Spring REST API Using OpenAPI 3.0
+- [Spring Boot RESTful API Documentation with Swagger 2](https://springframework.guru/spring-boot-restful-api-documentation-with-swagger-2/)  
+  Spring Boot RESTful API Documentation with Swagger 2
+- [Documenting Spring Boot REST API with Swagger and SpringFox](https://www.vojtechruzicka.com/documenting-spring-boot-rest-api-swagger-springfox/)  
+  Documenting Spring Boot REST API with Swagger and SpringFox
+- [A different approach](https://www.baeldung.com/spring-rest-openapi-documentation)  
+  A different approach - Documenting a Spring REST API Using OpenAPI 3.0
 
-------------------------------------------------------------------------
+---
 
 #### Learn to print the default Swagger documentation
 
@@ -4248,13 +4240,13 @@ http://localhost:2019/v2/api-docs
 
 ##### Overview
 
--   See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_data\_modeling](https://github.com/LambdaSchool/java-sampleemps.git) for the code used in the objective.
+- See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_data_modeling](https://github.com/LambdaSchool/java-sampleemps.git) for the code used in the objective.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   JetBrains IntelliJ IDEA IDE
--   Postman
+- Java Development Kit (JDK) - at least version 11
+- JetBrains IntelliJ IDEA IDE
+- Postman
 
 Once we have Swagger documentation enabled, clients can access it online. However making a printed form of the documentation available is often required. Here are ways to generate a couple of popular formats for the documentation.
 
@@ -4262,42 +4254,42 @@ Once we have Swagger documentation enabled, clients can access it online. Howeve
 
 ### Getting Started
 
--   Surf to the site <https://editor.swagger.io/>
--   On the site, goto the pull down menu `File` -> `Clear Editor`
--   With your application running, surf to the Swagger JSON endpoint. In our example it is  
-    <http://localhost:2019/v2/api-docs>.  
-    This will generate the JSON for the Swagger documentation for your application
--   Select all of the generate JSON and copy it.
--   Back on the editor.swagger.io site, paste the JSON into the editor by clicking in the editor and doing a paste.
-    -   You will be prompted with “Would you like convert your JSON into YAML?”. Click OK.
-    -   If after pasting, error messages show at the top of your generated documentation, you can usually just collapse the section where the errors appear and ignore them.
--   What we want to do next is Generate Clients that have the format we desire.
+- Surf to the site <https://editor.swagger.io/>
+- On the site, goto the pull down menu `File` -> `Clear Editor`
+- With your application running, surf to the Swagger JSON endpoint. In our example it is  
+  <http://localhost:2019/v2/api-docs>.  
+  This will generate the JSON for the Swagger documentation for your application
+- Select all of the generate JSON and copy it.
+- Back on the editor.swagger.io site, paste the JSON into the editor by clicking in the editor and doing a paste.
+  - You will be prompted with “Would you like convert your JSON into YAML?”. Click OK.
+  - If after pasting, error messages show at the top of your generated documentation, you can usually just collapse the section where the errors appear and ignore them.
+- What we want to do next is Generate Clients that have the format we desire.
 
 ### Generating markdown files
 
--   To generate markdown (\*.md) files
-    -   Goto `Generate Client` -> `bash`
-    -   This will download a file called `bash-client-generated.zip` Unzip, expand, this file
--   You now have a new folder called `bash-client`
-    -   A sub folder of `bash-client` is `docs` and contains all of the markdown files for each section of your application
-        -   One file for each model, entity
-        -   One file for each controller
+- To generate markdown (\*.md) files
+  - Goto `Generate Client` -> `bash`
+  - This will download a file called `bash-client-generated.zip` Unzip, expand, this file
+- You now have a new folder called `bash-client`
+  - A sub folder of `bash-client` is `docs` and contains all of the markdown files for each section of your application
+    - One file for each model, entity
+    - One file for each controller
 
 ### Generating a PDF
 
--   To generate a single PDF file of all your documentation
-    -   Goto `Generate Client` -> `html`
-    -   This will download a file `html-client-generated.zip` Unzip, expand, this file
-    -   You now have a new folder called `html-client`
--   Under that folder, you have a file called `index.html`
-    -   Open that file in a browser. I am using Chrome and the rest of the instructions work on Chrome. You will have research how your favorite works.
-    -   You now all of your documentation in a single browser window. We can print this document to a PDF and be done
-        -   Right click in the browser window
-        -   From the context menu, select `Print`
-        -   For you Destination, select `Save as PDF`.
-        -   The rest of the options are up to you!
-        -   Click save and give your new PDF documentation a name.
-        -   Now distribute that PDF to your clients!
+- To generate a single PDF file of all your documentation
+  - Goto `Generate Client` -> `html`
+  - This will download a file `html-client-generated.zip` Unzip, expand, this file
+  - You now have a new folder called `html-client`
+- Under that folder, you have a file called `index.html`
+  - Open that file in a browser. I am using Chrome and the rest of the instructions work on Chrome. You will have research how your favorite works.
+  - You now all of your documentation in a single browser window. We can print this document to a PDF and be done
+    - Right click in the browser window
+    - From the context menu, select `Print`
+    - For you Destination, select `Save as PDF`.
+    - The rest of the options are up to you!
+    - Click save and give your new PDF documentation a name.
+    - Now distribute that PDF to your clients!
 
 Alternatively, you can expand all sections from the website  
 <http://localhost:2019/swagger-ui.html>  
@@ -4307,10 +4299,10 @@ This method does require more work than the previous example and is up to you as
 
 ##### Dig Deeper
 
--   [Swagger Editor](https://editor.swagger.io/)  
-    https://editor.swagger.io/
+- [Swagger Editor](https://editor.swagger.io/)  
+  https://editor.swagger.io/
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
@@ -4320,11 +4312,11 @@ We are continuing our study of Relational Database Design and custom queries. We
 
 [GitHub Repo](https://github.com/LambdaSchool/java-usermodel.git)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [java-zoos](https://github.com/LambdaSchool/java-zoos.git)
+- ##### [java-zoos](https://github.com/LambdaSchool/java-zoos.git)
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -4332,44 +4324,44 @@ We are continuing our study of Relational Database Design and custom queries. We
 
 You can use class recordings to help you master the material.
 
--   **[Java Auditing Fields for WEB33 with John Mitchell](https://youtu.be/oxOPY68e_Cs)**
--   [All previous recordings](/archive/WEB4Java/module/rec2oQCFWOVShtxIx)
+- **[Java Auditing Fields for WEB33 with John Mitchell](https://youtu.be/oxOPY68e_Cs)**
+- [All previous recordings](/archive/WEB4Java/module/rec2oQCFWOVShtxIx)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Let’s try adding some code on our own. You will need to find the appropriate code from the provided repository and add it to your own application.
+  Let’s try adding some code on our own. You will need to find the appropriate code from the provided repository and add it to your own application.
 
-    A combination of custom Read queries and custom Modify queries are used to update the Many To Many relationship between Employee and JobTitle. You can see this code in action in the sampleemps\_data\_modeling application. The flow of this process is this. Since Employee is our driving table, I am putting this work with the methods for Employees
+  A combination of custom Read queries and custom Modify queries are used to update the Many To Many relationship between Employee and JobTitle. You can see this code in action in the sampleemps_data_modeling application. The flow of this process is this. Since Employee is our driving table, I am putting this work with the methods for Employees
 
-    -   services.EmployeeService gets the methods to delete or add an employee job title combination
-        -   deleteEmpJobTitle, addEmpJobTitle
-        -   Both takes two parameters, the employee id and role id of the combination to delete or add
-    -   services.EmployeeServiceImpl
-        -   Implements the deleteEmpJobTitle and addEmpJobTitle methods with this process
-            -   Verify that the employee id is valid
-            -   Verify that the job title id is valid
-            -   Using a custom query, verify that the employee job title combinations
-                -   exists when doing a delete. We must have something to delete!
-                -   does not exist when doing an add. We don’t want duplicate combinations!
-            -   Once all has been verified, use a custom query to actually perform the delete or add
-    -   controller.EmployeeController
-        -   We need a way for clients to delete or add the employee job title combination.
-        -   We get the ids through path variables
-        -   see methods deleteEmployeeJobTitlesByid and addEmployeeJobTitlesByid
-    -   For the above we made use of three custom queries, all of which are located in repositories.EmployeeRepository
-        -   checkEmpJobTitleCombo
-            -   Counts the number of the given employee job titles combinations in the database
-            -   Uses the interface views.JustTheCount
-        -   deleteEmployeeJobTitleCombo
-            -   deletes the combination of the given employee id and job title id
-        -   insertEmployeeJobTitleCombo
-            -   inserts the given combination of the given employee id and job title id
-            -   initializes the audit fields with the username sent to the query and the current system date
+  - services.EmployeeService gets the methods to delete or add an employee job title combination
+    - deleteEmpJobTitle, addEmpJobTitle
+    - Both takes two parameters, the employee id and role id of the combination to delete or add
+  - services.EmployeeServiceImpl
+    - Implements the deleteEmpJobTitle and addEmpJobTitle methods with this process
+      - Verify that the employee id is valid
+      - Verify that the job title id is valid
+      - Using a custom query, verify that the employee job title combinations
+        - exists when doing a delete. We must have something to delete!
+        - does not exist when doing an add. We don’t want duplicate combinations!
+      - Once all has been verified, use a custom query to actually perform the delete or add
+  - controller.EmployeeController
+    - We need a way for clients to delete or add the employee job title combination.
+    - We get the ids through path variables
+    - see methods deleteEmployeeJobTitlesByid and addEmployeeJobTitlesByid
+  - For the above we made use of three custom queries, all of which are located in repositories.EmployeeRepository
+    - checkEmpJobTitleCombo
+      - Counts the number of the given employee job titles combinations in the database
+      - Uses the interface views.JustTheCount
+    - deleteEmployeeJobTitleCombo
+      - deletes the combination of the given employee id and job title id
+    - insertEmployeeJobTitleCombo
+      - inserts the given combination of the given employee id and job title id
+      - initializes the audit fields with the username sent to the query and the current system date
 
--   Guided Project: java-usermodel
+- Guided Project: java-usermodel
 
--   Project: java-zoos
+- Project: java-zoos

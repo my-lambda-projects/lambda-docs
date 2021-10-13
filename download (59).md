@@ -1,6 +1,3 @@
-
-
-
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMyIgaGVpZ2h0PSIzNSIgdmlld2JveD0iMCAwIDMzIDM1IiBmaWxsPSJub25lIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDBWMTYuMDYwOUMwIDI3LjczMzUgOS4wODkyOSAzMS43ODQzIDE1LjczMjEgMzQuNzUxM0gxNS43NUwxNi4yODU3IDM1QzE2LjQxMDcgMzQuOTI4OSAxNi41MzU3IDM0Ljg3NTYgMTYuNjc4NiAzNC44MjIzQzE2Ljc1IDM0Ljc4NjggMTYuODM5MyAzNC43NTEzIDE2LjkxMDcgMzQuNzE1N0MyMy41NzE0IDMxLjc2NjUgMzIuNjk2NCAyNy42OTggMzIuNjk2NCAxNi4wNjA5VjBIMFpNMjAuNzA3MSAyMy40NTM2TDIwLjM1NzEgMjIuNTEwMkwxNS42MDcxIDEwLjA3MzZDMTUuMzIxNCAxMC44MDIgMTQuNjYwNyAxMi41NjA5IDEzLjk0NjQgMTQuNDQ0MkwxMS4yMTQzIDIxLjc4MTdDMTEuMDg5MyAyMi4xMzcxIDExLjE2MDcgMjIuMzE0NyAxMS4yNSAyMi40MzkxQzExLjQ0NjQgMjIuNjcwMSAxMS44NzY4IDIyLjY3MDEgMTIuNTU1NCAyMi42NzAxSDEyLjY3ODZMMTIuNjc2OCAyMy40NTE4SDcuNTY5NjRWMjIuNjcwMUg3Ljk2MjVDOC42NTg5MyAyMi42NzAxIDkuMjMwMzYgMjIuMzY4IDkuNjU4OTMgMjEuNTE1MkwxMC4xNzY4IDIwLjM0MjZMMTQuOTA4OSA4LjI5Njk2TDE0LjA2OTYgNi4wNzYxNEgxOC40ODA0TDI0LjU2OTYgMjIuMDEyN0wyNS4xMjUgMjMuNDUzNkgyMC43MDcxWiIgZmlsbD0iI0VDMzk0NCI+PC9wYXRoPgo8L3N2Zz4=" /></a>
 
 ![](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAzMCAzMCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiBmb2N1c2FibGU9ImZhbHNlIj48dGl0bGU+TWVudTwvdGl0bGU+PHBhdGggc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBkPSJNNCA3aDIyTTQgMTVoMjJNNCAyM2gyMiI+PC9wYXRoPjwvc3ZnPg==)
@@ -9,33 +6,33 @@
 
 <a href="/web4java/sprint/recnLDyTtONLTMiFJ" class="bd-toc-link">1.  Java Precourse Information</a>
 
--   [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
--   [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
+- [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
+- [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
 
 <a href="/web4java/sprint/recoJ4ZqNQWX3cy6E" class="bd-toc-link">2.  Java Fundamentals</a>
 
--   [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
--   [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
--   [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
--   [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
+- [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
+- [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
+- [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
+- [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
 
 <a href="/web4java/sprint/recRVUSWQEtosl0Cz" class="bd-toc-link">3.  RDBMS and Intro to APIs</a>
 
--   [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
--   [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
--   [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
--   [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
+- [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
+- [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
+- [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
+- [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
 
 <a href="/web4java/sprint/recSqm5AAEkJcIl3p" class="bd-toc-link">4.  Java Frameworks</a>
 
--   [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
--   [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
--   [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
--   [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
+- [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
+- [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
+- [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
+- [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
 
 <a href="/web4java/sprint/recC5dhR9menaROwx" class="bd-toc-link">5.  WEB Unit 4 Java Build</a>
 
-------------------------------------------------------------------------
+---
 
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjM1IiB2aWV3Ym94PSIwIDAgNzU2IDE5NyIgZmlsbD0iI2VjMzk0NCI+PGc+PHBhdGggZD0iTTI5Mi45LDEyNi42aC02LjdjLTksMC0xMi42LTEuOS0xMi42LTkuNVY0OC41YzAtNy43LDEuNi04LjYsMTEuNC05Ljd2LTQuNWgtNDEuM3Y0LjUgYzkuOCwxLjEsMTEuNCwxLjksMTEuNCw5Ljd2NjkuM2MwLDcuNy0xLjYsOC42LTExLjQsOS43djQuNWg3My43bDQuOS0yOS40aC00LjRDMzA4LjUsMTE5LjYsMzAzLjksMTI2LjYsMjkyLjksMTI2LjZ6Ij48L3BhdGg+PHBhdGggZD0iTTM4NS41LDEyMS4xVjc5LjNjMC0xNS44LTkuNC0yMi40LTI2LjYtMjIuNGMtMTUsMC0yNi44LDYuNi0yNi44LDE5LjNjMCwyLjQsMC4yLDMuMywwLjgsNWgxNi42IGMtMC41LTItMC43LTUtMC43LTcuNWMwLTkuNiwzLjYtMTIuNCw5LjQtMTIuNGM2LjQsMCw5LjcsMiw5LjcsMTQuNHYxMS4ybC0yMC44LDcuN2MtMTAuNiw0LjEtMTkuMyw4LjgtMTkuMywyMC43IGMwLDEwLjksNy41LDE3LjgsMTguNiwxNy44YzkuOSwwLDE3LjQtNi4yLDIxLjktMTIuMWwwLjEtMC4xbDAsMFYxMzJoMjZ2LTQuNEMzODcuNywxMjcuMSwzODUuNSwxMjYuMiwzODUuNSwxMjEuMXogTTM2OCwxMTcuOCBjLTQuNCwzLjMtNy42LDUuMy0xMiw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNFYxMTcuOEwzNjgsMTE3Ljh6Ij48L3BhdGg+PHBhdGggZD0iTTUxNC40LDEyMVY3OS41YzAtMTQuOC02LTIyLjQtMTguNy0yMi40Yy0xMS41LDAtMTkuNCw2LjYtMjUuNSwxMy45Yy0xLjgtOS42LTcuNy0xMy45LTE3LjgtMTMuOSBjLTExLjQsMC0xOC43LDYuMi0yNC44LDEzLjZWNTdoLTIuM2wtMjMuOCw3LjR2Mi40bDguNiw1djQ5LjRjMCw1LTIuMSw2LjEtOC45LDYuNHY0LjRoMzUuMXYtNC40Yy02LjctMC4zLTguNy0xLjMtOC43LTYuNHYtNDcgYzQuNy0zLjYsOS41LTYuNSwxNS41LTYuNWM3LjYsMCwxMC41LDQuMiwxMC41LDEyLjd2NDAuOGMwLDUtMS45LDYuMS04LjcsNi40djQuNGwzNC44LDB2LTQuNGMtNi43LTAuMy04LjYtMS4zLTguNi02LjR2LTQ3IGM0LjctMy42LDkuNS02LjUsMTUuNS02LjVjNy42LDAsMTAuNSw0LjIsMTAuNSwxMi43bC0wLjEsNDAuNWMwLDUtMS44LDYuNC04LjYsNi43bDAsNC40aDM1LjF2LTQuNCBDNTE2LjcsMTI3LjQsNTE0LjQsMTI2LjEsNTE0LjQsMTIxeiI+PC9wYXRoPjxwYXRoIGQ9Ik01NzMuMiw1Ny4zYy0xMSwwLTE4LjUsNS43LTIzLjQsMTIuOFYyMi45aC0yLjdsLTIzLjQsNi44djIuNWw4LjYsNC41VjEzMmgyLjlsOC0zLjVjNS44LDMuMywxMi4zLDUsMjAuMiw1IGMyMC44LDAsMzcuNC0xNS44LDM3LjQtNDIuNkM2MDAuOSw2OS45LDU5MC40LDU3LjMsNTczLjIsNTcuM3ogTTU2My40LDEyOC43Yy01LjQsMC0xMC4zLTIuNC0xMy43LTcuOVY3My42IGMzLjQtMy40LDguNS01LjcsMTMuNS01LjdjMTMuOSwwLDIwLDEyLjgsMjAsMjkuNUM1ODMuMywxMTQuNyw1NzUuOCwxMjguNSw1NjMuNCwxMjguN3oiPjwvcGF0aD48cGF0aCBkPSJNNjc3LDEyMS4yVjIyLjhoLTIuNkw2NTEsMjkuNlYzMmw4LjYsNC41djI1LjdjLTMuNC0zLjItOC44LTUuMS0xNS41LTUuMWMtMTkuOSwwLTM1LjIsMTUuMy0zNS4yLDQxLjMgYzAsMjAuNywxMS4yLDM0LjYsMjguMSwzNC42YzkuOCwwLDE3LTUuMywyMi42LTEzLjF2MC45VjEzMmgyNi4zbDAtNC40QzY3OS4xLDEyNy4zLDY3NywxMjYuMyw2NzcsMTIxLjJ6IE02NTkuNiwxMTcuMSBMNjU5LjYsMTE3LjFjLTMuNCwzLjQtOCw1LjEtMTMuMiw1LjFjLTEzLjIsMC0yMC40LTEyLjgtMjAuNC0yOS44YzAtMTcuOCw3LjMtMjkuMiwxOS41LTI5LjJjOC43LDAsMTQuMSw2LjksMTQuMSwxOC4zIEw2NTkuNiwxMTcuMXoiPjwvcGF0aD48cGF0aCBkPSJNNzQ3LjEsMTIxLjFWNzkuM2MwLTE1LjgtOS40LTIyLjQtMjYuNi0yMi40Yy0xNSwwLTI2LjgsNi42LTI2LjgsMTkuM2MwLDIuNCwwLjIsMy4zLDAuOCw1aDE2LjYgYy0wLjUtMi0wLjctNS0wLjctNy41YzAtOS42LDMuNi0xMi40LDkuNC0xMi40YzYuNCwwLDkuNywyLDkuNywxNC40djExLjJsLTIwLjgsNy43Yy0xMC42LDQuMS0xOS4zLDguOC0xOS4zLDIwLjcgYzAsMTAuOSw3LjUsMTcuOCwxOC42LDE3LjhjOS45LDAsMTcuNC02LjIsMjEuOS0xMi4xdi0wLjFoMC4xbDAsMTEuMWwyNiwwLjF2LTQuNUM3NDkuMywxMjcuMSw3NDcuMSwxMjYuMiw3NDcuMSwxMjEuMXogTTcyOS42LDExNy44Yy00LjQsMy4zLTcuNiw1LjMtMTIuMSw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNEw3MjkuNiwxMTcuOEw3MjkuNiwxMTcuOHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTAsMHY5MC40YzAsNjUuNyw1MC45LDg4LjUsODguMSwxMDUuMmgwLjFsMywxLjRjMC43LTAuNCwxLjQtMC43LDIuMi0xYzAuNC0wLjIsMC45LTAuNCwxLjMtMC42IGMzNy4zLTE2LjYsODguNC0zOS41LDg4LjQtMTA1VjBIMHogTTExNiwxMzJsLTItNS4zbC0yNi42LTcwYy0xLjYsNC4xLTUuMywxNC05LjMsMjQuNmwtMTUuMyw0MS4zYy0wLjcsMi0wLjMsMywwLjIsMy43IGMxLjEsMS4zLDMuNSwxLjMsNy4zLDEuM0g3MWwwLDQuNEg0Mi40bDAtNC40aDIuMmMzLjksMCw3LjEtMS43LDkuNS02LjVsMi45LTYuNmwyNi41LTY3LjhsLTQuNy0xMi41aDI0LjdsMzQuMSw4OS43bDMuMSw4LjFIMTE2eiI+PC9wYXRoPjwvc3ZnPg==" /></a>
 
@@ -43,39 +40,39 @@
 
 <a href="/web4java/sprint/recnLDyTtONLTMiFJ" class="bd-toc-link">1.  Java Precourse Information</a>
 
--   [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
--   [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
+- [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
+- [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
 
 <a href="/web4java/sprint/recoJ4ZqNQWX3cy6E" class="bd-toc-link">2.  Java Fundamentals</a>
 
--   [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
--   [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
--   [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
--   [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
+- [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
+- [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
+- [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
+- [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
 
 <a href="/web4java/sprint/recRVUSWQEtosl0Cz" class="bd-toc-link">3.  RDBMS and Intro to APIs</a>
 
--   [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
--   [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
--   [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
--   [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
+- [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
+- [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
+- [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
+- [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
 
 <a href="/web4java/sprint/recSqm5AAEkJcIl3p" class="bd-toc-link">4.  Java Frameworks</a>
 
--   [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
--   [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
--   [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
--   [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
+- [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
+- [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
+- [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
+- [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
 
 <a href="/web4java/sprint/recC5dhR9menaROwx" class="bd-toc-link">5.  WEB Unit 4 Java Build</a>
 
-------------------------------------------------------------------------
+---
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Guided Project](#guided-project)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Guided Project](#guided-project)
+- [Project](#project)
+- [Review](#review)
 
 # Java - Read Data using CRUD Operations
 
@@ -85,10 +82,10 @@
 
 **At the end of this module, you should be able to:**
 
--   perform CRUD operations on an RDBMS using JPA and Hibernate (reading)
--   use JPA constructs to create advanced queries
--   use the JsonIgnoreProperties annotation to prevent infinite loops
--   use SQL, JPA and Hibernate to perform custom query operations on a RDBMS through a Spring Application
+- perform CRUD operations on an RDBMS using JPA and Hibernate (reading)
+- use JPA constructs to create advanced queries
+- use the JsonIgnoreProperties annotation to prevent infinite loops
+- use SQL, JPA and Hibernate to perform custom query operations on a RDBMS through a Spring Application
 
 #### Pro Tip
 
@@ -106,13 +103,13 @@ Review each preclass resource before class.
 
 ##### Overview
 
--   See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_read](https://github.com/LambdaSchool/java-sampleemps.git)tt for the code used in the objective.
+- See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_read](https://github.com/LambdaSchool/java-sampleemps.git)tt for the code used in the objective.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   JetBrains IntelliJ IDEA IDE
--   Postman
+- Java Development Kit (JDK) - at least version 11
+- JetBrains IntelliJ IDEA IDE
+- Postman
 
 ### Review of CRUD
 
@@ -122,17 +119,17 @@ CRUD are the functions that will be done by our application. They are, with thei
 
 ##### Follow Along
 
-Now let’s enter some of the code continuing adding to the sample employees application you began in the last module. The finished application for this module can be found at [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_read](https://github.com/LambdaSchool/java-sampleemps.git)t
+Now let’s enter some of the code continuing adding to the sample employees application you began in the last module. The finished application for this module can be found at [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_read](https://github.com/LambdaSchool/java-sampleemps.git)t
 
--   Under the subpackage `controllers`
-    -   add to the class `EmployeeController`
-    -   Enter the following code in that class
-    -   Entering the comments is optional
-    -   Try not entering the imports. Let IntelliJ do that for you
--   Note
-    -   we are adding GET mappings, routes to the controller, hence the annotation GetMapping.
-    -   GetMapping takes a parameter, the route, which is called `value`
-    -   Spring ties together the GetMapping to the Java method that follows the GetMapping
+- Under the subpackage `controllers`
+  - add to the class `EmployeeController`
+  - Enter the following code in that class
+  - Entering the comments is optional
+  - Try not entering the imports. Let IntelliJ do that for you
+- Note
+  - we are adding GET mappings, routes to the controller, hence the annotation GetMapping.
+  - GetMapping takes a parameter, the route, which is called `value`
+  - Spring ties together the GetMapping to the Java method that follows the GetMapping
 
 <!-- -->
 
@@ -188,9 +185,9 @@ Now let’s enter some of the code continuing adding to the sample employees app
 
 Now we need to update the service for the Employee Model
 
--   Under the subpackage `services`
-    -   add to the class `EmployeeService`
-    -   Enter the following code in that class
+- Under the subpackage `services`
+  - add to the class `EmployeeService`
+  - Enter the following code in that class
 
 <!-- -->
 
@@ -211,9 +208,9 @@ Now we need to update the service for the Employee Model
         Employee save(Employee employee);
     }
 
--   Under the subpackage `services`
-    -   add to the class `EmployeeServiceImpl`
-    -   Enter the following code in that class
+- Under the subpackage `services`
+  - add to the class `EmployeeServiceImpl`
+  - Enter the following code in that class
 
 <!-- -->
 
@@ -260,7 +257,7 @@ Now we need to update the service for the Employee Model
         {
             return employeerepos.findByEmails_EmailContainingIgnoreCase(subemail);
         }
-        
+
         @Transactional
         @Override
         public Employee save(Employee employee)
@@ -273,10 +270,10 @@ We are not ready to test out the application. In fact at this point, the applica
 
 ##### Dig Deeper
 
--   [CRUD, Spring Boot, PostgreSQL](https://www.callicoder.com/spring-boot-jpa-hibernate-postgresql-restful-crud-api-example/)  
-    Callicoder - Spring Boot, PostgreSQL, JPA, Hibernate RESTful CRUD API Example
+- [CRUD, Spring Boot, PostgreSQL](https://www.callicoder.com/spring-boot-jpa-hibernate-postgresql-restful-crud-api-example/)  
+  Callicoder - Spring Boot, PostgreSQL, JPA, Hibernate RESTful CRUD API Example
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use JPA constructs to create advanced queries
 
@@ -284,13 +281,13 @@ We are not ready to test out the application. In fact at this point, the applica
 
 ##### Overview
 
--   See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_read](https://github.com/LambdaSchool/java-sampleemps.git) for the code used in the objective.
+- See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_read](https://github.com/LambdaSchool/java-sampleemps.git) for the code used in the objective.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   JetBrains IntelliJ IDEA IDE
--   Postman
+- Java Development Kit (JDK) - at least version 11
+- JetBrains IntelliJ IDEA IDE
+- Postman
 
 ### Querying the database
 
@@ -418,10 +415,10 @@ Many great possibilities exist using JPA querying methods. Do explore this great
 
 We need to finish creating our code started in Objective 1 CRUD Reading and worked on in the following objectives. So, let’s add some code.
 
--   Under the subpackage `repositories`
-    -   Create the class `EmployeeRepository`
-    -   Enter the following code in that class
-    -   Try not entering the imports. Let IntelliJ do that for you
+- Under the subpackage `repositories`
+  - Create the class `EmployeeRepository`
+  - Enter the following code in that class
+  - Try not entering the imports. Let IntelliJ do that for you
 
 <!-- -->
 
@@ -442,24 +439,24 @@ We need to finish creating our code started in Objective 1 CRUD Reading and work
 
 Now the sample employees application should work. Run the application and try out endpoints!
 
--   http://localhost:2019/employees/employees/
--   http://localhost:2019/employees/employeename/barn
--   http://localhost:2019/employees/employeeemail/barn
+- http://localhost:2019/employees/employees/
+- http://localhost:2019/employees/employeename/barn
+- http://localhost:2019/employees/employeeemail/barn
 
 Okay, we still have one small issue. You end up with infinite loops on your Gets. Let’s fix those now.
 
-Do refer to the GitHub repo for more information on the application! See [https://github.com/LambdaSchool/java-sampleemps\_read](https://github.com/LambdaSchool/java-sampleemps.git)t
+Do refer to the GitHub repo for more information on the application! See [https://github.com/LambdaSchool/java-sampleemps_read](https://github.com/LambdaSchool/java-sampleemps.git)t
 
 ##### Dig Deeper
 
--   [CrudRepository](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html)  
-    Official Documentation for the CrudRepository class
--   [JPA Reference](https://docs.spring.io/spring-data/jpa/docs/2.2.3.RELEASE/reference/html/#preface)  
-    Spring IO JPA Reference
--   [JPA Query](https://docs.spring.io/spring-data/jpa/docs/2.2.3.RELEASE/reference/html/#jpa.query-methods.query-creation)  
-    Spring IO JPA Query Creation
+- [CrudRepository](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html)  
+  Official Documentation for the CrudRepository class
+- [JPA Reference](https://docs.spring.io/spring-data/jpa/docs/2.2.3.RELEASE/reference/html/#preface)  
+  Spring IO JPA Reference
+- [JPA Query](https://docs.spring.io/spring-data/jpa/docs/2.2.3.RELEASE/reference/html/#jpa.query-methods.query-creation)  
+  Spring IO JPA Query Creation
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use the JsonIgnoreProperties annotation to prevent infinite loops
 
@@ -467,13 +464,13 @@ Do refer to the GitHub repo for more information on the application! See [https:
 
 ##### Overview
 
--   See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_read](https://github.com/LambdaSchool/java-sampleemps.git)tt for the code used in the objective.
+- See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_read](https://github.com/LambdaSchool/java-sampleemps.git)tt for the code used in the objective.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   JetBrains IntelliJ IDEA IDE
--   Postman
+- Java Development Kit (JDK) - at least version 11
+- JetBrains IntelliJ IDEA IDE
+- Postman
 
 ### The Problem
 
@@ -498,7 +495,6 @@ To represent this relationship, in the `Email` model we have
 If we run the application as it stands, our output results in an infinite loop. Expand the following to see an example of this data
 
 http://localhost:2019/employees/employees
-
 
     [
         {
@@ -544,13 +540,13 @@ http://localhost:2019/employees/employees
 
 What is happening
 
--   An Employee’s data gets displayed. Part of this display is list of Emails
-    -   Thus an Email object gets printed. The Email object includes an Employee Object
--   Thus an Employee’s data gets displayed. Part of this display is list of Emails
-    -   Thus an Email object gets printed. The Email object includes an Employee Object
--   Thus an Employee’s data gets displayed. Part of this display is list of Emails
-    -   Thus an Email object gets printed. The Email object includes an Employee Object
--   And so and so for ever
+- An Employee’s data gets displayed. Part of this display is list of Emails
+  - Thus an Email object gets printed. The Email object includes an Employee Object
+- Thus an Employee’s data gets displayed. Part of this display is list of Emails
+  - Thus an Email object gets printed. The Email object includes an Employee Object
+- Thus an Employee’s data gets displayed. Part of this display is list of Emails
+  - Thus an Email object gets printed. The Email object includes an Employee Object
+- And so and so for ever
 
 Somehow we need to stop the cycle!
 
@@ -558,9 +554,9 @@ Somehow we need to stop the cycle!
 
 Here is what we do.
 
--   When we are printing an Employee and say to display the Email, don’t display the Employee again in the Email Object. Notice that this is the `employee` field.
--   When we are printing an Email and say to display the Employee, don’t display the Email again in the Employee Object. Notice that this is the `emails` field.
--   When we are setting the data, getting it in from a client, the client is smart enough to not send unlimited data so we can allow for getting data in - allowsetters. We do not allow data going out - no allowgetters.
+- When we are printing an Employee and say to display the Email, don’t display the Employee again in the Email Object. Notice that this is the `employee` field.
+- When we are printing an Email and say to display the Employee, don’t display the Email again in the Employee Object. Notice that this is the `emails` field.
+- When we are setting the data, getting it in from a client, the client is smart enough to not send unlimited data so we can allow for getting data in - allowsetters. We do not allow data going out - no allowgetters.
 
 We do this by using the annotation `@JsonIgnoreProperties` as follows:
 
@@ -585,7 +581,6 @@ Notice that we are telling JSON to ignore the field of the current model when pr
 Thus we now have this complete output
 
 http://localhost:2019/employees/employees
-
 
     [
         {
@@ -640,20 +635,20 @@ You will need to do something similar for each relationship in your application.
 
 Note:
 
--   `JsonIgnoreProperties` works great for ending this recursive cycle of reporting
--   If you wish to ignore a specific field in a class, you do not want a specific field to be displayed to the client, for example someone’s password, you would use the annotation `JsonProperty(access = JsonProperty.Access.WRITE_ONLY)`
-    -   This allows to write a new password but not display it!
-    -   We will see this in action later in the course.
+- `JsonIgnoreProperties` works great for ending this recursive cycle of reporting
+- If you wish to ignore a specific field in a class, you do not want a specific field to be displayed to the client, for example someone’s password, you would use the annotation `JsonProperty(access = JsonProperty.Access.WRITE_ONLY)`
+  - This allows to write a new password but not display it!
+  - We will see this in action later in the course.
 
 ##### Follow Along
 
 Let’s add the `JsonIgnoreProperties` to each one of our relationships.
 
--   Under the subpackage `models`
-    -   in the class `Employee`
-    -   add the JsonIgnoreProperties to the relationships for
-        -   Job titles
-        -   Emails
+- Under the subpackage `models`
+  - in the class `Employee`
+  - add the JsonIgnoreProperties to the relationships for
+    - Job titles
+    - Emails
 
 <!-- -->
 
@@ -672,10 +667,10 @@ Let’s add the `JsonIgnoreProperties` to each one of our relationships.
         @JsonIgnoreProperties(value = "employee")
         private List<Email> emails = new ArrayList<>();
 
--   Under the subpackage `models`
-    -   in the class `Email`
-    -   add the JsonIgnoreProperties to the relationship for
-        -   employee
+- Under the subpackage `models`
+  - in the class `Email`
+  - add the JsonIgnoreProperties to the relationship for
+    - employee
 
 <!-- -->
 
@@ -686,10 +681,10 @@ Let’s add the `JsonIgnoreProperties` to each one of our relationships.
         @JsonIgnoreProperties("emails")
         private Employee employee;
 
--   Under the subpackage `models`
-    -   in the class `JobTitle`
-    -   add the JsonIgnoreProperties to the relationship for
-        -   JobTitle
+- Under the subpackage `models`
+  - in the class `JobTitle`
+  - add the JsonIgnoreProperties to the relationship for
+    - JobTitle
 
 <!-- -->
 
@@ -698,22 +693,22 @@ Let’s add the `JsonIgnoreProperties` to each one of our relationships.
         @JsonIgnoreProperties("jobtitles")
         private Set<Employee> employees = new HashSet<>();
 
-***Now*** the sample employees application should work. Run the application and try out endpoints!
+**_Now_** the sample employees application should work. Run the application and try out endpoints!
 
--   http://localhost:2019/employees/employees/
--   http://localhost:2019/employees/employeename/barn
--   http://localhost:2019/employees/employeeemail/barn
+- http://localhost:2019/employees/employees/
+- http://localhost:2019/employees/employeename/barn
+- http://localhost:2019/employees/employeeemail/barn
 
-Do refer to the GitHub repo for more information on the application! See [https://github.com/LambdaSchool/java-sampleemps\_read](https://github.com/LambdaSchool/java-sampleemps.git)
+Do refer to the GitHub repo for more information on the application! See [https://github.com/LambdaSchool/java-sampleemps_read](https://github.com/LambdaSchool/java-sampleemps.git)
 
 ##### Dig Deeper
 
--   [JPA and Hibernate Circular References](https://hellokoding.com/handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/)  
-    JPA and Hibernate Circular References/Dependencies Handling Example with Jackson \`JsonIgnoreProperties\`
--   [Jackson](https://www.concretepage.com/jackson-api/jackson-jsonignore-jsonignoreproperties-and-jsonignoretype)  
-    Jackson @JsonIgnore, @JsonIgnoreProperties and @JsonIgnoreType
+- [JPA and Hibernate Circular References](https://hellokoding.com/handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/)  
+  JPA and Hibernate Circular References/Dependencies Handling Example with Jackson \`JsonIgnoreProperties\`
+- [Jackson](https://www.concretepage.com/jackson-api/jackson-jsonignore-jsonignoreproperties-and-jsonignoretype)  
+  Jackson @JsonIgnore, @JsonIgnoreProperties and @JsonIgnoreType
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use SQL, JPA and Hibernate to perform custom query operations on a RDBMS through a Spring Application
 
@@ -721,13 +716,13 @@ Do refer to the GitHub repo for more information on the application! See [https:
 
 ##### Overview
 
--   See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_read](https://github.com/LambdaSchool/java-sampleemps.git) for the code used in the objective.
+- See the Github Repository [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_read](https://github.com/LambdaSchool/java-sampleemps.git) for the code used in the objective.
 
 ### Software Needed
 
--   Java Development Kit (JDK) - at least version 11
--   JetBrains IntelliJ IDEA IDE
--   Postman
+- Java Development Kit (JDK) - at least version 11
+- JetBrains IntelliJ IDEA IDE
+- Postman
 
 Sometimes we wish to send our clients data that can’t be gotten easily using JPA constructs. Maybe we need more advanced filtering, different types of tables joins, aggregations function, and the like. These call for writing our own custom SQL to query the database and extra the data we want. Let’s do a custom query!
 
@@ -742,7 +737,7 @@ We want to include an endpoint in our application that will return a list of emp
 
 ##### Follow Along
 
-Let’s add a custom query to the sample employees application. The finished application can be found at [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps\_read](https://github.com/LambdaSchool/java-sampleemps.git)
+Let’s add a custom query to the sample employees application. The finished application can be found at [https://github.com/LambdaSchool/java-sampleemps.git/sampleemps_read](https://github.com/LambdaSchool/java-sampleemps.git)
 
 Now let’s add the query to our Spring Application. The query will go into the appropriate Repository using a `@Query` annotation. Since this report is about employees, I will put the query in the repository.EmployeeRepository class. The complete new class is shown below with the new query added at the bottom.
 
@@ -767,29 +762,29 @@ Now let’s add the query to our Spring Application. The query will go into the 
 
 Some notes on the new query
 
--   `@Query` is the notation that says we are doing a query. Makes sense. By default, query can only read, and not manipulate, data.
-    -   `@Query` takes some attributes
-        -   `value` is the actual query in String form. Yes, the query has to be all on one line!
-        -   `nativeQuery = true` means the query will be using the actual database names of things. A preference of mine.
-            -   native queries are usually faster
-            -   can lose portability to other databases if care is not taken in naming conventions, which of course we do take care in class!
-    -   The Query returns a List of some class, `EmpNameCountJobs`, we have yet to define and is invoked by calling the method `getCountEmpJobs()`
+- `@Query` is the notation that says we are doing a query. Makes sense. By default, query can only read, and not manipulate, data.
+  - `@Query` takes some attributes
+    - `value` is the actual query in String form. Yes, the query has to be all on one line!
+    - `nativeQuery = true` means the query will be using the actual database names of things. A preference of mine.
+      - native queries are usually faster
+      - can lose portability to other databases if care is not taken in naming conventions, which of course we do take care in class!
+  - The Query returns a List of some class, `EmpNameCountJobs`, we have yet to define and is invoked by calling the method `getCountEmpJobs()`
 
 Now, let’s create that class `EmpNameCountJobs`. This class is necessary for the Jackson Dependency, which is managed by Spring Boot, to convert our list into JSON.
 
--   Create New Package called `views`
-    -   Right click on the package `sampleemps`
-        -   Select `New` -> `Package`
-        -   enter `views` at the end of the main package name.
--   Now we need to create the class.
-    -   Under the package `views`, create a new Java Class
-        -   It is an interface
-        -   Name it `EmpNameCountJobs`
--   We have to be very careful with the names of our methods. Specific names are needed for the Spring Framework to properly generate the JSON.
-    -   Naming is `getFieldname`. The word `get` followed by the field name starting with a capital letter followed by all lowercase.
-    -   This only works if you have kept all field names lowercase as recommended!
-    -   This is why we put aliases on each of our columns in the query. We need to know the exact names of the columns!
--   Following those recommendations, you get the following code. Notice that our report, our custom query, has two columns and our interface has two corresponding methods! Order does not matter; naming does!!!
+- Create New Package called `views`
+  - Right click on the package `sampleemps`
+    - Select `New` -> `Package`
+    - enter `views` at the end of the main package name.
+- Now we need to create the class.
+  - Under the package `views`, create a new Java Class
+    - It is an interface
+    - Name it `EmpNameCountJobs`
+- We have to be very careful with the names of our methods. Specific names are needed for the Spring Framework to properly generate the JSON.
+  - Naming is `getFieldname`. The word `get` followed by the field name starting with a capital letter followed by all lowercase.
+  - This only works if you have kept all field names lowercase as recommended!
+  - This is why we put aliases on each of our columns in the query. We need to know the exact names of the columns!
+- Following those recommendations, you get the following code. Notice that our report, our custom query, has two columns and our interface has two corresponding methods! Order does not matter; naming does!!!
 
 <!-- -->
 
@@ -803,7 +798,7 @@ Now, let’s create that class `EmpNameCountJobs`. This class is necessary for t
 
 Now let’s use our new query. We use like we use any regular read method from our repository. We make a service call and a controller method for our clients!
 
--   Additions to services.EmployeeService
+- Additions to services.EmployeeService
 
 <!-- -->
 
@@ -811,7 +806,7 @@ Now let’s use our new query. We use like we use any regular read method from o
         List<EmpNameCountJobs> getEmpNameCountJobs();
     /* ... other code ... */
 
--   Additions to services.EmployeeServiceImpl
+- Additions to services.EmployeeServiceImpl
 
 <!-- -->
 
@@ -823,7 +818,7 @@ Now let’s use our new query. We use like we use any regular read method from o
         }
     /* ... other code ... */
 
--   Additions to controllers.EmployeeController
+- Additions to controllers.EmployeeController
 
 <!-- -->
 
@@ -840,7 +835,6 @@ Now let’s use our new query. We use like we use any regular read method from o
 And now we can generate the following JSON!
 
 http://localhost:2019/employees/job/counts
-
 
     [
         {
@@ -959,28 +953,28 @@ http://localhost:2019/employees/job/counts
 
 ##### Dig Deeper
 
--   [Spring Data JPA Tutorial Part Three: Custom Queries with Query Methods - dated but good](https://www.petrikainulainen.net/programming/spring-framework/spring-data-jpa-tutorial-three-custom-queries-with-query-methods/)  
--   [Baeldung: Customizing the Result of JPA Queries with Aggregation Functions](https://www.baeldung.com/jpa-queries-custom-result-with-aggregation-functions)  
--   [Ultimate Guide: Custom Queries with Spring Data JPA’s @Query Annotation](https://thoughts-on-java.org/spring-data-jpa-query-annotation/)  
--   [Spring Data JPA Custom Queries using @Query Annotation](https://attacomsian.com/blog/spring-data-jpa-query-annotation)  
+- [Spring Data JPA Tutorial Part Three: Custom Queries with Query Methods - dated but good](https://www.petrikainulainen.net/programming/spring-framework/spring-data-jpa-tutorial-three-custom-queries-with-query-methods/)
+- [Baeldung: Customizing the Result of JPA Queries with Aggregation Functions](https://www.baeldung.com/jpa-queries-custom-result-with-aggregation-functions)
+- [Ultimate Guide: Custom Queries with Spring Data JPA’s @Query Annotation](https://thoughts-on-java.org/spring-data-jpa-query-annotation/)
+- [Spring Data JPA Custom Queries using @Query Annotation](https://attacomsian.com/blog/spring-data-jpa-query-annotation)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
-### crudyrestaurants\_read
+### crudyrestaurants_read
 
-Using restaurants with menus as our model, we explore CRUD operations related to reading data working towards the crudyrestaurants\_read application found in the repo
+Using restaurants with menus as our model, we explore CRUD operations related to reading data working towards the crudyrestaurants_read application found in the repo
 
 [GitHub Repo](https://github.com/LambdaSchool/java-crudyrestaurants.git)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Java Get Orders](https://github.com/LambdaSchool/java-getorders.git)
+- ##### [Java Get Orders](https://github.com/LambdaSchool/java-getorders.git)
 
-    This is part 2 of a 3 part series. In the first part you are tasked with setting up the database model in a Java Spring Application. In the second part you are tasked with adding Get routes to the application.
+  This is part 2 of a 3 part series. In the first part you are tasked with setting up the database model in a Java Spring Application. In the second part you are tasked with adding Get routes to the application.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -988,12 +982,12 @@ Using restaurants with menus as our model, we explore CRUD operations related to
 
 You can use class recordings to help you master the material.
 
--   **[Java Read Data Using CRUD operations for WEB33 with John Mitchell](https://youtu.be/VPrFOQ3vcJY)**
--   [All previous recordings](/archive/WEB4Java/module/rec3THcdjv8BumGCt)
+- **[Java Read Data Using CRUD operations for WEB33 with John Mitchell](https://youtu.be/VPrFOQ3vcJY)**
+- [All previous recordings](/archive/WEB4Java/module/rec3THcdjv8BumGCt)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Guided Project: crudyrestaurants\_read
--   Project: Java Get Orders
+- Guided Project: crudyrestaurants_read
+- Project: Java Get Orders

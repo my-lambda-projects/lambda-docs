@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
@@ -39,32 +37,32 @@
 
 <a href="/web3/sprint/recq59MvEIZfUAohy" class="bd-toc-link">1.  Advanced React</a>
 
--   [Class Components](/web3/module/recnDKrWb24lgaziC/)
--   [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
--   [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
--   [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
+- [Class Components](/web3/module/recnDKrWb24lgaziC/)
+- [The React Lifecycle](/web3/module/rec1DPoOZSmocXfak/)
+- [Composing and Sharing Non-Visual Behavior](/web3/module/recAxmnYmusEi8JuL/)
+- [Testing Web Applications](/web3/module/rechTQVfCg4p85Hoi/)
 
 <a href="/web3/sprint/recukritK1B1pFrcM" class="bd-toc-link">2.  Advanced State Management</a>
 
--   [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
--   [Redux](/web3/module/recba2NUdVmgKYyR3/)
--   [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
--   [Context API](/web3/module/recByjgF7FwwH5Z7W/)
+- [The Reducer Pattern](/web3/module/rectpk6uIV3pCHJh8/)
+- [Redux](/web3/module/recba2NUdVmgKYyR3/)
+- [Async Redux](/web3/module/recSoiWNJzGURrXYh/)
+- [Context API](/web3/module/recByjgF7FwwH5Z7W/)
 
 <a href="/web3/sprint/recnhsJGy28gNi1K5" class="bd-toc-link">3.  Advanced Web Applications</a>
 
--   [Testing React](/web3/module/recS9H6qCj0dQe32B/)
--   [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
--   [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
--   [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
+- [Testing React](/web3/module/recS9H6qCj0dQe32B/)
+- [Client-Side Authentication](/web3/module/recQlbCZf9tOVgiXC/)
+- [HTTP / AJAX II](/web3/module/recupVjaAKPqbuk7Y/)
+- [Deploying Web Apps](/web3/module/receOMvCB7dSyX5FL/)
 
 <a href="/web3/sprint/recVFiuMBzbcZllxC" class="bd-toc-link">4.  WEB Unit 3 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Guided Project](#guided-project)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Guided Project](#guided-project)
+- [Project](#project)
+- [Review](#review)
 
 # Redux
 
@@ -74,11 +72,11 @@ React is a very sophisticated UI - Component Library that can be used together w
 
 **At the end of this module, you should be able to:**
 
--   explain what Redux is and the problem it solves
--   create a Redux Store and connect it to a React application
--   use the connect() function to "connect" React components to the Redux store
--   write Actions and Action Creators to describe state changes
--   write Reducers to respond to actions and update state
+- explain what Redux is and the problem it solves
+- create a Redux Store and connect it to a React application
+- use the connect() function to "connect" React components to the Redux store
+- write Actions and Action Creators to describe state changes
+- write Reducers to respond to actions and update state
 
 #### Pro Tip
 
@@ -88,45 +86,33 @@ Be on time. It’s a mark of respect not to keep others waiting.
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Ozx4FH4iKWc), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=Ozx4FH4iKWc), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=b0x1cwFX5rM), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=b0x1cwFX5rM), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=gyJ31YLkYnU), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=0rNVB36pQTE), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=gyJ31YLkYnU), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=nF2HkjPz01A), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=0rNVB36pQTE), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=VT9iMpTRexI), or enable JavaScript if it is disabled in your browser.
 
--   
+- [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
 
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=nF2HkjPz01A), or enable JavaScript if it is disabled in your browser.
-
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=VT9iMpTRexI), or enable JavaScript if it is disabled in your browser.
-
--   [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
-
-    A well thought out description of how we can think about our components in react.
+  A well thought out description of how we can think about our components in react.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -138,7 +124,7 @@ Many bugs are caused by applications going into an inconsistent state.
 
 ##### Overview
 
-Redux is a predictable state management library for JavaScript applications and is the most popular State container for React applications. By now, we have discovered that building out applications using React requires a lot of forethought to give an application scalability. Specifically, we have noticed some complications around the area of state-management. You may have asked yourself a question like *“Which of my components should have state vs. which of my components should just be a way to present some DOM elements?”*
+Redux is a predictable state management library for JavaScript applications and is the most popular State container for React applications. By now, we have discovered that building out applications using React requires a lot of forethought to give an application scalability. Specifically, we have noticed some complications around the area of state-management. You may have asked yourself a question like _“Which of my components should have state vs. which of my components should just be a way to present some DOM elements?”_
 
 Luckily you’re not alone in this dilemma. In fact, the Facebook team that built React in the first place noticed that managing state could become a nightmare at scale were they only to use component state. So, they built a pattern, and said, “everyone here at Facebook is going to write code after this pattern.” This way, they could eliminate many of the problems that unwieldy state-full components could surface. That pattern was called `Flux` [link to docs](https://facebook.github.io/flux/docs/overview.html), and it’s primary use case was to add some stringency to the React ecosystem because by itself, React is very unopinionated in how one should be designing their application and managing state.
 
@@ -170,20 +156,20 @@ Write your thoughts on why Redux exists and at least one reason to use it as wel
 
 ##### Dig Deeper
 
--   [Introduction to Redux](https://www.smashingmagazine.com/2016/06/an-introduction-to-redux/)  
-    Article on Smashing Magazine that introduces the basics of Redux
--   [A Cartoon Intro to Redux](https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6)  
-    Article that explains the basics of Redux in an entertaining manner
+- [Introduction to Redux](https://www.smashingmagazine.com/2016/06/an-introduction-to-redux/)  
+  Article on Smashing Magazine that introduces the basics of Redux
+- [A Cartoon Intro to Redux](https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6)  
+  Article that explains the basics of Redux in an entertaining manner
 
-------------------------------------------------------------------------
+---
 
 #### Learn to create a Redux Store and connect it to a React application
 
-When using Redux, the state for the whole application is contained inside the *Store*. This objective will guide you through the process of what it takes to wire up a React application to use Redux.
+When using Redux, the state for the whole application is contained inside the _Store_. This objective will guide you through the process of what it takes to wire up a React application to use Redux.
 
 ##### Overview
 
-In this section, we’ll learn how to create the *Redux Store* and how to use a library called `react-redux` to connect our React application to the *Store*. Because Redux is a standalone library, (meaning it can be used on its own or with another library/framework for state-management and data flow) we have to use a second helper package that will enable us to string together Redux within a React application. That package is called [React-Redux](https://github.com/reduxjs/react-redux). Some more documentation and information lives [here](http://redux.js.org/basics/usage-with-react). The packages `React` and `Redux` are entirely separate, as quoted in the Redux documentation.
+In this section, we’ll learn how to create the _Redux Store_ and how to use a library called `react-redux` to connect our React application to the _Store_. Because Redux is a standalone library, (meaning it can be used on its own or with another library/framework for state-management and data flow) we have to use a second helper package that will enable us to string together Redux within a React application. That package is called [React-Redux](https://github.com/reduxjs/react-redux). Some more documentation and information lives [here](http://redux.js.org/basics/usage-with-react). The packages `React` and `Redux` are entirely separate, as quoted in the Redux documentation.
 
 > From the very beginning, we need to stress that Redux has no relation to React. You can write Redux apps with React, Angular, Ember, jQuery, or vanilla JavaScript.
 
@@ -231,7 +217,7 @@ Now, take the time to think about where and when you’ve done this before? Is t
 
 Write down a few thoughts on what you see, where you’ve seen similar patterns, etc, and send that to your PM.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use the connect() function to "connect" React components to the Redux store
 
@@ -271,7 +257,7 @@ Next, we use the `connect` function, where we export the component at the bottom
 
 Now `MovieList` is connected to the store. Let’s write our `mapStateToProps` function now, to tell `connect` which pieces of our state we want to bring in to this component. This function takes in `state` as a parameter, then returns an object where the properties can be passed to props, and the values are retrieved from the store for our component.
 
-For a `MovieList` component, we probably only want to know about the `movies` array and the `moviesToWatch` number, *maybe* the `user` object. We’ll not worry about the `todoList`, since our component doesn’t need to know about that part of our state. Let’s bring those three pieces of our state into the component.
+For a `MovieList` component, we probably only want to know about the `movies` array and the `moviesToWatch` number, _maybe_ the `user` object. We’ll not worry about the `todoList`, since our component doesn’t need to know about that part of our state. Let’s bring those three pieces of our state into the component.
 
     const mapStateToProps = state => {
       return {
@@ -287,13 +273,13 @@ Let’s pass this in as the first argument to the first `connect` invocation. No
 
 Now, if you look at the props in the React tools, you will see that all three pieces of our state have been passed to our component through the `connect` function! As a side note, other props we’ve passed to this component the traditional way are still going to be available.
 
-*By the way, did you notice that we are using a function that takes in a component, extends its functionality, and returns a component? `connect` is a HOC!!!\`*
+_By the way, did you notice that we are using a function that takes in a component, extends its functionality, and returns a component? `connect` is a HOC!!!\`_
 
 ##### Challenge
 
 Create a new application. Add the `redux` and `react-redux` packages. Create a redux store with some test data (have fun with this part!). Build a component and connect that component to the store using `connect` and a `mapStateToProps` function. Render the connected data from your connected component.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to write Actions and Action Creators to describe state changes
 
@@ -319,7 +305,7 @@ Let’s say we have a toggle handler function that switches a boolean field call
 
 This allows us to keep things as simple as possible when responding to events and interactions!
 
-Importantly in Redux, reducers are the only place we can update our state. Actions tell our reducers “how” to update the state, and perhaps with what data it should be updated, but **only** a reducer can actually update the state. *More to come on reducers later.*.
+Importantly in Redux, reducers are the only place we can update our state. Actions tell our reducers “how” to update the state, and perhaps with what data it should be updated, but **only** a reducer can actually update the state. _More to come on reducers later._.
 
 From what we’ve learned so far, we can start to see the flow of data in a React/Redux application:
 
@@ -330,7 +316,7 @@ From what we’ve learned so far, we can start to see the flow of data in a Reac
 
 ### Action creators
 
-Actions should not be confused with `action creators` (though admittedly, it’s very easy to confuse them). An action creator is a function that *creates* an action. Or in other words, an action creator is a function that returns an action object.
+Actions should not be confused with `action creators` (though admittedly, it’s very easy to confuse them). An action creator is a function that _creates_ an action. Or in other words, an action creator is a function that returns an action object.
 
 Action creators are a middle step between events/interactions and the dispatch process. They make it possible to write reusable functions that can create actions on the fly, rather than us hard coding actions into our components. With action creators in mind, here is an updated look at our data flow:
 
@@ -423,11 +409,11 @@ Here’s what our [codesandbox](https://codesandbox.io/s/w2n0o4qwmw) should look
 
 In the application you created earlier, look at the state you are displaying. Find something easy, like a string or a number, to update. (Add a string to your state if you only have arrays or objects. This will keep things simple today while we learn this brand new state management flow). Build an action creator, pass it in to your component, and call that action creator (from props) after some interaction like a button click. Make sure you have a console.log in the action creator so you will know if it’s working.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to write Reducers to respond to actions and update state
 
-Reducers calculate the new version of state based on the current state and a given *Action*. The best way to think about Reducers is as the make-up of our state. So when we create a reducer it can be described as the portion of state that it represents. Reducers are pure functions and they are the glue that bind together our Actions and our Store.
+Reducers calculate the new version of state based on the current state and a given _Action_. The best way to think about Reducers is as the make-up of our state. So when we create a reducer it can be described as the portion of state that it represents. Reducers are pure functions and they are the glue that bind together our Actions and our Store.
 
 ##### Overview
 
@@ -435,7 +421,7 @@ When an action is dispatched, it flows through every reducer in a script. Redux 
 
 Reducers are pure functions, meaning they don’t produce any side-effects. A reducer follows the key principles that come from the `Array.reduce()` function, in that they behave similarly to the callback that you would pass to `reduce`. They aren’t the same thing, but they behave and do similar things, so that is an appropriate comparison to keep in mind.
 
-Reducers take in two arguments, the `current state` from the Redux store, and the `action` object, sent via action creator functions. Remember that an action gives us a packet of information as an object with a `type` and `payload` field that we can use. The `type` *tells the reducer what to do*, and the payload tells the reducer what to update on state.
+Reducers take in two arguments, the `current state` from the Redux store, and the `action` object, sent via action creator functions. Remember that an action gives us a packet of information as an object with a `type` and `payload` field that we can use. The `type` _tells the reducer what to do_, and the payload tells the reducer what to update on state.
 
 **Reducers will NEVER update state directly, they only return a new object** Remember this as you craft your reducers - that they are not only functional and pure, but they lend themselves to the pattern of immutability well.
 
@@ -449,7 +435,7 @@ Back in our title app, let’s create another folder inside `src` called `reduce
       title: 'Title from Redux store'
     };
 
-Then we’ll create the reducer function. Remember, it takes two arguments - state (with the initial state as a default - *watch the syntax there*), and action. Then it will contain a `switch` statement that looks at `action.type` and return `state` as the default.
+Then we’ll create the reducer function. Remember, it takes two arguments - state (with the initial state as a default - _watch the syntax there_), and action. Then it will contain a `switch` statement that looks at `action.type` and return `state` as the default.
 
     function reducer(state = initialState, action) {
       switch(action.type) {
@@ -482,9 +468,9 @@ Then, in the `case` for `UPDATE_TITLE`, we will return a new state object. We do
 
 Take a minute to study that syntax. Here are a couple of important details:
 
--   We are returning a brand new object. We do NOT update the state object and return that
--   We are using the `spread operator` to “spread” in our old state
--   We then update the one piece of data we want to update - `title`
+- We are returning a brand new object. We do NOT update the state object and return that
+- We are using the `spread operator` to “spread” in our old state
+- We then update the one piece of data we want to update - `title`
 
 This syntax is the convention when building reducers. This is something that takes some good repetition to get used to!
 
@@ -500,7 +486,7 @@ Now we have come full circle! Go ahead and test out your app to make sure it is 
 
 In your app that you were working on earlier, create a reducer that will handle state changes for whatever action you are dispatching from your action creator. Pass the reducer into your `createStore` function and test out your app.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
@@ -510,13 +496,13 @@ A short exercise highlighting the properties of arrays and objects, in regard to
 
 [GitHub Repo](https://repl.it/@DanFrehner/Immutabilitypractice)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Car Sales](https://github.com/LambdaSchool/Car-Sales)
+- ##### [Car Sales](https://github.com/LambdaSchool/Car-Sales)
 
-    In this project you are given the skeleton/structure/styling of a React app. There is even some state built in for you. Your job will be to implement React-Redux as the state management system for this application.
+  In this project you are given the skeleton/structure/styling of a React app. There is even some state built in for you. Your job will be to implement React-Redux as the state management system for this application.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -524,44 +510,44 @@ A short exercise highlighting the properties of arrays and objects, in regard to
 
 You can use class recordings to help you master the material.
 
--   **[Redux for Web35 w/ Dustin Myers](https://youtu.be/O1-bBHYl6iY)**
+- **[Redux for Web35 w/ Dustin Myers](https://youtu.be/O1-bBHYl6iY)**
 
-    Redux
+  Redux
 
--   [All previous recordings](/archive/FSW/module/recba2NUdVmgKYyR3)
+- [All previous recordings](/archive/FSW/module/recba2NUdVmgKYyR3)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Write your thoughts on why Redux exists and at least one reason to use it as well as one reason to not use it.
+  Write your thoughts on why Redux exists and at least one reason to use it as well as one reason to not use it.
 
--   Objective challenge:
+- Objective challenge:
 
-    Let’s go ahead and take a peek at our application using the React Dev Tools now that we’ve wrapped it up in a Provider Component.
+  Let’s go ahead and take a peek at our application using the React Dev Tools now that we’ve wrapped it up in a Provider Component.
 
-    Now, take the time to think about where and when you’ve done this before? Is there a package that we’ve used this same way? If so, which package is it? It is important to note that a large number of packages that we use in React are implemented this way.
+  Now, take the time to think about where and when you’ve done this before? Is there a package that we’ve used this same way? If so, which package is it? It is important to note that a large number of packages that we use in React are implemented this way.
 
-    Write down a few thoughts on what you see, where you’ve seen similar patterns, etc, and send that to your PM.
+  Write down a few thoughts on what you see, where you’ve seen similar patterns, etc, and send that to your PM.
 
--   Objective challenge:
+- Objective challenge:
 
-    Create a new application. Add the `redux` and `react-redux` packages. Create a redux store with some test data (have fun with this part!). Build a component and connect that component to the store using `connect` and a `mapStateToProps` function. Render the connected data from your connected component.
+  Create a new application. Add the `redux` and `react-redux` packages. Create a redux store with some test data (have fun with this part!). Build a component and connect that component to the store using `connect` and a `mapStateToProps` function. Render the connected data from your connected component.
 
--   Objective challenge:
+- Objective challenge:
 
-    In the application you created earlier, look at the state you are displaying. Find something easy, like a string or a number, to update. (Add a string to your state if you only have arrays or objects. This will keep things simple today while we learn this brand new state management flow). Build an action creator, pass it in to your component, and call that action creator (from props) after some interaction like a button click. Make sure you have a console.log in the action creator so you will know if it’s working.
+  In the application you created earlier, look at the state you are displaying. Find something easy, like a string or a number, to update. (Add a string to your state if you only have arrays or objects. This will keep things simple today while we learn this brand new state management flow). Build an action creator, pass it in to your component, and call that action creator (from props) after some interaction like a button click. Make sure you have a console.log in the action creator so you will know if it’s working.
 
--   Objective challenge:
+- Objective challenge:
 
-    In your app that you were working on earlier, create a reducer that will handle state changes for whatever action you are dispatching from your action creator. Pass the reducer into your `createStore` function and test out your app.
+  In your app that you were working on earlier, create a reducer that will handle state changes for whatever action you are dispatching from your action creator. Pass the reducer into your `createStore` function and test out your app.
 
--   Guided Project: Immutability Exercise
+- Guided Project: Immutability Exercise
 
--   Project: Car Sales
+- Project: Car Sales
 
--   Code Challenge: LinkedListCycle
+- Code Challenge: LinkedListCycle
 
--   Code Challenge: BalancedBrackets
+- Code Challenge: BalancedBrackets

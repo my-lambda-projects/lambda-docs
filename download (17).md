@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web2/sprint/recPSZMPrmESUYo2C" class="bd-toc-link">1.  Applied JavaScript</a>
 
--   [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
--   [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
--   [Components I](/web2/module/rec847sNXZX9CVDNl/)
--   [Components II](/web2/module/recd6kDKS6eMapSRq/)
+- [DOM I](/web2/module/rectn5PUU5ubcQkPu/)
+- [DOM II](/web2/module/recJWv3RIfa4NFXbn/)
+- [Components I](/web2/module/rec847sNXZX9CVDNl/)
+- [Components II](/web2/module/recd6kDKS6eMapSRq/)
 
 <a href="/web2/sprint/recYL2HDPPpkDmGEm" class="bd-toc-link">2.  Intro to React</a>
 
--   [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
--   [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
--   [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
--   [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
+- [React Components and Component State](/web2/module/recZau7hH8vzww14N/)
+- [Composing React Components and Passing Data Via Props](/web2/module/recgzSGQtp2HYwgSR/)
+- [Component Side Effects](/web2/module/recKe8PW6ZMwjL1Qg/)
+- [Advanced Styling Techniques](/web2/module/recNDoSqyUw3eq1y3/)
 
 <a href="/web2/sprint/recH2pYM3qVavZTRN" class="bd-toc-link">3.  Single Page Applications</a>
 
--   [React Router](/web2/module/recd7jGy7tfVkcFlX/)
--   [Form Management](/web2/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
--   [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
+- [React Router](/web2/module/recd7jGy7tfVkcFlX/)
+- [Form Management](/web2/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/web2/module/recKK5C7wV0WiECfr/)
+- [cypress.io](/web2/module/recduYpjgZBQaQM8X/)
 
 <a href="/web2/sprint/recwKyMueNtoTTmUD" class="bd-toc-link">4.  WEB Unit 2 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # DOM II
 
@@ -73,11 +71,11 @@ Events are the way we users interact with the page. Any time there is some inter
 
 **At the end of this module, you should be able to:**
 
--   install Node on Windows (if needed)
--   install Node on Mac (if needed)
--   explain what events are in the browser window, and how event listeners can listen for those events.
--   add event listeners and event handlers to elements
--   recognize event propagation and the method used to prevent it
+- install Node on Windows (if needed)
+- install Node on Mac (if needed)
+- explain what events are in the browser window, and how event listeners can listen for those events.
+- add event listeners and event handlers to elements
+- recognize event propagation and the method used to prevent it
 
 #### Pro Tip
 
@@ -87,23 +85,19 @@ Treat everyone with as much respect and integrity as you wish to be treated with
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=uTTgynLLz-M), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=uTTgynLLz-M), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ttMay5P_NEM), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ttMay5P_NEM), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
 #### Learn to install Node on Windows (if needed)
 
-------------------------------------------------------------------------
+---
 
 #### Learn to install Node on Mac (if needed)
 
@@ -129,59 +123,59 @@ If you are on a mac, follow the mac instructions below. If you are on a PC, scro
 
 ### Step By Step Install Instructions for Mac
 
-***Step 1: [Install Homebrew and Node](https://brew.sh/)***
+**_Step 1: [Install Homebrew and Node](https://brew.sh/)_**
 
--   Follow the instructions on how to install Homebrew using your terminal
--   Pay attention to your terminal as the installer will ask for a password
--   Once Homebrew is installed, run `brew install node` in your terminal
--   Pay attention to your terminal, as there might be small issues to troubleshoot
--   Restart your terminal after installation
--   Run `node -v` in your terminal to make sure node was installed correctly
+- Follow the instructions on how to install Homebrew using your terminal
+- Pay attention to your terminal as the installer will ask for a password
+- Once Homebrew is installed, run `brew install node` in your terminal
+- Pay attention to your terminal, as there might be small issues to troubleshoot
+- Restart your terminal after installation
+- Run `node -v` in your terminal to make sure node was installed correctly
 
-***Step 2: Install Less*** *NOTE:* You will see our commands have `-g` in them. Please write the commands exactly as you see them. Globally installing packages is ideal for our situation.
+**_Step 2: Install Less_** _NOTE:_ You will see our commands have `-g` in them. Please write the commands exactly as you see them. Globally installing packages is ideal for our situation.
 
--   Open terminal and run `npm install -g less`
--   If it’s not working, restart your terminal and try again
+- Open terminal and run `npm install -g less`
+- If it’s not working, restart your terminal and try again
 
-***Step 3: Install less-watch-compiler***
+**_Step 3: Install less-watch-compiler_**
 
--   Open the terminal and run `npm install -g less-watch-compiler`
+- Open the terminal and run `npm install -g less-watch-compiler`
 
-***Step 4: Use less-watch-compiler On Your Project***
+**_Step 4: Use less-watch-compiler On Your Project_**
 
--   Fork and clone [Preprocessing-Part-I](https://github.com/LambdaSchool/Preprocessing-Part-I)
--   `cd` into your project on your local machine
--   Once you are in the root of your project run `less-watch-compiler less css index.less`
--   Your project should be up and running, change some styles around in your .less file, and save the file to make sure you see a change in your CSS.
--   Great work, you’re all set up!
+- Fork and clone [Preprocessing-Part-I](https://github.com/LambdaSchool/Preprocessing-Part-I)
+- `cd` into your project on your local machine
+- Once you are in the root of your project run `less-watch-compiler less css index.less`
+- Your project should be up and running, change some styles around in your .less file, and save the file to make sure you see a change in your CSS.
+- Great work, you’re all set up!
 
 ### Step By Step Install Instructions for PC
 
-***Step 1: [Install Node.js](https://nodejs.org/en/)***
+**_Step 1: [Install Node.js](https://nodejs.org/en/)_**
 
-***Step 2: [Install Git Bash (Git SCM)](https://git-scm.com/download/win)***
+**_Step 2: [Install Git Bash (Git SCM)](https://git-scm.com/download/win)_**
 
--   After the installer finishes, open git bash and run `node -v` to make sure node is installed correctly
--   If you don’t see some node version numbers display in your git bash window, restart git bash and try again
+- After the installer finishes, open git bash and run `node -v` to make sure node is installed correctly
+- If you don’t see some node version numbers display in your git bash window, restart git bash and try again
 
-***Step 3: Install Less***
+**_Step 3: Install Less_**
 
-*NOTE:* You will see our commands have `-g` in them. Please write the commands exactly as you see them. Globally installing packages is ideal for our situation.
+_NOTE:_ You will see our commands have `-g` in them. Please write the commands exactly as you see them. Globally installing packages is ideal for our situation.
 
--   Open git bash and run `npm install -g less`
--   If it’s not working, restart your git bash and try again
+- Open git bash and run `npm install -g less`
+- If it’s not working, restart your git bash and try again
 
-***Step 4: Install less-watch-compiler***
+**_Step 4: Install less-watch-compiler_**
 
--   Open git bash and run `npm install -g less-watch-compiler`
+- Open git bash and run `npm install -g less-watch-compiler`
 
-***Step 5: Use less-watch-compiler On Your Project***
+**_Step 5: Use less-watch-compiler On Your Project_**
 
--   Fork and clone [Preprocessing-Part-I](https://github.com/LambdaSchool/Preprocessing-Part-I)
--   `cd` into your project on your local machine
--   Once you are in the root of your project run `less-watch-compiler less css index.less`
--   Your project should be up and running, change some styles around in your .less file, and save the file to make sure you see a change in your CSS.
--   Great work, you’re all set up!
+- Fork and clone [Preprocessing-Part-I](https://github.com/LambdaSchool/Preprocessing-Part-I)
+- `cd` into your project on your local machine
+- Once you are in the root of your project run `less-watch-compiler less css index.less`
+- Your project should be up and running, change some styles around in your .less file, and save the file to make sure you see a change in your CSS.
+- Great work, you’re all set up!
 
 ##### Challenge
 
@@ -189,7 +183,7 @@ If you are on a mac, follow the mac instructions below. If you are on a PC, scro
 2.  Once in your project, change the background color of your body tag to `red`.
 3.  Once the background turns red, your compiler is working correctly.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to explain what events are in the browser window, and how event listeners can listen for those events.
 
@@ -205,7 +199,7 @@ Every user interaction with a site is an event: a click, moving the mouse, scrol
 
 Now that we know what an event is and we know the browser is always tracking them, we need to be able to listen for specific events on specific elements. Did a user click that button? Did a users mouse hover over an element? Was there text entered into the input field? There are dozens of events an element can listen for. When one of those events happens on that element, we can do something about it. The tracking process and subsequent action taken is called an event listener. We put an event listener on an element and give it a callback. When that event is triggered on the element, the callback is run.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to add event listeners and event handlers to elements
 
@@ -229,10 +223,10 @@ Take 5 minutes and study this MDN page. Choose an event that is NOT a mouse even
 
 The callback (also known as an event handler) will take a single argument; this is known as the `Event Object`. This is a Javascript Object and contains all we need to know about the event and the element it happened on.
 
--   eg: `element.addEventListener('click', (event) => {//Handle event});`
--   One of the most important properties of the event object is `.target`, this property will give us all of the info about the DOM node where the event happened. It has many of the same properties as a regular DOM node, `.children`, `.parent`, `.style`, `innerText`, etc. We can use these properties to manipulate the element itself, or it’s relatives.
--   We can use this to manipulate the target in any way we want, for example to change the background color we would write the following: `element.addEventListener('click', (event) => { event.target.style.backgroundColor = 'blue'; });`
--   Depending on the type of event listened for, we can have access to other information about the event as well, such as the key pressed (in the form of a code) and other things. Spend 5 minutes reading about the event object here: [MDN Event Object: Properties](https://developer.mozilla.org/en-US/docs/Web/API/Event#Properties)
+- eg: `element.addEventListener('click', (event) => {//Handle event});`
+- One of the most important properties of the event object is `.target`, this property will give us all of the info about the DOM node where the event happened. It has many of the same properties as a regular DOM node, `.children`, `.parent`, `.style`, `innerText`, etc. We can use these properties to manipulate the element itself, or it’s relatives.
+- We can use this to manipulate the target in any way we want, for example to change the background color we would write the following: `element.addEventListener('click', (event) => { event.target.style.backgroundColor = 'blue'; });`
+- Depending on the type of event listened for, we can have access to other information about the event as well, such as the key pressed (in the form of a code) and other things. Spend 5 minutes reading about the event object here: [MDN Event Object: Properties](https://developer.mozilla.org/en-US/docs/Web/API/Event#Properties)
 
 ##### Challenge
 
@@ -242,10 +236,10 @@ Follow the instructions in the Javascript section of this codepen on your own. U
 
 ##### Dig Deeper
 
--   [DOM Events - MDN](https://developer.mozilla.org/en-US/docs/Web/Events)  
-    An extensive list of web events
+- [DOM Events - MDN](https://developer.mozilla.org/en-US/docs/Web/Events)  
+  An extensive list of web events
 
-------------------------------------------------------------------------
+---
 
 #### Learn to recognize event propagation and the method used to prevent it
 
@@ -257,7 +251,7 @@ Think of a pyramid. Pyramids are made up of many layers, the bottom layer is the
 
 In our event handler, we are passed the event object. The event object has lots of methods and properties on it including one called `.stopPropagation()` if we call this method in our event handler, it will effectively stop our event from bubbling any further up the chain.
 
--   eg: `const eventHandler = (event) => { event.stopPropagation() };`
+- eg: `const eventHandler = (event) => { event.stopPropagation() };`
 
 #### .preventDefault
 
@@ -269,16 +263,16 @@ Go back to the codepen you were working on. And complete steps 9 - 12.
 
 ##### Dig Deeper
 
--   [Event Propagation](https://tk-assets.lambdaschool.com/b1c4f450-e8b4-46d5-9be2-3cae1f2bb5f6_ScreenShot2019-01-30at18.27.09.png)  
-    Cartoon Diagram explaining event propagation
+- [Event Propagation](https://tk-assets.lambdaschool.com/b1c4f450-e8b4-46d5-9be2-3cae1f2bb5f6_ScreenShot2019-01-30at18.27.09.png)  
+  Cartoon Diagram explaining event propagation
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [DOM-II](https://github.com/LambdaSchool/DOM-II)
+- ##### [DOM-II](https://github.com/LambdaSchool/DOM-II)
 
-    Utilizing DOM manipulation as well as our understanding of events and event listeners to create elements with user interaction.
+  Utilizing DOM manipulation as well as our understanding of events and event listeners to create elements with user interaction.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -286,29 +280,30 @@ Go back to the codepen you were working on. And complete steps 9 - 12.
 
 You can use class recordings to help you master the material.
 
--   **[DOM II for WebPT22 w/Keiran Kozlowski](https://youtu.be/6oDYvbUUHXo)**
+- **[DOM II for WebPT22 w/Keiran Kozlowski](https://youtu.be/6oDYvbUUHXo)**
 
-    Events are the way we users interact with the page. Any time there is some interaction by way of a mouse, keyboard, etc., the DOM creates and propagates an event object. This event object carries information about the event so that it may be handled at any point up the tree from the point of origin.
+  Events are the way we users interact with the page. Any time there is some interaction by way of a mouse, keyboard, etc., the DOM creates and propagates an event object. This event object carries information about the event so that it may be handled at any point up the tree from the point of origin.
 
--   [All previous recordings](/archive/FSW/module/recJWv3RIfa4NFXbn)
+- [All previous recordings](/archive/FSW/module/recJWv3RIfa4NFXbn)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
-    1.  Follow the instructions provided to you in the tutorial above.
-    2.  Once in your project, change the background color of your body tag to `red`.
-    3.  Once the background turns red, your compiler is working correctly.
+- Objective challenge:
 
--   Objective challenge:
+  1.  Follow the instructions provided to you in the tutorial above.
+  2.  Once in your project, change the background color of your body tag to `red`.
+  3.  Once the background turns red, your compiler is working correctly.
 
-    Follow the instructions in the Javascript section of this codepen on your own. Use the `sampleButton` element at the top as a reference, and add the appropriate event listeners to the elements. Please Fork and save your code, and share it with your TL.
+- Objective challenge:
 
-    [Codepen: DOM-II Events](https://codepen.io/lambdaschool/pen/gqmrwx?editors=0010)
+  Follow the instructions in the Javascript section of this codepen on your own. Use the `sampleButton` element at the top as a reference, and add the appropriate event listeners to the elements. Please Fork and save your code, and share it with your TL.
 
--   Objective challenge:
+  [Codepen: DOM-II Events](https://codepen.io/lambdaschool/pen/gqmrwx?editors=0010)
 
-    Go back to the codepen you were working on. And complete steps 9 - 12.
+- Objective challenge:
 
--   Project: DOM-II
+  Go back to the codepen you were working on. And complete steps 9 - 12.
+
+- Project: DOM-II

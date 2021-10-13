@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,29 +10,29 @@
 
 <a href="/web4java/sprint/recnLDyTtONLTMiFJ" class="bd-toc-link">1.  Java Precourse Information</a>
 
--   [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
--   [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
+- [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
+- [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
 
 <a href="/web4java/sprint/recoJ4ZqNQWX3cy6E" class="bd-toc-link">2.  Java Fundamentals</a>
 
--   [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
--   [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
--   [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
--   [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
+- [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
+- [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
+- [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
+- [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
 
 <a href="/web4java/sprint/recRVUSWQEtosl0Cz" class="bd-toc-link">3.  RDBMS and Intro to APIs</a>
 
--   [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
--   [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
--   [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
--   [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
+- [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
+- [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
+- [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
+- [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
 
 <a href="/web4java/sprint/recSqm5AAEkJcIl3p" class="bd-toc-link">4.  Java Frameworks</a>
 
--   [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
--   [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
--   [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
--   [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
+- [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
+- [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
+- [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
+- [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
 
 <a href="/web4java/sprint/recC5dhR9menaROwx" class="bd-toc-link">5.  WEB Unit 4 Java Build</a>
 
@@ -44,37 +42,37 @@
 
 <a href="/web4java/sprint/recnLDyTtONLTMiFJ" class="bd-toc-link">1.  Java Precourse Information</a>
 
--   [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
--   [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
+- [Welcome to Java Spring](/web4java/module/recfnUAvFbeyIAHib/)
+- [Java Spring Course Table of Contents](/web4java/module/recjH0lMflsFIVzDM/)
 
 <a href="/web4java/sprint/recoJ4ZqNQWX3cy6E" class="bd-toc-link">2.  Java Fundamentals</a>
 
--   [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
--   [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
--   [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
--   [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
+- [Java - JDK and Java Classes](/web4java/module/recAGVTYNZyJbEFpu/)
+- [Java Interfaces, Abstract Classes, Lambda Expression](/web4java/module/rec6Hrk77HupYeoN5/)
+- [Java - RDBMS and SQL Basics](/web4java/module/recyJ663TrxVgpqY9/)
+- [Java - Intro to Maven, Spring, and Tomcat Using REST API](/web4java/module/recqtftA9E98qpbak/)
 
 <a href="/web4java/sprint/recRVUSWQEtosl0Cz" class="bd-toc-link">3.  RDBMS and Intro to APIs</a>
 
--   [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
--   [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
--   [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
--   [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
+- [Java - Spring Database Creation Including Seed Data](/web4java/module/recb0OVmRrJzqhH4D/)
+- [Java - Read Data using CRUD Operations](/web4java/module/rec3THcdjv8BumGCt/)
+- [Java - Inserting Deleting and Updating Data using CRUD Operations](/web4java/module/recJihkiNn2KH2nEW/)
+- [Java - Data Modeling and Auditing Fields with custom querying](/web4java/module/rec2oQCFWOVShtxIx/)
 
 <a href="/web4java/sprint/recSqm5AAEkJcIl3p" class="bd-toc-link">4.  Java Frameworks</a>
 
--   [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
--   [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
--   [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
--   [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
+- [Java - Exception Handling](/web4java/module/rec3E1WYDyoiEF1e3/)
+- [Java - User Authentication](/web4java/module/rececDV2OMIUcY2eH/)
+- [Java - Automated Testing](/web4java/module/recDboXln5wm4aKJt/)
+- [Java - Java Deployment and Best Practices](/web4java/module/rec7pCiBPzI4DkAJT/)
 
 <a href="/web4java/sprint/recC5dhR9menaROwx" class="bd-toc-link">5.  WEB Unit 4 Java Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Guided Project](#guided-project)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Guided Project](#guided-project)
+- [Project](#project)
+- [Review](#review)
 
 # Java - RDBMS and SQL Basics
 
@@ -84,13 +82,13 @@
 
 **At the end of this module, you should be able to:**
 
--   explain what a Relational Database is and its core components
--   explain what SQL is and its advantages over other RDBMS
--   query data from a single table
--   query multiple tables data
--   perform CRUD operations on an RDBMS using SQL
--   open an existing database, or create a new one, while adding tables to a PostgreSQL database
--   explain data normalization and normal forms while normalizing data to the 3rd Normal Form (3NF)
+- explain what a Relational Database is and its core components
+- explain what SQL is and its advantages over other RDBMS
+- query data from a single table
+- query multiple tables data
+- perform CRUD operations on an RDBMS using SQL
+- open an existing database, or create a new one, while adding tables to a PostgreSQL database
+- explain data normalization and normal forms while normalizing data to the 3rd Normal Form (3NF)
 
 #### Pro Tip
 
@@ -100,29 +98,21 @@ When talking about your journey, don’t focus on things you don’t know yet, f
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=cfajuXDXjko), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=cfajuXDXjko), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ZwMMR5C8KiM), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ZwMMR5C8KiM), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=p1gVOn8jzwo), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=p1gVOn8jzwo), or enable JavaScript if it is disabled in your browser.
-
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=5CGlHBeijL0), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=5CGlHBeijL0), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -134,18 +124,18 @@ Review each preclass resource before class.
 
 Terms to know at the end of this objective:
 
--   RDBMS
--   Database
--   Table (Relationship)
--   Column (Attribute)
--   Row (tuple)
--   Primary Key
--   Foreign key
--   Index
--   Query
--   View
--   Stored Procedure
--   Triggers
+- RDBMS
+- Database
+- Table (Relationship)
+- Column (Attribute)
+- Row (tuple)
+- Primary Key
+- Foreign key
+- Index
+- Query
+- View
+- Stored Procedure
+- Triggers
 
 A Rest API Backend system consists of two main parts:
 
@@ -158,27 +148,27 @@ Most of the work we do in class is related to building the API Application. This
 
 A RDBMS is a Relational Database Management System.
 
--   Many types of databases exist
-    -   Relational - by far the most common so the one we study
-    -   NoSQL - something to investigate on your own. See MongoDB
-    -   Object Oriented - yes like Java is Object Oriented. These never really gained popularity
-    -   Others depending on who you ask!
+- Many types of databases exist
+  - Relational - by far the most common so the one we study
+  - NoSQL - something to investigate on your own. See MongoDB
+  - Object Oriented - yes like Java is Object Oriented. These never really gained popularity
+  - Others depending on who you ask!
 
 A RDBMS is a server that manages 1 or more databases. So for example, an RDBMS might manage:
 
--   Dogs Database
--   Cats Database
--   Rabbits Database
+- Dogs Database
+- Cats Database
+- Rabbits Database
 
 In the example above we saw 3 databases in our RDBMS. Sometimes, in fact, fairly often, we will see only 1 database per RDBMS. Even though that is common do not get lulled into believing databases are the same thing as database management systems. Think of the RDBMS as a server vs the databases as applications found on that server.
 
 Popular RDBMS include:
 
--   PostgresSQL (the one we will be studying)
--   MySQL
--   SQLite
--   Oracle
--   MS SQL Server
+- PostgresSQL (the one we will be studying)
+- MySQL
+- SQLite
+- Oracle
+- MS SQL Server
 
 We interact mostly with the databases themselves, but that interaction is managed by the RDBMS.
 
@@ -186,10 +176,10 @@ We interact mostly with the databases themselves, but that interaction is manage
 
 A Database is a collection of data organized for easy retrieval and manipulation. A person who manages a database is called a Database Administrator (DBA).
 
--   Relational Databases are a special type of database and are the most common.
-    -   Based off of Relational Algebra
-    -   Contains a collections of tables, which contain columns and rows
-    -   Accessed through SQL
+- Relational Databases are a special type of database and are the most common.
+  - Based off of Relational Algebra
+  - Contains a collections of tables, which contain columns and rows
+  - Accessed through SQL
 
 #### Database Structure
 
@@ -197,31 +187,33 @@ Databases contain tables. A table is a collection of rows which contain columns.
 
 <table><thead><tr class="header"><th>Id</th><th>Name</th><th>weight</th></tr></thead><tbody><tr class="odd"><td>1</td><td>BarnBarn</td><td>10.5</td></tr><tr class="even"><td>2</td><td>Cinnamon</td><td>11.0</td></tr></tbody></table>
 
--   **Columns** are
-    -   in the example
-        -   Id
-        -   Name
-        -   weight
-    -   Each column represents a field or attribute that is common to all row, records.
-    -   Columns should have a descriptive name and a data type appropriate for the attribute it represents.
--   **Rows** are
-    -   in the example
-        -   `1 BarnBarn 10.5`
-        -   `2 Cinnamon 11.0`
+- **Columns** are
+  - in the example
+    - Id
+    - Name
+    - weight
+  - Each column represents a field or attribute that is common to all row, records.
+  - Columns should have a descriptive name and a data type appropriate for the attribute it represents.
+- **Rows** are
 
-    -   Each row in a table represents one distinct record.
+  - in the example
 
-    -   Tables normally have more rows than columns
+    - `1 BarnBarn 10.5`
+    - `2 Cinnamon 11.0`
 
-    -   Tables have Primary Keys t”hat uniquely identify each row. The `id` field in the example.
+  - Each row in a table represents one distinct record.
 
-    -   The relationships with other tables are represented by **Foreign Keys**. That is when we include the primary key from another table in our table to show which rows are related to each other.
+  - Tables normally have more rows than columns
 
-    -   For example assume we have a color table like below
-        -   `bunnyid` is a foreign key to the bunny table
-        -   BarnBarn (bunnyid 1) has the colors white and brown
-        -   Cinnamon (bunnyid 2) has the color brown.
-        -   We get the names BarnBarn and Cinnamon by looking them up in the bunny table using the bunnyid
+  - Tables have Primary Keys t”hat uniquely identify each row. The `id` field in the example.
+
+  - The relationships with other tables are represented by **Foreign Keys**. That is when we include the primary key from another table in our table to show which rows are related to each other.
+
+  - For example assume we have a color table like below
+    - `bunnyid` is a foreign key to the bunny table
+    - BarnBarn (bunnyid 1) has the colors white and brown
+    - Cinnamon (bunnyid 2) has the color brown.
+    - We get the names BarnBarn and Cinnamon by looking them up in the bunny table using the bunnyid
 
 <table><thead><tr class="header"><th>Id</th><th>color</th><th>bunnyid</th></tr></thead><tbody><tr class="odd"><td>1</td><td>white</td><td>1</td></tr><tr class="even"><td>2</td><td>brown</td><td>2</td></tr><tr class="odd"><td>3</td><td>brown</td><td>1</td></tr></tbody></table>
 
@@ -229,34 +221,34 @@ A note about terms and how Java, Databases and Relational Algebra are related. T
 
 <table><thead><tr class="header"><th>RDBMS</th><th>Relational Algebra</th><th>Java</th></tr></thead><tbody><tr class="odd"><td>Table</td><td>Relation</td><td>Class</td></tr><tr class="even"><td>Column</td><td>Attribute</td><td>Field</td></tr><tr class="odd"><td>Row</td><td>Tuple</td><td>Object</td></tr></tbody></table>
 
--   **Indexes** are special database object used to speed up data searching.
-    -   If you normally do searches using a particular piece of data, you would normally index that data. How to index is very specific to the RDBMS or programming language, framework you are using.
-    -   In most cases, we will allow Spring Data to generate indexes for us.
--   **Views** are special database objects that looks and feels like a table but do not store data. These are special queries that combine, filter, sort table data.
-    -   Note a query is simply a request for information from a database. Think of a GET in REST APIs
-    -   can be queried like a table.
-    -   can combine data from two or more tables.
-    -   use to simplify data access
--   **Stored Procedures** or Functions are written in a form of SQL to perform a series of operations.
-    -   Stored in the database under a unique name and can be called like built in functions.
-    -   Often used to perform data intensive operations and return only the result to clients.
--   **Triggers** are a special type of store procedure.
-    -   Executes automatically in response to events like inserting/updating/deleting data.
+- **Indexes** are special database object used to speed up data searching.
+  - If you normally do searches using a particular piece of data, you would normally index that data. How to index is very specific to the RDBMS or programming language, framework you are using.
+  - In most cases, we will allow Spring Data to generate indexes for us.
+- **Views** are special database objects that looks and feels like a table but do not store data. These are special queries that combine, filter, sort table data.
+  - Note a query is simply a request for information from a database. Think of a GET in REST APIs
+  - can be queried like a table.
+  - can combine data from two or more tables.
+  - use to simplify data access
+- **Stored Procedures** or Functions are written in a form of SQL to perform a series of operations.
+  - Stored in the database under a unique name and can be called like built in functions.
+  - Often used to perform data intensive operations and return only the result to clients.
+- **Triggers** are a special type of store procedure.
+  - Executes automatically in response to events like inserting/updating/deleting data.
 
 Lots of new terms here. You might want to scan through again. The rest of the course assumes you have familiarity with these terms! Before moving on, make sure sure you have PostgreSQL installed! You can find the installation instructions under the software installs for this sprint.
 
 ##### Dig Deeper
 
--   [MongoDB and Java](https://www.mongodb.com/blog/post/quick-start-java-and-mongodb--starting-and-setup)  
-    MongoDB and Java
--   [All Things RDBMS Related](https://www.guru99.com/dbms-tutorial.html)  
-    All Things RDBMS Related from Guru99
--   [Study DBMS](https://www.studytonight.com/dbms/overview-of-dbms.php)  
-    Study Tonight Overview of DBMS
--   [Wikipedia](https://en.wikipedia.org/wiki/Relational_database)  
-    Wikipedia does have good explanations!
+- [MongoDB and Java](https://www.mongodb.com/blog/post/quick-start-java-and-mongodb--starting-and-setup)  
+  MongoDB and Java
+- [All Things RDBMS Related](https://www.guru99.com/dbms-tutorial.html)  
+  All Things RDBMS Related from Guru99
+- [Study DBMS](https://www.studytonight.com/dbms/overview-of-dbms.php)  
+  Study Tonight Overview of DBMS
+- [Wikipedia](https://en.wikipedia.org/wiki/Relational_database)  
+  Wikipedia does have good explanations!
 
-------------------------------------------------------------------------
+---
 
 #### Learn to explain what SQL is and its advantages over other RDBMS
 
@@ -266,7 +258,7 @@ Lots of new terms here. You might want to scan through again. The rest of the co
 
 ### Software Needed
 
--   Web browser - Chrome, Safari, Opera, and Edge. Firefox is not supported
+- Web browser - Chrome, Safari, Opera, and Edge. Firefox is not supported
 
 ### Terms and Concepts
 
@@ -274,37 +266,37 @@ Lots of new terms here. You might want to scan through again. The rest of the co
 
 **SQL** stands for Structured Query Language. It is used to communicate with a database inside the RDBMS
 
--   Advantages of SQL
-    -   High speed
-    -   No coding needed
-    -   Well defined standards – ISO and ANSI
-    -   Portability
-    -   Interactive language
-    -   Multiple Data Views possible
--   SQL can be divided into different types:
-    -   DML (DATA MANIPULATION LANGUAGE)
-        -   SELECT, INSERT, UPDATE, DELETE
-    -   DDL (DATA DEFINITION LANGUAGE)
-        -   CREATE, ALTER, DROP
-    -   DCL (DATA CONTROL LANGUAGE)
-        -   GRANT, REVOKE
-    -   TCL (TRANSACTION CONTROL LANGUAGE)
-        -   BEGIN, TRAN, COMMIT, ROLLBACK
+- Advantages of SQL
+  - High speed
+  - No coding needed
+  - Well defined standards – ISO and ANSI
+  - Portability
+  - Interactive language
+  - Multiple Data Views possible
+- SQL can be divided into different types:
+  - DML (DATA MANIPULATION LANGUAGE)
+    - SELECT, INSERT, UPDATE, DELETE
+  - DDL (DATA DEFINITION LANGUAGE)
+    - CREATE, ALTER, DROP
+  - DCL (DATA CONTROL LANGUAGE)
+    - GRANT, REVOKE
+  - TCL (TRANSACTION CONTROL LANGUAGE)
+    - BEGIN, TRAN, COMMIT, ROLLBACK
 
 Note: We will be using DML to query our data and DDL to manage the schema, or structure, of our tables.
 
--   Some of the most common SQL statements or keywords
-    -   `SELECT` - extracts data from a database
-    -   `UPDATE` - updates data in a database
-    -   `DELETE` - deletes data from a database
-    -   `INSERT INTO` - inserts new data into a database
-    -   `CREATE DATABASE` - creates a new database
-    -   `ALTER DATABASE` - modifies a database
-    -   `CREATE TABLE` - creates a new table
-    -   `ALTER TABLE` - modifies a table
-    -   `DROP TABLE` - deletes a table
-    -   `CREATE INDEX` - creates an index (search key)
-    -   `DROP INDEX` - deletes an index
+- Some of the most common SQL statements or keywords
+  - `SELECT` - extracts data from a database
+  - `UPDATE` - updates data in a database
+  - `DELETE` - deletes data from a database
+  - `INSERT INTO` - inserts new data into a database
+  - `CREATE DATABASE` - creates a new database
+  - `ALTER DATABASE` - modifies a database
+  - `CREATE TABLE` - creates a new table
+  - `ALTER TABLE` - modifies a table
+  - `DROP TABLE` - deletes a table
+  - `CREATE INDEX` - creates an index (search key)
+  - `DROP INDEX` - deletes an index
 
 ### Examples of DML
 
@@ -312,10 +304,10 @@ Note: We will be using DML to query our data and DDL to manage the schema, or st
 
 Select all the rows with all their columns from a customer table:
 
--   Notice the keywords `SELECT` and `FROM` are in uppercase and the data, table, name `customers` is lowercase. This is a common convention but SQL is generally case insensitive.
--   `SELECT` tells us what columns we want
-    -   The `*` is a wild card in case meaning all available columns.
--   `FROM` tells us from which table to get the data
+- Notice the keywords `SELECT` and `FROM` are in uppercase and the data, table, name `customers` is lowercase. This is a common convention but SQL is generally case insensitive.
+- `SELECT` tells us what columns we want
+  - The `*` is a wild card in case meaning all available columns.
+- `FROM` tells us from which table to get the data
 
 <!-- -->
 
@@ -326,19 +318,19 @@ Select all the rows with all their columns from a customer table:
 
 Join, combine, the orders and customer table based on the primary key for customer. Return the results ordered by customer’s first name and include only the columns order number, total amount, first name, and last name in the results
 
--   SELECT tells us what columns we want
-    -   o.orderid - the order id column from the o table which is the orders table
-    -   c.customername - the customer name column from the c table which is the customers table
-    -   c.contactname - the contact name column from the c table which is the customers table
--   FROM tells us from which tables to get the data
-    -   orders which we give the alias o. Normally when we give a table an alias, or nickname to use elsewhere in the query, we use the first letter of the table.
-    -   customers which we give the alias c.
--   ON tells us how are tables are related and on what columns the tables are to be joined, combined
-    -   o.CustomerId the foreign key to the customer table found in the orders table
-    -   c.CustomerId the primary key of the customer table
-    -   The columns do NOT have to have the same name but must be the same data type!
--   ORDER BY tells us how to order our returned data. By default the data is returned unordered. By default we cannot know what the order will be!
-    -   c.customername - order by the customername column in the c table which is the customers table
+- SELECT tells us what columns we want
+  - o.orderid - the order id column from the o table which is the orders table
+  - c.customername - the customer name column from the c table which is the customers table
+  - c.contactname - the contact name column from the c table which is the customers table
+- FROM tells us from which tables to get the data
+  - orders which we give the alias o. Normally when we give a table an alias, or nickname to use elsewhere in the query, we use the first letter of the table.
+  - customers which we give the alias c.
+- ON tells us how are tables are related and on what columns the tables are to be joined, combined
+  - o.CustomerId the foreign key to the customer table found in the orders table
+  - c.CustomerId the primary key of the customer table
+  - The columns do NOT have to have the same name but must be the same data type!
+- ORDER BY tells us how to order our returned data. By default the data is returned unordered. By default we cannot know what the order will be!
+  - c.customername - order by the customername column in the c table which is the customers table
 
 <!-- -->
 
@@ -367,9 +359,9 @@ To practice with SQL, we are going to use a popular online SQL Editor - W3School
 
 #### Multiple tables
 
--   Surf to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
-    -   You may already be there.
--   Now enter the sql code below and try it out!
+- Surf to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
+  - You may already be there.
+- Now enter the sql code below and try it out!
 
 <!-- -->
 
@@ -380,14 +372,14 @@ To practice with SQL, we are going to use a popular online SQL Editor - W3School
 
 ##### Dig Deeper
 
--   [SQL Tutorial](http://www.postgresqltutorial.com/)  
-    THE Online PostgreSQL Tutorial
--   [PostgreSQL Exercises](http://pgexercises.com/)  
-    PostgreSQL Exercises
--   [SQL Tutorial](https://sqlzoo.net/)  
-    Another Good SQL Tutorial
+- [SQL Tutorial](http://www.postgresqltutorial.com/)  
+  THE Online PostgreSQL Tutorial
+- [PostgreSQL Exercises](http://pgexercises.com/)  
+  PostgreSQL Exercises
+- [SQL Tutorial](https://sqlzoo.net/)  
+  Another Good SQL Tutorial
 
-------------------------------------------------------------------------
+---
 
 #### Learn to query data from a single table
 
@@ -397,19 +389,19 @@ To practice with SQL, we are going to use a popular online SQL Editor - W3School
 
 ### Software Needed
 
--   Web browser - Chrome, Safari, Opera, or Edge. Firefox is not supported.
+- Web browser - Chrome, Safari, Opera, or Edge. Firefox is not supported.
 
 Terms to know at the end of this objective
 
--   Query
--   SELECT
--   FROM
--   WHERE
--   GROUP BY
--   HAVING
--   ORDER BY
--   Alias
--   Aggregate function
+- Query
+- SELECT
+- FROM
+- WHERE
+- GROUP BY
+- HAVING
+- ORDER BY
+- Alias
+- Aggregate function
 
 ### Overview A Basic Query
 
@@ -421,33 +413,33 @@ A **Query** is a way to request information for a database.
     SELECT first_name, last_name, salary
     FROM workers;
 
--   `SELECT` tells us what columns we want. We list the column separated by a comma
--   `FROM` tells us from which table to get the data
--   `;` SQL statements typically end with a semicolon
--   Conventionally SQL *keywords* are in uppercase while *data*, *tables*, and *columns*, are in lowercase. But not always. Case technically does not matter.
+- `SELECT` tells us what columns we want. We list the column separated by a comma
+- `FROM` tells us from which table to get the data
+- `;` SQL statements typically end with a semicolon
+- Conventionally SQL _keywords_ are in uppercase while _data_, _tables_, and _columns_, are in lowercase. But not always. Case technically does not matter.
 
 ### Overview Extending The Query
 
 We can extend our basic query with clauses for the following:
 
--   sorting, ordering, data
--   filtering data
--   aggregating data
--   among other functions
+- sorting, ordering, data
+- filtering data
+- aggregating data
+- among other functions
 
 #### Overview Ordering our data
 
--   `SELECT` tells us what columns we want
-    -   The `*` is a wild card indicating selection of all available columns.
--   `ORDER BY` tells us in what order to return the data. Without it data is returned in an unknown order. The order is the order the RDBMS saved the data in the database. Thus the order is dependent upon how saving is done by the RDBMS and space available on the computer.
-    -   By default sorting is ascending. To sort descending, include the `DESC` key word after the column name
-    -   Multilevel sorting is supported
-        -   Rows are sorted by the first column
-        -   Then within the first column, ordered by the second column
-    -   You can reference columns by the number, that is the order in which they appear in the `SELECT` list
-        -   The first column in the list is 1
-        -   The second column in the list is 2 and so on
--   `;` SQL statements typically end with a semicolon
+- `SELECT` tells us what columns we want
+  - The `*` is a wild card indicating selection of all available columns.
+- `ORDER BY` tells us in what order to return the data. Without it data is returned in an unknown order. The order is the order the RDBMS saved the data in the database. Thus the order is dependent upon how saving is done by the RDBMS and space available on the computer.
+  - By default sorting is ascending. To sort descending, include the `DESC` key word after the column name
+  - Multilevel sorting is supported
+    - Rows are sorted by the first column
+    - Then within the first column, ordered by the second column
+  - You can reference columns by the number, that is the order in which they appear in the `SELECT` list
+    - The first column in the list is 1
+    - The second column in the list is 2 and so on
+- `;` SQL statements typically end with a semicolon
 
 #### Overview Filtering our data
 
@@ -457,7 +449,7 @@ The `WHERE` clause is followed by any expression that returns a boolean, typical
 
 We combine this `WHERE` clause with the `SELECT`, `FROM`, and `ORDER BY` clauses to produce complete queries.
 
-The `WHERE` recognizes `AND` to combine statement, `OR` to check one *or* the other, and `NOT` to reverse the output of the statement. For example
+The `WHERE` recognizes `AND` to combine statement, `OR` to check one _or_ the other, and `NOT` to reverse the output of the statement. For example
 
     SELECT *
     FROM workers
@@ -478,37 +470,39 @@ The `WHERE` recognizes `AND` to combine statement, `OR` to check one *or* the ot
 
 SQL provides a number of aggregating functions, a way to get overall ideas about our data. For example:
 
--   `COUNT(*)` - how many records fit our criteria
--   `DISTINCT <column name>` - a unique list of the data in the columns provided
--   `COUNT(DISTINCT <column name>)` - a count of the unique values in the column provided
--   `AVG(<column name>)` - calculates the average of the values in the provided column
--   `MIN(<column name>)` - gets the minimum value of the column provided. works with strings as well as numbers!
--   `MAX(<column name>)` - gets the maximum value of the column provided. works with strings as well as numbers!
--   `SUM(<column name>` - calculates the sum of the values in the provided column
--   And of course you can combine the above with `SELECT`, `FROM`, `ORDER BY`, and `WHERE` to get a full picture of your data.
+- `COUNT(*)` - how many records fit our criteria
+- `DISTINCT <column name>` - a unique list of the data in the columns provided
+- `COUNT(DISTINCT <column name>)` - a count of the unique values in the column provided
+- `AVG(<column name>)` - calculates the average of the values in the provided column
+- `MIN(<column name>)` - gets the minimum value of the column provided. works with strings as well as numbers!
+- `MAX(<column name>)` - gets the maximum value of the column provided. works with strings as well as numbers!
+- `SUM(<column name>` - calculates the sum of the values in the provided column
+- And of course you can combine the above with `SELECT`, `FROM`, `ORDER BY`, and `WHERE` to get a full picture of your data.
 
 #### Filtering Aggregated Data
 
 Now let’s say I want a list of worker salaries where more than one worker makes that salary who are in the country USA. Order by the number of workers in that salary from most workers to least.
 
--   In the query below, notice the required addition of the `HAVING` statement telling us by what aggregate function do we want to filter our data.
-    -   An **aggregate function** is a function that summarizes, or aggregates, data in order to get a better overview of the data
-    -   `WHERE` filters by columns
-    -   `HAVING` filters by aggregate functions
-    -   You can have both in the SQL statement
+- In the query below, notice the required addition of the `HAVING` statement telling us by what aggregate function do we want to filter our data.
 
--   To make the report headers more readable, we can put in an alias, or nickname, for our aggregate function. In this case I called it `numemps`
-    -   This alias idea works for all columns. In this query I am giving an alias of money to salary.
-    -   Notice how I can use the alias in place of the actual column name in the query!
+  - An **aggregate function** is a function that summarizes, or aggregates, data in order to get a better overview of the data
+  - `WHERE` filters by columns
+  - `HAVING` filters by aggregate functions
+  - You can have both in the SQL statement
 
--   Order of statements do matter (the code will not compile if not in the correct order), so in required ordered
+- To make the report headers more readable, we can put in an alias, or nickname, for our aggregate function. In this case I called it `numemps`
 
-    -   `SELECT` - what columns do we want
-    -   `FROM` - table where to find the data
-    -   `WHERE` - filter what data is returned from the table
-    -   `GROUP` BY - on what column does the aggregate function operate
-    -   `HAVING` - how to filter based off of the aggregate function
-    -   `ORDER` BY - how to order the returned data
+  - This alias idea works for all columns. In this query I am giving an alias of money to salary.
+  - Notice how I can use the alias in place of the actual column name in the query!
+
+- Order of statements do matter (the code will not compile if not in the correct order), so in required ordered
+
+  - `SELECT` - what columns do we want
+  - `FROM` - table where to find the data
+  - `WHERE` - filter what data is returned from the table
+  - `GROUP` BY - on what column does the aggregate function operate
+  - `HAVING` - how to filter based off of the aggregate function
+  - `ORDER` BY - how to order the returned data
 
 <!-- -->
 
@@ -523,18 +517,18 @@ Now let’s say I want a list of worker salaries where more than one worker make
 
 Return all workers with names that include letters `jo` preceded by any number of characters and followed by a single character that is preceded by the letter n and any number of characters after that. The names “john”, “johnny”, and “jonathan” would all match.
 
--   The `%` symbol is used to match multiple characters, a single character or no characters at all.
--   the `_` (underscore) symbol is used to match exactly one character.
+- The `%` symbol is used to match multiple characters, a single character or no characters at all.
+- the `_` (underscore) symbol is used to match exactly one character.
 
 The SQL then says:
 
--   `SELECT` tells us what columns we want
-    -   The `*` is a wild card meaning all available columns.
--   `FROM` tells us from which table to get the data in our case `workers`
--   `WHERE` tells us how to filter the data
-    -   `first_name` is the column, data, we are going to use to filter the data
-    -   `like '%jo_n%’` is how we are going to filter the data
--   `;` SQL statements typically end with a semicolon
+- `SELECT` tells us what columns we want
+  - The `*` is a wild card meaning all available columns.
+- `FROM` tells us from which table to get the data in our case `workers`
+- `WHERE` tells us how to filter the data
+  - `first_name` is the column, data, we are going to use to filter the data
+  - `like '%jo_n%’` is how we are going to filter the data
+- `;` SQL statements typically end with a semicolon
 
 <!-- -->
 
@@ -546,9 +540,9 @@ The SQL then says:
 
 ### We are going to create a workers table
 
--   Navigate to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
--   Clear any code in editor
--   Now enter this SQL code to create the workers table
+- Navigate to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
+- Clear any code in editor
+- Now enter this SQL code to create the workers table
 
 <!-- -->
 
@@ -561,13 +555,13 @@ The SQL then says:
         country varchar(255)
     )
 
--   Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
+- Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
 
 Results should be:
 
     You have made changes to the database.
 
--   Enter the SQL code below to populate, put data into, “seed”, the workers table. This SQL you can copy and paste! This is Data Manipulation Language (DML) code
+- Enter the SQL code below to populate, put data into, “seed”, the workers table. This SQL you can copy and paste! This is Data Manipulation Language (DML) code
 
 <!-- -->
 
@@ -578,7 +572,7 @@ Results should be:
            ('Dottie', 'Dog', 45000, 'HR', 'USA'),
            ('Tiger', 'Cat', 150000, 'BOSS', 'USA');
 
--   Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
+- Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
 
 Results should be:
 
@@ -586,15 +580,15 @@ Results should be:
 
 ### Now let’s query a single table
 
--   While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
--   Remember to click the green button `Run SQL >>` to see your Results!
+- While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
+- Remember to click the green button `Run SQL >>` to see your Results!
 
 <!-- -->
 
     SELECT first_name, last_name, salary
     FROM workers;
 
--   Keep trying until you get the following results!
+- Keep trying until you get the following results!
 
 <table><thead><tr class="header"><th>first_name</th><th>last_name</th><th>salary</th></tr></thead><tbody><tr class="odd"><td>BarnBarn</td><td>Rabbit</td><td>100000</td></tr><tr class="even"><td>Cinnabun</td><td>Rabbit</td><td>100000</td></tr><tr class="odd"><td>Ginger</td><td>Dog</td><td>45000</td></tr><tr class="even"><td>Dottie</td><td>Dog</td><td>45000</td></tr><tr class="odd"><td>Tiger</td><td>Cat</td><td>150000</td></tr></tbody></table>
 
@@ -602,9 +596,9 @@ Results should be:
 
 Select all columns from the workers table order by salary from largest to smallest. If workers have the same salary, then sort the workers by first name.
 
--   While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
--   Notice the addition of the `ORDER BY` line
--   Remember to click the green button `Run SQL >>` to see your Results!
+- While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
+- Notice the addition of the `ORDER BY` line
+- Remember to click the green button `Run SQL >>` to see your Results!
 
 <!-- -->
 
@@ -612,14 +606,14 @@ Select all columns from the workers table order by salary from largest to smalle
     FROM workers
     ORDER BY salary DESC, first_name;
 
--   Keep trying until you get the following results!
+- Keep trying until you get the following results!
 
 <table><thead><tr class="header"><th>first_name</th><th>last_name</th><th>salary</th><th>department</th><th>country</th></tr></thead><tbody><tr class="odd"><td>Tiger</td><td>Cat</td><td>150000</td><td>BOSS</td><td>USA</td></tr><tr class="even"><td>BarnBarn</td><td>Rabbit</td><td>100000</td><td>MANAGEMENT</td><td>USA</td></tr><tr class="odd"><td>Cinnabun</td><td>Rabbit</td><td>100000</td><td>MANAGEMENT</td><td>USA</td></tr><tr class="even"><td>Dottie</td><td>Dog</td><td>45000</td><td>HR</td><td>USA</td></tr><tr class="odd"><td>Ginger</td><td>Dog</td><td>45000</td><td>SECURITY</td><td>CANADA</td></tr></tbody></table>
 
 Select the `first_name`,` last_name`, `salary`, and `department` columns from workers table order by department alphabetically. For workers in the same department, order by salary from largest to smallest.
 
--   While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
--   Remember to click the green button `Run SQL >>` to see your Results!
+- While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
+- Remember to click the green button `Run SQL >>` to see your Results!
 
 <!-- -->
 
@@ -627,7 +621,7 @@ Select the `first_name`,` last_name`, `salary`, and `department` columns from wo
     FROM workers
     ORDER BY 3, 2 DESC;
 
--   Keep trying until you get the following results!
+- Keep trying until you get the following results!
 
 <table><thead><tr class="header"><th>first_name</th><th>last_name</th><th>salary</th><th>department</th></tr></thead><tbody><tr class="odd"><td>Tiger</td><td>Cat</td><td>150000</td><td>BOSS</td></tr><tr class="even"><td>Dottie</td><td>Dog</td><td>45000</td><td>HR</td></tr><tr class="odd"><td>BarnBarn</td><td>Rabbit</td><td>100000</td><td>MANAGEMENT</td></tr><tr class="even"><td>Cinnabun</td><td>Rabbit</td><td>100000</td><td>MANAGEMENT</td></tr><tr class="odd"><td>Ginger</td><td>Dog</td><td>45000</td><td>SECURITY</td></tr></tbody></table>
 
@@ -635,9 +629,9 @@ Select the `first_name`,` last_name`, `salary`, and `department` columns from wo
 
 Select all columns from the workers table where salary is greater than 50,000. Return the results ordered by workers last name.
 
--   While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
--   Notice the addition of the `ORDER BY` line
--   Remember to click the green button `Run SQL >>` to see your Results!
+- While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
+- Notice the addition of the `ORDER BY` line
+- Remember to click the green button `Run SQL >>` to see your Results!
 
 <!-- -->
 
@@ -646,21 +640,21 @@ Select all columns from the workers table where salary is greater than 50,000. R
     WHERE salary > 50000
     ORDER BY last_name;
 
--   Keep trying until you get the following results!
+- Keep trying until you get the following results!
 
 <table><thead><tr class="header"><th>first_name</th><th>last_name</th><th>salary</th><th>department</th><th>country</th></tr></thead><tbody><tr class="odd"><td>Tiger</td><td>Cat</td><td>150000</td><td>BOSS</td><td>USA</td></tr><tr class="even"><td>BarnBarn</td><td>Rabbit</td><td>100000</td><td>MANAGEMENT</td><td>USA</td></tr><tr class="odd"><td>Cinnabun</td><td>Rabbit</td><td>100000</td><td>MANAGEMENT</td><td>USA</td></tr></tbody></table>
 
--   While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
--   Notice the use of `AND` on the `WHERE` line
--   Remember to click the green button `Run SQL >>` to see your Results!
+- While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
+- Notice the use of `AND` on the `WHERE` line
+- Remember to click the green button `Run SQL >>` to see your Results!
 
-Select all columns from the workers table where salary is greater than 50,000 *and* the workers are in the country USA.
+Select all columns from the workers table where salary is greater than 50,000 _and_ the workers are in the country USA.
 
     SELECT *
     FROM workers
     WHERE salary > 50000 AND country = 'USA';
 
--   Keep trying until you get the following results!
+- Keep trying until you get the following results!
 
 <table><thead><tr class="header"><th>first_name</th><th>last_name</th><th>salary</th><th>department</th><th>country</th></tr></thead><tbody><tr class="odd"><td>BarnBarn</td><td>Rabbit</td><td>100000</td><td>MANAGEMENT</td><td>USA</td></tr><tr class="even"><td>Cinnabun</td><td>Rabbit</td><td>100000</td><td>MANAGEMENT</td><td>USA</td></tr><tr class="odd"><td>Tiger</td><td>Cat</td><td>150000</td><td>BOSS</td><td>USA</td></tr></tbody></table>
 
@@ -668,11 +662,11 @@ Select all columns from the workers table where salary is greater than 50,000 *a
 
 Get a distinct list of all departments from the workers table ordered by department
 
--   While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
+- While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
 
--   Notice the addition of the `DISTINCT` keyword
+- Notice the addition of the `DISTINCT` keyword
 
--   Remember to click the green button `Run SQL >>` to see your Results!
+- Remember to click the green button `Run SQL >>` to see your Results!
 
 <!-- -->
 
@@ -680,34 +674,34 @@ Get a distinct list of all departments from the workers table ordered by departm
     FROM workers
     ORDER BY department;
 
--   Keep trying until you get the following results!
+- Keep trying until you get the following results!
 
 <table><thead><tr class="header"><th>department</th></tr></thead><tbody><tr class="odd"><td>BOSS</td></tr><tr class="even"><td>HR</td></tr><tr class="odd"><td>MANAGEMENT</td></tr><tr class="even"><td>SECURITY</td></tr></tbody></table>
 
 Get a count of the distinct number of departments in the workers table
 
--   While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
--   Notice the addition of `COUNT()`
--   Remember to click the green button `Run SQL >>` to see your Results!
+- While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
+- Notice the addition of `COUNT()`
+- Remember to click the green button `Run SQL >>` to see your Results!
 
 <!-- -->
 
     SELECT COUNT(DISTINCT department)
     FROM workers;
 
--   Keep trying until you get the following results!
+- Keep trying until you get the following results!
 
 <table><thead><tr class="header"><th>COUNT(DISTINCT department)</th></tr></thead><tbody><tr class="odd"><td>4</td></tr></tbody></table>
 
 Produce a report that lists the unique salaries that employees earn and how many workers earn that salary.
 
--   Notice the required addition of the `GROUP BY` statement telling us what column to group the data by. So the aggregate function count works on what column.
+- Notice the required addition of the `GROUP BY` statement telling us what column to group the data by. So the aggregate function count works on what column.
 
--   The column you are grouping by does NOT have to appear in the list of columns you are selecting. Normally it does though!
+- The column you are grouping by does NOT have to appear in the list of columns you are selecting. Normally it does though!
 
--   While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
+- While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
 
--   Remember to click the green button `Run SQL >>` to see your Results!
+- Remember to click the green button `Run SQL >>` to see your Results!
 
 <!-- -->
 
@@ -715,7 +709,7 @@ Produce a report that lists the unique salaries that employees earn and how many
     FROM workers
     GROUP BY salary;
 
--   Keep trying until you get the following results!
+- Keep trying until you get the following results!
 
 <table><thead><tr class="header"><th>salary</th><th>count(*)</th></tr></thead><tbody><tr class="odd"><td>45000</td><td>2</td></tr><tr class="even"><td>100000</td><td>2</td></tr><tr class="odd"><td>150000</td><td>1</td></tr></tbody></table>
 
@@ -723,9 +717,9 @@ Produce a report that lists the unique salaries that employees earn and how many
 
 Now let’s say I want a list of worker salaries where more than one worker makes that salary who are in the country USA. Order by the number of workers in that salary from most workers to least.
 
--   While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
--   Notice the `GROUP BY` and `HAVING` lines
--   Remember to click the green button `Run SQL >>` to see your Results!
+- While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
+- Notice the `GROUP BY` and `HAVING` lines
+- Remember to click the green button `Run SQL >>` to see your Results!
 
 <!-- -->
 
@@ -736,14 +730,14 @@ Now let’s say I want a list of worker salaries where more than one worker make
     HAVING numemps > 1
     ORDER BY numemps DESC;
 
--   Keep trying until you get the following resulst!
+- Keep trying until you get the following resulst!
 
 <table><thead><tr class="header"><th>money</th><th>numemps</th></tr></thead><tbody><tr class="odd"><td>100000</td><td>2</td></tr></tbody></table>
 
 without using aliases we get this SQL query
 
--   While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
--   Remember to click the green button `Run SQL >>` to see your Results!
+- While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
+- Remember to click the green button `Run SQL >>` to see your Results!
 
 <!-- -->
 
@@ -754,7 +748,7 @@ without using aliases we get this SQL query
     HAVING count(*) > 1
     ORDER BY 2 DESC;
 
--   Keep trying until you get the following results!
+- Keep trying until you get the following results!
 
 <table><thead><tr class="header"><th>salary</th><th>count(*)</th></tr></thead><tbody><tr class="odd"><td>100000</td><td>2</td></tr></tbody></table>
 
@@ -762,8 +756,8 @@ without using aliases we get this SQL query
 
 Return all workers with names that include letters `jo` preceded by any number of characters and followed by a single character that is preceded by the letter n and any number of characters after that. The names “john”, “johnny”, and “johnathan” would all match.
 
--   While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
--   Remember to click the green button `Run SQL >>` to see your Results!
+- While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
+- Remember to click the green button `Run SQL >>` to see your Results!
 
 <!-- -->
 
@@ -771,13 +765,13 @@ Return all workers with names that include letters `jo` preceded by any number o
     FROM workers
     WHERE first_name like '%jo_n%';
 
--   Keep trying until you get the following results!
+- Keep trying until you get the following results!
 
 No result.
 
--   The addition of the keyword `NOT` means to filter out the data that does NOT match the criteria. The reverse of above!
--   While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
--   Remember to click the green button `Run SQL >>` to see your results!
+- The addition of the keyword `NOT` means to filter out the data that does NOT match the criteria. The reverse of above!
+- While still on the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) with the workers table created, enter the following SQL
+- Remember to click the green button `Run SQL >>` to see your results!
 
 <!-- -->
 
@@ -785,11 +779,11 @@ No result.
     FROM workers
     WHERE first_name NOT like '%jo_n%';
 
--   Keep trying until you get the following result!
+- Keep trying until you get the following result!
 
 <table><thead><tr class="header"><th>first_name</th><th>last_name</th><th>salary</th><th>department</th><th>country</th></tr></thead><tbody><tr class="odd"><td>BarnBarn</td><td>Rabbit</td><td>100000</td><td>MANAGEMENT</td><td>USA</td></tr><tr class="even"><td>Cinnabun</td><td>Rabbit</td><td>100000</td><td>MANAGEMENT</td><td>USA</td></tr><tr class="odd"><td>Ginger</td><td>Dog</td><td>45000</td><td>SECURITY</td><td>CANADA</td></tr><tr class="even"><td>Dottie</td><td>Dog</td><td>45000</td><td>HR</td><td>USA</td></tr><tr class="odd"><td>Tiger</td><td>Cat</td><td>150000</td><td>BOSS</td><td>USA</td></tr></tbody></table>
 
-------------------------------------------------------------------------
+---
 
 #### Learn to query multiple tables data
 
@@ -799,33 +793,33 @@ No result.
 
 ### Software Needed
 
--   Web browser - Chrome, Safari, Opera, and Edge. Firefox is not supported
+- Web browser - Chrome, Safari, Opera, and Edge. Firefox is not supported
 
 ### Joining Tables
 
 Terms to know at the end of this objective
 
--   Joins
--   Inner Join
--   Outer Join
--   Right Join
--   Left Join
--   Alias
+- Joins
+- Inner Join
+- Outer Join
+- Right Join
+- Left Join
+- Alias
 
 ### `JOIN` Types
 
--   A `JOIN` clause is used to combine rows from two or more tables, based on a related column between them.
+- A `JOIN` clause is used to combine rows from two or more tables, based on a related column between them.
 
--   When joining tables you have to pick what type of join you want
+- When joining tables you have to pick what type of join you want
 
-    -   **inner join**, or the default join, means when you find the columns being matched in both tables
-        -   A customer id must exist in both tables before a row gets reported
-    -   **left join** means report all rows from the table on the left, the one right after the FROM statement, and only the rows from the other table where the columns match
-        -   All rows from the customers table get reported. If a row in the orders table has the same customer id as the one in the customers table then report the data from the orders table as well. If no row in the orders table matches the customer id in the customers table, leave the columns from the orders table NULL.
-    -   **right join** means report all rows from the table on the right, the table after the JOIN statement, and only the rows from the other table where the columns match
-        -   All rows from the orders table get reported. If a row in the customers table has the same customer id as the one in the orders table then report the data from the customers table as well. If no row in the customers table matches the customer id in the orders table, leave the columns from the customers table NULL.
-    -   **full outer join** means all rows from all tables are included.
-        -   All rows from the customers and orders tables are included. Where the customers id match, data from both tables is reported. If a customer id is not in either table, the data available is reported while the rest of the fields are left NULL.
+  - **inner join**, or the default join, means when you find the columns being matched in both tables
+    - A customer id must exist in both tables before a row gets reported
+  - **left join** means report all rows from the table on the left, the one right after the FROM statement, and only the rows from the other table where the columns match
+    - All rows from the customers table get reported. If a row in the orders table has the same customer id as the one in the customers table then report the data from the orders table as well. If no row in the orders table matches the customer id in the customers table, leave the columns from the orders table NULL.
+  - **right join** means report all rows from the table on the right, the table after the JOIN statement, and only the rows from the other table where the columns match
+    - All rows from the orders table get reported. If a row in the customers table has the same customer id as the one in the orders table then report the data from the customers table as well. If no row in the customers table matches the customer id in the orders table, leave the columns from the customers table NULL.
+  - **full outer join** means all rows from all tables are included.
+    - All rows from the customers and orders tables are included. Where the customers id match, data from both tables is reported. If a customer id is not in either table, the data available is reported while the rest of the fields are left NULL.
 
 The following picture is adapted from [Medium: “SQL” AND “SQL INJECTION ATTACK”](https://medium.com/@mahmethassan/sql-and-sql-injection-attack-6cae6850e308)
 
@@ -835,8 +829,8 @@ The following picture is adapted from [Medium: “SQL” AND “SQL INJECTION AT
 
 Select from the orders table order id and order date and from the customers table customer name
 
--   joining the orders and customers tables ON the customerid in each table.
--   INNER means to report only the rows for the tables where customerids match
+- joining the orders and customers tables ON the customerid in each table.
+- INNER means to report only the rows for the tables where customerids match
 
 <!-- -->
 
@@ -846,8 +840,8 @@ Select from the orders table order id and order date and from the customers tabl
 
 Return all customers including orders where present
 
--   LEFT join pulls the records from the table after the FROM statement - the table listed to the left if all was listed on one line.
--   Joining on the customerid columns in both tables
+- LEFT join pulls the records from the table after the FROM statement - the table listed to the left if all was listed on one line.
+- Joining on the customerid columns in both tables
 
 <!-- -->
 
@@ -859,9 +853,9 @@ Return all customers including orders where present
 
 Return all rows from customers and orders table, matching data in a single row where appropriate.
 
--   Notice that we can give aliases to the table names. Normally these aliases are the first letter of the table.
-    -   We can use these aliases anywhere we use columns!
-    -   Once you alias a table you need to use the alias to reference the table throughout the query
+- Notice that we can give aliases to the table names. Normally these aliases are the first letter of the table.
+  - We can use these aliases anywhere we use columns!
+  - Once you alias a table you need to use the alias to reference the table throughout the query
 
 <!-- -->
 
@@ -886,17 +880,17 @@ Let’s try out a few JOIN statements.
 
 Select from the orders table order id and order date and from the customers table customer name
 
--   joining the orders and customers tables ON the customerid in each table.
+- joining the orders and customers tables ON the customerid in each table.
 
--   INNER means to report only the rows for the tables where customerids match
+- INNER means to report only the rows for the tables where customerids match
 
--   Surf to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
+- Surf to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
 
--   Clear any code in editor
+- Clear any code in editor
 
--   Now enter the sql code from below
+- Now enter the sql code from below
 
--   Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
+- Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
 
 <!-- -->
 
@@ -904,7 +898,7 @@ Select from the orders table order id and order date and from the customers tabl
     FROM Orders
     INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
 
--   Keep trying until you get the following results!
+- Keep trying until you get the following results!
 
 Number of Records: 196
 
@@ -912,12 +906,12 @@ Number of Records: 196
 
 Now, return all customers including orders where present
 
--   LEFT join pulls the records from the table after the FROM statement - the table listed to the left if all was listed on one line.
--   Joining on the customerid columns in both tables
--   Surf to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
--   Clear any code in editor
--   Now enter the sql code from below
--   Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
+- LEFT join pulls the records from the table after the FROM statement - the table listed to the left if all was listed on one line.
+- Joining on the customerid columns in both tables
+- Surf to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
+- Clear any code in editor
+- Now enter the sql code from below
+- Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
 
 <!-- -->
 
@@ -927,7 +921,7 @@ Now, return all customers including orders where present
     ON customers.customerid=orders.customerid
     ORDER BY orders.orderid;
 
--   Keep trying until you get the following results!
+- Keep trying until you get the following results!
 
 Number of Records: 213
 
@@ -935,10 +929,10 @@ Number of Records: 213
 
 ##### Dig Deeper
 
--   [Wikipedia](https://en.wikipedia.org/wiki/Join_(SQL))  
-    Wikipedia on Joins
+- [Wikipedia](<https://en.wikipedia.org/wiki/Join_(SQL)>)  
+  Wikipedia on Joins
 
-------------------------------------------------------------------------
+---
 
 #### Learn to perform CRUD operations on an RDBMS using SQL
 
@@ -948,16 +942,16 @@ Number of Records: 213
 
 ### Software Needed
 
--   Web browser - Chrome, Safari, Opera, and Edge. Firefox is not support
+- Web browser - Chrome, Safari, Opera, and Edge. Firefox is not support
 
 How do we manipulate data in SQL? This is the “DML” part of SQL - DML meaning data manipulation language. Let’s say we need to change an employee’s name, we need a new friend to our friend list, we need to delete a product from our shopping cart. All these are examples of when we need to manipulate data!
 
--   CRUD
-    -   Create - `INSERT`
-    -   Read - `SELECT`
-    -   Update - `UPDATE`
-    -   Delete - `DELETE`
--   Note that these are unrelated to HTTP methods. These were developed first!
+- CRUD
+  - Create - `INSERT`
+  - Read - `SELECT`
+  - Update - `UPDATE`
+  - Delete - `DELETE`
+- Note that these are unrelated to HTTP methods. These were developed first!
 
 ### Create - INSERT
 
@@ -987,21 +981,21 @@ Add records to a customers table using a subquery. A **subquery** is a regular, 
 
 We have looked at this in-depth in other objectives
 
--   [Objective 2 - SQL](Objective%202%20-%20SQL.md)
+- [Objective 2 - SQL](Objective%202%20-%20SQL.md)
 
--   [Objective 3 - Query Single Table](Objective%20320-20Query20Single20Table.md)
+- [Objective 3 - Query Single Table](Objective%20320-20Query20Single20Table.md)
 
--   `SELECT` - what columns do we want
+- `SELECT` - what columns do we want
 
--   `FROM` - table where to find the data
+- `FROM` - table where to find the data
 
--   `WHERE` - filter what data is returned from the table
+- `WHERE` - filter what data is returned from the table
 
--   `GROUP` BY - on what column does the aggregate function operate
+- `GROUP` BY - on what column does the aggregate function operate
 
--   `HAVING` - how to filter based off of the aggregate function
+- `HAVING` - how to filter based off of the aggregate function
 
--   `ORDER` BY - how to order the returned data
+- `ORDER` BY - how to order the returned data
 
 <!-- -->
 
@@ -1016,9 +1010,9 @@ We have looked at this in-depth in other objectives
 
 Update the contact name and the city for where the customer’s primary key is 1
 
--   `UPDATE` the table we are changing
--   `SET` a list of columns that are going to be changed in the format of `column name = new value`
--   `WHERE` says which rows are to be affected. An update will work without a WHERE line. However, that affects all rows in the table. Make sure that is what you want before running the UPDATE!
+- `UPDATE` the table we are changing
+- `SET` a list of columns that are going to be changed in the format of `column name = new value`
+- `WHERE` says which rows are to be affected. An update will work without a WHERE line. However, that affects all rows in the table. Make sure that is what you want before running the UPDATE!
 
 <!-- -->
 
@@ -1030,7 +1024,7 @@ Update the `primary_author` in `books` to match the name in the authors table wh
 
 1.  Filter the books so we just have records with the book title The Hobbit
 2.  inner join that set from books with the authors table matching on author’s id.
-3.  In the subset, replace the books primary\_author with the name of the author from the authors table.
+3.  In the subset, replace the books primary_author with the name of the author from the authors table.
 
 We can deduce from this that the name in the authors is correct for the book titled The Hobbit but is the author’s name is incorrect in the books table and so needs updating.
 
@@ -1045,8 +1039,8 @@ We can deduce from this that the name in the authors is correct for the book tit
 
 Let’s say we wish to remove all data from the customers tables
 
--   `DELETE` the keyword followed by NOTHING. No columns are given since the delete removes an entire row.
--   `FROM` the table where rows are to be removed
+- `DELETE` the keyword followed by NOTHING. No columns are given since the delete removes an entire row.
+- `FROM` the table where rows are to be removed
 
 <!-- -->
 
@@ -1071,28 +1065,28 @@ Let’s try out some of these statements.
 
 Add a single record to a customers table giving the values in order of the column in the table
 
--   Surf to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
--   Clear any code in editor
--   Now enter the sql code from below
--   Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
+- Surf to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
+- Clear any code in editor
+- Now enter the sql code from below
+- Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
 
 No column names are given. Values must be listed in the order of the columns in the table and all columns from the table must be represented.
 
     INSERT INTO customers
     VALUES (9999, 'Lambda School', 'John Mitchell', '123 Main Street', 'Anywhere', '77777', 'USA');
 
--   You should get the result:
+- You should get the result:
 
-    You have made changes to the database. Rows affected: 1
+  You have made changes to the database. Rows affected: 1
 
 Add multiple records to a customers table giving which columns will be added
 
 Columns are listed in the same order in both the column list and the values. You do not have list all columns. However if a column is marked not NULL, you have to send it a value by including it in the column list and the value lists.
 
--   Surf to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
--   Clear any code in editor
--   Now enter the SQL code from below
--   Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
+- Surf to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
+- Clear any code in editor
+- Now enter the SQL code from below
+- Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
 
 <!-- -->
 
@@ -1102,18 +1096,18 @@ Columns are listed in the same order in both the column list and the values. You
            (2222, 'Ginger', 'Canada'),
            (3333, 'BarnBarn', 'USA');
 
--   You should get the result:
+- You should get the result:
 
-    You have made changes to the database. Rows affected: 3
+  You have made changes to the database. Rows affected: 3
 
 Add records to a customers table using a subquery
 
 Notice the subquery is just a valid query!
 
--   Surf to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
--   Clear any code in editor
--   Now enter the sql code from below
--   Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
+- Surf to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
+- Clear any code in editor
+- Now enter the sql code from below
+- Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
 
 <!-- -->
 
@@ -1122,11 +1116,11 @@ Notice the subquery is just a valid query!
         FROM   employees
         WHERE  employeeid > 5;
 
--   You should get the result:
+- You should get the result:
 
-    You have made changes to the database. Rows affected: 5
+  You have made changes to the database. Rows affected: 5
 
--   Try running the subquery as a stand alone `SELECT` query. You should get the following result:
+- Try running the subquery as a stand alone `SELECT` query. You should get the following result:
 
 <table><thead><tr class="header"><th>employeeid * 100</th><th>FirstName</th><th>‘USA’</th></tr></thead><tbody><tr class="odd"><td>600</td><td>Michael</td><td>USA</td></tr><tr class="even"><td>700</td><td>Robert</td><td>USA</td></tr><tr class="odd"><td>800</td><td>Laura</td><td>USA</td></tr><tr class="even"><td>900</td><td>Anne</td><td>USA</td></tr><tr class="odd"><td>1000</td><td>Adam</td><td>USA</td></tr></tbody></table>
 
@@ -1134,10 +1128,10 @@ Notice the subquery is just a valid query!
 
 Update the contact name and the city for where the customer’s primary key is 1
 
--   Surf to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
--   Clear any code in editor
--   Now enter the sql code from below
--   Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
+- Surf to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
+- Clear any code in editor
+- Now enter the sql code from below
+- Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
 
 <!-- -->
 
@@ -1145,51 +1139,51 @@ Update the contact name and the city for where the customer’s primary key is 1
     SET contactname = 'Alfred Schmidt', city= 'Frankfurt'
     WHERE customerid = 1;
 
--   You should get the result:
+- You should get the result:
 
-    You have made changes to the database. Rows affected: 1
+  You have made changes to the database. Rows affected: 1
 
--   Note you can run a `SELECT` query to verify that this works!
+- Note you can run a `SELECT` query to verify that this works!
 
 What happens with no filter? All records contact names and cities are updated!
 
     UPDATE customers
     SET contactname = 'Alfred Schmidt', city= 'Frankfurt';
 
--   You should get the result:
+- You should get the result:
 
-    You have made changes to the database. Rows affected: 100
+  You have made changes to the database. Rows affected: 100
 
--   And now all of your customers contact names are Alfred Schmidt :-(
+- And now all of your customers contact names are Alfred Schmidt :-(
 
 ### Delete - DELETE
 
 Remove all data from the customer table
 
--   Surf to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
--   Clear any code in editor
--   Now enter the SQL code from below
--   Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
+- Surf to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
+- Clear any code in editor
+- Now enter the SQL code from below
+- Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
 
 <!-- -->
 
     DELETE
     FROM customers;
 
--   You should get the result:
+- You should get the result:
 
-    No result.
+  No result.
 
--   Now restore the database by clicking on the `Restore Database` button on the right of the screen
+- Now restore the database by clicking on the `Restore Database` button on the right of the screen
 
 Remove all data from the customer table where customer name = ‘Alfreds Futterkiste’
 
 We can combine all the elements of SQL filtering to remove just the data we want removed.
 
--   Surf to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
--   Clear any code in editor
--   Now enter the SQL code from below
--   Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
+- Surf to the [W3Schools Try-SQL Editor](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
+- Clear any code in editor
+- Now enter the SQL code from below
+- Remember to click the green button `Run SQL >>` to execute, run, your SQL statements!
 
 <!-- -->
 
@@ -1197,13 +1191,13 @@ We can combine all the elements of SQL filtering to remove just the data we want
     FROM customers
     WHERE customername='Alfreds Futterkiste';
 
--   You should get the result:
+- You should get the result:
 
-    No result.
+  No result.
 
 This is expected, as the record has been deleted!
 
-------------------------------------------------------------------------
+---
 
 #### Learn to open an existing database, or create a new one, while adding tables to a PostgreSQL database
 
@@ -1213,83 +1207,83 @@ This is expected, as the record has been deleted!
 
 ### Software Needed
 
--   PostgreSQL with pgAdmin
+- PostgreSQL with pgAdmin
 
 ### What are our choices for RDBMS?
 
 The top 5 RDBMS (according to [Capterra](https://www.capterra.com/rdbms-software/))
 
--   Amazon Relational Database
--   Aurora from AWS
--   SQL Server
--   Oracle Database
--   PostgreSQL
+- Amazon Relational Database
+- Aurora from AWS
+- SQL Server
+- Oracle Database
+- PostgreSQL
 
 We have chosen PostgreSQL because it is:
 
--   The most popular free option
--   Used by all tracks across Lambda School
--   Compatible with the cloud service we use at Lambda School (Heroku)
+- The most popular free option
+- Used by all tracks across Lambda School
+- Compatible with the cloud service we use at Lambda School (Heroku)
 
 ### What’s in a name
 
--   PostgreSQL
+- PostgreSQL
 
-    -   Of course SQL comes from Structured Query Language, the programming language used to access RDBMS
-    -   Postgres – This database was developed after, or POST, and as a replace for Ingres
-        -   Ingres – An older University of California, Berkeley project that spawned many database management systems including Sybase, MS SQL, Non-Stop SQL
-    -   This RDMBS is commonly called just “Postgres”. The original developer wanted it to be called PostgreSQL to emphasize that this is a RDBMS by adding SQL to the name. We can treat these names as interchangeable.
+  - Of course SQL comes from Structured Query Language, the programming language used to access RDBMS
+  - Postgres – This database was developed after, or POST, and as a replace for Ingres
+    - Ingres – An older University of California, Berkeley project that spawned many database management systems including Sybase, MS SQL, Non-Stop SQL
+  - This RDMBS is commonly called just “Postgres”. The original developer wanted it to be called PostgreSQL to emphasize that this is a RDBMS by adding SQL to the name. We can treat these names as interchangeable.
 
 ### Accessing PostgresSQL
 
--   We can access PostgresSQL either using the postgres command line interface (CLI) or a graphical user interface (GUI). Several GUI choices exist. One of the more popular ones is pgAdmin and is the one we will be reviewing here.
--   For this object, you will need PostgreSQL installed locally. You can find out how to install it from the Software Install instructions for this sprint.
+- We can access PostgresSQL either using the postgres command line interface (CLI) or a graphical user interface (GUI). Several GUI choices exist. One of the more popular ones is pgAdmin and is the one we will be reviewing here.
+- For this object, you will need PostgreSQL installed locally. You can find out how to install it from the Software Install instructions for this sprint.
 
 ##### Follow Along
 
 ### Working with PostgreSQL CLI
 
--   This is where the DDL, data definition language, comes into use
+- This is where the DDL, data definition language, comes into use
 
--   We are going to be using SQL commands to manage our database.
+- We are going to be using SQL commands to manage our database.
 
--   First we have to find the cli for PostgreSQL psql and change to that directory. Mine is located in the folder `/Library/PostgreSQL/12/bin so`
+- First we have to find the cli for PostgreSQL psql and change to that directory. Mine is located in the folder `/Library/PostgreSQL/12/bin so`
 
 <!-- -->
 
     cd /Library/PostgreSQL/12/bin
 
--   Now run psql
+- Now run psql
 
 <!-- -->
 
     ./psql -U postgres
 
--   `postgres` is the default username for PostgreSQL
+- `postgres` is the default username for PostgreSQL
 
--   You are prompted to enter the password for PostgreSQL. This is the password you created when you set up PostgreSQL. For many of us that will be `password`. You password may or may not be displayed on the screen.
+- You are prompted to enter the password for PostgreSQL. This is the password you created when you set up PostgreSQL. For many of us that will be `password`. You password may or may not be displayed on the screen.
 
--   you should a prompt similar to `postgres=#` meaning you are now running psql!
+- you should a prompt similar to `postgres=#` meaning you are now running psql!
 
--   Let’s create a database
+- Let’s create a database
 
 <!-- -->
 
     CREATE DATABASE lambdaschool;
 
--   To list all databases on your server
+- To list all databases on your server
 
 <!-- -->
 
     \l
 
--   Connect to, use, the database you just created
+- Connect to, use, the database you just created
 
 <!-- -->
 
     \c lambdaschool
 
--   Create a table. We will create a table of humans with a primary key and a name. Then we created a table of pets with a primary key, a name, an age, and a foreign key to the pet’s human. Using the PostgreSQL CLI, enter the following.
+- Create a table. We will create a table of humans with a primary key and a name. Then we created a table of pets with a primary key, a name, an age, and a foreign key to the pet’s human. Using the PostgreSQL CLI, enter the following.
 
 <!-- -->
 
@@ -1308,19 +1302,19 @@ We have chosen PostgreSQL because it is:
           ON UPDATE NO ACTION ON DELETE NO ACTION
     );
 
--   Add a column type to pets. Using the PostgreSQL CLI, enter the following.
+- Add a column type to pets. Using the PostgreSQL CLI, enter the following.
 
 <!-- -->
 
     ALTER TABLE pets ADD COLUMN breed VARCHAR(50);
 
--   To see a table’s schema and layout, use:
+- To see a table’s schema and layout, use:
 
 <!-- -->
 
     \d pets
 
--   To remove all data from a table:
+- To remove all data from a table:
 
 <!-- -->
 
@@ -1330,7 +1324,7 @@ We have chosen PostgreSQL because it is:
 
     TRUNCATE humans CASCADE;
 
--   To get rid, drop, a table completely, This deletes the foreign key from pets as well.
+- To get rid, drop, a table completely, This deletes the foreign key from pets as well.
 
 <!-- -->
 
@@ -1342,123 +1336,124 @@ We have chosen PostgreSQL because it is:
 
 Let’s do a similar process as with the CLI but we’ll use pgAdmin
 
--   Launch pgAdmin. pgAdmin was installed when you installed PostgreSQL!
+- Launch pgAdmin. pgAdmin was installed when you installed PostgreSQL!
 
 Click on the icon. ![pgAdmin Icon](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdminIcon.png) This will load a web browse and launch pgAdmin.
 
--   Now sign on. For most of us our master password will be `password`. `Password` was the suggested password I used in the installation instructions
+- Now sign on. For most of us our master password will be `password`. `Password` was the suggested password I used in the installation instructions
 
-    ![pgAdmin Login](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-01-login.png)
+  ![pgAdmin Login](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-01-login.png)
 
--   Expand Server to see what servers, are being managed by your pgAdmin. Your list will vary! These are aliases to PostgreSQL servers
+- Expand Server to see what servers, are being managed by your pgAdmin. Your list will vary! These are aliases to PostgreSQL servers
 
-    ![Server on Server](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-02-databases.png)
+  ![Server on Server](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-02-databases.png)
 
--   Create a new server by
+- Create a new server by
 
--   Right click on Server and Select Create >
+- Right click on Server and Select Create >
 
-    -   On the General table Name your server `LambdaSchoolLocal`
+  - On the General table Name your server `LambdaSchoolLocal`
 
-    ![General Tab](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-03-general.png)
+  ![General Tab](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-03-general.png)
 
--   On the connection table
+- On the connection table
 
-    -   give your host as `localhost` meaning your machine
-    -   enter your username for most of us will be is `postgres`
-    -   enter your password for most of us will be `password`
+  - give your host as `localhost` meaning your machine
+  - enter your username for most of us will be is `postgres`
+  - enter your password for most of us will be `password`
 
-    ![Connection Tab](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-04-connection.png)
+  ![Connection Tab](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-04-connection.png)
 
--   Click `Save` to create the server
+- Click `Save` to create the server
 
--   Right click on the newly created server `LambdaSchoolLocal`, Goto Create >, Select Database…
+- Right click on the newly created server `LambdaSchoolLocal`, Goto Create >, Select Database…
 
-    -   On the General table, in the Database field, enter `guiLambdaSchool`
-    -   Click `Save` to create the database
+  - On the General table, in the Database field, enter `guiLambdaSchool`
+  - Click `Save` to create the database
 
-    ![Create Database](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-05-create.png)
+  ![Create Database](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-05-create.png)
 
--   To see the databases in the LambdaSchoolLocal Server
+- To see the databases in the LambdaSchoolLocal Server
 
-    -   Make sure LambdaSchoolLocal is expanded
-    -   Expand Databases. Your list will vary.
+  - Make sure LambdaSchoolLocal is expanded
+  - Expand Databases. Your list will vary.
 
-    ![List Databases](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-06-database-list.png)
+  ![List Databases](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-06-database-list.png)
 
--   To create a table
+- To create a table
 
-    -   Expand guidLambdaSchool under Databases
-        -   Expand Schemas
-            -   You will have just one Schema called Public
-            -   Right Click on Tables, Select Create >, click on Table
-            -   Give the table the name `humans`
+  - Expand guidLambdaSchool under Databases
+    - Expand Schemas
+      - You will have just one Schema called Public
+      - Right Click on Tables, Select Create >, click on Table
+      - Give the table the name `humans`
 
-    ![Naming Database](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-07-table.png)
+  ![Naming Database](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-07-table.png)
 
-    -   Select the Columns Tab
-        -   Enter the column information for each column.
-            -   To begin entering the column info, add a new column by clicking on the + sign
-            -   To edit the column info
-                -   Click in the text box under name and enter `id`
-                -   From the data type, select `integer`
-                -   Say yes this is the primary key
-            -   Add another new column by clicking on the + sign
-            -   To edit the column info
-                -   Click in the text box under name and enter `name`
-                -   From the data type, select `character varying[]`
-                -   Under Length enter `50`
-            -   Click `Save` when done
+  - Select the Columns Tab
+    - Enter the column information for each column.
+      - To begin entering the column info, add a new column by clicking on the + sign
+      - To edit the column info
+        - Click in the text box under name and enter `id`
+        - From the data type, select `integer`
+        - Say yes this is the primary key
+      - Add another new column by clicking on the + sign
+      - To edit the column info
+        - Click in the text box under name and enter `name`
+        - From the data type, select `character varying[]`
+        - Under Length enter `50`
+      - Click `Save` when done
 
-    ![Humans Columns](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-08-humans-columns.png)
+  ![Humans Columns](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-08-humans-columns.png)
 
-    -   Following the same steps as above, Let’s create another table called pets
-        -   DO NOT CLICK `Save` yet!!!
-        -   Enter the following column information:
+  - Following the same steps as above, Let’s create another table called pets
 
-        <table><thead><tr class="header"><th>Name</th><th>Data type</th><th>Length</th><th>Precision</th><th>Not NULL?</th><th>Primary key?</th></tr></thead><tbody><tr class="odd"><td>id</td><td>integer</td><td> </td><td> </td><td>NO</td><td>Yes</td></tr><tr class="even"><td>name</td><td>character varying[]</td><td>50</td><td> </td><td>Yes</td><td>NO</td></tr><tr class="odd"><td>age</td><td>integer</td><td> </td><td> </td><td>NO</td><td>NO</td></tr><tr class="even"><td>humanoid</td><td>integer</td><td> </td><td> </td><td>Yes</td><td>NO</td></tr></tbody></table>
+    - DO NOT CLICK `Save` yet!!!
+    - Enter the following column information:
 
-    ![Pets Columns](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-09-pets-columns.png)
+    <table><thead><tr class="header"><th>Name</th><th>Data type</th><th>Length</th><th>Precision</th><th>Not NULL?</th><th>Primary key?</th></tr></thead><tbody><tr class="odd"><td>id</td><td>integer</td><td> </td><td> </td><td>NO</td><td>Yes</td></tr><tr class="even"><td>name</td><td>character varying[]</td><td>50</td><td> </td><td>Yes</td><td>NO</td></tr><tr class="odd"><td>age</td><td>integer</td><td> </td><td> </td><td>NO</td><td>NO</td></tr><tr class="even"><td>humanoid</td><td>integer</td><td> </td><td> </td><td>Yes</td><td>NO</td></tr></tbody></table>
 
-    -   Select the Constraints Tab
-        -   Select the `Foreign Key` tab
-            -   Add a new constraint by click on the + sign
-                -   Now click on the edit icon ![edit icon](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/editicon.jpg) to add the necessary info
-                -   Give it a name of `human_fk`
-                -   Follow the GIF below to enter the remaining information
-                    -   Name: human\_fk
-                    -   Columns
-                        -   Local column: `id`
-                        -   References: `public_humans`
-                        -   Referencing: `id`
-                -   After setting up the constraint, don’t forget to click on the + sign to actually add the constraint!
+  ![Pets Columns](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-09-pets-columns.png)
 
-    ![Foreign Key Details](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-10-fk.gif)
+  - Select the Constraints Tab
+    - Select the `Foreign Key` tab
+      - Add a new constraint by click on the + sign
+        - Now click on the edit icon ![edit icon](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/editicon.jpg) to add the necessary info
+        - Give it a name of `human_fk`
+        - Follow the GIF below to enter the remaining information
+          - Name: human_fk
+          - Columns
+            - Local column: `id`
+            - References: `public_humans`
+            - Referencing: `id`
+        - After setting up the constraint, don’t forget to click on the + sign to actually add the constraint!
 
-    -   And finally, enter the unique constraints by selecting the constraints tab
-        -   Select the `Unique` tab
-            -   Add a new constraint by click on the + sign
-                -   Now click on the edit icon ![edit icon](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/editicon.jpg) to add the necessary info
-                -   Give it a name of `name_unique`
-                -   Follow the GIF below to enter the remaining information
-                    -   Definitions -> Columns: `name`
+  ![Foreign Key Details](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-10-fk.gif)
 
-    ![Foreign Key Details](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-11-unique.gif)
+  - And finally, enter the unique constraints by selecting the constraints tab
+    - Select the `Unique` tab
+      - Add a new constraint by click on the + sign
+        - Now click on the edit icon ![edit icon](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/editicon.jpg) to add the necessary info
+        - Give it a name of `name_unique`
+        - Follow the GIF below to enter the remaining information
+          - Definitions -> Columns: `name`
 
-    -   Now both tables are created. To modify the tables:
-        -   Right click on the table name
-        -   Select `Properties...` from the pop-up menu
-        -   You are now back at the standard windows you used to create the tables!
-    -   To query a database using pgAdmin, you use the Query Tool.
-        -   To access the Query Tool, have selected a database to query.
-            -   Then go to the dropdown menu `Tools -> Query Tool`
-            -   Alternatively you can click on the lightning bolt ![lightning bolt icon](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/lightning-bolt-icon.png) icon
-        -   Either way you get the following screen
-        -   SQL is entered in the large text box!
+  ![Foreign Key Details](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-11-unique.gif)
 
-    ![SQL Query](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-12-sql.png)
+  - Now both tables are created. To modify the tables:
+    - Right click on the table name
+    - Select `Properties...` from the pop-up menu
+    - You are now back at the standard windows you used to create the tables!
+  - To query a database using pgAdmin, you use the Query Tool.
+    - To access the Query Tool, have selected a database to query.
+      - Then go to the dropdown menu `Tools -> Query Tool`
+      - Alternatively you can click on the lightning bolt ![lightning bolt icon](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/lightning-bolt-icon.png) icon
+    - Either way you get the following screen
+    - SQL is entered in the large text box!
 
-------------------------------------------------------------------------
+  ![SQL Query](https://lambdaschool.github.io/java-curriculum-assets/Sprint%2011%20-%20Java%20with%20RDBMS%20and%20API%20Intros/Module%201%20-%20JX%20Java%20-%20RDBMS%20and%20SQL%20Basics/assets/pgAdmin-12-sql.png)
+
+---
 
 #### Learn to explain data normalization and normal forms while normalizing data to the 3rd Normal Form (3NF)
 
@@ -1470,21 +1465,21 @@ How to design your database is an important concept. Usually, we are given a “
 
 The goals of data normalization are to:
 
--   Protect data both through security and integrity
-    -   Putting like data in a table allows you to give access to that table only without having to share all the data.
--   Eliminate redundancy
-    -   Redundant data consumes extra space and takes extra time to retrieve
-    -   With redundant, duplicated, data if the copies do not match how do you know which version is correct?
--   Eliminate inconsistent dependencies
-    -   Data should be found in appropriate tables
-        -   Don’t put employees’ salaries in customer tables
-    -   Data should be easy to find
--   Minimize redesign when expanding the data structures
+- Protect data both through security and integrity
+  - Putting like data in a table allows you to give access to that table only without having to share all the data.
+- Eliminate redundancy
+  - Redundant data consumes extra space and takes extra time to retrieve
+  - With redundant, duplicated, data if the copies do not match how do you know which version is correct?
+- Eliminate inconsistent dependencies
+  - Data should be found in appropriate tables
+    - Don’t put employees’ salaries in customer tables
+  - Data should be easy to find
+- Minimize redesign when expanding the data structures
 
 To normalize data, that is to take the blob of data we are given and convert to something useful, we work the data into a series of “normal forms”. Depending on who you ask, there are 5 or more normal forms. In practice, though, almost all databases stop at the third normal form, often written as 3NF. Let’s take a blob of data and run it through the normal forms, discussing the goal of each normal form along the way.
 
--   UNF (unnormalized form)
-    -   This is our blob of data
+- UNF (unnormalized form)
+  - This is our blob of data
 
 ### Original Data Table
 
@@ -1492,11 +1487,11 @@ To normalize data, that is to take the blob of data we are given and convert to 
 
 Supervisor | Full Name | location | |—————–|———-| | Amy Found | condo | | BarnBarn Rabbit | hutch |
 
--   1NF (first normal form)
-    -   Goals include
-        -   Eliminating repeating groups in individual tables
-            -   No Title1, Title2, Title3
-        -   Identify set of related data with a primary key
+- 1NF (first normal form)
+  - Goals include
+    - Eliminating repeating groups in individual tables
+      - No Title1, Title2, Title3
+    - Identify set of related data with a primary key
 
 ### 1NF - Email broken into separate rows
 
@@ -1512,11 +1507,11 @@ Supervisor
 
 <table><thead><tr class="header"><th>Supervisor Id</th><th>Full Name</th><th>location</th></tr></thead><tbody><tr class="odd"><td>1</td><td>Amy Found</td><td>condo</td></tr><tr class="even"><td>2</td><td>BarnBarn Rabbit</td><td>hutch</td></tr></tbody></table>
 
--   2NF (second normal form)
--   Separate tables for set of values that apply to multiple records
-    -   Do not store address for a person in customers, orders, shipping, etc.
--   Use a foreign key to reference that data
-    -   Store data once. Use keys to reference the data
+- 2NF (second normal form)
+- Separate tables for set of values that apply to multiple records
+  - Do not store address for a person in customers, orders, shipping, etc.
+- Use a foreign key to reference that data
+  - Store data once. Use keys to reference the data
 
 ### 2NF - Company Tax Id is moved to company table with a join table
 
@@ -1540,11 +1535,11 @@ Supervisor
 
 <table><thead><tr class="header"><th>Supervisor Id</th><th>Full Name</th><th>location</th></tr></thead><tbody><tr class="odd"><td>1</td><td>Amy Found</td><td>condo</td></tr><tr class="even"><td>2</td><td>BarnBarn Rabbit</td><td>hutch</td></tr></tbody></table>
 
--   3NF (third normal form)
+- 3NF (third normal form)
 
-    -   No derived fields
-    -   Eliminate fields that do not depend on the key
-    -   In an employees tables, do not store the name of departments. If a department has no employees, there is no where to store the department name. Store the department name in a separate table and use foreign keys to reference it.
+  - No derived fields
+  - Eliminate fields that do not depend on the key
+  - In an employees tables, do not store the name of departments. If a department has no employees, there is no where to store the department name. Store the department name in a separate table and use foreign keys to reference it.
 
 ### 3NF - Derived column Full Name is removed. Supervisor’s name is referenced
 
@@ -1570,18 +1565,18 @@ Supervisor
 
 ##### Dig Deeper
 
--   [The Basic](https://support.microsoft.com/en-us/help/283878/description-of-the-database-normalization-basics)  
-    Description of the database normalization basics
--   [DB Youtube Channel](https://www.youtube.com/user/dicomgreen)  
-    YouTube channel on Database Design
--   [DB Youtube Channel Specific Video](https://youtu.be/ZBgXb66Ckz0)  
-    Logical Logical Database Design and E-R Diagrams
--   [DB Youtube Channel Specific Video](https://youtu.be/SnZDfD8AVkw)  
-    Physical Database Design
--   [On-Line DB Design Tool](https://www.dbdesigner.net/)  
-    Good On-line design tool to help with Data Normalization
+- [The Basic](https://support.microsoft.com/en-us/help/283878/description-of-the-database-normalization-basics)  
+  Description of the database normalization basics
+- [DB Youtube Channel](https://www.youtube.com/user/dicomgreen)  
+  YouTube channel on Database Design
+- [DB Youtube Channel Specific Video](https://youtu.be/ZBgXb66Ckz0)  
+  Logical Logical Database Design and E-R Diagrams
+- [DB Youtube Channel Specific Video](https://youtu.be/SnZDfD8AVkw)  
+  Physical Database Design
+- [On-Line DB Design Tool](https://www.dbdesigner.net/)  
+  Good On-line design tool to help with Data Normalization
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#guided-project" id="guided-project" class="anchor"><span class="octicon octicon-link"></span></a>Guided Project
 
@@ -1591,13 +1586,13 @@ An introduction to RDBMS and SQL using the Northwind.db database and PostgreSQL
 
 [GitHub Repo](https://github.com/LambdaSchool/java-rdbms.git)
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Java SQL](https://github.com/LambdaSchool/java-sql.git)
+- ##### [Java SQL](https://github.com/LambdaSchool/java-sql.git)
 
-    Answer the following data queries. Keep track of the SQL you write by pasting it into this document under its appropriate header below. You will be submitting that through the regular fork, change, pull process.
+  Answer the following data queries. Keep track of the SQL you write by pasting it into this document under its appropriate header below. You will be submitting that through the regular fork, change, pull process.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -1605,12 +1600,12 @@ An introduction to RDBMS and SQL using the Northwind.db database and PostgreSQL
 
 You can use class recordings to help you master the material.
 
--   **[RDBMS for WEB32 with John Mitchell](https://youtu.be/olmywDuo93I)**
--   [All previous recordings](/archive/WEB4Java/module/recyJ663TrxVgpqY9)
+- **[RDBMS for WEB32 with John Mitchell](https://youtu.be/olmywDuo93I)**
+- [All previous recordings](/archive/WEB4Java/module/recyJ663TrxVgpqY9)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Guided Project: java-rdbms
--   Project: Java SQL
+- Guided Project: java-rdbms
+- Project: Java SQL

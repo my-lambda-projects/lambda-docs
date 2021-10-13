@@ -1,5 +1,3 @@
-
-
 <a href="#content" id="skippy" class="sr-only sr-only-focusable"></a>
 
 <span class="skiplink-text">Skip to main content</span>
@@ -12,24 +10,24 @@
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
@@ -39,31 +37,31 @@
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Advanced Array Methods
 
@@ -73,8 +71,8 @@ This module will give you practice with advanced array methods such as `.map`, `
 
 **At the end of this module, you should be able to:**
 
--   demonstrate the proper use a of a callback function by passing a function to another function as a parameter
--   demonstrate ability to use \`.map\` \`.reduce\` \`.filter\` and describe their use cases
+- demonstrate the proper use a of a callback function by passing a function to another function as a parameter
+- demonstrate ability to use \`.map\` \`.reduce\` \`.filter\` and describe their use cases
 
 #### Pro Tip
 
@@ -86,17 +84,13 @@ Strunk and White
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=zIRN-Gn8phU), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=zIRN-Gn8phU), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=YNubYbAhtys), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=YNubYbAhtys), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -214,10 +208,10 @@ Complete the following exercises included here in this JSBin [Callbacks](http://
 
 ##### Dig Deeper
 
--   [What the heck is a callback?](https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced)  
-    Further instruction on callbacks
+- [What the heck is a callback?](https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced)  
+  Further instruction on callbacks
 
-------------------------------------------------------------------------
+---
 
 #### Learn to demonstrate ability to use \`.map\` \`.reduce\` \`.filter\` and describe their use cases
 
@@ -265,9 +259,9 @@ That works! It’s a simple solution, and simplicity is the gold standard for pr
 
 The map function can also take in a callback that passes back a couple of things to us. The three things you’d get back from a callback passed to Map would be:
 
--   The current item of the array `state`
--   The current index of the current item `index`
--   The entire array `data`
+- The current item of the array `state`
+- The current index of the current item `index`
+- The entire array `data`
 
 In the example below, the value given in the callback is `state` since task 1 asks us to look at state data.
 
@@ -288,7 +282,7 @@ What if we only want to see states who’s `population is greater than` 650,000?
 
 Now, we can use `.filter` to iterate over all items in the array and return only what we want. This is useful anytime we need a subset of a larger group of data.
 
-*Filter takes exactly the same arguments as .map, namely: value, index, and array.*
+_Filter takes exactly the same arguments as .map, namely: value, index, and array._
 
     const filterLargeStates = data.filter((state) => {
       return state.population >= 650000;
@@ -317,16 +311,16 @@ This is more succinct, but a lot is going on here. Importantly, we pass `0` as a
 
 ![Screen Shot 2019-12-03 at 11.34.39 AM](https://i.imgur.com/ju1Ooqu.png)
 
-*Note, the function will run without the `0` pictured above, but will default to starting accumulation at the first number in the array, which often doesn’t make sense*
+_Note, the function will run without the `0` pictured above, but will default to starting accumulation at the first number in the array, which often doesn’t make sense_
 
 The four items that get passed back from our callback function when using `.reduce` are:
 
--   The current value of the total aggregated value.
--   We set the initial value at the end of the function. In this case, we set it to 0.
-    -   This could be any value, though.
--   The current item in the array.
--   The index again.
--   The full array.
+- The current value of the total aggregated value.
+- We set the initial value at the end of the function. In this case, we set it to 0.
+  - This could be any value, though.
+- The current item in the array.
+- The index again.
+- The full array.
 
 To sum up. These functions are fantastic and allow us to write clean, reusable code in a functional programming style. They give us the power to represent our data in an enjoyable way. As you get more and more used to using these functions, you’ll get the ability to use them in very complex situations that will eventually save your bacon. For now, let’s go practice. Check out the challenge on JSBin. Go play around and see if you can create some new data sets out of the provided data.
 
@@ -349,18 +343,18 @@ The callback function here is what’s enclosed in the `return` function. `state
       return {'state': state.state, 'population': state.population};
     });
 
-1.  Use `.filter` to create an array of states who’s land\_area is larger than 50 units. Just like with map, we use arrow function syntax to dictate a `return`. Similarly, `state` is the value, or element(s) that will be processed.
+1.  Use `.filter` to create an array of states who’s land_area is larger than 50 units. Just like with map, we use arrow function syntax to dictate a `return`. Similarly, `state` is the value, or element(s) that will be processed.
 
     const filterLandArea = data.filter((state) => {
-      return state.land_area >= 50;
+    return state.land_area >= 50;
     });
 
-1.  Use `.reduce` to create an array of the states land\_area reduced to the `mean average` of all the state’s combined.This example uses similar parameters, only adds the counter `total` to accumulate the sum.
+1.  Use `.reduce` to create an array of the states land_area reduced to the `mean average` of all the state’s combined.This example uses similar parameters, only adds the counter `total` to accumulate the sum.
 
     const landAreaAverage = data.reduce((total, state) => {
-      let sum = total + state.land_area;
-      console.log(sum, total, state);
-      return sum;
+    let sum = total + state.land_area;
+    console.log(sum, total, state);
+    return sum;
     }, 0);
     const average = landAreaAverage / data.length;
 
@@ -372,18 +366,18 @@ Complete the following exercises using `.map`, `.filter`, `.reduce`.
 
 ##### Dig Deeper
 
--   [Functional Programming in JavaScript](https://opensource.com/article/17/6/functional-javascript)  
-    An in depth guide covering the functional programming paradigm in JavaScript.
--   [.map() .reduce() .filter()](https://hackernoon.com/understanding-map-filter-and-reduce-in-javascript-5df1c7eee464)  
-    A beautiful description of these methods and their uses
+- [Functional Programming in JavaScript](https://opensource.com/article/17/6/functional-javascript)  
+  An in depth guide covering the functional programming paradigm in JavaScript.
+- [.map() .reduce() .filter()](https://hackernoon.com/understanding-map-filter-and-reduce-in-javascript-5df1c7eee464)  
+  A beautiful description of these methods and their uses
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [FIFA Challenge](https://github.com/LambdaSchool/Array-Methods-and-Callbacks)
+- ##### [FIFA Challenge](https://github.com/LambdaSchool/Array-Methods-and-Callbacks)
 
-    In this challenge you will work with a data set summarizing every world cup game from 1930-2014. You will use advanced array methods and callbacks to dig up interesting statistics about these games.
+  In this challenge you will work with a data set summarizing every world cup game from 1930-2014. You will use advanced array methods and callbacks to dig up interesting statistics about these games.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -391,24 +385,24 @@ Complete the following exercises using `.map`, `.filter`, `.reduce`.
 
 You can use class recordings to help you master the material.
 
--   **[Advanced Array Methods for WebPT22 w/Nathan Braun](https://youtu.be/LHSA_c-RfGQ)**
+- **[Advanced Array Methods for WebPT22 w/Nathan Braun](https://youtu.be/LHSA_c-RfGQ)**
 
-    This module will give you practice with advanced array methods such as .map, .filter, and .reduce and introduce you to the idea of callbacks. Both advanced array methods and callbacks will make it easier to interact with large data sets, like we started in the last sprint. As you progress in your journey as a web developer, these will likely become some of your favorite tools for both displaying data, and dealing with user data.
+  This module will give you practice with advanced array methods such as .map, .filter, and .reduce and introduce you to the idea of callbacks. Both advanced array methods and callbacks will make it easier to interact with large data sets, like we started in the last sprint. As you progress in your journey as a web developer, these will likely become some of your favorite tools for both displaying data, and dealing with user data.
 
--   [All previous recordings](/archive/WEB1/module/recNilLQDqhqvPuNk)
+- [All previous recordings](/archive/WEB1/module/recNilLQDqhqvPuNk)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Complete the following exercises included here in this JSBin [Callbacks](http://jsbin.com/sadikid/edit?js,console).
+  Complete the following exercises included here in this JSBin [Callbacks](http://jsbin.com/sadikid/edit?js,console).
 
--   Objective challenge:
+- Objective challenge:
 
-    Complete the following exercises using `.map`, `.filter`, `.reduce`.
+  Complete the following exercises using `.map`, `.filter`, `.reduce`.
 
-    [Code found here](http://jsbin.com/wolayeb/edit?js,console)
+  [Code found here](http://jsbin.com/wolayeb/edit?js,console)
 
--   Project: FIFA Challenge
+- Project: FIFA Challenge

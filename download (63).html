@@ -1,545 +1,1093 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Intended as a home for Lambda School curriculum.">
-<meta name="author" content="">
-<meta name="generator" content="Jekyll v3.8.0">
-<title>Java - User Authentication · Lambda School</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Intended as a home for Lambda School curriculum."
+    />
+    <meta name="author" content="" />
+    <meta name="generator" content="Jekyll v3.8.0" />
+    <title>Java - User Authentication · Lambda School</title>
 
-<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+    <link
+      rel="stylesheet"
+      integrity
+      crossorigin="anonymous"
+      href="https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css"
+    />
 
-<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+    <link
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css"
+    />
 
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css"
+    />
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
-  ga('send', 'pageview');
-</script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-122016605-1", "learn.lambdaschool.com");
+      ga("send", "pageview");
+    </script>
 
+    <link
+      rel="apple-touch-icon"
+      href="/assets/img/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/assets/img/favicons/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicons/safari-pinned-tab.svg"
+      color="#a0001e"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="msapplication-config"
+      content="/assets/img/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#a0001e" />
+  </head>
+  <body>
+    <noscript>Please enable JavaScript to view this page.</noscript>
+    <div id="redirect-message" style="display: none">
+      You must be logged in to view this page.
+    </div>
+    <div id="unauthorized-message" style="display: none">
+      You must be a Lambda School student to view this page.
+    </div>
+    <div id="content-wrapper" style="visibility: hidden">
+      <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+          <span class="skiplink-text">Skip to main content</span>
+        </div>
+      </a>
+      <div class="mobile-menu">
+        <div class="m-drop">
+          <div class="mobile-row">
+            <div class="header-row" style="padding: 3px 7px">
+              <a class="navbar-brand" href="/" aria-label="Lambda School"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="35"
+                  viewBox="0 0 33 35"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                    fill="#EC3944"
+                  /></svg
+              ></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#mobile-course-menu"
+                aria-controls="mobile-course-menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="30"
+                  height="30"
+                  focusable="false"
+                >
+                  <title>Menu</title>
+                  <path
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    d="M4 7h22M4 15h22M4 23h22"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="nav-row">
+            <div class="results-container">
+              <ul id="results-container" class="dropdown list-group"></ul>
+            </div>
+            <div id="mobile-course-menu" class="collapse nav-row">
+              <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+                <nav class="bd-links">
+                  <div class="bd-toc-item">
+                    <h4 class="bd-toc-link">Web API: Java</h4>
+                  </div>
 
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web4java/sprint/recnLDyTtONLTMiFJ"
+                    >
+                      1.&nbsp;&nbsp;Java Precourse Information
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web4java/module/recfnUAvFbeyIAHib/">
+                          Welcome to Java Spring
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/recjH0lMflsFIVzDM/">
+                          Java Spring Course Table of Contents
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web4java/sprint/recoJ4ZqNQWX3cy6E"
+                    >
+                      2.&nbsp;&nbsp;Java Fundamentals
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web4java/module/recAGVTYNZyJbEFpu/">
+                          Java - JDK and Java Classes
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/rec6Hrk77HupYeoN5/">
+                          Java Interfaces, Abstract Classes, Lambda Expression
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/recyJ663TrxVgpqY9/">
+                          Java - RDBMS and SQL Basics
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/recqtftA9E98qpbak/">
+                          Java - Intro to Maven, Spring, and Tomcat Using REST
+                          API
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web4java/sprint/recRVUSWQEtosl0Cz"
+                    >
+                      3.&nbsp;&nbsp;RDBMS and Intro to APIs
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web4java/module/recb0OVmRrJzqhH4D/">
+                          Java - Spring Database Creation Including Seed Data
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/rec3THcdjv8BumGCt/">
+                          Java - Read Data using CRUD Operations
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/recJihkiNn2KH2nEW/">
+                          Java - Inserting Deleting and Updating Data using CRUD
+                          Operations
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/rec2oQCFWOVShtxIx/">
+                          Java - Data Modeling and Auditing Fields with custom
+                          querying
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web4java/sprint/recSqm5AAEkJcIl3p"
+                    >
+                      4.&nbsp;&nbsp;Java Frameworks
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/web4java/module/rec3E1WYDyoiEF1e3/">
+                          Java - Exception Handling
+                        </a>
+                      </li>
+                      <li class="active bd-sidenav-active">
+                        <a href="/web4java/module/rececDV2OMIUcY2eH/">
+                          Java - User Authentication
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/recDboXln5wm4aKJt/">
+                          Java - Automated Testing
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/web4java/module/rec7pCiBPzI4DkAJT/">
+                          Java - Java Deployment and Best Practices
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/web4java/sprint/recC5dhR9menaROwx"
+                    >
+                      5.&nbsp;&nbsp;WEB Unit 4 Java Build
+                    </a>
+                    <ul class="nav bd-sidenav"></ul>
+                  </div>
+                  <hr />
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="sidebar-container bd-sidebar">
+          <div class="docs-sidebar">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"
+              ><svg
+                width="135"
+                height="35"
+                viewBox="0 0 756 197"
+                fill="#ec3944"
+              >
+                <g>
+                  <path
+                    d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"
+                  ></path>
+                  <path
+                    d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"
+                  ></path>
+                  <path
+                    d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"
+                  ></path>
+                  <path
+                    d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"
+                  ></path>
+                  <path
+                    d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"
+                  ></path>
+                  <path
+                    d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"
+                  ></path>
+                </g>
+                <path
+                  d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"
+                ></path></svg
+            ></a>
+            <ul id="results-container" class="dropdown list-group"></ul>
+            <nav class="bd-links collapse" id="bd-docs-nav">
+              <div class="bd-toc-item">
+                <h4 class="bd-toc-link">Web API: Java</h4>
+              </div>
 
-<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
-<link rel="icon" href="/favicon.ico">
-<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#a0001e">
-</head>
-<body>
-<noscript>Please enable JavaScript to view this page.</noscript>
-<div id="redirect-message" style="display: none;">
-You must be logged in to view this page.
-</div>
-<div id="unauthorized-message" style="display: none;">
-You must be a Lambda School student to view this page.
-</div>
-<div id="content-wrapper" style="visibility: hidden;">
-<a id="skippy" class="sr-only sr-only-focusable" href="#content">
-<div class="container">
-<span class="skiplink-text">Skip to main content</span>
-</div>
-</a>
-<div class="mobile-menu">
-<div class="m-drop">
-<div class="mobile-row">
-<div class="header-row" style="padding: 3px 7px">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
-</svg></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
-</button>
-</div>
-</div>
-<div class="nav-row">
-<div class="results-container">
-<ul id="results-container" class="dropdown list-group"></ul>
-</div>
-<div id="mobile-course-menu" class="collapse nav-row">
-<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
-<nav class="bd-links">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Web API: Java</h4>
-</div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/web4java/sprint/recnLDyTtONLTMiFJ"
+                >
+                  1.&nbsp;&nbsp;Java Precourse Information
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web4java/module/recfnUAvFbeyIAHib/">
+                      Welcome to Java Spring
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/recjH0lMflsFIVzDM/">
+                      Java Spring Course Table of Contents
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/web4java/sprint/recoJ4ZqNQWX3cy6E"
+                >
+                  2.&nbsp;&nbsp;Java Fundamentals
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web4java/module/recAGVTYNZyJbEFpu/">
+                      Java - JDK and Java Classes
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/rec6Hrk77HupYeoN5/">
+                      Java Interfaces, Abstract Classes, Lambda Expression
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/recyJ663TrxVgpqY9/">
+                      Java - RDBMS and SQL Basics
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/recqtftA9E98qpbak/">
+                      Java - Intro to Maven, Spring, and Tomcat Using REST API
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/web4java/sprint/recRVUSWQEtosl0Cz"
+                >
+                  3.&nbsp;&nbsp;RDBMS and Intro to APIs
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web4java/module/recb0OVmRrJzqhH4D/">
+                      Java - Spring Database Creation Including Seed Data
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/rec3THcdjv8BumGCt/">
+                      Java - Read Data using CRUD Operations
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/recJihkiNn2KH2nEW/">
+                      Java - Inserting Deleting and Updating Data using CRUD
+                      Operations
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/rec2oQCFWOVShtxIx/">
+                      Java - Data Modeling and Auditing Fields with custom
+                      querying
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/web4java/sprint/recSqm5AAEkJcIl3p"
+                >
+                  4.&nbsp;&nbsp;Java Frameworks
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/web4java/module/rec3E1WYDyoiEF1e3/">
+                      Java - Exception Handling
+                    </a>
+                  </li>
+                  <li class="active bd-sidenav-active">
+                    <a href="/web4java/module/rececDV2OMIUcY2eH/">
+                      Java - User Authentication
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/recDboXln5wm4aKJt/">
+                      Java - Automated Testing
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/web4java/module/rec7pCiBPzI4DkAJT/">
+                      Java - Java Deployment and Best Practices
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/web4java/sprint/recC5dhR9menaROwx"
+                >
+                  5.&nbsp;&nbsp;WEB Unit 4 Java Build
+                </a>
+                <ul class="nav bd-sidenav"></ul>
+              </div>
+              <hr />
+            </nav>
+          </div>
+        </div>
+        <main class="content-container flex-wrapper" role="main">
+          <div class="sticky-nav">
+            <div class="sprint-nav">
+              <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+                <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+                <li class="toc-entry toc-h2">
+                  <a href="#guided-project">Guided Project</a>
+                </li>
+                <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+                <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="wrapper limit-width">
+            <div class="flex-wrapper">
+              <div class="limit-width">
+                <div class="jumbotron">
+                  <h1 class="bd-title" id="content">
+                    Java - User Authentication
+                  </h1>
+                  <span class="lead">
+                    <p class="bd-lead"></p>
+                    <style>
+                      table {
+                        font-family: arial, sans-serif;
+                        border-collapse: collapse;
+                        width: 100%;
+                      }
 
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recnLDyTtONLTMiFJ">
-1.&nbsp;&nbsp;Java Precourse Information
-</a>
-<ul class="nav bd-sidenav">
+                      td,
+                      th {
+                        border: 1px solid #dddddd;
+                        text-align: left;
+                        padding: 8px;
+                      }
 
-<li>
-<a href="/web4java/module/recfnUAvFbeyIAHib/">
-Welcome to Java Spring
-</a>
-</li>
-<li>
-<a href="/web4java/module/recjH0lMflsFIVzDM/">
-Java Spring Course Table of Contents
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recoJ4ZqNQWX3cy6E">
-2.&nbsp;&nbsp;Java Fundamentals
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/web4java/module/recAGVTYNZyJbEFpu/">
-Java - JDK and Java Classes
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec6Hrk77HupYeoN5/">
-Java Interfaces, Abstract Classes, Lambda Expression
-</a>
-</li>
-<li>
-<a href="/web4java/module/recyJ663TrxVgpqY9/">
-Java - RDBMS and SQL Basics
-</a>
-</li>
-<li>
-<a href="/web4java/module/recqtftA9E98qpbak/">
-Java - Intro to Maven, Spring, and Tomcat Using REST API
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recRVUSWQEtosl0Cz">
-3.&nbsp;&nbsp;RDBMS and Intro to APIs
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/web4java/module/recb0OVmRrJzqhH4D/">
-Java - Spring Database Creation Including Seed Data
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec3THcdjv8BumGCt/">
-Java - Read Data using CRUD Operations
-</a>
-</li>
-<li>
-<a href="/web4java/module/recJihkiNn2KH2nEW/">
-Java - Inserting Deleting and Updating Data using CRUD Operations
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec2oQCFWOVShtxIx/">
-Java - Data Modeling and Auditing Fields with custom querying
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recSqm5AAEkJcIl3p">
-4.&nbsp;&nbsp;Java Frameworks
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/web4java/module/rec3E1WYDyoiEF1e3/">
-Java - Exception Handling
-</a>
-</li>
-<li class="active bd-sidenav-active">
-<a href="/web4java/module/rececDV2OMIUcY2eH/">
-Java - User Authentication
-</a>
-</li>
-<li>
-<a href="/web4java/module/recDboXln5wm4aKJt/">
-Java - Automated Testing
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec7pCiBPzI4DkAJT/">
-Java - Java Deployment and Best Practices
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recC5dhR9menaROwx">
-5.&nbsp;&nbsp;WEB Unit 4 Java Build
-</a>
-<ul class="nav bd-sidenav">
-
-</ul>
-</div>
-<hr>
-</nav>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="main-container">
-<div class="sidebar-container bd-sidebar">
-<div class="docs-sidebar">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
-<ul id="results-container" class="dropdown list-group"></ul>
-<nav class="bd-links collapse" id="bd-docs-nav">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Web API: Java</h4>
-</div>
-
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recnLDyTtONLTMiFJ">
-1.&nbsp;&nbsp;Java Precourse Information
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/web4java/module/recfnUAvFbeyIAHib/">
-Welcome to Java Spring
-</a>
-</li>
-<li>
-<a href="/web4java/module/recjH0lMflsFIVzDM/">
-Java Spring Course Table of Contents
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recoJ4ZqNQWX3cy6E">
-2.&nbsp;&nbsp;Java Fundamentals
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/web4java/module/recAGVTYNZyJbEFpu/">
-Java - JDK and Java Classes
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec6Hrk77HupYeoN5/">
-Java Interfaces, Abstract Classes, Lambda Expression
-</a>
-</li>
-<li>
-<a href="/web4java/module/recyJ663TrxVgpqY9/">
-Java - RDBMS and SQL Basics
-</a>
-</li>
-<li>
-<a href="/web4java/module/recqtftA9E98qpbak/">
-Java - Intro to Maven, Spring, and Tomcat Using REST API
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recRVUSWQEtosl0Cz">
- 3.&nbsp;&nbsp;RDBMS and Intro to APIs
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/web4java/module/recb0OVmRrJzqhH4D/">
-Java - Spring Database Creation Including Seed Data
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec3THcdjv8BumGCt/">
-Java - Read Data using CRUD Operations
-</a>
-</li>
-<li>
-<a href="/web4java/module/recJihkiNn2KH2nEW/">
-Java - Inserting Deleting and Updating Data using CRUD Operations
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec2oQCFWOVShtxIx/">
-Java - Data Modeling and Auditing Fields with custom querying
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recSqm5AAEkJcIl3p">
-4.&nbsp;&nbsp;Java Frameworks
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/web4java/module/rec3E1WYDyoiEF1e3/">
-Java - Exception Handling
-</a>
-</li>
-<li class="active bd-sidenav-active">
-<a href="/web4java/module/rececDV2OMIUcY2eH/">
-Java - User Authentication
-</a>
-</li>
-<li>
-<a href="/web4java/module/recDboXln5wm4aKJt/">
-Java - Automated Testing
-</a>
-</li>
-<li>
-<a href="/web4java/module/rec7pCiBPzI4DkAJT/">
-Java - Java Deployment and Best Practices
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4java/sprint/recC5dhR9menaROwx">
-5.&nbsp;&nbsp;WEB Unit 4 Java Build
-</a>
-<ul class="nav bd-sidenav">
-
-</ul>
-</div>
-<hr>
-</nav>
-</div>
-</div>
-<main class="content-container flex-wrapper" role="main">
-<div class="sticky-nav">
-<div class="sprint-nav">
-<ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
-<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
-<li class="toc-entry toc-h2"><a href="#guided-project">Guided Project</a></li>
-<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
-<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
-</ul>
-</div>
-
-</div>
-<div class="wrapper limit-width">
-<div class="flex-wrapper">
-<div class="limit-width">
-<div class="jumbotron">
-<h1 class="bd-title" id="content">Java - User Authentication</h1>
-<span class="lead">
-<p class="bd-lead"></p>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
-<p><a id="User_Authentication"></a></p>
-</span>
-<strong>At the end of this module, you should be able to:</strong>
-<ul>
-<li>understand the flow and implement of Spring Security and OAuth2 to provide authentication for a project</li>
-<li>read user information from the access token</li>
-<li>understand the issues related to CORS and implement solutions to those issues</li>
-<li>understand how to implement a new user and logout endpoints</li>
-<li>use Postman to manually test Web APIs using Authentication</li>
-</ul>
-</div>
-<div class="alert alert-warning" role="alert">
-<h4>Pro Tip</h4>
-<p>Be on time. It’s a mark of respect not to keep others waiting.</p>
-</div>
-<h2 class="display-4">
-<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
-<p class="lead">Review each preclass resource before class.</p>
-<div class="preclass">
-<ul class="list-group list-group-flush">
-</ul>
-</div>
-<h2 class="display-4">
-<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
-<h4 class="mark mb-3 p-2">Learn to understand the flow and implement of Spring Security and OAuth2 to provide authentication for a project</h4>
-<p><a id="OAuth2_Security"></a></p>
-<h5>Overview</h5>
-<ul>
-<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-safesampleemps.git">https://github.com/LambdaSchool/java-safesampleemps.git</a> for the code used in the objective.</li>
-</ul>
-<h3 id="software-needed">Software Needed</h3>
-<ul>
-<li>Java Development Kit (JDK) - at least version 11</li>
-<li>JetBrains IntelliJ IDEA IDE</li>
-<li>Postman</li>
-</ul>
-<p>You will also need the following environment variables set on your machine</p>
-<ul>
-<li>OAUTHCLIENTID = lambda-client</li>
-<li>OAUTHCLIENTSECRET = lambda-secret</li>
-</ul>
-<h3 id="securing-our-apis">Securing our APIs</h3>
-<p>We now have these great API backend systems. We can provide data to our clients, we allow our clients to manipulate that data, and we can even provide our clients data from other systems. Chances are we do not want just anybody to change our data. We also might be working with sensitive data and should not allow everyone access to it. We need to restrict who can do what with our data. With the introduction of auditing fields, we also need to track who did what with our data. We need a way to identify who is the user accessing our system. Several different protocols exist to handle this common situation. One of the more popular ones, and the one used by default in the Spring Security module, is OAuth2.</p>
-<p><strong>OAuth2</strong> is an industry standard protocol for <strong>user authentication</strong>. User authentication is the verification of what human is accessing our system. Client applications request an access token from a backend API system. Gaining an access token allows a user to access projected resources, endpoints and allows the backend system to know who that user is without the user having to provide their username and password for each transaction. Gaining this access token is done through a two step process.</p>
-<ul>
-<li>Clients must be <strong>authorized</strong> to access the system using a client user name and password, called a client id and client secret in the OAuth2 protocol. This client id and client secret could be the same for all clients who want to access the backend API, or each client could receive their own id and secret. The ids and secrets are controlled by the backend system. The backend system must tell the client what client id and client secret to use!
-<ul>
-<li>Sometimes a client will send an authorization token instead of a client id and client secret. For our purposes, this authorization token is simply the client id and client secret combined and encoded using Base64 encoding.</li>
-</ul>
-</li>
-<li>After a client has been authorized, an individual user is <strong>authenticated</strong> to the system using a user name and password.</li>
-</ul>
-<p>These two steps are necessary but are usually combined into a single request from the client for an access token. After initially getting the access token, the client must send that token with each subsequent request. The access token can be used by the backend system to determine what user is accessing the system.</p>
-<p>In the OAuth2 framework, 4 Roles are identified.</p>
-<ul>
-<li>The <strong>client</strong>
-<ul>
-<li>Often called the frontend. This is the application that wishes to access our backend API server.</li>
-</ul>
-</li>
-<li>The <strong>Resource Server</strong>
-<ul>
-<li>This is our backend API server. It is the server that hosts the protected information.</li>
-</ul>
-</li>
-<li>The <strong>Authorization Server</strong>
-<ul>
-<li>This is the part of the backend application that grants access tokens. Access tokens are only granted after the client is authorized and the user is authenticated. When we think of using Google, Facebook, GitHub to logon to a system, what we mean is that we are using their authorization server to get an access token. Using these external systems is beyond the scope of this module. For now we be using our own Authorization Server.</li>
-</ul>
-</li>
-<li>The <strong>Resource Owner</strong>
-<ul>
-<li>Usually a person that grant access to a protected resource. Think something like a system admin.</li>
-</ul>
-</li>
-</ul>
-<h3 id="roles-in-our-code">Roles in our code</h3>
-<p>We will be using Spring Security to implement OAuth2. OAuth2 is the default, standard protocol implemented by Spring Security. That will make implementation easier. The implement is a series of boilerplate code that is customized to fit our applications. We will be using</p>
-<ul>
-<li>An <strong>AuthorizationServerConfig</strong> class that will serve the role of the Authorization Server. We use the <code class="highlighter-rouge">@EnableAuthorizationServer</code> annotation to set up a default authorization server and then customize it to fit our applications.</li>
-<li>A <strong>ResourceServerConfig</strong> class that will serve the role of the resource server. We use the <code class="highlighter-rouge">@EnableResourceServer</code> annotation to set up a default resource server and then customize it to fit our application. Most of our application is concerned with how to protect, display, and manipulate resources. So most of our application, including all that we have coded up until this point, can be considered part of the resource server.</li>
-<li>A <strong>SecurityConfig</strong> class that will serve as the main configuration class for our OAuth2 server. We use the <code class="highlighter-rouge">@EnableWebSecurity</code> annotation to say, yes we want to use web security and then we configure this web security to our own needs.</li>
-</ul>
-<p>Do note that often you will hear me refer to the OAuth2 process as authorization or authentication. This is not correct. Those are two different parts of the OAuth2 protocol. However, in the industry often the OAuth2 protocol is referred to as authorization or authentication.</p>
-<p>Before we code OAuth2 authentication, let’s look at how the access token flows through the system.</p>
-<h3 id="gaining-access">Gaining Access</h3>
-<p>In order to request an access token, our client needs to know the client id and client secret. These will be provided to the client by the backend administrator. It is OUR responsibility to give the frontend the client id and client secret. The frontend client does not get to choose what these are, we do. Commonly you will see these being hard to guess random characters, normally 32 character hex strings. Sometimes you will see the client id and client security provided as Base64 API access tokens. A client would use either the client id / client security combination or the API access token to get authorized to the system. They do NOT use both. Which one they use is often left to the client to decide. The format of combining the client id and client secret is to take the following and encode it using Base64:</p>
-<p>client id:client secret</p>
-<p>Client id: 6779ef20e75817d76902
-Client security: 9e51c1701e1a6f5cfb30780d94d38b8d
-API access token: Njc3OWVmMjBlNzU4MTdkNzY5MDI6OWU1MWMxNzAxZTFhNmY1Y2ZiMzA3ODBkOTRkMzhiOGQ=</p>
-<p>For our purposes we will use something easy to read. You may change these to anything you wish. Just make sure to inform your clients of the change! Note: for class purposes, let’s leave them as these defaults. This will make reviewing each other’s code much easier.</p>
-<p>Client id: lambda-client
-Client security: lambda-secret
-API access token: bGFtYmRhLWNsaWVudDpsYW1iZGEtc2VjcmV0</p>
-<h3 id="adding-a-new-user">Adding a new user</h3>
-<p>But before we can request access to the system, we need a user set up, you know, the one requesting access!</p>
-<p>Adding a new user is the same as adding any other record to our database. The one additional item is that the password has to be encrypted. Although not required, encrypting the password is definitely the preferred practice! We use an encryption algorithm called BCrypt. This is fairly standard in the industry.</p>
-<p>We say which algorithm we are going to use in the <code class="highlighter-rouge">SecurityConfig</code> class. This is where we setup the Bean for PasswordEncoder.</p>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-bcrypt.png" alt="Security Config PasswordEncoder"></p>
-<p>We then have to encrypt the password in the setter for the User password field.</p>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-user.png" alt="User Model Password Setter"></p>
-<h3 id="authorizing-the-client">Authorizing the client</h3>
-<p>The step in using the API Backend is to Authorize the client, the application wanting to use the API. The client has a special username and password needed to access the backend. They also have special names.</p>
-<ul>
-<li>username =&gt; client id</li>
-<li>password =&gt; client secret</li>
-</ul>
-<p>These are sent to the API backend via the Authorization header in a REST API request. They can either be sent as a username and password, or as is more common an API Key. The API Key is simply the string <code class="highlighter-rouge">client id:client secret</code> encoded using Base64.</p>
-<p>The AuthorizationServerConfig class is responsible for handling the Authorization of the client.</p>
-<ul>
-<li>In our case we list the client id and client secret directly in the AuthorizationServerConfig allowing for only one client id, client secret combination. Some systems provide access to multiple client ids but that is a more advanced topic.</li>
-<li>Note that the client secret is also encrypted using BCrypt, using our encode Bean from the SecurityConfig class.</li>
-<li>Other configurations happen in the AuthorizationServerConfig like how long a token is valid.</li>
-</ul>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-AuthServConfig.png" alt="AuthorizationServerConfig"></p>
-<ul>
-<li>We also set what the login endpoint from where a user, not to be confused with the client, gets their authentication token.
-<ul>
-<li>Client is the fontend system accessing the API Backend</li>
-<li>User is the person, usually, actually handling data from the Backend.</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-AuthServConfig-Login.png" alt="AuthorizationServerConfig Login"></p>
-<h3 id="authenticating-the-user">Authenticating the user</h3>
-<p>NOTE: In most REST API calls from a client, the Authorization and Authentication are handled in a single request. The client just sends the client id and client secret along with a username and password to the API Backend System. That API Backend System takes care of Authorizing the client and then Authenticated the user!</p>
-<p>Authenticating a user happens after the client is Authorized. The client must have access to the API Backend System via its client id and client secret before it can request an Authentication token for a user.</p>
-<p>The process of Authentication is taking a username and password and determining if that combination is a valid combination, represents a valid user, of the system. If the validity of the user is confirmed, the API Backend System returns to the client an Authentication Token. It is this token that will identify the user in future requests.</p>
-<p>That Authentication Token is store in the Token Store. You can think of a Token Store as a table in memory with columns contains data such as</p>
-<ul>
-<li>The Authentication Token</li>
-<li>The time the token is to expire</li>
-<li>The Authentication object of the user, the UserDetails Security Object which is essentially a cached copy of the user record only containing data necessary for security.</li>
-<li>The Token Store Bean is set up in the SecurityConfig class and configured as the Authentication Manager in the AuthorizationServerConfig</li>
-</ul>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-TokenStore-Bean.png" alt="TokenStore Bean"></p>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-AuthenticationManager.png" alt="AuthenticationManager"></p>
-<h3 id="using-the-authentication-token">Using the authentication token</h3>
-<p>Note that we restrict what user can do what with our data through <strong>user roles</strong>. Users get access to read, manipulate certain pieces of data by what role they are assigned. Role assignment are often done by type of user: admin, dataentry, user. Sometimes departments are added: systemadim, accountingadmin, hrdataentry, manufacturinguser. The name of the role can be anything but is usually something that makes sense to a human reading the role title. Role titles do get hard coded in our applications when we are restricting data to certain roles. So name roles carefully as changing the name of role is a BIG deal!</p>
-<p>Now we have an authentication token that identifies that this is a valid user and identifies which user it is. From this authentication token we can also identify what can access.</p>
-<p>To access a restricted endpoint, the client send an authentication token in the Authorization header.</p>
-<p>Spring Security Framework looks for that authentication token in the TokenStore</p>
-<ul>
-<li>
-<p>If Spring Security finds the token in the TokenStore</p>
-<ul>
-<li>Spring Security sees if the user associated with this token has access to the requested endpoint.
-<ul>
-<li>This is handled through the getAuthority method in the User model</li>
-<li>This method returns which “Authorities” the user has been granted. In our case, those authorities are equivalent to our roles.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-GrantAuthorities.png" alt="getAuthority"></p>
-<ul>
-<li>
-<p>If Spring Security does not find the token in the TokenStore, an unauthorized status is returned.</p>
-</li>
-<li>
-<p>To determine which roles has access to what endpoints, the first place to check is the ResourceServerConfig. This class determines which roles have access to which resources, or endpoints. The majority of your security configuration happens in this class.</p>
-</li>
-</ul>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-ResourceServerConfig.png" alt="ResourceServerConfig"></p>
-<ul>
-<li>You allow access to a resource using <code class="highlighter-rouge">.antMatchers</code>
-</li>
-<li>The parameter for <code class="highlighter-rouge">.antMatcher</code> is a regular expression stating which endpoints you want to restrict.</li>
-<li>The <code class="highlighter-rouge">.antMatchers</code> ends with a method
-<ul>
-<li>
-<code class="highlighter-rouge">.permitAll()</code> - allows access to all. No Authentication Token is necessary</li>
-<li>
-<code class="highlighter-rouge">.authenticated()</code> - allows access to all authenticated users. A valid authentication token is required.</li>
-<li>
-<code class="highlighter-rouge">.hasAnyRole()</code> - the parameter is a list of roles who have access to these endpoints.</li>
-</ul>
-</li>
-<li>You can further restrict your security access using a @PreAuthorize annotation in the Controller. This further restrict access to this endpoint to only the given roles. Note: you cannot expand access via this method only further restrict it.</li>
-</ul>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-PreAuthorization.png" alt="PreAuthorization"></p>
-<h5>Follow Along</h5>
-<p>Let’s add user authentication to our sample employees application. Start by opening the application safesampleemps-initial from the GitHub repository <a href="https://github.com/LambdaSchool/java-safesampleemps.git">https://github.com/LambdaSchool/java-safesampleemps.git</a>t. This application is the same as the ending application from the GitHub repository <a href="https://github.com/LambdaSchool/java-exceptionalsampleemps.git">https://github.com/LambdaSchool/java-exceptionalsampleemps.git</a>t. These are the employees we will make safe!</p>
-<p>Do note that the code we are adding is a minimal set of code to make user authentication possible. We purpose leave out all the code that allows us to manipulate the Users and their Roles. In a full production system, this code we are leaving out would be necessary! For explanation though that additional code would get in the way!</p>
-<p>Find the security-boilerplate code in the GitHub Repository <a href="https://github.com/LambdaSchool/java-safesampleemps.git">https://github.com/LambdaSchool/java-safesampleemps.git</a>t, the same repository where our initial application came from. This is the boilerplate code we will be adding!</p>
-<h3 id="pomxml">POM.XML</h3>
-<p>We need to tell our application that we will be using Spring Security. We do this by adding the appropriate dependencies to the POM.XML file. Once we add these dependencies to the POM.XML, we must implement security before we can run our application! So add the following dependencies to your POM.XML file. These dependencies can also be found in the security-boilerplate code directory</p>
-<pre><code class="language-XML">        &lt;!-- Security Dependencies Start --&gt;
+                      tr:nth-child(even) {
+                        background-color: #dddddd;
+                      }
+                    </style>
+                    <p><a id="User_Authentication"></a></p>
+                  </span>
+                  <strong
+                    >At the end of this module, you should be able to:</strong
+                  >
+                  <ul>
+                    <li>
+                      understand the flow and implement of Spring Security and
+                      OAuth2 to provide authentication for a project
+                    </li>
+                    <li>read user information from the access token</li>
+                    <li>
+                      understand the issues related to CORS and implement
+                      solutions to those issues
+                    </li>
+                    <li>
+                      understand how to implement a new user and logout
+                      endpoints
+                    </li>
+                    <li>
+                      use Postman to manually test Web APIs using Authentication
+                    </li>
+                  </ul>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                  <h4>Pro Tip</h4>
+                  <p>
+                    Be on time. It’s a mark of respect not to keep others
+                    waiting.
+                  </p>
+                </div>
+                <h2 class="display-4">
+                  <a
+                    id="prepare"
+                    class="anchor"
+                    href="#prepare"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Prepare
+                </h2>
+                <p class="lead">Review each preclass resource before class.</p>
+                <div class="preclass">
+                  <ul class="list-group list-group-flush"></ul>
+                </div>
+                <h2 class="display-4">
+                  <a id="learn" class="anchor" href="#learn" aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Learn
+                </h2>
+                <h4 class="mark mb-3 p-2">
+                  Learn to understand the flow and implement of Spring Security
+                  and OAuth2 to provide authentication for a project
+                </h4>
+                <p><a id="OAuth2_Security"></a></p>
+                <h5>Overview</h5>
+                <ul>
+                  <li>
+                    See the Github Repository
+                    <a
+                      href="https://github.com/LambdaSchool/java-safesampleemps.git"
+                      >https://github.com/LambdaSchool/java-safesampleemps.git</a
+                    >
+                    for the code used in the objective.
+                  </li>
+                </ul>
+                <h3 id="software-needed">Software Needed</h3>
+                <ul>
+                  <li>Java Development Kit (JDK) - at least version 11</li>
+                  <li>JetBrains IntelliJ IDEA IDE</li>
+                  <li>Postman</li>
+                </ul>
+                <p>
+                  You will also need the following environment variables set on
+                  your machine
+                </p>
+                <ul>
+                  <li>OAUTHCLIENTID = lambda-client</li>
+                  <li>OAUTHCLIENTSECRET = lambda-secret</li>
+                </ul>
+                <h3 id="securing-our-apis">Securing our APIs</h3>
+                <p>
+                  We now have these great API backend systems. We can provide
+                  data to our clients, we allow our clients to manipulate that
+                  data, and we can even provide our clients data from other
+                  systems. Chances are we do not want just anybody to change our
+                  data. We also might be working with sensitive data and should
+                  not allow everyone access to it. We need to restrict who can
+                  do what with our data. With the introduction of auditing
+                  fields, we also need to track who did what with our data. We
+                  need a way to identify who is the user accessing our system.
+                  Several different protocols exist to handle this common
+                  situation. One of the more popular ones, and the one used by
+                  default in the Spring Security module, is OAuth2.
+                </p>
+                <p>
+                  <strong>OAuth2</strong> is an industry standard protocol for
+                  <strong>user authentication</strong>. User authentication is
+                  the verification of what human is accessing our system. Client
+                  applications request an access token from a backend API
+                  system. Gaining an access token allows a user to access
+                  projected resources, endpoints and allows the backend system
+                  to know who that user is without the user having to provide
+                  their username and password for each transaction. Gaining this
+                  access token is done through a two step process.
+                </p>
+                <ul>
+                  <li>
+                    Clients must be <strong>authorized</strong> to access the
+                    system using a client user name and password, called a
+                    client id and client secret in the OAuth2 protocol. This
+                    client id and client secret could be the same for all
+                    clients who want to access the backend API, or each client
+                    could receive their own id and secret. The ids and secrets
+                    are controlled by the backend system. The backend system
+                    must tell the client what client id and client secret to
+                    use!
+                    <ul>
+                      <li>
+                        Sometimes a client will send an authorization token
+                        instead of a client id and client secret. For our
+                        purposes, this authorization token is simply the client
+                        id and client secret combined and encoded using Base64
+                        encoding.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    After a client has been authorized, an individual user is
+                    <strong>authenticated</strong> to the system using a user
+                    name and password.
+                  </li>
+                </ul>
+                <p>
+                  These two steps are necessary but are usually combined into a
+                  single request from the client for an access token. After
+                  initially getting the access token, the client must send that
+                  token with each subsequent request. The access token can be
+                  used by the backend system to determine what user is accessing
+                  the system.
+                </p>
+                <p>In the OAuth2 framework, 4 Roles are identified.</p>
+                <ul>
+                  <li>
+                    The <strong>client</strong>
+                    <ul>
+                      <li>
+                        Often called the frontend. This is the application that
+                        wishes to access our backend API server.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    The <strong>Resource Server</strong>
+                    <ul>
+                      <li>
+                        This is our backend API server. It is the server that
+                        hosts the protected information.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    The <strong>Authorization Server</strong>
+                    <ul>
+                      <li>
+                        This is the part of the backend application that grants
+                        access tokens. Access tokens are only granted after the
+                        client is authorized and the user is authenticated. When
+                        we think of using Google, Facebook, GitHub to logon to a
+                        system, what we mean is that we are using their
+                        authorization server to get an access token. Using these
+                        external systems is beyond the scope of this module. For
+                        now we be using our own Authorization Server.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    The <strong>Resource Owner</strong>
+                    <ul>
+                      <li>
+                        Usually a person that grant access to a protected
+                        resource. Think something like a system admin.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <h3 id="roles-in-our-code">Roles in our code</h3>
+                <p>
+                  We will be using Spring Security to implement OAuth2. OAuth2
+                  is the default, standard protocol implemented by Spring
+                  Security. That will make implementation easier. The implement
+                  is a series of boilerplate code that is customized to fit our
+                  applications. We will be using
+                </p>
+                <ul>
+                  <li>
+                    An <strong>AuthorizationServerConfig</strong> class that
+                    will serve the role of the Authorization Server. We use the
+                    <code class="highlighter-rouge"
+                      >@EnableAuthorizationServer</code
+                    >
+                    annotation to set up a default authorization server and then
+                    customize it to fit our applications.
+                  </li>
+                  <li>
+                    A <strong>ResourceServerConfig</strong> class that will
+                    serve the role of the resource server. We use the
+                    <code class="highlighter-rouge">@EnableResourceServer</code>
+                    annotation to set up a default resource server and then
+                    customize it to fit our application. Most of our application
+                    is concerned with how to protect, display, and manipulate
+                    resources. So most of our application, including all that we
+                    have coded up until this point, can be considered part of
+                    the resource server.
+                  </li>
+                  <li>
+                    A <strong>SecurityConfig</strong> class that will serve as
+                    the main configuration class for our OAuth2 server. We use
+                    the
+                    <code class="highlighter-rouge">@EnableWebSecurity</code>
+                    annotation to say, yes we want to use web security and then
+                    we configure this web security to our own needs.
+                  </li>
+                </ul>
+                <p>
+                  Do note that often you will hear me refer to the OAuth2
+                  process as authorization or authentication. This is not
+                  correct. Those are two different parts of the OAuth2 protocol.
+                  However, in the industry often the OAuth2 protocol is referred
+                  to as authorization or authentication.
+                </p>
+                <p>
+                  Before we code OAuth2 authentication, let’s look at how the
+                  access token flows through the system.
+                </p>
+                <h3 id="gaining-access">Gaining Access</h3>
+                <p>
+                  In order to request an access token, our client needs to know
+                  the client id and client secret. These will be provided to the
+                  client by the backend administrator. It is OUR responsibility
+                  to give the frontend the client id and client secret. The
+                  frontend client does not get to choose what these are, we do.
+                  Commonly you will see these being hard to guess random
+                  characters, normally 32 character hex strings. Sometimes you
+                  will see the client id and client security provided as Base64
+                  API access tokens. A client would use either the client id /
+                  client security combination or the API access token to get
+                  authorized to the system. They do NOT use both. Which one they
+                  use is often left to the client to decide. The format of
+                  combining the client id and client secret is to take the
+                  following and encode it using Base64:
+                </p>
+                <p>client id:client secret</p>
+                <p>
+                  Client id: 6779ef20e75817d76902 Client security:
+                  9e51c1701e1a6f5cfb30780d94d38b8d API access token:
+                  Njc3OWVmMjBlNzU4MTdkNzY5MDI6OWU1MWMxNzAxZTFhNmY1Y2ZiMzA3ODBkOTRkMzhiOGQ=
+                </p>
+                <p>
+                  For our purposes we will use something easy to read. You may
+                  change these to anything you wish. Just make sure to inform
+                  your clients of the change! Note: for class purposes, let’s
+                  leave them as these defaults. This will make reviewing each
+                  other’s code much easier.
+                </p>
+                <p>
+                  Client id: lambda-client Client security: lambda-secret API
+                  access token: bGFtYmRhLWNsaWVudDpsYW1iZGEtc2VjcmV0
+                </p>
+                <h3 id="adding-a-new-user">Adding a new user</h3>
+                <p>
+                  But before we can request access to the system, we need a user
+                  set up, you know, the one requesting access!
+                </p>
+                <p>
+                  Adding a new user is the same as adding any other record to
+                  our database. The one additional item is that the password has
+                  to be encrypted. Although not required, encrypting the
+                  password is definitely the preferred practice! We use an
+                  encryption algorithm called BCrypt. This is fairly standard in
+                  the industry.
+                </p>
+                <p>
+                  We say which algorithm we are going to use in the
+                  <code class="highlighter-rouge">SecurityConfig</code> class.
+                  This is where we setup the Bean for PasswordEncoder.
+                </p>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-bcrypt.png"
+                    alt="Security Config PasswordEncoder"
+                  />
+                </p>
+                <p>
+                  We then have to encrypt the password in the setter for the
+                  User password field.
+                </p>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-user.png"
+                    alt="User Model Password Setter"
+                  />
+                </p>
+                <h3 id="authorizing-the-client">Authorizing the client</h3>
+                <p>
+                  The step in using the API Backend is to Authorize the client,
+                  the application wanting to use the API. The client has a
+                  special username and password needed to access the backend.
+                  They also have special names.
+                </p>
+                <ul>
+                  <li>username =&gt; client id</li>
+                  <li>password =&gt; client secret</li>
+                </ul>
+                <p>
+                  These are sent to the API backend via the Authorization header
+                  in a REST API request. They can either be sent as a username
+                  and password, or as is more common an API Key. The API Key is
+                  simply the string
+                  <code class="highlighter-rouge">client id:client secret</code>
+                  encoded using Base64.
+                </p>
+                <p>
+                  The AuthorizationServerConfig class is responsible for
+                  handling the Authorization of the client.
+                </p>
+                <ul>
+                  <li>
+                    In our case we list the client id and client secret directly
+                    in the AuthorizationServerConfig allowing for only one
+                    client id, client secret combination. Some systems provide
+                    access to multiple client ids but that is a more advanced
+                    topic.
+                  </li>
+                  <li>
+                    Note that the client secret is also encrypted using BCrypt,
+                    using our encode Bean from the SecurityConfig class.
+                  </li>
+                  <li>
+                    Other configurations happen in the AuthorizationServerConfig
+                    like how long a token is valid.
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-AuthServConfig.png"
+                    alt="AuthorizationServerConfig"
+                  />
+                </p>
+                <ul>
+                  <li>
+                    We also set what the login endpoint from where a user, not
+                    to be confused with the client, gets their authentication
+                    token.
+                    <ul>
+                      <li>
+                        Client is the fontend system accessing the API Backend
+                      </li>
+                      <li>
+                        User is the person, usually, actually handling data from
+                        the Backend.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-AuthServConfig-Login.png"
+                    alt="AuthorizationServerConfig Login"
+                  />
+                </p>
+                <h3 id="authenticating-the-user">Authenticating the user</h3>
+                <p>
+                  NOTE: In most REST API calls from a client, the Authorization
+                  and Authentication are handled in a single request. The client
+                  just sends the client id and client secret along with a
+                  username and password to the API Backend System. That API
+                  Backend System takes care of Authorizing the client and then
+                  Authenticated the user!
+                </p>
+                <p>
+                  Authenticating a user happens after the client is Authorized.
+                  The client must have access to the API Backend System via its
+                  client id and client secret before it can request an
+                  Authentication token for a user.
+                </p>
+                <p>
+                  The process of Authentication is taking a username and
+                  password and determining if that combination is a valid
+                  combination, represents a valid user, of the system. If the
+                  validity of the user is confirmed, the API Backend System
+                  returns to the client an Authentication Token. It is this
+                  token that will identify the user in future requests.
+                </p>
+                <p>
+                  That Authentication Token is store in the Token Store. You can
+                  think of a Token Store as a table in memory with columns
+                  contains data such as
+                </p>
+                <ul>
+                  <li>The Authentication Token</li>
+                  <li>The time the token is to expire</li>
+                  <li>
+                    The Authentication object of the user, the UserDetails
+                    Security Object which is essentially a cached copy of the
+                    user record only containing data necessary for security.
+                  </li>
+                  <li>
+                    The Token Store Bean is set up in the SecurityConfig class
+                    and configured as the Authentication Manager in the
+                    AuthorizationServerConfig
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-TokenStore-Bean.png"
+                    alt="TokenStore Bean"
+                  />
+                </p>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-AuthenticationManager.png"
+                    alt="AuthenticationManager"
+                  />
+                </p>
+                <h3 id="using-the-authentication-token">
+                  Using the authentication token
+                </h3>
+                <p>
+                  Note that we restrict what user can do what with our data
+                  through <strong>user roles</strong>. Users get access to read,
+                  manipulate certain pieces of data by what role they are
+                  assigned. Role assignment are often done by type of user:
+                  admin, dataentry, user. Sometimes departments are added:
+                  systemadim, accountingadmin, hrdataentry, manufacturinguser.
+                  The name of the role can be anything but is usually something
+                  that makes sense to a human reading the role title. Role
+                  titles do get hard coded in our applications when we are
+                  restricting data to certain roles. So name roles carefully as
+                  changing the name of role is a BIG deal!
+                </p>
+                <p>
+                  Now we have an authentication token that identifies that this
+                  is a valid user and identifies which user it is. From this
+                  authentication token we can also identify what can access.
+                </p>
+                <p>
+                  To access a restricted endpoint, the client send an
+                  authentication token in the Authorization header.
+                </p>
+                <p>
+                  Spring Security Framework looks for that authentication token
+                  in the TokenStore
+                </p>
+                <ul>
+                  <li>
+                    <p>If Spring Security finds the token in the TokenStore</p>
+                    <ul>
+                      <li>
+                        Spring Security sees if the user associated with this
+                        token has access to the requested endpoint.
+                        <ul>
+                          <li>
+                            This is handled through the getAuthority method in
+                            the User model
+                          </li>
+                          <li>
+                            This method returns which “Authorities” the user has
+                            been granted. In our case, those authorities are
+                            equivalent to our roles.
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-GrantAuthorities.png"
+                    alt="getAuthority"
+                  />
+                </p>
+                <ul>
+                  <li>
+                    <p>
+                      If Spring Security does not find the token in the
+                      TokenStore, an unauthorized status is returned.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      To determine which roles has access to what endpoints, the
+                      first place to check is the ResourceServerConfig. This
+                      class determines which roles have access to which
+                      resources, or endpoints. The majority of your security
+                      configuration happens in this class.
+                    </p>
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-ResourceServerConfig.png"
+                    alt="ResourceServerConfig"
+                  />
+                </p>
+                <ul>
+                  <li>
+                    You allow access to a resource using
+                    <code class="highlighter-rouge">.antMatchers</code>
+                  </li>
+                  <li>
+                    The parameter for
+                    <code class="highlighter-rouge">.antMatcher</code> is a
+                    regular expression stating which endpoints you want to
+                    restrict.
+                  </li>
+                  <li>
+                    The <code class="highlighter-rouge">.antMatchers</code> ends
+                    with a method
+                    <ul>
+                      <li>
+                        <code class="highlighter-rouge">.permitAll()</code> -
+                        allows access to all. No Authentication Token is
+                        necessary
+                      </li>
+                      <li>
+                        <code class="highlighter-rouge">.authenticated()</code>
+                        - allows access to all authenticated users. A valid
+                        authentication token is required.
+                      </li>
+                      <li>
+                        <code class="highlighter-rouge">.hasAnyRole()</code> -
+                        the parameter is a list of roles who have access to
+                        these endpoints.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    You can further restrict your security access using a
+                    @PreAuthorize annotation in the Controller. This further
+                    restrict access to this endpoint to only the given roles.
+                    Note: you cannot expand access via this method only further
+                    restrict it.
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-PreAuthorization.png"
+                    alt="PreAuthorization"
+                  />
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Let’s add user authentication to our sample employees
+                  application. Start by opening the application
+                  safesampleemps-initial from the GitHub repository
+                  <a
+                    href="https://github.com/LambdaSchool/java-safesampleemps.git"
+                    >https://github.com/LambdaSchool/java-safesampleemps.git</a
+                  >t. This application is the same as the ending application
+                  from the GitHub repository
+                  <a
+                    href="https://github.com/LambdaSchool/java-exceptionalsampleemps.git"
+                    >https://github.com/LambdaSchool/java-exceptionalsampleemps.git</a
+                  >t. These are the employees we will make safe!
+                </p>
+                <p>
+                  Do note that the code we are adding is a minimal set of code
+                  to make user authentication possible. We purpose leave out all
+                  the code that allows us to manipulate the Users and their
+                  Roles. In a full production system, this code we are leaving
+                  out would be necessary! For explanation though that additional
+                  code would get in the way!
+                </p>
+                <p>
+                  Find the security-boilerplate code in the GitHub Repository
+                  <a
+                    href="https://github.com/LambdaSchool/java-safesampleemps.git"
+                    >https://github.com/LambdaSchool/java-safesampleemps.git</a
+                  >t, the same repository where our initial application came
+                  from. This is the boilerplate code we will be adding!
+                </p>
+                <h3 id="pomxml">POM.XML</h3>
+                <p>
+                  We need to tell our application that we will be using Spring
+                  Security. We do this by adding the appropriate dependencies to
+                  the POM.XML file. Once we add these dependencies to the
+                  POM.XML, we must implement security before we can run our
+                  application! So add the following dependencies to your POM.XML
+                  file. These dependencies can also be found in the
+                  security-boilerplate code directory
+                </p>
+                <pre><code class="language-XML">        &lt;!-- Security Dependencies Start --&gt;
         &lt;dependency&gt;
             &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
             &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;
@@ -558,66 +1106,222 @@ API access token: bGFtYmRhLWNsaWVudDpsYW1iZGEtc2VjcmV0</p>
         &lt;/dependency&gt;
         &lt;!-- Security Dependencies End --&gt;
 </code></pre>
-<h3 id="necessary-models">Necessary Models</h3>
-<p>Our application relies on user names - which could be a name, an email, user id - user passwords, and user roles. We need a place to store this information in our application. For the current sample application, we are going to use a separate users table. The user table would normally not only hold our user names and passwords but also anything else that is needed for a user of the system. In our case, combining the users model and the employee model into one table would make sense.</p>
-<p>The roles will have a many-to-many relationship with users. A user can have multiple roles. A role should have multiple users.</p>
-<p>Let’s add the necessary models. In your safesampleemps application, add the following models from the security_boilerplate code:</p>
-<ul>
-<li>Users
-<ul>
-<li>In user we have a way to deal with passwords that are coming from the client not encrypted using the method <code class="highlighter-rouge">setPassword(String password)</code>. When a password is internal to our system, it is encrypted. We can set an already encrypted password using the method <code class="highlighter-rouge">setPasswordNoEncrypt(String password)</code>.</li>
-<li>Users have an additional <code class="highlighter-rouge">getAuthority()</code> method. This is the method Spring Security will use to determine which roles a user has.</li>
-</ul>
-</li>
-<li>Roles
-<ul>
-<li>Always keep role names all upper case. Experience shows this will make your life easier!</li>
-</ul>
-</li>
-<li>UserRoles</li>
-</ul>
-<p>And of course we need to add the necessary Repositories to connect these models to the rest of our application. Again inside the security-boilerplate code add the repositories for</p>
-<ul>
-<li>UserRepository</li>
-<li>RoleRepository</li>
-</ul>
-<p>We do not need one for UserRoles!</p>
-<h3 id="necessary-services">Necessary Services</h3>
-<p>We are going to keep our boilerplate simple and access the models through the repositories, bypassing services. This is for our example only. In a production system, USE SERVICES!!! However, Spring Security relies on a service that connects it to our User, Role models. From the boilerplate code, add the service <code class="highlighter-rouge">SecurityUserServiceImpl</code>.</p>
-<p>Now that we have real user id, we need to update the UserAuditing service to use those user ids! Put the updated version of <code class="highlighter-rouge">UserAuditing</code> from the boilerplate code into your application.</p>
-<h3 id="configuration">Configuration</h3>
-<p>Now for the part totally new related to Security. We are going to configure our web security, enable our authorization server, and enable our resource server.</p>
-<p>Work with web security first. Add the code from the boilerplate <code class="highlighter-rouge">SecurityConfig</code> to your application’s subpackage <code class="highlighter-rouge">config</code>. This configuration file</p>
-<ul>
-<li>Enables are authentication manager allowing us to work with the user names and passwords</li>
-<li>Connects Spring Security to the service SecurityUserServiceImpl and thus to our user and role tables</li>
-<li>Creates an in memory table to store and maintain the access tokens for our systems. This acts as a separate in memory database. It is in memory for speed of access and so when the system goes down, all access is reset. Users have to sign in again after a system restart.</li>
-<li>Defines the password encryption method we will use. Normally we will use the industry standard BCrypt as we do in this example.</li>
-</ul>
-<p>Now let’s enable our Authorization Service. Add the code from the boilerplate <code class="highlighter-rouge">AuthorizationServerConfig</code> to your application’s subpackage <code class="highlighter-rouge">config</code>. This configuration file</p>
-<ul>
-<li>Enables our authorization service using a client id and client secret it reads from the environment variables OAUTHCLIENTID and OAUTHCLIENTSECRET respectively.</li>
-<li>We will set the access token to be valid forever. We can set the access token to become invalid after a certain time period forcing a user to sign in to our system again.</li>
-<li>Besides using Roles, OAuth2 provides another layer of security rights called Scopes. We will not be addressing scopes in this module.</li>
-<li>The grant type password tells the authorization server that we will be using the standard user name and password model to authenticate. Other methods exist but this one is by far the most common!</li>
-<li>The default endpoint for requesting an access token in Spring Security is <code class="highlighter-rouge">/oauth/token</code>. We can easily change this to something like <code class="highlighter-rouge">/login</code>. The last method in the configuration class <code class="highlighter-rouge">configure(AuthorizationServerEndpointsConfigurer endpoints)</code> does this for us.</li>
-</ul>
-<p>Finally, let’s enable our Resource Service. Add the code from the boilerplate <code class="highlighter-rouge">ResourceServerConfig</code> to your application’s subpackage <code class="highlighter-rouge">config</code>. The main purpose of this configuration class is to say which roles have access to which methods and endpoints, what are roles allowed to do. This is done through a series of <code class="highlighter-rouge">antMatchers</code> which are used to configure the authorized requests in our system. The boilerplate contains a simple series of .antMatchers. We have two Roles, <em>ADMIN</em> and <em>USER</em>. <em>USER</em> has access to all endpoints starting with <code class="highlighter-rouge">/employees</code>. <em>ADMIN</em> has access to all endpoints starting with <code class="highlighter-rouge">/users</code>. Anyone using the system (<code class="highlighter-rouge">.permitAll()</code>) can access <code class="highlighter-rouge">/createnewuser</code>. Anyone who has authenticated to the system can access <code class="highlighter-rouge">/logout</code>.</p>
-<p>Note that in an antMatcher,</p>
-<ul>
-<li>
-<code class="highlighter-rouge">/users</code> means just that endpoint</li>
-<li>
-<code class="highlighter-rouge">/users/**</code> means the <code class="highlighter-rouge">/users</code> endpoint and anything below that. So for example
-<ul>
-<li><code class="highlighter-rouge">/users</code></li>
-<li><code class="highlighter-rouge">/users/1</code></li>
-<li><code class="highlighter-rouge">/users/roles/add/me</code></li>
-</ul>
-</li>
-</ul>
-<p>Below is a more complex that shows some of the power of how we control endpoints in our application. This is adapted from the guided project for this module.</p>
-<pre><code class="language-JAVA">        // our antMatchers control which roles of users have access to which endpoints
+                <h3 id="necessary-models">Necessary Models</h3>
+                <p>
+                  Our application relies on user names - which could be a name,
+                  an email, user id - user passwords, and user roles. We need a
+                  place to store this information in our application. For the
+                  current sample application, we are going to use a separate
+                  users table. The user table would normally not only hold our
+                  user names and passwords but also anything else that is needed
+                  for a user of the system. In our case, combining the users
+                  model and the employee model into one table would make sense.
+                </p>
+                <p>
+                  The roles will have a many-to-many relationship with users. A
+                  user can have multiple roles. A role should have multiple
+                  users.
+                </p>
+                <p>
+                  Let’s add the necessary models. In your safesampleemps
+                  application, add the following models from the
+                  security_boilerplate code:
+                </p>
+                <ul>
+                  <li>
+                    Users
+                    <ul>
+                      <li>
+                        In user we have a way to deal with passwords that are
+                        coming from the client not encrypted using the method
+                        <code class="highlighter-rouge"
+                          >setPassword(String password)</code
+                        >. When a password is internal to our system, it is
+                        encrypted. We can set an already encrypted password
+                        using the method
+                        <code class="highlighter-rouge"
+                          >setPasswordNoEncrypt(String password)</code
+                        >.
+                      </li>
+                      <li>
+                        Users have an additional
+                        <code class="highlighter-rouge">getAuthority()</code>
+                        method. This is the method Spring Security will use to
+                        determine which roles a user has.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Roles
+                    <ul>
+                      <li>
+                        Always keep role names all upper case. Experience shows
+                        this will make your life easier!
+                      </li>
+                    </ul>
+                  </li>
+                  <li>UserRoles</li>
+                </ul>
+                <p>
+                  And of course we need to add the necessary Repositories to
+                  connect these models to the rest of our application. Again
+                  inside the security-boilerplate code add the repositories for
+                </p>
+                <ul>
+                  <li>UserRepository</li>
+                  <li>RoleRepository</li>
+                </ul>
+                <p>We do not need one for UserRoles!</p>
+                <h3 id="necessary-services">Necessary Services</h3>
+                <p>
+                  We are going to keep our boilerplate simple and access the
+                  models through the repositories, bypassing services. This is
+                  for our example only. In a production system, USE SERVICES!!!
+                  However, Spring Security relies on a service that connects it
+                  to our User, Role models. From the boilerplate code, add the
+                  service
+                  <code class="highlighter-rouge">SecurityUserServiceImpl</code
+                  >.
+                </p>
+                <p>
+                  Now that we have real user id, we need to update the
+                  UserAuditing service to use those user ids! Put the updated
+                  version of
+                  <code class="highlighter-rouge">UserAuditing</code> from the
+                  boilerplate code into your application.
+                </p>
+                <h3 id="configuration">Configuration</h3>
+                <p>
+                  Now for the part totally new related to Security. We are going
+                  to configure our web security, enable our authorization
+                  server, and enable our resource server.
+                </p>
+                <p>
+                  Work with web security first. Add the code from the
+                  boilerplate
+                  <code class="highlighter-rouge">SecurityConfig</code> to your
+                  application’s subpackage
+                  <code class="highlighter-rouge">config</code>. This
+                  configuration file
+                </p>
+                <ul>
+                  <li>
+                    Enables are authentication manager allowing us to work with
+                    the user names and passwords
+                  </li>
+                  <li>
+                    Connects Spring Security to the service
+                    SecurityUserServiceImpl and thus to our user and role tables
+                  </li>
+                  <li>
+                    Creates an in memory table to store and maintain the access
+                    tokens for our systems. This acts as a separate in memory
+                    database. It is in memory for speed of access and so when
+                    the system goes down, all access is reset. Users have to
+                    sign in again after a system restart.
+                  </li>
+                  <li>
+                    Defines the password encryption method we will use. Normally
+                    we will use the industry standard BCrypt as we do in this
+                    example.
+                  </li>
+                </ul>
+                <p>
+                  Now let’s enable our Authorization Service. Add the code from
+                  the boilerplate
+                  <code class="highlighter-rouge"
+                    >AuthorizationServerConfig</code
+                  >
+                  to your application’s subpackage
+                  <code class="highlighter-rouge">config</code>. This
+                  configuration file
+                </p>
+                <ul>
+                  <li>
+                    Enables our authorization service using a client id and
+                    client secret it reads from the environment variables
+                    OAUTHCLIENTID and OAUTHCLIENTSECRET respectively.
+                  </li>
+                  <li>
+                    We will set the access token to be valid forever. We can set
+                    the access token to become invalid after a certain time
+                    period forcing a user to sign in to our system again.
+                  </li>
+                  <li>
+                    Besides using Roles, OAuth2 provides another layer of
+                    security rights called Scopes. We will not be addressing
+                    scopes in this module.
+                  </li>
+                  <li>
+                    The grant type password tells the authorization server that
+                    we will be using the standard user name and password model
+                    to authenticate. Other methods exist but this one is by far
+                    the most common!
+                  </li>
+                  <li>
+                    The default endpoint for requesting an access token in
+                    Spring Security is
+                    <code class="highlighter-rouge">/oauth/token</code>. We can
+                    easily change this to something like
+                    <code class="highlighter-rouge">/login</code>. The last
+                    method in the configuration class
+                    <code class="highlighter-rouge"
+                      >configure(AuthorizationServerEndpointsConfigurer
+                      endpoints)</code
+                    >
+                    does this for us.
+                  </li>
+                </ul>
+                <p>
+                  Finally, let’s enable our Resource Service. Add the code from
+                  the boilerplate
+                  <code class="highlighter-rouge">ResourceServerConfig</code> to
+                  your application’s subpackage
+                  <code class="highlighter-rouge">config</code>. The main
+                  purpose of this configuration class is to say which roles have
+                  access to which methods and endpoints, what are roles allowed
+                  to do. This is done through a series of
+                  <code class="highlighter-rouge">antMatchers</code> which are
+                  used to configure the authorized requests in our system. The
+                  boilerplate contains a simple series of .antMatchers. We have
+                  two Roles, <em>ADMIN</em> and <em>USER</em>. <em>USER</em> has
+                  access to all endpoints starting with
+                  <code class="highlighter-rouge">/employees</code>.
+                  <em>ADMIN</em> has access to all endpoints starting with
+                  <code class="highlighter-rouge">/users</code>. Anyone using
+                  the system (<code class="highlighter-rouge">.permitAll()</code
+                  >) can access
+                  <code class="highlighter-rouge">/createnewuser</code>. Anyone
+                  who has authenticated to the system can access
+                  <code class="highlighter-rouge">/logout</code>.
+                </p>
+                <p>Note that in an antMatcher,</p>
+                <ul>
+                  <li>
+                    <code class="highlighter-rouge">/users</code> means just
+                    that endpoint
+                  </li>
+                  <li>
+                    <code class="highlighter-rouge">/users/**</code> means the
+                    <code class="highlighter-rouge">/users</code> endpoint and
+                    anything below that. So for example
+                    <ul>
+                      <li><code class="highlighter-rouge">/users</code></li>
+                      <li><code class="highlighter-rouge">/users/1</code></li>
+                      <li>
+                        <code class="highlighter-rouge"
+                          >/users/roles/add/me</code
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  Below is a more complex that shows some of the power of how we
+                  control endpoints in our application. This is adapted from the
+                  guided project for this module.
+                </p>
+                <pre><code class="language-JAVA">        // our antMatchers control which roles of users have access to which endpoints
         // we must order our antmatchers from most restrictive to least restrictive.
         // So restrict at method level before restricting at endpoint level.
         // permitAll = everyone and their brother
@@ -650,68 +1354,195 @@ API access token: bGFtYmRhLWNsaWVudDpsYW1iZGEtc2VjcmV0</p>
             .exceptionHandling()
             .accessDeniedHandler(new OAuth2AccessDeniedHandler());
 </code></pre>
-<p>Note: they are called <strong>ant</strong> matcher from an old Apache Organization application called ant which was used for pattern matching. Ant = <strong>A</strong>nother <strong>N</strong>eat <strong>T</strong>ool.</p>
-<h3 id="security-is-in-place">Security is in place</h3>
-<p>Thanks to the behind the scenes work of Spring Security, enabling OAuth2 security in Java Spring is simply adding a series of boilerplate code and configuring it to fit our application. We now have user authentication in place! We will see how to access this in the objective covering using Postman with User Authentication!</p>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2" target="blank_">OAuth Concepts</a><br> Technology neutral explanation of the OAuth concepts</li>
-<li>
-<a href="https://drive.google.com/open?id=1x-gI8YvZTGSznQvc0mmfzgysr9ptB7pS" target="blank_">JX User Authentication Guide</a><br> JX User Authentication Guide by Rory Murray</li>
-<li>
-<a href="https://www.developer.com/java/ent/what-is-spring-security.html)-%20%5BSpring%20Boot%20and%20OAuth2%5D(https://spring.io/guides/tutorials/spring-boot-oauth2/" target="blank_">Spring Security</a><br> What is Spring Security</li>
-<li>
-<a href="https://dzone.com/articles/implement-oauth-20-easily-with-spring-boot-and-spr" target="blank_">Implement OAuth 2.0</a><br> DZone - Implement OAuth 2.0 Easily with Spring Boot and Spring Security</li>
-<li>
-<a href="https://www.javainuse.com/spring/spring-social)%20-%20%5BOkta%20Java%20Spring%5D(https://developer.okta.com/blog/2019/05/24/java-spring-tutorials" target="blank_">Additional Topic: Facebook</a><br> Facebook Authentication Using Spring Boot + Spring Social Simple Example</li>
-<li>
-<a href="https://developer.okta.com/blog/2019/05/24/java-spring-tutorials" target="blank_">Additional Topic: Okta</a><br> Okta Java Spring</li>
-<li>
-<a href="https://developers.google.com/api-client-library/java/google-api-java-client/oauth2" target="blank_">Additional Topic: Google</a><br> Using OAuth 2.0 with the Google API Client Library for Java</li>
-<li>
-<a href="https://dzone.com/articles/spring-boot-security-json-web-tokenjwt-hello-world" target="blank_">Additional Topic: JWT</a><br> Spring Boot Security + JWT ''Hello World'' Example</li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to read user information from the access token</h4>
-<p><a id="User_Information_from_Access_Token"></a></p>
-<h5>Overview</h5>
-<ul>
-<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-safesampleemps.git">https://github.com/LambdaSchool/java-safesampleemps.git</a>t for the code used in the objective.</li>
-</ul>
-<h3 id="software-needed">Software Needed</h3>
-<ul>
-<li>Java Development Kit (JDK) - at least version 11</li>
-<li>JetBrains IntelliJ IDEA IDE</li>
-<li>Postman</li>
-</ul>
-<p>Unlike JSON Web Tokens (JWT), no information is included with the authentication token sent to the client. Security is the reason for this. If the token is intercepted during transmission, the interceptor just has the token and no additional information. In order to get additional information, the interceptor would have to query API Backend system, meaning they would have to be able to connect to the system - CORS and client access would have to be configured just right to let this happen.</p>
-<ul>
-<li>Positive is increased security</li>
-<li>
-<p>Negative is increased web traffic and complexity for the client application</p>
-</li>
-<li>You can determine the name of the user associated with the given authentication token using a variety of methods
-<ul>
-<li>Referencing the global class SecurityContextHolder</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-SecurityContext.png" alt="SecurityContextHolder"></p>
-<ul>
-<li>
-<p>From the global Authentication class, you can call the method <code class="highlighter-rouge">getPrincipal()</code> to learn a variety of information about the user and their authorities</p>
-</li>
-<li>
-<p>From the global Authentication class, you can call the method <code class="highlighter-rouge">getName()</code> to return the username. You can then call UserService.findByName() with that name as the parameter and return the entire user record associated with that authentication token.</p>
-</li>
-</ul>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-getName.png" alt="Authentication getName"></p>
-<h5>Follow Along</h5>
-<p>Let’s use these two methods in our code. We are continuing adding to our application safesampleemps-initial from the GitHub repository <a href="https://github.com/LambdaSchool/java-safesampleemps.git">https://github.com/LambdaSchool/java-safesampleemps.git</a> started in the last objective.</p>
-<p>We will need some seed data to work with. Let’s add the following code to the SeedData class is on our application. First we will add two roles: ADMIN and USER. Next we add two ADMINs and one USER.</p>
-<p>At the top of the existing SeedData Class connect the class to the Role and User Repositories</p>
-<pre><code class="language-JAVA">    // ...
+                <p>
+                  Note: they are called <strong>ant</strong> matcher from an old
+                  Apache Organization application called ant which was used for
+                  pattern matching. Ant = <strong>A</strong>nother
+                  <strong>N</strong>eat <strong>T</strong>ool.
+                </p>
+                <h3 id="security-is-in-place">Security is in place</h3>
+                <p>
+                  Thanks to the behind the scenes work of Spring Security,
+                  enabling OAuth2 security in Java Spring is simply adding a
+                  series of boilerplate code and configuring it to fit our
+                  application. We now have user authentication in place! We will
+                  see how to access this in the objective covering using Postman
+                  with User Authentication!
+                </p>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2"
+                      target="blank_"
+                      >OAuth Concepts</a
+                    ><br />
+                    Technology neutral explanation of the OAuth concepts
+                  </li>
+                  <li>
+                    <a
+                      href="https://drive.google.com/open?id=1x-gI8YvZTGSznQvc0mmfzgysr9ptB7pS"
+                      target="blank_"
+                      >JX User Authentication Guide</a
+                    ><br />
+                    JX User Authentication Guide by Rory Murray
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.developer.com/java/ent/what-is-spring-security.html)-%20%5BSpring%20Boot%20and%20OAuth2%5D(https://spring.io/guides/tutorials/spring-boot-oauth2/"
+                      target="blank_"
+                      >Spring Security</a
+                    ><br />
+                    What is Spring Security
+                  </li>
+                  <li>
+                    <a
+                      href="https://dzone.com/articles/implement-oauth-20-easily-with-spring-boot-and-spr"
+                      target="blank_"
+                      >Implement OAuth 2.0</a
+                    ><br />
+                    DZone - Implement OAuth 2.0 Easily with Spring Boot and
+                    Spring Security
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.javainuse.com/spring/spring-social)%20-%20%5BOkta%20Java%20Spring%5D(https://developer.okta.com/blog/2019/05/24/java-spring-tutorials"
+                      target="blank_"
+                      >Additional Topic: Facebook</a
+                    ><br />
+                    Facebook Authentication Using Spring Boot + Spring Social
+                    Simple Example
+                  </li>
+                  <li>
+                    <a
+                      href="https://developer.okta.com/blog/2019/05/24/java-spring-tutorials"
+                      target="blank_"
+                      >Additional Topic: Okta</a
+                    ><br />
+                    Okta Java Spring
+                  </li>
+                  <li>
+                    <a
+                      href="https://developers.google.com/api-client-library/java/google-api-java-client/oauth2"
+                      target="blank_"
+                      >Additional Topic: Google</a
+                    ><br />
+                    Using OAuth 2.0 with the Google API Client Library for Java
+                  </li>
+                  <li>
+                    <a
+                      href="https://dzone.com/articles/spring-boot-security-json-web-tokenjwt-hello-world"
+                      target="blank_"
+                      >Additional Topic: JWT</a
+                    ><br />
+                    Spring Boot Security + JWT ''Hello World'' Example
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to read user information from the access token
+                </h4>
+                <p><a id="User_Information_from_Access_Token"></a></p>
+                <h5>Overview</h5>
+                <ul>
+                  <li>
+                    See the Github Repository
+                    <a
+                      href="https://github.com/LambdaSchool/java-safesampleemps.git"
+                      >https://github.com/LambdaSchool/java-safesampleemps.git</a
+                    >t for the code used in the objective.
+                  </li>
+                </ul>
+                <h3 id="software-needed">Software Needed</h3>
+                <ul>
+                  <li>Java Development Kit (JDK) - at least version 11</li>
+                  <li>JetBrains IntelliJ IDEA IDE</li>
+                  <li>Postman</li>
+                </ul>
+                <p>
+                  Unlike JSON Web Tokens (JWT), no information is included with
+                  the authentication token sent to the client. Security is the
+                  reason for this. If the token is intercepted during
+                  transmission, the interceptor just has the token and no
+                  additional information. In order to get additional
+                  information, the interceptor would have to query API Backend
+                  system, meaning they would have to be able to connect to the
+                  system - CORS and client access would have to be configured
+                  just right to let this happen.
+                </p>
+                <ul>
+                  <li>Positive is increased security</li>
+                  <li>
+                    <p>
+                      Negative is increased web traffic and complexity for the
+                      client application
+                    </p>
+                  </li>
+                  <li>
+                    You can determine the name of the user associated with the
+                    given authentication token using a variety of methods
+                    <ul>
+                      <li>
+                        Referencing the global class SecurityContextHolder
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-SecurityContext.png"
+                    alt="SecurityContextHolder"
+                  />
+                </p>
+                <ul>
+                  <li>
+                    <p>
+                      From the global Authentication class, you can call the
+                      method
+                      <code class="highlighter-rouge">getPrincipal()</code> to
+                      learn a variety of information about the user and their
+                      authorities
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      From the global Authentication class, you can call the
+                      method <code class="highlighter-rouge">getName()</code> to
+                      return the username. You can then call
+                      UserService.findByName() with that name as the parameter
+                      and return the entire user record associated with that
+                      authentication token.
+                    </p>
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/JX-12-M3-getName.png"
+                    alt="Authentication getName"
+                  />
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Let’s use these two methods in our code. We are continuing
+                  adding to our application safesampleemps-initial from the
+                  GitHub repository
+                  <a
+                    href="https://github.com/LambdaSchool/java-safesampleemps.git"
+                    >https://github.com/LambdaSchool/java-safesampleemps.git</a
+                  >
+                  started in the last objective.
+                </p>
+                <p>
+                  We will need some seed data to work with. Let’s add the
+                  following code to the SeedData class is on our application.
+                  First we will add two roles: ADMIN and USER. Next we add two
+                  ADMINs and one USER.
+                </p>
+                <p>
+                  At the top of the existing SeedData Class connect the class to
+                  the Role and User Repositories
+                </p>
+                <pre><code class="language-JAVA">    // ...
 
     private Random random = new Random(); // already in SeedData
 
@@ -729,8 +1560,10 @@ API access token: bGFtYmRhLWNsaWVudDpsYW1iZGEtc2VjcmV0</p>
 
     // ...
 </code></pre>
-<p>This code can go at the bottom of the existing SeedData Class.</p>
-<pre><code class="language-JAVA">        // Adding SeedData for users
+                <p>
+                  This code can go at the bottom of the existing SeedData Class.
+                </p>
+                <pre><code class="language-JAVA">        // Adding SeedData for users
         Role r1 = new Role("ADMIN");
         Role r2 = new Role("USER");
         r1 = rolerepos.save(r1);
@@ -755,12 +1588,26 @@ API access token: bGFtYmRhLWNsaWVudDpsYW1iZGEtc2VjcmV0</p>
         User u3 = new User("cinnamon", "ILuvM4th!", users);
         userrepos.save(u3);
 </code></pre>
-<p>Now let’s add some endpoints. You may recall that we gave ADMINs access to the /users and following endpoints and USERs access to the /employees and following endpoints. Let’s create a controller for user. Add the following class to to our <code class="highlighter-rouge">controllers</code> subpackages. Remember that for this example we are using the User Repository and not User Service.</p>
-<p>The code below</p>
-<ul>
-<li>creates an endpoint /users/getuserinfo which returns the following JSON object about a user. This information is from our own database layout. This a great way for a client to determine the user id, user name associated with the given access token.</li>
-</ul>
-<pre><code class="language-JSON">  {
+                <p>
+                  Now let’s add some endpoints. You may recall that we gave
+                  ADMINs access to the /users and following endpoints and USERs
+                  access to the /employees and following endpoints. Let’s create
+                  a controller for user. Add the following class to to our
+                  <code class="highlighter-rouge">controllers</code>
+                  subpackages. Remember that for this example we are using the
+                  User Repository and not User Service.
+                </p>
+                <p>The code below</p>
+                <ul>
+                  <li>
+                    creates an endpoint /users/getuserinfo which returns the
+                    following JSON object about a user. This information is from
+                    our own database layout. This a great way for a client to
+                    determine the user id, user name associated with the given
+                    access token.
+                  </li>
+                </ul>
+                <pre><code class="language-JSON">  {
     "createdBy": "SYSTEM",
     "createdDate": "2020-05-25 16:08:44",
     "lastModifiedBy": "SYSTEM",
@@ -785,10 +1632,22 @@ API access token: bGFtYmRhLWNsaWVudDpsYW1iZGEtc2VjcmV0</p>
     ]
   }
 </code></pre>
-<ul>
-<li>Notice the <code class="highlighter-rouge">Authentication</code> parameter. This is a class internal to Spring Security. It can used throughout a Spring application to gather information on about the authenticated user, the user associated with the access token the client sent us when it made a request. We can access this <code class="highlighter-rouge">Authentication</code> object through a parameter or can <code class="highlighter-rouge">@Autowire</code> it to our class.</li>
-</ul>
-<pre><code class="language-JAVA">import com.lambdaschool.sampleemps.models.User;
+                <ul>
+                  <li>
+                    Notice the
+                    <code class="highlighter-rouge">Authentication</code>
+                    parameter. This is a class internal to Spring Security. It
+                    can used throughout a Spring application to gather
+                    information on about the authenticated user, the user
+                    associated with the access token the client sent us when it
+                    made a request. We can access this
+                    <code class="highlighter-rouge">Authentication</code> object
+                    through a parameter or can
+                    <code class="highlighter-rouge">@Autowire</code> it to our
+                    class.
+                  </li>
+                </ul>
+                <pre><code class="language-JAVA">import com.lambdaschool.sampleemps.models.User;
 import com.lambdaschool.sampleemps.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -816,8 +1675,12 @@ public class UserController
 
 }
 </code></pre>
-<p>Now let’s add another endpoint. This time we will get the user information as Spring Security stores it. This method returns information like</p>
-<pre><code class="language-JSON">{
+                <p>
+                  Now let’s add another endpoint. This time we will get the user
+                  information as Spring Security stores it. This method returns
+                  information like
+                </p>
+                <pre><code class="language-JSON">{
     "password": null,
     "username": "barnbarn",
     "authorities": [
@@ -831,8 +1694,11 @@ public class UserController
     "enabled": true
 }
 </code></pre>
-<p>Add the following method to the bottom of your UserController class.</p>
-<pre><code class="language-JAVA">    @GetMapping(value = "/getusername",
+                <p>
+                  Add the following method to the bottom of your UserController
+                  class.
+                </p>
+                <pre><code class="language-JAVA">    @GetMapping(value = "/getusername",
             produces = {"application/json"})
     public ResponseEntity&lt;?&gt; getCurrentUserName(Authentication authentication)
     {
@@ -840,42 +1706,110 @@ public class UserController
                 HttpStatus.OK);
     }
 </code></pre>
-<p>In the objective on using Authentication in Postman we will discuss how to access these endpoints!</p>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://www.baeldung.com/spring-security-auto-login-user-after-registration" target="blank_">Auto Login User</a><br> Baeldung - Spring Security - Auto Login User After Registration</li>
-<li>
-<a href="https://www.baeldung.com/spring-security-oauth-principal-authorities-extractor" target="blank_">Extracting User Info</a><br> Baeldung - Extracting Principal and Authorities using Spring Security OAuth</li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to understand the issues related to CORS and implement solutions to those issues</h4>
-<p><a id="CORS"></a></p>
-<h5>Overview</h5>
-<ul>
-<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-safesampleemps.git">https://github.com/LambdaSchool/java-safesampleemps.git</a>t for the code used in the objective.</li>
-</ul>
-<h3 id="software-needed">Software Needed</h3>
-<ul>
-<li>Java Development Kit (JDK) - at least version 11</li>
-<li>JetBrains IntelliJ IDEA IDE</li>
-<li>Postman</li>
-</ul>
-<p>We are using the same computer, as our frontend client - think Postman, as the one where our API backend system resides. Same computer, same domain, same “origin”. Soon we will be deploying our API to the cloud. Ultimately this is what we are after, making our API available to others. When we deploy, the client accessing our API and our API backend will most likely be on different computers, different domains, different “origin”. We need to allow different origins to share, use the resources of our API backend. By default only clients and backends running on the same system can access each other. We need to allow <strong>C</strong>ross-<strong>O</strong>rigin <strong>R</strong>esource <strong>S</strong>haring, normally called <strong>CORS</strong>.</p>
-<p>We allow CORS, also referred to as preventing CORS errors, we can specific</p>
-<ul>
-<li>Which origins, domains can access our API.
-<ul>
-<li>Normally we will allow all origins to access our API. This is certainly true of all publicly facing APIs. For company internal APIs, you may wish to restrict which origins can access the API to only those within the company</li>
-</ul>
-</li>
-<li>Which HTTP Methods will be allowed</li>
-<li>Which Access Control Headers will be allowed</li>
-</ul>
-<p>For this course, we are going to allow all origins using any HTTP Methods and using any Access Control Headers. We do this by taking advantage of the Spring Filter Chain which filters who has access to what on our API.</p>
-<h5>Follow Along</h5>
-<p>Let’s add The CORS Simple Filter to our <code class="highlighter-rouge">safesampleemps</code> application. Find the provided boilerplate code application <code class="highlighter-rouge">makesafeboilerplate</code> the configuration class named <code class="highlighter-rouge">SimpleCorsFilter</code>. The class is provided below for reference. Reading through the code and comments will give you a better understanding of what is happening. Add this class to your <code class="highlighter-rouge">safesampleemps</code> application under the <code class="highlighter-rouge">config</code> subpackage.</p>
-<pre><code class="language-JAVA">import org.springframework.core.Ordered;
+                <p>
+                  In the objective on using Authentication in Postman we will
+                  discuss how to access these endpoints!
+                </p>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.baeldung.com/spring-security-auto-login-user-after-registration"
+                      target="blank_"
+                      >Auto Login User</a
+                    ><br />
+                    Baeldung - Spring Security - Auto Login User After
+                    Registration
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.baeldung.com/spring-security-oauth-principal-authorities-extractor"
+                      target="blank_"
+                      >Extracting User Info</a
+                    ><br />
+                    Baeldung - Extracting Principal and Authorities using Spring
+                    Security OAuth
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to understand the issues related to CORS and implement
+                  solutions to those issues
+                </h4>
+                <p><a id="CORS"></a></p>
+                <h5>Overview</h5>
+                <ul>
+                  <li>
+                    See the Github Repository
+                    <a
+                      href="https://github.com/LambdaSchool/java-safesampleemps.git"
+                      >https://github.com/LambdaSchool/java-safesampleemps.git</a
+                    >t for the code used in the objective.
+                  </li>
+                </ul>
+                <h3 id="software-needed">Software Needed</h3>
+                <ul>
+                  <li>Java Development Kit (JDK) - at least version 11</li>
+                  <li>JetBrains IntelliJ IDEA IDE</li>
+                  <li>Postman</li>
+                </ul>
+                <p>
+                  We are using the same computer, as our frontend client - think
+                  Postman, as the one where our API backend system resides. Same
+                  computer, same domain, same “origin”. Soon we will be
+                  deploying our API to the cloud. Ultimately this is what we are
+                  after, making our API available to others. When we deploy, the
+                  client accessing our API and our API backend will most likely
+                  be on different computers, different domains, different
+                  “origin”. We need to allow different origins to share, use the
+                  resources of our API backend. By default only clients and
+                  backends running on the same system can access each other. We
+                  need to allow <strong>C</strong>ross-<strong>O</strong>rigin
+                  <strong>R</strong>esource <strong>S</strong>haring, normally
+                  called <strong>CORS</strong>.
+                </p>
+                <p>
+                  We allow CORS, also referred to as preventing CORS errors, we
+                  can specific
+                </p>
+                <ul>
+                  <li>
+                    Which origins, domains can access our API.
+                    <ul>
+                      <li>
+                        Normally we will allow all origins to access our API.
+                        This is certainly true of all publicly facing APIs. For
+                        company internal APIs, you may wish to restrict which
+                        origins can access the API to only those within the
+                        company
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Which HTTP Methods will be allowed</li>
+                  <li>Which Access Control Headers will be allowed</li>
+                </ul>
+                <p>
+                  For this course, we are going to allow all origins using any
+                  HTTP Methods and using any Access Control Headers. We do this
+                  by taking advantage of the Spring Filter Chain which filters
+                  who has access to what on our API.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Let’s add The CORS Simple Filter to our
+                  <code class="highlighter-rouge">safesampleemps</code>
+                  application. Find the provided boilerplate code application
+                  <code class="highlighter-rouge">makesafeboilerplate</code> the
+                  configuration class named
+                  <code class="highlighter-rouge">SimpleCorsFilter</code>. The
+                  class is provided below for reference. Reading through the
+                  code and comments will give you a better understanding of what
+                  is happening. Add this class to your
+                  <code class="highlighter-rouge">safesampleemps</code>
+                  application under the
+                  <code class="highlighter-rouge">config</code> subpackage.
+                </p>
+                <pre><code class="language-JAVA">import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Component;
@@ -944,41 +1878,105 @@ public class SimpleCorsFilter
     }
 }
 </code></pre>
-<p>That is it. You now have CORS in place. I add this filtering class to every one of my API applications. This code allows all domains to access anything. Restrictions on who can access what are handled by the OAuth2 process. Comments are included how to go about restricting origins, HTTP Methods, and Access Control Headers.</p>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://spring.io/guides/gs/rest-service-cors/" target="blank_">Another Approach</a><br> Another Approach - Spring IO CORS</li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to understand how to implement a new user and logout endpoints</h4>
-<p><a id="Special_Endpoints"></a></p>
-<h5>Overview</h5>
-<p>Two special cases arise with user authentication. How does someone create their own user account and sign on all in one step? How does a user logout of the system? Let’s work through each of these scenarios and then code them!</p>
-<ul>
-<li>Creating their own account - Often websites contain an option for users to create their own accounts. This gives the user immediate access but with predefined access. Here is our plan:
-<ul>
-<li>The user will give us minimal information: name and password.</li>
-<li>The system will create an account for that user assuming one is not already created. The user will be assigned to the USER role.</li>
-<li>Within the same method, we will call the login endpoint that assigns access tokens.</li>
-<li>We will let the system assign an access token.</li>
-<li>Finally, we will return that access token.</li>
-</ul>
-</li>
-<li>Logging out - when a user no longer wishes to maintain access to the system, they can logout. To logout we remove the access token from the token store. If the access token is no longer available, it is no longer valid, and thus the user no longer has access. The access token we remove will be the one the authenticated user sends us when they access the logout endpoint. Let’s see how these look in code.</li>
-</ul>
-<h5>Follow Along</h5>
-<p>Let’s add these two endpoints to our code. We are continuing adding to our application safesampleemps-initial from the GitHub repository https://github.com/LambdaSchool/java-safesampleemps.git using our code from the last objective.</p>
-<h3 id="create-a-new-user">Create A New User</h3>
-<p>We need to expose the <code class="highlighter-rouge">findByName(String name)</code> method in the role repository. The role repository should now look like this:</p>
-<pre><code class="language-JAVA">public interface RoleRepository
+                <p>
+                  That is it. You now have CORS in place. I add this filtering
+                  class to every one of my API applications. This code allows
+                  all domains to access anything. Restrictions on who can access
+                  what are handled by the OAuth2 process. Comments are included
+                  how to go about restricting origins, HTTP Methods, and Access
+                  Control Headers.
+                </p>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://spring.io/guides/gs/rest-service-cors/"
+                      target="blank_"
+                      >Another Approach</a
+                    ><br />
+                    Another Approach - Spring IO CORS
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to understand how to implement a new user and logout
+                  endpoints
+                </h4>
+                <p><a id="Special_Endpoints"></a></p>
+                <h5>Overview</h5>
+                <p>
+                  Two special cases arise with user authentication. How does
+                  someone create their own user account and sign on all in one
+                  step? How does a user logout of the system? Let’s work through
+                  each of these scenarios and then code them!
+                </p>
+                <ul>
+                  <li>
+                    Creating their own account - Often websites contain an
+                    option for users to create their own accounts. This gives
+                    the user immediate access but with predefined access. Here
+                    is our plan:
+                    <ul>
+                      <li>
+                        The user will give us minimal information: name and
+                        password.
+                      </li>
+                      <li>
+                        The system will create an account for that user assuming
+                        one is not already created. The user will be assigned to
+                        the USER role.
+                      </li>
+                      <li>
+                        Within the same method, we will call the login endpoint
+                        that assigns access tokens.
+                      </li>
+                      <li>We will let the system assign an access token.</li>
+                      <li>Finally, we will return that access token.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Logging out - when a user no longer wishes to maintain
+                    access to the system, they can logout. To logout we remove
+                    the access token from the token store. If the access token
+                    is no longer available, it is no longer valid, and thus the
+                    user no longer has access. The access token we remove will
+                    be the one the authenticated user sends us when they access
+                    the logout endpoint. Let’s see how these look in code.
+                  </li>
+                </ul>
+                <h5>Follow Along</h5>
+                <p>
+                  Let’s add these two endpoints to our code. We are continuing
+                  adding to our application safesampleemps-initial from the
+                  GitHub repository
+                  https://github.com/LambdaSchool/java-safesampleemps.git using
+                  our code from the last objective.
+                </p>
+                <h3 id="create-a-new-user">Create A New User</h3>
+                <p>
+                  We need to expose the
+                  <code class="highlighter-rouge">findByName(String name)</code>
+                  method in the role repository. The role repository should now
+                  look like this:
+                </p>
+                <pre><code class="language-JAVA">public interface RoleRepository
         extends CrudRepository&lt;Role, Long&gt;
 {
     Role findByName(String name);
 }
 </code></pre>
-<p>We need a special user model to work with our incoming data. So under the subpackage <code class="highlighter-rouge">models</code>, create the class <code class="highlighter-rouge">UserMinimum</code>. This model does NOT get saved in the database and is only to get the user information in from the client for this endpoint. Specifically by using this model we receive our password in plain text which we will need to get an access token. Add the following code to the UserMinimum class.</p>
-<pre><code class="language-JAVA">public class UserMinimum
+                <p>
+                  We need a special user model to work with our incoming data.
+                  So under the subpackage
+                  <code class="highlighter-rouge">models</code>, create the
+                  class <code class="highlighter-rouge">UserMinimum</code>. This
+                  model does NOT get saved in the database and is only to get
+                  the user information in from the client for this endpoint.
+                  Specifically by using this model we receive our password in
+                  plain text which we will need to get an access token. Add the
+                  following code to the UserMinimum class.
+                </p>
+                <pre><code class="language-JAVA">public class UserMinimum
 {
     private String username;
     private String password;
@@ -1004,15 +2002,27 @@ public class SimpleCorsFilter
     }
 }
 </code></pre>
-<p>Under the controllers subpackage add a class called <code class="highlighter-rouge">Oauthendpoints</code>. Let’s build this class.</p>
-<p>The class is to be a RestController. So add the @RestController annotation.</p>
-<pre><code class="language-JAVA">@RestController
+                <p>
+                  Under the controllers subpackage add a class called
+                  <code class="highlighter-rouge">Oauthendpoints</code>. Let’s
+                  build this class.
+                </p>
+                <p>
+                  The class is to be a RestController. So add the
+                  @RestController annotation.
+                </p>
+                <pre><code class="language-JAVA">@RestController
 public class Oauthendpoints
 {
 }
 </code></pre>
-<p>Inside the body of the class, connect the class to the user and role repositories. Note: the TokenStore is needed for the logout method later in this objective. We should just add it now though!</p>
-<pre><code class="language-JAVA">    @Autowired
+                <p>
+                  Inside the body of the class, connect the class to the user
+                  and role repositories. Note: the TokenStore is needed for the
+                  logout method later in this objective. We should just add it
+                  now though!
+                </p>
+                <pre><code class="language-JAVA">    @Autowired
     RoleRepository rolerepos;
 
     @Autowired
@@ -1021,8 +2031,14 @@ public class Oauthendpoints
     @Autowired
     private TokenStore tokenStore;
 </code></pre>
-<p>Since the endpoint will be adding an access token to the token store and a new user to the database, the HTTP Method is a Post. The endpoint will both consume JSON, the new user to add, and produce JSON, the access token. So the headers will look like this:</p>
-<pre><code class="language-JAVA">    @PostMapping(value = "/createnewuser",
+                <p>
+                  Since the endpoint will be adding an access token to the token
+                  store and a new user to the database, the HTTP Method is a
+                  Post. The endpoint will both consume JSON, the new user to
+                  add, and produce JSON, the access token. So the headers will
+                  look like this:
+                </p>
+                <pre><code class="language-JAVA">    @PostMapping(value = "/createnewuser",
         consumes = {"application/json"},
         produces = {"application/json"})
     public ResponseEntity&lt;?&gt; addSelf(
@@ -1031,8 +2047,15 @@ public class Oauthendpoints
     {
     }
 </code></pre>
-<p>Verify that the client has sent us a username and password and that the username does not already exist. To see if the Strings we receive have values, we use the <code class="highlighter-rouge">isBlank()</code> method. <code class="highlighter-rouge">isBlank()</code> returns true if all that is in a String are whitespace characters.</p>
-<pre><code class="language-JAVA">    {
+                <p>
+                  Verify that the client has sent us a username and password and
+                  that the username does not already exist. To see if the
+                  Strings we receive have values, we use the
+                  <code class="highlighter-rouge">isBlank()</code> method.
+                  <code class="highlighter-rouge">isBlank()</code> returns true
+                  if all that is in a String are whitespace characters.
+                </p>
+                <pre><code class="language-JAVA">    {
         if (newinuser.getUsername().isBlank() || newinuser.getPassword().isBlank())
         {
             throw new EntityNotFoundException("Username and / or password cannot be blank");
@@ -1044,37 +2067,67 @@ public class Oauthendpoints
         }
     }
 </code></pre>
-<p>Add the user object to add to the database.</p>
-<pre><code class="language-JAVA">        User newuser = new User();
+                <p>Add the user object to add to the database.</p>
+                <pre><code class="language-JAVA">        User newuser = new User();
         newuser.setUsername(newinuser.getUsername());
         newuser.setPassword(newinuser.getPassword());
         newuser.addRole(rolerepos.findByName("USER"));
         newuser = userrepos.save(newuser);
 </code></pre>
-<p>Now let’s create the location header just like we always do when we add a new row to the database. However, this time, we must state the URI explicitly as we cannot simply add to the existing URI. The location header’s URI is not derived from the current request, so we have to do a little more work than normal.</p>
-<pre><code class="language-JAVA">        HttpHeaders responseHeaders = new HttpHeaders();
+                <p>
+                  Now let’s create the location header just like we always do
+                  when we add a new row to the database. However, this time, we
+                  must state the URI explicitly as we cannot simply add to the
+                  existing URI. The location header’s URI is not derived from
+                  the current request, so we have to do a little more work than
+                  normal.
+                </p>
+                <pre><code class="language-JAVA">        HttpHeaders responseHeaders = new HttpHeaders();
         URI newUserURI = ServletUriComponentsBuilder.fromUriString(httpServletRequest.getServerName() + ":" + httpServletRequest.getLocalPort() + "/users/user/{userId}")
             .buildAndExpand(newuser.getUserid())
             .toUri();
         responseHeaders.setLocation(newUserURI);
 </code></pre>
-<p>Now let’s get an access token. To get the access token we are going to act like an API client and call the endpoint that authenticates users. We set up the endpoint using a RestTemplate, invoke the endpoint, and return the access token!</p>
-<p>You can try out the new endpoint by going to the endpoint http://localhost:2019/createnewuser using the following request body</p>
-<pre><code class="language-JSON">{
+                <p>
+                  Now let’s get an access token. To get the access token we are
+                  going to act like an API client and call the endpoint that
+                  authenticates users. We set up the endpoint using a
+                  RestTemplate, invoke the endpoint, and return the access
+                  token!
+                </p>
+                <p>
+                  You can try out the new endpoint by going to the endpoint
+                  http://localhost:2019/createnewuser using the following
+                  request body
+                </p>
+                <pre><code class="language-JSON">{
     "username": "stumps",
     "password": "ILuvM4th!"
 }
 </code></pre>
-<p>The user stumps will be created with a role of USER. stumps’ access token will be returned with a status of CREATED.</p>
-<h3 id="logout-a-user">Logout a user</h3>
-<p>To logout a user, a user will access the <code class="highlighter-rouge">/logout</code> endpoint using their access token. We will find the access token in the token store and remove it. Create another method in the <code class="highlighter-rouge">Oauthendpoints</code> class using the following code.</p>
-<pre><code class="language-JAVA">    @GetMapping(value = "/logout")
+                <p>
+                  The user stumps will be created with a role of USER. stumps’
+                  access token will be returned with a status of CREATED.
+                </p>
+                <h3 id="logout-a-user">Logout a user</h3>
+                <p>
+                  To logout a user, a user will access the
+                  <code class="highlighter-rouge">/logout</code> endpoint using
+                  their access token. We will find the access token in the token
+                  store and remove it. Create another method in the
+                  <code class="highlighter-rouge">Oauthendpoints</code> class
+                  using the following code.
+                </p>
+                <pre><code class="language-JAVA">    @GetMapping(value = "/logout")
     public ResponseEntity&lt;?&gt; logoutSelf(HttpServletRequest request)
     {
     }
 </code></pre>
-<p>The body of this GET request reads the access token from the request header, finds it in the token store and removes it.</p>
-<pre><code class="language-JAVA">        String authHeader = request.getHeader("Authorization");
+                <p>
+                  The body of this GET request reads the access token from the
+                  request header, finds it in the token store and removes it.
+                </p>
+                <pre><code class="language-JAVA">        String authHeader = request.getHeader("Authorization");
         if (authHeader != null)
         {
             // find the token
@@ -1088,315 +2141,572 @@ public class Oauthendpoints
 
         return new ResponseEntity&lt;&gt;(HttpStatus.OK);
 </code></pre>
-<p>To test this, sign on as any user. Use that users access token to go to the endpoint http://localhost:2019/logout. Now try to access a secured endpoint with that access token. You will get an invalid access token error message! The user is no longer authenticated to the application!</p>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to use Postman to manually test Web APIs using Authentication</h4>
-<p><a id="Using_Authentication_in_Postman"></a></p>
-<h5>Overview</h5>
-<ul>
-<li>See the Github Repository <a href="https://github.com/LambdaSchool/java-safesampleemps.git">https://github.com/LambdaSchool/java-safesampleemps.git</a> for the code used in the objective.
-<h3 id="software-needed">Software Needed</h3>
-</li>
-<li>Java Development Kit (JDK) - at least version 11</li>
-<li>JetBrains IntelliJ IDEA IDE</li>
-<li>Postman</li>
-</ul>
-<p>We have already seen how to use <strong>Postman</strong> to retrieve data from an API system. We have seen how to use Postman to manipulate data. We now need to know how to authenticate a user through Postman so we can access all the other cool endpoints!</p>
-<h5>Follow Along</h5>
-<p>We need a backend system, an API, to work with. Let’s use the one we have been working on, the one from the Github Repository <a href="https://github.com/LambdaSchool/java-safesampleemps.git">https://github.com/LambdaSchool/java-safesampleemps.git</a>. If you have not been updating the safesampleemps application, you can always clone the repository and use the final version of the application containing all the chances we added during this module.</p>
-<p>The authentication process is the same whether you are doing a POST, GET, PUT, PATCH, or DELETE.</p>
-<ul>
-<li>Remember in a previous objective in this Module, we added SeedData to our application. One of the Users we added was BarnBarn with a password of password. BarnBarn has a role of ADMIN. Let’s access an endpoint that requires us to be authenticated and let’s use BarnBarn as the authenticated user</li>
-<li>Launch Postman</li>
-<li>Get a blank tab in Postman</li>
-<li>Let’s surf to an endpoint that requires authentication. We will surf to the endpoint <a href="http://localhost:2019/users/getusername">http://localhost:2019/users/getusername</a> without authenticating. We get a standard authentication error message like the following:</li>
-</ul>
-<pre><code class="language-JSON">{
+                <p>
+                  To test this, sign on as any user. Use that users access token
+                  to go to the endpoint http://localhost:2019/logout. Now try to
+                  access a secured endpoint with that access token. You will get
+                  an invalid access token error message! The user is no longer
+                  authenticated to the application!
+                </p>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to use Postman to manually test Web APIs using
+                  Authentication
+                </h4>
+                <p><a id="Using_Authentication_in_Postman"></a></p>
+                <h5>Overview</h5>
+                <ul>
+                  <li>
+                    See the Github Repository
+                    <a
+                      href="https://github.com/LambdaSchool/java-safesampleemps.git"
+                      >https://github.com/LambdaSchool/java-safesampleemps.git</a
+                    >
+                    for the code used in the objective.
+                    <h3 id="software-needed">Software Needed</h3>
+                  </li>
+                  <li>Java Development Kit (JDK) - at least version 11</li>
+                  <li>JetBrains IntelliJ IDEA IDE</li>
+                  <li>Postman</li>
+                </ul>
+                <p>
+                  We have already seen how to use <strong>Postman</strong> to
+                  retrieve data from an API system. We have seen how to use
+                  Postman to manipulate data. We now need to know how to
+                  authenticate a user through Postman so we can access all the
+                  other cool endpoints!
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  We need a backend system, an API, to work with. Let’s use the
+                  one we have been working on, the one from the Github
+                  Repository
+                  <a
+                    href="https://github.com/LambdaSchool/java-safesampleemps.git"
+                    >https://github.com/LambdaSchool/java-safesampleemps.git</a
+                  >. If you have not been updating the safesampleemps
+                  application, you can always clone the repository and use the
+                  final version of the application containing all the chances we
+                  added during this module.
+                </p>
+                <p>
+                  The authentication process is the same whether you are doing a
+                  POST, GET, PUT, PATCH, or DELETE.
+                </p>
+                <ul>
+                  <li>
+                    Remember in a previous objective in this Module, we added
+                    SeedData to our application. One of the Users we added was
+                    BarnBarn with a password of password. BarnBarn has a role of
+                    ADMIN. Let’s access an endpoint that requires us to be
+                    authenticated and let’s use BarnBarn as the authenticated
+                    user
+                  </li>
+                  <li>Launch Postman</li>
+                  <li>Get a blank tab in Postman</li>
+                  <li>
+                    Let’s surf to an endpoint that requires authentication. We
+                    will surf to the endpoint
+                    <a href="http://localhost:2019/users/getusername"
+                      >http://localhost:2019/users/getusername</a
+                    >
+                    without authenticating. We get a standard authentication
+                    error message like the following:
+                  </li>
+                </ul>
+                <pre><code class="language-JSON">{
     "error": "unauthorized",
     "error_description": "Full authentication is required to access this resource"
 }
 </code></pre>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/postman_notauthenticated.png" alt="Postman Not Authenticated"></p>
-<p>Now let’s get an access token. Let’s authenticate our user BarnBarn!</p>
-<ul>
-<li>Get a blank tab in Postman</li>
-<li>Goto the <code class="highlighter-rouge">Authorization</code> Tab
-<ul>
-<li>Under Type, select <code class="highlighter-rouge">Oauth 2.0</code>
-</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/postman_authentication_tab.png" alt="Postman Authorization Tab"></p>
-<ul>
-<li>In the next screen, click on the Get New Access Token button</li>
-</ul>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/postman_get_token.png" alt="Postman New Access Token"></p>
-<ul>
-<li>Fill in the information in the Get New Access Token window
-<ul>
-<li>
-<strong>Token Name</strong>: The token gets saved in Postman for future use. This is the name under which it will be saved.</li>
-<li>
-<strong>Grant Type</strong>: We are using the <em>Password Credentials</em> grant type. Select this and the rest of the fields will adjust as to how they are in the window.</li>
-<li>
-<strong>Access Token URL</strong>: In our Authorization Server Configuration, we set our endpoint to get an access token to be <code class="highlighter-rouge">/login</code>, so our Access Token URL becomes <a href="http://localhost:2019/login">http://localhost:2019/login</a>
-</li>
-<li>
-<strong>Username</strong>: the username, user id, of the user requesting authentication</li>
-<li>
-<strong>Password</strong>: the password of the user requesting authentication</li>
-<li>
-<strong>Client ID</strong>: in our case <code class="highlighter-rouge">lambda-client</code>
-</li>
-<li>
-<strong>Client Secret</strong>: in our case <code class="highlighter-rouge">lambda-secret</code>
-</li>
-<li>
-<strong>Scope</strong>: we leave blank</li>
-<li>
-<strong>Client Authentication</strong>: It should default to <em>Send as Basic Auth header</em>
-</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/postman_get_token_window.png" alt="Postman Get Token Window"></p>
-<ul>
-<li>Click on the button <em>Request Token</em>
-</li>
-<li>You are presented with a window that contains information including the access token.</li>
-<li>Click the button <em>Use Token</em>
-</li>
-</ul>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/postman_the_access_token.png" alt="Postman Access Token"></p>
-<ul>
-<li>We can see the access token in the Access Token box. We are able to surf to a protected endpoint and get our information!</li>
-</ul>
-<p><img src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/postman_success.png" alt="Postman Success"></p>
-<ul>
-<li>We can keep using this token to access protected endpoints as BarnBarn as long as the application is running.
-<ul>
-<li>We copy the access token, in our example <code class="highlighter-rouge">e343db5d-9dd1-40b1-90bb-1d12b4d4b63d</code>.</li>
-<li>We get a new Postman tab.</li>
-<li>We select the Authorization and paste the token into the Access Token box.</li>
-<li>We can now access protected endpoints as BarnBarn!</li>
-</ul>
-</li>
-</ul>
-<h5>Challenge</h5>
-<p>Sign in as user <code class="highlighter-rouge">cinnamon</code> with a password of <code class="highlighter-rouge">ILuvM4th!</code>. cinnamon is the role of USER and so can only access endpoints starting with /employees. Surf to the following endpoints and notice the results</p>
-<ul>
-<li>A route where cinnamon is denied access <a href="http://localhost:2019/users/getusername">http://localhost:2019/users/getusername</a>
-</li>
-<li>A route cinnamon can access <a href="http://localhost:2019/employees/employees">http://localhost:2019/employees/employees</a>
-</li>
-</ul>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://www.postman.com/" target="blank_">Postman Homepage</a><br> Postman Homepage</li>
-<li>
-<a href="https://learning.postman.com/" target="blank_">Postman Learning Center</a><br> Postman Learning Center</li>
-<li>
-<a href="https://insomnia.rest/" target="blank_">Insomnia</a><br> Popular Postman Competitor - Insomnia</li>
-</ul>
-<hr>
-<h2>
-<a id="guided-project" class="anchor" href="#guided-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Guided Project</h2>
-<h3>java-oauth2</h3>
-<a target="_blank" href="https://github.com/LambdaSchool/java-oauth2.git">GitHub Repo</a>
-<hr>
-<h2 class="display-4">
-<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
-<ul class="list-group">
-<li class="list-group-item">
-<h5><a target="_blank" href="https://github.com/LambdaSchool/java-shoppingcart.git">java-shoppingcart</a></h5>
-</li>
-</ul>
-<h2 class="display-4">
-<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
-<h3 class="display-5">Class Recordings</h3>
-<p class="lead">You can use class recordings to help you master the material.</p>
-<div>
-<ul class="list-group list-group-flush">
-<li class="list-group-item">
-<strong><a target="_blank" href="https://youtu.be/N1FluKULtHU">Java OAuth2 for WEB33 with John Mitchell</a></strong>
-</li>
-<li class="list-group-item">
-<a href="/archive/WEB4Java/module/rececDV2OMIUcY2eH">All previous recordings</a>
-</li>
-</ul>
-</div>
-<h3 class="display-5">Demonstrate Mastery</h3>
-<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
-<ul>
-<li>Objective challenge: <p>Sign in as user <code class="highlighter-rouge">cinnamon</code> with a password of <code class="highlighter-rouge">ILuvM4th!</code>. cinnamon is the role of USER and so can only access endpoints starting with /employees. Surf to the following endpoints and notice the results</p>
-<ul>
-<li>A route where cinnamon is denied access <a href="http://localhost:2019/users/getusername">http://localhost:2019/users/getusername</a>
-</li>
-<li>A route cinnamon can access <a href="http://localhost:2019/employees/employees">http://localhost:2019/employees/employees</a>
-</li>
-</ul>
-</li>
-<li>Guided Project: java-oauth2</li>
-<li>Project: java-shoppingcart</li>
-</ul>
-</div>
-</div>
-</div>
-</main>
-</div>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/postman_notauthenticated.png"
+                    alt="Postman Not Authenticated"
+                  />
+                </p>
+                <p>
+                  Now let’s get an access token. Let’s authenticate our user
+                  BarnBarn!
+                </p>
+                <ul>
+                  <li>Get a blank tab in Postman</li>
+                  <li>
+                    Goto the
+                    <code class="highlighter-rouge">Authorization</code> Tab
+                    <ul>
+                      <li>
+                        Under Type, select
+                        <code class="highlighter-rouge">Oauth 2.0</code>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/postman_authentication_tab.png"
+                    alt="Postman Authorization Tab"
+                  />
+                </p>
+                <ul>
+                  <li>
+                    In the next screen, click on the Get New Access Token button
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/postman_get_token.png"
+                    alt="Postman New Access Token"
+                  />
+                </p>
+                <ul>
+                  <li>
+                    Fill in the information in the Get New Access Token window
+                    <ul>
+                      <li>
+                        <strong>Token Name</strong>: The token gets saved in
+                        Postman for future use. This is the name under which it
+                        will be saved.
+                      </li>
+                      <li>
+                        <strong>Grant Type</strong>: We are using the
+                        <em>Password Credentials</em> grant type. Select this
+                        and the rest of the fields will adjust as to how they
+                        are in the window.
+                      </li>
+                      <li>
+                        <strong>Access Token URL</strong>: In our Authorization
+                        Server Configuration, we set our endpoint to get an
+                        access token to be
+                        <code class="highlighter-rouge">/login</code>, so our
+                        Access Token URL becomes
+                        <a href="http://localhost:2019/login"
+                          >http://localhost:2019/login</a
+                        >
+                      </li>
+                      <li>
+                        <strong>Username</strong>: the username, user id, of the
+                        user requesting authentication
+                      </li>
+                      <li>
+                        <strong>Password</strong>: the password of the user
+                        requesting authentication
+                      </li>
+                      <li>
+                        <strong>Client ID</strong>: in our case
+                        <code class="highlighter-rouge">lambda-client</code>
+                      </li>
+                      <li>
+                        <strong>Client Secret</strong>: in our case
+                        <code class="highlighter-rouge">lambda-secret</code>
+                      </li>
+                      <li><strong>Scope</strong>: we leave blank</li>
+                      <li>
+                        <strong>Client Authentication</strong>: It should
+                        default to <em>Send as Basic Auth header</em>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/postman_get_token_window.png"
+                    alt="Postman Get Token Window"
+                  />
+                </p>
+                <ul>
+                  <li>Click on the button <em>Request Token</em></li>
+                  <li>
+                    You are presented with a window that contains information
+                    including the access token.
+                  </li>
+                  <li>Click the button <em>Use Token</em></li>
+                </ul>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/postman_the_access_token.png"
+                    alt="Postman Access Token"
+                  />
+                </p>
+                <ul>
+                  <li>
+                    We can see the access token in the Access Token box. We are
+                    able to surf to a protected endpoint and get our
+                    information!
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    src="https://lambdaschool.github.io/java-curriculum-assets/Sprint%2012%20-%20Java%20Frameworks/Module%202%20-%20JX%20Java%20-%20User%20Authentication/assets/postman_success.png"
+                    alt="Postman Success"
+                  />
+                </p>
+                <ul>
+                  <li>
+                    We can keep using this token to access protected endpoints
+                    as BarnBarn as long as the application is running.
+                    <ul>
+                      <li>
+                        We copy the access token, in our example
+                        <code class="highlighter-rouge"
+                          >e343db5d-9dd1-40b1-90bb-1d12b4d4b63d</code
+                        >.
+                      </li>
+                      <li>We get a new Postman tab.</li>
+                      <li>
+                        We select the Authorization and paste the token into the
+                        Access Token box.
+                      </li>
+                      <li>
+                        We can now access protected endpoints as BarnBarn!
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <h5>Challenge</h5>
+                <p>
+                  Sign in as user
+                  <code class="highlighter-rouge">cinnamon</code> with a
+                  password of <code class="highlighter-rouge">ILuvM4th!</code>.
+                  cinnamon is the role of USER and so can only access endpoints
+                  starting with /employees. Surf to the following endpoints and
+                  notice the results
+                </p>
+                <ul>
+                  <li>
+                    A route where cinnamon is denied access
+                    <a href="http://localhost:2019/users/getusername"
+                      >http://localhost:2019/users/getusername</a
+                    >
+                  </li>
+                  <li>
+                    A route cinnamon can access
+                    <a href="http://localhost:2019/employees/employees"
+                      >http://localhost:2019/employees/employees</a
+                    >
+                  </li>
+                </ul>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a href="https://www.postman.com/" target="blank_"
+                      >Postman Homepage</a
+                    ><br />
+                    Postman Homepage
+                  </li>
+                  <li>
+                    <a href="https://learning.postman.com/" target="blank_"
+                      >Postman Learning Center</a
+                    ><br />
+                    Postman Learning Center
+                  </li>
+                  <li>
+                    <a href="https://insomnia.rest/" target="blank_">Insomnia</a
+                    ><br />
+                    Popular Postman Competitor - Insomnia
+                  </li>
+                </ul>
+                <hr />
+                <h2>
+                  <a
+                    id="guided-project"
+                    class="anchor"
+                    href="#guided-project"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Guided Project
+                </h2>
+                <h3>java-oauth2</h3>
+                <a
+                  target="_blank"
+                  href="https://github.com/LambdaSchool/java-oauth2.git"
+                  >GitHub Repo</a
+                >
+                <hr />
+                <h2 class="display-4">
+                  <a
+                    id="project"
+                    class="anchor"
+                    href="#project"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Project
+                </h2>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <h5>
+                      <a
+                        target="_blank"
+                        href="https://github.com/LambdaSchool/java-shoppingcart.git"
+                        >java-shoppingcart</a
+                      >
+                    </h5>
+                  </li>
+                </ul>
+                <h2 class="display-4">
+                  <a
+                    id="review"
+                    class="anchor"
+                    href="#review"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Review
+                </h2>
+                <h3 class="display-5">Class Recordings</h3>
+                <p class="lead">
+                  You can use class recordings to help you master the material.
+                </p>
+                <div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong
+                        ><a target="_blank" href="https://youtu.be/N1FluKULtHU"
+                          >Java OAuth2 for WEB33 with John Mitchell</a
+                        ></strong
+                      >
+                    </li>
+                    <li class="list-group-item">
+                      <a href="/archive/WEB4Java/module/rececDV2OMIUcY2eH"
+                        >All previous recordings</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <h3 class="display-5">Demonstrate Mastery</h3>
+                <p>
+                  To demonstrate mastery of this module, you need to complete
+                  and pass a code review on each of the following:
+                </p>
+                <ul>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      Sign in as user
+                      <code class="highlighter-rouge">cinnamon</code> with a
+                      password of
+                      <code class="highlighter-rouge">ILuvM4th!</code>. cinnamon
+                      is the role of USER and so can only access endpoints
+                      starting with /employees. Surf to the following endpoints
+                      and notice the results
+                    </p>
+                    <ul>
+                      <li>
+                        A route where cinnamon is denied access
+                        <a href="http://localhost:2019/users/getusername"
+                          >http://localhost:2019/users/getusername</a
+                        >
+                      </li>
+                      <li>
+                        A route cinnamon can access
+                        <a href="http://localhost:2019/employees/employees"
+                          >http://localhost:2019/employees/employees</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Guided Project: java-oauth2</li>
+                  <li>Project: java-shoppingcart</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'UA-80850900-4');
-</script>
-<script type="text/javascript">
-  function getDomain() {
-    const domainName = window.location.hostname.split('.')[1];
-    return `${domainName}.com`;
-  }
-</script>
-<script src="" integrity="" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
-<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
-<script type="text/javascript">
-  SimpleJekyllSearch.init({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    dataSource: '/search.json',
-    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Java - User Authentication">{title}</a></li>',
-    noResultsText: '',
-    limit: 10,
-    fuzzy: true,
-  })
-</script>
-<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
-  if (window.attachEvent) {
-    window.attachEvent('onload', verifySignedIn);
-  } else {
-    if (window.onload) {
-      var currentOnLoadFn = window.onload;
-      var newOnLoadFn = function (evt) {
-        currentOnLoadFn(evt);
-        verifySignedIn();
-      };
-      window.onload = newOnLoadFn;
-    } else {
-      window.onload = verifySignedIn;
-    }
-  }
-
-  function verifySignedIn() {
-    if (isPagePublic()) {
-      return showPageContents();
-    }
-
-    window.__user = null;
-    isSignedIn().then((user) => {
-      window.__user = user;
-
-      if (!user.signedIn) {
-        redirectToSignIn();
-      } else if (!user.student && !window.__openToAdmissions) {
-        showUnauthorizedMessage();
-      } else {
-        showPageContents();
-      }
-    });
-  }
-
-  function isPagePublic() {
-    const openCourses = [
-      'and-pre',
-      'ds-pre',
-      'fsw-pre',
-      'help',
-      'ios-pre',
-    ];
-
-    const openPages = [
-      'cs-and',
-      'cs-fsw',
-      'cs-ios',
-      'cr',
-      'ds',
-      'jx',
-      'p4s',
-      'ux',
-    ];
-
-    const pathParts = window.location.pathname.split('/');
-    const courseName = pathParts[1];
-    const pageName = pathParts[pathParts.length - 1];
-
-    return openCourses.includes(courseName) || openPages.includes(pageName);
-  }
-
-  function isSignedIn() {
-    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
-
-    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
-
-    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
-      .then((response) => response.text())
-      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
-      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
-      .catch((error) => {});
-  }
-
-  function redirectToSignIn() {
-    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
-    const redirectMessage = document.querySelector('#redirect-message');
-    redirectMessage.style.display = "block";
-    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
-    window.location = signInUrl;
-  }
-
-  function showPageContents() {
-    document.querySelector('#content-wrapper').style.visibility = 'visible';
-  }
-
-  function showUnauthorizedMessage() {
-    document.querySelector('#unauthorized-message').style.display = 'block';
-  }
-
-  function getAuthBaseUrl() {
-    const domain = getDomain();
-    const authBaseUrl = `https://auth.${domain}`;
-    return authBaseUrl;
-  }
-</script><script src="/assets/js/docs.min.js"></script><script>
-  var MathJax = {
-    tex: {
-      inlineMath: [['$$', '$$'], ['\[', '\])']]
-    },
-    "HTML-CSS": {
-      styles: {
-        ".MathJax span": {
-          color: "#000000"
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
         }
-      }
-    }
-  }
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<script>
-  handleExternalLinks();
+        gtag("js", new Date());
 
-  function handleExternalLinks() {
-    const domain = getDomain();
-    const links = document.querySelectorAll('a');
-    return links.forEach((link) => {
-      if (!link.host.includes(domain)) link.target = '_blank';
-    })
-  };
-</script>
-</div>
-</body>
+        gtag("config", "UA-80850900-4");
+      </script>
+      <script type="text/javascript">
+        function getDomain() {
+          const domainName = window.location.hostname.split(".")[1];
+          return `${domainName}.com`;
+        }
+      </script>
+      <script src="" integrity="" crossorigin="anonymous"></script>
+      <script>
+        window.jQuery ||
+          document.write(
+            '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>'
+          );
+      </script>
+      <script
+        src="/assets/js/vendor/popper.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="/dist/js/bootstrap.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script src="/assets/js/activate.js"></script>
+      <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        SimpleJekyllSearch.init({
+          searchInput: document.getElementById("search-input"),
+          resultsContainer: document.getElementById("results-container"),
+          dataSource: "/search.json",
+          searchResultTemplate:
+            '<li class="list-group-item"><a href="{url}" title="Java - User Authentication">{title}</a></li>',
+          noResultsText: "",
+          limit: 10,
+          fuzzy: true,
+        });
+      </script>
+      <script src="/assets/js/mermaid.min.js"></script>
+      <script type="text/javascript">
+        if (window.attachEvent) {
+          window.attachEvent("onload", verifySignedIn);
+        } else {
+          if (window.onload) {
+            var currentOnLoadFn = window.onload;
+            var newOnLoadFn = function (evt) {
+              currentOnLoadFn(evt);
+              verifySignedIn();
+            };
+            window.onload = newOnLoadFn;
+          } else {
+            window.onload = verifySignedIn;
+          }
+        }
+
+        function verifySignedIn() {
+          if (isPagePublic()) {
+            return showPageContents();
+          }
+
+          window.__user = null;
+          isSignedIn().then((user) => {
+            window.__user = user;
+
+            if (!user.signedIn) {
+              redirectToSignIn();
+            } else if (!user.student && !window.__openToAdmissions) {
+              showUnauthorizedMessage();
+            } else {
+              showPageContents();
+            }
+          });
+        }
+
+        function isPagePublic() {
+          const openCourses = [
+            "and-pre",
+            "ds-pre",
+            "fsw-pre",
+            "help",
+            "ios-pre",
+          ];
+
+          const openPages = [
+            "cs-and",
+            "cs-fsw",
+            "cs-ios",
+            "cr",
+            "ds",
+            "jx",
+            "p4s",
+            "ux",
+          ];
+
+          const pathParts = window.location.pathname.split("/");
+          const courseName = pathParts[1];
+          const pageName = pathParts[pathParts.length - 1];
+
+          return (
+            openCourses.includes(courseName) || openPages.includes(pageName)
+          );
+        }
+
+        function isSignedIn() {
+          const isDeployPreview =
+            window.location.hostname.startsWith("deploy-preview") &&
+            window.location.hostname.endsWith("netlify.com");
+
+          if (isDeployPreview)
+            return Promise.resolve({ signedIn: true, student: true });
+
+          return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: "include" })
+            .then((response) => response.text())
+            .then((userAsText) => (userAsText ? JSON.parse(userAsText) : null))
+            .then((userData) => ({
+              signedIn: Boolean(userData),
+              student: Boolean(userData && userData.airtableId),
+              id: userData ? userData.id : null,
+              email: userData ? userData.email : null,
+            }))
+            .catch((error) => {});
+        }
+
+        function redirectToSignIn() {
+          const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(
+            window.location.href
+          )}&reason=auth_required`;
+          const redirectMessage = document.querySelector("#redirect-message");
+          redirectMessage.style.display = "block";
+          redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`;
+          window.location = signInUrl;
+        }
+
+        function showPageContents() {
+          document.querySelector("#content-wrapper").style.visibility =
+            "visible";
+        }
+
+        function showUnauthorizedMessage() {
+          document.querySelector("#unauthorized-message").style.display =
+            "block";
+        }
+
+        function getAuthBaseUrl() {
+          const domain = getDomain();
+          const authBaseUrl = `https://auth.${domain}`;
+          return authBaseUrl;
+        }
+      </script>
+      <script src="/assets/js/docs.min.js"></script>
+      <script>
+        var MathJax = {
+          tex: {
+            inlineMath: [
+              ["$$", "$$"],
+              ["\[", "\])"],
+            ],
+          },
+          "HTML-CSS": {
+            styles: {
+              ".MathJax span": {
+                color: "#000000",
+              },
+            },
+          },
+        };
+      </script>
+      <script
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+        type="text/javascript"
+      ></script>
+      <script>
+        handleExternalLinks();
+
+        function handleExternalLinks() {
+          const domain = getDomain();
+          const links = document.querySelectorAll("a");
+          return links.forEach((link) => {
+            if (!link.host.includes(domain)) link.target = "_blank";
+          });
+        }
+      </script>
+    </div>
+  </body>
 </html>

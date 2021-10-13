@@ -16,40 +16,40 @@ You must be a Lambda School student to view this page.
 
 <a href="/webannex/sprint/recfwZvI7QhMa7xbG" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
--   [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
--   [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
+- [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
+- [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
+- [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
 
 <a href="/webannex/sprint/recIXiQgpgMdJ81ms" class="bd-toc-link">2.  Advanced CSS</a>
 
--   [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
--   [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
--   [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
--   [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
+- [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
+- [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
+- [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
+- [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
 
 <a href="/webannex/sprint/recclZwJxMU8kUngT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
--   [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
--   [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
--   [Classes](/webannex/module/recyS588eOvVUKAMc/)
+- [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
+- [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
+- [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
+- [Classes](/webannex/module/recyS588eOvVUKAMc/)
 
 <a href="/webannex/sprint/recRT8JKvbTiGaosk" class="bd-toc-link">4.  Single Page Applications</a>
 
--   [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
--   [React Router II](/webannex/module/recYkF1FDilIedmwX/)
--   [Form Management](/webannex/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
+- [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
+- [React Router II](/webannex/module/recYkF1FDilIedmwX/)
+- [Form Management](/webannex/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
 
 <a href="/webannex/sprint/recozTHaHJe6L1ThN" class="bd-toc-link">5.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
--   [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
--   [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
--   [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
+- [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
+- [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
+- [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
 
-------------------------------------------------------------------------
+---
 
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjM1IiB2aWV3Ym94PSIwIDAgNzU2IDE5NyIgZmlsbD0iI2VjMzk0NCI+PGc+PHBhdGggZD0iTTI5Mi45LDEyNi42aC02LjdjLTksMC0xMi42LTEuOS0xMi42LTkuNVY0OC41YzAtNy43LDEuNi04LjYsMTEuNC05Ljd2LTQuNWgtNDEuM3Y0LjUgYzkuOCwxLjEsMTEuNCwxLjksMTEuNCw5Ljd2NjkuM2MwLDcuNy0xLjYsOC42LTExLjQsOS43djQuNWg3My43bDQuOS0yOS40aC00LjRDMzA4LjUsMTE5LjYsMzAzLjksMTI2LjYsMjkyLjksMTI2LjZ6Ij48L3BhdGg+PHBhdGggZD0iTTM4NS41LDEyMS4xVjc5LjNjMC0xNS44LTkuNC0yMi40LTI2LjYtMjIuNGMtMTUsMC0yNi44LDYuNi0yNi44LDE5LjNjMCwyLjQsMC4yLDMuMywwLjgsNWgxNi42IGMtMC41LTItMC43LTUtMC43LTcuNWMwLTkuNiwzLjYtMTIuNCw5LjQtMTIuNGM2LjQsMCw5LjcsMiw5LjcsMTQuNHYxMS4ybC0yMC44LDcuN2MtMTAuNiw0LjEtMTkuMyw4LjgtMTkuMywyMC43IGMwLDEwLjksNy41LDE3LjgsMTguNiwxNy44YzkuOSwwLDE3LjQtNi4yLDIxLjktMTIuMWwwLjEtMC4xbDAsMFYxMzJoMjZ2LTQuNEMzODcuNywxMjcuMSwzODUuNSwxMjYuMiwzODUuNSwxMjEuMXogTTM2OCwxMTcuOCBjLTQuNCwzLjMtNy42LDUuMy0xMiw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNFYxMTcuOEwzNjgsMTE3Ljh6Ij48L3BhdGg+PHBhdGggZD0iTTUxNC40LDEyMVY3OS41YzAtMTQuOC02LTIyLjQtMTguNy0yMi40Yy0xMS41LDAtMTkuNCw2LjYtMjUuNSwxMy45Yy0xLjgtOS42LTcuNy0xMy45LTE3LjgtMTMuOSBjLTExLjQsMC0xOC43LDYuMi0yNC44LDEzLjZWNTdoLTIuM2wtMjMuOCw3LjR2Mi40bDguNiw1djQ5LjRjMCw1LTIuMSw2LjEtOC45LDYuNHY0LjRoMzUuMXYtNC40Yy02LjctMC4zLTguNy0xLjMtOC43LTYuNHYtNDcgYzQuNy0zLjYsOS41LTYuNSwxNS41LTYuNWM3LjYsMCwxMC41LDQuMiwxMC41LDEyLjd2NDAuOGMwLDUtMS45LDYuMS04LjcsNi40djQuNGwzNC44LDB2LTQuNGMtNi43LTAuMy04LjYtMS4zLTguNi02LjR2LTQ3IGM0LjctMy42LDkuNS02LjUsMTUuNS02LjVjNy42LDAsMTAuNSw0LjIsMTAuNSwxMi43bC0wLjEsNDAuNWMwLDUtMS44LDYuNC04LjYsNi43bDAsNC40aDM1LjF2LTQuNCBDNTE2LjcsMTI3LjQsNTE0LjQsMTI2LjEsNTE0LjQsMTIxeiI+PC9wYXRoPjxwYXRoIGQ9Ik01NzMuMiw1Ny4zYy0xMSwwLTE4LjUsNS43LTIzLjQsMTIuOFYyMi45aC0yLjdsLTIzLjQsNi44djIuNWw4LjYsNC41VjEzMmgyLjlsOC0zLjVjNS44LDMuMywxMi4zLDUsMjAuMiw1IGMyMC44LDAsMzcuNC0xNS44LDM3LjQtNDIuNkM2MDAuOSw2OS45LDU5MC40LDU3LjMsNTczLjIsNTcuM3ogTTU2My40LDEyOC43Yy01LjQsMC0xMC4zLTIuNC0xMy43LTcuOVY3My42IGMzLjQtMy40LDguNS01LjcsMTMuNS01LjdjMTMuOSwwLDIwLDEyLjgsMjAsMjkuNUM1ODMuMywxMTQuNyw1NzUuOCwxMjguNSw1NjMuNCwxMjguN3oiPjwvcGF0aD48cGF0aCBkPSJNNjc3LDEyMS4yVjIyLjhoLTIuNkw2NTEsMjkuNlYzMmw4LjYsNC41djI1LjdjLTMuNC0zLjItOC44LTUuMS0xNS41LTUuMWMtMTkuOSwwLTM1LjIsMTUuMy0zNS4yLDQxLjMgYzAsMjAuNywxMS4yLDM0LjYsMjguMSwzNC42YzkuOCwwLDE3LTUuMywyMi42LTEzLjF2MC45VjEzMmgyNi4zbDAtNC40QzY3OS4xLDEyNy4zLDY3NywxMjYuMyw2NzcsMTIxLjJ6IE02NTkuNiwxMTcuMSBMNjU5LjYsMTE3LjFjLTMuNCwzLjQtOCw1LjEtMTMuMiw1LjFjLTEzLjIsMC0yMC40LTEyLjgtMjAuNC0yOS44YzAtMTcuOCw3LjMtMjkuMiwxOS41LTI5LjJjOC43LDAsMTQuMSw2LjksMTQuMSwxOC4zIEw2NTkuNiwxMTcuMXoiPjwvcGF0aD48cGF0aCBkPSJNNzQ3LjEsMTIxLjFWNzkuM2MwLTE1LjgtOS40LTIyLjQtMjYuNi0yMi40Yy0xNSwwLTI2LjgsNi42LTI2LjgsMTkuM2MwLDIuNCwwLjIsMy4zLDAuOCw1aDE2LjYgYy0wLjUtMi0wLjctNS0wLjctNy41YzAtOS42LDMuNi0xMi40LDkuNC0xMi40YzYuNCwwLDkuNywyLDkuNywxNC40djExLjJsLTIwLjgsNy43Yy0xMC42LDQuMS0xOS4zLDguOC0xOS4zLDIwLjcgYzAsMTAuOSw3LjUsMTcuOCwxOC42LDE3LjhjOS45LDAsMTcuNC02LjIsMjEuOS0xMi4xdi0wLjFoMC4xbDAsMTEuMWwyNiwwLjF2LTQuNUM3NDkuMywxMjcuMSw3NDcuMSwxMjYuMiw3NDcuMSwxMjEuMXogTTcyOS42LDExNy44Yy00LjQsMy4zLTcuNiw1LjMtMTIuMSw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNEw3MjkuNiwxMTcuOEw3MjkuNiwxMTcuOHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTAsMHY5MC40YzAsNjUuNyw1MC45LDg4LjUsODguMSwxMDUuMmgwLjFsMywxLjRjMC43LTAuNCwxLjQtMC43LDIuMi0xYzAuNC0wLjIsMC45LTAuNCwxLjMtMC42IGMzNy4zLTE2LjYsODguNC0zOS41LDg4LjQtMTA1VjBIMHogTTExNiwxMzJsLTItNS4zbC0yNi42LTcwYy0xLjYsNC4xLTUuMywxNC05LjMsMjQuNmwtMTUuMyw0MS4zYy0wLjcsMi0wLjMsMywwLjIsMy43IGMxLjEsMS4zLDMuNSwxLjMsNy4zLDEuM0g3MWwwLDQuNEg0Mi40bDAtNC40aDIuMmMzLjksMCw3LjEtMS43LDkuNS02LjVsMi45LTYuNmwyNi41LTY3LjhsLTQuNy0xMi41aDI0LjdsMzQuMSw4OS43bDMuMSw4LjFIMTE2eiI+PC9wYXRoPjwvc3ZnPg==" /></a>
 
@@ -57,45 +57,45 @@ You must be a Lambda School student to view this page.
 
 <a href="/webannex/sprint/recfwZvI7QhMa7xbG" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
--   [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
--   [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
+- [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
+- [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
+- [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
 
 <a href="/webannex/sprint/recIXiQgpgMdJ81ms" class="bd-toc-link">2.  Advanced CSS</a>
 
--   [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
--   [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
--   [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
--   [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
+- [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
+- [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
+- [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
+- [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
 
 <a href="/webannex/sprint/recclZwJxMU8kUngT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
--   [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
--   [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
--   [Classes](/webannex/module/recyS588eOvVUKAMc/)
+- [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
+- [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
+- [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
+- [Classes](/webannex/module/recyS588eOvVUKAMc/)
 
 <a href="/webannex/sprint/recRT8JKvbTiGaosk" class="bd-toc-link">4.  Single Page Applications</a>
 
--   [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
--   [React Router II](/webannex/module/recYkF1FDilIedmwX/)
--   [Form Management](/webannex/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
+- [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
+- [React Router II](/webannex/module/recYkF1FDilIedmwX/)
+- [Form Management](/webannex/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
 
 <a href="/webannex/sprint/recozTHaHJe6L1ThN" class="bd-toc-link">5.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
--   [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
--   [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
--   [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
+- [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
+- [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
+- [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
 
-------------------------------------------------------------------------
+---
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Projects](#projects)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Projects](#projects)
+- [Review](#review)
 
 # User Interface
 
@@ -105,9 +105,9 @@ Even the most complex web applications start with simple HTML elements. Knowing 
 
 **At the end of this module, you should be able to:**
 
--   learn what HTML is and what it is used for in Web Development
--   learn to utilize common HTML tags and attributes to mark up a basic page of content
--   understand the main concepts of CSS (selectors and style rules), and be able to apply them to an HTML page
+- learn what HTML is and what it is used for in Web Development
+- learn to utilize common HTML tags and attributes to mark up a basic page of content
+- understand the main concepts of CSS (selectors and style rules), and be able to apply them to an HTML page
 
 #### Pro Tip
 
@@ -117,23 +117,17 @@ Remember that you and your work are different. A criticism of your work is not a
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=0bXl34ordKU), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=0bXl34ordKU), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=N0nHktkWgMg), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=N0nHktkWgMg), or enable JavaScript if it is disabled in your browser.
-
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=hht3VNemm4o), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=hht3VNemm4o), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -143,7 +137,7 @@ Review each preclass resource before class.
 
 ### What is HTML?
 
-HTML is one of the languages we use for web development. HTML is what we call a “markup language” (as opposed to a “programming” language like JavaScript or Python). This means that it is specifically designed to *display data* in a graphical form (rather than *execute tasks*).
+HTML is one of the languages we use for web development. HTML is what we call a “markup language” (as opposed to a “programming” language like JavaScript or Python). This means that it is specifically designed to _display data_ in a graphical form (rather than _execute tasks_).
 
 HTML was created as a language when the first visual web browsers came into existence in the early 90s. It is read by the browser and then used as a blueprint for displaying information on your screen.
 
@@ -165,7 +159,7 @@ Go ahead and edit the code below to make your webpage display any sentence you�
 
 See the Pen [PreCourse](https://codepen.io/lambdaschool/pen/f3c5f02c778ef23285f134f2f31369cb) by Lambda School ([@lambdaschool](https://codepen.io/lambdaschool)) on [CodePen](https://codepen.io).
 
-*Note:* CodePen allows us to leave out a couple of critical elements: the `html`, `head`, and `body` elements. These are important to understand when we start writing HTML code in our text editors, but for now, we can ignore them, because CodePen handles them automatically.
+_Note:_ CodePen allows us to leave out a couple of critical elements: the `html`, `head`, and `body` elements. These are important to understand when we start writing HTML code in our text editors, but for now, we can ignore them, because CodePen handles them automatically.
 
 #### What are tags?
 
@@ -183,30 +177,33 @@ Once we decide which tag we want to use, we can create an opening tag using brac
 
 We will be focusing today on four types of display elements. Now that we understand how to create these elements, let’s explore their use cases.
 
--   `<p>`
-    -   The p (“paragraph”) element. This element is meant for holding text. By default, it will render text to the screen on a new line.
+- `<p>`
 
-      <p>Here is a paragraph!</p>
+  - The p (“paragraph”) element. This element is meant for holding text. By default, it will render text to the screen on a new line.
 
--   `<div>`
-    -   The div element is a generic container. It is used primarily for grouping other HTML elements together. It is invisible by default but can be used to position or style a group of elements. Div isn’t super useful in plain html, but will become powerful when we start to “stack” HTML with JavaScript and CSS.
-    -   `<div>` is a block-level element, meaning it will take up its own, full line.
+    <p>Here is a paragraph!</p>
 
-    <div>
-      <p>This paragraph is about grapefruits.</p>
-      <p>This paragraph is also about grapefruits! I guess it's related to the paragraph above.</p>
-    </div>
+- `<div>`
 
--   `<span>`
-    -   The span element is a generic text container. It does not create a new line like the p element does. This element is invisible by default but can be used for styling words or phrases within a larger body of text.
-    -   Unlike `<div>`, `<span>` operates inline and therefore doesn’t take up its own line.
+  - The div element is a generic container. It is used primarily for grouping other HTML elements together. It is invisible by default but can be used to position or style a group of elements. Div isn’t super useful in plain html, but will become powerful when we start to “stack” HTML with JavaScript and CSS.
+  - `<div>` is a block-level element, meaning it will take up its own, full line.
 
-    <p>This paragraph contains a <span>very important phrase</span> that should be styled in some way.</p>
+  <div>
+    <p>This paragraph is about grapefruits.</p>
+    <p>This paragraph is also about grapefruits! I guess it's related to the paragraph above.</p>
+  </div>
 
--   `<h1>-<h6>`
-    -   These are heading tags there are intended to be used as a way to present the subject matter of the page. 1 is the most important and 6 is the least important. By default, 1 will be the largest, 2 will be the next largest, and etc.
-    -   Avoid using heading tags to resize text. Headings use size to indicate their relative importance, but CSS is preferred for general-purpose resizing.
-    -   You should only use one `<h1>` per page. Using more than one will not result in an error, but using only one is seen as a best practice. It makes logical sense — `<h1>` is the most important heading, and tells you what the purpose of the overall page is. You wouldn’t have a book with more than one title, or a movie with more than one name! Having a single top-level title is also arguably better for screen reader users, and SEO.
+- `<span>`
+
+  - The span element is a generic text container. It does not create a new line like the p element does. This element is invisible by default but can be used for styling words or phrases within a larger body of text.
+  - Unlike `<div>`, `<span>` operates inline and therefore doesn’t take up its own line.
+
+  <p>This paragraph contains a <span>very important phrase</span> that should be styled in some way.</p>
+
+- `<h1>-<h6>`
+  - These are heading tags there are intended to be used as a way to present the subject matter of the page. 1 is the most important and 6 is the least important. By default, 1 will be the largest, 2 will be the next largest, and etc.
+  - Avoid using heading tags to resize text. Headings use size to indicate their relative importance, but CSS is preferred for general-purpose resizing.
+  - You should only use one `<h1>` per page. Using more than one will not result in an error, but using only one is seen as a best practice. It makes logical sense — `<h1>` is the most important heading, and tells you what the purpose of the overall page is. You wouldn’t have a book with more than one title, or a movie with more than one name! Having a single top-level title is also arguably better for screen reader users, and SEO.
 
 See the Pen [PreCourse tag levels](https://codepen.io/lambdaschool/pen/19c92b335519fea1c509f759c4d14696) by Lambda School ([@lambdaschool](https://codepen.io/lambdaschool)) on [CodePen](https://codepen.io).
 
@@ -259,7 +256,7 @@ When learning HTML, it can be useful to investigate existing web pages. There is
 
 Let’s practice marking up text in the pen below. For the next few lessons, we’re going to focus on building a replica of an old version of Lambdaschool.com’s home page. Please note that changes you make to inline pens will not ‘save’, to fork and save your own copy of this pen, click the logo in the right corner to open it in a new tab.
 
-First, let’s take a look at Lambda’s old homepage: 
+First, let’s take a look at Lambda’s old homepage:
 
 ![lambda real website](https://i.imgur.com/ZWSo5vE.gif)
 
@@ -274,7 +271,7 @@ Next, let’s grab the subtitle “Higher learning. Higher earning” and “you
     <h2> Higher learning. Higher earning. </h2>
     <h2>Your new tech career starts here. </h2>
 
-Next up, add “apply to Lambda”. We want this to be a button - to create a button, all we have to do is use the semantic `<button>` tags. Right now, this button won’t do anything, but we’ll add that feature soon. For now, we can be excited that it *looks* like a button.
+Next up, add “apply to Lambda”. We want this to be a button - to create a button, all we have to do is use the semantic `<button>` tags. Right now, this button won’t do anything, but we’ll add that feature soon. For now, we can be excited that it _looks_ like a button.
 
     <button> Apply to Lambda</button>
 
@@ -290,7 +287,7 @@ Our final product should look something like this. Not quite the same as [lambda
 
 Create your own CodePen. Add a `h1` title with your name, and start to fill out the page with some details about you and why you’re interested in web development. Be sure to include at least 3 tags.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to learn to utilize common HTML tags and attributes to mark up a basic page of content
 
@@ -310,20 +307,22 @@ To this point we’ve learned the terms element, tag, and attribute. While those
 
 #### More Elements
 
--   `<a>`
-    -   The ‘a’ (“anchor”) element, allows us to create links to other web pages (or even to other areas within our own web page). You will always see the ‘a’ element used with the `href` attribute to tell the browser what address you want the link to point to.
+- `<a>`
 
-      <a href="http://www.lambdaschool.com">Here is a link!</a>
+  - The ‘a’ (“anchor”) element, allows us to create links to other web pages (or even to other areas within our own web page). You will always see the ‘a’ element used with the `href` attribute to tell the browser what address you want the link to point to.
 
--   `<img>`
-    -   This element will display an image on the screen. It will always have an ‘src’ attribute which points to the address of the image to be displayed. NOTE: img tags can be self-closing, as in they do not need two tags. Simply put the `/` before the closing bracket in the first tag:
+  <a href="http://www.lambdaschool.com">Here is a link!</a>
 
-      <img src="https://picsum.photos/500/300" />
+- `<img>`
 
--   `<ul>` and `<ol>`
-    -   This element represents an “unordered list”. This is the parent element and will contain list items. There is also an ordered, or numbered, list `<ol>`, each has their own purpose. Generally speaking, `<ul>` would be used for a grocery list and `<ol>` for a recipe where direction need to be followed in a specific order. In addition, some developers like to style their lists in CSS and opt not to use these tags.
--   `<li>`
-    -   This stands for `list item` and is the companion to `<ul>` and `<ol>`. These elements represent the items to appear in the list. Any other elements can appear in an `li`.
+  - This element will display an image on the screen. It will always have an ‘src’ attribute which points to the address of the image to be displayed. NOTE: img tags can be self-closing, as in they do not need two tags. Simply put the `/` before the closing bracket in the first tag:
+
+    <img src="https://picsum.photos/500/300" />
+
+- `<ul>` and `<ol>`
+  - This element represents an “unordered list”. This is the parent element and will contain list items. There is also an ordered, or numbered, list `<ol>`, each has their own purpose. Generally speaking, `<ul>` would be used for a grocery list and `<ol>` for a recipe where direction need to be followed in a specific order. In addition, some developers like to style their lists in CSS and opt not to use these tags.
+- `<li>`
+  - This stands for `list item` and is the companion to `<ul>` and `<ol>`. These elements represent the items to appear in the list. Any other elements can appear in an `li`.
 
 See the Pen [PreCourse tags](https://codepen.io/lambdaschool/pen/39f0bcce5f5149bc0524a13bb1767bf3) by Lambda School ([@lambdaschool](https://codepen.io/lambdaschool)) on [CodePen](https://codepen.io).
 
@@ -339,7 +338,7 @@ See the Pen [PreCourse attributes](https://codepen.io/lambdaschool/pen/5d24a9de4
 
 With our newfound knowledge of attributes we can add in the image, and make our “Apply to Lambda” button functional.
 
-First, let’s add the image with an `<img>` tag. The Lambda School homepage image lives at the following URL: `https://assets-global.website-files.com/5cd091cfb5499f22bdf72905/5d1133da829994859a190d12_website-home4.jpg`. We’ll use the `src` attribute to add this to our page. Note that `img` elements don’t need a closing tag. Also, notice that this URL is **not** “lambdaschool.com,” even though that’s where we see the picture. Instead, the URL points to the location where the image is hosted on the cloud. Following this link will lead to *just* our background photo.
+First, let’s add the image with an `<img>` tag. The Lambda School homepage image lives at the following URL: `https://assets-global.website-files.com/5cd091cfb5499f22bdf72905/5d1133da829994859a190d12_website-home4.jpg`. We’ll use the `src` attribute to add this to our page. Note that `img` elements don’t need a closing tag. Also, notice that this URL is **not** “lambdaschool.com,” even though that’s where we see the picture. Instead, the URL points to the location where the image is hosted on the cloud. Following this link will lead to _just_ our background photo.
 
     <img src = "https://assets-global.website-files.com/5cd091cfb5499f22bdf72905/5d1133da829994859a190d12_website-home4.jpg">
 
@@ -355,7 +354,7 @@ Go back to your CodePen and add some images of things you like, or links to your
 
 Note: to add an image, it will need to live somewhere on the web. You can store images on the cloud and right click, then navigate to `copy image URL` to obtain an image’s location.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to understand the main concepts of CSS (selectors and style rules), and be able to apply them to an HTML page
 
@@ -377,17 +376,17 @@ Before we can add CSS to our web page, we need to inform the browser that what i
 
 There are two ways of including CSS in our HTML.
 
--   We can write our CSS directly between two `style` tags, this isn’t very common, but it would look something like this.
+- We can write our CSS directly between two `style` tags, this isn’t very common, but it would look something like this.
 
-    <style>
-      <!-- CSS goes here -->
-    </style>
+  <style>
+    <!-- CSS goes here -->
+  </style>
 
--   More often, we will link to an external CSS file using the `link` element. This element will include two attributes: `rel` and `href`. `rel` will refer to the type of file we are linking: in this case, `"stylesheet"`, and the `href` will point to the location of the file on your computer, or more simply, the file name.
+- More often, we will link to an external CSS file using the `link` element. This element will include two attributes: `rel` and `href`. `rel` will refer to the type of file we are linking: in this case, `"stylesheet"`, and the `href` will point to the location of the file on your computer, or more simply, the file name.
 
-    <head>
-      <link rel="stylesheet" href="./styles.css" />
-    </head>
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
 
 Note that, in codepen, linking is done “under the hood”, so we can code our CSS straight in the CSS pannel like so.
 
@@ -423,32 +422,33 @@ Styling rules will need to adhere to a certain syntax in our CSS so that the bro
 
 Class selectors will always begin with `.`, and Id selectors will always begin with `#`.
 
-**Check for Understanding:** In the codepen above, change the text color of the **class** to *red*.
+**Check for Understanding:** In the codepen above, change the text color of the **class** to _red_.
 
 #### Styling Rules
 
 Now that we have some HTML elements selected, we can begin to add styling. There are a LOT of different ways you can style an object. You can control how big or small it is, what color it is, where it is placed on the screen, or even if it is visible or not. We will go over some of the most common styling properties and how to use them.
 
--   `background` or `background-color`
-    -   Background can be set to a variety of rules. Most common would be setting the background to a color or an image. Both are displayed below. If you want to be more explicit, you can use the property `background-color` to only set the color of the background.
+- `background` or `background-color`
 
-    h1 {
-        background: red;
-      }
-    body {
-        background: url('http://imageurl.com/image.jpg');
-      }
+  - Background can be set to a variety of rules. Most common would be setting the background to a color or an image. Both are displayed below. If you want to be more explicit, you can use the property `background-color` to only set the color of the background.
 
--   `color`
-    -   Color is used for text only. It will change the color of your text.
--   `font-size`
-    -   We can’t use width or height for text, but we can determine the size of the font used. You can use any size unit here that you would use with a font in a word processor (px, em, in, and etc). Px or pixel is the most popular.
+  h1 {
+  background: red;
+  }
+  body {
+  background: url('http://imageurl.com/image.jpg');
+  }
 
-**Challenge:** In the codepen above, change the background color of your webpage to *grey*
+- `color`
+  - Color is used for text only. It will change the color of your text.
+- `font-size`
+  - We can’t use width or height for text, but we can determine the size of the font used. You can use any size unit here that you would use with a font in a word processor (px, em, in, and etc). Px or pixel is the most popular.
+
+**Challenge:** In the codepen above, change the background color of your webpage to _grey_
 
 ##### Follow Along
 
-When we added the image to lambdaschool.com it created a *massive* problem (no pun intended). Together let’s add some CSS style to get our image to the background, and to change text color and style.
+When we added the image to lambdaschool.com it created a _massive_ problem (no pun intended). Together let’s add some CSS style to get our image to the background, and to change text color and style.
 
 See the Pen [M2O1 - CSS](https://codepen.io/lambdaschool/pen/52b9e575871e7ebb68d0e7a42dd20422) by Lambda School ([@lambdaschool](https://codepen.io/lambdaschool)) on [CodePen](https://codepen.io).
 
@@ -467,13 +467,13 @@ CSS is a great place to practice your google-fu. There are hundreds of CSS styli
       font-size: 16px;
     }
 
-Next, let’s add id attributes in HTML and style to them by selecting those ids in CSS. We’ll start by creating an ‘image-container’ and ‘text-container’ id. We want the ‘image-container’ to wrap around everything *except* “Higher learning. Higher earning.” and “Lambda is designed for student success…etc,” to do that, we’ll need to place a `<div id ="image-container">` tag at the beginning of our HTML, and a `</div>` tag after the button. We’ll add a second div called `<div id ="other-text">` around the rest.
+Next, let’s add id attributes in HTML and style to them by selecting those ids in CSS. We’ll start by creating an ‘image-container’ and ‘text-container’ id. We want the ‘image-container’ to wrap around everything _except_ “Higher learning. Higher earning.” and “Lambda is designed for student success…etc,” to do that, we’ll need to place a `<div id ="image-container">` tag at the beginning of our HTML, and a `</div>` tag after the button. We’ll add a second div called `<div id ="other-text">` around the rest.
 
 Finally, we can move our image from the “body” to the div and start getting a more complete website. You’ll notice that the image looks cut off - the box model will help us deal with that.
 
     #image-container {
       background: url("https://assets-global.website-files.com/5cd091cfb5499f22bdf72905/5d1133da829994859a190d12_website-home4.jpg");
-      background-position: center; 
+      background-position: center;
     }
 
     #text-container {
@@ -488,17 +488,17 @@ Our final product should look like this. It is looking a lot closer to lambdasch
 
 Go back to your codepen and add style. Include a font, text-color, and background style.
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#projects" id="projects" class="anchor"><span class="octicon octicon-link"></span></a>Projects
 
--   ##### [UI I: Project I - Sweet Eats Bakery Markup](https://codepen.io/lambdaschool/pen/vaKejB)
+- ##### [UI I: Project I - Sweet Eats Bakery Markup](https://codepen.io/lambdaschool/pen/vaKejB)
 
-    Sweet Eats Bakery has provided content for you to markup on their website. Use semantic HTML tags to give their content meaning.
+  Sweet Eats Bakery has provided content for you to markup on their website. Use semantic HTML tags to give their content meaning.
 
--   ##### [UI I: Project 2 - Sweet Eats Bakery Style](https://codepen.io/lambdaschool/pen/vaXWWG/?editors=0100)
+- ##### [UI I: Project 2 - Sweet Eats Bakery Style](https://codepen.io/lambdaschool/pen/vaXWWG/?editors=0100)
 
-    Now that we have some practice with semantic HTML, we need to add some style to our project. This project is going to explore selectors, inheritance in combination with our new found HTML skills.
+  Now that we have some practice with semantic HTML, we need to add some style to our project. This project is going to explore selectors, inheritance in combination with our new found HTML skills.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -506,28 +506,28 @@ Go back to your codepen and add style. Include a font, text-color, and backgroun
 
 You can use class recordings to help you master the material.
 
--   **[User Interface for WebPT22 w/Nathan Braun](https://youtu.be/Jte8Z7nGxQg)**
+- **[User Interface for WebPT22 w/Nathan Braun](https://youtu.be/Jte8Z7nGxQg)**
 
-    Even the most complex web applications start with simple HTML elements. Knowing how to use HTML and style it with CSS has a massive impact for your future as a developer. This module will explore the fundamentals of HTML and CSS.
+  Even the most complex web applications start with simple HTML elements. Knowing how to use HTML and style it with CSS has a massive impact for your future as a developer. This module will explore the fundamentals of HTML and CSS.
 
--   [All previous recordings](/archive/FSW/module/recl0IyzS2Vl89lZa)
+- [All previous recordings](/archive/FSW/module/recl0IyzS2Vl89lZa)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Create your own CodePen. Add a `h1` title with your name, and start to fill out the page with some details about you and why you’re interested in web development. Be sure to include at least 3 tags.
+  Create your own CodePen. Add a `h1` title with your name, and start to fill out the page with some details about you and why you’re interested in web development. Be sure to include at least 3 tags.
 
--   Objective challenge:
+- Objective challenge:
 
-    Go back to your CodePen and add some images of things you like, or links to your social media profiles, blog, or other websites you enjoy!
+  Go back to your CodePen and add some images of things you like, or links to your social media profiles, blog, or other websites you enjoy!
 
-    Note: to add an image, it will need to live somewhere on the web. You can store images on the cloud and right click, then navigate to `copy image URL` to obtain an image’s location.
+  Note: to add an image, it will need to live somewhere on the web. You can store images on the cloud and right click, then navigate to `copy image URL` to obtain an image’s location.
 
--   Objective challenge:
+- Objective challenge:
 
-    Go back to your codepen and add style. Include a font, text-color, and background style.
+  Go back to your codepen and add style. Include a font, text-color, and background style.
 
--   Project: UI I: Project I - Sweet Eats Bakery Markup
+- Project: UI I: Project I - Sweet Eats Bakery Markup

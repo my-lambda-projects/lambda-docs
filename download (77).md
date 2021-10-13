@@ -16,31 +16,31 @@ You must be a Lambda School student to view this page.
 
 <a href="/cs/sprint/reckLrPDHRpFN3a6p" class="bd-toc-link">1.  Computer Science Fundamentals</a>
 
--   [Python Basics](/cs/module/recHNgXTaBpnn052p/)
--   [Problem Solving](/cs/module/recagU9ihCuMePtbx/)
--   [Time and Space Complexity](/cs/module/recZ6g2C5xkxHmT16/)
--   [Computer Memory Basics](/cs/module/recy2QANAS6Blpc5o/)
+- [Python Basics](/cs/module/recHNgXTaBpnn052p/)
+- [Problem Solving](/cs/module/recagU9ihCuMePtbx/)
+- [Time and Space Complexity](/cs/module/recZ6g2C5xkxHmT16/)
+- [Computer Memory Basics](/cs/module/recy2QANAS6Blpc5o/)
 
 <a href="/cs/sprint/recdbs5ZPBtMb6fou" class="bd-toc-link">2.  Data Structures and Algorithms I</a>
 
--   [Array and String Manipulation](/cs/module/recR43dkPzilEMXlE/)
--   [Linked Lists](/cs/module/recQJcAAjpSTtNf8A/)
--   [Queues and Stacks](/cs/module/rec07JKgm7ltWrPYD/)
--   [Searching and Recursion](/cs/module/rec00Cf3TiBWiCONA/)
+- [Array and String Manipulation](/cs/module/recR43dkPzilEMXlE/)
+- [Linked Lists](/cs/module/recQJcAAjpSTtNf8A/)
+- [Queues and Stacks](/cs/module/rec07JKgm7ltWrPYD/)
+- [Searching and Recursion](/cs/module/rec00Cf3TiBWiCONA/)
 
 <a href="/cs/sprint/recyC7E0YQc0qQgxa" class="bd-toc-link">3.  Data Structures and Algorithms II</a>
 
--   [Binary Search Trees](/cs/module/recgJOPYUjvQaN2sa/)
--   [Tree Traversal](/cs/module/recS3C67spna4M4HU/)
--   [Graphs I](/cs/module/recEPIaHFEriTuU2x/)
--   [Graphs II](/cs/module/recX4dkkIPeJ6JjX6/)
+- [Binary Search Trees](/cs/module/recgJOPYUjvQaN2sa/)
+- [Tree Traversal](/cs/module/recS3C67spna4M4HU/)
+- [Graphs I](/cs/module/recEPIaHFEriTuU2x/)
+- [Graphs II](/cs/module/recX4dkkIPeJ6JjX6/)
 
 <a href="/cs/sprint/recsJW8CaZiKcyUZj" class="bd-toc-link">4.  Data Structures and Algorithms III</a>
 
--   [Hash Tables I](/cs/module/recLpJY4yFQcV3qeW/)
--   [Hash Tables II](/cs/module/recG6onEnlSOWziKO/)
--   [Technical Interview Tips I](/cs/module/reczaVKTynSkqN8ZS/)
--   [Technical Interview Tips II](/cs/module/rec6kEjLri9SXMYdE/)
+- [Hash Tables I](/cs/module/recLpJY4yFQcV3qeW/)
+- [Hash Tables II](/cs/module/recG6onEnlSOWziKO/)
+- [Technical Interview Tips I](/cs/module/reczaVKTynSkqN8ZS/)
+- [Technical Interview Tips II](/cs/module/rec6kEjLri9SXMYdE/)
 
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjM1IiB2aWV3Ym94PSIwIDAgNzU2IDE5NyIgZmlsbD0iI2VjMzk0NCI+PGc+PHBhdGggZD0iTTI5Mi45LDEyNi42aC02LjdjLTksMC0xMi42LTEuOS0xMi42LTkuNVY0OC41YzAtNy43LDEuNi04LjYsMTEuNC05Ljd2LTQuNWgtNDEuM3Y0LjUgYzkuOCwxLjEsMTEuNCwxLjksMTEuNCw5Ljd2NjkuM2MwLDcuNy0xLjYsOC42LTExLjQsOS43djQuNWg3My43bDQuOS0yOS40aC00LjRDMzA4LjUsMTE5LjYsMzAzLjksMTI2LjYsMjkyLjksMTI2LjZ6Ij48L3BhdGg+PHBhdGggZD0iTTM4NS41LDEyMS4xVjc5LjNjMC0xNS44LTkuNC0yMi40LTI2LjYtMjIuNGMtMTUsMC0yNi44LDYuNi0yNi44LDE5LjNjMCwyLjQsMC4yLDMuMywwLjgsNWgxNi42IGMtMC41LTItMC43LTUtMC43LTcuNWMwLTkuNiwzLjYtMTIuNCw5LjQtMTIuNGM2LjQsMCw5LjcsMiw5LjcsMTQuNHYxMS4ybC0yMC44LDcuN2MtMTAuNiw0LjEtMTkuMyw4LjgtMTkuMywyMC43IGMwLDEwLjksNy41LDE3LjgsMTguNiwxNy44YzkuOSwwLDE3LjQtNi4yLDIxLjktMTIuMWwwLjEtMC4xbDAsMFYxMzJoMjZ2LTQuNEMzODcuNywxMjcuMSwzODUuNSwxMjYuMiwzODUuNSwxMjEuMXogTTM2OCwxMTcuOCBjLTQuNCwzLjMtNy42LDUuMy0xMiw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNFYxMTcuOEwzNjgsMTE3Ljh6Ij48L3BhdGg+PHBhdGggZD0iTTUxNC40LDEyMVY3OS41YzAtMTQuOC02LTIyLjQtMTguNy0yMi40Yy0xMS41LDAtMTkuNCw2LjYtMjUuNSwxMy45Yy0xLjgtOS42LTcuNy0xMy45LTE3LjgtMTMuOSBjLTExLjQsMC0xOC43LDYuMi0yNC44LDEzLjZWNTdoLTIuM2wtMjMuOCw3LjR2Mi40bDguNiw1djQ5LjRjMCw1LTIuMSw2LjEtOC45LDYuNHY0LjRoMzUuMXYtNC40Yy02LjctMC4zLTguNy0xLjMtOC43LTYuNHYtNDcgYzQuNy0zLjYsOS41LTYuNSwxNS41LTYuNWM3LjYsMCwxMC41LDQuMiwxMC41LDEyLjd2NDAuOGMwLDUtMS45LDYuMS04LjcsNi40djQuNGwzNC44LDB2LTQuNGMtNi43LTAuMy04LjYtMS4zLTguNi02LjR2LTQ3IGM0LjctMy42LDkuNS02LjUsMTUuNS02LjVjNy42LDAsMTAuNSw0LjIsMTAuNSwxMi43bC0wLjEsNDAuNWMwLDUtMS44LDYuNC04LjYsNi43bDAsNC40aDM1LjF2LTQuNCBDNTE2LjcsMTI3LjQsNTE0LjQsMTI2LjEsNTE0LjQsMTIxeiI+PC9wYXRoPjxwYXRoIGQ9Ik01NzMuMiw1Ny4zYy0xMSwwLTE4LjUsNS43LTIzLjQsMTIuOFYyMi45aC0yLjdsLTIzLjQsNi44djIuNWw4LjYsNC41VjEzMmgyLjlsOC0zLjVjNS44LDMuMywxMi4zLDUsMjAuMiw1IGMyMC44LDAsMzcuNC0xNS44LDM3LjQtNDIuNkM2MDAuOSw2OS45LDU5MC40LDU3LjMsNTczLjIsNTcuM3ogTTU2My40LDEyOC43Yy01LjQsMC0xMC4zLTIuNC0xMy43LTcuOVY3My42IGMzLjQtMy40LDguNS01LjcsMTMuNS01LjdjMTMuOSwwLDIwLDEyLjgsMjAsMjkuNUM1ODMuMywxMTQuNyw1NzUuOCwxMjguNSw1NjMuNCwxMjguN3oiPjwvcGF0aD48cGF0aCBkPSJNNjc3LDEyMS4yVjIyLjhoLTIuNkw2NTEsMjkuNlYzMmw4LjYsNC41djI1LjdjLTMuNC0zLjItOC44LTUuMS0xNS41LTUuMWMtMTkuOSwwLTM1LjIsMTUuMy0zNS4yLDQxLjMgYzAsMjAuNywxMS4yLDM0LjYsMjguMSwzNC42YzkuOCwwLDE3LTUuMywyMi42LTEzLjF2MC45VjEzMmgyNi4zbDAtNC40QzY3OS4xLDEyNy4zLDY3NywxMjYuMyw2NzcsMTIxLjJ6IE02NTkuNiwxMTcuMSBMNjU5LjYsMTE3LjFjLTMuNCwzLjQtOCw1LjEtMTMuMiw1LjFjLTEzLjIsMC0yMC40LTEyLjgtMjAuNC0yOS44YzAtMTcuOCw3LjMtMjkuMiwxOS41LTI5LjJjOC43LDAsMTQuMSw2LjksMTQuMSwxOC4zIEw2NTkuNiwxMTcuMXoiPjwvcGF0aD48cGF0aCBkPSJNNzQ3LjEsMTIxLjFWNzkuM2MwLTE1LjgtOS40LTIyLjQtMjYuNi0yMi40Yy0xNSwwLTI2LjgsNi42LTI2LjgsMTkuM2MwLDIuNCwwLjIsMy4zLDAuOCw1aDE2LjYgYy0wLjUtMi0wLjctNS0wLjctNy41YzAtOS42LDMuNi0xMi40LDkuNC0xMi40YzYuNCwwLDkuNywyLDkuNywxNC40djExLjJsLTIwLjgsNy43Yy0xMC42LDQuMS0xOS4zLDguOC0xOS4zLDIwLjcgYzAsMTAuOSw3LjUsMTcuOCwxOC42LDE3LjhjOS45LDAsMTcuNC02LjIsMjEuOS0xMi4xdi0wLjFoMC4xbDAsMTEuMWwyNiwwLjF2LTQuNUM3NDkuMywxMjcuMSw3NDcuMSwxMjYuMiw3NDcuMSwxMjEuMXogTTcyOS42LDExNy44Yy00LjQsMy4zLTcuNiw1LjMtMTIuMSw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNEw3MjkuNiwxMTcuOEw3MjkuNiwxMTcuOHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTAsMHY5MC40YzAsNjUuNyw1MC45LDg4LjUsODguMSwxMDUuMmgwLjFsMywxLjRjMC43LTAuNCwxLjQtMC43LDIuMi0xYzAuNC0wLjIsMC45LTAuNCwxLjMtMC42IGMzNy4zLTE2LjYsODguNC0zOS41LDg4LjQtMTA1VjBIMHogTTExNiwxMzJsLTItNS4zbC0yNi42LTcwYy0xLjYsNC4xLTUuMywxNC05LjMsMjQuNmwtMTUuMyw0MS4zYy0wLjcsMi0wLjMsMywwLjIsMy43IGMxLjEsMS4zLDMuNSwxLjMsNy4zLDEuM0g3MWwwLDQuNEg0Mi40bDAtNC40aDIuMmMzLjksMCw3LjEtMS43LDkuNS02LjVsMi45LTYuNmwyNi41LTY3LjhsLTQuNy0xMi41aDI0LjdsMzQuMSw4OS43bDMuMSw4LjFIMTE2eiI+PC9wYXRoPjwvc3ZnPg==" /></a>
 
@@ -48,35 +48,35 @@ You must be a Lambda School student to view this page.
 
 <a href="/cs/sprint/reckLrPDHRpFN3a6p" class="bd-toc-link">1.  Computer Science Fundamentals</a>
 
--   [Python Basics](/cs/module/recHNgXTaBpnn052p/)
--   [Problem Solving](/cs/module/recagU9ihCuMePtbx/)
--   [Time and Space Complexity](/cs/module/recZ6g2C5xkxHmT16/)
--   [Computer Memory Basics](/cs/module/recy2QANAS6Blpc5o/)
+- [Python Basics](/cs/module/recHNgXTaBpnn052p/)
+- [Problem Solving](/cs/module/recagU9ihCuMePtbx/)
+- [Time and Space Complexity](/cs/module/recZ6g2C5xkxHmT16/)
+- [Computer Memory Basics](/cs/module/recy2QANAS6Blpc5o/)
 
 <a href="/cs/sprint/recdbs5ZPBtMb6fou" class="bd-toc-link">2.  Data Structures and Algorithms I</a>
 
--   [Array and String Manipulation](/cs/module/recR43dkPzilEMXlE/)
--   [Linked Lists](/cs/module/recQJcAAjpSTtNf8A/)
--   [Queues and Stacks](/cs/module/rec07JKgm7ltWrPYD/)
--   [Searching and Recursion](/cs/module/rec00Cf3TiBWiCONA/)
+- [Array and String Manipulation](/cs/module/recR43dkPzilEMXlE/)
+- [Linked Lists](/cs/module/recQJcAAjpSTtNf8A/)
+- [Queues and Stacks](/cs/module/rec07JKgm7ltWrPYD/)
+- [Searching and Recursion](/cs/module/rec00Cf3TiBWiCONA/)
 
 <a href="/cs/sprint/recyC7E0YQc0qQgxa" class="bd-toc-link">3.  Data Structures and Algorithms II</a>
 
--   [Binary Search Trees](/cs/module/recgJOPYUjvQaN2sa/)
--   [Tree Traversal](/cs/module/recS3C67spna4M4HU/)
--   [Graphs I](/cs/module/recEPIaHFEriTuU2x/)
--   [Graphs II](/cs/module/recX4dkkIPeJ6JjX6/)
+- [Binary Search Trees](/cs/module/recgJOPYUjvQaN2sa/)
+- [Tree Traversal](/cs/module/recS3C67spna4M4HU/)
+- [Graphs I](/cs/module/recEPIaHFEriTuU2x/)
+- [Graphs II](/cs/module/recX4dkkIPeJ6JjX6/)
 
 <a href="/cs/sprint/recsJW8CaZiKcyUZj" class="bd-toc-link">4.  Data Structures and Algorithms III</a>
 
--   [Hash Tables I](/cs/module/recLpJY4yFQcV3qeW/)
--   [Hash Tables II](/cs/module/recG6onEnlSOWziKO/)
--   [Technical Interview Tips I](/cs/module/reczaVKTynSkqN8ZS/)
--   [Technical Interview Tips II](/cs/module/rec6kEjLri9SXMYdE/)
+- [Hash Tables I](/cs/module/recLpJY4yFQcV3qeW/)
+- [Hash Tables II](/cs/module/recG6onEnlSOWziKO/)
+- [Technical Interview Tips I](/cs/module/reczaVKTynSkqN8ZS/)
+- [Technical Interview Tips II](/cs/module/rec6kEjLri9SXMYdE/)
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Review](#review)
 
 # Graphs I
 
@@ -84,9 +84,9 @@ You must be a Lambda School student to view this page.
 
 **At the end of this module, you should be able to:**
 
--   describe what a graph is, explain its components, provide examples of its useful applications, and draw each of the different graph types
--   represent a graph as an adjacency list and an adjacency matrix and compare and contrast the respective representations
--   implement user-defined Vertex and Graph classes that allow basic operations
+- describe what a graph is, explain its components, provide examples of its useful applications, and draw each of the different graph types
+- represent a graph as an adjacency list and an adjacency matrix and compare and contrast the respective representations
+- implement user-defined Vertex and Graph classes that allow basic operations
 
 #### Pro Tip
 
@@ -98,23 +98,17 @@ Voltaire
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=pwvXL6i-FjQ), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=pwvXL6i-FjQ), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=weP0OGLZyl0), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=weP0OGLZyl0), or enable JavaScript if it is disabled in your browser.
-
--   
-
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=97wo05I_2-w), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=97wo05I_2-w), or enable JavaScript if it is disabled in your browser.
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -124,7 +118,7 @@ Review each preclass resource before class.
 
 ### What Are Graphs?
 
-Graphs are collections of related data. They’re like trees, except connections can be made from any node to any other node, even forming loops. By this definition, *all trees are graphs, but not all graphs are trees.*
+Graphs are collections of related data. They’re like trees, except connections can be made from any node to any other node, even forming loops. By this definition, _all trees are graphs, but not all graphs are trees._
 
 ### Components of Graphs
 
@@ -172,7 +166,7 @@ If you can form a cycle (for example, follow the edges and arrive again at an al
 
 ![](https://camo.githubusercontent.com/e23529f1bd2dfe3227dee64fe174252b0c310d1a/68747470733a2f2f692e696d6775722e636f6d2f58764d44616c302e6a7067)
 
-*Note: any undirected graph is automatically cyclic since you can always travel back across the same edge.*
+_Note: any undirected graph is automatically cyclic since you can always travel back across the same edge._
 
 If you cannot form a cycle (for example, you cannot arrive at an already-visited vert by following the edges), we call the graph **acyclic**. In the example below, no matter which vert you start at, you cannot follow edges in such a way that you can arrive at an already-visited vert.
 
@@ -188,7 +182,7 @@ The weights represent different data in different graphs. In a graph representin
 
 We can further modify weights. For example, if you were building a graph representing a map for bicycle routes, we could give roads with bad car traffic or very steep inclines unnaturally large weights. That way, a routing algorithm would be unlikely to take them. (This is how Google Maps avoids freeways when you ask it for walking directions.)
 
-*Note: [Djikstra’s Algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) is a graph search variant that accounts for edge weights.*
+_Note: [Djikstra’s Algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) is a graph search variant that accounts for edge weights._
 
 #### Directed Acyclic Graphs (DAGs)
 
@@ -198,9 +192,9 @@ A **directed acyclic graph (DAG)** is a directed graph with no cycles. In other 
 
 A DAG has several applications. DAGs can model many different kinds of information. Below is a small list of possible applications:
 
--   A spreadsheet where a vertex represents each cell and an edge for where one cell’s formula uses another cell’s value.
--   The milestones and activities of largescale projects where a topological ordering can help optimize the projects’ schedule to use as little time as possible.
--   Collections of events and their influence on each other like family trees or version histories.
+- A spreadsheet where a vertex represents each cell and an edge for where one cell’s formula uses another cell’s value.
+- The milestones and activities of largescale projects where a topological ordering can help optimize the projects’ schedule to use as little time as possible.
+- Collections of events and their influence on each other like family trees or version histories.
 
 It is also notable that git uses a DAG to represent commits. A commit can have a child commit, or more than one child commit (in a branch). A child could come from one parent commit or two (in the case of a merge). But there’s no way to go back and form a repeating loop in the git commit hierarchy.
 
@@ -210,7 +204,7 @@ Before you draw graphs on your own, let’s draw some graphs together. For each 
 
 ### Exercise 1
 
-*Draw an undirected graph of 8 verts.*
+_Draw an undirected graph of 8 verts._
 
 Remember, from our definitions above that an undirected graph has bidirectional edges. So, we can draw eight verts and then connect them with solid lines (not arrows) anyway we see fit.
 
@@ -218,15 +212,15 @@ Remember, from our definitions above that an undirected graph has bidirectional 
 
 ### Exercise 2
 
-*Draw a directed graph of 7 verts.*
+_Draw a directed graph of 7 verts._
 
-A directed graph has at least one edge that is *not* bidirectional. So, again, we can draw our seven verts and then connect them with edges. This time, we need to make sure that one of the edges is an arrow pointing in only one direction.
+A directed graph has at least one edge that is _not_ bidirectional. So, again, we can draw our seven verts and then connect them with edges. This time, we need to make sure that one of the edges is an arrow pointing in only one direction.
 
 ![](https://camo.githubusercontent.com/53c2b80679e6731818f5bb72fecdf17579dd0f70/68747470733a2f2f692e696d6775722e636f6d2f3870436f6568412e6a7067)
 
 ### Exercise 3
 
-*Draw a cyclic directed graph of 5 verts.*
+_Draw a cyclic directed graph of 5 verts._
 
 This drawing will be similar to one for Exercise 2 because it is a directed graph. However, in this graph, we also need to ensure that it has at least one cycle. Remember that a cycle is when you can follow the graph’s edges and arrive at a vertex that you’ve already visited.
 
@@ -236,7 +230,7 @@ To draw this graph, we will draw our five verts and then draw our edges, making 
 
 ### Exercise 4
 
-*Draw a directed acyclic graph (DAG) of 8 verts.*
+_Draw a directed acyclic graph (DAG) of 8 verts._
 
 Again, this graph will be directed. The difference is that it will be acyclic—we can order a DAG’s vertices linearly so that every edge is directed from earlier to later in the sequence.
 
@@ -255,9 +249,9 @@ Draw one graph for each of the descriptions below:
 
 ##### Dig Deeper
 
--   <https://medium.com/basecs/a-gentle-introduction-to-graph-theory-77969829ead8>  
+- <https://medium.com/basecs/a-gentle-introduction-to-graph-theory-77969829ead8>
 
-------------------------------------------------------------------------
+---
 
 #### Learn to represent a graph as an adjacency list and an adjacency matrix and compare and contrast the respective representations
 
@@ -291,7 +285,7 @@ Below is a representation of the graph above in Python:
                                 "G": {"A", "F"}
                             }
 
-Notice that this adjacency *list* doesn’t use any lists. The `vertices` collection is a `dictionary` which lets us access each collection of edges in O(1) constant time. Because a `set` contains the edges, we can check for edges in O(1) constant time.
+Notice that this adjacency _list_ doesn’t use any lists. The `vertices` collection is a `dictionary` which lets us access each collection of edges in O(1) constant time. Because a `set` contains the edges, we can check for edges in O(1) constant time.
 
 #### Adjacency Matrix
 
@@ -321,31 +315,31 @@ In all the following examples, we are using the following shorthand to denote th
 
 <table><thead><tr class="header"><th style="text-align: center;">Shorthand</th><th style="text-align: left;">Property</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;">V</td><td style="text-align: left;">Total number of vertices in the graph</td></tr><tr class="even"><td style="text-align: center;">E</td><td style="text-align: left;">Total number of edges in the graph</td></tr><tr class="odd"><td style="text-align: center;">e</td><td style="text-align: left;">Average number of edges per vertex</td></tr></tbody></table>
 
-------------------------------------------------------------------------
+---
 
 #### Space Complexity
 
 ##### Adjacency Matrix
 
-*Complexity*: `O(V^2)` space
+_Complexity_: `O(V^2)` space
 
 Consider a dense graph where each vertex points to each other vertex. Here, the total number of edges will approach V^2. This fact means that regardless of whether you choose an adjacency list or an adjacency matrix, both will have a comparable space complexity. However, dictionaries and sets are less space-efficient than lists. So, for dense graphs (graphs with a high average number of edges per vertex), the adjacency matrix is more efficient because it uses lists instead of dictionaries and sets.
 
 ##### Adjacency List
 
-*Complexity*: `O(V+E)` space
+_Complexity_: `O(V+E)` space
 
 Consider a sparse graph with 100 vertices and only one edge. An adjacency list would have to store all 100 vertices but only needs to keep track of that single edge. The adjacency matrix would need to store 100x100=10,000 connections, even though all but one would be 0.
 
-*Takeaway: The worst-case storage of an adjacency list occurs when the graph is dense. The matrix and list representation have the same complexity (`O(V^2)`). However, for the general case, the list representation is usually more desirable. Also, since finding a vertex’s neighbors is a common task, and adjacency lists make this operation more straightforward, it is most common to use adjacency lists to represent graphs.*
+_Takeaway: The worst-case storage of an adjacency list occurs when the graph is dense. The matrix and list representation have the same complexity (`O(V^2)`). However, for the general case, the list representation is usually more desirable. Also, since finding a vertex’s neighbors is a common task, and adjacency lists make this operation more straightforward, it is most common to use adjacency lists to represent graphs._
 
-------------------------------------------------------------------------
+---
 
 #### Add Vertex
 
 ##### Adjacency Matrix
 
-*Complexity*: `O(V)` time
+_Complexity_: `O(V)` time
 
 For an adjacency matrix, we would need to add a new value to the end of each existing row and add a new row.
 
@@ -359,7 +353,7 @@ Remember that with Python lists, appending to the end of a list is `O(1)` becaus
 
 ##### Adjacency List
 
-*Complexity*: `O(1)` time
+_Complexity_: `O(1)` time
 
 Adding a vertex is simple in an adjacency list:
 
@@ -367,33 +361,33 @@ Adding a vertex is simple in an adjacency list:
 
 Adding a new key to a dictionary is a constant-time operation.
 
-*Takeaway: Adding vertices is very inefficient for adjacency matrices but very efficient for adjacency lists.*
+_Takeaway: Adding vertices is very inefficient for adjacency matrices but very efficient for adjacency lists._
 
-------------------------------------------------------------------------
+---
 
 #### Remove Vertex
 
 ##### Adjacency Matrix
 
-*Complexity*: `O(V^2)`
+_Complexity_: `O(V^2)`
 
 Removing vertices is inefficient in both representations. In an adjacency matrix, we need to remove the removed vertex’s row and then remove that column from each row. Removing an element from a list requires moving everything after that element over by one slot, which takes an average of `V/2` operations. Since we need to do that for every single row in our matrix, that results in `V^2` time complexity. We need to reduce each vertex index after our removed index by one as well, which doesn’t add to our quadratic time complexity but adds extra operations.
 
 ##### Adjacency List
 
-*Complexity*: `O(V)`
+_Complexity_: `O(V)`
 
 We need to visit each vertex for an adjacency list and remove all edges pointing to our removed vertex. Removing elements from sets and dictionaries is an `O(1)` operation, resulting in an overall `O(V)` time complexity.
 
-*Takeaway: Removing vertices is inefficient in both adjacency matrices and lists but more efficient in lists.*
+_Takeaway: Removing vertices is inefficient in both adjacency matrices and lists but more efficient in lists._
 
-------------------------------------------------------------------------
+---
 
 #### Add Edge
 
 ##### Adjacency Matrix
 
-*Complexity*: `O(1)`
+_Complexity_: `O(1)`
 
 Adding an edge in an adjacency matrix is simple:
 
@@ -401,7 +395,7 @@ Adding an edge in an adjacency matrix is simple:
 
 ##### Adjacency List
 
-*Complexity*: `O(1)`
+_Complexity_: `O(1)`
 
 Adding an edge in an adjacency list is simple:
 
@@ -409,15 +403,15 @@ Adding an edge in an adjacency list is simple:
 
 Both are constant-time operations.
 
-*Takeaway: Adding edges to both adjacency matrices and lists is very efficient.*
+_Takeaway: Adding edges to both adjacency matrices and lists is very efficient._
 
-------------------------------------------------------------------------
+---
 
 #### Remove Edge
 
 ##### Adjacency Matrix
 
-*Complexity*: `O(1)`
+_Complexity_: `O(1)`
 
 Removing an edge from an adjacency matrix is simple:
 
@@ -425,7 +419,7 @@ Removing an edge from an adjacency matrix is simple:
 
 ##### Adjacency List
 
-*Complexity*: `O(1)`
+_Complexity_: `O(1)`
 
 Removing an edge from an adjacency list is simple:
 
@@ -433,15 +427,15 @@ Removing an edge from an adjacency list is simple:
 
 Both are constant-time operations.
 
-*Takeaway: Removing edges from both adjacency matrices and lists is very efficient.*
+_Takeaway: Removing edges from both adjacency matrices and lists is very efficient._
 
-------------------------------------------------------------------------
+---
 
 #### Find Edge
 
 ##### Adjacency Matrix
 
-*Complexity*: `O(1)`
+_Complexity_: `O(1)`
 
 Finding an edge in an adjacency matrix is simple:
 
@@ -449,7 +443,7 @@ Finding an edge in an adjacency matrix is simple:
 
 ##### Adjacency List
 
-*Complexity*: `O(1)`
+_Complexity_: `O(1)`
 
 Finding an edge in an adjacency list is simple:
 
@@ -457,9 +451,9 @@ Finding an edge in an adjacency list is simple:
 
 Both are constant-time operations.
 
-*Takeaway: Finding edges in both adjacency matrices and lists is very efficient.*
+_Takeaway: Finding edges in both adjacency matrices and lists is very efficient._
 
-------------------------------------------------------------------------
+---
 
 #### Get All Edges from Vertex
 
@@ -467,7 +461,7 @@ You can use several commands if you want to know all the edges originating from 
 
 ##### Adjacency Matrix
 
-*Complexity*: `O(V)`
+_Complexity_: `O(V)`
 
 In an adjacency matrix, this is complicated. You would need to iterate through the entire row and populate a list based on the results:
 
@@ -479,15 +473,15 @@ In an adjacency matrix, this is complicated. You would need to iterate through t
 
 ##### Adjacency List
 
-*Complexity*: `O(1)`
+_Complexity_: `O(1)`
 
 With an adjacency list, this is as simple as returning the value from the vertex dictionary:
 
     return self.vertex[v]
 
-*Takeaway: Fetching all edges is less efficient in an adjacency matrix than an adjacency list.*
+_Takeaway: Fetching all edges is less efficient in an adjacency matrix than an adjacency list._
 
-------------------------------------------------------------------------
+---
 
 #### Summary
 
@@ -542,9 +536,9 @@ Now, we need to implement an adjacency matrix. Remember, that one benefit of the
 
 ##### Dig Deeper
 
--   <https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/representing-graphs>  
+- <https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/representing-graphs>
 
-------------------------------------------------------------------------
+---
 
 #### Learn to implement user-defined Vertex and Graph classes that allow basic operations
 
@@ -747,9 +741,9 @@ Load the `Vertex` class and `Graph` class into an interactive Python environment
 
 ##### Dig Deeper
 
--   <https://www.geeksforgeeks.org/generate-graph-using-dictionary-python/>  
+- <https://www.geeksforgeeks.org/generate-graph-using-dictionary-python/>
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -757,31 +751,31 @@ Load the `Vertex` class and `Graph` class into an interactive Python environment
 
 You can use class recordings to help you master the material.
 
--   [All previous recordings](/archive/cs/module/recEPIaHFEriTuU2x)
+- [All previous recordings](/archive/cs/module/recEPIaHFEriTuU2x)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Draw one graph for each of the descriptions below:
+  Draw one graph for each of the descriptions below:
 
-    1.  Undirected graph of 4 verts.
-    2.  Directed graph of 5 verts.
-    3.  Cyclic directed graph of 6 verts.
-    4.  DAG of 7 verts.
+  1.  Undirected graph of 4 verts.
+  2.  Directed graph of 5 verts.
+  3.  Cyclic directed graph of 6 verts.
+  4.  DAG of 7 verts.
 
--   Objective challenge:
+- Objective challenge:
 
-    ![](https://camo.githubusercontent.com/b6251eb484344b565ae2753682c645f85283ab28/68747470733a2f2f692e696d6775722e636f6d2f634a366c656b4d2e6a7067)
+  ![](https://camo.githubusercontent.com/b6251eb484344b565ae2753682c645f85283ab28/68747470733a2f2f692e696d6775722e636f6d2f634a366c656b4d2e6a7067)
 
-    1.  Using the graph shown in the picture above, write python code to represent the graph in an adjacency list.
-    2.  Using the same graph you used for the first exercise, write python code to represent the graph in an adjacency matrix.
-    3.  Write a paragraph that compares and contrasts the efficiency of your different representations.
+  1.  Using the graph shown in the picture above, write python code to represent the graph in an adjacency list.
+  2.  Using the same graph you used for the first exercise, write python code to represent the graph in an adjacency matrix.
+  3.  Write a paragraph that compares and contrasts the efficiency of your different representations.
 
--   Objective challenge:
+- Objective challenge:
 
-    Load the `Vertex` class and `Graph` class into an interactive Python environment and use the classes to create an instance of the graph shown below.
+  Load the `Vertex` class and `Graph` class into an interactive Python environment and use the classes to create an instance of the graph shown below.
 
-    ![](https://camo.githubusercontent.com/335012587396b095af8f6a8f28e2d2aedb3d84d0/68747470733a2f2f692e696d6775722e636f6d2f796931503441462e6a7067)
+  ![](https://camo.githubusercontent.com/335012587396b095af8f6a8f28e2d2aedb3d84d0/68747470733a2f2f692e696d6775722e636f6d2f796931503441462e6a7067)
