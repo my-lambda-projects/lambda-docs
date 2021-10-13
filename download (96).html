@@ -1,474 +1,770 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Intended as a home for Lambda School curriculum.">
-<meta name="author" content="">
-<meta name="generator" content="Jekyll v3.8.0">
-<title>Form Management · Lambda School</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Intended as a home for Lambda School curriculum."
+    />
+    <meta name="author" content="" />
+    <meta name="generator" content="Jekyll v3.8.0" />
+    <title>Form Management · Lambda School</title>
 
-<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+    <link
+      rel="stylesheet"
+      integrity
+      crossorigin="anonymous"
+      href="https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css"
+    />
 
-<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+    <link
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css"
+    />
 
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css"
+    />
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
-  ga('send', 'pageview');
-</script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-122016605-1", "learn.lambdaschool.com");
+      ga("send", "pageview");
+    </script>
 
-<script>
-  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
-  analytics.page();
-  }}();
-</script>
+    <script>
+      !(function () {
+        var analytics = (window.analytics = window.analytics || []);
+        if (!analytics.initialize)
+          if (analytics.invoked)
+            window.console &&
+              console.error &&
+              console.error("Segment snippet included twice.");
+          else {
+            analytics.invoked = !0;
+            analytics.methods = [
+              "trackSubmit",
+              "trackClick",
+              "trackLink",
+              "trackForm",
+              "pageview",
+              "identify",
+              "reset",
+              "group",
+              "track",
+              "ready",
+              "alias",
+              "debug",
+              "page",
+              "once",
+              "off",
+              "on",
+            ];
+            analytics.factory = function (t) {
+              return function () {
+                var e = Array.prototype.slice.call(arguments);
+                e.unshift(t);
+                analytics.push(e);
+                return analytics;
+              };
+            };
+            for (var t = 0; t < analytics.methods.length; t++) {
+              var e = analytics.methods[t];
+              analytics[e] = analytics.factory(e);
+            }
+            analytics.load = function (t, e) {
+              var n = document.createElement("script");
+              n.type = "text/javascript";
+              n.async = !0;
+              n.src =
+                "https://cdn.segment.com/analytics.js/v1/" +
+                t +
+                "/analytics.min.js";
+              var a = document.getElementsByTagName("script")[0];
+              a.parentNode.insertBefore(n, a);
+              analytics._loadOptions = e;
+            };
+            analytics.SNIPPET_VERSION = "4.1.0";
+            analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+            analytics.page();
+          }
+      })();
+    </script>
 
-<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
-<link rel="icon" href="/favicon.ico">
-<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#a0001e">
-</head>
-<body>
-<noscript>Please enable JavaScript to view this page.</noscript>
-<div id="redirect-message" style="display: none;">
-You must be logged in to view this page.
-</div>
-<div id="unauthorized-message" style="display: none;">
-You must be a Lambda School student to view this page.
-</div>
-<div id="content-wrapper" style="visibility: hidden;">
-<a id="skippy" class="sr-only sr-only-focusable" href="#content">
-<div class="container">
-<span class="skiplink-text">Skip to main content</span>
-</div>
-</a>
-<div class="mobile-menu">
-<div class="m-drop">
-<div class="mobile-row">
-<div class="header-row" style="padding: 3px 7px">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
-</svg></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
-</button>
-</div>
-</div>
-<div class="nav-row">
-<div class="results-container">
-<ul id="results-container" class="dropdown list-group"></ul>
-</div>
-<div id="mobile-course-menu" class="collapse nav-row">
-<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
-<nav class="bd-links">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Web Annex</h4>
-</div>
+    <link
+      rel="apple-touch-icon"
+      href="/assets/img/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/assets/img/favicons/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicons/safari-pinned-tab.svg"
+      color="#a0001e"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="msapplication-config"
+      content="/assets/img/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#a0001e" />
+  </head>
+  <body>
+    <noscript>Please enable JavaScript to view this page.</noscript>
+    <div id="redirect-message" style="display: none">
+      You must be logged in to view this page.
+    </div>
+    <div id="unauthorized-message" style="display: none">
+      You must be a Lambda School student to view this page.
+    </div>
+    <div id="content-wrapper" style="visibility: hidden">
+      <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+          <span class="skiplink-text">Skip to main content</span>
+        </div>
+      </a>
+      <div class="mobile-menu">
+        <div class="m-drop">
+          <div class="mobile-row">
+            <div class="header-row" style="padding: 3px 7px">
+              <a class="navbar-brand" href="/" aria-label="Lambda School"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="35"
+                  viewBox="0 0 33 35"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                    fill="#EC3944"
+                  /></svg
+              ></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#mobile-course-menu"
+                aria-controls="mobile-course-menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="30"
+                  height="30"
+                  focusable="false"
+                >
+                  <title>Menu</title>
+                  <path
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    d="M4 7h22M4 15h22M4 23h22"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="nav-row">
+            <div class="results-container">
+              <ul id="results-container" class="dropdown list-group"></ul>
+            </div>
+            <div id="mobile-course-menu" class="collapse nav-row">
+              <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+                <nav class="bd-links">
+                  <div class="bd-toc-item">
+                    <h4 class="bd-toc-link">Web Annex</h4>
+                  </div>
 
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recfwZvI7QhMa7xbG">
-1.&nbsp;&nbsp;User Interface and Git
-</a>
-<ul class="nav bd-sidenav">
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/webannex/sprint/recfwZvI7QhMa7xbG"
+                    >
+                      1.&nbsp;&nbsp;User Interface and Git
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/webannex/module/recl0IyzS2Vl89lZa/">
+                          User Interface
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/rect59e95N6OSvoCd/">
+                          Git for Web Development
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recGvXyWT6AvGtMHR/">
+                          User Interface II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recaVbBZhh8BTyMdM/">
+                          User Interface III
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/webannex/sprint/recIXiQgpgMdJ81ms"
+                    >
+                      2.&nbsp;&nbsp;Advanced CSS
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/webannex/module/recuDrqSGpWcepCMs/">
+                          Responsive Design I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recE3IqPtDxaVI0DW/">
+                          Responsive Design II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/reculyBhIYkuoBRqh/">
+                          Preprocessing I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/rec1hRu3bO6L0uxn2/">
+                          Preprocessing II
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/webannex/sprint/recclZwJxMU8kUngT"
+                    >
+                      3.&nbsp;&nbsp;JavaScript Fundamentals
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/webannex/module/recCT3KJYTIRYwQMh/">
+                          JavaScript I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/rec1oaBmEoSilO2yf/">
+                          JavaScript II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/rec0AWuNLezbpit7m/">
+                          Prototypes and Inheritance
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recyS588eOvVUKAMc/">
+                          Classes
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/webannex/sprint/recRT8JKvbTiGaosk"
+                    >
+                      4.&nbsp;&nbsp;Single Page Applications
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
+                          React Router I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recYkF1FDilIedmwX/">
+                          React Router II
+                        </a>
+                      </li>
+                      <li class="active bd-sidenav-active">
+                        <a href="/webannex/module/rect081xiYT2cfxGF/">
+                          Form Management
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recKK5C7wV0WiECfr/">
+                          Advanced Form Management
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/webannex/sprint/recozTHaHJe6L1ThN"
+                    >
+                      5.&nbsp;&nbsp;Authentication and Testing
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/webannex/module/recQD9lnhqWEFh6g4/">
+                          Introduction to Authentication
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recvIPgHwxF194c7q/">
+                          Using Sessions and Cookies
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/reciCHdNjavSKaaLt/">
+                          Using JSON Web Tokens (JWT)
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/reciXdxRA8zXJXDID/">
+                          Testing the Back End
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <hr />
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="sidebar-container bd-sidebar">
+          <div class="docs-sidebar">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"
+              ><svg
+                width="135"
+                height="35"
+                viewBox="0 0 756 197"
+                fill="#ec3944"
+              >
+                <g>
+                  <path
+                    d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"
+                  ></path>
+                  <path
+                    d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"
+                  ></path>
+                  <path
+                    d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"
+                  ></path>
+                  <path
+                    d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"
+                  ></path>
+                  <path
+                    d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"
+                  ></path>
+                  <path
+                    d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"
+                  ></path>
+                </g>
+                <path
+                  d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"
+                ></path></svg
+            ></a>
+            <ul id="results-container" class="dropdown list-group"></ul>
+            <nav class="bd-links collapse" id="bd-docs-nav">
+              <div class="bd-toc-item">
+                <h4 class="bd-toc-link">Web Annex</h4>
+              </div>
 
-<li>
-<a href="/webannex/module/recl0IyzS2Vl89lZa/">
-User Interface
-</a>
-</li>
-<li>
-<a href="/webannex/module/rect59e95N6OSvoCd/">
-Git for Web Development
-</a>
-</li>
-<li>
-<a href="/webannex/module/recGvXyWT6AvGtMHR/">
-User Interface II
-</a>
-</li>
-<li>
-<a href="/webannex/module/recaVbBZhh8BTyMdM/">
-User Interface III
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recIXiQgpgMdJ81ms">
-2.&nbsp;&nbsp;Advanced CSS
-</a>
-<ul class="nav bd-sidenav">
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/webannex/sprint/recfwZvI7QhMa7xbG"
+                >
+                  1.&nbsp;&nbsp;User Interface and Git
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/webannex/module/recl0IyzS2Vl89lZa/">
+                      User Interface
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/rect59e95N6OSvoCd/">
+                      Git for Web Development
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recGvXyWT6AvGtMHR/">
+                      User Interface II
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recaVbBZhh8BTyMdM/">
+                      User Interface III
+                    </a>
+                  </li>
+                </ul>
+              </div>
 
-<li>
-<a href="/webannex/module/recuDrqSGpWcepCMs/">
-Responsive Design I
-</a>
-</li>
-<li>
-<a href="/webannex/module/recE3IqPtDxaVI0DW/">
-Responsive Design II
-</a>
-</li>
-<li>
-<a href="/webannex/module/reculyBhIYkuoBRqh/">
-Preprocessing I
-</a>
-</li>
-<li>
-<a href="/webannex/module/rec1hRu3bO6L0uxn2/">
-Preprocessing II
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
- <a class="bd-toc-link" href="/webannex/sprint/recclZwJxMU8kUngT">
-3.&nbsp;&nbsp;JavaScript Fundamentals
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recCT3KJYTIRYwQMh/">
-JavaScript I
-</a>
-</li>
-<li>
-<a href="/webannex/module/rec1oaBmEoSilO2yf/">
-JavaScript II
-</a>
-</li>
-<li>
-<a href="/webannex/module/rec0AWuNLezbpit7m/">
-Prototypes and Inheritance
-</a>
-</li>
-<li>
-<a href="/webannex/module/recyS588eOvVUKAMc/">
-Classes
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recRT8JKvbTiGaosk">
-4.&nbsp;&nbsp;Single Page Applications
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
-React Router I
-</a>
-</li>
-<li>
-<a href="/webannex/module/recYkF1FDilIedmwX/">
-React Router II
-</a>
-</li>
-<li class="active bd-sidenav-active">
-<a href="/webannex/module/rect081xiYT2cfxGF/">
-Form Management
-</a>
-</li>
-<li>
-<a href="/webannex/module/recKK5C7wV0WiECfr/">
-Advanced Form Management
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recozTHaHJe6L1ThN">
-5.&nbsp;&nbsp;Authentication and Testing
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recQD9lnhqWEFh6g4/">
-Introduction to Authentication
-</a>
-</li>
-<li>
-<a href="/webannex/module/recvIPgHwxF194c7q/">
-Using Sessions and Cookies
-</a>
-</li>
-<li>
-<a href="/webannex/module/reciCHdNjavSKaaLt/">
-Using JSON Web Tokens (JWT)
-</a>
-</li>
-<li>
-<a href="/webannex/module/reciXdxRA8zXJXDID/">
-Testing the Back End
-</a>
-</li>
-</ul>
-</div>
-<hr>
-</nav>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="main-container">
-<div class="sidebar-container bd-sidebar">
-<div class="docs-sidebar">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
-<ul id="results-container" class="dropdown list-group"></ul>
-<nav class="bd-links collapse" id="bd-docs-nav">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Web Annex</h4>
-</div>
-
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recfwZvI7QhMa7xbG">
-1.&nbsp;&nbsp;User Interface and Git
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recl0IyzS2Vl89lZa/">
-User Interface
-</a>
-</li>
-<li>
-<a href="/webannex/module/rect59e95N6OSvoCd/">
-Git for Web Development
-</a>
-</li>
-<li>
-<a href="/webannex/module/recGvXyWT6AvGtMHR/">
-User Interface II
-</a>
-</li>
-<li>
-<a href="/webannex/module/recaVbBZhh8BTyMdM/">
-User Interface III
-</a>
-</li>
-</ul>
-</div>
-
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recIXiQgpgMdJ81ms">
-2.&nbsp;&nbsp;Advanced CSS
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recuDrqSGpWcepCMs/">
-Responsive Design I
-</a>
-</li>
-<li>
-<a href="/webannex/module/recE3IqPtDxaVI0DW/">
-Responsive Design II
-</a>
-</li>
-<li>
-<a href="/webannex/module/reculyBhIYkuoBRqh/">
-Preprocessing I
-</a>
-</li>
-<li>
-<a href="/webannex/module/rec1hRu3bO6L0uxn2/">
-Preprocessing II
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recclZwJxMU8kUngT">
-3.&nbsp;&nbsp;JavaScript Fundamentals
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recCT3KJYTIRYwQMh/">
-JavaScript I
-</a>
-</li>
-<li>
-<a href="/webannex/module/rec1oaBmEoSilO2yf/">
-JavaScript II
-</a>
-</li>
-<li>
-<a href="/webannex/module/rec0AWuNLezbpit7m/">
-Prototypes and Inheritance
-</a>
-</li>
-<li>
-<a href="/webannex/module/recyS588eOvVUKAMc/">
-Classes
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recRT8JKvbTiGaosk">
-4.&nbsp;&nbsp;Single Page Applications
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
-React Router I
-</a>
-</li>
-<li>
-<a href="/webannex/module/recYkF1FDilIedmwX/">
-React Router II
-</a>
-</li>
-<li class="active bd-sidenav-active">
-<a href="/webannex/module/rect081xiYT2cfxGF/">
-Form Management
-</a>
-</li>
-<li>
-<a href="/webannex/module/recKK5C7wV0WiECfr/">
-Advanced Form Management
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recozTHaHJe6L1ThN">
-5.&nbsp;&nbsp;Authentication and Testing
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recQD9lnhqWEFh6g4/">
-Introduction to Authentication
-</a>
- </li>
-<li>
-<a href="/webannex/module/recvIPgHwxF194c7q/">
-Using Sessions and Cookies
-</a>
-</li>
-<li>
-<a href="/webannex/module/reciCHdNjavSKaaLt/">
-Using JSON Web Tokens (JWT)
-</a>
-</li>
-<li>
-<a href="/webannex/module/reciXdxRA8zXJXDID/">
-Testing the Back End
-</a>
-</li>
-</ul>
-</div>
-<hr>
-</nav>
-</div>
-</div>
-<main class="content-container flex-wrapper" role="main">
-<div class="sticky-nav">
-<div class="sprint-nav">
-<ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
-<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
-<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
-<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
-</ul>
-</div>
-
-</div>
-<div class="wrapper limit-width">
-<div class="flex-wrapper">
-<div class="limit-width">
-<div class="jumbotron">
-<h1 class="bd-title" id="content">Form Management</h1>
-<span class="lead">
-<p class="bd-lead"></p>
-</span>
-<strong>At the end of this module, you should be able to:</strong>
-<ul>
-<li>demonstrate how to build a form with the basic HTML form elements</li>
-<li>use the onChange handler to capture input values</li>
-<li>utilize a form's submit event to work with form data</li>
-<li>demonstrate the ability to handle multiple inputs in a form</li>
-<li>use controlled inputs to manage form data</li>
-</ul>
-</div>
-<div class="alert alert-warning" role="alert">
-<h4>Pro Tip</h4>
-<p>Take no thought of who is right or wrong or who is better than. Be not for or against.</p>
-<footer class="blockquote-footer"><p>Bruce Lee</p>
-</footer>
-</div>
-<h2 class="display-4">
-<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
-<p class="lead">Review each preclass resource before class.</p>
-<div class="preclass">
-<ul class="list-group list-group-flush">
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OoDQJLStKWM" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GIpU4qMyEZY" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/IMv4yjP_VCA" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eMHsHZOsFF8" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bGuKVboEOSk" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-</ul>
-</div>
-<h2 class="display-4">
-<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
-<h4 class="mark mb-3 p-2">Learn to demonstrate how to build a form with the basic HTML form elements</h4>
-<p>Signup, login, search, create, edit, dropdowns, checkboxes, radio buttons, regular buttons and more. The humble &lt;form&gt; tag carries a lot of weight on it shoulders. For many applications it’s the artery between your code and the user – the only means by which they have to tell us what we need to know. Because forms are natively stateful in HTML (meaning the form itself keeps track of the information we need) using them in React can feel a bit odd, but it wouldn’t be fair to blame &lt;form&gt; for that. After all, &lt;form&gt; was here first; it was a stateful component before it was cool.</p>
-<h5>Overview</h5>
-<p>Forms in websites and web applications have been around for a long time. They are one of the best ways for companies to gather data from their users, and to get your users to interact with their software. Needless to say, they are vital in the web landscape.</p>
-<p>Every language and framework will handle form data a bit differently, but most of them will use the same basic HTML elements to build a form. Each will have their own responsibilities. Here are the elements we’ll talk about right now with a brief definition from MDN:</p>
-<h3 id="form"><code class="highlighter-rouge">&lt;form&gt;</code></h3>
-<blockquote>
-<p>The HTML <code class="highlighter-rouge">&lt;form&gt;</code> element represents a document section that contains interactive controls for submitting information to a web server.</p>
-</blockquote>
-<h3 id="input"><code class="highlighter-rouge">&lt;input&gt;</code></h3>
-<blockquote>
-<p>The HTML <code class="highlighter-rouge">&lt;input&gt;</code> element is used to create interactive controls for web-based forms in order to accept data from the user.</p>
-</blockquote>
-<h3 id="label"><code class="highlighter-rouge">&lt;label&gt;</code></h3>
-<blockquote>
-<p>The HTML <code class="highlighter-rouge">&lt;label&gt;</code> element represents a caption for an item in a user interface.</p>
-</blockquote>
-<p>In summary, the form contains interactive controls (form elements), the input is the interactive control used to collect data from the user, and the label is how we caption the input to provide a better experience for our users.</p>
-<h5>Follow Along</h5>
-<p>We’re going to create a step-by-step login form; we’ll start simply by creating a blank text input field.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/webannex/sprint/recIXiQgpgMdJ81ms"
+                >
+                  2.&nbsp;&nbsp;Advanced CSS
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/webannex/module/recuDrqSGpWcepCMs/">
+                      Responsive Design I
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recE3IqPtDxaVI0DW/">
+                      Responsive Design II
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/reculyBhIYkuoBRqh/">
+                      Preprocessing I
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/rec1hRu3bO6L0uxn2/">
+                      Preprocessing II
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/webannex/sprint/recclZwJxMU8kUngT"
+                >
+                  3.&nbsp;&nbsp;JavaScript Fundamentals
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/webannex/module/recCT3KJYTIRYwQMh/">
+                      JavaScript I
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/rec1oaBmEoSilO2yf/">
+                      JavaScript II
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/rec0AWuNLezbpit7m/">
+                      Prototypes and Inheritance
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recyS588eOvVUKAMc/"> Classes </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/webannex/sprint/recRT8JKvbTiGaosk"
+                >
+                  4.&nbsp;&nbsp;Single Page Applications
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
+                      React Router I
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recYkF1FDilIedmwX/">
+                      React Router II
+                    </a>
+                  </li>
+                  <li class="active bd-sidenav-active">
+                    <a href="/webannex/module/rect081xiYT2cfxGF/">
+                      Form Management
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recKK5C7wV0WiECfr/">
+                      Advanced Form Management
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/webannex/sprint/recozTHaHJe6L1ThN"
+                >
+                  5.&nbsp;&nbsp;Authentication and Testing
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/webannex/module/recQD9lnhqWEFh6g4/">
+                      Introduction to Authentication
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recvIPgHwxF194c7q/">
+                      Using Sessions and Cookies
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/reciCHdNjavSKaaLt/">
+                      Using JSON Web Tokens (JWT)
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/reciXdxRA8zXJXDID/">
+                      Testing the Back End
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <hr />
+            </nav>
+          </div>
+        </div>
+        <main class="content-container flex-wrapper" role="main">
+          <div class="sticky-nav">
+            <div class="sprint-nav">
+              <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+                <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+                <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+                <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="wrapper limit-width">
+            <div class="flex-wrapper">
+              <div class="limit-width">
+                <div class="jumbotron">
+                  <h1 class="bd-title" id="content">Form Management</h1>
+                  <span class="lead">
+                    <p class="bd-lead"></p>
+                  </span>
+                  <strong
+                    >At the end of this module, you should be able to:</strong
+                  >
+                  <ul>
+                    <li>
+                      demonstrate how to build a form with the basic HTML form
+                      elements
+                    </li>
+                    <li>use the onChange handler to capture input values</li>
+                    <li>
+                      utilize a form's submit event to work with form data
+                    </li>
+                    <li>
+                      demonstrate the ability to handle multiple inputs in a
+                      form
+                    </li>
+                    <li>use controlled inputs to manage form data</li>
+                  </ul>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                  <h4>Pro Tip</h4>
+                  <p>
+                    Take no thought of who is right or wrong or who is better
+                    than. Be not for or against.
+                  </p>
+                  <footer class="blockquote-footer"><p>Bruce Lee</p></footer>
+                </div>
+                <h2 class="display-4">
+                  <a
+                    id="prepare"
+                    class="anchor"
+                    href="#prepare"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Prepare
+                </h2>
+                <p class="lead">Review each preclass resource before class.</p>
+                <div class="preclass">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/OoDQJLStKWM"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/GIpU4qMyEZY"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/IMv4yjP_VCA"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/eMHsHZOsFF8"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/bGuKVboEOSk"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <h2 class="display-4">
+                  <a id="learn" class="anchor" href="#learn" aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Learn
+                </h2>
+                <h4 class="mark mb-3 p-2">
+                  Learn to demonstrate how to build a form with the basic HTML
+                  form elements
+                </h4>
+                <p>
+                  Signup, login, search, create, edit, dropdowns, checkboxes,
+                  radio buttons, regular buttons and more. The humble
+                  &lt;form&gt; tag carries a lot of weight on it shoulders. For
+                  many applications it’s the artery between your code and the
+                  user – the only means by which they have to tell us what we
+                  need to know. Because forms are natively stateful in HTML
+                  (meaning the form itself keeps track of the information we
+                  need) using them in React can feel a bit odd, but it wouldn’t
+                  be fair to blame &lt;form&gt; for that. After all,
+                  &lt;form&gt; was here first; it was a stateful component
+                  before it was cool.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  Forms in websites and web applications have been around for a
+                  long time. They are one of the best ways for companies to
+                  gather data from their users, and to get your users to
+                  interact with their software. Needless to say, they are vital
+                  in the web landscape.
+                </p>
+                <p>
+                  Every language and framework will handle form data a bit
+                  differently, but most of them will use the same basic HTML
+                  elements to build a form. Each will have their own
+                  responsibilities. Here are the elements we’ll talk about right
+                  now with a brief definition from MDN:
+                </p>
+                <h3 id="form">
+                  <code class="highlighter-rouge">&lt;form&gt;</code>
+                </h3>
+                <blockquote>
+                  <p>
+                    The HTML
+                    <code class="highlighter-rouge">&lt;form&gt;</code> element
+                    represents a document section that contains interactive
+                    controls for submitting information to a web server.
+                  </p>
+                </blockquote>
+                <h3 id="input">
+                  <code class="highlighter-rouge">&lt;input&gt;</code>
+                </h3>
+                <blockquote>
+                  <p>
+                    The HTML
+                    <code class="highlighter-rouge">&lt;input&gt;</code> element
+                    is used to create interactive controls for web-based forms
+                    in order to accept data from the user.
+                  </p>
+                </blockquote>
+                <h3 id="label">
+                  <code class="highlighter-rouge">&lt;label&gt;</code>
+                </h3>
+                <blockquote>
+                  <p>
+                    The HTML
+                    <code class="highlighter-rouge">&lt;label&gt;</code> element
+                    represents a caption for an item in a user interface.
+                  </p>
+                </blockquote>
+                <p>
+                  In summary, the form contains interactive controls (form
+                  elements), the input is the interactive control used to
+                  collect data from the user, and the label is how we caption
+                  the input to provide a better experience for our users.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  We’re going to create a step-by-step login form; we’ll start
+                  simply by creating a blank text input field.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">"</span><span class="s2">./App.css</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
@@ -482,10 +778,42 @@ Testing the Back End
 <span class="p">}</span>
 
 <span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
-</code></pre></div></div>
-<p>This only renders a basic text input field, but already we could ask a couple of questions. First, if all we’re rendering is an <code class="highlighter-rouge">&lt;input&gt;</code>, then why are we bothering to put it inside a <code class="highlighter-rouge">&lt;form&gt;</code>? Second, there are a lot of different kinds of <code class="highlighter-rouge">&lt;input&gt;</code>’s, how does this one know to be a <em>text</em> input? The answer to the first question has to do with the form being stateful, as we’ll see soon. To some extent, the <code class="highlighter-rouge">&lt;form&gt;</code> tag will be able to keep track of what its children are doing. As for the second question, a basic text field is what an <code class="highlighter-rouge">&lt;input&gt;</code> tag defaults to, but this isn’t very semantic, is it? Another way to say it is that this code isn’t very “self-documenting,” meaning other developers looking at our code in the future might have a harder time understanding what it’s for. What’s even worse is that screen readers might have difficulty parsing what it’s for. A trivial effort from us can mean a world of difference for a future developer or for someone using a screen reader.</p>
-<p>Let’s do better by making this code a friendlier to developers and screen readers alike.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  This only renders a basic text input field, but already we
+                  could ask a couple of questions. First, if all we’re rendering
+                  is an <code class="highlighter-rouge">&lt;input&gt;</code>,
+                  then why are we bothering to put it inside a
+                  <code class="highlighter-rouge">&lt;form&gt;</code>? Second,
+                  there are a lot of different kinds of
+                  <code class="highlighter-rouge">&lt;input&gt;</code>’s, how
+                  does this one know to be a <em>text</em> input? The answer to
+                  the first question has to do with the form being stateful, as
+                  we’ll see soon. To some extent, the
+                  <code class="highlighter-rouge">&lt;form&gt;</code> tag will
+                  be able to keep track of what its children are doing. As for
+                  the second question, a basic text field is what an
+                  <code class="highlighter-rouge">&lt;input&gt;</code> tag
+                  defaults to, but this isn’t very semantic, is it? Another way
+                  to say it is that this code isn’t very “self-documenting,”
+                  meaning other developers looking at our code in the future
+                  might have a harder time understanding what it’s for. What’s
+                  even worse is that screen readers might have difficulty
+                  parsing what it’s for. A trivial effort from us can mean a
+                  world of difference for a future developer or for someone
+                  using a screen reader.
+                </p>
+                <p>
+                  Let’s do better by making this code a friendlier to developers
+                  and screen readers alike.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">"</span><span class="s2">./App.css</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
@@ -502,16 +830,65 @@ Testing the Back End
 <span class="p">}</span>
 
 <span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
-</code></pre></div></div>
-<p>Better. Now screenreaders, users, and fellow developers should have an easier time understanding what this input is for.</p>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to use the onChange handler to capture input values</h4>
-<p>Now that we can build a form in HTML the next step is to start controlling the data flow through forms. Browsers actually allow you to do this natively, but we want to manage our data through React, not through HTML. We’ll start with this using the <code class="highlighter-rouge">onChange</code> React event handler.</p>
-<h5>Overview</h5>
-<p>So now that we’ve got a way for users to input text, the next step is to capture that value. In a regular DOM environment, each change to this input would create a “change event” that the DOM API would expose to us, but remember: React operates out of a virtual DOM. When React is deciding what to render to the page, the DOM doesn’t even exist yet. That’s why the React team created “synthetic events,” which effectively simulate DOM events inside the virtual DOM. We don’t need to worry about the details of synthetic events at the moment. They’re designed to work as much like their native DOM counterparts as possible, and for the vast majority of cases, they do, but you should at least be aware of their existence.</p>
-<p>The <code class="highlighter-rouge">onChange</code> handler on an input captures the typing event. The <code class="highlighter-rouge">event</code> object stores the new value from the input. We get access to the typing event from <code class="highlighter-rouge">onChange</code>, because the event holds the value of the input. Because of this, we have access to what our user’s input from the event object! This pathway is vital if we want to manage input values in react state, rather than through the DOM.</p>
-<p>Let’s take a look at <code class="highlighter-rouge">onChange</code>. As we’ve seen with other event handlers, we will pass in a callback function to <code class="highlighter-rouge">onChange</code>. This can be done inline or with a function defined elsewhere (usually in the component). Notice that the event object gets passed into the callback function as a parameter.</p>
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// inline</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Better. Now screenreaders, users, and fellow developers should
+                  have an easier time understanding what this input is for.
+                </p>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to use the onChange handler to capture input values
+                </h4>
+                <p>
+                  Now that we can build a form in HTML the next step is to start
+                  controlling the data flow through forms. Browsers actually
+                  allow you to do this natively, but we want to manage our data
+                  through React, not through HTML. We’ll start with this using
+                  the <code class="highlighter-rouge">onChange</code> React
+                  event handler.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  So now that we’ve got a way for users to input text, the next
+                  step is to capture that value. In a regular DOM environment,
+                  each change to this input would create a “change event” that
+                  the DOM API would expose to us, but remember: React operates
+                  out of a virtual DOM. When React is deciding what to render to
+                  the page, the DOM doesn’t even exist yet. That’s why the React
+                  team created “synthetic events,” which effectively simulate
+                  DOM events inside the virtual DOM. We don’t need to worry
+                  about the details of synthetic events at the moment. They’re
+                  designed to work as much like their native DOM counterparts as
+                  possible, and for the vast majority of cases, they do, but you
+                  should at least be aware of their existence.
+                </p>
+                <p>
+                  The <code class="highlighter-rouge">onChange</code> handler on
+                  an input captures the typing event. The
+                  <code class="highlighter-rouge">event</code> object stores the
+                  new value from the input. We get access to the typing event
+                  from <code class="highlighter-rouge">onChange</code>, because
+                  the event holds the value of the input. Because of this, we
+                  have access to what our user’s input from the event object!
+                  This pathway is vital if we want to manage input values in
+                  react state, rather than through the DOM.
+                </p>
+                <p>
+                  Let’s take a look at
+                  <code class="highlighter-rouge">onChange</code>. As we’ve seen
+                  with other event handlers, we will pass in a callback function
+                  to <code class="highlighter-rouge">onChange</code>. This can
+                  be done inline or with a function defined elsewhere (usually
+                  in the component). Notice that the event object gets passed
+                  into the callback function as a parameter.
+                </p>
+                <div class="language-jsx highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="c1">// inline</span>
 <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">event</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">)}</span> <span class="sr">/</span><span class="err">&gt;
 </span>
 <span class="c1">// function defined somewhere else</span>
@@ -522,9 +899,23 @@ Testing the Back End
 <span class="p">...</span>
 
 <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">logEvent</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
-</span></code></pre></div></div>
-<p>If we use the <code class="highlighter-rouge">onChange</code> synthetic event listener on our <code class="highlighter-rouge">&lt;input&gt;</code> tag, we’ll be able to capture its value. Then we’ll set that value to a state variable. We can access the value like this - <code class="highlighter-rouge">event.target.value</code>.</p>
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">Form</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></code></pre>
+                  </div>
+                </div>
+                <p>
+                  If we use the
+                  <code class="highlighter-rouge">onChange</code> synthetic
+                  event listener on our
+                  <code class="highlighter-rouge">&lt;input&gt;</code> tag,
+                  we’ll be able to capture its value. Then we’ll set that value
+                  to a state variable. We can access the value like this -
+                  <code class="highlighter-rouge">event.target.value</code>.
+                </p>
+                <div class="language-jsx highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">Form</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="p">[</span><span class="nx">inputValue</span><span class="p">,</span> <span class="nx">setInputValue</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
 
   <span class="kd">const</span> <span class="nx">changeHandler</span> <span class="o">=</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -542,12 +933,24 @@ Testing the Back End
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">);</span>
 <span class="p">};</span>
-</code></pre></div></div>
-<p>Now our React state will stay in sync with the input data!</p>
-<h5>Follow Along</h5>
-<h3 id="handling-input-changes">Handling Input Changes</h3>
-<p>We will continue our login form by adding the <code class="highlighter-rouge">onChange</code> handler on the input.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Now our React state will stay in sync with the input data!
+                </p>
+                <h5>Follow Along</h5>
+                <h3 id="handling-input-changes">Handling Input Changes</h3>
+                <p>
+                  We will continue our login form by adding the
+                  <code class="highlighter-rouge">onChange</code> handler on the
+                  input.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">"</span><span class="s2">./App.css</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
@@ -567,10 +970,30 @@ Testing the Back End
 <span class="p">}</span>
 
 <span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
-</code></pre></div></div>
-<p>Really this isn’t so different from vanilla Javascript. We inform our <code class="highlighter-rouge">&lt;input&gt;</code> tag to listen for changes. Each change creates a synthetic event. We then pass the value of that event to our state setter and capture it in our <code class="highlighter-rouge">name</code> variable.</p>
-<p>This isn’t a bad start, but writing our function inline like this could get messy if we ever wanted to execute more than one statement per change (firing off an animation, for example). Let’s build a custom function to “handle” this for us and tuck our state setter into that.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Really this isn’t so different from vanilla Javascript. We
+                  inform our
+                  <code class="highlighter-rouge">&lt;input&gt;</code> tag to
+                  listen for changes. Each change creates a synthetic event. We
+                  then pass the value of that event to our state setter and
+                  capture it in our
+                  <code class="highlighter-rouge">name</code> variable.
+                </p>
+                <p>
+                  This isn’t a bad start, but writing our function inline like
+                  this could get messy if we ever wanted to execute more than
+                  one statement per change (firing off an animation, for
+                  example). Let’s build a custom function to “handle” this for
+                  us and tuck our state setter into that.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">"</span><span class="s2">./App.css</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
@@ -594,18 +1017,67 @@ Testing the Back End
 <span class="p">}</span>
 
 <span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
-</code></pre></div></div>
-<p>This might seem like a little extra work but notice that within the body of our <code class="highlighter-rouge">handleChange</code> function, we can now execute as many lines of code as we want without cluttering up our markup. Getting used to this pattern will save you some headaches later on.</p>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to utilize a form's submit event to work with form data</h4>
-<p>So now that we’ve got the value the user typed into our <code class="highlighter-rouge">&lt;input&gt;</code> safely stored in our state what do we do with it? In real applications we’d probably be sending this information asynchronously to a server to authenticate them, or perhaps run some internal function to do something else. Regardless, we need to learn how to handle form data when our user is finished filling out the form.</p>
-<h5>Overview</h5>
-<p>The data we have gathered from our users is very important to us, the software, and our company. So when a user fills out a form, we need to know how to let the user “submit” that data. The first thing we think about when we say “submit a form” is a button click. We’ll look at how to handle button clicks for sure, but there is an even better solution for form submission.</p>
-<p>Imagine you fill out a form with 10 input fields. You have been keying <code class="highlighter-rouge">tab</code> to navigate to each input. You get to the end, what is the most natural action at this point? Most people have been trained to hit <code class="highlighter-rouge">enter</code> to submit a form. Now imagine you do so, and nothing happens. It’s the worst! Am I right? In order to give our users a great experience in our software, we also want to learn how to submit forms using the &lt;form&gt; element’s <code class="highlighter-rouge">onSubmit</code> event handler.</p>
-<h5>Follow Along</h5>
-<p><em>Submitting form data</em></p>
-<p>As mentioned above, in real applications, we’d probably be sending this information asynchronously to a server to authenticate them, but for now, let’s just log the user to the console. To do this, we’ll need a submit button and a function to handle that submit.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  This might seem like a little extra work but notice that
+                  within the body of our
+                  <code class="highlighter-rouge">handleChange</code> function,
+                  we can now execute as many lines of code as we want without
+                  cluttering up our markup. Getting used to this pattern will
+                  save you some headaches later on.
+                </p>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to utilize a form's submit event to work with form data
+                </h4>
+                <p>
+                  So now that we’ve got the value the user typed into our
+                  <code class="highlighter-rouge">&lt;input&gt;</code> safely
+                  stored in our state what do we do with it? In real
+                  applications we’d probably be sending this information
+                  asynchronously to a server to authenticate them, or perhaps
+                  run some internal function to do something else. Regardless,
+                  we need to learn how to handle form data when our user is
+                  finished filling out the form.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  The data we have gathered from our users is very important to
+                  us, the software, and our company. So when a user fills out a
+                  form, we need to know how to let the user “submit” that data.
+                  The first thing we think about when we say “submit a form” is
+                  a button click. We’ll look at how to handle button clicks for
+                  sure, but there is an even better solution for form
+                  submission.
+                </p>
+                <p>
+                  Imagine you fill out a form with 10 input fields. You have
+                  been keying <code class="highlighter-rouge">tab</code> to
+                  navigate to each input. You get to the end, what is the most
+                  natural action at this point? Most people have been trained to
+                  hit <code class="highlighter-rouge">enter</code> to submit a
+                  form. Now imagine you do so, and nothing happens. It’s the
+                  worst! Am I right? In order to give our users a great
+                  experience in our software, we also want to learn how to
+                  submit forms using the &lt;form&gt; element’s
+                  <code class="highlighter-rouge">onSubmit</code> event handler.
+                </p>
+                <h5>Follow Along</h5>
+                <p><em>Submitting form data</em></p>
+                <p>
+                  As mentioned above, in real applications, we’d probably be
+                  sending this information asynchronously to a server to
+                  authenticate them, but for now, let’s just log the user to the
+                  console. To do this, we’ll need a submit button and a function
+                  to handle that submit.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">"</span><span class="s2">./App.css</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
@@ -634,11 +1106,45 @@ Testing the Back End
 <span class="p">}</span>
 
 <span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
-</code></pre></div></div>
-<p>Uh-oh. When we clicked our button, the page refreshed. In the early days of the internet, when the spec for this stuff was written, that behavior was actually useful. Not anymore. In our case, with a single page application, we definitely don’t want our page refreshing. If it did so, it would clear our state and cause all kinds of problems.</p>
-<p>We need to block the default behavior of the <code class="highlighter-rouge">onSubmit</code> listener. To do that, we’ll need to grab that event object again. We’ll also need to peel the submit handler off our <code class="highlighter-rouge">&lt;button&gt;</code> and put it on to the <code class="highlighter-rouge">&lt;form&gt;</code> itself. Remember when I told you that the <code class="highlighter-rouge">&lt;form&gt;</code> tag keeps track of what its children do? This is one example. If there’s only one <code class="highlighter-rouge">&lt;button&gt;</code> inside a <code class="highlighter-rouge">&lt;form&gt;</code>, the form will know to fire the function attached to its <code class="highlighter-rouge">onSubmit</code> listener. The form is also the element causing the default refresh of our page, and, as such, it’s the only thing that can prevent it, so we have to grab the event object from the form. As you can hopefully see by now, part of the reason forms can be confusing in React is because the underlying HTML is complex.</p>
-<p>Here’s our updated code.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Uh-oh. When we clicked our button, the page refreshed. In the
+                  early days of the internet, when the spec for this stuff was
+                  written, that behavior was actually useful. Not anymore. In
+                  our case, with a single page application, we definitely don’t
+                  want our page refreshing. If it did so, it would clear our
+                  state and cause all kinds of problems.
+                </p>
+                <p>
+                  We need to block the default behavior of the
+                  <code class="highlighter-rouge">onSubmit</code> listener. To
+                  do that, we’ll need to grab that event object again. We’ll
+                  also need to peel the submit handler off our
+                  <code class="highlighter-rouge">&lt;button&gt;</code> and put
+                  it on to the
+                  <code class="highlighter-rouge">&lt;form&gt;</code> itself.
+                  Remember when I told you that the
+                  <code class="highlighter-rouge">&lt;form&gt;</code> tag keeps
+                  track of what its children do? This is one example. If there’s
+                  only one
+                  <code class="highlighter-rouge">&lt;button&gt;</code> inside a
+                  <code class="highlighter-rouge">&lt;form&gt;</code>, the form
+                  will know to fire the function attached to its
+                  <code class="highlighter-rouge">onSubmit</code> listener. The
+                  form is also the element causing the default refresh of our
+                  page, and, as such, it’s the only thing that can prevent it,
+                  so we have to grab the event object from the form. As you can
+                  hopefully see by now, part of the reason forms can be
+                  confusing in React is because the underlying HTML is complex.
+                </p>
+                <p>Here’s our updated code.</p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">"</span><span class="s2">./App.css</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
@@ -668,16 +1174,44 @@ Testing the Back End
 <span class="p">}</span>
 
 <span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
-</code></pre></div></div>
-<p>Nice, it logs our state to the console without refreshing the page. Let’s move on.</p>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to demonstrate the ability to handle multiple inputs in a form</h4>
-<p>Most forms will have more than a single input, so it is very important to learn how to handle multiple inputs in a form.</p>
-<h5>Overview</h5>
-<p>Handling multiple inputs can get a little awkward in web apps. If I asked you to add a second input to a form right now, you would first add an input to the JSX, then add a state property for that input, then add a new function to handle that input. That works, but imagine doing that 5 - 10 times for larger forms. Or more! You can see how messy this would get. Let’s walk through how we can fix this problem below.</p>
-<h5>Follow Along</h5>
-<p>Right now, this isn’t a very useful login page as there’s no field for a password. We’re going to make a naive implementation first, reflect on its limitations, and then upgrade it.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Nice, it logs our state to the console without refreshing the
+                  page. Let’s move on.
+                </p>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to demonstrate the ability to handle multiple inputs in
+                  a form
+                </h4>
+                <p>
+                  Most forms will have more than a single input, so it is very
+                  important to learn how to handle multiple inputs in a form.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  Handling multiple inputs can get a little awkward in web apps.
+                  If I asked you to add a second input to a form right now, you
+                  would first add an input to the JSX, then add a state property
+                  for that input, then add a new function to handle that input.
+                  That works, but imagine doing that 5 - 10 times for larger
+                  forms. Or more! You can see how messy this would get. Let’s
+                  walk through how we can fix this problem below.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Right now, this isn’t a very useful login page as there’s no
+                  field for a password. We’re going to make a naive
+                  implementation first, reflect on its limitations, and then
+                  upgrade it.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">"</span><span class="s2">./App.css</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
@@ -718,14 +1252,46 @@ Testing the Back End
 <span class="p">}</span>
 
 <span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
-</code></pre></div></div>
-<p>We had to change some of our names around now that we’re handling two fields instead of one, but none of the underlying logic changed. Now, this code works, and as a wise man once said, caveman code is better than nothing as long as it works.</p>
-<p>But there’s another piece of sage advice we’re familiar with: don’t repeat yourself (DRY). We sure are repeating ourselves a lot here! We’re keeping the information about one user in two completely separate state variables, and we’ve written two completely separate functions with identical logic. So how can we do better?</p>
-<p>We have two goals. First, we want to store both the username and password in a single state object. Second, we only want to write one single change handler function that will dynamically find the correct key in our state object to change. To achieve these goals, we need to learn about two tools provided to us by ES6: the spread operator and computed properties.</p>
-<h3 id="the-spread-operator">The Spread Operator</h3>
-<p>The spread operator is a swiss army knife for JavaScript. We’re not going to delve all its uses here, though I encourage you to look it up. For now, we’re going to focus on its ability to help us make copies of objects and arrays.</p>
-<p>You might have encountered this programming gotcha before.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">foo</span> <span class="o">=</span> <span class="p">{</span> <span class="na">key</span><span class="p">:</span> <span class="dl">"</span><span class="s2">value</span><span class="dl">"</span> <span class="p">};</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  We had to change some of our names around now that we’re
+                  handling two fields instead of one, but none of the underlying
+                  logic changed. Now, this code works, and as a wise man once
+                  said, caveman code is better than nothing as long as it works.
+                </p>
+                <p>
+                  But there’s another piece of sage advice we’re familiar with:
+                  don’t repeat yourself (DRY). We sure are repeating ourselves a
+                  lot here! We’re keeping the information about one user in two
+                  completely separate state variables, and we’ve written two
+                  completely separate functions with identical logic. So how can
+                  we do better?
+                </p>
+                <p>
+                  We have two goals. First, we want to store both the username
+                  and password in a single state object. Second, we only want to
+                  write one single change handler function that will dynamically
+                  find the correct key in our state object to change. To achieve
+                  these goals, we need to learn about two tools provided to us
+                  by ES6: the spread operator and computed properties.
+                </p>
+                <h3 id="the-spread-operator">The Spread Operator</h3>
+                <p>
+                  The spread operator is a swiss army knife for JavaScript.
+                  We’re not going to delve all its uses here, though I encourage
+                  you to look it up. For now, we’re going to focus on its
+                  ability to help us make copies of objects and arrays.
+                </p>
+                <p>
+                  You might have encountered this programming gotcha before.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">let</span> <span class="nx">foo</span> <span class="o">=</span> <span class="p">{</span> <span class="na">key</span><span class="p">:</span> <span class="dl">"</span><span class="s2">value</span><span class="dl">"</span> <span class="p">};</span>
 
 <span class="kd">let</span> <span class="nx">bar</span> <span class="o">=</span> <span class="nx">foo</span><span class="p">;</span>
 
@@ -736,10 +1302,38 @@ Testing the Back End
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">foo</span><span class="p">);</span> <span class="c1">//  {key: "change"}</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">bar</span><span class="p">);</span> <span class="c1">//  {key: "change"}</span>
-</code></pre></div></div>
-<p>This is counterintuitive. When we declared our <code class="highlighter-rouge">bar</code> variable, we thought we were making a copy of <code class="highlighter-rouge">foo</code> but we weren’t. We were merely creating two separate references to the same object data stored in memory. When we changed the data in that location and called upon their reference (<code class="highlighter-rouge">foo</code> and <code class="highlighter-rouge">bar</code>), they simply logged what they were told to point at. This is a little annoying, but really, it’s the only way objects can work. If objects copied by default and said objects referred to each other, we’d be in an infinite loop.</p>
-<p>Okay, so creating a new binding doesn’t give us a new object. How can we create a new object? Well, there are a few ways, but one convenient (and arguably the most readable) method is to use the <code class="highlighter-rouge">...</code> spread operator.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">foo</span> <span class="o">=</span> <span class="p">{</span> <span class="na">key</span><span class="p">:</span> <span class="dl">"</span><span class="s2">value</span><span class="dl">"</span> <span class="p">};</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  This is counterintuitive. When we declared our
+                  <code class="highlighter-rouge">bar</code> variable, we
+                  thought we were making a copy of
+                  <code class="highlighter-rouge">foo</code> but we weren’t. We
+                  were merely creating two separate references to the same
+                  object data stored in memory. When we changed the data in that
+                  location and called upon their reference (<code
+                    class="highlighter-rouge"
+                    >foo</code
+                  >
+                  and <code class="highlighter-rouge">bar</code>), they simply
+                  logged what they were told to point at. This is a little
+                  annoying, but really, it’s the only way objects can work. If
+                  objects copied by default and said objects referred to each
+                  other, we’d be in an infinite loop.
+                </p>
+                <p>
+                  Okay, so creating a new binding doesn’t give us a new object.
+                  How can we create a new object? Well, there are a few ways,
+                  but one convenient (and arguably the most readable) method is
+                  to use the <code class="highlighter-rouge">...</code> spread
+                  operator.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">let</span> <span class="nx">foo</span> <span class="o">=</span> <span class="p">{</span> <span class="na">key</span><span class="p">:</span> <span class="dl">"</span><span class="s2">value</span><span class="dl">"</span> <span class="p">};</span>
 
 <span class="kd">let</span> <span class="nx">bar</span> <span class="o">=</span> <span class="p">{</span> <span class="p">...</span><span class="nx">foo</span> <span class="p">};</span>
 
@@ -750,10 +1344,36 @@ Testing the Back End
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">foo</span><span class="p">);</span> <span class="c1">//  {key: "change"}</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">bar</span><span class="p">);</span> <span class="c1">//  {key: "value"}</span>
-</code></pre></div></div>
-<p>This time when we declare <code class="highlighter-rouge">bar</code>, we take all the key/value pairs inside foo (in this case, there’s only one) and “spread” them out (copy them) inside a brand new object literal. This gives us the behavior we expected to see in the first place.</p>
-<p>So what does this have to do with React? Two things. Remember back to the <code class="highlighter-rouge">useState</code> module when we talked about React’s namesake? When the state changes your view layer <em>reacts</em> to the change and updates. To get a little more technical, something in our state changes React triggers a re-render of every component that is using that data. If react doesn’t think the state has changed, it won’t trigger a re-render. Remember that our first goal was to keep the username and the password in a single state object instead of repeating ourselves with two useStates? We might think that we could accomplish that like so:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  This time when we declare
+                  <code class="highlighter-rouge">bar</code>, we take all the
+                  key/value pairs inside foo (in this case, there’s only one)
+                  and “spread” them out (copy them) inside a brand new object
+                  literal. This gives us the behavior we expected to see in the
+                  first place.
+                </p>
+                <p>
+                  So what does this have to do with React? Two things. Remember
+                  back to the
+                  <code class="highlighter-rouge">useState</code> module when we
+                  talked about React’s namesake? When the state changes your
+                  view layer <em>reacts</em> to the change and updates. To get a
+                  little more technical, something in our state changes React
+                  triggers a re-render of every component that is using that
+                  data. If react doesn’t think the state has changed, it won’t
+                  trigger a re-render. Remember that our first goal was to keep
+                  the username and the password in a single state object instead
+                  of repeating ourselves with two useStates? We might think that
+                  we could accomplish that like so:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">"</span><span class="s2">./App.css</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
@@ -792,48 +1412,180 @@ Testing the Back End
 <span class="p">}</span>
 
 <span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
-</code></pre></div></div>
-<p>But we screwed up. All we wanted to do was update one of the keys on our state object, instead, we’re replacing the entire object. If we type a letter in the <code class="highlighter-rouge">Username</code> field, we’ll have changed the value of <code class="highlighter-rouge">user</code> from <code class="highlighter-rouge">{name: '', password: ''}</code> to <code class="highlighter-rouge">{name: [whatever the user types]}</code>. Then if we type something in the <code class="highlighter-rouge">Password</code> field, we’ll have changed the value of <code class="highlighter-rouge">user</code> <em>again</em> to <code class="highlighter-rouge">{password: [whatever the user types]}</code>. Our log to the console can help demonstrate:</p>
-<p><img src="https://tk-assets.lambdaschool.com/db36c808-3a97-499b-87a6-1cd9474d3c91_spread.png" alt="drawing" width="600px"></p>
-<p>This is definitely not what we want. Thankfully our trusty spread operator can save us. Let’s change those handlers to this:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">handleNameChange</span> <span class="o">=</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  But we screwed up. All we wanted to do was update one of the
+                  keys on our state object, instead, we’re replacing the entire
+                  object. If we type a letter in the
+                  <code class="highlighter-rouge">Username</code> field, we’ll
+                  have changed the value of
+                  <code class="highlighter-rouge">user</code> from
+                  <code class="highlighter-rouge"
+                    >{name: '', password: ''}</code
+                  >
+                  to
+                  <code class="highlighter-rouge"
+                    >{name: [whatever the user types]}</code
+                  >. Then if we type something in the
+                  <code class="highlighter-rouge">Password</code> field, we’ll
+                  have changed the value of
+                  <code class="highlighter-rouge">user</code> <em>again</em> to
+                  <code class="highlighter-rouge"
+                    >{password: [whatever the user types]}</code
+                  >. Our log to the console can help demonstrate:
+                </p>
+                <p>
+                  <img
+                    src="https://tk-assets.lambdaschool.com/db36c808-3a97-499b-87a6-1cd9474d3c91_spread.png"
+                    alt="drawing"
+                    width="600px"
+                  />
+                </p>
+                <p>
+                  This is definitely not what we want. Thankfully our trusty
+                  spread operator can save us. Let’s change those handlers to
+                  this:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">handleNameChange</span> <span class="o">=</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="nx">setUser</span><span class="p">({</span> <span class="p">...</span><span class="nx">user</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span> <span class="p">});</span>
 <span class="p">};</span>
 
 <span class="kd">const</span> <span class="nx">handlePasswordChange</span> <span class="o">=</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="nx">setUser</span><span class="p">({</span> <span class="p">...</span><span class="nx">user</span><span class="p">,</span> <span class="na">password</span><span class="p">:</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span> <span class="p">});</span>
 <span class="p">};</span>
-</code></pre></div></div>
-<p>Here, our spread operators are telling React “Please copy all the keys and values in the user object into this new object literal, then overwrite the name and password keys respectively with the specified value.” The result?</p>
-<p><img src="https://tk-assets.lambdaschool.com/fdb3c812-a09f-4588-a45d-2f953b1aea5a_spread-II.png" alt="drawing" width="600px"></p>
-<p>There we go.</p>
-<p>So we’ve condensed our state into a single object, but we still have two change handlers with identical logic. This form only has two fields, imagine if it had 10, or 100. Our change handlers would grow unwieldy very quickly. To make our form code DRY-er, we need to take a look at computed properties.</p>
-<h3 id="computed-properties">Computed properties</h3>
-<p>Another extremely useful tool from ES6, computed properties, lets us <em>compute</em> the properties of objects, as the name implies. Take a look at this.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">myObject</span> <span class="o">=</span> <span class="p">{</span> <span class="na">firstProperty</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Hi Lambda!</span><span class="dl">"</span> <span class="p">};</span>
-</code></pre></div></div>
-<p>We know that JavaScript provides us with two ways to access this property: dot notation and bracket notation.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">myObject</span><span class="p">.</span><span class="nx">firstProperty</span><span class="p">;</span> <span class="c1">//"Hi Lambda!"</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Here, our spread operators are telling React “Please copy all
+                  the keys and values in the user object into this new object
+                  literal, then overwrite the name and password keys
+                  respectively with the specified value.” The result?
+                </p>
+                <p>
+                  <img
+                    src="https://tk-assets.lambdaschool.com/fdb3c812-a09f-4588-a45d-2f953b1aea5a_spread-II.png"
+                    alt="drawing"
+                    width="600px"
+                  />
+                </p>
+                <p>There we go.</p>
+                <p>
+                  So we’ve condensed our state into a single object, but we
+                  still have two change handlers with identical logic. This form
+                  only has two fields, imagine if it had 10, or 100. Our change
+                  handlers would grow unwieldy very quickly. To make our form
+                  code DRY-er, we need to take a look at computed properties.
+                </p>
+                <h3 id="computed-properties">Computed properties</h3>
+                <p>
+                  Another extremely useful tool from ES6, computed properties,
+                  lets us <em>compute</em> the properties of objects, as the
+                  name implies. Take a look at this.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">let</span> <span class="nx">myObject</span> <span class="o">=</span> <span class="p">{</span> <span class="na">firstProperty</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Hi Lambda!</span><span class="dl">"</span> <span class="p">};</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  We know that JavaScript provides us with two ways to access
+                  this property: dot notation and bracket notation.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nx">myObject</span><span class="p">.</span><span class="nx">firstProperty</span><span class="p">;</span> <span class="c1">//"Hi Lambda!"</span>
 <span class="nx">myObject</span><span class="p">[</span><span class="dl">"</span><span class="s2">firstProperty</span><span class="dl">"</span><span class="p">];</span> <span class="c1">//"Hi Lambda!"</span>
-</code></pre></div></div>
-<p>Take a look at the bracket notation. Have you ever stopped to wonder why you have to surround the key you’re trying to access in quotes? Well, under the hood, all object properties are strings (you’ll dive deeper into the reason why in the CS module). The dot notation is a bit easier to type, but sometimes it’s not legal to use it - when our property has a special character or starts with a number, for example.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">myOtherObject</span> <span class="o">=</span> <span class="p">{</span><span class="dl">"</span><span class="s2">3</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">totally legal key/value pair</span><span class="dl">"</span><span class="p">};</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Take a look at the bracket notation. Have you ever stopped to
+                  wonder why you have to surround the key you’re trying to
+                  access in quotes? Well, under the hood, all object properties
+                  are strings (you’ll dive deeper into the reason why in the CS
+                  module). The dot notation is a bit easier to type, but
+                  sometimes it’s not legal to use it - when our property has a
+                  special character or starts with a number, for example.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">let</span> <span class="nx">myOtherObject</span> <span class="o">=</span> <span class="p">{</span><span class="dl">"</span><span class="s2">3</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">totally legal key/value pair</span><span class="dl">"</span><span class="p">};</span>
 <span class="nx">myObject</span><span class="p">.</span><span class="mi">3</span><span class="p">;</span> <span class="c1">// JavaScript freaks out at you.</span>
 <span class="nx">myObject</span><span class="p">.</span><span class="dl">"</span><span class="s2">3</span><span class="dl">"</span><span class="p">;</span> <span class="c1">// JavaScript freaks out at you.</span>
 <span class="nx">myObject</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span> <span class="c1">// JavaScript is pleased.  It will implicitly coerce this integer to a string.</span>
-</code></pre></div></div>
-<p>Side note: Incidentally, this is why we access elements in arrays with bracket notation. Arrays are secretly just objects whose keys are hardcoded as strings of consecutive integers.</p>
-<p>But this brings us back to <code class="highlighter-rouge">myObject["firstProperty"]; //"Hi Lambda!"</code>. Why can’t we just write <code class="highlighter-rouge">myObject[firstProperty]; //"Hi Lambda!"</code> without the quotes around <code class="highlighter-rouge">firstProperty</code>? Because if you put quotes around <code class="highlighter-rouge">firstProperty</code>, JavaScript will attempt to look that string up in the object. If you don’t include the quotes Java﻿S﻿cript is going to attempt to evaluate what you wrote as a variable. This is a powerful tool. Now instead of referring to our object properties with a hardcoded string, we can attempt to look one up on the basis of an evaluated expression.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">myThirdObject</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">:</span> <span class="dl">"</span><span class="s2">sup</span><span class="dl">"</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="dl">"</span><span class="s2">hey</span><span class="dl">"</span> <span class="p">};</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Side note: Incidentally, this is why we access elements in
+                  arrays with bracket notation. Arrays are secretly just objects
+                  whose keys are hardcoded as strings of consecutive integers.
+                </p>
+                <p>
+                  But this brings us back to
+                  <code class="highlighter-rouge"
+                    >myObject["firstProperty"]; //"Hi Lambda!"</code
+                  >. Why can’t we just write
+                  <code class="highlighter-rouge"
+                    >myObject[firstProperty]; //"Hi Lambda!"</code
+                  >
+                  without the quotes around
+                  <code class="highlighter-rouge">firstProperty</code>? Because
+                  if you put quotes around
+                  <code class="highlighter-rouge">firstProperty</code>,
+                  JavaScript will attempt to look that string up in the object.
+                  If you don’t include the quotes Java﻿S﻿cript is going to
+                  attempt to evaluate what you wrote as a variable. This is a
+                  powerful tool. Now instead of referring to our object
+                  properties with a hardcoded string, we can attempt to look one
+                  up on the basis of an evaluated expression.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">let</span> <span class="nx">myThirdObject</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">:</span> <span class="dl">"</span><span class="s2">sup</span><span class="dl">"</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="dl">"</span><span class="s2">hey</span><span class="dl">"</span> <span class="p">};</span>
 
 <span class="kd">let</span> <span class="nx">computedProperty</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
 <span class="nx">myThirdObject</span><span class="p">[</span><span class="nx">computedProperty</span><span class="p">];</span> <span class="c1">// "sup";</span>
 <span class="nx">myThirdObject</span><span class="p">[</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span> <span class="c1">//"hey";</span>
-</code></pre></div></div>
-<h3 id="login-form">Login Form</h3>
-<p>So how does this tool help us handle multiple inputs with one function? The final piece of the puzzle takes us back to our form element. Recall that the <code class="highlighter-rouge">&lt;form&gt;</code> tag keeps track of some of its own state, making its implementation in React sometimes awkward. Well, this time we’re going to use that to our advantage. By including a <code class="highlighter-rouge">name</code> attribute on our inputs we can attach a new <code class="highlighter-rouge">name</code> property to the <code class="highlighter-rouge">event.target</code> object.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+                  </div>
+                </div>
+                <h3 id="login-form">Login Form</h3>
+                <p>
+                  So how does this tool help us handle multiple inputs with one
+                  function? The final piece of the puzzle takes us back to our
+                  form element. Recall that the
+                  <code class="highlighter-rouge">&lt;form&gt;</code> tag keeps
+                  track of some of its own state, making its implementation in
+                  React sometimes awkward. Well, this time we’re going to use
+                  that to our advantage. By including a
+                  <code class="highlighter-rouge">name</code> attribute on our
+                  inputs we can attach a new
+                  <code class="highlighter-rouge">name</code> property to the
+                  <code class="highlighter-rouge">event.target</code> object.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">"</span><span class="s2">./App.css</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
@@ -880,18 +1632,37 @@ Testing the Back End
 <span class="p">}</span>
 
 <span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
-</code></pre></div></div>
-<p>Using our knowledge of computed properties, we can now rewrite our handler functions like this:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">handleNameChange</span> <span class="o">=</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Using our knowledge of computed properties, we can now rewrite
+                  our handler functions like this:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">handleNameChange</span> <span class="o">=</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="nx">setUser</span><span class="p">({</span> <span class="p">...</span><span class="nx">user</span><span class="p">,</span> <span class="p">[</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">name</span><span class="p">]:</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span> <span class="p">});</span>
 <span class="p">};</span>
 
 <span class="kd">const</span> <span class="nx">handlePasswordChange</span> <span class="o">=</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="nx">setUser</span><span class="p">({</span> <span class="p">...</span><span class="nx">user</span><span class="p">,</span> <span class="p">[</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">name</span><span class="p">]:</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span> <span class="p">});</span>
 <span class="p">};</span>
-</code></pre></div></div>
-<p>And now that these functions are literally the same letter-for-letter, there’s truly no reason to have two of them.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  And now that these functions are literally the same
+                  letter-for-letter, there’s truly no reason to have two of
+                  them.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">"</span><span class="s2">./App.css</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
@@ -934,21 +1705,88 @@ Testing the Back End
 <span class="p">}</span>
 
 <span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
-</code></pre></div></div>
-<p>You could add as many inputs to this app as you like, and so long as each had a <code class="highlighter-rouge">name</code> attribute that corresponded to a property in the state object, our sole change handler would manage them all.</p>
-<p>That was a lot to get two input fields working, but the things we learned about React and JavaScript to accomplish this will pay off over and over again in other ways down the line. Great job making it this far, but there’s one last thing to discuss.</p>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to use controlled inputs to manage form data</h4>
-<p>We’ve made it so that our inputs can update our state so that we can push that state to our backend (or in our case, the console), but some of you might have noticed this is a bit of an anti-pattern in react. React is supposed to have a “unidirectional data flow” or “a single source of truth” as is sometimes said. This means that the parent, stateful components control the presentational, child components. In our case however our child components (the inputs) are dictating our state, and our state is not in control of its children. In addition, the input fields tell our state what data it needs to keep track of. We want our application to have the power to dictate what kinds of values our inputs are permitted to have. We can flip this by using “controlled components”.</p>
-<h5>Overview</h5>
-<p>React components can be broken down into two categories - “controlled” and “uncontrolled” components. It is highly encouraged to use controlled inputs wherever we can so that the data on the DOM is controlled by us via state, rather than DOM elements like form inputs. Let’s learn about how we can do that with our form.</p>
-<h5>Follow Along</h5>
-<h3 id="controlling-the-input-with-state">Controlling the input with state</h3>
-<p>As mentioned earlier, we want our components to manage the data that is in our form. There are dozens of reasons why we want this power, from form validation to styling, but in this case, let’s say that when the user clicks submit, we want to be able to clear the input fields automatically. For that, we’ll need to “bind the value” of the inputs to the state. To do that, we’ll add another attribute to our <code class="highlighter-rouge">&lt;input&gt;</code> - the <code class="highlighter-rouge">value</code> attribute.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">input</span> <span class="nx">value</span><span class="o">=</span><span class="dl">"</span><span class="s2">Hi Lambda!</span><span class="dl">"</span><span class="o">&gt;</span><span class="s2">`
-</span></code></pre></div></div>
-<p>Using the <code class="highlighter-rouge">value</code> attribute forces the text inside the input field to correspond to the string assigned to it - in this case, “Hi Lambda!”. Hardcoding it like this makes the input rather useless because now the user can’t change the text. But, what if, instead of hardcoding the value attribute, we passed it a dynamic value from our state.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  You could add as many inputs to this app as you like, and so
+                  long as each had a
+                  <code class="highlighter-rouge">name</code> attribute that
+                  corresponded to a property in the state object, our sole
+                  change handler would manage them all.
+                </p>
+                <p>
+                  That was a lot to get two input fields working, but the things
+                  we learned about React and JavaScript to accomplish this will
+                  pay off over and over again in other ways down the line. Great
+                  job making it this far, but there’s one last thing to discuss.
+                </p>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to use controlled inputs to manage form data
+                </h4>
+                <p>
+                  We’ve made it so that our inputs can update our state so that
+                  we can push that state to our backend (or in our case, the
+                  console), but some of you might have noticed this is a bit of
+                  an anti-pattern in react. React is supposed to have a
+                  “unidirectional data flow” or “a single source of truth” as is
+                  sometimes said. This means that the parent, stateful
+                  components control the presentational, child components. In
+                  our case however our child components (the inputs) are
+                  dictating our state, and our state is not in control of its
+                  children. In addition, the input fields tell our state what
+                  data it needs to keep track of. We want our application to
+                  have the power to dictate what kinds of values our inputs are
+                  permitted to have. We can flip this by using “controlled
+                  components”.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  React components can be broken down into two categories -
+                  “controlled” and “uncontrolled” components. It is highly
+                  encouraged to use controlled inputs wherever we can so that
+                  the data on the DOM is controlled by us via state, rather than
+                  DOM elements like form inputs. Let’s learn about how we can do
+                  that with our form.
+                </p>
+                <h5>Follow Along</h5>
+                <h3 id="controlling-the-input-with-state">
+                  Controlling the input with state
+                </h3>
+                <p>
+                  As mentioned earlier, we want our components to manage the
+                  data that is in our form. There are dozens of reasons why we
+                  want this power, from form validation to styling, but in this
+                  case, let’s say that when the user clicks submit, we want to
+                  be able to clear the input fields automatically. For that,
+                  we’ll need to “bind the value” of the inputs to the state. To
+                  do that, we’ll add another attribute to our
+                  <code class="highlighter-rouge">&lt;input&gt;</code> - the
+                  <code class="highlighter-rouge">value</code> attribute.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="o">&lt;</span><span class="nx">input</span> <span class="nx">value</span><span class="o">=</span><span class="dl">"</span><span class="s2">Hi Lambda!</span><span class="dl">"</span><span class="o">&gt;</span><span class="s2">`
+</span></code></pre>
+                  </div>
+                </div>
+                <p>
+                  Using the
+                  <code class="highlighter-rouge">value</code> attribute forces
+                  the text inside the input field to correspond to the string
+                  assigned to it - in this case, “Hi Lambda!”. Hardcoding it
+                  like this makes the input rather useless because now the user
+                  can’t change the text. But, what if, instead of hardcoding the
+                  value attribute, we passed it a dynamic value from our state.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">"</span><span class="s2">./App.css</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
@@ -993,9 +1831,15 @@ Testing the Back End
 <span class="p">}</span>
 
 <span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
-</code></pre></div></div>
-<p>Notice the change? We went from</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">input</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>Notice the change? We went from</p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="o">&lt;</span><span class="nx">input</span>
   <span class="nx">type</span><span class="o">=</span><span class="dl">'</span><span class="s1">text</span><span class="dl">'</span>
   <span class="nx">name</span><span class="o">=</span><span class="dl">'</span><span class="s1">username</span><span class="dl">'</span>
   <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">event</span> <span class="o">=&gt;</span> <span class="nx">handleChange</span><span class="p">(</span><span class="nx">event</span><span class="p">)}</span>
@@ -1005,9 +1849,15 @@ Testing the Back End
   <span class="nx">name</span><span class="o">=</span><span class="dl">'</span><span class="s1">password</span><span class="dl">'</span>
   <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">event</span> <span class="o">=&gt;</span> <span class="nx">handleChange</span><span class="p">(</span><span class="nx">event</span><span class="p">)}</span>
 <span class="sr">/</span><span class="err">&gt;
-</span></code></pre></div></div>
-<p>to this:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">input</span>
+</span></code></pre>
+                  </div>
+                </div>
+                <p>to this:</p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="o">&lt;</span><span class="nx">input</span>
   <span class="nx">type</span><span class="o">=</span><span class="dl">'</span><span class="s1">text</span><span class="dl">'</span>
   <span class="nx">name</span><span class="o">=</span><span class="dl">'</span><span class="s1">username</span><span class="dl">'</span>
   <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">user</span><span class="p">.</span><span class="nx">username</span><span class="p">}</span>
@@ -1019,201 +1869,321 @@ Testing the Back End
   <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">user</span><span class="p">.</span><span class="nx">password</span><span class="p">}</span>
   <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">event</span> <span class="o">=&gt;</span> <span class="nx">handleChange</span><span class="p">(</span><span class="nx">event</span><span class="p">)}</span>
 <span class="sr">/</span><span class="err">&gt;
-</span></code></pre></div></div>
-<p>The inputs are controlled by state! The text in the input will only change if state changes. So, now, when the user types something into an input field, it updates our state. React notices our state has changed, so it triggers a re-render. When it evaluates what text should go in the input fields by looking at the <code class="highlighter-rouge">value</code> attribute, it notices it should put the data in its state into those fields, and the elements render with the user’s input.</p>
-<p>Why, oh why, would we go to such lengths to dictate the text of an input field 😩? Well, the truth is, sometimes you don’t need to. It’s a point of philosophical preference for some, keeping the unidirectional data flow as unidirectional as possible (state -&gt; input). But in our case, we want to clear the input fields when we hit submit. And for that, our inputs need to do what their parent tells them to do. We can now do exactly that because we’ve attached the input’s value attributes to our state.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">handleSubmit</span> <span class="o">=</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></code></pre>
+                  </div>
+                </div>
+                <p>
+                  The inputs are controlled by state! The text in the input will
+                  only change if state changes. So, now, when the user types
+                  something into an input field, it updates our state. React
+                  notices our state has changed, so it triggers a re-render.
+                  When it evaluates what text should go in the input fields by
+                  looking at the
+                  <code class="highlighter-rouge">value</code> attribute, it
+                  notices it should put the data in its state into those fields,
+                  and the elements render with the user’s input.
+                </p>
+                <p>
+                  Why, oh why, would we go to such lengths to dictate the text
+                  of an input field 😩? Well, the truth is, sometimes you don’t
+                  need to. It’s a point of philosophical preference for some,
+                  keeping the unidirectional data flow as unidirectional as
+                  possible (state -&gt; input). But in our case, we want to
+                  clear the input fields when we hit submit. And for that, our
+                  inputs need to do what their parent tells them to do. We can
+                  now do exactly that because we’ve attached the input’s value
+                  attributes to our state.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">handleSubmit</span> <span class="o">=</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
   <span class="nx">setUser</span><span class="p">({</span> <span class="na">username</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span> <span class="na">password</span><span class="p">:</span> <span class="dl">''</span> <span class="p">});</span>
 <span class="p">};</span>
-</code></pre></div></div>
-<p>Now when the user clicks submit, the state will be reset with empty strings. And since the value of the input fields is now dictated by the state, they’ll be emptied as well.</p>
-<p>Forms. They’re no joke!</p>
-<hr>
-<h2 class="display-4">
-<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
-<ul class="list-group">
-<li class="list-group-item">
-<h5><a target="_blank" href="https://github.com/LambdaSchool/team-builder">Team builder</a></h5>
-<p>In this project you will build a form to add new team members to your team. Then you’ll use the same form to add edit functionality to your app as well.</p>
-</li>
-</ul>
-<h2 class="display-4">
-<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
-<h3 class="display-5">Class Recordings</h3>
-<p class="lead">You can use class recordings to help you master the material.</p>
-<div>
-<ul class="list-group list-group-flush">
-<li class="list-group-item">
-<strong><a target="_blank" href="https://youtu.be/OiK7bRuHrf8">Form Management for WebPT22 w/Chris Atoki</a></strong>
-<p>Objectives: Student should be able to demonstrate how to build a form with the basic HTML form elements Student should be able to use the onChange handler to capture input values Student should be able to utilize a form’s submit event to work with form data Student should be able to demonstrate the ability to handle multiple inputs in a form Student should be able to use controlled inputs to manage form data</p>
-</li>
-<li class="list-group-item">
-<a href="/archive/FSW/module/rect081xiYT2cfxGF">All previous recordings</a>
-</li>
-</ul>
-</div>
-<h3 class="display-5">Demonstrate Mastery</h3>
-<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
-<ul>
-<li>Project: Team builder</li>
-</ul>
-</div>
-</div>
-</div>
-</main>
-</div>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Now when the user clicks submit, the state will be reset with
+                  empty strings. And since the value of the input fields is now
+                  dictated by the state, they’ll be emptied as well.
+                </p>
+                <p>Forms. They’re no joke!</p>
+                <hr />
+                <h2 class="display-4">
+                  <a
+                    id="project"
+                    class="anchor"
+                    href="#project"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Project
+                </h2>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <h5>
+                      <a
+                        target="_blank"
+                        href="https://github.com/LambdaSchool/team-builder"
+                        >Team builder</a
+                      >
+                    </h5>
+                    <p>
+                      In this project you will build a form to add new team
+                      members to your team. Then you’ll use the same form to add
+                      edit functionality to your app as well.
+                    </p>
+                  </li>
+                </ul>
+                <h2 class="display-4">
+                  <a
+                    id="review"
+                    class="anchor"
+                    href="#review"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Review
+                </h2>
+                <h3 class="display-5">Class Recordings</h3>
+                <p class="lead">
+                  You can use class recordings to help you master the material.
+                </p>
+                <div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong
+                        ><a target="_blank" href="https://youtu.be/OiK7bRuHrf8"
+                          >Form Management for WebPT22 w/Chris Atoki</a
+                        ></strong
+                      >
+                      <p>
+                        Objectives: Student should be able to demonstrate how to
+                        build a form with the basic HTML form elements Student
+                        should be able to use the onChange handler to capture
+                        input values Student should be able to utilize a form’s
+                        submit event to work with form data Student should be
+                        able to demonstrate the ability to handle multiple
+                        inputs in a form Student should be able to use
+                        controlled inputs to manage form data
+                      </p>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="/archive/FSW/module/rect081xiYT2cfxGF"
+                        >All previous recordings</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <h3 class="display-5">Demonstrate Mastery</h3>
+                <p>
+                  To demonstrate mastery of this module, you need to complete
+                  and pass a code review on each of the following:
+                </p>
+                <ul>
+                  <li>Project: Team builder</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'UA-80850900-4');
-</script>
-<script type="text/javascript">
-  function getDomain() {
-    const domainName = window.location.hostname.split('.')[1];
-    return `${domainName}.com`;
-  }
-</script>
-<script src="" integrity="" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
-<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
-<script type="text/javascript">
-  SimpleJekyllSearch.init({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    dataSource: '/search.json',
-    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Form Management">{title}</a></li>',
-    noResultsText: '',
-    limit: 10,
-    fuzzy: true,
-  })
-</script>
-<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
-  if (window.attachEvent) {
-    window.attachEvent('onload', verifySignedIn);
-  } else {
-    if (window.onload) {
-      var currentOnLoadFn = window.onload;
-      var newOnLoadFn = function (evt) {
-        currentOnLoadFn(evt);
-        verifySignedIn();
-      };
-      window.onload = newOnLoadFn;
-    } else {
-      window.onload = verifySignedIn;
-    }
-  }
-
-  function verifySignedIn() {
-    if (isPagePublic()) {
-      return showPageContents();
-    }
-
-    window.__user = null;
-    isSignedIn().then((user) => {
-      window.__user = user;
-
-      if (!user.signedIn) {
-        redirectToSignIn();
-      } else if (!user.student && !window.__openToAdmissions) {
-        showUnauthorizedMessage();
-      } else {
-        showPageContents();
-      }
-    });
-  }
-
-  function isPagePublic() {
-    const openCourses = [
-      'and-pre',
-      'ds-pre',
-      'fsw-pre',
-      'help',
-      'ios-pre',
-    ];
-
-    const openPages = [
-      'cs-and',
-      'cs-fsw',
-      'cs-ios',
-      'cr',
-      'ds',
-      'jx',
-      'p4s',
-      'ux',
-    ];
-
-    const pathParts = window.location.pathname.split('/');
-    const courseName = pathParts[1];
-    const pageName = pathParts[pathParts.length - 1];
-
-    return openCourses.includes(courseName) || openPages.includes(pageName);
-  }
-
-  function isSignedIn() {
-    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
-
-    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
-
-    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
-      .then((response) => response.text())
-      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
-      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
-      .catch((error) => {});
-  }
-
-  function redirectToSignIn() {
-    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
-    const redirectMessage = document.querySelector('#redirect-message');
-    redirectMessage.style.display = "block";
-    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
-    window.location = signInUrl;
-  }
-
-  function showPageContents() {
-    document.querySelector('#content-wrapper').style.visibility = 'visible';
-  }
-
-  function showUnauthorizedMessage() {
-    document.querySelector('#unauthorized-message').style.display = 'block';
-  }
-
-  function getAuthBaseUrl() {
-    const domain = getDomain();
-    const authBaseUrl = `https://auth.${domain}`;
-    return authBaseUrl;
-  }
-</script><script src="/assets/js/docs.min.js"></script><script>
-  var MathJax = {
-    tex: {
-      inlineMath: [['$$', '$$'], ['\[', '\])']]
-    },
-    "HTML-CSS": {
-      styles: {
-        ".MathJax span": {
-          color: "#000000"
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
         }
-      }
-    }
-  }
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<script>
-  handleExternalLinks();
+        gtag("js", new Date());
 
-  function handleExternalLinks() {
-    const domain = getDomain();
-    const links = document.querySelectorAll('a');
-    return links.forEach((link) => {
-      if (!link.host.includes(domain)) link.target = '_blank';
-    })
-  };
-</script>
-</div>
-</body>
+        gtag("config", "UA-80850900-4");
+      </script>
+      <script type="text/javascript">
+        function getDomain() {
+          const domainName = window.location.hostname.split(".")[1];
+          return `${domainName}.com`;
+        }
+      </script>
+      <script src="" integrity="" crossorigin="anonymous"></script>
+      <script>
+        window.jQuery ||
+          document.write(
+            '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>'
+          );
+      </script>
+      <script
+        src="/assets/js/vendor/popper.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="/dist/js/bootstrap.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script src="/assets/js/activate.js"></script>
+      <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        SimpleJekyllSearch.init({
+          searchInput: document.getElementById("search-input"),
+          resultsContainer: document.getElementById("results-container"),
+          dataSource: "/search.json",
+          searchResultTemplate:
+            '<li class="list-group-item"><a href="{url}" title="Form Management">{title}</a></li>',
+          noResultsText: "",
+          limit: 10,
+          fuzzy: true,
+        });
+      </script>
+      <script src="/assets/js/mermaid.min.js"></script>
+      <script type="text/javascript">
+        if (window.attachEvent) {
+          window.attachEvent("onload", verifySignedIn);
+        } else {
+          if (window.onload) {
+            var currentOnLoadFn = window.onload;
+            var newOnLoadFn = function (evt) {
+              currentOnLoadFn(evt);
+              verifySignedIn();
+            };
+            window.onload = newOnLoadFn;
+          } else {
+            window.onload = verifySignedIn;
+          }
+        }
+
+        function verifySignedIn() {
+          if (isPagePublic()) {
+            return showPageContents();
+          }
+
+          window.__user = null;
+          isSignedIn().then((user) => {
+            window.__user = user;
+
+            if (!user.signedIn) {
+              redirectToSignIn();
+            } else if (!user.student && !window.__openToAdmissions) {
+              showUnauthorizedMessage();
+            } else {
+              showPageContents();
+            }
+          });
+        }
+
+        function isPagePublic() {
+          const openCourses = [
+            "and-pre",
+            "ds-pre",
+            "fsw-pre",
+            "help",
+            "ios-pre",
+          ];
+
+          const openPages = [
+            "cs-and",
+            "cs-fsw",
+            "cs-ios",
+            "cr",
+            "ds",
+            "jx",
+            "p4s",
+            "ux",
+          ];
+
+          const pathParts = window.location.pathname.split("/");
+          const courseName = pathParts[1];
+          const pageName = pathParts[pathParts.length - 1];
+
+          return (
+            openCourses.includes(courseName) || openPages.includes(pageName)
+          );
+        }
+
+        function isSignedIn() {
+          const isDeployPreview =
+            window.location.hostname.startsWith("deploy-preview") &&
+            window.location.hostname.endsWith("netlify.com");
+
+          if (isDeployPreview)
+            return Promise.resolve({ signedIn: true, student: true });
+
+          return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: "include" })
+            .then((response) => response.text())
+            .then((userAsText) => (userAsText ? JSON.parse(userAsText) : null))
+            .then((userData) => ({
+              signedIn: Boolean(userData),
+              student: Boolean(userData && userData.airtableId),
+              id: userData ? userData.id : null,
+              email: userData ? userData.email : null,
+            }))
+            .catch((error) => {});
+        }
+
+        function redirectToSignIn() {
+          const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(
+            window.location.href
+          )}&reason=auth_required`;
+          const redirectMessage = document.querySelector("#redirect-message");
+          redirectMessage.style.display = "block";
+          redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`;
+          window.location = signInUrl;
+        }
+
+        function showPageContents() {
+          document.querySelector("#content-wrapper").style.visibility =
+            "visible";
+        }
+
+        function showUnauthorizedMessage() {
+          document.querySelector("#unauthorized-message").style.display =
+            "block";
+        }
+
+        function getAuthBaseUrl() {
+          const domain = getDomain();
+          const authBaseUrl = `https://auth.${domain}`;
+          return authBaseUrl;
+        }
+      </script>
+      <script src="/assets/js/docs.min.js"></script>
+      <script>
+        var MathJax = {
+          tex: {
+            inlineMath: [
+              ["$$", "$$"],
+              ["\[", "\])"],
+            ],
+          },
+          "HTML-CSS": {
+            styles: {
+              ".MathJax span": {
+                color: "#000000",
+              },
+            },
+          },
+        };
+      </script>
+      <script
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+        type="text/javascript"
+      ></script>
+      <script>
+        handleExternalLinks();
+
+        function handleExternalLinks() {
+          const domain = getDomain();
+          const links = document.querySelectorAll("a");
+          return links.forEach((link) => {
+            if (!link.host.includes(domain)) link.target = "_blank";
+          });
+        }
+      </script>
+    </div>
+  </body>
 </html>

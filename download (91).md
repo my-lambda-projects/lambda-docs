@@ -16,38 +16,38 @@ You must be a Lambda School student to view this page.
 
 <a href="/webannex/sprint/recfwZvI7QhMa7xbG" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
--   [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
--   [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
+- [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
+- [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
+- [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
 
 <a href="/webannex/sprint/recIXiQgpgMdJ81ms" class="bd-toc-link">2.  Advanced CSS</a>
 
--   [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
--   [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
--   [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
--   [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
+- [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
+- [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
+- [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
+- [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
 
 <a href="/webannex/sprint/recclZwJxMU8kUngT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
--   [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
--   [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
--   [Classes](/webannex/module/recyS588eOvVUKAMc/)
+- [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
+- [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
+- [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
+- [Classes](/webannex/module/recyS588eOvVUKAMc/)
 
 <a href="/webannex/sprint/recRT8JKvbTiGaosk" class="bd-toc-link">4.  Single Page Applications</a>
 
--   [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
--   [React Router II](/webannex/module/recYkF1FDilIedmwX/)
--   [Form Management](/webannex/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
+- [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
+- [React Router II](/webannex/module/recYkF1FDilIedmwX/)
+- [Form Management](/webannex/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
 
 <a href="/webannex/sprint/recozTHaHJe6L1ThN" class="bd-toc-link">5.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
--   [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
--   [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
--   [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
+- [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
+- [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
+- [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
 
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjM1IiB2aWV3Ym94PSIwIDAgNzU2IDE5NyIgZmlsbD0iI2VjMzk0NCI+PGc+PHBhdGggZD0iTTI5Mi45LDEyNi42aC02LjdjLTksMC0xMi42LTEuOS0xMi42LTkuNVY0OC41YzAtNy43LDEuNi04LjYsMTEuNC05Ljd2LTQuNWgtNDEuM3Y0LjUgYzkuOCwxLjEsMTEuNCwxLjksMTEuNCw5Ljd2NjkuM2MwLDcuNy0xLjYsOC42LTExLjQsOS43djQuNWg3My43bDQuOS0yOS40aC00LjRDMzA4LjUsMTE5LjYsMzAzLjksMTI2LjYsMjkyLjksMTI2LjZ6Ij48L3BhdGg+PHBhdGggZD0iTTM4NS41LDEyMS4xVjc5LjNjMC0xNS44LTkuNC0yMi40LTI2LjYtMjIuNGMtMTUsMC0yNi44LDYuNi0yNi44LDE5LjNjMCwyLjQsMC4yLDMuMywwLjgsNWgxNi42IGMtMC41LTItMC43LTUtMC43LTcuNWMwLTkuNiwzLjYtMTIuNCw5LjQtMTIuNGM2LjQsMCw5LjcsMiw5LjcsMTQuNHYxMS4ybC0yMC44LDcuN2MtMTAuNiw0LjEtMTkuMyw4LjgtMTkuMywyMC43IGMwLDEwLjksNy41LDE3LjgsMTguNiwxNy44YzkuOSwwLDE3LjQtNi4yLDIxLjktMTIuMWwwLjEtMC4xbDAsMFYxMzJoMjZ2LTQuNEMzODcuNywxMjcuMSwzODUuNSwxMjYuMiwzODUuNSwxMjEuMXogTTM2OCwxMTcuOCBjLTQuNCwzLjMtNy42LDUuMy0xMiw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNFYxMTcuOEwzNjgsMTE3Ljh6Ij48L3BhdGg+PHBhdGggZD0iTTUxNC40LDEyMVY3OS41YzAtMTQuOC02LTIyLjQtMTguNy0yMi40Yy0xMS41LDAtMTkuNCw2LjYtMjUuNSwxMy45Yy0xLjgtOS42LTcuNy0xMy45LTE3LjgtMTMuOSBjLTExLjQsMC0xOC43LDYuMi0yNC44LDEzLjZWNTdoLTIuM2wtMjMuOCw3LjR2Mi40bDguNiw1djQ5LjRjMCw1LTIuMSw2LjEtOC45LDYuNHY0LjRoMzUuMXYtNC40Yy02LjctMC4zLTguNy0xLjMtOC43LTYuNHYtNDcgYzQuNy0zLjYsOS41LTYuNSwxNS41LTYuNWM3LjYsMCwxMC41LDQuMiwxMC41LDEyLjd2NDAuOGMwLDUtMS45LDYuMS04LjcsNi40djQuNGwzNC44LDB2LTQuNGMtNi43LTAuMy04LjYtMS4zLTguNi02LjR2LTQ3IGM0LjctMy42LDkuNS02LjUsMTUuNS02LjVjNy42LDAsMTAuNSw0LjIsMTAuNSwxMi43bC0wLjEsNDAuNWMwLDUtMS44LDYuNC04LjYsNi43bDAsNC40aDM1LjF2LTQuNCBDNTE2LjcsMTI3LjQsNTE0LjQsMTI2LjEsNTE0LjQsMTIxeiI+PC9wYXRoPjxwYXRoIGQ9Ik01NzMuMiw1Ny4zYy0xMSwwLTE4LjUsNS43LTIzLjQsMTIuOFYyMi45aC0yLjdsLTIzLjQsNi44djIuNWw4LjYsNC41VjEzMmgyLjlsOC0zLjVjNS44LDMuMywxMi4zLDUsMjAuMiw1IGMyMC44LDAsMzcuNC0xNS44LDM3LjQtNDIuNkM2MDAuOSw2OS45LDU5MC40LDU3LjMsNTczLjIsNTcuM3ogTTU2My40LDEyOC43Yy01LjQsMC0xMC4zLTIuNC0xMy43LTcuOVY3My42IGMzLjQtMy40LDguNS01LjcsMTMuNS01LjdjMTMuOSwwLDIwLDEyLjgsMjAsMjkuNUM1ODMuMywxMTQuNyw1NzUuOCwxMjguNSw1NjMuNCwxMjguN3oiPjwvcGF0aD48cGF0aCBkPSJNNjc3LDEyMS4yVjIyLjhoLTIuNkw2NTEsMjkuNlYzMmw4LjYsNC41djI1LjdjLTMuNC0zLjItOC44LTUuMS0xNS41LTUuMWMtMTkuOSwwLTM1LjIsMTUuMy0zNS4yLDQxLjMgYzAsMjAuNywxMS4yLDM0LjYsMjguMSwzNC42YzkuOCwwLDE3LTUuMywyMi42LTEzLjF2MC45VjEzMmgyNi4zbDAtNC40QzY3OS4xLDEyNy4zLDY3NywxMjYuMyw2NzcsMTIxLjJ6IE02NTkuNiwxMTcuMSBMNjU5LjYsMTE3LjFjLTMuNCwzLjQtOCw1LjEtMTMuMiw1LjFjLTEzLjIsMC0yMC40LTEyLjgtMjAuNC0yOS44YzAtMTcuOCw3LjMtMjkuMiwxOS41LTI5LjJjOC43LDAsMTQuMSw2LjksMTQuMSwxOC4zIEw2NTkuNiwxMTcuMXoiPjwvcGF0aD48cGF0aCBkPSJNNzQ3LjEsMTIxLjFWNzkuM2MwLTE1LjgtOS40LTIyLjQtMjYuNi0yMi40Yy0xNSwwLTI2LjgsNi42LTI2LjgsMTkuM2MwLDIuNCwwLjIsMy4zLDAuOCw1aDE2LjYgYy0wLjUtMi0wLjctNS0wLjctNy41YzAtOS42LDMuNi0xMi40LDkuNC0xMi40YzYuNCwwLDkuNywyLDkuNywxNC40djExLjJsLTIwLjgsNy43Yy0xMC42LDQuMS0xOS4zLDguOC0xOS4zLDIwLjcgYzAsMTAuOSw3LjUsMTcuOCwxOC42LDE3LjhjOS45LDAsMTcuNC02LjIsMjEuOS0xMi4xdi0wLjFoMC4xbDAsMTEuMWwyNiwwLjF2LTQuNUM3NDkuMywxMjcuMSw3NDcuMSwxMjYuMiw3NDcuMSwxMjEuMXogTTcyOS42LDExNy44Yy00LjQsMy4zLTcuNiw1LjMtMTIuMSw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNEw3MjkuNiwxMTcuOEw3MjkuNiwxMTcuOHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTAsMHY5MC40YzAsNjUuNyw1MC45LDg4LjUsODguMSwxMDUuMmgwLjFsMywxLjRjMC43LTAuNCwxLjQtMC43LDIuMi0xYzAuNC0wLjIsMC45LTAuNCwxLjMtMC42IGMzNy4zLTE2LjYsODguNC0zOS41LDg4LjQtMTA1VjBIMHogTTExNiwxMzJsLTItNS4zbC0yNi42LTcwYy0xLjYsNC4xLTUuMywxNC05LjMsMjQuNmwtMTUuMyw0MS4zYy0wLjcsMi0wLjMsMywwLjIsMy43IGMxLjEsMS4zLDMuNSwxLjMsNy4zLDEuM0g3MWwwLDQuNEg0Mi40bDAtNC40aDIuMmMzLjksMCw3LjEtMS43LDkuNS02LjVsMi45LTYuNmwyNi41LTY3LjhsLTQuNy0xMi41aDI0LjdsMzQuMSw4OS43bDMuMSw4LjFIMTE2eiI+PC9wYXRoPjwvc3ZnPg==" /></a>
 
@@ -55,43 +55,43 @@ You must be a Lambda School student to view this page.
 
 <a href="/webannex/sprint/recfwZvI7QhMa7xbG" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
--   [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
--   [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
+- [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
+- [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
+- [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
 
 <a href="/webannex/sprint/recIXiQgpgMdJ81ms" class="bd-toc-link">2.  Advanced CSS</a>
 
--   [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
--   [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
--   [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
--   [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
+- [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
+- [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
+- [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
+- [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
 
 <a href="/webannex/sprint/recclZwJxMU8kUngT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
--   [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
--   [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
--   [Classes](/webannex/module/recyS588eOvVUKAMc/)
+- [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
+- [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
+- [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
+- [Classes](/webannex/module/recyS588eOvVUKAMc/)
 
 <a href="/webannex/sprint/recRT8JKvbTiGaosk" class="bd-toc-link">4.  Single Page Applications</a>
 
--   [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
--   [React Router II](/webannex/module/recYkF1FDilIedmwX/)
--   [Form Management](/webannex/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
+- [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
+- [React Router II](/webannex/module/recYkF1FDilIedmwX/)
+- [Form Management](/webannex/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
 
 <a href="/webannex/sprint/recozTHaHJe6L1ThN" class="bd-toc-link">5.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
--   [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
--   [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
--   [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
+- [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
+- [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
+- [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # JavaScript II
 
@@ -99,15 +99,15 @@ You must be a Lambda School student to view this page.
 
 Throughout JavaScript II we’re going to be getting more practice with Callbacks as well as dive into a couple of new concepts. By the end of the day you should be familiar with and have the ability to use the following:
 
--   closure
--   callback functions
--   advanced array methods
+- closure
+- callback functions
+- advanced array methods
 
 **At the end of this module, you should be able to:**
 
--   describe what closure is, how closure is created in a program and why it is important to understand closures in JavaScript
--   demonstrate the proper use a of a callback function by passing a function to another function as a parameter
--   demonstrate ability to use \`.map\` \`.reduce\` \`.filter\` and describe their use cases
+- describe what closure is, how closure is created in a program and why it is important to understand closures in JavaScript
+- demonstrate the proper use a of a callback function by passing a function to another function as a parameter
+- demonstrate ability to use \`.map\` \`.reduce\` \`.filter\` and describe their use cases
 
 #### Pro Tip
 
@@ -117,27 +117,21 @@ Remember that you and your work are different. A criticism of your work is not a
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=AgBoMqDO-08), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=AgBoMqDO-08), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=zIRN-Gn8phU), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=zIRN-Gn8phU), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=YNubYbAhtys), or enable JavaScript if it is disabled in your browser.
 
--   
+- [MPJ - Closures](https://youtu.be/CQqwU2Ixu-U)
 
-    # An error occurred.
-
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=YNubYbAhtys), or enable JavaScript if it is disabled in your browser.
-
--   [MPJ - Closures](https://youtu.be/CQqwU2Ixu-U)
-
-    THE simplest definition of a closure I have ever seen
+  THE simplest definition of a closure I have ever seen
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -160,14 +154,14 @@ In it’s most simplest of forms this is a closure:
       return foo;
     }
     returnFoo();
-    // -> reaches outside its scope to find foo because it doesn't exist inside of return Foo's scope when foo is referenced. 
+    // -> reaches outside its scope to find foo because it doesn't exist inside of return Foo's scope when foo is referenced.
 
 The function body (code inside returnFoo) has access to the outside scope (code outside of returnFoo) and can access that ‘foo’ variable.
 
 Let’s look at another example:
 
     const lastName = 'Bob';
-    function greet() { 
+    function greet() {
       const firstName = 'Jim';
       alert(`The name's ${lastName}, ${firstName} ${lastName}`);
     }
@@ -200,24 +194,24 @@ Let’s work through one of your problems from your Homework together.
 
 For this challenge you will create your own closure:
 
--   Create a function that houses 2 nested functions inside of it
--   Create a unique variable for each function you created
--   Test out where you can log the unique variables for each function.
+- Create a function that houses 2 nested functions inside of it
+- Create a unique variable for each function you created
+- Test out where you can log the unique variables for each function.
 
 Why can you access variable values in nested functions?
 
 ##### Dig Deeper
 
--   [Deep Dive on Closures](https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8)  
-    Step by step deep dive on closures
--   [Coding Train Closures walkthrough](https://youtu.be/-jysK0nlz7A)  
-    Awesome stuff on closures
--   [Simple Closures](http://javascriptissexy.com/understand-javascript-closures-with-ease/)  
-    This is an older article, but it is still very good.
--   [Closures](https://medium.freecodecamp.org/lets-learn-javascript-closures-66feb44f6a44)  
-    A great article that explains in depth what closures are
+- [Deep Dive on Closures](https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8)  
+  Step by step deep dive on closures
+- [Coding Train Closures walkthrough](https://youtu.be/-jysK0nlz7A)  
+  Awesome stuff on closures
+- [Simple Closures](http://javascriptissexy.com/understand-javascript-closures-with-ease/)  
+  This is an older article, but it is still very good.
+- [Closures](https://medium.freecodecamp.org/lets-learn-javascript-closures-66feb44f6a44)  
+  A great article that explains in depth what closures are
 
-------------------------------------------------------------------------
+---
 
 #### Learn to demonstrate the proper use a of a callback function by passing a function to another function as a parameter
 
@@ -333,10 +327,10 @@ Complete the following exercises included here in this JSBin [Callbacks](http://
 
 ##### Dig Deeper
 
--   [What the heck is a callback?](https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced)  
-    Further instruction on callbacks
+- [What the heck is a callback?](https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced)  
+  Further instruction on callbacks
 
-------------------------------------------------------------------------
+---
 
 #### Learn to demonstrate ability to use \`.map\` \`.reduce\` \`.filter\` and describe their use cases
 
@@ -384,9 +378,9 @@ That works! It’s a simple solution, and simplicity is the gold standard for pr
 
 The map function can also take in a callback that passes back a couple of things to us. The three things you’d get back from a callback passed to Map would be:
 
--   The current item of the array `state`
--   The current index of the current item `index`
--   The entire array `data`
+- The current item of the array `state`
+- The current index of the current item `index`
+- The entire array `data`
 
 In the example below, the value given in the callback is `state` since task 1 asks us to look at state data.
 
@@ -407,7 +401,7 @@ What if we only want to see states who’s `population is greater than` 650,000?
 
 Now, we can use `.filter` to iterate over all items in the array and return only what we want. This is useful anytime we need a subset of a larger group of data.
 
-*Filter takes exactly the same arguments as .map, namely: value, index, and array.*
+_Filter takes exactly the same arguments as .map, namely: value, index, and array._
 
     const filterLargeStates = data.filter((state) => {
       return state.population >= 650000;
@@ -436,16 +430,16 @@ This is more succinct, but a lot is going on here. Importantly, we pass `0` as a
 
 ![Screen Shot 2019-12-03 at 11.34.39 AM](https://i.imgur.com/ju1Ooqu.png)
 
-*Note, the function will run without the `0` pictured above, but will default to starting accumulation at the first number in the array, which often doesn’t make sense*
+_Note, the function will run without the `0` pictured above, but will default to starting accumulation at the first number in the array, which often doesn’t make sense_
 
 The four items that get passed back from our callback function when using `.reduce` are:
 
--   The current value of the total aggregated value.
--   We set the initial value at the end of the function. In this case, we set it to 0.
-    -   This could be any value, though.
--   The current item in the array.
--   The index again.
--   The full array.
+- The current value of the total aggregated value.
+- We set the initial value at the end of the function. In this case, we set it to 0.
+  - This could be any value, though.
+- The current item in the array.
+- The index again.
+- The full array.
 
 To sum up. These functions are fantastic and allow us to write clean, reusable code in a functional programming style. They give us the power to represent our data in an enjoyable way. As you get more and more used to using these functions, you’ll get the ability to use them in very complex situations that will eventually save your bacon. For now, let’s go practice. Check out the challenge on JSBin. Go play around and see if you can create some new data sets out of the provided data.
 
@@ -468,18 +462,18 @@ The callback function here is what’s enclosed in the `return` function. `state
       return {'state': state.state, 'population': state.population};
     });
 
-1.  Use `.filter` to create an array of states who’s land\_area is larger than 50 units. Just like with map, we use arrow function syntax to dictate a `return`. Similarly, `state` is the value, or element(s) that will be processed.
+1.  Use `.filter` to create an array of states who’s land_area is larger than 50 units. Just like with map, we use arrow function syntax to dictate a `return`. Similarly, `state` is the value, or element(s) that will be processed.
 
     const filterLandArea = data.filter((state) => {
-      return state.land_area >= 50;
+    return state.land_area >= 50;
     });
 
-1.  Use `.reduce` to create an array of the states land\_area reduced to the `mean average` of all the state’s combined.This example uses similar parameters, only adds the counter `total` to accumulate the sum.
+1.  Use `.reduce` to create an array of the states land_area reduced to the `mean average` of all the state’s combined.This example uses similar parameters, only adds the counter `total` to accumulate the sum.
 
     const landAreaAverage = data.reduce((total, state) => {
-      let sum = total + state.land_area;
-      console.log(sum, total, state);
-      return sum;
+    let sum = total + state.land_area;
+    console.log(sum, total, state);
+    return sum;
     }, 0);
     const average = landAreaAverage / data.length;
 
@@ -491,18 +485,18 @@ Complete the following exercises using `.map`, `.filter`, `.reduce`.
 
 ##### Dig Deeper
 
--   [Functional Programming in JavaScript](https://opensource.com/article/17/6/functional-javascript)  
-    An in depth guide covering the functional programming paradigm in JavaScript.
--   [.map() .reduce() .filter()](https://hackernoon.com/understanding-map-filter-and-reduce-in-javascript-5df1c7eee464)  
-    A beautiful description of these methods and their uses
+- [Functional Programming in JavaScript](https://opensource.com/article/17/6/functional-javascript)  
+  An in depth guide covering the functional programming paradigm in JavaScript.
+- [.map() .reduce() .filter()](https://hackernoon.com/understanding-map-filter-and-reduce-in-javascript-5df1c7eee464)  
+  A beautiful description of these methods and their uses
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [JavaScript-II](https://github.com/LambdaSchool/JS-Exercise-Closures-Callbacks-ArrayMethods)
+- ##### [JavaScript-II](https://github.com/LambdaSchool/JS-Exercise-Closures-Callbacks-ArrayMethods)
 
-    With some basic JavaScript principles we can now expand our skills out even further by exploring array methods like: `.forEach()`, `.map()`, `.reduce()`, and `.filter()`. We can also look at how closures have a large impact on how we write JavaScript.
+  With some basic JavaScript principles we can now expand our skills out even further by exploring array methods like: `.forEach()`, `.map()`, `.reduce()`, and `.filter()`. We can also look at how closures have a large impact on how we write JavaScript.
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -510,34 +504,34 @@ Complete the following exercises using `.map`, `.filter`, `.reduce`.
 
 You can use class recordings to help you master the material.
 
--   **[JavaScript II for WEBPT17 w/ Pace Ellsworth](https://youtu.be/Ix8Uk0JlRUk)**
+- **[JavaScript II for WEBPT17 w/ Pace Ellsworth](https://youtu.be/Ix8Uk0JlRUk)**
 
-    Lesson on closures, callbacks, and array methods
+  Lesson on closures, callbacks, and array methods
 
--   [All previous recordings](/archive/FSW/module/rec1oaBmEoSilO2yf)
+- [All previous recordings](/archive/FSW/module/rec1oaBmEoSilO2yf)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    For this challenge you will create your own closure:
+  For this challenge you will create your own closure:
 
-    -   Create a function that houses 2 nested functions inside of it
-    -   Create a unique variable for each function you created
-    -   Test out where you can log the unique variables for each function.
+  - Create a function that houses 2 nested functions inside of it
+  - Create a unique variable for each function you created
+  - Test out where you can log the unique variables for each function.
 
-    Why can you access variable values in nested functions?
+  Why can you access variable values in nested functions?
 
--   Objective challenge:
+- Objective challenge:
 
-    Complete the following exercises included here in this JSBin [Callbacks](http://jsbin.com/sadikid/edit?js,console).
+  Complete the following exercises included here in this JSBin [Callbacks](http://jsbin.com/sadikid/edit?js,console).
 
--   Objective challenge:
+- Objective challenge:
 
-    Complete the following exercises using `.map`, `.filter`, `.reduce`.
+  Complete the following exercises using `.map`, `.filter`, `.reduce`.
 
-    [Code found here](http://jsbin.com/wolayeb/edit?js,console)
+  [Code found here](http://jsbin.com/wolayeb/edit?js,console)
 
--   Project: JavaScript-II
+- Project: JavaScript-II

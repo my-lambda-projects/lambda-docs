@@ -16,24 +16,24 @@ You must be a Lambda School student to view this page.
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
@@ -43,24 +43,24 @@ You must be a Lambda School student to view this page.
 
 <a href="/web1/sprint/rec2neAvlo6zM07qc" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
--   [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
--   [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
+- [User Interface](/web1/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/web1/module/rect59e95N6OSvoCd/)
+- [Intro CSS](/web1/module/rec6KMj0W3ukhYeWv/)
+- [CSS Layouts](/web1/module/recYyDfYS2UmsvquL/)
 
 <a href="/web1/sprint/recYAgtervk7WilBW" class="bd-toc-link">2.  Advanced CSS and Intro JavaScript</a>
 
--   [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
--   [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
--   [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
--   [Objects](/web1/module/recQV3tKcEDXa840D/)
+- [Responsive Design](/web1/module/recUPpx89Z2uWzkzU/)
+- [Intro to JavaScript](/web1/module/recPmaqIfzn9NMPLY/)
+- [Arrays](/web1/module/recXRqGjyTS6uDzSA/)
+- [Objects](/web1/module/recQV3tKcEDXa840D/)
 
 <a href="/web1/sprint/recIS8D2e4nTRGCLT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
--   [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
--   [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
--   [Classes](/web1/module/recyS588eOvVUKAMc/)
+- [Scope and Closure](/web1/module/recrBjfZ9mBasSPpa/)
+- [Advanced Array Methods](/web1/module/recNilLQDqhqvPuNk/)
+- [Prototypes and Inheritance](/web1/module/rec0AWuNLezbpit7m/)
+- [Classes](/web1/module/recyS588eOvVUKAMc/)
 
 <a href="/web1/sprint/rec2di8phTBw15e4E" class="bd-toc-link">4.  WEB Unit 1 Build</a>
 
@@ -78,9 +78,9 @@ Even the most complex web applications start with simple HTML elements. Knowing 
 
 #### Objectives:
 
--   Student should be able to learn what HTML is and what it is used for in Web Development
--   Student should be able to learn to utilize common HTML tags and attributes to mark up a basic page of content
--   Student should be able to understand the main concepts of CSS (selectors and style rules), and be able to apply them to an HTML page
+- Student should be able to learn what HTML is and what it is used for in Web Development
+- Student should be able to learn to utilize common HTML tags and attributes to mark up a basic page of content
+- Student should be able to understand the main concepts of CSS (selectors and style rules), and be able to apply them to an HTML page
 
 ## [Git for Web Development](../module/rect59e95N6OSvoCd)
 
@@ -90,13 +90,13 @@ Git can be overwhelming at first, but if we break it down concept by concept, it
 
 #### Objectives:
 
--   Student should be able to explain why we use the command line interface (CLI), and demonstrate use of basic CLI commands
--   Student should be able to sufficiently explain what version control and Git are, and why as software engineers we use them
--   Student should be able to demonstrate an ability to fork and clone a repo
--   Student should be able to understand branching, and be able to create a branch locally
--   Student should be able to explain and properly utilize the git commands: \`status\`, \`add\`, \`commit\`, and \`push\`
--   Student should be able to submit a Pull Request
--   Student should be able to demonstrate their ability to use the Lambda School Git Workflow to submit an assignment to your Team Lead
+- Student should be able to explain why we use the command line interface (CLI), and demonstrate use of basic CLI commands
+- Student should be able to sufficiently explain what version control and Git are, and why as software engineers we use them
+- Student should be able to demonstrate an ability to fork and clone a repo
+- Student should be able to understand branching, and be able to create a branch locally
+- Student should be able to explain and properly utilize the git commands: \`status\`, \`add\`, \`commit\`, and \`push\`
+- Student should be able to submit a Pull Request
+- Student should be able to demonstrate their ability to use the Lambda School Git Workflow to submit an assignment to your Team Lead
 
 ## [Intro CSS](../module/rec6KMj0W3ukhYeWv)
 
@@ -104,10 +104,10 @@ In this module we will dive deeper into the world of CSS to learn about the box 
 
 #### Objectives:
 
--   Student should be able to learn about the box model and be able to explain its properties
--   Student should be able to demonstrate CSS specificity and inheritance to create and update styles
--   Student should be able to implement a CSS reset and understand why it’s important for cross browser development
--   Student should be able to describe and use responsive units to create a fully responsive website
+- Student should be able to learn about the box model and be able to explain its properties
+- Student should be able to demonstrate CSS specificity and inheritance to create and update styles
+- Student should be able to implement a CSS reset and understand why it’s important for cross browser development
+- Student should be able to describe and use responsive units to create a fully responsive website
 
 ## [CSS Layouts](../module/recYyDfYS2UmsvquL)
 
@@ -115,5 +115,5 @@ Basic HTML and CSS are fundamental to any web site or web app on the internet. B
 
 #### Objectives:
 
--   Student should be able to describe and understand that flexbox is a module
--   Student should be able to demonstrate understanding of flex container properties in flex box
+- Student should be able to describe and understand that flexbox is a module
+- Student should be able to demonstrate understanding of flex container properties in flex box

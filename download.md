@@ -12,7 +12,7 @@ Lambda School Training Kit
 
 Hey there! Heads up that you are viewing an outdated version of Lambda’s curriculum. If you want to see the latest version, please visit Codex at [learn.lambdaschool.com](https://learn.lambdaschool.com)
 
-# 
+#
 
 ## Welcome
 
@@ -20,34 +20,34 @@ The Lambda School Training Kit is the home for all learning resources at Lambda 
 
 <a href="" id="dashboards-link-mobile">Looking for Student Dashboards?</a>
 
--   Android Development
--   Career Readiness
--   Data Science
--   Full Stack Web Development
--   iOS Development
--   Java Backend Development
--   Lambda Leadership
--   Ruby on Rails
--   User Experience Design
+- Android Development
+- Career Readiness
+- Data Science
+- Full Stack Web Development
+- iOS Development
+- Java Backend Development
+- Lambda Leadership
+- Ruby on Rails
+- User Experience Design
 
--   [Module Retrospective (FT, PT, & Labs)](https://forms.lambdaschool.com/module-retrospective)
-
-<!-- -->
-
--   [Sprint Retrospective (FT, PT, & Labs)](https://forms.lambdaschool.com/sprint-retrospective)
--   [Build Sprint Retrospective](https://forms.lambdaschool.com/sprint-retrospective)
--   [Late Sprint Submission](https://forms.lambdaschool.com/sprint-retrospective)
+- [Module Retrospective (FT, PT, & Labs)](https://forms.lambdaschool.com/module-retrospective)
 
 <!-- -->
 
--   [Peer Review (Labs)](https://forms.lambdaschool.com/peer-review)
+- [Sprint Retrospective (FT, PT, & Labs)](https://forms.lambdaschool.com/sprint-retrospective)
+- [Build Sprint Retrospective](https://forms.lambdaschool.com/sprint-retrospective)
+- [Late Sprint Submission](https://forms.lambdaschool.com/sprint-retrospective)
 
 <!-- -->
 
--   [Offer Letters](https://careers.lambdaschool.com/?offer=true)
--   [Lambda School Exit Survey](https://airtable.com/shrAqQ4pkRriHaNJR)
+- [Peer Review (Labs)](https://forms.lambdaschool.com/peer-review)
 
 <!-- -->
 
--   [General Feedback](https://airtable.com/shrU7rDwl59Xd3ciS)
--   [How to use FrontDesk](https://www.notion.so/lambdaschool/Using-FrontDesk-6a28693f25934957830cb82452f0cd8d#ec9545d0a242435ab0a51b3f6af89e1a)
+- [Offer Letters](https://careers.lambdaschool.com/?offer=true)
+- [Lambda School Exit Survey](https://airtable.com/shrAqQ4pkRriHaNJR)
+
+<!-- -->
+
+- [General Feedback](https://airtable.com/shrU7rDwl59Xd3ciS)
+- [How to use FrontDesk](https://www.notion.so/lambdaschool/Using-FrontDesk-6a28693f25934957830cb82452f0cd8d#ec9545d0a242435ab0a51b3f6af89e1a)

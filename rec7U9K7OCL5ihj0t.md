@@ -16,46 +16,46 @@ You must be a Lambda School student to view this page.
 
 <a href="/cs/sprint/recd4D4w3QrigPqUF" class="bd-toc-link">1.  Intro to Python and OOP</a>
 
--   [Introduction to Python I](/cs/module/recay2erzDlYUPSeO/)
--   [Introduction to Python II](/cs/module/recwpe3Y9TVWrGT8L/)
--   [Introduction to Python III](/cs/module/reca7NYptklr7F403/)
--   [Introduction to Python IV](/cs/module/recc3eWphKVYd0oHT/)
+- [Introduction to Python I](/cs/module/recay2erzDlYUPSeO/)
+- [Introduction to Python II](/cs/module/recwpe3Y9TVWrGT8L/)
+- [Introduction to Python III](/cs/module/reca7NYptklr7F403/)
+- [Introduction to Python IV](/cs/module/recc3eWphKVYd0oHT/)
 
 <a href="/cs/sprint/recR4gHcvD21ziR9a" class="bd-toc-link">2.  Data Structures</a>
 
--   [Data Structures I](/cs/module/rec3MaMAY78iDm7ax/)
--   [Data Structures II](/cs/module/recMcvOrFw5BWUku3/)
--   [Data Structures III](/cs/module/recx53S3pYfDfvFDm/)
--   [Data Structures IV](/cs/module/recHdwPne4Xt3A7lk/)
+- [Data Structures I](/cs/module/rec3MaMAY78iDm7ax/)
+- [Data Structures II](/cs/module/recMcvOrFw5BWUku3/)
+- [Data Structures III](/cs/module/recx53S3pYfDfvFDm/)
+- [Data Structures IV](/cs/module/recHdwPne4Xt3A7lk/)
 
 <a href="/cs/sprint/recd9grrKlURJ453N" class="bd-toc-link">3.  Algorithms</a>
 
--   [Iterative Sorting](/cs/module/reck76SPX26beGSqE/)
--   [Recursive Sorting](/cs/module/reccRh9h6ccXghfA4/)
--   [A First-Pass Solution](/cs/module/recrCuZQMVI6LvxhD/)
--   [Writing Better Solutions](/cs/module/recsvJCzPlM2X63ZX/)
+- [Iterative Sorting](/cs/module/reck76SPX26beGSqE/)
+- [Recursive Sorting](/cs/module/reccRh9h6ccXghfA4/)
+- [A First-Pass Solution](/cs/module/recrCuZQMVI6LvxhD/)
+- [Writing Better Solutions](/cs/module/recsvJCzPlM2X63ZX/)
 
 <a href="/cs/sprint/recvDjRQEq49uoWsU" class="bd-toc-link">4.  CS Unit 1 Build</a>
 
 <a href="/cs/sprint/recAr3gdL8U57eho1" class="bd-toc-link">5.  Hash Tables</a>
 
--   [Hash Tables I](/cs/module/recSwIvbSV630gdVk/)
--   [Hash Tables II](/cs/module/recHzCwboKBLBB0Re/)
--   [Hash Tables III & IV](/cs/module/recsEDFseukQWg92c/)
+- [Hash Tables I](/cs/module/recSwIvbSV630gdVk/)
+- [Hash Tables II](/cs/module/recHzCwboKBLBB0Re/)
+- [Hash Tables III & IV](/cs/module/recsEDFseukQWg92c/)
 
 <a href="/cs/sprint/rec7U9K7OCL5ihj0t" class="bd-toc-link">6.  Graphs</a>
 
--   [Graphs I](/cs/module/recBMbHtb8AOXq3UL/)
--   [Graphs II](/cs/module/recZL2m6Gx7B4dU3G/)
--   [Graphs III](/cs/module/reck4RVWsg82eiYPZ/)
--   [Graphs IV](/cs/module/recoGWlBHjuJxkL1y/)
+- [Graphs I](/cs/module/recBMbHtb8AOXq3UL/)
+- [Graphs II](/cs/module/recZL2m6Gx7B4dU3G/)
+- [Graphs III](/cs/module/reck4RVWsg82eiYPZ/)
+- [Graphs IV](/cs/module/recoGWlBHjuJxkL1y/)
 
 <a href="/cs/sprint/recndTnO1V8oDbBPb" class="bd-toc-link">7.  Computer Architecture</a>
 
--   [Computer Architecture: Basics, Number Bases](/cs/module/recsuJbrrFgbFUCRX/)
--   [Computer Architecture: Bitwise Operations](/cs/module/rec2NHr4Eyib7XdED/)
--   [Computer Architecture: The System Stack](/cs/module/recvQUkzz23NTj20G/)
--   [Computer Architecture: Subroutines, CALL/RET](/cs/module/recGPVAdvQcmopSIO/)
+- [Computer Architecture: Basics, Number Bases](/cs/module/recsuJbrrFgbFUCRX/)
+- [Computer Architecture: Bitwise Operations](/cs/module/rec2NHr4Eyib7XdED/)
+- [Computer Architecture: The System Stack](/cs/module/recvQUkzz23NTj20G/)
+- [Computer Architecture: Subroutines, CALL/RET](/cs/module/recGPVAdvQcmopSIO/)
 
 <a href="/cs/sprint/reco0t22NdXmr8VyL" class="bd-toc-link">8.  CS Unit 2 Build</a>
 
@@ -65,46 +65,46 @@ You must be a Lambda School student to view this page.
 
 <a href="/cs/sprint/recd4D4w3QrigPqUF" class="bd-toc-link">1.  Intro to Python and OOP</a>
 
--   [Introduction to Python I](/cs/module/recay2erzDlYUPSeO/)
--   [Introduction to Python II](/cs/module/recwpe3Y9TVWrGT8L/)
--   [Introduction to Python III](/cs/module/reca7NYptklr7F403/)
--   [Introduction to Python IV](/cs/module/recc3eWphKVYd0oHT/)
+- [Introduction to Python I](/cs/module/recay2erzDlYUPSeO/)
+- [Introduction to Python II](/cs/module/recwpe3Y9TVWrGT8L/)
+- [Introduction to Python III](/cs/module/reca7NYptklr7F403/)
+- [Introduction to Python IV](/cs/module/recc3eWphKVYd0oHT/)
 
 <a href="/cs/sprint/recR4gHcvD21ziR9a" class="bd-toc-link">2.  Data Structures</a>
 
--   [Data Structures I](/cs/module/rec3MaMAY78iDm7ax/)
--   [Data Structures II](/cs/module/recMcvOrFw5BWUku3/)
--   [Data Structures III](/cs/module/recx53S3pYfDfvFDm/)
--   [Data Structures IV](/cs/module/recHdwPne4Xt3A7lk/)
+- [Data Structures I](/cs/module/rec3MaMAY78iDm7ax/)
+- [Data Structures II](/cs/module/recMcvOrFw5BWUku3/)
+- [Data Structures III](/cs/module/recx53S3pYfDfvFDm/)
+- [Data Structures IV](/cs/module/recHdwPne4Xt3A7lk/)
 
 <a href="/cs/sprint/recd9grrKlURJ453N" class="bd-toc-link">3.  Algorithms</a>
 
--   [Iterative Sorting](/cs/module/reck76SPX26beGSqE/)
--   [Recursive Sorting](/cs/module/reccRh9h6ccXghfA4/)
--   [A First-Pass Solution](/cs/module/recrCuZQMVI6LvxhD/)
--   [Writing Better Solutions](/cs/module/recsvJCzPlM2X63ZX/)
+- [Iterative Sorting](/cs/module/reck76SPX26beGSqE/)
+- [Recursive Sorting](/cs/module/reccRh9h6ccXghfA4/)
+- [A First-Pass Solution](/cs/module/recrCuZQMVI6LvxhD/)
+- [Writing Better Solutions](/cs/module/recsvJCzPlM2X63ZX/)
 
 <a href="/cs/sprint/recvDjRQEq49uoWsU" class="bd-toc-link">4.  CS Unit 1 Build</a>
 
 <a href="/cs/sprint/recAr3gdL8U57eho1" class="bd-toc-link">5.  Hash Tables</a>
 
--   [Hash Tables I](/cs/module/recSwIvbSV630gdVk/)
--   [Hash Tables II](/cs/module/recHzCwboKBLBB0Re/)
--   [Hash Tables III & IV](/cs/module/recsEDFseukQWg92c/)
+- [Hash Tables I](/cs/module/recSwIvbSV630gdVk/)
+- [Hash Tables II](/cs/module/recHzCwboKBLBB0Re/)
+- [Hash Tables III & IV](/cs/module/recsEDFseukQWg92c/)
 
 <a href="/cs/sprint/rec7U9K7OCL5ihj0t" class="bd-toc-link">6.  Graphs</a>
 
--   [Graphs I](/cs/module/recBMbHtb8AOXq3UL/)
--   [Graphs II](/cs/module/recZL2m6Gx7B4dU3G/)
--   [Graphs III](/cs/module/reck4RVWsg82eiYPZ/)
--   [Graphs IV](/cs/module/recoGWlBHjuJxkL1y/)
+- [Graphs I](/cs/module/recBMbHtb8AOXq3UL/)
+- [Graphs II](/cs/module/recZL2m6Gx7B4dU3G/)
+- [Graphs III](/cs/module/reck4RVWsg82eiYPZ/)
+- [Graphs IV](/cs/module/recoGWlBHjuJxkL1y/)
 
 <a href="/cs/sprint/recndTnO1V8oDbBPb" class="bd-toc-link">7.  Computer Architecture</a>
 
--   [Computer Architecture: Basics, Number Bases](/cs/module/recsuJbrrFgbFUCRX/)
--   [Computer Architecture: Bitwise Operations](/cs/module/rec2NHr4Eyib7XdED/)
--   [Computer Architecture: The System Stack](/cs/module/recvQUkzz23NTj20G/)
--   [Computer Architecture: Subroutines, CALL/RET](/cs/module/recGPVAdvQcmopSIO/)
+- [Computer Architecture: Basics, Number Bases](/cs/module/recsuJbrrFgbFUCRX/)
+- [Computer Architecture: Bitwise Operations](/cs/module/rec2NHr4Eyib7XdED/)
+- [Computer Architecture: The System Stack](/cs/module/recvQUkzz23NTj20G/)
+- [Computer Architecture: Subroutines, CALL/RET](/cs/module/recGPVAdvQcmopSIO/)
 
 <a href="/cs/sprint/reco0t22NdXmr8VyL" class="bd-toc-link">8.  CS Unit 2 Build</a>
 
@@ -120,42 +120,42 @@ Note that the project for this topic is built over four days. See the [README](h
 
 Day 1: Overview and introduction to graphs, graph representations, BFS, DFS
 
--   Project - Implement BFS and DFS, returning a path from the starting node to the end node
+- Project - Implement BFS and DFS, returning a path from the starting node to the end node
 
 #### Objectives:
 
--   Student should be able to describe what a graph is, explain its components, provide examples of its useful applications, and draw each of the different graph types
--   Student should be able to represent a graph as an adjacency list and an adjacency matrix and compare and contrast the respective representations
--   Student should be able to represent a breadth-first-search of a graph in pseudo-code and recall common applications for its use
--   Student should be able to represent a depth-first-search of a graph in pseudo-code and recall common applications for its use
+- Student should be able to describe what a graph is, explain its components, provide examples of its useful applications, and draw each of the different graph types
+- Student should be able to represent a graph as an adjacency list and an adjacency matrix and compare and contrast the respective representations
+- Student should be able to represent a breadth-first-search of a graph in pseudo-code and recall common applications for its use
+- Student should be able to represent a depth-first-search of a graph in pseudo-code and recall common applications for its use
 
 ## [Graphs II](../module/recZL2m6Gx7B4dU3G)
 
 Day 2: Applied Graph search
 
--   Project - Implement the “Earliest Ancestor” algorithm
+- Project - Implement the “Earliest Ancestor” algorithm
 
 #### Objectives:
 
--   Student should be able to describe a depth-first search and its uses, and can manually run a DFS on a graph
--   Student should be able to describe what breadth-first search (BFS) is and its uses, and can manually run a sample BFS
+- Student should be able to describe a depth-first search and its uses, and can manually run a DFS on a graph
+- Student should be able to describe what breadth-first search (BFS) is and its uses, and can manually run a sample BFS
 
 ## [Graphs III](../module/reck4RVWsg82eiYPZ)
 
 Day 3: Random Social Network
 
--   Project - Create a social network with random seeded data
+- Project - Create a social network with random seeded data
 
 #### Objectives:
 
--   Student should be able to understand randomness and its applications
+- Student should be able to understand randomness and its applications
 
 ## [Graphs IV](../module/recoGWlBHjuJxkL1y)
 
 Day 4: Maze traversal
 
--   Project - Traverse a large maze
+- Project - Traverse a large maze
 
 #### Objectives:
 
--   Student should be able to describe what connected components are on a graph and their uses, and can implement an algorithm for finding connected components
+- Student should be able to describe what connected components are on a graph and their uses, and can implement an algorithm for finding connected components

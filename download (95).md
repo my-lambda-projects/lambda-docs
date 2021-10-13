@@ -16,38 +16,38 @@ You must be a Lambda School student to view this page.
 
 <a href="/webannex/sprint/recfwZvI7QhMa7xbG" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
--   [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
--   [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
+- [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
+- [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
+- [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
 
 <a href="/webannex/sprint/recIXiQgpgMdJ81ms" class="bd-toc-link">2.  Advanced CSS</a>
 
--   [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
--   [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
--   [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
--   [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
+- [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
+- [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
+- [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
+- [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
 
 <a href="/webannex/sprint/recclZwJxMU8kUngT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
--   [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
--   [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
--   [Classes](/webannex/module/recyS588eOvVUKAMc/)
+- [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
+- [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
+- [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
+- [Classes](/webannex/module/recyS588eOvVUKAMc/)
 
 <a href="/webannex/sprint/recRT8JKvbTiGaosk" class="bd-toc-link">4.  Single Page Applications</a>
 
--   [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
--   [React Router II](/webannex/module/recYkF1FDilIedmwX/)
--   [Form Management](/webannex/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
+- [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
+- [React Router II](/webannex/module/recYkF1FDilIedmwX/)
+- [Form Management](/webannex/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
 
 <a href="/webannex/sprint/recozTHaHJe6L1ThN" class="bd-toc-link">5.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
--   [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
--   [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
--   [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
+- [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
+- [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
+- [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
 
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjM1IiB2aWV3Ym94PSIwIDAgNzU2IDE5NyIgZmlsbD0iI2VjMzk0NCI+PGc+PHBhdGggZD0iTTI5Mi45LDEyNi42aC02LjdjLTksMC0xMi42LTEuOS0xMi42LTkuNVY0OC41YzAtNy43LDEuNi04LjYsMTEuNC05Ljd2LTQuNWgtNDEuM3Y0LjUgYzkuOCwxLjEsMTEuNCwxLjksMTEuNCw5Ljd2NjkuM2MwLDcuNy0xLjYsOC42LTExLjQsOS43djQuNWg3My43bDQuOS0yOS40aC00LjRDMzA4LjUsMTE5LjYsMzAzLjksMTI2LjYsMjkyLjksMTI2LjZ6Ij48L3BhdGg+PHBhdGggZD0iTTM4NS41LDEyMS4xVjc5LjNjMC0xNS44LTkuNC0yMi40LTI2LjYtMjIuNGMtMTUsMC0yNi44LDYuNi0yNi44LDE5LjNjMCwyLjQsMC4yLDMuMywwLjgsNWgxNi42IGMtMC41LTItMC43LTUtMC43LTcuNWMwLTkuNiwzLjYtMTIuNCw5LjQtMTIuNGM2LjQsMCw5LjcsMiw5LjcsMTQuNHYxMS4ybC0yMC44LDcuN2MtMTAuNiw0LjEtMTkuMyw4LjgtMTkuMywyMC43IGMwLDEwLjksNy41LDE3LjgsMTguNiwxNy44YzkuOSwwLDE3LjQtNi4yLDIxLjktMTIuMWwwLjEtMC4xbDAsMFYxMzJoMjZ2LTQuNEMzODcuNywxMjcuMSwzODUuNSwxMjYuMiwzODUuNSwxMjEuMXogTTM2OCwxMTcuOCBjLTQuNCwzLjMtNy42LDUuMy0xMiw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNFYxMTcuOEwzNjgsMTE3Ljh6Ij48L3BhdGg+PHBhdGggZD0iTTUxNC40LDEyMVY3OS41YzAtMTQuOC02LTIyLjQtMTguNy0yMi40Yy0xMS41LDAtMTkuNCw2LjYtMjUuNSwxMy45Yy0xLjgtOS42LTcuNy0xMy45LTE3LjgtMTMuOSBjLTExLjQsMC0xOC43LDYuMi0yNC44LDEzLjZWNTdoLTIuM2wtMjMuOCw3LjR2Mi40bDguNiw1djQ5LjRjMCw1LTIuMSw2LjEtOC45LDYuNHY0LjRoMzUuMXYtNC40Yy02LjctMC4zLTguNy0xLjMtOC43LTYuNHYtNDcgYzQuNy0zLjYsOS41LTYuNSwxNS41LTYuNWM3LjYsMCwxMC41LDQuMiwxMC41LDEyLjd2NDAuOGMwLDUtMS45LDYuMS04LjcsNi40djQuNGwzNC44LDB2LTQuNGMtNi43LTAuMy04LjYtMS4zLTguNi02LjR2LTQ3IGM0LjctMy42LDkuNS02LjUsMTUuNS02LjVjNy42LDAsMTAuNSw0LjIsMTAuNSwxMi43bC0wLjEsNDAuNWMwLDUtMS44LDYuNC04LjYsNi43bDAsNC40aDM1LjF2LTQuNCBDNTE2LjcsMTI3LjQsNTE0LjQsMTI2LjEsNTE0LjQsMTIxeiI+PC9wYXRoPjxwYXRoIGQ9Ik01NzMuMiw1Ny4zYy0xMSwwLTE4LjUsNS43LTIzLjQsMTIuOFYyMi45aC0yLjdsLTIzLjQsNi44djIuNWw4LjYsNC41VjEzMmgyLjlsOC0zLjVjNS44LDMuMywxMi4zLDUsMjAuMiw1IGMyMC44LDAsMzcuNC0xNS44LDM3LjQtNDIuNkM2MDAuOSw2OS45LDU5MC40LDU3LjMsNTczLjIsNTcuM3ogTTU2My40LDEyOC43Yy01LjQsMC0xMC4zLTIuNC0xMy43LTcuOVY3My42IGMzLjQtMy40LDguNS01LjcsMTMuNS01LjdjMTMuOSwwLDIwLDEyLjgsMjAsMjkuNUM1ODMuMywxMTQuNyw1NzUuOCwxMjguNSw1NjMuNCwxMjguN3oiPjwvcGF0aD48cGF0aCBkPSJNNjc3LDEyMS4yVjIyLjhoLTIuNkw2NTEsMjkuNlYzMmw4LjYsNC41djI1LjdjLTMuNC0zLjItOC44LTUuMS0xNS41LTUuMWMtMTkuOSwwLTM1LjIsMTUuMy0zNS4yLDQxLjMgYzAsMjAuNywxMS4yLDM0LjYsMjguMSwzNC42YzkuOCwwLDE3LTUuMywyMi42LTEzLjF2MC45VjEzMmgyNi4zbDAtNC40QzY3OS4xLDEyNy4zLDY3NywxMjYuMyw2NzcsMTIxLjJ6IE02NTkuNiwxMTcuMSBMNjU5LjYsMTE3LjFjLTMuNCwzLjQtOCw1LjEtMTMuMiw1LjFjLTEzLjIsMC0yMC40LTEyLjgtMjAuNC0yOS44YzAtMTcuOCw3LjMtMjkuMiwxOS41LTI5LjJjOC43LDAsMTQuMSw2LjksMTQuMSwxOC4zIEw2NTkuNiwxMTcuMXoiPjwvcGF0aD48cGF0aCBkPSJNNzQ3LjEsMTIxLjFWNzkuM2MwLTE1LjgtOS40LTIyLjQtMjYuNi0yMi40Yy0xNSwwLTI2LjgsNi42LTI2LjgsMTkuM2MwLDIuNCwwLjIsMy4zLDAuOCw1aDE2LjYgYy0wLjUtMi0wLjctNS0wLjctNy41YzAtOS42LDMuNi0xMi40LDkuNC0xMi40YzYuNCwwLDkuNywyLDkuNywxNC40djExLjJsLTIwLjgsNy43Yy0xMC42LDQuMS0xOS4zLDguOC0xOS4zLDIwLjcgYzAsMTAuOSw3LjUsMTcuOCwxOC42LDE3LjhjOS45LDAsMTcuNC02LjIsMjEuOS0xMi4xdi0wLjFoMC4xbDAsMTEuMWwyNiwwLjF2LTQuNUM3NDkuMywxMjcuMSw3NDcuMSwxMjYuMiw3NDcuMSwxMjEuMXogTTcyOS42LDExNy44Yy00LjQsMy4zLTcuNiw1LjMtMTIuMSw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNEw3MjkuNiwxMTcuOEw3MjkuNiwxMTcuOHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTAsMHY5MC40YzAsNjUuNyw1MC45LDg4LjUsODguMSwxMDUuMmgwLjFsMywxLjRjMC43LTAuNCwxLjQtMC43LDIuMi0xYzAuNC0wLjIsMC45LTAuNCwxLjMtMC42IGMzNy4zLTE2LjYsODguNC0zOS41LDg4LjQtMTA1VjBIMHogTTExNiwxMzJsLTItNS4zbC0yNi42LTcwYy0xLjYsNC4xLTUuMywxNC05LjMsMjQuNmwtMTUuMyw0MS4zYy0wLjcsMi0wLjMsMywwLjIsMy43IGMxLjEsMS4zLDMuNSwxLjMsNy4zLDEuM0g3MWwwLDQuNEg0Mi40bDAtNC40aDIuMmMzLjksMCw3LjEtMS43LDkuNS02LjVsMi45LTYuNmwyNi41LTY3LjhsLTQuNy0xMi41aDI0LjdsMzQuMSw4OS43bDMuMSw4LjFIMTE2eiI+PC9wYXRoPjwvc3ZnPg==" /></a>
 
@@ -55,57 +55,57 @@ You must be a Lambda School student to view this page.
 
 <a href="/webannex/sprint/recfwZvI7QhMa7xbG" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
--   [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
--   [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
+- [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
+- [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
+- [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
 
 <a href="/webannex/sprint/recIXiQgpgMdJ81ms" class="bd-toc-link">2.  Advanced CSS</a>
 
--   [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
--   [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
--   [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
--   [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
+- [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
+- [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
+- [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
+- [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
 
 <a href="/webannex/sprint/recclZwJxMU8kUngT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
--   [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
--   [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
--   [Classes](/webannex/module/recyS588eOvVUKAMc/)
+- [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
+- [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
+- [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
+- [Classes](/webannex/module/recyS588eOvVUKAMc/)
 
 <a href="/webannex/sprint/recRT8JKvbTiGaosk" class="bd-toc-link">4.  Single Page Applications</a>
 
--   [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
--   [React Router II](/webannex/module/recYkF1FDilIedmwX/)
--   [Form Management](/webannex/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
+- [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
+- [React Router II](/webannex/module/recYkF1FDilIedmwX/)
+- [Form Management](/webannex/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
 
 <a href="/webannex/sprint/recozTHaHJe6L1ThN" class="bd-toc-link">5.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
--   [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
--   [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
--   [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
+- [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
+- [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
+- [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Projects](#projects)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Projects](#projects)
+- [Review](#review)
 
 # React Router I
 
 <span class="lead"> </span>
 
-Due to the insane popularity of JavaScript frameworks and what we call Single Page Applications (SPAs) we rely on our modern web browsers today for a lot more than we used to in the past. One of the common trends with SPAs to see today is the idea of `Client Side Routing` or the browser taking care of *“URL” history*
+Due to the insane popularity of JavaScript frameworks and what we call Single Page Applications (SPAs) we rely on our modern web browsers today for a lot more than we used to in the past. One of the common trends with SPAs to see today is the idea of `Client Side Routing` or the browser taking care of _“URL” history_
 
 **At the end of this module, you should be able to:**
 
--   explain the difference between client-side routing and sever-side routing
--   add React Router to an application and set up basic routing
--   describe the \`Route\` component and set up routes within a React Application
--   use the \`Link\` component to navigate between routes
--   create dynamic routes using URL parameters and the \`match\` object
+- explain the difference between client-side routing and sever-side routing
+- add React Router to an application and set up basic routing
+- describe the \`Route\` component and set up routes within a React Application
+- use the \`Link\` component to navigate between routes
+- create dynamic routes using URL parameters and the \`match\` object
 
 #### Pro Tip
 
@@ -115,47 +115,37 @@ Celebrate wrong answers, because that means someone’s about to learn!
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=OrBKbQbobC0), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=OrBKbQbobC0), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=WSZkkZrquiA), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- # An error occurred.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=WSZkkZrquiA), or enable JavaScript if it is disabled in your browser.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ZLpRLXsPNHs), or enable JavaScript if it is disabled in your browser.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=nbwHVhkXuVk), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=ZLpRLXsPNHs), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=BNOjGb_DE38), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- [Client vs Server side Routing](https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f)
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=nbwHVhkXuVk), or enable JavaScript if it is disabled in your browser.
+- [React Router Quick Start](https://reacttraining.com/react-router/web/guides/quick-start)
 
--   
+  Examples w/ setup information.
 
-    # An error occurred.
+- [The Route Component](https://reacttraining.com/react-router/web/api/Route)
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=BNOjGb_DE38), or enable JavaScript if it is disabled in your browser.
+  Documentation on the Route component
 
--   [Client vs Server side Routing](https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f)
-
--   [React Router Quick Start](https://reacttraining.com/react-router/web/guides/quick-start)
-
-    Examples w/ setup information.
-
--   [The Route Component](https://reacttraining.com/react-router/web/api/Route)
-
-    Documentation on the Route component
-
--   [The \`match\` object](https://reacttraining.com/react-router/web/api/match)
+- [The \`match\` object](https://reacttraining.com/react-router/web/api/match)
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -173,7 +163,7 @@ Being able to access information based on a URL is not only a powerful tool at o
 
 ### What is a Server?
 
-Before we talk about the *how* of routing, we need a solid definition of the *what*. In computer science, the term “server” refers to centralized resources on a network. These servers are physical devices, usually housed with other servers in large warehouses, that run the “behind the scenes” work of the internet like data storage. When you route, you’re routing to a server.
+Before we talk about the _how_ of routing, we need a solid definition of the _what_. In computer science, the term “server” refers to centralized resources on a network. These servers are physical devices, usually housed with other servers in large warehouses, that run the “behind the scenes” work of the internet like data storage. When you route, you’re routing to a server.
 
 You may be familiar with this type of server room from movies or TV. Each one of those boxes is a server, housing thousands of filing cabinets worth of data every couple of inches.
 
@@ -207,7 +197,7 @@ Read through this medium article [here](https://medium.com/@wilbo/server-side-vs
 
 On your own, write down some of the pros and cons for both server-side routing and client-side routing, and then write a paragraph of what you like about both, and which you would prefer to use and why. Submit this to your TL via slack.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to add React Router to an application and set up basic routing
 
@@ -250,18 +240,18 @@ This is all we have to do to install the Router. We get everything we need this 
 
 Let’s create an Avenger’s React SPA app by using react-router.
 
--   Start a project using `yarn create react-app avengers`
--   Add react-router with `yarn add react-router-dom` or `npm install -s react-router-dom`
--   In `app.js` import the `BrowserRouter` component and wrap your app with it:
+- Start a project using `yarn create react-app avengers`
+- Add react-router with `yarn add react-router-dom` or `npm install -s react-router-dom`
+- In `app.js` import the `BrowserRouter` component and wrap your app with it:
 
-    import { BrowserRouter as Router } from 'react-router-dom';
+  import { BrowserRouter as Router } from 'react-router-dom';
 
-    ReactDOM.render(
-      < Router>
-        <App />
-      </Router>,
-      document.getElementById("root")
-    );
+  ReactDOM.render(
+  < Router>
+  <App />
+  </Router>,
+  document.getElementById("root")
+  );
 
 ##### Challenge
 
@@ -269,9 +259,9 @@ Start up a new React app called friends, install `react-router-dom` and get it w
 
 ##### Dig Deeper
 
--   [React Router 4 Quick Start Guide](https://reacttraining.com/react-router/web/guides/quick-start)  
+- [React Router 4 Quick Start Guide](https://reacttraining.com/react-router/web/guides/quick-start)
 
-------------------------------------------------------------------------
+---
 
 #### Learn to describe the \`Route\` component and set up routes within a React Application
 
@@ -281,13 +271,13 @@ The way we declaratively set up our routes with in our applications all starts w
 
 Routes are a way of getting to a destination.
 
-To set up React Router, set up Routes by declaring what components will be mounted when certain URL paths are met. This step happens *after* we’ve wrapped our `Root` component in the `Router` or `BrowserRouter` component. The best part of React Router is that you can do this at pretty much any point during your development process, whereas previously you had to declare your routes early on in the development cycle. What this allows us to do, is figure out more important things without allowing routing to get in the way. React Router is a super useful tool for this reason!
+To set up React Router, set up Routes by declaring what components will be mounted when certain URL paths are met. This step happens _after_ we’ve wrapped our `Root` component in the `Router` or `BrowserRouter` component. The best part of React Router is that you can do this at pretty much any point during your development process, whereas previously you had to declare your routes early on in the development cycle. What this allows us to do, is figure out more important things without allowing routing to get in the way. React Router is a super useful tool for this reason!
 
 Once you have React Router installed by using `yarn add react-router-dom` , you can import the `Route` Component and use it within your application.
 
     import { Route } from 'react-router-dom';
 
-The `Route` component declares what `components` will be *mounted* based on what `URL's` the user requests. The best part about this process is that we get a chance to do this in a very `react` way. Lets picture a component `Users` that will display a list of users in your system when the URL `www.coolestapp.com/users` is requested. The `Route` component takes in a few props; the first is the URL `path` where the Route component will trigger. Next is the `component` prop. This is the component that you want React to *mount* when the URL matches the requested `path`. So in our case, when `/users` is requested, the `Users` component will be mounted.
+The `Route` component declares what `components` will be _mounted_ based on what `URL's` the user requests. The best part about this process is that we get a chance to do this in a very `react` way. Lets picture a component `Users` that will display a list of users in your system when the URL `www.coolestapp.com/users` is requested. The `Route` component takes in a few props; the first is the URL `path` where the Route component will trigger. Next is the `component` prop. This is the component that you want React to _mount_ when the URL matches the requested `path`. So in our case, when `/users` is requested, the `Users` component will be mounted.
 
     <Route path="/users" component={Users} />
 
@@ -349,7 +339,7 @@ Add [this](https://gist.github.com/dustinmyers/35ad6751b5bd683b441faaf167dfa7d3)
 
 In your friends app, add a new `Home` component and a new `Friends` component. Then add a route for each component. Test your app in the browser to make sure both apps are rendering at the correct route. Build out your `Home` component and then render out a list of friends data in the `Friends` component.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to use the \`Link\` component to navigate between routes
 
@@ -397,7 +387,7 @@ Take a minute to inspect your navbar and your wrapped header elements in the dev
 
 Make a navbar on the friends app. In the list component, add a `Link` component to the mapped list of friends to give us a way to route to the individual friend page.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to create dynamic routes using URL parameters and the \`match\` object
 
@@ -477,19 +467,19 @@ If you look at that expression `props.match.params.id === avenger.id` and inspec
 
 In the friends app you’ve been building, create a new, dynamic route for the path `/friends/:id`. Then create a `FriendPage` component that will find your friend from the list of friends based on the `/:id` param in the url, and render that friend’s details. Remember to style your app!
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#projects" id="projects" class="anchor"><span class="octicon octicon-link"></span></a>Projects
 
--   ##### [React Router Basic Nav- This is for day 1](https://github.com/LambdaSchool/React-Router-Basic-Nav)
+- ##### [React Router Basic Nav- This is for day 1](https://github.com/LambdaSchool/React-Router-Basic-Nav)
 
-    This project is designed to get you used to putting together a Router using React Router V.4
+  This project is designed to get you used to putting together a Router using React Router V.4
 
--   ##### [React-Router-Movies](https://github.com/LambdaSchool/React-Router-Movies)
+- ##### [React-Router-Movies](https://github.com/LambdaSchool/React-Router-Movies)
 
-    Create an app that renders a list of movies in one route, and a movie info page in another route.
+  Create an app that renders a list of movies in one route, and a movie info page in another route.
 
--   ##### [React-Router-Apple-Nav STRETCH ASSIGNMENT](https://github.com/LambdaSchool/React-Router-Apple-Nav)
+- ##### [React-Router-Apple-Nav STRETCH ASSIGNMENT](https://github.com/LambdaSchool/React-Router-Apple-Nav)
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -497,38 +487,38 @@ In the friends app you’ve been building, create a new, dynamic route for the p
 
 You can use class recordings to help you master the material.
 
--   **[React Router I for WebPT13 w/Emily Seibert](https://youtu.be/ZRHal-kPNQY)**
+- **[React Router I for WebPT13 w/Emily Seibert](https://youtu.be/ZRHal-kPNQY)**
 
-    Intro to Single Page Applications
+  Intro to Single Page Applications
 
--   [All previous recordings](/archive/FSW/module/rec2TJ1vrdfcnx2EG)
+- [All previous recordings](/archive/FSW/module/rec2TJ1vrdfcnx2EG)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    On your own, write down some of the pros and cons for both server-side routing and client-side routing, and then write a paragraph of what you like about both, and which you would prefer to use and why. Submit this to your TL via slack.
+  On your own, write down some of the pros and cons for both server-side routing and client-side routing, and then write a paragraph of what you like about both, and which you would prefer to use and why. Submit this to your TL via slack.
 
--   Objective challenge:
+- Objective challenge:
 
-    Start up a new React app called friends, install `react-router-dom` and get it wired up to use React Router. Inspect your app in the browser with the React tools and make sure you see your app wrapped in the `Router` component (reference the image above).
+  Start up a new React app called friends, install `react-router-dom` and get it wired up to use React Router. Inspect your app in the browser with the React tools and make sure you see your app wrapped in the `Router` component (reference the image above).
 
--   Objective challenge:
+- Objective challenge:
 
-    In your friends app, add a new `Home` component and a new `Friends` component. Then add a route for each component. Test your app in the browser to make sure both apps are rendering at the correct route. Build out your `Home` component and then render out a list of friends data in the `Friends` component.
+  In your friends app, add a new `Home` component and a new `Friends` component. Then add a route for each component. Test your app in the browser to make sure both apps are rendering at the correct route. Build out your `Home` component and then render out a list of friends data in the `Friends` component.
 
--   Objective challenge:
+- Objective challenge:
 
-    Make a navbar on the friends app. In the list component, add a `Link` component to the mapped list of friends to give us a way to route to the individual friend page.
+  Make a navbar on the friends app. In the list component, add a `Link` component to the mapped list of friends to give us a way to route to the individual friend page.
 
--   Objective challenge:
+- Objective challenge:
 
-    In the friends app you’ve been building, create a new, dynamic route for the path `/friends/:id`. Then create a `FriendPage` component that will find your friend from the list of friends based on the `/:id` param in the url, and render that friend’s details. Remember to style your app!
+  In the friends app you’ve been building, create a new, dynamic route for the path `/friends/:id`. Then create a `FriendPage` component that will find your friend from the list of friends based on the `/:id` param in the url, and render that friend’s details. Remember to style your app!
 
--   Project: React Router Basic Nav- This is for day 1
+- Project: React Router Basic Nav- This is for day 1
 
--   Code Challenge: ReverseLinkedList
+- Code Challenge: ReverseLinkedList
 
--   Code Challenge: LargestDifferenceInArray
+- Code Challenge: LargestDifferenceInArray

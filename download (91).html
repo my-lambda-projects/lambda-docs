@@ -1,618 +1,1251 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Intended as a home for Lambda School curriculum.">
-<meta name="author" content="">
-<meta name="generator" content="Jekyll v3.8.0">
-<title>JavaScript II   · Lambda School</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Intended as a home for Lambda School curriculum."
+    />
+    <meta name="author" content="" />
+    <meta name="generator" content="Jekyll v3.8.0" />
+    <title>JavaScript II · Lambda School</title>
 
-<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+    <link
+      rel="stylesheet"
+      integrity
+      crossorigin="anonymous"
+      href="https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css"
+    />
 
-<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+    <link
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css"
+    />
 
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css"
+    />
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
-  ga('send', 'pageview');
-</script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-122016605-1", "learn.lambdaschool.com");
+      ga("send", "pageview");
+    </script>
 
-<script>
-  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
-  analytics.page();
-  }}();
-</script>
+    <script>
+      !(function () {
+        var analytics = (window.analytics = window.analytics || []);
+        if (!analytics.initialize)
+          if (analytics.invoked)
+            window.console &&
+              console.error &&
+              console.error("Segment snippet included twice.");
+          else {
+            analytics.invoked = !0;
+            analytics.methods = [
+              "trackSubmit",
+              "trackClick",
+              "trackLink",
+              "trackForm",
+              "pageview",
+              "identify",
+              "reset",
+              "group",
+              "track",
+              "ready",
+              "alias",
+              "debug",
+              "page",
+              "once",
+              "off",
+              "on",
+            ];
+            analytics.factory = function (t) {
+              return function () {
+                var e = Array.prototype.slice.call(arguments);
+                e.unshift(t);
+                analytics.push(e);
+                return analytics;
+              };
+            };
+            for (var t = 0; t < analytics.methods.length; t++) {
+              var e = analytics.methods[t];
+              analytics[e] = analytics.factory(e);
+            }
+            analytics.load = function (t, e) {
+              var n = document.createElement("script");
+              n.type = "text/javascript";
+              n.async = !0;
+              n.src =
+                "https://cdn.segment.com/analytics.js/v1/" +
+                t +
+                "/analytics.min.js";
+              var a = document.getElementsByTagName("script")[0];
+              a.parentNode.insertBefore(n, a);
+              analytics._loadOptions = e;
+            };
+            analytics.SNIPPET_VERSION = "4.1.0";
+            analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+            analytics.page();
+          }
+      })();
+    </script>
 
-<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
-<link rel="icon" href="/favicon.ico">
-<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#a0001e">
-</head>
-<body>
-<noscript>Please enable JavaScript to view this page.</noscript>
-<div id="redirect-message" style="display: none;">
-You must be logged in to view this page.
-</div>
-<div id="unauthorized-message" style="display: none;">
-You must be a Lambda School student to view this page.
-</div>
-<div id="content-wrapper" style="visibility: hidden;">
-<a id="skippy" class="sr-only sr-only-focusable" href="#content">
-<div class="container">
-<span class="skiplink-text">Skip to main content</span>
-</div>
-</a>
-<div class="mobile-menu">
-<div class="m-drop">
-<div class="mobile-row">
-<div class="header-row" style="padding: 3px 7px">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
-</svg></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
-</button>
-</div>
-</div>
-<div class="nav-row">
-<div class="results-container">
-<ul id="results-container" class="dropdown list-group"></ul>
-</div>
-<div id="mobile-course-menu" class="collapse nav-row">
-<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
-<nav class="bd-links">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Web Annex</h4>
-</div>
+    <link
+      rel="apple-touch-icon"
+      href="/assets/img/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/assets/img/favicons/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicons/safari-pinned-tab.svg"
+      color="#a0001e"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="msapplication-config"
+      content="/assets/img/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#a0001e" />
+  </head>
+  <body>
+    <noscript>Please enable JavaScript to view this page.</noscript>
+    <div id="redirect-message" style="display: none">
+      You must be logged in to view this page.
+    </div>
+    <div id="unauthorized-message" style="display: none">
+      You must be a Lambda School student to view this page.
+    </div>
+    <div id="content-wrapper" style="visibility: hidden">
+      <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+          <span class="skiplink-text">Skip to main content</span>
+        </div>
+      </a>
+      <div class="mobile-menu">
+        <div class="m-drop">
+          <div class="mobile-row">
+            <div class="header-row" style="padding: 3px 7px">
+              <a class="navbar-brand" href="/" aria-label="Lambda School"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="35"
+                  viewBox="0 0 33 35"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                    fill="#EC3944"
+                  /></svg
+              ></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#mobile-course-menu"
+                aria-controls="mobile-course-menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="30"
+                  height="30"
+                  focusable="false"
+                >
+                  <title>Menu</title>
+                  <path
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    d="M4 7h22M4 15h22M4 23h22"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="nav-row">
+            <div class="results-container">
+              <ul id="results-container" class="dropdown list-group"></ul>
+            </div>
+            <div id="mobile-course-menu" class="collapse nav-row">
+              <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+                <nav class="bd-links">
+                  <div class="bd-toc-item">
+                    <h4 class="bd-toc-link">Web Annex</h4>
+                  </div>
 
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recfwZvI7QhMa7xbG">
-1.&nbsp;&nbsp;User Interface and Git
-</a>
-<ul class="nav bd-sidenav">
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/webannex/sprint/recfwZvI7QhMa7xbG"
+                    >
+                      1.&nbsp;&nbsp;User Interface and Git
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/webannex/module/recl0IyzS2Vl89lZa/">
+                          User Interface
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/rect59e95N6OSvoCd/">
+                          Git for Web Development
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recGvXyWT6AvGtMHR/">
+                          User Interface II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recaVbBZhh8BTyMdM/">
+                          User Interface III
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/webannex/sprint/recIXiQgpgMdJ81ms"
+                    >
+                      2.&nbsp;&nbsp;Advanced CSS
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/webannex/module/recuDrqSGpWcepCMs/">
+                          Responsive Design I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recE3IqPtDxaVI0DW/">
+                          Responsive Design II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/reculyBhIYkuoBRqh/">
+                          Preprocessing I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/rec1hRu3bO6L0uxn2/">
+                          Preprocessing II
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/webannex/sprint/recclZwJxMU8kUngT"
+                    >
+                      3.&nbsp;&nbsp;JavaScript Fundamentals
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/webannex/module/recCT3KJYTIRYwQMh/">
+                          JavaScript I
+                        </a>
+                      </li>
+                      <li class="active bd-sidenav-active">
+                        <a href="/webannex/module/rec1oaBmEoSilO2yf/">
+                          JavaScript II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/rec0AWuNLezbpit7m/">
+                          Prototypes and Inheritance
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recyS588eOvVUKAMc/">
+                          Classes
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/webannex/sprint/recRT8JKvbTiGaosk"
+                    >
+                      4.&nbsp;&nbsp;Single Page Applications
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
+                          React Router I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recYkF1FDilIedmwX/">
+                          React Router II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/rect081xiYT2cfxGF/">
+                          Form Management
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recKK5C7wV0WiECfr/">
+                          Advanced Form Management
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/webannex/sprint/recozTHaHJe6L1ThN"
+                    >
+                      5.&nbsp;&nbsp;Authentication and Testing
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/webannex/module/recQD9lnhqWEFh6g4/">
+                          Introduction to Authentication
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recvIPgHwxF194c7q/">
+                          Using Sessions and Cookies
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/reciCHdNjavSKaaLt/">
+                          Using JSON Web Tokens (JWT)
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/reciXdxRA8zXJXDID/">
+                          Testing the Back End
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="sidebar-container bd-sidebar">
+          <div class="docs-sidebar">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"
+              ><svg
+                width="135"
+                height="35"
+                viewBox="0 0 756 197"
+                fill="#ec3944"
+              >
+                <g>
+                  <path
+                    d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"
+                  ></path>
+                  <path
+                    d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"
+                  ></path>
+                  <path
+                    d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"
+                  ></path>
+                  <path
+                    d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"
+                  ></path>
+                  <path
+                    d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"
+                  ></path>
+                  <path
+                    d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"
+                  ></path>
+                </g>
+                <path
+                  d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"
+                ></path></svg
+            ></a>
+            <ul id="results-container" class="dropdown list-group"></ul>
+            <nav class="bd-links collapse" id="bd-docs-nav">
+              <div class="bd-toc-item">
+                <h4 class="bd-toc-link">Web Annex</h4>
+              </div>
 
-<li>
-<a href="/webannex/module/recl0IyzS2Vl89lZa/">
-User Interface
-</a>
-</li>
-<li>
-<a href="/webannex/module/rect59e95N6OSvoCd/">
-Git for Web Development
-</a>
-</li>
-<li>
-<a href="/webannex/module/recGvXyWT6AvGtMHR/">
-User Interface II
-</a>
-</li>
-<li>
-<a href="/webannex/module/recaVbBZhh8BTyMdM/">
-User Interface III
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recIXiQgpgMdJ81ms">
-2.&nbsp;&nbsp;Advanced CSS
-</a>
-<ul class="nav bd-sidenav">
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/webannex/sprint/recfwZvI7QhMa7xbG"
+                >
+                  1.&nbsp;&nbsp;User Interface and Git
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/webannex/module/recl0IyzS2Vl89lZa/">
+                      User Interface
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/rect59e95N6OSvoCd/">
+                      Git for Web Development
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recGvXyWT6AvGtMHR/">
+                      User Interface II
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recaVbBZhh8BTyMdM/">
+                      User Interface III
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/webannex/sprint/recIXiQgpgMdJ81ms"
+                >
+                  2.&nbsp;&nbsp;Advanced CSS
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/webannex/module/recuDrqSGpWcepCMs/">
+                      Responsive Design I
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recE3IqPtDxaVI0DW/">
+                      Responsive Design II
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/reculyBhIYkuoBRqh/">
+                      Preprocessing I
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/rec1hRu3bO6L0uxn2/">
+                      Preprocessing II
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/webannex/sprint/recclZwJxMU8kUngT"
+                >
+                  3.&nbsp;&nbsp;JavaScript Fundamentals
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/webannex/module/recCT3KJYTIRYwQMh/">
+                      JavaScript I
+                    </a>
+                  </li>
+                  <li class="active bd-sidenav-active">
+                    <a href="/webannex/module/rec1oaBmEoSilO2yf/">
+                      JavaScript II
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/rec0AWuNLezbpit7m/">
+                      Prototypes and Inheritance
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recyS588eOvVUKAMc/"> Classes </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/webannex/sprint/recRT8JKvbTiGaosk"
+                >
+                  4.&nbsp;&nbsp;Single Page Applications
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
+                      React Router I
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recYkF1FDilIedmwX/">
+                      React Router II
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/rect081xiYT2cfxGF/">
+                      Form Management
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recKK5C7wV0WiECfr/">
+                      Advanced Form Management
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/webannex/sprint/recozTHaHJe6L1ThN"
+                >
+                  5.&nbsp;&nbsp;Authentication and Testing
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/webannex/module/recQD9lnhqWEFh6g4/">
+                      Introduction to Authentication
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recvIPgHwxF194c7q/">
+                      Using Sessions and Cookies
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/reciCHdNjavSKaaLt/">
+                      Using JSON Web Tokens (JWT)
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/reciXdxRA8zXJXDID/">
+                      Testing the Back End
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
 
-<li>
-<a href="/webannex/module/recuDrqSGpWcepCMs/">
-Responsive Design I
-</a>
-</li>
-<li>
-<a href="/webannex/module/recE3IqPtDxaVI0DW/">
-Responsive Design II
-</a>
-</li>
-<li>
-<a href="/webannex/module/reculyBhIYkuoBRqh/">
-Preprocessing I
-</a>
-</li>
-<li>
-<a href="/webannex/module/rec1hRu3bO6L0uxn2/">
-Preprocessing II
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
- <a class="bd-toc-link" href="/webannex/sprint/recclZwJxMU8kUngT">
-3.&nbsp;&nbsp;JavaScript Fundamentals
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recCT3KJYTIRYwQMh/">
-JavaScript I
-</a>
-</li>
-<li class="active bd-sidenav-active">
-<a href="/webannex/module/rec1oaBmEoSilO2yf/">
-JavaScript II
-</a>
-</li>
-<li>
-<a href="/webannex/module/rec0AWuNLezbpit7m/">
-Prototypes and Inheritance
-</a>
-</li>
-<li>
-<a href="/webannex/module/recyS588eOvVUKAMc/">
-Classes
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recRT8JKvbTiGaosk">
-4.&nbsp;&nbsp;Single Page Applications
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
-React Router I
-</a>
-</li>
-<li>
-<a href="/webannex/module/recYkF1FDilIedmwX/">
-React Router II
-</a>
-</li>
-<li>
-<a href="/webannex/module/rect081xiYT2cfxGF/">
-Form Management
-</a>
-</li>
-<li>
-<a href="/webannex/module/recKK5C7wV0WiECfr/">
-Advanced Form Management
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recozTHaHJe6L1ThN">
-5.&nbsp;&nbsp;Authentication and Testing
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recQD9lnhqWEFh6g4/">
-Introduction to Authentication
-</a>
-</li>
-<li>
-<a href="/webannex/module/recvIPgHwxF194c7q/">
-Using Sessions and Cookies
-</a>
-</li>
-<li>
-<a href="/webannex/module/reciCHdNjavSKaaLt/">
-Using JSON Web Tokens (JWT)
-</a>
-</li>
-<li>
-<a href="/webannex/module/reciXdxRA8zXJXDID/">
-Testing the Back End
-</a>
-</li>
-</ul>
-</div>
-</nav>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="main-container">
-<div class="sidebar-container bd-sidebar">
-<div class="docs-sidebar">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
-<ul id="results-container" class="dropdown list-group"></ul>
-<nav class="bd-links collapse" id="bd-docs-nav">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Web Annex</h4>
-</div>
-
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recfwZvI7QhMa7xbG">
-1.&nbsp;&nbsp;User Interface and Git
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recl0IyzS2Vl89lZa/">
-User Interface
-</a>
-</li>
-<li>
-<a href="/webannex/module/rect59e95N6OSvoCd/">
-Git for Web Development
-</a>
-</li>
-<li>
-<a href="/webannex/module/recGvXyWT6AvGtMHR/">
-User Interface II
-</a>
-</li>
-<li>
-<a href="/webannex/module/recaVbBZhh8BTyMdM/">
-User Interface III
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recIXiQgpgMdJ81ms">
-2.&nbsp;&nbsp;Advanced CSS
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recuDrqSGpWcepCMs/">
-Responsive Design I
-</a>
-</li>
-<li>
-<a href="/webannex/module/recE3IqPtDxaVI0DW/">
-Responsive Design II
-</a>
-</li>
-<li>
-<a href="/webannex/module/reculyBhIYkuoBRqh/">
-Preprocessing I
-</a>
-</li>
-<li>
-<a href="/webannex/module/rec1hRu3bO6L0uxn2/">
-Preprocessing II
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recclZwJxMU8kUngT">
-3.&nbsp;&nbsp;JavaScript Fundamentals
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recCT3KJYTIRYwQMh/">
-JavaScript I
-</a>
-</li>
-<li class="active bd-sidenav-active">
-<a href="/webannex/module/rec1oaBmEoSilO2yf/">
-JavaScript II
-</a>
-</li>
-<li>
-<a href="/webannex/module/rec0AWuNLezbpit7m/">
-Prototypes and Inheritance
-</a>
-</li>
-<li>
-<a href="/webannex/module/recyS588eOvVUKAMc/">
-Classes
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recRT8JKvbTiGaosk">
-4.&nbsp;&nbsp;Single Page Applications
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
-React Router I
-</a>
-</li>
-<li>
-<a href="/webannex/module/recYkF1FDilIedmwX/">
-React Router II
-</a>
-</li>
-<li>
-<a href="/webannex/module/rect081xiYT2cfxGF/">
-Form Management
-</a>
-</li>
-<li>
-<a href="/webannex/module/recKK5C7wV0WiECfr/">
-Advanced Form Management
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recozTHaHJe6L1ThN">
-5.&nbsp;&nbsp;Authentication and Testing
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recQD9lnhqWEFh6g4/">
-Introduction to Authentication
-</a>
-</li>
-<li>
-<a href="/webannex/module/recvIPgHwxF194c7q/">
-Using Sessions and Cookies
-</a>
-</li>
-<li>
-<a href="/webannex/module/reciCHdNjavSKaaLt/">
-Using JSON Web Tokens (JWT)
-</a>
-</li>
-<li>
-<a href="/webannex/module/reciXdxRA8zXJXDID/">
-Testing the Back End
-</a>
-</li>
-</ul>
-</div>
-</nav>
-</div>
-</div>
-
-<main class="content-container flex-wrapper" role="main">
-<div class="sticky-nav">
-<div class="sprint-nav">
-<ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
-<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
-<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
-<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
-</ul>
-</div>
-
-</div>
-<div class="wrapper limit-width">
-<div class="flex-wrapper">
-<div class="limit-width">
-<div class="jumbotron">
-<h1 class="bd-title" id="content">JavaScript II </h1>
-<span class="lead">
-<p class="bd-lead"></p>
-<p>Throughout JavaScript II we’re going to be getting more practice with Callbacks as well as dive into a couple of new concepts. By the end of the day you should be familiar with and have the ability to use the following:</p>
-<ul>
-<li>closure</li>
-<li>callback functions</li>
-<li>advanced array methods</li>
-</ul>
-</span>
-<strong>At the end of this module, you should be able to:</strong>
-<ul>
-<li>describe what closure is, how closure is created in a program and why it is important to understand closures in JavaScript</li>
-<li>demonstrate the proper use a of a callback function by passing a function to another function as a parameter</li>
-<li>demonstrate ability to use `.map` `.reduce` `.filter` and describe their use cases </li>
-</ul>
-</div>
-<div class="alert alert-warning" role="alert">
-<h4>Pro Tip</h4>
-<p>Remember that you and your work are different. A criticism of your work is not a criticism of you as a person. That said, approach criticism or feedback constructively with others.</p>
-</div>
-<h2 class="display-4">
-<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
-<p class="lead">Review each preclass resource before class.</p>
-<div class="preclass">
-<ul class="list-group list-group-flush">
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/AgBoMqDO-08" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zIRN-Gn8phU" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YNubYbAhtys" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<a target="_blank" href="https://youtu.be/CQqwU2Ixu-U">MPJ - Closures</a>
-<p>THE simplest definition of a closure I have ever seen</p>
-</li>
-</ul>
-</div>
-<h2 class="display-4">
-<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
-<h4 class="mark mb-3 p-2">Learn to describe what closure is, how closure is created in a program and why it is important to understand closures in JavaScript</h4>
-<p>Closure is a big part of the JavaScript language and needs to be discussed through the lens of this statement “What data do I currently have access to in my program”. JS Developers need to know how to access data from within a narrower scope. <code class="highlighter-rouge">Scope</code> is something that we will touch on later. But for now what you need to know is that <code class="highlighter-rouge">functions create their own scope</code></p>
-<h5>Overview</h5>
-<p>Let’s look at the Window/Console in a browser/node environment. Type <code class="highlighter-rouge">window</code> to your chrome console. JavaScript is executed in this context, also known as the <code class="highlighter-rouge">global scope</code>.</p>
-<p>There are two types of scope in javascript, <code class="highlighter-rouge">Global Vs. Local</code> and that this is important to understand in terms of a computer program written in JavaScript.</p>
-<p>When a function is declared and created, a new <code class="highlighter-rouge">scope</code> is also created. Any variables declared within that function’s scope will be <code class="highlighter-rouge">enclosed</code> in a lexical/private scope that belongs to that function. Also, it is important to remember that functions look <code class="highlighter-rouge">outward</code> for context. If some variable isn’t defined in a function’s scope, the function will look outside the scope chain and search for a variable being referenced in the outer scope. This is what closure is all about.</p>
-<p>In it’s most simplest of forms this is a closure:</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">foo</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">bar</span><span class="dl">'</span><span class="p">;</span>
+        <main class="content-container flex-wrapper" role="main">
+          <div class="sticky-nav">
+            <div class="sprint-nav">
+              <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+                <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+                <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+                <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="wrapper limit-width">
+            <div class="flex-wrapper">
+              <div class="limit-width">
+                <div class="jumbotron">
+                  <h1 class="bd-title" id="content">JavaScript II</h1>
+                  <span class="lead">
+                    <p class="bd-lead"></p>
+                    <p>
+                      Throughout JavaScript II we’re going to be getting more
+                      practice with Callbacks as well as dive into a couple of
+                      new concepts. By the end of the day you should be familiar
+                      with and have the ability to use the following:
+                    </p>
+                    <ul>
+                      <li>closure</li>
+                      <li>callback functions</li>
+                      <li>advanced array methods</li>
+                    </ul>
+                  </span>
+                  <strong
+                    >At the end of this module, you should be able to:</strong
+                  >
+                  <ul>
+                    <li>
+                      describe what closure is, how closure is created in a
+                      program and why it is important to understand closures in
+                      JavaScript
+                    </li>
+                    <li>
+                      demonstrate the proper use a of a callback function by
+                      passing a function to another function as a parameter
+                    </li>
+                    <li>
+                      demonstrate ability to use `.map` `.reduce` `.filter` and
+                      describe their use cases
+                    </li>
+                  </ul>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                  <h4>Pro Tip</h4>
+                  <p>
+                    Remember that you and your work are different. A criticism
+                    of your work is not a criticism of you as a person. That
+                    said, approach criticism or feedback constructively with
+                    others.
+                  </p>
+                </div>
+                <h2 class="display-4">
+                  <a
+                    id="prepare"
+                    class="anchor"
+                    href="#prepare"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Prepare
+                </h2>
+                <p class="lead">Review each preclass resource before class.</p>
+                <div class="preclass">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/AgBoMqDO-08"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/zIRN-Gn8phU"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/YNubYbAhtys"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <a target="_blank" href="https://youtu.be/CQqwU2Ixu-U"
+                        >MPJ - Closures</a
+                      >
+                      <p>
+                        THE simplest definition of a closure I have ever seen
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <h2 class="display-4">
+                  <a id="learn" class="anchor" href="#learn" aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Learn
+                </h2>
+                <h4 class="mark mb-3 p-2">
+                  Learn to describe what closure is, how closure is created in a
+                  program and why it is important to understand closures in
+                  JavaScript
+                </h4>
+                <p>
+                  Closure is a big part of the JavaScript language and needs to
+                  be discussed through the lens of this statement “What data do
+                  I currently have access to in my program”. JS Developers need
+                  to know how to access data from within a narrower scope.
+                  <code class="highlighter-rouge">Scope</code> is something that
+                  we will touch on later. But for now what you need to know is
+                  that
+                  <code class="highlighter-rouge"
+                    >functions create their own scope</code
+                  >
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  Let’s look at the Window/Console in a browser/node
+                  environment. Type
+                  <code class="highlighter-rouge">window</code> to your chrome
+                  console. JavaScript is executed in this context, also known as
+                  the <code class="highlighter-rouge">global scope</code>.
+                </p>
+                <p>
+                  There are two types of scope in javascript,
+                  <code class="highlighter-rouge">Global Vs. Local</code> and
+                  that this is important to understand in terms of a computer
+                  program written in JavaScript.
+                </p>
+                <p>
+                  When a function is declared and created, a new
+                  <code class="highlighter-rouge">scope</code> is also created.
+                  Any variables declared within that function’s scope will be
+                  <code class="highlighter-rouge">enclosed</code> in a
+                  lexical/private scope that belongs to that function. Also, it
+                  is important to remember that functions look
+                  <code class="highlighter-rouge">outward</code> for context. If
+                  some variable isn’t defined in a function’s scope, the
+                  function will look outside the scope chain and search for a
+                  variable being referenced in the outer scope. This is what
+                  closure is all about.
+                </p>
+                <p>In it’s most simplest of forms this is a closure:</p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">foo</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">bar</span><span class="dl">'</span><span class="p">;</span>
 <span class="kd">function</span> <span class="nx">returnFoo</span> <span class="p">()</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">foo</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nx">returnFoo</span><span class="p">();</span>
 <span class="c1">// -&gt; reaches outside its scope to find foo because it doesn't exist inside of return Foo's scope when foo is referenced. </span>
-</code></pre></div></div>
-<p>The function body (code inside returnFoo) has access to the outside scope (code outside of returnFoo) and can access that ‘foo’ variable.</p>
-<p>Let’s look at another example:</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">lastName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Bob</span><span class="dl">'</span><span class="p">;</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  The function body (code inside returnFoo) has access to the
+                  outside scope (code outside of returnFoo) and can access that
+                  ‘foo’ variable.
+                </p>
+                <p>Let’s look at another example:</p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">lastName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Bob</span><span class="dl">'</span><span class="p">;</span>
 <span class="kd">function</span> <span class="nx">greet</span><span class="p">()</span> <span class="p">{</span> 
   <span class="kd">const</span> <span class="nx">firstName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Jim</span><span class="dl">'</span><span class="p">;</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s2">`The name's </span><span class="p">${</span><span class="nx">lastName</span><span class="p">}</span><span class="s2">, </span><span class="p">${</span><span class="nx">firstName</span><span class="p">}</span><span class="s2"> </span><span class="p">${</span><span class="nx">lastName</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">lastName</span><span class="p">);</span>
-</code></pre></div></div>
-<p>Not much different than the idea presented above, but the thought remains the same. When ‘greet’ is called, it has no context in its local scope of finding <code class="highlighter-rouge">lastName</code> so, it looks outside its scope to find it and use the <code class="highlighter-rouge">lastName</code> that is found there.</p>
-<p>Let’s take this a step further. In the given examples, we’ve seen that we have created two environments for our code. The first would be the global environment where <code class="highlighter-rouge">lastName</code> and <code class="highlighter-rouge">greet</code> exist. The second would be the local environment where the alert function is called. Let’s represent those two environments like this:</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span> <span class="c1">// Global</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Not much different than the idea presented above, but the
+                  thought remains the same. When ‘greet’ is called, it has no
+                  context in its local scope of finding
+                  <code class="highlighter-rouge">lastName</code> so, it looks
+                  outside its scope to find it and use the
+                  <code class="highlighter-rouge">lastName</code> that is found
+                  there.
+                </p>
+                <p>
+                  Let’s take this a step further. In the given examples, we’ve
+                  seen that we have created two environments for our code. The
+                  first would be the global environment where
+                  <code class="highlighter-rouge">lastName</code> and
+                  <code class="highlighter-rouge">greet</code> exist. The second
+                  would be the local environment where the alert function is
+                  called. Let’s represent those two environments like this:
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="p">{</span> <span class="c1">// Global</span>
   <span class="nx">lastName</span> <span class="nb">String</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Bob</span><span class="dl">'</span><span class="p">,</span>
   <span class="nx">greet</span> <span class="nb">Function</span><span class="p">:</span> <span class="p">{</span> <span class="c1">// Local to greet</span>
     <span class="nx">firstName</span> <span class="nb">String</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Jim</span><span class="dl">'</span>
   <span class="p">},</span>
   <span class="c1">// alert Function: Lives on the global scope, but gets called from with inside greet.</span>
 <span class="p">}</span>
-</code></pre></div></div>
-<h5>Follow Along</h5>
-<p>Let’s work through one of your problems from your Homework together.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const counter = () =&gt; {
+</code></pre>
+                  </div>
+                </div>
+                <h5>Follow Along</h5>
+                <p>
+                  Let’s work through one of your problems from your Homework
+                  together.
+                </p>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>const counter = () =&gt; {
   // Return a function that when invoked increments and returns a counter variable.
   // Example: const newCounter = counter();
   // newCounter(); // 1
   // newCounter(); // 2
 };
-</code></pre></div></div>
-<h5>Challenge</h5>
-<p>For this challenge you will create your own closure:</p>
-<ul>
-<li>Create a function that houses 2 nested functions inside of it</li>
-<li>Create a unique variable for each function you created</li>
-<li>Test out where you can log the unique variables for each function.</li>
-</ul>
-<p>Why can you access variable values in nested functions?</p>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8" target="blank_">Deep Dive on Closures</a><br> Step by step deep dive on closures</li>
-<li>
-<a href="https://youtu.be/-jysK0nlz7A" target="blank_">Coding Train Closures walkthrough</a><br> Awesome stuff on closures</li>
-<li>
-<a href="http://javascriptissexy.com/understand-javascript-closures-with-ease/" target="blank_">Simple Closures</a><br> This is an older article, but it is still very good.</li>
-<li>
-<a href="https://medium.freecodecamp.org/lets-learn-javascript-closures-66feb44f6a44" target="blank_">Closures</a><br> A great article that explains in depth what closures are</li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to demonstrate the proper use a of a callback function by passing a function to another function as a parameter</h4>
-<p>Callback functions come from a programming paradigm known as functional programming (FP). Is not a new paradigm nor is it unique to JavaScript. In fact, many have wondered (due to its dynamic nature) whether JavaScript is an Object Oriented language or a Functional Programming language. The answer to that is simply, both. We get the ability to choose the patterns to use in order to accomplish tasks.</p>
-<p>That really is all we’re trying to do here: provide the computer a set of instructions to achieve a task. And the make up of many many tasks simply becomes… software.</p>
-<p>At the end of the day, the language isn’t written for the computer, that would be binary. The language we use as developers was written for us, so we as developers get to choose the paradigm we are to use to achieve the task.</p>
-<p>So, callback functions are just functions that are passed into other functions as arguments. And the concept is so commonly used throughout the JavaScript language that one day you’ll look back and barely remember a time when you didn’t know how to use them.</p>
-<h5>Overview</h5>
-<p>You’ll hear these words everywhere: “Functions in JavaScript are first-class citizens.” And if you’re like me, you’ll get puzzled, trying to dissect meaning from those words.</p>
-<p>Simply put, this means that functions in JavaScript are a Type like any other Type (Boolean, String, Number), and they can be passed around as arguments to other functions.</p>
-<p>Take the following example into consideration:</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">functionFeeder</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+</code></pre>
+                  </div>
+                </div>
+                <h5>Challenge</h5>
+                <p>For this challenge you will create your own closure:</p>
+                <ul>
+                  <li>
+                    Create a function that houses 2 nested functions inside of
+                    it
+                  </li>
+                  <li>
+                    Create a unique variable for each function you created
+                  </li>
+                  <li>
+                    Test out where you can log the unique variables for each
+                    function.
+                  </li>
+                </ul>
+                <p>Why can you access variable values in nested functions?</p>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8"
+                      target="blank_"
+                      >Deep Dive on Closures</a
+                    ><br />
+                    Step by step deep dive on closures
+                  </li>
+                  <li>
+                    <a href="https://youtu.be/-jysK0nlz7A" target="blank_"
+                      >Coding Train Closures walkthrough</a
+                    ><br />
+                    Awesome stuff on closures
+                  </li>
+                  <li>
+                    <a
+                      href="http://javascriptissexy.com/understand-javascript-closures-with-ease/"
+                      target="blank_"
+                      >Simple Closures</a
+                    ><br />
+                    This is an older article, but it is still very good.
+                  </li>
+                  <li>
+                    <a
+                      href="https://medium.freecodecamp.org/lets-learn-javascript-closures-66feb44f6a44"
+                      target="blank_"
+                      >Closures</a
+                    ><br />
+                    A great article that explains in depth what closures are
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to demonstrate the proper use a of a callback function
+                  by passing a function to another function as a parameter
+                </h4>
+                <p>
+                  Callback functions come from a programming paradigm known as
+                  functional programming (FP). Is not a new paradigm nor is it
+                  unique to JavaScript. In fact, many have wondered (due to its
+                  dynamic nature) whether JavaScript is an Object Oriented
+                  language or a Functional Programming language. The answer to
+                  that is simply, both. We get the ability to choose the
+                  patterns to use in order to accomplish tasks.
+                </p>
+                <p>
+                  That really is all we’re trying to do here: provide the
+                  computer a set of instructions to achieve a task. And the make
+                  up of many many tasks simply becomes… software.
+                </p>
+                <p>
+                  At the end of the day, the language isn’t written for the
+                  computer, that would be binary. The language we use as
+                  developers was written for us, so we as developers get to
+                  choose the paradigm we are to use to achieve the task.
+                </p>
+                <p>
+                  So, callback functions are just functions that are passed into
+                  other functions as arguments. And the concept is so commonly
+                  used throughout the JavaScript language that one day you’ll
+                  look back and barely remember a time when you didn’t know how
+                  to use them.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  You’ll hear these words everywhere: “Functions in JavaScript
+                  are first-class citizens.” And if you’re like me, you’ll get
+                  puzzled, trying to dissect meaning from those words.
+                </p>
+                <p>
+                  Simply put, this means that functions in JavaScript are a Type
+                  like any other Type (Boolean, String, Number), and they can be
+                  passed around as arguments to other functions.
+                </p>
+                <p>Take the following example into consideration:</p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">functionFeeder</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">callback</span><span class="p">(</span><span class="dl">'</span><span class="s1">Hello from the inside of Function Feeder</span><span class="dl">'</span><span class="p">);</span>
 <span class="p">};</span>
-</code></pre></div></div>
-<p>What we have done here is define a function called <code class="highlighter-rouge">functionFeeder</code> and passed it a <code class="highlighter-rouge">parameter</code> called <code class="highlighter-rouge">callback</code>. So when <code class="highlighter-rouge">functionFeeder</code> is invoked, we can feed it a function as an argument. That function, in turn, will run the string <code class="highlighter-rouge">Hello from the inside of Function Feeder</code> back to the callback function it receives. And thus, when we call <code class="highlighter-rouge">functionFeeder</code> we can handle that string that comes back to us like so:</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">functionFeeder</span><span class="p">((</span><span class="nx">string</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="c1">// invoking the function</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  What we have done here is define a function called
+                  <code class="highlighter-rouge">functionFeeder</code> and
+                  passed it a
+                  <code class="highlighter-rouge">parameter</code> called
+                  <code class="highlighter-rouge">callback</code>. So when
+                  <code class="highlighter-rouge">functionFeeder</code> is
+                  invoked, we can feed it a function as an argument. That
+                  function, in turn, will run the string
+                  <code class="highlighter-rouge"
+                    >Hello from the inside of Function Feeder</code
+                  >
+                  back to the callback function it receives. And thus, when we
+                  call <code class="highlighter-rouge">functionFeeder</code> we
+                  can handle that string that comes back to us like so:
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nx">functionFeeder</span><span class="p">((</span><span class="nx">string</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="c1">// invoking the function</span>
   <span class="nx">alert</span><span class="p">(</span><span class="nx">string</span><span class="p">);</span> <span class="c1">// alert a function that pops up a box in the browser.</span>
 <span class="p">});</span>
-</code></pre></div></div>
-<p><code class="highlighter-rouge">functionFeeder</code> respectively becomes what is known as a <code class="highlighter-rouge">higher-order function</code> or a <code class="highlighter-rouge">callBack function</code>, allowing it to take in a function as a parameter and executes a function when called with a function as the argument.</p>
-<p>Let’s take a look at a few more examples.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">function</span> <span class="nx">sayHello</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  <code class="highlighter-rouge">functionFeeder</code>
+                  respectively becomes what is known as a
+                  <code class="highlighter-rouge">higher-order function</code>
+                  or a <code class="highlighter-rouge">callBack function</code>,
+                  allowing it to take in a function as a parameter and executes
+                  a function when called with a function as the argument.
+                </p>
+                <p>Let’s take a look at a few more examples.</p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>  <span class="kd">function</span> <span class="nx">sayHello</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Hello, </span><span class="p">${</span><span class="nx">name</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
   <span class="p">}</span>
-</code></pre></div></div>
-<p><code class="highlighter-rouge">sayHello</code> is a function with one purpose, to say hello to the name that is passed into it. Because we’ve built a function with such a straightforward goal, we can use it over and over again. Once we set up a function that will define the name we want passed to <code class="highlighter-rouge">sayHello</code>, all we’ll have to do is pass it to our function and let it perform is routine / action.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">function</span> <span class="nx">callSayHelloWithLars</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  <code class="highlighter-rouge">sayHello</code> is a function
+                  with one purpose, to say hello to the name that is passed into
+                  it. Because we’ve built a function with such a straightforward
+                  goal, we can use it over and over again. Once we set up a
+                  function that will define the name we want passed to
+                  <code class="highlighter-rouge">sayHello</code>, all we’ll
+                  have to do is pass it to our function and let it perform is
+                  routine / action.
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code> <span class="kd">function</span> <span class="nx">callSayHelloWithLars</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">const</span> <span class="nx">innerName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Lars</span><span class="dl">'</span><span class="p">;</span>
     <span class="nx">callback</span><span class="p">(</span><span class="nx">innerName</span><span class="p">);</span>
   <span class="p">}</span>
-</code></pre></div></div>
-<p>The <code class="highlighter-rouge">callback</code> in the above function will become <code class="highlighter-rouge">sayHello</code> when we invoke it like this:</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nx">callSayHelloWithLars</span><span class="p">(</span><span class="nx">sayHello</span><span class="p">);</span>
-</code></pre></div></div>
-<p>And <code class="highlighter-rouge">callSayHelloWithLars</code> executes <code class="highlighter-rouge">sayHello</code> as it’s callback.</p>
-<p>I could re-use <code class="highlighter-rouge">sayHello</code> in another context now. Check it out.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">callSayHelloWithRyan</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  The <code class="highlighter-rouge">callback</code> in the
+                  above function will become
+                  <code class="highlighter-rouge">sayHello</code> when we invoke
+                  it like this:
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code> <span class="nx">callSayHelloWithLars</span><span class="p">(</span><span class="nx">sayHello</span><span class="p">);</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  And
+                  <code class="highlighter-rouge">callSayHelloWithLars</code>
+                  executes <code class="highlighter-rouge">sayHello</code> as
+                  it’s callback.
+                </p>
+                <p>
+                  I could re-use
+                  <code class="highlighter-rouge">sayHello</code> in another
+                  context now. Check it out.
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">function</span> <span class="nx">callSayHelloWithRyan</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="nx">newName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Ryan</span><span class="dl">'</span><span class="p">;</span>
   <span class="nx">callback</span><span class="p">(</span><span class="nx">newName</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div></div>
-<p>Now let’s combine a few of the things we’ve learned today. I mentioned that callbacks are used everywhere. They’re even used in our Array methods… ALL OF THE TIME! EVERYWHERE! In the case of <code class="highlighter-rouge">.forEach()</code>, an iterator function, we use a callback to access the items in the array that come back with each pass.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">items</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">feather</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">coupon</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">cup</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">drill</span><span class="dl">'</span><span class="p">];</span>
-</code></pre></div></div>
-<p>We could use a <code class="highlighter-rouge">native for loop</code> to loop over this list and log out every item.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">items</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Now let’s combine a few of the things we’ve learned today. I
+                  mentioned that callbacks are used everywhere. They’re even
+                  used in our Array methods… ALL OF THE TIME! EVERYWHERE! In the
+                  case of <code class="highlighter-rouge">.forEach()</code>, an
+                  iterator function, we use a callback to access the items in
+                  the array that come back with each pass.
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">items</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">feather</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">coupon</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">cup</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">drill</span><span class="dl">'</span><span class="p">];</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  We could use a
+                  <code class="highlighter-rouge">native for loop</code> to loop
+                  over this list and log out every item.
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">items</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">++</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="nx">items</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
 <span class="p">}</span>
-</code></pre></div></div>
-<p>This works for sure! But we have <code class="highlighter-rouge">.forEach</code> built into the language to allow us not to have to write that every time. So, we could do something like this to clean it up a bit.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">items</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span>  <span class="nx">alert</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">);</span>
-</code></pre></div></div>
-<p><strong>NOTICE</strong>
-this part is the callback
-<code class="highlighter-rouge">item =&gt; alert(item)</code></p>
-<p>This is some fancy syntax that we will continue to go over as the week progresses.</p>
-<h5>Follow Along</h5>
-<p>So now lets practice some things together. First, let’s create a list of elements we want to play around with as our data — literally, elements.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">elements</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">earth</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">wind</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">fire</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">water</span><span class="dl">'</span><span class="p">];</span>
-</code></pre></div></div>
-<p>Remember that with functions we can pass as many parameters as we want to them. So let’s create a couple of functions that we can use to consume this list of elements.</p>
-<p>Create a function called show first that passes back the first item in the given array.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">showFirst</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  This works for sure! But we have
+                  <code class="highlighter-rouge">.forEach</code> built into the
+                  language to allow us not to have to write that every time. So,
+                  we could do something like this to clean it up a bit.
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nx">items</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span>  <span class="nx">alert</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">);</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  <strong>NOTICE</strong>
+                  this part is the callback
+                  <code class="highlighter-rouge">item =&gt; alert(item)</code>
+                </p>
+                <p>
+                  This is some fancy syntax that we will continue to go over as
+                  the week progresses.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  So now lets practice some things together. First, let’s create
+                  a list of elements we want to play around with as our data —
+                  literally, elements.
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">elements</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">earth</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">wind</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">fire</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">water</span><span class="dl">'</span><span class="p">];</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Remember that with functions we can pass as many parameters as
+                  we want to them. So let’s create a couple of functions that we
+                  can use to consume this list of elements.
+                </p>
+                <p>
+                  Create a function called show first that passes back the first
+                  item in the given array.
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">function</span> <span class="nx">showFirst</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">callback</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
 <span class="p">}</span>
 <span class="nx">showFirst</span><span class="p">(</span><span class="nx">elements</span><span class="p">,</span> <span class="p">(</span><span class="nx">firstItem</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="nx">firstItem</span><span class="p">);</span>
 <span class="p">});</span>
-</code></pre></div></div>
-<p>Create a function like ‘shoFirst’, but this time, show the length of the array passed.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">showLength</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Create a function like ‘shoFirst’, but this time, show the
+                  length of the array passed.
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">function</span> <span class="nx">showLength</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">callback</span><span class="p">(</span><span class="nx">array</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="nx">showLength</span><span class="p">(</span><span class="nx">elements</span><span class="p">,</span> <span class="p">(</span><span class="nx">length</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="nx">length</span><span class="p">);</span>
 <span class="p">});</span>
-</code></pre></div></div>
-<p>Now, let’s use <code class="highlighter-rouge">forEach</code> again to loop over our array and alert each item in the array.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">elements</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">element</span> <span class="o">=&gt;</span> <span class="nx">alert</span><span class="p">(</span><span class="nx">element</span><span class="p">));</span>
-</code></pre></div></div>
-<p>Remember map? The most significant difference between <code class="highlighter-rouge">.forEach</code> and <code class="highlighter-rouge">.map</code> is that <code class="highlighter-rouge">map</code> returns a new array of elements while in turn passing each element back to the callback.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">newArray</span> <span class="o">=</span> <span class="nx">elements</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span> <span class="dl">'</span><span class="s1">Element: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">item</span><span class="p">);</span>
-</code></pre></div></div>
-<h5>Challenge</h5>
-<p>Complete the following exercises included here in this JSBin <a href="http://jsbin.com/sadikid/edit?js,console">Callbacks</a>.</p>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced" target="blank_">What the heck is a callback?</a><br> Further instruction on callbacks</li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to demonstrate ability to use `.map` `.reduce` `.filter` and describe their use cases </h4>
-<p>Earlier on we covered what callbacks are and gave you ample practice to get familiar with their use. Today we’re going to dive deeper and cover some more crucial examples of callback functions as well as get you the reps you need.</p>
-<p>The callback is such a fundamental piece of the JavaScript language that you need to have a good grasp of if you want to be able to push your skills further.</p>
-<h5>Overview</h5>
-<p>In this lesson, we’re going to get a lot of practice playing around with data and transforming it with more loop-like functions. Data transformation, after all, is one of the main goals in our jobs as web engineers since we ultimately display data in some way that makes sense to the end user.</p>
-<p>Functional programming is a very fun programming paradigm because it lends itself to this idea of <code class="highlighter-rouge">immutability</code>. Which is basically creating objects (variables, functions, etc) that can’t be changed by other code later on in a codebase. When we get to Redux, you’ll learn all about immutability, and you’ll have a better grasp of what that concept means by going through some of these exercises today.</p>
-<p>First, let’s talk about what functions we have at our disposal to make variables and functions immutable. The <code class="highlighter-rouge">.map</code> <code class="highlighter-rouge">.filter</code> and <code class="highlighter-rouge">.reduce</code> functions are commonly used to achieve immutability and take a set of data and transform it in some way.</p>
-<p>Let’s consider the following data set, an array of object literals. You will often see this data type stored in imported <code class="highlighter-rouge">.JSON</code> files, including in guided practice today. Here though, our data is written inline, which is also fine.</p>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">const</span><span class="w"> </span><span class="err">data</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">[</span><span class="w">
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Now, let’s use
+                  <code class="highlighter-rouge">forEach</code> again to loop
+                  over our array and alert each item in the array.
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nx">elements</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">element</span> <span class="o">=&gt;</span> <span class="nx">alert</span><span class="p">(</span><span class="nx">element</span><span class="p">));</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Remember map? The most significant difference between
+                  <code class="highlighter-rouge">.forEach</code> and
+                  <code class="highlighter-rouge">.map</code> is that
+                  <code class="highlighter-rouge">map</code> returns a new array
+                  of elements while in turn passing each element back to the
+                  callback.
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">newArray</span> <span class="o">=</span> <span class="nx">elements</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span> <span class="dl">'</span><span class="s1">Element: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">item</span><span class="p">);</span>
+</code></pre>
+                  </div>
+                </div>
+                <h5>Challenge</h5>
+                <p>
+                  Complete the following exercises included here in this JSBin
+                  <a href="http://jsbin.com/sadikid/edit?js,console"
+                    >Callbacks</a
+                  >.
+                </p>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced"
+                      target="blank_"
+                      >What the heck is a callback?</a
+                    ><br />
+                    Further instruction on callbacks
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to demonstrate ability to use `.map` `.reduce` `.filter`
+                  and describe their use cases
+                </h4>
+                <p>
+                  Earlier on we covered what callbacks are and gave you ample
+                  practice to get familiar with their use. Today we’re going to
+                  dive deeper and cover some more crucial examples of callback
+                  functions as well as get you the reps you need.
+                </p>
+                <p>
+                  The callback is such a fundamental piece of the JavaScript
+                  language that you need to have a good grasp of if you want to
+                  be able to push your skills further.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  In this lesson, we’re going to get a lot of practice playing
+                  around with data and transforming it with more loop-like
+                  functions. Data transformation, after all, is one of the main
+                  goals in our jobs as web engineers since we ultimately display
+                  data in some way that makes sense to the end user.
+                </p>
+                <p>
+                  Functional programming is a very fun programming paradigm
+                  because it lends itself to this idea of
+                  <code class="highlighter-rouge">immutability</code>. Which is
+                  basically creating objects (variables, functions, etc) that
+                  can’t be changed by other code later on in a codebase. When we
+                  get to Redux, you’ll learn all about immutability, and you’ll
+                  have a better grasp of what that concept means by going
+                  through some of these exercises today.
+                </p>
+                <p>
+                  First, let’s talk about what functions we have at our disposal
+                  to make variables and functions immutable. The
+                  <code class="highlighter-rouge">.map</code>
+                  <code class="highlighter-rouge">.filter</code> and
+                  <code class="highlighter-rouge">.reduce</code> functions are
+                  commonly used to achieve immutability and take a set of data
+                  and transform it in some way.
+                </p>
+                <p>
+                  Let’s consider the following data set, an array of object
+                  literals. You will often see this data type stored in imported
+                  <code class="highlighter-rouge">.JSON</code> files, including
+                  in guided practice today. Here though, our data is written
+                  inline, which is also fine.
+                </p>
+                <div class="language-json highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="err">const</span><span class="w"> </span><span class="err">data</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="nl">"city"</span><span class="p">:</span><span class="s2">"seattle"</span><span class="p">,</span><span class="w"> </span><span class="nl">"state"</span><span class="p">:</span><span class="s2">"WA"</span><span class="p">,</span><span class="w"> </span><span class="nl">"population"</span><span class="p">:</span><span class="mi">652405</span><span class="p">,</span><span class="w"> </span><span class="nl">"land_area"</span><span class="p">:</span><span class="mf">83.9</span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="nl">"city"</span><span class="p">:</span><span class="s2">"new york"</span><span class="p">,</span><span class="w"> </span><span class="nl">"state"</span><span class="p">:</span><span class="s2">"NY"</span><span class="p">,</span><span class="w"> </span><span class="nl">"population"</span><span class="p">:</span><span class="mi">8405837</span><span class="p">,</span><span class="w"> </span><span class="nl">"land_area"</span><span class="p">:</span><span class="mf">302.6</span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="nl">"city"</span><span class="p">:</span><span class="s2">"boston"</span><span class="p">,</span><span class="w"> </span><span class="nl">"state"</span><span class="p">:</span><span class="s2">"MA"</span><span class="p">,</span><span class="w"> </span><span class="nl">"population"</span><span class="p">:</span><span class="mi">645966</span><span class="p">,</span><span class="w"> </span><span class="nl">"land_area"</span><span class="p">:</span><span class="mf">48.3</span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="nl">"city"</span><span class="p">:</span><span class="s2">"kansas city"</span><span class="p">,</span><span class="w"> </span><span class="nl">"state"</span><span class="p">:</span><span class="s2">"MO"</span><span class="p">,</span><span class="w"> </span><span class="nl">"population"</span><span class="p">:</span><span class="mi">467007</span><span class="p">,</span><span class="w"> </span><span class="nl">"land_area"</span><span class="p">:</span><span class="mi">315</span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="err">;</span><span class="w">
-</span></code></pre></div></div>
-<p>Let’s say we want to represent this data in some way that is useful to our users.</p>
-<h3 id="map"><code class="highlighter-rouge">.map</code></h3>
-<p><code class="highlighter-rouge">.map</code> asks us to create an array with just city and state names. We could do this by copying just city and state data into a new array in a <code class="highlighter-rouge">for</code> loop like so.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">cityStates</span> <span class="o">=</span> <span class="p">[];</span>
+</span></code></pre>
+                  </div>
+                </div>
+                <p>
+                  Let’s say we want to represent this data in some way that is
+                  useful to our users.
+                </p>
+                <h3 id="map"><code class="highlighter-rouge">.map</code></h3>
+                <p>
+                  <code class="highlighter-rouge">.map</code> asks us to create
+                  an array with just city and state names. We could do this by
+                  copying just city and state data into a new array in a
+                  <code class="highlighter-rouge">for</code> loop like so.
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">cityStates</span> <span class="o">=</span> <span class="p">[];</span>
 <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">let</span> <span class="nx">mappedObj</span> <span class="o">=</span> <span class="p">{};</span>
   <span class="nx">mappedObj</span><span class="p">.</span><span class="nx">city</span> <span class="o">=</span> <span class="nx">data</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">city</span><span class="p">;</span>
@@ -620,311 +1253,658 @@ this part is the callback
   <span class="nx">cityStates</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">mappedObj</span><span class="p">);</span>
   <span class="nx">mappedObj</span> <span class="o">=</span> <span class="p">{};</span>
 <span class="p">}</span>
-</code></pre></div></div>
-<p>That works! It’s a simple solution, and simplicity is the gold standard for programming. That said, it’s a bit hard to read, so is there a better way? absolutely!</p>
-<p><code class="highlighter-rouge">.map</code> is a higher-level function that takes 2 arguments, a callback and a context. The callback is a function to be called “for” each item in the array, the context is the object value(s) to be used. You’ll often people say they are going to “map” some data. That means they are going to apply a set of rules to a data set. For example “mapping” the array <code class="highlighter-rouge">[1,2,3]</code> times two would result in <code class="highlighter-rouge">[2,4,6]</code>.</p>
-<p><img src="https://i.imgur.com/YxcSyFZ.png" alt=".map annotated code"></p>
-<p>The map function can also take in a callback that passes back a couple of things to us. The three things you’d get back from a callback passed to Map would be:</p>
-<ul>
-<li>The current item of the array <code class="highlighter-rouge">state</code>
-</li>
-<li>The current index of the current item <code class="highlighter-rouge">index</code>
-</li>
-<li>The entire array <code class="highlighter-rouge">data</code>
-</li>
-</ul>
-<p>In the example below, the value given in the callback is <code class="highlighter-rouge">state</code> since task 1 asks us to look at state data.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">mappedCityStates</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  That works! It’s a simple solution, and simplicity is the gold
+                  standard for programming. That said, it’s a bit hard to read,
+                  so is there a better way? absolutely!
+                </p>
+                <p>
+                  <code class="highlighter-rouge">.map</code> is a higher-level
+                  function that takes 2 arguments, a callback and a context. The
+                  callback is a function to be called “for” each item in the
+                  array, the context is the object value(s) to be used. You’ll
+                  often people say they are going to “map” some data. That means
+                  they are going to apply a set of rules to a data set. For
+                  example “mapping” the array
+                  <code class="highlighter-rouge">[1,2,3]</code> times two would
+                  result in <code class="highlighter-rouge">[2,4,6]</code>.
+                </p>
+                <p>
+                  <img
+                    src="https://i.imgur.com/YxcSyFZ.png"
+                    alt=".map annotated code"
+                  />
+                </p>
+                <p>
+                  The map function can also take in a callback that passes back
+                  a couple of things to us. The three things you’d get back from
+                  a callback passed to Map would be:
+                </p>
+                <ul>
+                  <li>
+                    The current item of the array
+                    <code class="highlighter-rouge">state</code>
+                  </li>
+                  <li>
+                    The current index of the current item
+                    <code class="highlighter-rouge">index</code>
+                  </li>
+                  <li>
+                    The entire array <code class="highlighter-rouge">data</code>
+                  </li>
+                </ul>
+                <p>
+                  In the example below, the value given in the callback is
+                  <code class="highlighter-rouge">state</code> since task 1 asks
+                  us to look at state data.
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">mappedCityStates</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">{</span><span class="dl">'</span><span class="s1">city</span><span class="dl">'</span><span class="p">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">city</span><span class="p">,</span> <span class="dl">'</span><span class="s1">state</span><span class="dl">'</span><span class="p">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">state</span><span class="p">};</span>
 <span class="p">});</span>
-</code></pre></div></div>
-<h3 id="filter"><code class="highlighter-rouge">.filter</code></h3>
-<p>What if we only want to see states who’s <code class="highlighter-rouge">population is greater than</code> 650,000? With your prior JavaScript knowledge it might make sense to create something like this:</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">largeStates</span> <span class="o">=</span> <span class="p">[];</span>
+</code></pre>
+                  </div>
+                </div>
+                <h3 id="filter">
+                  <code class="highlighter-rouge">.filter</code>
+                </h3>
+                <p>
+                  What if we only want to see states who’s
+                  <code class="highlighter-rouge"
+                    >population is greater than</code
+                  >
+                  650,000? With your prior JavaScript knowledge it might make
+                  sense to create something like this:
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">largeStates</span> <span class="o">=</span> <span class="p">[];</span>
 <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span><span class="p">(</span><span class="nx">data</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">population</span> <span class="o">&gt;=</span> <span class="mi">650000</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">largeStates</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">data</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
-<p>Now, we can use <code class="highlighter-rouge">.filter</code> to iterate over all items in the array and return only what we want. This is useful anytime we need a subset of a larger group of data.</p>
-<p><em>Filter takes exactly the same arguments as .map, namely: value, index, and array.</em></p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">filterLargeStates</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Now, we can use
+                  <code class="highlighter-rouge">.filter</code> to iterate over
+                  all items in the array and return only what we want. This is
+                  useful anytime we need a subset of a larger group of data.
+                </p>
+                <p>
+                  <em
+                    >Filter takes exactly the same arguments as .map, namely:
+                    value, index, and array.</em
+                  >
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">filterLargeStates</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">population</span> <span class="o">&gt;=</span> <span class="mi">650000</span><span class="p">;</span>
 <span class="p">});</span>
-</code></pre></div></div>
-<p>Same results and cleaner code. The line <code class="highlighter-rouge">return state.population &gt;= 650000;</code> tells JavaScript to return an object whose population is higher than 650,000, and in turn, pass that object to a new array. The other objects (states with a population lower than 650,000) will be ignored since they don’t pass this logic test. Think of that line reading like this: <code class="highlighter-rouge">IF state.population is greater than or equal to 650000 THEN push it into a new array ELSE do nothing</code>.</p>
-<h3 id="reduce"><code class="highlighter-rouge">.reduce</code></h3>
-<p>Reduce is slightly tricker than <code class="highlighter-rouge">.map</code> and <code class="highlighter-rouge">.filter</code> because it requires use of different arguments. Its powers though, are endless. Essentially, reduce works to algorithmically simplify an array down to a single value.</p>
-<p>Let’s say we want a single number of all of the state’s populations added together. With the most basic JavaScript we might do something like this.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">statePopulations</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Same results and cleaner code. The line
+                  <code class="highlighter-rouge"
+                    >return state.population &gt;= 650000;</code
+                  >
+                  tells JavaScript to return an object whose population is
+                  higher than 650,000, and in turn, pass that object to a new
+                  array. The other objects (states with a population lower than
+                  650,000) will be ignored since they don’t pass this logic
+                  test. Think of that line reading like this:
+                  <code class="highlighter-rouge"
+                    >IF state.population is greater than or equal to 650000 THEN
+                    push it into a new array ELSE do nothing</code
+                  >.
+                </p>
+                <h3 id="reduce">
+                  <code class="highlighter-rouge">.reduce</code>
+                </h3>
+                <p>
+                  Reduce is slightly tricker than
+                  <code class="highlighter-rouge">.map</code> and
+                  <code class="highlighter-rouge">.filter</code> because it
+                  requires use of different arguments. Its powers though, are
+                  endless. Essentially, reduce works to algorithmically simplify
+                  an array down to a single value.
+                </p>
+                <p>
+                  Let’s say we want a single number of all of the state’s
+                  populations added together. With the most basic JavaScript we
+                  might do something like this.
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">let</span> <span class="nx">statePopulations</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">statePopulations</span> <span class="o">+=</span> <span class="nx">data</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">population</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div>
-<p>This is a relatively simple algorithm, but let’s look at it in terms of the reduce function now. <code class="highlighter-rouge">.reduce</code> allows us to reduce all data to a single value. It is a perfect use here because we can aggregate that data and use <code class="highlighter-rouge">.reduce</code> to do so for us.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">reduceStatePopulations</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">total</span><span class="p">,</span> <span class="nx">state</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  This is a relatively simple algorithm, but let’s look at it in
+                  terms of the reduce function now.
+                  <code class="highlighter-rouge">.reduce</code> allows us to
+                  reduce all data to a single value. It is a perfect use here
+                  because we can aggregate that data and use
+                  <code class="highlighter-rouge">.reduce</code> to do so for
+                  us.
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">reduceStatePopulations</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">total</span><span class="p">,</span> <span class="nx">state</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">total</span> <span class="o">+=</span> <span class="nx">state</span><span class="p">.</span><span class="nx">population</span><span class="p">;</span>
 <span class="p">},</span> <span class="mi">0</span><span class="p">);</span>
-</code></pre></div></div>
-<p>This is more succinct, but a lot is going on here. Importantly, we pass <code class="highlighter-rouge">0</code> as a second argument to our reduce function. This argument will become the starting value of our <code class="highlighter-rouge">total</code> and, if not provided, would default to the first item in the array. In this case, that would be disastrous because the first item of our array is an object, and we’re trying to reduce our total to a single numerical value. Instead, we can provide a starting value for <code class="highlighter-rouge">total</code> and thus set what our data type will reduce to. Remember that total also gets <code class="highlighter-rouge">memorized</code> or remembered by our function each pass.</p>
-<p><img src="https://i.imgur.com/ju1Ooqu.png" alt="Screen Shot 2019-12-03 at 11.34.39 AM"></p>
-<p><em>Note, the function will run without the <code class="highlighter-rouge">0</code> pictured above, but will default to starting accumulation at the first number in the array, which often doesn’t make sense</em></p>
-<p>The four items that get passed back from our callback function when using <code class="highlighter-rouge">.reduce</code> are:</p>
-<ul>
-<li>The current value of the total aggregated value.</li>
-<li>We set the initial value at the end of the function. In this case, we set it to 0.
-<ul>
-<li>This could be any value, though.</li>
-</ul>
-</li>
-<li>The current item in the array.</li>
-<li>The index again.</li>
-<li>The full array.</li>
-</ul>
-<p>To sum up. These functions are fantastic and allow us to write clean, reusable code in a functional programming style. They give us the power to represent our data in an enjoyable way. As you get more and more used to using these functions, you’ll get the ability to use them in very complex situations that will eventually save your bacon. For now, let’s go practice. Check out the challenge on JSBin. Go play around and see if you can create some new data sets out of the provided data.</p>
-<h5>Follow Along</h5>
-<p>Let’s take our same Data Set from earlier and play around with it some more.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">[</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  This is more succinct, but a lot is going on here.
+                  Importantly, we pass
+                  <code class="highlighter-rouge">0</code> as a second argument
+                  to our reduce function. This argument will become the starting
+                  value of our <code class="highlighter-rouge">total</code> and,
+                  if not provided, would default to the first item in the array.
+                  In this case, that would be disastrous because the first item
+                  of our array is an object, and we’re trying to reduce our
+                  total to a single numerical value. Instead, we can provide a
+                  starting value for
+                  <code class="highlighter-rouge">total</code> and thus set what
+                  our data type will reduce to. Remember that total also gets
+                  <code class="highlighter-rouge">memorized</code> or remembered
+                  by our function each pass.
+                </p>
+                <p>
+                  <img
+                    src="https://i.imgur.com/ju1Ooqu.png"
+                    alt="Screen Shot 2019-12-03 at 11.34.39 AM"
+                  />
+                </p>
+                <p>
+                  <em
+                    >Note, the function will run without the
+                    <code class="highlighter-rouge">0</code> pictured above, but
+                    will default to starting accumulation at the first number in
+                    the array, which often doesn’t make sense</em
+                  >
+                </p>
+                <p>
+                  The four items that get passed back from our callback function
+                  when using <code class="highlighter-rouge">.reduce</code> are:
+                </p>
+                <ul>
+                  <li>The current value of the total aggregated value.</li>
+                  <li>
+                    We set the initial value at the end of the function. In this
+                    case, we set it to 0.
+                    <ul>
+                      <li>This could be any value, though.</li>
+                    </ul>
+                  </li>
+                  <li>The current item in the array.</li>
+                  <li>The index again.</li>
+                  <li>The full array.</li>
+                </ul>
+                <p>
+                  To sum up. These functions are fantastic and allow us to write
+                  clean, reusable code in a functional programming style. They
+                  give us the power to represent our data in an enjoyable way.
+                  As you get more and more used to using these functions, you’ll
+                  get the ability to use them in very complex situations that
+                  will eventually save your bacon. For now, let’s go practice.
+                  Check out the challenge on JSBin. Go play around and see if
+                  you can create some new data sets out of the provided data.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Let’s take our same Data Set from earlier and play around with
+                  it some more.
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">[</span>
   <span class="p">{</span><span class="dl">"</span><span class="s2">city</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">seattle</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">state</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">WA</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">population</span><span class="dl">"</span><span class="p">:</span><span class="mi">652405</span><span class="p">,</span> <span class="dl">"</span><span class="s2">land_area</span><span class="dl">"</span><span class="p">:</span><span class="mf">83.9</span><span class="p">},</span>
   <span class="p">{</span><span class="dl">"</span><span class="s2">city</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">new york</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">state</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">NY</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">population</span><span class="dl">"</span><span class="p">:</span><span class="mi">8405837</span><span class="p">,</span> <span class="dl">"</span><span class="s2">land_area</span><span class="dl">"</span><span class="p">:</span><span class="mf">302.6</span><span class="p">},</span>
   <span class="p">{</span><span class="dl">"</span><span class="s2">city</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">boston</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">state</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">MA</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">population</span><span class="dl">"</span><span class="p">:</span><span class="mi">645966</span><span class="p">,</span> <span class="dl">"</span><span class="s2">land_area</span><span class="dl">"</span><span class="p">:</span><span class="mf">48.3</span><span class="p">},</span>
   <span class="p">{</span><span class="dl">"</span><span class="s2">city</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">kansas city</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">state</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">MO</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">population</span><span class="dl">"</span><span class="p">:</span><span class="mi">467007</span><span class="p">,</span> <span class="dl">"</span><span class="s2">land_area</span><span class="dl">"</span><span class="p">:</span><span class="mi">315</span><span class="p">}</span>
 <span class="p">];</span>
-</code></pre></div></div>
-<ol>
-<li>Use <code class="highlighter-rouge">.map</code> to create an array of integers that represent all the states names and populations.</li>
-</ol>
-<p>The callback function here is what’s enclosed in the <code class="highlighter-rouge">return</code> function. <code class="highlighter-rouge">state</code> is the value, or element(s) that will be processed.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">mappedCityStates</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</code></pre>
+                  </div>
+                </div>
+                <ol>
+                  <li>
+                    Use <code class="highlighter-rouge">.map</code> to create an
+                    array of integers that represent all the states names and
+                    populations.
+                  </li>
+                </ol>
+                <p>
+                  The callback function here is what’s enclosed in the
+                  <code class="highlighter-rouge">return</code> function.
+                  <code class="highlighter-rouge">state</code> is the value, or
+                  element(s) that will be processed.
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">mappedCityStates</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">{</span><span class="dl">'</span><span class="s1">state</span><span class="dl">'</span><span class="p">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">state</span><span class="p">,</span> <span class="dl">'</span><span class="s1">population</span><span class="dl">'</span><span class="p">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">population</span><span class="p">};</span>
 <span class="p">});</span>
-</code></pre></div></div>
-<ol>
-<li>Use <code class="highlighter-rouge">.filter</code> to create an array of states who’s land_area is larger than 50 units. Just like with map, we use arrow function syntax to dictate a <code class="highlighter-rouge">return</code>. Similarly, <code class="highlighter-rouge">state</code> is the value, or element(s) that will be processed.</li>
-</ol>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">filterLandArea</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</code></pre>
+                  </div>
+                </div>
+                <ol>
+                  <li>
+                    Use <code class="highlighter-rouge">.filter</code> to create
+                    an array of states who’s land_area is larger than 50 units.
+                    Just like with map, we use arrow function syntax to dictate
+                    a <code class="highlighter-rouge">return</code>. Similarly,
+                    <code class="highlighter-rouge">state</code> is the value,
+                    or element(s) that will be processed.
+                  </li>
+                </ol>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">filterLandArea</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">land_area</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">;</span>
 <span class="p">});</span>
-</code></pre></div></div>
-<ol>
-<li>Use <code class="highlighter-rouge">.reduce</code> to create an array of the states land_area reduced to the <code class="highlighter-rouge">mean average</code> of all the state’s combined.This example uses similar parameters, only adds the counter <code class="highlighter-rouge">total</code> to accumulate the sum.</li>
-</ol>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">landAreaAverage</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">total</span><span class="p">,</span> <span class="nx">state</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</code></pre>
+                  </div>
+                </div>
+                <ol>
+                  <li>
+                    Use <code class="highlighter-rouge">.reduce</code> to create
+                    an array of the states land_area reduced to the
+                    <code class="highlighter-rouge">mean average</code> of all
+                    the state’s combined.This example uses similar parameters,
+                    only adds the counter
+                    <code class="highlighter-rouge">total</code> to accumulate
+                    the sum.
+                  </li>
+                </ol>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">landAreaAverage</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">total</span><span class="p">,</span> <span class="nx">state</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="kd">let</span> <span class="nx">sum</span> <span class="o">=</span> <span class="nx">total</span> <span class="o">+</span> <span class="nx">state</span><span class="p">.</span><span class="nx">land_area</span><span class="p">;</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sum</span><span class="p">,</span> <span class="nx">total</span><span class="p">,</span> <span class="nx">state</span><span class="p">);</span>
   <span class="k">return</span> <span class="nx">sum</span><span class="p">;</span>
 <span class="p">},</span> <span class="mi">0</span><span class="p">);</span>
 <span class="kd">const</span> <span class="nx">average</span> <span class="o">=</span> <span class="nx">landAreaAverage</span> <span class="o">/</span> <span class="nx">data</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
-</code></pre></div></div>
-<h5>Challenge</h5>
-<p>Complete the following exercises using <code class="highlighter-rouge">.map</code>, <code class="highlighter-rouge">.filter</code>, <code class="highlighter-rouge">.reduce</code>.</p>
-<p><a href="http://jsbin.com/wolayeb/edit?js,console">Code found here</a></p>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://opensource.com/article/17/6/functional-javascript" target="blank_">Functional Programming in JavaScript</a><br> An in depth guide covering the functional programming paradigm in JavaScript.</li>
-<li>
-<a href="https://hackernoon.com/understanding-map-filter-and-reduce-in-javascript-5df1c7eee464" target="blank_">.map() .reduce() .filter()</a><br> A beautiful description of these methods and their uses</li>
-</ul>
-<hr>
-<h2 class="display-4">
-<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
-<ul class="list-group">
-<li class="list-group-item">
-<h5><a target="_blank" href="https://github.com/LambdaSchool/JS-Exercise-Closures-Callbacks-ArrayMethods">JavaScript-II</a></h5>
-<p>With some basic JavaScript principles we can now expand our skills out even further by exploring array methods like: <code class="highlighter-rouge">.forEach()</code>, <code class="highlighter-rouge">.map()</code>, <code class="highlighter-rouge">.reduce()</code>, and <code class="highlighter-rouge">.filter()</code>. We can also look at how closures have a large impact on how we write JavaScript.</p>
-</li>
-</ul>
-<h2 class="display-4">
-<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
-<h3 class="display-5">Class Recordings</h3>
-<p class="lead">You can use class recordings to help you master the material.</p>
-<div>
-<ul class="list-group list-group-flush">
-<li class="list-group-item">
-<strong><a target="_blank" href="https://youtu.be/Ix8Uk0JlRUk">JavaScript II for WEBPT17 w/ Pace Ellsworth</a></strong>
-<p>Lesson on closures, callbacks, and array methods</p>
-</li>
-<li class="list-group-item">
-<a href="/archive/FSW/module/rec1oaBmEoSilO2yf">All previous recordings</a>
-</li>
-</ul>
-</div>
-<h3 class="display-5">Demonstrate Mastery</h3>
-<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
-<ul>
-<li>Objective challenge: <p>For this challenge you will create your own closure:</p>
-<ul>
-<li>Create a function that houses 2 nested functions inside of it</li>
-<li>Create a unique variable for each function you created</li>
-<li>Test out where you can log the unique variables for each function.</li>
-</ul>
-<p>Why can you access variable values in nested functions?</p>
-</li>
-<li>Objective challenge: <p>Complete the following exercises included here in this JSBin <a href="http://jsbin.com/sadikid/edit?js,console">Callbacks</a>.</p>
-</li>
-<li>Objective challenge: <p>Complete the following exercises using <code class="highlighter-rouge">.map</code>, <code class="highlighter-rouge">.filter</code>, <code class="highlighter-rouge">.reduce</code>.</p>
-<p><a href="http://jsbin.com/wolayeb/edit?js,console">Code found here</a></p>
-</li>
-<li>Project: JavaScript-II</li>
-</ul>
-</div>
-</div>
-</div>
-</main>
-</div>
+</code></pre>
+                  </div>
+                </div>
+                <h5>Challenge</h5>
+                <p>
+                  Complete the following exercises using
+                  <code class="highlighter-rouge">.map</code>,
+                  <code class="highlighter-rouge">.filter</code>,
+                  <code class="highlighter-rouge">.reduce</code>.
+                </p>
+                <p>
+                  <a href="http://jsbin.com/wolayeb/edit?js,console"
+                    >Code found here</a
+                  >
+                </p>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://opensource.com/article/17/6/functional-javascript"
+                      target="blank_"
+                      >Functional Programming in JavaScript</a
+                    ><br />
+                    An in depth guide covering the functional programming
+                    paradigm in JavaScript.
+                  </li>
+                  <li>
+                    <a
+                      href="https://hackernoon.com/understanding-map-filter-and-reduce-in-javascript-5df1c7eee464"
+                      target="blank_"
+                      >.map() .reduce() .filter()</a
+                    ><br />
+                    A beautiful description of these methods and their uses
+                  </li>
+                </ul>
+                <hr />
+                <h2 class="display-4">
+                  <a
+                    id="project"
+                    class="anchor"
+                    href="#project"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Project
+                </h2>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <h5>
+                      <a
+                        target="_blank"
+                        href="https://github.com/LambdaSchool/JS-Exercise-Closures-Callbacks-ArrayMethods"
+                        >JavaScript-II</a
+                      >
+                    </h5>
+                    <p>
+                      With some basic JavaScript principles we can now expand
+                      our skills out even further by exploring array methods
+                      like: <code class="highlighter-rouge">.forEach()</code>,
+                      <code class="highlighter-rouge">.map()</code>,
+                      <code class="highlighter-rouge">.reduce()</code>, and
+                      <code class="highlighter-rouge">.filter()</code>. We can
+                      also look at how closures have a large impact on how we
+                      write JavaScript.
+                    </p>
+                  </li>
+                </ul>
+                <h2 class="display-4">
+                  <a
+                    id="review"
+                    class="anchor"
+                    href="#review"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Review
+                </h2>
+                <h3 class="display-5">Class Recordings</h3>
+                <p class="lead">
+                  You can use class recordings to help you master the material.
+                </p>
+                <div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong
+                        ><a target="_blank" href="https://youtu.be/Ix8Uk0JlRUk"
+                          >JavaScript II for WEBPT17 w/ Pace Ellsworth</a
+                        ></strong
+                      >
+                      <p>Lesson on closures, callbacks, and array methods</p>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="/archive/FSW/module/rec1oaBmEoSilO2yf"
+                        >All previous recordings</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <h3 class="display-5">Demonstrate Mastery</h3>
+                <p>
+                  To demonstrate mastery of this module, you need to complete
+                  and pass a code review on each of the following:
+                </p>
+                <ul>
+                  <li>
+                    Objective challenge:
+                    <p>For this challenge you will create your own closure:</p>
+                    <ul>
+                      <li>
+                        Create a function that houses 2 nested functions inside
+                        of it
+                      </li>
+                      <li>
+                        Create a unique variable for each function you created
+                      </li>
+                      <li>
+                        Test out where you can log the unique variables for each
+                        function.
+                      </li>
+                    </ul>
+                    <p>
+                      Why can you access variable values in nested functions?
+                    </p>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      Complete the following exercises included here in this
+                      JSBin
+                      <a href="http://jsbin.com/sadikid/edit?js,console"
+                        >Callbacks</a
+                      >.
+                    </p>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      Complete the following exercises using
+                      <code class="highlighter-rouge">.map</code>,
+                      <code class="highlighter-rouge">.filter</code>,
+                      <code class="highlighter-rouge">.reduce</code>.
+                    </p>
+                    <p>
+                      <a href="http://jsbin.com/wolayeb/edit?js,console"
+                        >Code found here</a
+                      >
+                    </p>
+                  </li>
+                  <li>Project: JavaScript-II</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'UA-80850900-4');
-</script>
-<script type="text/javascript">
-  function getDomain() {
-    const domainName = window.location.hostname.split('.')[1];
-    return `${domainName}.com`;
-  }
-</script>
-<script src="" integrity="" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
-<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
-<script type="text/javascript">
-  SimpleJekyllSearch.init({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    dataSource: '/search.json',
-    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="JavaScript II  ">{title}</a></li>',
-    noResultsText: '',
-    limit: 10,
-    fuzzy: true,
-  })
-</script>
-<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
-  if (window.attachEvent) {
-    window.attachEvent('onload', verifySignedIn);
-  } else {
-    if (window.onload) {
-      var currentOnLoadFn = window.onload;
-      var newOnLoadFn = function (evt) {
-        currentOnLoadFn(evt);
-        verifySignedIn();
-      };
-      window.onload = newOnLoadFn;
-    } else {
-      window.onload = verifySignedIn;
-    }
-  }
-
-  function verifySignedIn() {
-    if (isPagePublic()) {
-      return showPageContents();
-    }
-
-    window.__user = null;
-    isSignedIn().then((user) => {
-      window.__user = user;
-
-      if (!user.signedIn) {
-        redirectToSignIn();
-      } else if (!user.student && !window.__openToAdmissions) {
-        showUnauthorizedMessage();
-      } else {
-        showPageContents();
-      }
-    });
-  }
-
-  function isPagePublic() {
-    const openCourses = [
-      'and-pre',
-      'ds-pre',
-      'fsw-pre',
-      'help',
-      'ios-pre',
-    ];
-
-    const openPages = [
-      'cs-and',
-      'cs-fsw',
-      'cs-ios',
-      'cr',
-      'ds',
-      'jx',
-      'p4s',
-      'ux',
-    ];
-
-    const pathParts = window.location.pathname.split('/');
-    const courseName = pathParts[1];
-    const pageName = pathParts[pathParts.length - 1];
-
-    return openCourses.includes(courseName) || openPages.includes(pageName);
-  }
-
-  function isSignedIn() {
-    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
-
-    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
-
-    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
-      .then((response) => response.text())
-      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
-      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
-      .catch((error) => {});
-  }
-
-  function redirectToSignIn() {
-    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
-    const redirectMessage = document.querySelector('#redirect-message');
-    redirectMessage.style.display = "block";
-    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
-    window.location = signInUrl;
-  }
-
-  function showPageContents() {
-    document.querySelector('#content-wrapper').style.visibility = 'visible';
-  }
-
-  function showUnauthorizedMessage() {
-    document.querySelector('#unauthorized-message').style.display = 'block';
-  }
-
-  function getAuthBaseUrl() {
-    const domain = getDomain();
-    const authBaseUrl = `https://auth.${domain}`;
-    return authBaseUrl;
-  }
-</script><script src="/assets/js/docs.min.js"></script><script>
-  var MathJax = {
-    tex: {
-      inlineMath: [['$$', '$$'], ['\[', '\])']]
-    },
-    "HTML-CSS": {
-      styles: {
-        ".MathJax span": {
-          color: "#000000"
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
         }
-      }
-    }
-  }
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<script>
-  handleExternalLinks();
+        gtag("js", new Date());
 
-  function handleExternalLinks() {
-    const domain = getDomain();
-    const links = document.querySelectorAll('a');
-    return links.forEach((link) => {
-      if (!link.host.includes(domain)) link.target = '_blank';
-    })
-  };
-</script>
-</div>
-</body>
+        gtag("config", "UA-80850900-4");
+      </script>
+      <script type="text/javascript">
+        function getDomain() {
+          const domainName = window.location.hostname.split(".")[1];
+          return `${domainName}.com`;
+        }
+      </script>
+      <script src="" integrity="" crossorigin="anonymous"></script>
+      <script>
+        window.jQuery ||
+          document.write(
+            '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>'
+          );
+      </script>
+      <script
+        src="/assets/js/vendor/popper.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="/dist/js/bootstrap.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script src="/assets/js/activate.js"></script>
+      <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        SimpleJekyllSearch.init({
+          searchInput: document.getElementById("search-input"),
+          resultsContainer: document.getElementById("results-container"),
+          dataSource: "/search.json",
+          searchResultTemplate:
+            '<li class="list-group-item"><a href="{url}" title="JavaScript II  ">{title}</a></li>',
+          noResultsText: "",
+          limit: 10,
+          fuzzy: true,
+        });
+      </script>
+      <script src="/assets/js/mermaid.min.js"></script>
+      <script type="text/javascript">
+        if (window.attachEvent) {
+          window.attachEvent("onload", verifySignedIn);
+        } else {
+          if (window.onload) {
+            var currentOnLoadFn = window.onload;
+            var newOnLoadFn = function (evt) {
+              currentOnLoadFn(evt);
+              verifySignedIn();
+            };
+            window.onload = newOnLoadFn;
+          } else {
+            window.onload = verifySignedIn;
+          }
+        }
+
+        function verifySignedIn() {
+          if (isPagePublic()) {
+            return showPageContents();
+          }
+
+          window.__user = null;
+          isSignedIn().then((user) => {
+            window.__user = user;
+
+            if (!user.signedIn) {
+              redirectToSignIn();
+            } else if (!user.student && !window.__openToAdmissions) {
+              showUnauthorizedMessage();
+            } else {
+              showPageContents();
+            }
+          });
+        }
+
+        function isPagePublic() {
+          const openCourses = [
+            "and-pre",
+            "ds-pre",
+            "fsw-pre",
+            "help",
+            "ios-pre",
+          ];
+
+          const openPages = [
+            "cs-and",
+            "cs-fsw",
+            "cs-ios",
+            "cr",
+            "ds",
+            "jx",
+            "p4s",
+            "ux",
+          ];
+
+          const pathParts = window.location.pathname.split("/");
+          const courseName = pathParts[1];
+          const pageName = pathParts[pathParts.length - 1];
+
+          return (
+            openCourses.includes(courseName) || openPages.includes(pageName)
+          );
+        }
+
+        function isSignedIn() {
+          const isDeployPreview =
+            window.location.hostname.startsWith("deploy-preview") &&
+            window.location.hostname.endsWith("netlify.com");
+
+          if (isDeployPreview)
+            return Promise.resolve({ signedIn: true, student: true });
+
+          return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: "include" })
+            .then((response) => response.text())
+            .then((userAsText) => (userAsText ? JSON.parse(userAsText) : null))
+            .then((userData) => ({
+              signedIn: Boolean(userData),
+              student: Boolean(userData && userData.airtableId),
+              id: userData ? userData.id : null,
+              email: userData ? userData.email : null,
+            }))
+            .catch((error) => {});
+        }
+
+        function redirectToSignIn() {
+          const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(
+            window.location.href
+          )}&reason=auth_required`;
+          const redirectMessage = document.querySelector("#redirect-message");
+          redirectMessage.style.display = "block";
+          redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`;
+          window.location = signInUrl;
+        }
+
+        function showPageContents() {
+          document.querySelector("#content-wrapper").style.visibility =
+            "visible";
+        }
+
+        function showUnauthorizedMessage() {
+          document.querySelector("#unauthorized-message").style.display =
+            "block";
+        }
+
+        function getAuthBaseUrl() {
+          const domain = getDomain();
+          const authBaseUrl = `https://auth.${domain}`;
+          return authBaseUrl;
+        }
+      </script>
+      <script src="/assets/js/docs.min.js"></script>
+      <script>
+        var MathJax = {
+          tex: {
+            inlineMath: [
+              ["$$", "$$"],
+              ["\[", "\])"],
+            ],
+          },
+          "HTML-CSS": {
+            styles: {
+              ".MathJax span": {
+                color: "#000000",
+              },
+            },
+          },
+        };
+      </script>
+      <script
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+        type="text/javascript"
+      ></script>
+      <script>
+        handleExternalLinks();
+
+        function handleExternalLinks() {
+          const domain = getDomain();
+          const links = document.querySelectorAll("a");
+          return links.forEach((link) => {
+            if (!link.host.includes(domain)) link.target = "_blank";
+          });
+        }
+      </script>
+    </div>
+  </body>
 </html>

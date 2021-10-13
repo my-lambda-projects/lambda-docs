@@ -16,40 +16,40 @@ You must be a Lambda School student to view this page.
 
 <a href="/webannex/sprint/recfwZvI7QhMa7xbG" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
--   [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
--   [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
+- [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
+- [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
+- [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
 
 <a href="/webannex/sprint/recIXiQgpgMdJ81ms" class="bd-toc-link">2.  Advanced CSS</a>
 
--   [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
--   [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
--   [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
--   [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
+- [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
+- [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
+- [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
+- [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
 
 <a href="/webannex/sprint/recclZwJxMU8kUngT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
--   [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
--   [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
--   [Classes](/webannex/module/recyS588eOvVUKAMc/)
+- [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
+- [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
+- [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
+- [Classes](/webannex/module/recyS588eOvVUKAMc/)
 
 <a href="/webannex/sprint/recRT8JKvbTiGaosk" class="bd-toc-link">4.  Single Page Applications</a>
 
--   [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
--   [React Router II](/webannex/module/recYkF1FDilIedmwX/)
--   [Form Management](/webannex/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
+- [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
+- [React Router II](/webannex/module/recYkF1FDilIedmwX/)
+- [Form Management](/webannex/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
 
 <a href="/webannex/sprint/recozTHaHJe6L1ThN" class="bd-toc-link">5.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
--   [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
--   [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
--   [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
+- [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
+- [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
+- [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
 
-------------------------------------------------------------------------
+---
 
 <a href="/" class="navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjM1IiB2aWV3Ym94PSIwIDAgNzU2IDE5NyIgZmlsbD0iI2VjMzk0NCI+PGc+PHBhdGggZD0iTTI5Mi45LDEyNi42aC02LjdjLTksMC0xMi42LTEuOS0xMi42LTkuNVY0OC41YzAtNy43LDEuNi04LjYsMTEuNC05Ljd2LTQuNWgtNDEuM3Y0LjUgYzkuOCwxLjEsMTEuNCwxLjksMTEuNCw5Ljd2NjkuM2MwLDcuNy0xLjYsOC42LTExLjQsOS43djQuNWg3My43bDQuOS0yOS40aC00LjRDMzA4LjUsMTE5LjYsMzAzLjksMTI2LjYsMjkyLjksMTI2LjZ6Ij48L3BhdGg+PHBhdGggZD0iTTM4NS41LDEyMS4xVjc5LjNjMC0xNS44LTkuNC0yMi40LTI2LjYtMjIuNGMtMTUsMC0yNi44LDYuNi0yNi44LDE5LjNjMCwyLjQsMC4yLDMuMywwLjgsNWgxNi42IGMtMC41LTItMC43LTUtMC43LTcuNWMwLTkuNiwzLjYtMTIuNCw5LjQtMTIuNGM2LjQsMCw5LjcsMiw5LjcsMTQuNHYxMS4ybC0yMC44LDcuN2MtMTAuNiw0LjEtMTkuMyw4LjgtMTkuMywyMC43IGMwLDEwLjksNy41LDE3LjgsMTguNiwxNy44YzkuOSwwLDE3LjQtNi4yLDIxLjktMTIuMWwwLjEtMC4xbDAsMFYxMzJoMjZ2LTQuNEMzODcuNywxMjcuMSwzODUuNSwxMjYuMiwzODUuNSwxMjEuMXogTTM2OCwxMTcuOCBjLTQuNCwzLjMtNy42LDUuMy0xMiw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNFYxMTcuOEwzNjgsMTE3Ljh6Ij48L3BhdGg+PHBhdGggZD0iTTUxNC40LDEyMVY3OS41YzAtMTQuOC02LTIyLjQtMTguNy0yMi40Yy0xMS41LDAtMTkuNCw2LjYtMjUuNSwxMy45Yy0xLjgtOS42LTcuNy0xMy45LTE3LjgtMTMuOSBjLTExLjQsMC0xOC43LDYuMi0yNC44LDEzLjZWNTdoLTIuM2wtMjMuOCw3LjR2Mi40bDguNiw1djQ5LjRjMCw1LTIuMSw2LjEtOC45LDYuNHY0LjRoMzUuMXYtNC40Yy02LjctMC4zLTguNy0xLjMtOC43LTYuNHYtNDcgYzQuNy0zLjYsOS41LTYuNSwxNS41LTYuNWM3LjYsMCwxMC41LDQuMiwxMC41LDEyLjd2NDAuOGMwLDUtMS45LDYuMS04LjcsNi40djQuNGwzNC44LDB2LTQuNGMtNi43LTAuMy04LjYtMS4zLTguNi02LjR2LTQ3IGM0LjctMy42LDkuNS02LjUsMTUuNS02LjVjNy42LDAsMTAuNSw0LjIsMTAuNSwxMi43bC0wLjEsNDAuNWMwLDUtMS44LDYuNC04LjYsNi43bDAsNC40aDM1LjF2LTQuNCBDNTE2LjcsMTI3LjQsNTE0LjQsMTI2LjEsNTE0LjQsMTIxeiI+PC9wYXRoPjxwYXRoIGQ9Ik01NzMuMiw1Ny4zYy0xMSwwLTE4LjUsNS43LTIzLjQsMTIuOFYyMi45aC0yLjdsLTIzLjQsNi44djIuNWw4LjYsNC41VjEzMmgyLjlsOC0zLjVjNS44LDMuMywxMi4zLDUsMjAuMiw1IGMyMC44LDAsMzcuNC0xNS44LDM3LjQtNDIuNkM2MDAuOSw2OS45LDU5MC40LDU3LjMsNTczLjIsNTcuM3ogTTU2My40LDEyOC43Yy01LjQsMC0xMC4zLTIuNC0xMy43LTcuOVY3My42IGMzLjQtMy40LDguNS01LjcsMTMuNS01LjdjMTMuOSwwLDIwLDEyLjgsMjAsMjkuNUM1ODMuMywxMTQuNyw1NzUuOCwxMjguNSw1NjMuNCwxMjguN3oiPjwvcGF0aD48cGF0aCBkPSJNNjc3LDEyMS4yVjIyLjhoLTIuNkw2NTEsMjkuNlYzMmw4LjYsNC41djI1LjdjLTMuNC0zLjItOC44LTUuMS0xNS41LTUuMWMtMTkuOSwwLTM1LjIsMTUuMy0zNS4yLDQxLjMgYzAsMjAuNywxMS4yLDM0LjYsMjguMSwzNC42YzkuOCwwLDE3LTUuMywyMi42LTEzLjF2MC45VjEzMmgyNi4zbDAtNC40QzY3OS4xLDEyNy4zLDY3NywxMjYuMyw2NzcsMTIxLjJ6IE02NTkuNiwxMTcuMSBMNjU5LjYsMTE3LjFjLTMuNCwzLjQtOCw1LjEtMTMuMiw1LjFjLTEzLjIsMC0yMC40LTEyLjgtMjAuNC0yOS44YzAtMTcuOCw3LjMtMjkuMiwxOS41LTI5LjJjOC43LDAsMTQuMSw2LjksMTQuMSwxOC4zIEw2NTkuNiwxMTcuMXoiPjwvcGF0aD48cGF0aCBkPSJNNzQ3LjEsMTIxLjFWNzkuM2MwLTE1LjgtOS40LTIyLjQtMjYuNi0yMi40Yy0xNSwwLTI2LjgsNi42LTI2LjgsMTkuM2MwLDIuNCwwLjIsMy4zLDAuOCw1aDE2LjYgYy0wLjUtMi0wLjctNS0wLjctNy41YzAtOS42LDMuNi0xMi40LDkuNC0xMi40YzYuNCwwLDkuNywyLDkuNywxNC40djExLjJsLTIwLjgsNy43Yy0xMC42LDQuMS0xOS4zLDguOC0xOS4zLDIwLjcgYzAsMTAuOSw3LjUsMTcuOCwxOC42LDE3LjhjOS45LDAsMTcuNC02LjIsMjEuOS0xMi4xdi0wLjFoMC4xbDAsMTEuMWwyNiwwLjF2LTQuNUM3NDkuMywxMjcuMSw3NDcuMSwxMjYuMiw3NDcuMSwxMjEuMXogTTcyOS42LDExNy44Yy00LjQsMy4zLTcuNiw1LjMtMTIuMSw1LjRjLTcuNywwLTExLjItNS4yLTExLjItMTIuNmMwLTcuNywzLjYtMTEuMiw5LjgtMTMuNWwxMy40LTUuNEw3MjkuNiwxMTcuOEw3MjkuNiwxMTcuOHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTAsMHY5MC40YzAsNjUuNyw1MC45LDg4LjUsODguMSwxMDUuMmgwLjFsMywxLjRjMC43LTAuNCwxLjQtMC43LDIuMi0xYzAuNC0wLjIsMC45LTAuNCwxLjMtMC42IGMzNy4zLTE2LjYsODguNC0zOS41LDg4LjQtMTA1VjBIMHogTTExNiwxMzJsLTItNS4zbC0yNi42LTcwYy0xLjYsNC4xLTUuMywxNC05LjMsMjQuNmwtMTUuMyw0MS4zYy0wLjcsMi0wLjMsMywwLjIsMy43IGMxLjEsMS4zLDMuNSwxLjMsNy4zLDEuM0g3MWwwLDQuNEg0Mi40bDAtNC40aDIuMmMzLjksMCw3LjEtMS43LDkuNS02LjVsMi45LTYuNmwyNi41LTY3LjhsLTQuNy0xMi41aDI0LjdsMzQuMSw4OS43bDMuMSw4LjFIMTE2eiI+PC9wYXRoPjwvc3ZnPg==" /></a>
 
@@ -57,45 +57,45 @@ You must be a Lambda School student to view this page.
 
 <a href="/webannex/sprint/recfwZvI7QhMa7xbG" class="bd-toc-link">1.  User Interface and Git</a>
 
--   [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
--   [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
--   [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
--   [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
+- [User Interface](/webannex/module/recl0IyzS2Vl89lZa/)
+- [Git for Web Development](/webannex/module/rect59e95N6OSvoCd/)
+- [User Interface II](/webannex/module/recGvXyWT6AvGtMHR/)
+- [User Interface III](/webannex/module/recaVbBZhh8BTyMdM/)
 
 <a href="/webannex/sprint/recIXiQgpgMdJ81ms" class="bd-toc-link">2.  Advanced CSS</a>
 
--   [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
--   [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
--   [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
--   [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
+- [Responsive Design I](/webannex/module/recuDrqSGpWcepCMs/)
+- [Responsive Design II](/webannex/module/recE3IqPtDxaVI0DW/)
+- [Preprocessing I](/webannex/module/reculyBhIYkuoBRqh/)
+- [Preprocessing II](/webannex/module/rec1hRu3bO6L0uxn2/)
 
 <a href="/webannex/sprint/recclZwJxMU8kUngT" class="bd-toc-link">3.  JavaScript Fundamentals</a>
 
--   [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
--   [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
--   [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
--   [Classes](/webannex/module/recyS588eOvVUKAMc/)
+- [JavaScript I](/webannex/module/recCT3KJYTIRYwQMh/)
+- [JavaScript II](/webannex/module/rec1oaBmEoSilO2yf/)
+- [Prototypes and Inheritance](/webannex/module/rec0AWuNLezbpit7m/)
+- [Classes](/webannex/module/recyS588eOvVUKAMc/)
 
 <a href="/webannex/sprint/recRT8JKvbTiGaosk" class="bd-toc-link">4.  Single Page Applications</a>
 
--   [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
--   [React Router II](/webannex/module/recYkF1FDilIedmwX/)
--   [Form Management](/webannex/module/rect081xiYT2cfxGF/)
--   [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
+- [React Router I](/webannex/module/rec2TJ1vrdfcnx2EG/)
+- [React Router II](/webannex/module/recYkF1FDilIedmwX/)
+- [Form Management](/webannex/module/rect081xiYT2cfxGF/)
+- [Advanced Form Management](/webannex/module/recKK5C7wV0WiECfr/)
 
 <a href="/webannex/sprint/recozTHaHJe6L1ThN" class="bd-toc-link">5.  Authentication and Testing</a>
 
--   [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
--   [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
--   [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
--   [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
+- [Introduction to Authentication](/webannex/module/recQD9lnhqWEFh6g4/)
+- [Using Sessions and Cookies](/webannex/module/recvIPgHwxF194c7q/)
+- [Using JSON Web Tokens (JWT)](/webannex/module/reciCHdNjavSKaaLt/)
+- [Testing the Back End](/webannex/module/reciXdxRA8zXJXDID/)
 
-------------------------------------------------------------------------
+---
 
--   [Prepare](#prepare)
--   [Learn](#learn)
--   [Project](#project)
--   [Review](#review)
+- [Prepare](#prepare)
+- [Learn](#learn)
+- [Project](#project)
+- [Review](#review)
 
 # Prototypes and Inheritance
 
@@ -105,8 +105,8 @@ This lesson introduces us to the `this` keyword and it’s many uses. After we l
 
 **At the end of this module, you should be able to:**
 
--   explain the four principles of the 'this' keyword and demonstrate each explanation with an example of their uses
--   describe, and use prototypes, constructor functions the new keyword, and pseudo-classical inheritance to build a small object based video game
+- explain the four principles of the 'this' keyword and demonstrate each explanation with an example of their uses
+- describe, and use prototypes, constructor functions the new keyword, and pseudo-classical inheritance to build a small object based video game
 
 #### Pro Tip
 
@@ -116,21 +116,17 @@ Read error messages carefully - computers are always right (from the state they 
 
 Review each preclass resource before class.
 
--   
+- # An error occurred.
 
-    # An error occurred.
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=RivFFKFbpXo), or enable JavaScript if it is disabled in your browser.
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=RivFFKFbpXo), or enable JavaScript if it is disabled in your browser.
+- # An error occurred.
 
--   
+  [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=5jjDXm-f0SI), or enable JavaScript if it is disabled in your browser.
 
-    # An error occurred.
+- [WTF is \`this\`](https://youtu.be/zE9iro4r918)
 
-    [Try watching this video on www.youtube.com](https://www.youtube.com/watch?v=5jjDXm-f0SI), or enable JavaScript if it is disabled in your browser.
-
--   [WTF is \`this\`](https://youtu.be/zE9iro4r918)
-
-    Tyler McGinnis breaks down this
+  Tyler McGinnis breaks down this
 
 ## <a href="#learn" id="learn" class="anchor"><span class="octicon octicon-link"></span></a>Learn
 
@@ -142,7 +138,7 @@ The this keyword is a very important part of the JavaScript language. Understand
 
 To understand `this` you can consider the following bullet points.
 
--   You can think of this, as a Pointer to an object. *For example*: you can use the this keyword to reference an object without having to refer to that object’s name.
+- You can think of this, as a Pointer to an object. _For example_: you can use the this keyword to reference an object without having to refer to that object’s name.
 
 ##### Overview
 
@@ -158,26 +154,26 @@ Open up your console and type in `window` and see what you get. The **giant** ob
 
 ### Principle 1: **Window/Global Object Binding**
 
--   When in the global scope, the value of “this” will be the window/console Object;
+- When in the global scope, the value of “this” will be the window/console Object;
 
-    function sayName(name) {
-      console.log(this);
-      return name;
-    }
-    sayName("D'Artagnan");
+  function sayName(name) {
+  console.log(this);
+  return name;
+  }
+  sayName("D'Artagnan");
 
 ### Principle 2: **Implicit Binding**
 
--   Whenever a preceding dot calls a function, the object before the dot is this.
+- Whenever a preceding dot calls a function, the object before the dot is this.
 
-    const myObj = {
-      greeting: 'Hello',
-      sayHello: function(name) {
-        console.log(`${this.greeting} my name is ${name}`);
-        console.log(this);
-      }
-    };
-    myObj.sayHello('Ryan');
+  const myObj = {
+  greeting: 'Hello',
+  sayHello: function(name) {
+  console.log(`${this.greeting} my name is ${name}`);
+  console.log(this);
+  }
+  };
+  myObj.sayHello('Ryan');
 
 This principle is one of the most commonly used applications of the `this` keyword. Here is another example for use to play with.
 
@@ -200,7 +196,7 @@ In this previous example, You see that we have a function that receives an objec
 
 ### Principle 3: **New binding**
 
--   Whenever we use a constructor function, `this` refers to the specific instance of the object that is created and returned by the constructor function.
+- Whenever we use a constructor function, `this` refers to the specific instance of the object that is created and returned by the constructor function.
 
 This principle is a doozy because we have to learn about `constructor functions` here. Don’t worry if a lot of this stuff goes over your head, be a sponge right now. Absorb as much of this as you can, and we cover `constructors` in-depth tomorrow.
 
@@ -239,10 +235,10 @@ Complete this simple repl.it assignment: https://repl.it/@dfrehner1/Practice-Exp
 
 ##### Dig Deeper
 
--   [When not to use arrow functions](https://wesbos.com/arrow-function-no-no/)  
-    The arrow function is great in most cases but there are times we should not use it. This article from Wes Bos explains in great detail when NOT to use an arrow function.
+- [When not to use arrow functions](https://wesbos.com/arrow-function-no-no/)  
+  The arrow function is great in most cases but there are times we should not use it. This article from Wes Bos explains in great detail when NOT to use an arrow function.
 
-------------------------------------------------------------------------
+---
 
 #### Learn to describe, and use prototypes, constructor functions the new keyword, and pseudo-classical inheritance to build a small object based video game
 
@@ -279,13 +275,13 @@ Now that we have created our constructor function as a template for object creat
 
 We call `Person` with the `new` keyword, and we feed it an object literal that will map to those attributes specified in the `Person` block. A note on the new keyword:
 
--   When `new` is called, the `constructor function` can essentially create a context for a `this` object. Then what gets returned from that `constructor function` is that particular `this` object with the new properties added to it.
+- When `new` is called, the `constructor function` can essentially create a context for a `this` object. Then what gets returned from that `constructor function` is that particular `this` object with the new properties added to it.
 
-    const fred = new Person({
-      age: 35,
-      name: 'Fred',
-      homeTown: 'Bedrock'
-    });
+  const fred = new Person({
+  age: 35,
+  name: 'Fred',
+  homeTown: 'Bedrock'
+  });
 
 `console.log(fred);` `console.log(fred.speak());`
 
@@ -315,7 +311,7 @@ Let’s refactor the constructor function `Person` and remove the `speak` functi
 
 Now that we have added the `speak` function to the prototype of `Person`, it will no longer be on the object `fred`. The `Person` prototype wholly owns `speak`. `Person` is now able to pass down `speak` to each instance of `Person` without creating a new property on any new objects.
 
-![fred\_\_proto\_\_](https://ibin.co/w800/3o4SA5WLlTVV.png)
+![fred__proto__](https://ibin.co/w800/3o4SA5WLlTVV.png)
 
 You will notice when we log the `fred` object out in the console, we see this `__proto__` thing. `__proto__` is helpful for us to see inheritance in the browser’s specific JavaScript engine.
 
@@ -360,15 +356,15 @@ To further illustrate how detached `pebbles` and `fred` are, let’s add a speci
 
 Now! Let us dive deep into some object creation together. We’re going to be creating a `Fruit` constructor function that can build all instances of fruit. Our constructor should have four properties to create our objects.
 
--   type
--   name
--   isRipe
--   calories
+- type
+- name
+- isRipe
+- calories
 
 After those properties, our object should have two prototype methods added to it.
 
--   calculateCalories - which logs the number of calories in a specified fruit \* 100
--   shipped - which takes in a `destination` and logs out `the fruit's name was shipped to destination`
+- calculateCalories - which logs the number of calories in a specified fruit \* 100
+- shipped - which takes in a `destination` and logs out `the fruit's name was shipped to destination`
 
 Our code should look something like this:
 
@@ -464,13 +460,13 @@ And check if things are all linked up properly.
 
 Work through this prototypes challenge by studying two constructors and filling in the missing pieces: [Prototypes Challenge](https://codepen.io/lambdaschool/pen/GXdXYX).
 
-------------------------------------------------------------------------
+---
 
 ## <a href="#project" id="project" class="anchor"><span class="octicon octicon-link"></span></a>Project
 
--   ##### [Prototypes and Inheritance Project](https://github.com/LambdaSchool/JS-Exercise-Prototype)
+- ##### [Prototypes and Inheritance Project](https://github.com/LambdaSchool/JS-Exercise-Prototype)
 
-    Today we take a break from the usual Git flow and tackle our project using Code Sandbox. Make sure to sign up for an account!
+  Today we take a break from the usual Git flow and tackle our project using Code Sandbox. Make sure to sign up for an account!
 
 ## <a href="#review" id="review" class="anchor"><span class="octicon octicon-link"></span></a>Review
 
@@ -478,22 +474,22 @@ Work through this prototypes challenge by studying two constructors and filling 
 
 You can use class recordings to help you master the material.
 
--   **[Prototypes and Inheritance for Web35 w/ Brit Hemming](https://youtu.be/NMGeAfpIxN8)**
+- **[Prototypes and Inheritance for Web35 w/ Brit Hemming](https://youtu.be/NMGeAfpIxN8)**
 
-    Prototypes and Inheritance
+  Prototypes and Inheritance
 
--   [All previous recordings](/archive/FSW/module/rec0AWuNLezbpit7m)
+- [All previous recordings](/archive/FSW/module/rec0AWuNLezbpit7m)
 
 ### Demonstrate Mastery
 
 To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:
 
--   Objective challenge:
+- Objective challenge:
 
-    Complete this simple repl.it assignment: https://repl.it/@dfrehner1/Practice-Explicit-binding
+  Complete this simple repl.it assignment: https://repl.it/@dfrehner1/Practice-Explicit-binding
 
--   Objective challenge:
+- Objective challenge:
 
-    Work through this prototypes challenge by studying two constructors and filling in the missing pieces: [Prototypes Challenge](https://codepen.io/lambdaschool/pen/GXdXYX).
+  Work through this prototypes challenge by studying two constructors and filling in the missing pieces: [Prototypes Challenge](https://codepen.io/lambdaschool/pen/GXdXYX).
 
--   Project: Prototypes and Inheritance Project
+- Project: Prototypes and Inheritance Project

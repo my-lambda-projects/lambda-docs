@@ -1,652 +1,1644 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Intended as a home for Lambda School curriculum.">
-<meta name="author" content="">
-<meta name="generator" content="Jekyll v3.8.0">
-<title>React Router I · Lambda School</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Intended as a home for Lambda School curriculum."
+    />
+    <meta name="author" content="" />
+    <meta name="generator" content="Jekyll v3.8.0" />
+    <title>React Router I · Lambda School</title>
 
-<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+    <link
+      rel="stylesheet"
+      integrity
+      crossorigin="anonymous"
+      href="https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css"
+    />
 
-<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+    <link
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css"
+    />
 
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css"
+    />
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
-  ga('send', 'pageview');
-</script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-122016605-1", "learn.lambdaschool.com");
+      ga("send", "pageview");
+    </script>
 
+    <link
+      rel="apple-touch-icon"
+      href="/assets/img/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/assets/img/favicons/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicons/safari-pinned-tab.svg"
+      color="#a0001e"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="msapplication-config"
+      content="/assets/img/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#a0001e" />
+  </head>
+  <body>
+    <noscript>Please enable JavaScript to view this page.</noscript>
+    <div id="redirect-message" style="display: none">
+      You must be logged in to view this page.
+    </div>
+    <div id="unauthorized-message" style="display: none">
+      You must be a Lambda School student to view this page.
+    </div>
+    <div id="content-wrapper" style="visibility: hidden">
+      <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+          <span class="skiplink-text">Skip to main content</span>
+        </div>
+      </a>
+      <div class="mobile-menu">
+        <div class="m-drop">
+          <div class="mobile-row">
+            <div class="header-row" style="padding: 3px 7px">
+              <a class="navbar-brand" href="/" aria-label="Lambda School"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="35"
+                  viewBox="0 0 33 35"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                    fill="#EC3944"
+                  /></svg
+              ></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#mobile-course-menu"
+                aria-controls="mobile-course-menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="30"
+                  height="30"
+                  focusable="false"
+                >
+                  <title>Menu</title>
+                  <path
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    d="M4 7h22M4 15h22M4 23h22"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="nav-row">
+            <div class="results-container">
+              <ul id="results-container" class="dropdown list-group"></ul>
+            </div>
+            <div id="mobile-course-menu" class="collapse nav-row">
+              <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+                <nav class="bd-links">
+                  <div class="bd-toc-item">
+                    <h4 class="bd-toc-link">Web Annex</h4>
+                  </div>
 
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/webannex/sprint/recfwZvI7QhMa7xbG"
+                    >
+                      1.&nbsp;&nbsp;User Interface and Git
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/webannex/module/recl0IyzS2Vl89lZa/">
+                          User Interface
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/rect59e95N6OSvoCd/">
+                          Git for Web Development
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recGvXyWT6AvGtMHR/">
+                          User Interface II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recaVbBZhh8BTyMdM/">
+                          User Interface III
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/webannex/sprint/recIXiQgpgMdJ81ms"
+                    >
+                      2.&nbsp;&nbsp;Advanced CSS
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/webannex/module/recuDrqSGpWcepCMs/">
+                          Responsive Design I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recE3IqPtDxaVI0DW/">
+                          Responsive Design II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/reculyBhIYkuoBRqh/">
+                          Preprocessing I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/rec1hRu3bO6L0uxn2/">
+                          Preprocessing II
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/webannex/sprint/recclZwJxMU8kUngT"
+                    >
+                      3.&nbsp;&nbsp;JavaScript Fundamentals
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/webannex/module/recCT3KJYTIRYwQMh/">
+                          JavaScript I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/rec1oaBmEoSilO2yf/">
+                          JavaScript II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/rec0AWuNLezbpit7m/">
+                          Prototypes and Inheritance
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recyS588eOvVUKAMc/">
+                          Classes
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/webannex/sprint/recRT8JKvbTiGaosk"
+                    >
+                      4.&nbsp;&nbsp;Single Page Applications
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li class="active bd-sidenav-active">
+                        <a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
+                          React Router I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recYkF1FDilIedmwX/">
+                          React Router II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/rect081xiYT2cfxGF/">
+                          Form Management
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recKK5C7wV0WiECfr/">
+                          Advanced Form Management
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a
+                      class="bd-toc-link"
+                      href="/webannex/sprint/recozTHaHJe6L1ThN"
+                    >
+                      5.&nbsp;&nbsp;Authentication and Testing
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/webannex/module/recQD9lnhqWEFh6g4/">
+                          Introduction to Authentication
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/recvIPgHwxF194c7q/">
+                          Using Sessions and Cookies
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/reciCHdNjavSKaaLt/">
+                          Using JSON Web Tokens (JWT)
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/webannex/module/reciXdxRA8zXJXDID/">
+                          Testing the Back End
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="sidebar-container bd-sidebar">
+          <div class="docs-sidebar">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"
+              ><svg
+                width="135"
+                height="35"
+                viewBox="0 0 756 197"
+                fill="#ec3944"
+              >
+                <g>
+                  <path
+                    d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"
+                  ></path>
+                  <path
+                    d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"
+                  ></path>
+                  <path
+                    d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"
+                  ></path>
+                  <path
+                    d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"
+                  ></path>
+                  <path
+                    d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"
+                  ></path>
+                  <path
+                    d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"
+                  ></path>
+                </g>
+                <path
+                  d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"
+                ></path></svg
+            ></a>
+            <ul id="results-container" class="dropdown list-group"></ul>
+            <nav class="bd-links collapse" id="bd-docs-nav">
+              <div class="bd-toc-item">
+                <h4 class="bd-toc-link">Web Annex</h4>
+              </div>
 
-<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
-<link rel="icon" href="/favicon.ico">
-<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#a0001e">
-</head>
-<body>
-<noscript>Please enable JavaScript to view this page.</noscript>
-<div id="redirect-message" style="display: none;">
-You must be logged in to view this page.
-</div>
-<div id="unauthorized-message" style="display: none;">
-You must be a Lambda School student to view this page.
-</div>
-<div id="content-wrapper" style="visibility: hidden;">
-<a id="skippy" class="sr-only sr-only-focusable" href="#content">
-<div class="container">
-<span class="skiplink-text">Skip to main content</span>
-</div>
-</a>
-<div class="mobile-menu">
-<div class="m-drop">
-<div class="mobile-row">
-<div class="header-row" style="padding: 3px 7px">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
-</svg></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
-</button>
-</div>
-</div>
-<div class="nav-row">
-<div class="results-container">
-<ul id="results-container" class="dropdown list-group"></ul>
-</div>
-<div id="mobile-course-menu" class="collapse nav-row">
-<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
-<nav class="bd-links">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Web Annex</h4>
-</div>
-
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recfwZvI7QhMa7xbG">
-1.&nbsp;&nbsp;User Interface and Git
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recl0IyzS2Vl89lZa/">
-User Interface
-</a>
-</li>
-<li>
-<a href="/webannex/module/rect59e95N6OSvoCd/">
-Git for Web Development
-</a>
-</li>
-<li>
-<a href="/webannex/module/recGvXyWT6AvGtMHR/">
-User Interface II
-</a>
-</li>
-<li>
-<a href="/webannex/module/recaVbBZhh8BTyMdM/">
-User Interface III
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recIXiQgpgMdJ81ms">
-2.&nbsp;&nbsp;Advanced CSS
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recuDrqSGpWcepCMs/">
-Responsive Design I
-</a>
-</li>
-<li>
-<a href="/webannex/module/recE3IqPtDxaVI0DW/">
-Responsive Design II
-</a>
-</li>
-<li>
-<a href="/webannex/module/reculyBhIYkuoBRqh/">
-Preprocessing I
-</a>
-</li>
-<li>
-<a href="/webannex/module/rec1hRu3bO6L0uxn2/">
-Preprocessing II
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
- <a class="bd-toc-link" href="/webannex/sprint/recclZwJxMU8kUngT">
-3.&nbsp;&nbsp;JavaScript Fundamentals
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recCT3KJYTIRYwQMh/">
-JavaScript I
-</a>
-</li>
-<li>
-<a href="/webannex/module/rec1oaBmEoSilO2yf/">
-JavaScript II
-</a>
-</li>
-<li>
-<a href="/webannex/module/rec0AWuNLezbpit7m/">
-Prototypes and Inheritance
-</a>
-</li>
-<li>
-<a href="/webannex/module/recyS588eOvVUKAMc/">
-Classes
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recRT8JKvbTiGaosk">
-4.&nbsp;&nbsp;Single Page Applications
-</a>
-<ul class="nav bd-sidenav">
-
-<li class="active bd-sidenav-active">
-<a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
-React Router I
-</a>
-</li>
-<li>
-<a href="/webannex/module/recYkF1FDilIedmwX/">
-React Router II
-</a>
-</li>
-<li>
-<a href="/webannex/module/rect081xiYT2cfxGF/">
-Form Management
-</a>
-</li>
-<li>
-<a href="/webannex/module/recKK5C7wV0WiECfr/">
-Advanced Form Management
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recozTHaHJe6L1ThN">
-5.&nbsp;&nbsp;Authentication and Testing
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recQD9lnhqWEFh6g4/">
-Introduction to Authentication
-</a>
-</li>
-<li>
-<a href="/webannex/module/recvIPgHwxF194c7q/">
-Using Sessions and Cookies
-</a>
-</li>
-<li>
-<a href="/webannex/module/reciCHdNjavSKaaLt/">
-Using JSON Web Tokens (JWT)
-</a>
-</li>
-<li>
-<a href="/webannex/module/reciXdxRA8zXJXDID/">
-Testing the Back End
-</a>
-</li>
-</ul>
-</div>
-</nav>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="main-container">
-<div class="sidebar-container bd-sidebar">
-<div class="docs-sidebar">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
-<ul id="results-container" class="dropdown list-group"></ul>
-<nav class="bd-links collapse" id="bd-docs-nav">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Web Annex</h4>
-</div>
-
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recfwZvI7QhMa7xbG">
-1.&nbsp;&nbsp;User Interface and Git
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recl0IyzS2Vl89lZa/">
-User Interface
-</a>
-</li>
-<li>
-<a href="/webannex/module/rect59e95N6OSvoCd/">
-Git for Web Development
-</a>
-</li>
-<li>
-<a href="/webannex/module/recGvXyWT6AvGtMHR/">
-User Interface II
-</a>
-</li>
-<li>
-<a href="/webannex/module/recaVbBZhh8BTyMdM/">
-User Interface III
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recIXiQgpgMdJ81ms">
-2.&nbsp;&nbsp;Advanced CSS
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recuDrqSGpWcepCMs/">
-Responsive Design I
-</a>
-</li>
-<li>
-<a href="/webannex/module/recE3IqPtDxaVI0DW/">
-Responsive Design II
-</a>
-</li>
-<li>
-<a href="/webannex/module/reculyBhIYkuoBRqh/">
-Preprocessing I
-</a>
-</li>
-<li>
-<a href="/webannex/module/rec1hRu3bO6L0uxn2/">
-Preprocessing II
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recclZwJxMU8kUngT">
-3.&nbsp;&nbsp;JavaScript Fundamentals
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recCT3KJYTIRYwQMh/">
-JavaScript I
-</a>
-</li>
-<li>
-<a href="/webannex/module/rec1oaBmEoSilO2yf/">
-JavaScript II
-</a>
-</li>
-<li>
-<a href="/webannex/module/rec0AWuNLezbpit7m/">
-Prototypes and Inheritance
-</a>
-</li>
-<li>
-<a href="/webannex/module/recyS588eOvVUKAMc/">
-Classes
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recRT8JKvbTiGaosk">
-4.&nbsp;&nbsp;Single Page Applications
-</a>
-<ul class="nav bd-sidenav">
-
-<li class="active bd-sidenav-active">
-<a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
-React Router I
-</a>
-</li>
-<li>
-<a href="/webannex/module/recYkF1FDilIedmwX/">
-React Router II
-</a>
-</li>
-<li>
-<a href="/webannex/module/rect081xiYT2cfxGF/">
-Form Management
-</a>
-</li>
-<li>
-<a href="/webannex/module/recKK5C7wV0WiECfr/">
-Advanced Form Management
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/webannex/sprint/recozTHaHJe6L1ThN">
-5.&nbsp;&nbsp;Authentication and Testing
-</a>
-<ul class="nav bd-sidenav">
-
-<li>
-<a href="/webannex/module/recQD9lnhqWEFh6g4/">
-Introduction to Authentication
-</a>
-</li>
- <li>
-<a href="/webannex/module/recvIPgHwxF194c7q/">
-Using Sessions and Cookies
-</a>
-</li>
-<li>
-<a href="/webannex/module/reciCHdNjavSKaaLt/">
-Using JSON Web Tokens (JWT)
-</a>
-</li>
-<li>
-<a href="/webannex/module/reciXdxRA8zXJXDID/">
-Testing the Back End
-</a>
-</li>
-</ul>
-</div>
-</nav>
-</div>
-</div>
-<main class="content-container flex-wrapper" role="main">
-<div class="sticky-nav">
-<div class="sprint-nav">
-<ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
-<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
-<li class="toc-entry toc-h2"><a href="#projects">Projects</a></li>
-<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
-</ul>
-</div>
-
-</div>
-<div class="wrapper limit-width">
-<div class="flex-wrapper">
-<div class="limit-width">
-<div class="jumbotron">
-<h1 class="bd-title" id="content">React Router I</h1>
-<span class="lead">
-<p class="bd-lead"></p>
-<p>Due to the insane popularity of JavaScript frameworks and what we call Single Page Applications (SPAs) we rely on our modern web browsers today for a lot more than we used to in the past. One of the common trends with SPAs to see today is the idea of <code class="highlighter-rouge">Client Side Routing</code> or the browser taking care of <em>“URL” history</em></p>
-</span>
-<strong>At the end of this module, you should be able to:</strong>
-<ul>
-<li>explain the difference between client-side routing and sever-side routing</li>
-<li>add React Router to an application and set up basic routing</li>
-<li>describe the `Route` component and set up routes within a React Application</li>
-<li>use the `Link` component to navigate between routes</li>
-<li>create dynamic routes using URL parameters and the `match` object</li>
-</ul>
-</div>
-<div class="alert alert-warning" role="alert">
-<h4>Pro Tip</h4>
-<p>Celebrate wrong answers, because that means someone’s about to learn!</p>
-</div>
-<h2 class="display-4">
-<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
-<p class="lead">Review each preclass resource before class.</p>
-<div class="preclass">
-<ul class="list-group list-group-flush">
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OrBKbQbobC0" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WSZkkZrquiA" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZLpRLXsPNHs" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nbwHVhkXuVk" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BNOjGb_DE38" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<a target="_blank" href="https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f">Client vs Server side Routing</a>
-</li>
-<li class="list-group-item">
-<a target="_blank" href="https://reacttraining.com/react-router/web/guides/quick-start">React Router Quick Start</a>
-<p>Examples w/ setup information.</p>
-</li>
-<li class="list-group-item">
-<a target="_blank" href="https://reacttraining.com/react-router/web/api/Route">The Route Component</a>
-<p>Documentation on the Route component</p>
-</li>
-<li class="list-group-item">
-<a target="_blank" href="https://reacttraining.com/react-router/web/api/match">The `match` object</a>
-</li>
-</ul>
-</div>
-<h2 class="display-4">
-<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
-<h4 class="mark mb-3 p-2">Learn to explain the difference between client-side routing and sever-side routing</h4>
-<p>Client-side routing is a JavaScript managed routing option. It offers control over your site URL &amp; content without necessarily having to wait for a server to respond with content. It is designed to mimic the appearance of traditional multi page websites.</p>
-<p>What is server-side routing? It’s the way the web has worked for decades. Every link click &amp; change of the address bar is a new request to a remote server. Every page load includes all page design elements, which must be re-downloaded. Including headers, navigation, sidebars, footers, etc. The server side routing method is not very efficient.</p>
-<h5>Overview</h5>
-<h3 id="what-is-routing">What is Routing?</h3>
-<p>Being able to access information based on a URL is not only a powerful tool at our disposal as end-users and developers, but it is also a standard. Routing is essential for handling a communication piece between computers. Routing is the way we navigate through websites and web applications today. When we click on a link on any web app or website, we are routing to a URL and requesting some information that lives somewhere else. You do this every day - just type <code class="highlighter-rouge">www.google.com</code> in a web browser, and you’ve utilized routing to get resources from a server.</p>
-<h3 id="what-is-a-server">What is a Server?</h3>
-<p>Before we talk about the <em>how</em> of routing, we need a solid definition of the <em>what</em>. In computer science, the term “server” refers to centralized resources on a network. These servers are physical devices, usually housed with other servers in large warehouses, that run the “behind the scenes” work of the internet like data storage. When you route, you’re routing to a server.</p>
-<p>You may be familiar with this type of server room from movies or TV. Each one of those boxes is a server, housing thousands of filing cabinets worth of data every couple of inches.</p>
-<p><img src="https://s3.envato.com/files/e967264f-38e7-4819-a943-83ddf54a4cea/inline_image_preview.jpg" alt="server room"></p>
-<p>Websites and Web-applications all rely heavily on information that is controlled by a server. We can’t get away from them, even when we hear buzz-words like “serverless” servers (hint: they’re not really server-less) we still rely on machines that communicate across channels to deliver content to us as end-users. Imagine if every time you clicked on something on a website, you had to request a resource from a server, and then the server had to go and retrieve that resource, and then that server had to send back some HTML/CSS and eventually some JavaScript in order to display the data on the screen. For a long time, this was how the web worked.This hasn’t entirely gone away, but we now have a slightly better way of doing things.</p>
-<p>This image does a really good job of showing some of the key differences between Client-side (traditional) and Server-side(SPA) routing.</p>
-<p><img src="https://imagebin.ca/40yMWdOcgBfd/IC690875.png" alt="Client vs server"></p>
-<h3 id="server-side-routing">Server-Side Routing</h3>
-<p>When we request information from a server (by clicking on a link or button), that server then sends back the document that was requested. For example, we click on a link and our URL changes to match the request, then the server goes and finds a <code class="highlighter-rouge">template</code> or some <code class="highlighter-rouge">HTML</code> file and sends it back across the world wide web to deliver that content to the user.</p>
-<p>All of this is handled and achieved on the server, and there are a few things that happen here. First, the server will refresh the web page that we’re looking at. This is because a new request was made for information, and the information given was a bunch of DOM elements, so we have to re-paint the web page. The information requested will be the only information given, no more, and no less. Because of this, we get the opportunity to load smaller portions of the webpage as opposed to requesting/loading the entire thing the whole time the way that we do in Client-Side Routing.</p>
-<p>When you (the client) request a lot of information, your computer and subsequent internet-related devices run through a lot of protocols. The process can be really slow, especially when bandwidth is an issue.</p>
-<h3 id="client-side-routing">Client-Side Routing</h3>
-<p>Now that we know about how things used to be done, we can talk about modern routing. Javascript and the other tools that we get to work with within Javascript are super sophisticated. Because of the arrival of tools like <a href="https://en.wikipedia.org/wiki/Chrome_V8">Google Chrome’s V8 Engine</a>, we can do a lot of things that weren’t previously possible. One of those new patterns is using JavaScript to maintain state (or memory) within our applications and use that memory to tell the Browser what to display when a resource is requested.</p>
-<p>When Routing is handled internally by the JavaScript that is already on the page, we achieve what is known as <code class="highlighter-rouge">Client-side routing</code>. And this tool is how we get things done today, especially in React! And the best part about this is that the page won’t refresh! The data is just there, displayed when we ask for it. How this works is that when a user clicks on a requested resource, instead of the client asking for that resource from the server via a URL, JavaScript will prevent this. We then get the resource (state) that is already available to us rendered out, and when using react, this happens beautifully through component-based architecture.</p>
-<h5>Follow Along</h5>
-<p>Read through this medium article <a href="https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f">here</a>. Look at the image above as you read for a visual representation of how both server-side routing and client-side routing work.</p>
-<h5>Challenge</h5>
-<p>On your own, write down some of the pros and cons for both server-side routing and client-side routing, and then write a paragraph of what you like about both, and which you would prefer to use and why. Submit this to your TL via slack.</p>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to add React Router to an application and set up basic routing</h4>
-<p>What is React Router? Well it’s as great as it sounds, a client side wrapper for React applications. This topic will teach out about React Router and how to get it set up in a React application.</p>
-<h5>Overview</h5>
-<p>React Router is declarative style routing for React applications. React Router is a versatile tool because it can be used for React and React Native as well. The best part of React Router is that it pushes the envelope for what a router should be on the client. Since it was built for use within a react ecosystem, it uses a <code class="highlighter-rouge">Reactive &amp; Declarative</code> context. Meaning that we get a much more dynamic routing experience when building and designing our Routes within our React Apps.</p>
-<h3 id="getting-started">Getting Started</h3>
-<p>Let’s look at how we can build out an application using some dynamic routing. To install React Router, all we have to do is use <code class="highlighter-rouge">yarn</code> to download the package from <code class="highlighter-rouge">npm</code>. In the past, we used to include the entire <code class="highlighter-rouge">react-router</code> package, but today we get to specify which target we’re building for (Web or Native). Because we’re building for web, we’re going to target the <code class="highlighter-rouge">react-router-dom</code> package and include it into one of our applications.</p>
-<p>Once you have it installed, all you need to do is include it as a package like any other <code class="highlighter-rouge">npm</code> package we’ve used to date.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { BrowserRouter as Router } from "react-router-dom";
-</code></pre></div></div>
-<p>Now we’re going to use Router as our <code class="highlighter-rouge">Base</code> component that will wrap our entire app. We’ll do this by wrapping our <code class="highlighter-rouge">&lt;App /&gt;</code> component that we pass to <code class="highlighter-rouge">ReactDOM.render</code>.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ReactDOM.render(
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/webannex/sprint/recfwZvI7QhMa7xbG"
+                >
+                  1.&nbsp;&nbsp;User Interface and Git
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/webannex/module/recl0IyzS2Vl89lZa/">
+                      User Interface
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/rect59e95N6OSvoCd/">
+                      Git for Web Development
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recGvXyWT6AvGtMHR/">
+                      User Interface II
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recaVbBZhh8BTyMdM/">
+                      User Interface III
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/webannex/sprint/recIXiQgpgMdJ81ms"
+                >
+                  2.&nbsp;&nbsp;Advanced CSS
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/webannex/module/recuDrqSGpWcepCMs/">
+                      Responsive Design I
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recE3IqPtDxaVI0DW/">
+                      Responsive Design II
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/reculyBhIYkuoBRqh/">
+                      Preprocessing I
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/rec1hRu3bO6L0uxn2/">
+                      Preprocessing II
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/webannex/sprint/recclZwJxMU8kUngT"
+                >
+                  3.&nbsp;&nbsp;JavaScript Fundamentals
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/webannex/module/recCT3KJYTIRYwQMh/">
+                      JavaScript I
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/rec1oaBmEoSilO2yf/">
+                      JavaScript II
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/rec0AWuNLezbpit7m/">
+                      Prototypes and Inheritance
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recyS588eOvVUKAMc/"> Classes </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/webannex/sprint/recRT8JKvbTiGaosk"
+                >
+                  4.&nbsp;&nbsp;Single Page Applications
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li class="active bd-sidenav-active">
+                    <a href="/webannex/module/rec2TJ1vrdfcnx2EG/">
+                      React Router I
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recYkF1FDilIedmwX/">
+                      React Router II
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/rect081xiYT2cfxGF/">
+                      Form Management
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recKK5C7wV0WiECfr/">
+                      Advanced Form Management
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a
+                  class="bd-toc-link"
+                  href="/webannex/sprint/recozTHaHJe6L1ThN"
+                >
+                  5.&nbsp;&nbsp;Authentication and Testing
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/webannex/module/recQD9lnhqWEFh6g4/">
+                      Introduction to Authentication
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/recvIPgHwxF194c7q/">
+                      Using Sessions and Cookies
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/reciCHdNjavSKaaLt/">
+                      Using JSON Web Tokens (JWT)
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/webannex/module/reciXdxRA8zXJXDID/">
+                      Testing the Back End
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <main class="content-container flex-wrapper" role="main">
+          <div class="sticky-nav">
+            <div class="sprint-nav">
+              <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+                <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+                <li class="toc-entry toc-h2">
+                  <a href="#projects">Projects</a>
+                </li>
+                <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="wrapper limit-width">
+            <div class="flex-wrapper">
+              <div class="limit-width">
+                <div class="jumbotron">
+                  <h1 class="bd-title" id="content">React Router I</h1>
+                  <span class="lead">
+                    <p class="bd-lead"></p>
+                    <p>
+                      Due to the insane popularity of JavaScript frameworks and
+                      what we call Single Page Applications (SPAs) we rely on
+                      our modern web browsers today for a lot more than we used
+                      to in the past. One of the common trends with SPAs to see
+                      today is the idea of
+                      <code class="highlighter-rouge">Client Side Routing</code>
+                      or the browser taking care of <em>“URL” history</em>
+                    </p>
+                  </span>
+                  <strong
+                    >At the end of this module, you should be able to:</strong
+                  >
+                  <ul>
+                    <li>
+                      explain the difference between client-side routing and
+                      sever-side routing
+                    </li>
+                    <li>
+                      add React Router to an application and set up basic
+                      routing
+                    </li>
+                    <li>
+                      describe the `Route` component and set up routes within a
+                      React Application
+                    </li>
+                    <li>use the `Link` component to navigate between routes</li>
+                    <li>
+                      create dynamic routes using URL parameters and the `match`
+                      object
+                    </li>
+                  </ul>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                  <h4>Pro Tip</h4>
+                  <p>
+                    Celebrate wrong answers, because that means someone’s about
+                    to learn!
+                  </p>
+                </div>
+                <h2 class="display-4">
+                  <a
+                    id="prepare"
+                    class="anchor"
+                    href="#prepare"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Prepare
+                </h2>
+                <p class="lead">Review each preclass resource before class.</p>
+                <div class="preclass">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/OrBKbQbobC0"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/WSZkkZrquiA"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/ZLpRLXsPNHs"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/nbwHVhkXuVk"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/BNOjGb_DE38"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <a
+                        target="_blank"
+                        href="https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f"
+                        >Client vs Server side Routing</a
+                      >
+                    </li>
+                    <li class="list-group-item">
+                      <a
+                        target="_blank"
+                        href="https://reacttraining.com/react-router/web/guides/quick-start"
+                        >React Router Quick Start</a
+                      >
+                      <p>Examples w/ setup information.</p>
+                    </li>
+                    <li class="list-group-item">
+                      <a
+                        target="_blank"
+                        href="https://reacttraining.com/react-router/web/api/Route"
+                        >The Route Component</a
+                      >
+                      <p>Documentation on the Route component</p>
+                    </li>
+                    <li class="list-group-item">
+                      <a
+                        target="_blank"
+                        href="https://reacttraining.com/react-router/web/api/match"
+                        >The `match` object</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <h2 class="display-4">
+                  <a id="learn" class="anchor" href="#learn" aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Learn
+                </h2>
+                <h4 class="mark mb-3 p-2">
+                  Learn to explain the difference between client-side routing
+                  and sever-side routing
+                </h4>
+                <p>
+                  Client-side routing is a JavaScript managed routing option. It
+                  offers control over your site URL &amp; content without
+                  necessarily having to wait for a server to respond with
+                  content. It is designed to mimic the appearance of traditional
+                  multi page websites.
+                </p>
+                <p>
+                  What is server-side routing? It’s the way the web has worked
+                  for decades. Every link click &amp; change of the address bar
+                  is a new request to a remote server. Every page load includes
+                  all page design elements, which must be re-downloaded.
+                  Including headers, navigation, sidebars, footers, etc. The
+                  server side routing method is not very efficient.
+                </p>
+                <h5>Overview</h5>
+                <h3 id="what-is-routing">What is Routing?</h3>
+                <p>
+                  Being able to access information based on a URL is not only a
+                  powerful tool at our disposal as end-users and developers, but
+                  it is also a standard. Routing is essential for handling a
+                  communication piece between computers. Routing is the way we
+                  navigate through websites and web applications today. When we
+                  click on a link on any web app or website, we are routing to a
+                  URL and requesting some information that lives somewhere else.
+                  You do this every day - just type
+                  <code class="highlighter-rouge">www.google.com</code> in a web
+                  browser, and you’ve utilized routing to get resources from a
+                  server.
+                </p>
+                <h3 id="what-is-a-server">What is a Server?</h3>
+                <p>
+                  Before we talk about the <em>how</em> of routing, we need a
+                  solid definition of the <em>what</em>. In computer science,
+                  the term “server” refers to centralized resources on a
+                  network. These servers are physical devices, usually housed
+                  with other servers in large warehouses, that run the “behind
+                  the scenes” work of the internet like data storage. When you
+                  route, you’re routing to a server.
+                </p>
+                <p>
+                  You may be familiar with this type of server room from movies
+                  or TV. Each one of those boxes is a server, housing thousands
+                  of filing cabinets worth of data every couple of inches.
+                </p>
+                <p>
+                  <img
+                    src="https://s3.envato.com/files/e967264f-38e7-4819-a943-83ddf54a4cea/inline_image_preview.jpg"
+                    alt="server room"
+                  />
+                </p>
+                <p>
+                  Websites and Web-applications all rely heavily on information
+                  that is controlled by a server. We can’t get away from them,
+                  even when we hear buzz-words like “serverless” servers (hint:
+                  they’re not really server-less) we still rely on machines that
+                  communicate across channels to deliver content to us as
+                  end-users. Imagine if every time you clicked on something on a
+                  website, you had to request a resource from a server, and then
+                  the server had to go and retrieve that resource, and then that
+                  server had to send back some HTML/CSS and eventually some
+                  JavaScript in order to display the data on the screen. For a
+                  long time, this was how the web worked.This hasn’t entirely
+                  gone away, but we now have a slightly better way of doing
+                  things.
+                </p>
+                <p>
+                  This image does a really good job of showing some of the key
+                  differences between Client-side (traditional) and
+                  Server-side(SPA) routing.
+                </p>
+                <p>
+                  <img
+                    src="https://imagebin.ca/40yMWdOcgBfd/IC690875.png"
+                    alt="Client vs server"
+                  />
+                </p>
+                <h3 id="server-side-routing">Server-Side Routing</h3>
+                <p>
+                  When we request information from a server (by clicking on a
+                  link or button), that server then sends back the document that
+                  was requested. For example, we click on a link and our URL
+                  changes to match the request, then the server goes and finds a
+                  <code class="highlighter-rouge">template</code> or some
+                  <code class="highlighter-rouge">HTML</code> file and sends it
+                  back across the world wide web to deliver that content to the
+                  user.
+                </p>
+                <p>
+                  All of this is handled and achieved on the server, and there
+                  are a few things that happen here. First, the server will
+                  refresh the web page that we’re looking at. This is because a
+                  new request was made for information, and the information
+                  given was a bunch of DOM elements, so we have to re-paint the
+                  web page. The information requested will be the only
+                  information given, no more, and no less. Because of this, we
+                  get the opportunity to load smaller portions of the webpage as
+                  opposed to requesting/loading the entire thing the whole time
+                  the way that we do in Client-Side Routing.
+                </p>
+                <p>
+                  When you (the client) request a lot of information, your
+                  computer and subsequent internet-related devices run through a
+                  lot of protocols. The process can be really slow, especially
+                  when bandwidth is an issue.
+                </p>
+                <h3 id="client-side-routing">Client-Side Routing</h3>
+                <p>
+                  Now that we know about how things used to be done, we can talk
+                  about modern routing. Javascript and the other tools that we
+                  get to work with within Javascript are super sophisticated.
+                  Because of the arrival of tools like
+                  <a href="https://en.wikipedia.org/wiki/Chrome_V8"
+                    >Google Chrome’s V8 Engine</a
+                  >, we can do a lot of things that weren’t previously possible.
+                  One of those new patterns is using JavaScript to maintain
+                  state (or memory) within our applications and use that memory
+                  to tell the Browser what to display when a resource is
+                  requested.
+                </p>
+                <p>
+                  When Routing is handled internally by the JavaScript that is
+                  already on the page, we achieve what is known as
+                  <code class="highlighter-rouge">Client-side routing</code>.
+                  And this tool is how we get things done today, especially in
+                  React! And the best part about this is that the page won’t
+                  refresh! The data is just there, displayed when we ask for it.
+                  How this works is that when a user clicks on a requested
+                  resource, instead of the client asking for that resource from
+                  the server via a URL, JavaScript will prevent this. We then
+                  get the resource (state) that is already available to us
+                  rendered out, and when using react, this happens beautifully
+                  through component-based architecture.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Read through this medium article
+                  <a
+                    href="https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f"
+                    >here</a
+                  >. Look at the image above as you read for a visual
+                  representation of how both server-side routing and client-side
+                  routing work.
+                </p>
+                <h5>Challenge</h5>
+                <p>
+                  On your own, write down some of the pros and cons for both
+                  server-side routing and client-side routing, and then write a
+                  paragraph of what you like about both, and which you would
+                  prefer to use and why. Submit this to your TL via slack.
+                </p>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to add React Router to an application and set up basic
+                  routing
+                </h4>
+                <p>
+                  What is React Router? Well it’s as great as it sounds, a
+                  client side wrapper for React applications. This topic will
+                  teach out about React Router and how to get it set up in a
+                  React application.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  React Router is declarative style routing for React
+                  applications. React Router is a versatile tool because it can
+                  be used for React and React Native as well. The best part of
+                  React Router is that it pushes the envelope for what a router
+                  should be on the client. Since it was built for use within a
+                  react ecosystem, it uses a
+                  <code class="highlighter-rouge"
+                    >Reactive &amp; Declarative</code
+                  >
+                  context. Meaning that we get a much more dynamic routing
+                  experience when building and designing our Routes within our
+                  React Apps.
+                </p>
+                <h3 id="getting-started">Getting Started</h3>
+                <p>
+                  Let’s look at how we can build out an application using some
+                  dynamic routing. To install React Router, all we have to do is
+                  use <code class="highlighter-rouge">yarn</code> to download
+                  the package from <code class="highlighter-rouge">npm</code>.
+                  In the past, we used to include the entire
+                  <code class="highlighter-rouge">react-router</code> package,
+                  but today we get to specify which target we’re building for
+                  (Web or Native). Because we’re building for web, we’re going
+                  to target the
+                  <code class="highlighter-rouge">react-router-dom</code>
+                  package and include it into one of our applications.
+                </p>
+                <p>
+                  Once you have it installed, all you need to do is include it
+                  as a package like any other
+                  <code class="highlighter-rouge">npm</code> package we’ve used
+                  to date.
+                </p>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>import { BrowserRouter as Router } from "react-router-dom";
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Now we’re going to use Router as our
+                  <code class="highlighter-rouge">Base</code> component that
+                  will wrap our entire app. We’ll do this by wrapping our
+                  <code class="highlighter-rouge">&lt;App /&gt;</code> component
+                  that we pass to
+                  <code class="highlighter-rouge">ReactDOM.render</code>.
+                </p>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>ReactDOM.render(
   &lt; Router&gt;
     &lt;App /&gt;
   &lt;/Router&gt;,
   document.getElementById("root")
 );
-</code></pre></div></div>
-<p>Now, if we inspect our page and look into the React Dev Tools, we can find some fun things at our disposal, that will eventually get passed down to all other <code class="highlighter-rouge">Routes</code> (as we define them) in our application.</p>
-<p>Notice how our React elements are now all wrapped within a <code class="highlighter-rouge">BrowserRouter</code> and a <code class="highlighter-rouge">Router</code> component.</p>
-<p><img src="https://ibin.co/3xOQ4G9zzQTA.png" alt="BrowserRouter wrapper"></p>
-<p>Notice how on <code class="highlighter-rouge">Props</code> and <code class="highlighter-rouge">State</code> we have some really neat things that come out of the box with React Router. We’ll go into further detail on these objects later, but for now, note that any time we register a route, we’ll gain access to these props/state objects <code class="highlighter-rouge">history</code> and <code class="highlighter-rouge">match</code>. This is the power of the Router. It wraps our app, but only the Routes will receive these necessities as necessary.</p>
-<p><img src="https://ibin.co/3xOPoxdrBHPL.png" alt="Props and State"></p>
-<p>This is all we have to do to install the Router. We get everything we need this way.</p>
-<h5>Follow Along</h5>
-<p>Let’s create an Avenger’s React SPA app by using react-router.</p>
-<ul>
-<li>Start a project using <code class="highlighter-rouge">yarn create react-app avengers</code>
-</li>
-<li>Add react-router with <code class="highlighter-rouge">yarn add react-router-dom</code> or <code class="highlighter-rouge">npm install -s react-router-dom</code>
-</li>
-<li>In <code class="highlighter-rouge">app.js</code> import the <code class="highlighter-rouge">BrowserRouter</code> component and wrap your app with it:</li>
-</ul>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">BrowserRouter</span> <span class="k">as</span> <span class="nx">Router</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span><span class="p">;</span>
-</code></pre></div></div>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Now, if we inspect our page and look into the React Dev Tools,
+                  we can find some fun things at our disposal, that will
+                  eventually get passed down to all other
+                  <code class="highlighter-rouge">Routes</code> (as we define
+                  them) in our application.
+                </p>
+                <p>
+                  Notice how our React elements are now all wrapped within a
+                  <code class="highlighter-rouge">BrowserRouter</code> and a
+                  <code class="highlighter-rouge">Router</code> component.
+                </p>
+                <p>
+                  <img
+                    src="https://ibin.co/3xOQ4G9zzQTA.png"
+                    alt="BrowserRouter wrapper"
+                  />
+                </p>
+                <p>
+                  Notice how on <code class="highlighter-rouge">Props</code> and
+                  <code class="highlighter-rouge">State</code> we have some
+                  really neat things that come out of the box with React Router.
+                  We’ll go into further detail on these objects later, but for
+                  now, note that any time we register a route, we’ll gain access
+                  to these props/state objects
+                  <code class="highlighter-rouge">history</code> and
+                  <code class="highlighter-rouge">match</code>. This is the
+                  power of the Router. It wraps our app, but only the Routes
+                  will receive these necessities as necessary.
+                </p>
+                <p>
+                  <img
+                    src="https://ibin.co/3xOPoxdrBHPL.png"
+                    alt="Props and State"
+                  />
+                </p>
+                <p>
+                  This is all we have to do to install the Router. We get
+                  everything we need this way.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Let’s create an Avenger’s React SPA app by using react-router.
+                </p>
+                <ul>
+                  <li>
+                    Start a project using
+                    <code class="highlighter-rouge"
+                      >yarn create react-app avengers</code
+                    >
+                  </li>
+                  <li>
+                    Add react-router with
+                    <code class="highlighter-rouge"
+                      >yarn add react-router-dom</code
+                    >
+                    or
+                    <code class="highlighter-rouge"
+                      >npm install -s react-router-dom</code
+                    >
+                  </li>
+                  <li>
+                    In <code class="highlighter-rouge">app.js</code> import the
+                    <code class="highlighter-rouge">BrowserRouter</code>
+                    component and wrap your app with it:
+                  </li>
+                </ul>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="p">{</span> <span class="nx">BrowserRouter</span> <span class="k">as</span> <span class="nx">Router</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span><span class="p">;</span>
+</code></pre>
+                  </div>
+                </div>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
   <span class="o">&lt;</span> <span class="nx">Router</span><span class="o">&gt;</span>
     <span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span>
   <span class="o">&lt;</span><span class="sr">/Router&gt;</span><span class="err">,
 </span>  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">root</span><span class="dl">"</span><span class="p">)</span>
 <span class="p">);</span>
-</code></pre></div></div>
-<h5>Challenge</h5>
-<p>Start up a new React app called friends, install <code class="highlighter-rouge">react-router-dom</code> and get it wired up to use React Router. Inspect your app in the browser with the React tools and make sure you see your app wrapped in the <code class="highlighter-rouge">Router</code> component (reference the image above).</p>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://reacttraining.com/react-router/web/guides/quick-start" target="blank_">React Router 4 Quick Start Guide</a><br> </li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to describe the `Route` component and set up routes within a React Application</h4>
-<p>The way we declaratively set up our routes with in our applications all starts with the <code class="highlighter-rouge">Route</code> Component. Once you understand how to set up you which components will be mounted when which paths in our URL’s are being requested, you’ll be off to a good start with React Router.</p>
-<h5>Overview</h5>
-<p>Routes are a way of getting to a destination.</p>
-<p>To set up React Router, set up Routes by declaring what components will be mounted when certain URL paths are met. This step happens <em>after</em> we’ve wrapped our <code class="highlighter-rouge">Root</code> component in the <code class="highlighter-rouge">Router</code> or <code class="highlighter-rouge">BrowserRouter</code> component. The best part of React Router is that you can do this at pretty much any point during your development process, whereas previously you had to declare your routes early on in the development cycle. What this allows us to do, is figure out more important things without allowing routing to get in the way. React Router is a super useful tool for this reason!</p>
-<p>Once you have React Router installed by using <code class="highlighter-rouge">yarn add react-router-dom</code> , you can import the <code class="highlighter-rouge">Route</code> Component and use it within your application.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Route</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span><span class="p">;</span>
-</code></pre></div></div>
-<p>The <code class="highlighter-rouge">Route</code> component declares what <code class="highlighter-rouge">components</code> will be <em>mounted</em> based on what <code class="highlighter-rouge">URL's</code> the user requests. The best part about this process is that we get a chance to do this in a very <code class="highlighter-rouge">react</code> way. Lets picture a component <code class="highlighter-rouge">Users</code> that will display a list of users in your system when the URL <code class="highlighter-rouge">www.coolestapp.com/users</code> is requested. The <code class="highlighter-rouge">Route</code> component takes in a few props; the first is the URL <code class="highlighter-rouge">path</code> where the Route component will trigger. Next is the <code class="highlighter-rouge">component</code> prop. This is the component that you want React to <em>mount</em> when the URL matches the requested <code class="highlighter-rouge">path</code>. So in our case, when <code class="highlighter-rouge">/users</code> is requested, the <code class="highlighter-rouge">Users</code> component will be mounted.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/users</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">Users</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
-</span></code></pre></div></div>
-<p>This route will take us to the <code class="highlighter-rouge">users</code> component whenever the <code class="highlighter-rouge">/users</code> URL is requested within our application. You may be thinking to yourself at this point, is that really it? The answer is: yes, it is! It’s really simple to declare routes and components that will be mounted when the routes are requested. Think of your <code class="highlighter-rouge">Route</code> components asking you this question every single time you set one up: what <strong>component</strong> do you want <strong>mounted</strong> when a user asks for what <strong>URL path</strong>?</p>
-<p>If you use this tool, you’ll hit each piece of your application, and how a user might interact with each component.</p>
-<p>Now let’s see this all in action in a larger portion of an application. Picture an app that has 3 major components that will need to be rendered as part of a <code class="highlighter-rouge">Navigation</code> system: <code class="highlighter-rouge">Home</code>, <code class="highlighter-rouge">Contact</code>, and <code class="highlighter-rouge">About</code>. Each of these three components will need to be rendered when a user requests the <code class="highlighter-rouge">"/"</code>, <code class="highlighter-rouge">"/contact"</code> and <code class="highlighter-rouge">"/about"</code> paths in our app. So, let us refer to our question above: what component do you want mounted when a user asks for what URL path? In our case, we want the following:</p>
-<p>A user requests <code class="highlighter-rouge">/</code> so we will mount the <code class="highlighter-rouge">Home</code> component
-A user requests <code class="highlighter-rouge">/contact</code> so we shall mount the <code class="highlighter-rouge">Contact</code> component
-A user requests <code class="highlighter-rouge">/about</code> so let us render the <code class="highlighter-rouge">About</code> component</p>
-<p>Now that we have a framework let’s practice with it.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">Home</span><span class="p">}</span><span class="sr">/</span><span class="err">&gt;
+</code></pre>
+                  </div>
+                </div>
+                <h5>Challenge</h5>
+                <p>
+                  Start up a new React app called friends, install
+                  <code class="highlighter-rouge">react-router-dom</code> and
+                  get it wired up to use React Router. Inspect your app in the
+                  browser with the React tools and make sure you see your app
+                  wrapped in the
+                  <code class="highlighter-rouge">Router</code> component
+                  (reference the image above).
+                </p>
+                <h5>Dig Deeper</h5>
+                <ul>
+                  <li>
+                    <a
+                      href="https://reacttraining.com/react-router/web/guides/quick-start"
+                      target="blank_"
+                      >React Router 4 Quick Start Guide</a
+                    ><br />
+                  </li>
+                </ul>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to describe the `Route` component and set up routes
+                  within a React Application
+                </h4>
+                <p>
+                  The way we declaratively set up our routes with in our
+                  applications all starts with the
+                  <code class="highlighter-rouge">Route</code> Component. Once
+                  you understand how to set up you which components will be
+                  mounted when which paths in our URL’s are being requested,
+                  you’ll be off to a good start with React Router.
+                </p>
+                <h5>Overview</h5>
+                <p>Routes are a way of getting to a destination.</p>
+                <p>
+                  To set up React Router, set up Routes by declaring what
+                  components will be mounted when certain URL paths are met.
+                  This step happens <em>after</em> we’ve wrapped our
+                  <code class="highlighter-rouge">Root</code> component in the
+                  <code class="highlighter-rouge">Router</code> or
+                  <code class="highlighter-rouge">BrowserRouter</code>
+                  component. The best part of React Router is that you can do
+                  this at pretty much any point during your development process,
+                  whereas previously you had to declare your routes early on in
+                  the development cycle. What this allows us to do, is figure
+                  out more important things without allowing routing to get in
+                  the way. React Router is a super useful tool for this reason!
+                </p>
+                <p>
+                  Once you have React Router installed by using
+                  <code class="highlighter-rouge"
+                    >yarn add react-router-dom</code
+                  > , you can import the
+                  <code class="highlighter-rouge">Route</code> Component and use
+                  it within your application.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Route</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span><span class="p">;</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  The <code class="highlighter-rouge">Route</code> component
+                  declares what
+                  <code class="highlighter-rouge">components</code> will be
+                  <em>mounted</em> based on what
+                  <code class="highlighter-rouge">URL's</code> the user
+                  requests. The best part about this process is that we get a
+                  chance to do this in a very
+                  <code class="highlighter-rouge">react</code> way. Lets picture
+                  a component <code class="highlighter-rouge">Users</code> that
+                  will display a list of users in your system when the URL
+                  <code class="highlighter-rouge"
+                    >www.coolestapp.com/users</code
+                  >
+                  is requested. The
+                  <code class="highlighter-rouge">Route</code> component takes
+                  in a few props; the first is the URL
+                  <code class="highlighter-rouge">path</code> where the Route
+                  component will trigger. Next is the
+                  <code class="highlighter-rouge">component</code> prop. This is
+                  the component that you want React to <em>mount</em> when the
+                  URL matches the requested
+                  <code class="highlighter-rouge">path</code>. So in our case,
+                  when <code class="highlighter-rouge">/users</code> is
+                  requested, the
+                  <code class="highlighter-rouge">Users</code> component will be
+                  mounted.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/users</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">Users</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span></code></pre>
+                  </div>
+                </div>
+                <p>
+                  This route will take us to the
+                  <code class="highlighter-rouge">users</code> component
+                  whenever the <code class="highlighter-rouge">/users</code> URL
+                  is requested within our application. You may be thinking to
+                  yourself at this point, is that really it? The answer is: yes,
+                  it is! It’s really simple to declare routes and components
+                  that will be mounted when the routes are requested. Think of
+                  your <code class="highlighter-rouge">Route</code> components
+                  asking you this question every single time you set one up:
+                  what <strong>component</strong> do you want
+                  <strong>mounted</strong> when a user asks for what
+                  <strong>URL path</strong>?
+                </p>
+                <p>
+                  If you use this tool, you’ll hit each piece of your
+                  application, and how a user might interact with each
+                  component.
+                </p>
+                <p>
+                  Now let’s see this all in action in a larger portion of an
+                  application. Picture an app that has 3 major components that
+                  will need to be rendered as part of a
+                  <code class="highlighter-rouge">Navigation</code> system:
+                  <code class="highlighter-rouge">Home</code>,
+                  <code class="highlighter-rouge">Contact</code>, and
+                  <code class="highlighter-rouge">About</code>. Each of these
+                  three components will need to be rendered when a user requests
+                  the <code class="highlighter-rouge">"/"</code>,
+                  <code class="highlighter-rouge">"/contact"</code> and
+                  <code class="highlighter-rouge">"/about"</code> paths in our
+                  app. So, let us refer to our question above: what component do
+                  you want mounted when a user asks for what URL path? In our
+                  case, we want the following:
+                </p>
+                <p>
+                  A user requests <code class="highlighter-rouge">/</code> so we
+                  will mount the
+                  <code class="highlighter-rouge">Home</code> component A user
+                  requests <code class="highlighter-rouge">/contact</code> so we
+                  shall mount the
+                  <code class="highlighter-rouge">Contact</code> component A
+                  user requests <code class="highlighter-rouge">/about</code> so
+                  let us render the
+                  <code class="highlighter-rouge">About</code> component
+                </p>
+                <p>Now that we have a framework let’s practice with it.</p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">Home</span><span class="p">}</span><span class="sr">/</span><span class="err">&gt;
 </span><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/contact</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">Contact</span><span class="p">}</span><span class="sr">/</span><span class="err">&gt;
 </span><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/about</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">About</span><span class="p">}</span><span class="sr">/</span><span class="err">&gt;
-</span></code></pre></div></div>
-<h4 id="the-exact-prop">The <code class="highlighter-rouge">exact</code> prop</h4>
-<p>And there we have it, we have successfully declared our Routes within our application. But we have a bit of a problem. A problem that is easily solved. If you’re looking at the React Router documentation, you may have already come across the <code class="highlighter-rouge">exact</code> prop, which is provided to us by the React Router API. This prop is a very important feature of the <code class="highlighter-rouge">Route</code> Component. It comes to us because of the way that the package was built. Let’s consider how this whole thing works.</p>
-<p>When it comes down to it, we are using an API that already exists for us as web developers. And that is the <a href="https://developer.mozilla.org/en-US/docs/Web/API/History">History</a> API that is built into our web browser. If the URL <code class="highlighter-rouge">/</code> and <code class="highlighter-rouge">/about</code> are both requested, and we have an algorithm to match the characters in the sequence <code class="highlighter-rouge">/</code>, <code class="highlighter-rouge">/about</code>. Both the <code class="highlighter-rouge">/</code> and <code class="highlighter-rouge">/12</code> will match. Because of the way this is set up, if we request the route <code class="highlighter-rouge">/about</code>, then both the <code class="highlighter-rouge">Home</code> Component and the <code class="highlighter-rouge">About</code> Component will be rendered. React Router anticipates this, and the <code class="highlighter-rouge">exact</code> prop to the <code class="highlighter-rouge">Route</code> component solves the problem.</p>
-<p>By placing <code class="highlighter-rouge">exact</code> on a <code class="highlighter-rouge">&lt;Route /&gt;</code> component, you are saying that the specific path will only trigger if it matches exactly the path requested. This defaults to false, so by simply including the <code class="highlighter-rouge">exact</code> prop on your <code class="highlighter-rouge">Route</code> component, it will set it to true and only mount our <code class="highlighter-rouge">Home</code> component when the specific path <code class="highlighter-rouge">/</code> is requested and not when <code class="highlighter-rouge">/about</code> is requested. <a href="https://reacttraining.com/react-router/web/api/Route/exact-bool">Here</a> is a link to the docs. And here is an example of how this will work.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">exact</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">Home</span><span class="p">}</span><span class="sr">/</span><span class="err">&gt;
+</span></code></pre>
+                  </div>
+                </div>
+                <h4 id="the-exact-prop">
+                  The <code class="highlighter-rouge">exact</code> prop
+                </h4>
+                <p>
+                  And there we have it, we have successfully declared our Routes
+                  within our application. But we have a bit of a problem. A
+                  problem that is easily solved. If you’re looking at the React
+                  Router documentation, you may have already come across the
+                  <code class="highlighter-rouge">exact</code> prop, which is
+                  provided to us by the React Router API. This prop is a very
+                  important feature of the
+                  <code class="highlighter-rouge">Route</code> Component. It
+                  comes to us because of the way that the package was built.
+                  Let’s consider how this whole thing works.
+                </p>
+                <p>
+                  When it comes down to it, we are using an API that already
+                  exists for us as web developers. And that is the
+                  <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/API/History"
+                    >History</a
+                  >
+                  API that is built into our web browser. If the URL
+                  <code class="highlighter-rouge">/</code> and
+                  <code class="highlighter-rouge">/about</code> are both
+                  requested, and we have an algorithm to match the characters in
+                  the sequence <code class="highlighter-rouge">/</code>,
+                  <code class="highlighter-rouge">/about</code>. Both the
+                  <code class="highlighter-rouge">/</code> and
+                  <code class="highlighter-rouge">/12</code> will match. Because
+                  of the way this is set up, if we request the route
+                  <code class="highlighter-rouge">/about</code>, then both the
+                  <code class="highlighter-rouge">Home</code> Component and the
+                  <code class="highlighter-rouge">About</code> Component will be
+                  rendered. React Router anticipates this, and the
+                  <code class="highlighter-rouge">exact</code> prop to the
+                  <code class="highlighter-rouge">Route</code> component solves
+                  the problem.
+                </p>
+                <p>
+                  By placing <code class="highlighter-rouge">exact</code> on a
+                  <code class="highlighter-rouge">&lt;Route /&gt;</code>
+                  component, you are saying that the specific path will only
+                  trigger if it matches exactly the path requested. This
+                  defaults to false, so by simply including the
+                  <code class="highlighter-rouge">exact</code> prop on your
+                  <code class="highlighter-rouge">Route</code> component, it
+                  will set it to true and only mount our
+                  <code class="highlighter-rouge">Home</code> component when the
+                  specific path <code class="highlighter-rouge">/</code> is
+                  requested and not when
+                  <code class="highlighter-rouge">/about</code> is requested.
+                  <a
+                    href="https://reacttraining.com/react-router/web/api/Route/exact-bool"
+                    >Here</a
+                  >
+                  is a link to the docs. And here is an example of how this will
+                  work.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">exact</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">Home</span><span class="p">}</span><span class="sr">/</span><span class="err">&gt;
 </span><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/contact</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">Contact</span><span class="p">}</span><span class="sr">/</span><span class="err">&gt;
 </span><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/about</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">About</span><span class="p">}</span><span class="sr">/</span><span class="err">&gt;
-</span></code></pre></div></div>
-<p>This is the same as before only now our <code class="highlighter-rouge">Home</code> component route has the <code class="highlighter-rouge">exact</code> prop added to it. We have now solved the problem.</p>
-<h5>Follow Along</h5>
-<p>Time to set up routes for our Avenger’s app. We want to have a home page, and a list page. Later we’ll add an Avenger page. So our app routes are going to be organized something like this:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A user requests `/` so we will mount the `Home` component
+</span></code></pre>
+                  </div>
+                </div>
+                <p>
+                  This is the same as before only now our
+                  <code class="highlighter-rouge">Home</code> component route
+                  has the <code class="highlighter-rouge">exact</code> prop
+                  added to it. We have now solved the problem.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Time to set up routes for our Avenger’s app. We want to have a
+                  home page, and a list page. Later we’ll add an Avenger page.
+                  So our app routes are going to be organized something like
+                  this:
+                </p>
+                <div class="highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code>A user requests `/` so we will mount the `Home` component
 A user requests `/avengers` so we shall mount the `AvengerList` component
-</code></pre></div></div>
-<p>Create a <code class="highlighter-rouge">components</code> directory. Then inside that folder, create a <code class="highlighter-rouge">Home.js</code> file and an <code class="highlighter-rouge">AvengersList.js</code> file. For now, just render a header element with “Home” and “Avenger List” in the respective components.</p>
-<p>Import those new components into <code class="highlighter-rouge">App.js</code>. Let’s create the routes for our app. We will need to import the <code class="highlighter-rouge">Route</code> component.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Route</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span><span class="p">;</span>
-</code></pre></div></div>
-<p>Now render two route’s (and don’t forget to add the <code class="highlighter-rouge">exact</code> prop to the Home route:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">exact</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">Home</span><span class="p">}</span><span class="sr">/</span><span class="err">&gt;
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Create a
+                  <code class="highlighter-rouge">components</code> directory.
+                  Then inside that folder, create a
+                  <code class="highlighter-rouge">Home.js</code> file and an
+                  <code class="highlighter-rouge">AvengersList.js</code> file.
+                  For now, just render a header element with “Home” and “Avenger
+                  List” in the respective components.
+                </p>
+                <p>
+                  Import those new components into
+                  <code class="highlighter-rouge">App.js</code>. Let’s create
+                  the routes for our app. We will need to import the
+                  <code class="highlighter-rouge">Route</code> component.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Route</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span><span class="p">;</span>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  Now render two route’s (and don’t forget to add the
+                  <code class="highlighter-rouge">exact</code> prop to the Home
+                  route:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">exact</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">Home</span><span class="p">}</span><span class="sr">/</span><span class="err">&gt;
 </span><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/avengers</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">AvengerList</span><span class="p">}</span><span class="sr">/</span><span class="err">&gt;
-</span></code></pre></div></div>
-<p>Go to both url’s and make sure the components are rendering correctly.</p>
-<p>Build out your <code class="highlighter-rouge">Home</code> component however you would like.</p>
-<p>Add <a href="https://gist.github.com/dustinmyers/b2a904870c84a0339002458f972b3398">this data</a> to your app and display the list of Avengers in the list component.</p>
-<p>Add <a href="https://gist.github.com/dustinmyers/35ad6751b5bd683b441faaf167dfa7d3">this</a> to your .css file to use my styles, or style it up how you’d like on your own.</p>
-<h5>Challenge</h5>
-<p>In your friends app, add a new <code class="highlighter-rouge">Home</code> component and a new <code class="highlighter-rouge">Friends</code> component. Then add a route for each component. Test your app in the browser to make sure both apps are rendering at the correct route. Build out your <code class="highlighter-rouge">Home</code> component and then render out a list of friends data in the <code class="highlighter-rouge">Friends</code> component.</p>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to use the `Link` component to navigate between routes</h4>
-<p>In order for our code to work with client-side routing, we can’t use anchor tags <code class="highlighter-rouge">&lt;a href="..."&gt;</code>. Well, React Router has a Component to the rescue!</p>
-<p>The <code class="highlighter-rouge">Link</code> Component!</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Before:</span>
+</span></code></pre>
+                  </div>
+                </div>
+                <p>
+                  Go to both url’s and make sure the components are rendering
+                  correctly.
+                </p>
+                <p>
+                  Build out your
+                  <code class="highlighter-rouge">Home</code> component however
+                  you would like.
+                </p>
+                <p>
+                  Add
+                  <a
+                    href="https://gist.github.com/dustinmyers/b2a904870c84a0339002458f972b3398"
+                    >this data</a
+                  >
+                  to your app and display the list of Avengers in the list
+                  component.
+                </p>
+                <p>
+                  Add
+                  <a
+                    href="https://gist.github.com/dustinmyers/35ad6751b5bd683b441faaf167dfa7d3"
+                    >this</a
+                  >
+                  to your .css file to use my styles, or style it up how you’d
+                  like on your own.
+                </p>
+                <h5>Challenge</h5>
+                <p>
+                  In your friends app, add a new
+                  <code class="highlighter-rouge">Home</code> component and a
+                  new <code class="highlighter-rouge">Friends</code> component.
+                  Then add a route for each component. Test your app in the
+                  browser to make sure both apps are rendering at the correct
+                  route. Build out your
+                  <code class="highlighter-rouge">Home</code> component and then
+                  render out a list of friends data in the
+                  <code class="highlighter-rouge">Friends</code> component.
+                </p>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to use the `Link` component to navigate between routes
+                </h4>
+                <p>
+                  In order for our code to work with client-side routing, we
+                  can’t use anchor tags
+                  <code class="highlighter-rouge">&lt;a href="..."&gt;</code>.
+                  Well, React Router has a Component to the rescue!
+                </p>
+                <p>
+                  The <code class="highlighter-rouge">Link</code> Component!
+                </p>
+                <div class="language-javascript highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="c1">// Before:</span>
 <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="dl">"</span><span class="s2">/articles</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">Articles</span><span class="o">&lt;</span><span class="sr">/a</span><span class="err">&gt;
 </span><span class="c1">// After:</span>
 <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/articles</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">Articles</span><span class="o">&lt;</span><span class="sr">/Link</span><span class="err">&gt;
-</span></code></pre></div></div>
-<p>Essentially you can think of <code class="highlighter-rouge">Link</code> as a special version of the anchor <code class="highlighter-rouge">&lt;a&gt;</code> tag. (It’s so similar, it uses an anchor under the hood.)
-The main benefit of <code class="highlighter-rouge">&lt;Link to="..."&gt;</code> is to help us stay within the realm of our “client-side app.”</p>
-<h5>Overview</h5>
-<p>The link component can be included just like any other component in your application. This will produce an anchor tag that will link to a pre-defined component of your choice. Remember, if we set up our routes properly, we’ll be able to use the anchor component to navigate our browsers to the path where a component can be mounted. We can think of our <code class="highlighter-rouge">Route</code> component as the boat on the ocean, and the <code class="highlighter-rouge">Link</code> as the wind and sails that make that boat move.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Link</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span>
+</span></code></pre>
+                  </div>
+                </div>
+                <p>
+                  Essentially you can think of
+                  <code class="highlighter-rouge">Link</code> as a special
+                  version of the anchor
+                  <code class="highlighter-rouge">&lt;a&gt;</code> tag. (It’s so
+                  similar, it uses an anchor under the hood.) The main benefit
+                  of
+                  <code class="highlighter-rouge">&lt;Link to="..."&gt;</code>
+                  is to help us stay within the realm of our “client-side app.”
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  The link component can be included just like any other
+                  component in your application. This will produce an anchor tag
+                  that will link to a pre-defined component of your choice.
+                  Remember, if we set up our routes properly, we’ll be able to
+                  use the anchor component to navigate our browsers to the path
+                  where a component can be mounted. We can think of our
+                  <code class="highlighter-rouge">Route</code> component as the
+                  boat on the ocean, and the
+                  <code class="highlighter-rouge">Link</code> as the wind and
+                  sails that make that boat move.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Link</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span>
 
 <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/about</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">About</span><span class="o">&lt;</span><span class="sr">/Link</span><span class="err">&gt;
-</span></code></pre></div></div>
-<p>As is the case with all of the components that we get from React Router, <code class="highlighter-rouge">Link</code> will take a few props that we can use to control the component and allow it to work for us.</p>
-<p>First, <code class="highlighter-rouge">Link</code> takes the <code class="highlighter-rouge">to</code> prop. Notice in the above code block that <code class="highlighter-rouge">to</code> is a string that looks like a URL. This is just like the <code class="highlighter-rouge">href="/about"</code> attribute on the <code class="highlighter-rouge">anchor</code> tag. This is how we navigate with React Router.</p>
-<h5>Follow Along</h5>
-<p>Let’s add a navigation bar to the avengers app. We’ll use <code class="highlighter-rouge">Link</code> to make a way to route to the <code class="highlighter-rouge">Home</code> component and the <code class="highlighter-rouge">AvengerList</code> component. We won’t make one for the <code class="highlighter-rouge">AvengerPage</code> component because we won’t have a way to tell it which avenger we want to route to.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">ul</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">navbar</span><span class="dl">"</span><span class="o">&gt;</span>
+</span></code></pre>
+                  </div>
+                </div>
+                <p>
+                  As is the case with all of the components that we get from
+                  React Router, <code class="highlighter-rouge">Link</code> will
+                  take a few props that we can use to control the component and
+                  allow it to work for us.
+                </p>
+                <p>
+                  First, <code class="highlighter-rouge">Link</code> takes the
+                  <code class="highlighter-rouge">to</code> prop. Notice in the
+                  above code block that
+                  <code class="highlighter-rouge">to</code> is a string that
+                  looks like a URL. This is just like the
+                  <code class="highlighter-rouge">href="/about"</code> attribute
+                  on the <code class="highlighter-rouge">anchor</code> tag. This
+                  is how we navigate with React Router.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Let’s add a navigation bar to the avengers app. We’ll use
+                  <code class="highlighter-rouge">Link</code> to make a way to
+                  route to the
+                  <code class="highlighter-rouge">Home</code> component and the
+                  <code class="highlighter-rouge">AvengerList</code> component.
+                  We won’t make one for the
+                  <code class="highlighter-rouge">AvengerPage</code> component
+                  because we won’t have a way to tell it which avenger we want
+                  to route to.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="o">&lt;</span><span class="nx">ul</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">navbar</span><span class="dl">"</span><span class="o">&gt;</span>
   <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">Home</span><span class="o">&lt;</span><span class="sr">/Link&gt;&lt;/</span><span class="nx">li</span><span class="o">&gt;</span>
   <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/avengers</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">Avengers</span><span class="o">&lt;</span><span class="sr">/Link&gt;&lt;/</span><span class="nx">li</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
-</span></code></pre></div></div>
-<p>Try out the links to make sure they work, and then style the nav bar. Once that is done, go to your <code class="highlighter-rouge">AvengerList</code> component and add a <code class="highlighter-rouge">Link</code> somewhere in the mapped list of avengers that will route you to the <code class="highlighter-rouge">AvengerPage</code>. To show an example, I’ll do it here on the header element. You’ll notice that I am using an interpolated string so that we can build out the URL dynamically using the avenger’s id.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="p">{</span><span class="s2">`/avengers/</span><span class="p">${</span><span class="nx">avenger</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="s2">`</span><span class="p">}</span><span class="o">&gt;</span>
+</span></code></pre>
+                  </div>
+                </div>
+                <p>
+                  Try out the links to make sure they work, and then style the
+                  nav bar. Once that is done, go to your
+                  <code class="highlighter-rouge">AvengerList</code> component
+                  and add a
+                  <code class="highlighter-rouge">Link</code> somewhere in the
+                  mapped list of avengers that will route you to the
+                  <code class="highlighter-rouge">AvengerPage</code>. To show an
+                  example, I’ll do it here on the header element. You’ll notice
+                  that I am using an interpolated string so that we can build
+                  out the URL dynamically using the avenger’s id.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="p">{</span><span class="s2">`/avengers/</span><span class="p">${</span><span class="nx">avenger</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="s2">`</span><span class="p">}</span><span class="o">&gt;</span>
   <span class="o">&lt;</span><span class="nx">h3</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">avenger</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h3</span><span class="err">&gt;
 </span><span class="o">&lt;</span><span class="sr">/Link</span><span class="err">&gt;
-</span></code></pre></div></div>
-<p>Take a minute to inspect your navbar and your wrapped header elements in the dev tools. Look for the anchor tags that get rendered by the <code class="highlighter-rouge">Link</code> component.</p>
-<h5>Challenge</h5>
-<p>Make a navbar on the friends app. In the list component, add a <code class="highlighter-rouge">Link</code> component to the mapped list of friends to give us a way to route to the individual friend page.</p>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to create dynamic routes using URL parameters and the `match` object</h4>
-<p>The URL’s that we type into our web browsers are actually powerful enough to hold onto some dynamic information that we may need at some point in time. The Match object built into React Router allows us to utilize this behavior, and send information by means of the URL’s we type into our search bars, down into our components for use later.</p>
-<h5>Overview</h5>
-<p>Let’s say we have a list of users. Each user is an object with a few properties that contain specific information about the user. Each user object has a unique <code class="highlighter-rouge">ID</code> parameter that we can use to index him or her, and display information about only one user instead of a variety of users. How would we go about selecting which user to show?</p>
-<p>We could build out a click handler that will store the user’s <code class="highlighter-rouge">ID</code> on <code class="highlighter-rouge">React Component State</code>, and then, inside of our <code class="highlighter-rouge">render function</code>, hold a conditional statement that hides the list of users except for a single user’s information. This method would work splendidly because React doesn’t care where your data comes from; it only cares what data you’re showing to the user.</p>
-<p>The way to accomplish such a task using React router is to let the library do the <code class="highlighter-rouge">conditional rendering</code> for you. If we were to set up a route like the one below, we’re effectively telling React Router to mount a <code class="highlighter-rouge">SingleUser</code> component anytime we request the URL. <code class="highlighter-rouge">http://localhost:3000/users/&lt;id-gets-entered-here&gt;</code>.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">'</span><span class="s1">/users/:userId</span><span class="dl">'</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">SingleUser</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
-</span></code></pre></div></div>
-<p>This <code class="highlighter-rouge">ID</code> will be some long string or even just a number, and the component doesn’t care. What is important to note is the thing that comes after the <code class="highlighter-rouge">:</code>. The parameter is a variable that we can use later to pull that information down. This pulling process happens through the <code class="highlighter-rouge">match</code> object that React Router provides for us.</p>
-<p>Any component that is mounted via <code class="highlighter-rouge">React Router's Route</code> component will receive a <code class="highlighter-rouge">match</code> object as a prop. Because of this implementation, we can fetch the necessary data for the specific item to receive this information as the page is being mounted. This idea is very powerful because it allows us to implement what we call <code class="highlighter-rouge">dynamic routing</code>.</p>
-<p>So, if the URL <code class="highlighter-rouge">http://localhost:3000/users/10</code> is requested, how do I then access that number <code class="highlighter-rouge">10</code> that is found on the end of the URL? One common way is to consume it from props on the <code class="highlighter-rouge">useEffect</code> method. Because the <code class="highlighter-rouge">match</code> object is found on any <code class="highlighter-rouge">Route</code> mounted component, we can consume that match object as we would any other prop.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">`useEffect(() =&gt; {
+</span></code></pre>
+                  </div>
+                </div>
+                <p>
+                  Take a minute to inspect your navbar and your wrapped header
+                  elements in the dev tools. Look for the anchor tags that get
+                  rendered by the
+                  <code class="highlighter-rouge">Link</code> component.
+                </p>
+                <h5>Challenge</h5>
+                <p>
+                  Make a navbar on the friends app. In the list component, add a
+                  <code class="highlighter-rouge">Link</code> component to the
+                  mapped list of friends to give us a way to route to the
+                  individual friend page.
+                </p>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to create dynamic routes using URL parameters and the
+                  `match` object
+                </h4>
+                <p>
+                  The URL’s that we type into our web browsers are actually
+                  powerful enough to hold onto some dynamic information that we
+                  may need at some point in time. The Match object built into
+                  React Router allows us to utilize this behavior, and send
+                  information by means of the URL’s we type into our search
+                  bars, down into our components for use later.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  Let’s say we have a list of users. Each user is an object with
+                  a few properties that contain specific information about the
+                  user. Each user object has a unique
+                  <code class="highlighter-rouge">ID</code> parameter that we
+                  can use to index him or her, and display information about
+                  only one user instead of a variety of users. How would we go
+                  about selecting which user to show?
+                </p>
+                <p>
+                  We could build out a click handler that will store the user’s
+                  <code class="highlighter-rouge">ID</code> on
+                  <code class="highlighter-rouge">React Component State</code>,
+                  and then, inside of our
+                  <code class="highlighter-rouge">render function</code>, hold a
+                  conditional statement that hides the list of users except for
+                  a single user’s information. This method would work splendidly
+                  because React doesn’t care where your data comes from; it only
+                  cares what data you’re showing to the user.
+                </p>
+                <p>
+                  The way to accomplish such a task using React router is to let
+                  the library do the
+                  <code class="highlighter-rouge">conditional rendering</code>
+                  for you. If we were to set up a route like the one below,
+                  we’re effectively telling React Router to mount a
+                  <code class="highlighter-rouge">SingleUser</code> component
+                  anytime we request the URL.
+                  <code class="highlighter-rouge"
+                    >http://localhost:3000/users/&lt;id-gets-entered-here&gt;</code
+                  >.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">'</span><span class="s1">/users/:userId</span><span class="dl">'</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">SingleUser</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span></code></pre>
+                  </div>
+                </div>
+                <p>
+                  This <code class="highlighter-rouge">ID</code> will be some
+                  long string or even just a number, and the component doesn’t
+                  care. What is important to note is the thing that comes after
+                  the <code class="highlighter-rouge">:</code>. The parameter is
+                  a variable that we can use later to pull that information
+                  down. This pulling process happens through the
+                  <code class="highlighter-rouge">match</code> object that React
+                  Router provides for us.
+                </p>
+                <p>
+                  Any component that is mounted via
+                  <code class="highlighter-rouge">React Router's Route</code>
+                  component will receive a
+                  <code class="highlighter-rouge">match</code> object as a prop.
+                  Because of this implementation, we can fetch the necessary
+                  data for the specific item to receive this information as the
+                  page is being mounted. This idea is very powerful because it
+                  allows us to implement what we call
+                  <code class="highlighter-rouge">dynamic routing</code>.
+                </p>
+                <p>
+                  So, if the URL
+                  <code class="highlighter-rouge"
+                    >http://localhost:3000/users/10</code
+                  >
+                  is requested, how do I then access that number
+                  <code class="highlighter-rouge">10</code> that is found on the
+                  end of the URL? One common way is to consume it from props on
+                  the <code class="highlighter-rouge">useEffect</code> method.
+                  Because the
+                  <code class="highlighter-rouge">match</code> object is found
+                  on any <code class="highlighter-rouge">Route</code> mounted
+                  component, we can consume that match object as we would any
+                  other prop.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="s2">`useEffect(() =&gt; {
   const id = props.match.params.userId;
   // do something with the id
 }, [props.match.params.userId])
-</span></code></pre></div></div>
-<p>Remember that we called the id after <code class="highlighter-rouge">/friends</code> the <code class="highlighter-rouge">userId</code> when we set up our route. So that is what will be found as the <code class="highlighter-rouge">key/value</code> pair on the match object when this route is requested. If we were to look at the console, we could see a better picture of what’s going on with this here.</p>
-<p><img src="https://image.ibb.co/fPd2X8/Screen_Shot_2018_06_26_at_9_55_17_AM.png" alt="match params full"></p>
-<p>Now you can do with that ID whatever you’d like. Normally the next step is to send it off to a server to retrieve some new information somewhere.</p>
-<p>This is how one would set up dynamic routing using React Router. Here is a link to a little project that demonstrates it’s use case pretty well.</p>
-<p><a href="https://codesandbox.io/s/o4nomn5p49"><img src="https://codesandbox.io/static/img/play-codesandbox.svg" alt="Edit o4nomn5p49"></a></p>
-<h5>Follow Along</h5>
-<p>Now we can create an Avenger Page component to view details for individual Avengers. We’ll do this by creating a dynamic route using an <code class="highlighter-rouge">id</code> parameter, and rendering an <code class="highlighter-rouge">AvengerPage</code> component for the Avenger with that id.</p>
-<p>First let’s create the <code class="highlighter-rouge">AvengerPage</code> component. It will be a functional component that renders details of an Avenger. Build out the design however you would like.</p>
-<p>Next, add a dynamic route:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/avengers/:id</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">AvengerPage</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
-</span></code></pre></div></div>
-<p>Now when we do this, we’ll want to be sure to add the <code class="highlighter-rouge">exact</code> attribute to the <code class="highlighter-rouge">/avengers</code> route, or else that component will render at our new path as well. Add that, and your routes should look like this:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">exact</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">Home</span><span class="p">}</span><span class="sr">/</span><span class="err">&gt;
+</span></code></pre>
+                  </div>
+                </div>
+                <p>
+                  Remember that we called the id after
+                  <code class="highlighter-rouge">/friends</code> the
+                  <code class="highlighter-rouge">userId</code> when we set up
+                  our route. So that is what will be found as the
+                  <code class="highlighter-rouge">key/value</code> pair on the
+                  match object when this route is requested. If we were to look
+                  at the console, we could see a better picture of what’s going
+                  on with this here.
+                </p>
+                <p>
+                  <img
+                    src="https://image.ibb.co/fPd2X8/Screen_Shot_2018_06_26_at_9_55_17_AM.png"
+                    alt="match params full"
+                  />
+                </p>
+                <p>
+                  Now you can do with that ID whatever you’d like. Normally the
+                  next step is to send it off to a server to retrieve some new
+                  information somewhere.
+                </p>
+                <p>
+                  This is how one would set up dynamic routing using React
+                  Router. Here is a link to a little project that demonstrates
+                  it’s use case pretty well.
+                </p>
+                <p>
+                  <a href="https://codesandbox.io/s/o4nomn5p49"
+                    ><img
+                      src="https://codesandbox.io/static/img/play-codesandbox.svg"
+                      alt="Edit o4nomn5p49"
+                  /></a>
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Now we can create an Avenger Page component to view details
+                  for individual Avengers. We’ll do this by creating a dynamic
+                  route using an
+                  <code class="highlighter-rouge">id</code> parameter, and
+                  rendering an
+                  <code class="highlighter-rouge">AvengerPage</code> component
+                  for the Avenger with that id.
+                </p>
+                <p>
+                  First let’s create the
+                  <code class="highlighter-rouge">AvengerPage</code> component.
+                  It will be a functional component that renders details of an
+                  Avenger. Build out the design however you would like.
+                </p>
+                <p>Next, add a dynamic route:</p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/avengers/:id</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">AvengerPage</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span></code></pre>
+                  </div>
+                </div>
+                <p>
+                  Now when we do this, we’ll want to be sure to add the
+                  <code class="highlighter-rouge">exact</code> attribute to the
+                  <code class="highlighter-rouge">/avengers</code> route, or
+                  else that component will render at our new path as well. Add
+                  that, and your routes should look like this:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">exact</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">Home</span><span class="p">}</span><span class="sr">/</span><span class="err">&gt;
 </span><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">exact</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/avengers</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">AvengerList</span><span class="p">}</span><span class="sr">/&gt; /</span><span class="o">/</span><span class="nx">added</span> <span class="nx">the</span> <span class="nx">exact</span> <span class="nx">attribute</span>
 <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/avengers/:id</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">AvengerPage</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
-</span></code></pre></div></div>
-<p>Finally, we need to use the <code class="highlighter-rouge">match</code> object that gets passed as a prop to our new component to find the correct avenger to display the correct details in the <code class="highlighter-rouge">AvengerPage</code> component.</p>
-<p>To do that, we will use <code class="highlighter-rouge">.find()</code> on the avengers list and find the avenger that matches the dynamic <code class="highlighter-rouge">/:id</code> parameter in the URL. Then, we will set the newly identified Avenger to an <code class="highlighter-rouge">avenger</code> variable. This will all happen inside the component before we return our JSX. The JSX, will reference that new <code class="highlighter-rouge">avenger</code> variable to render out their details.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+</span></code></pre>
+                  </div>
+                </div>
+                <p>
+                  Finally, we need to use the
+                  <code class="highlighter-rouge">match</code> object that gets
+                  passed as a prop to our new component to find the correct
+                  avenger to display the correct details in the
+                  <code class="highlighter-rouge">AvengerPage</code> component.
+                </p>
+                <p>
+                  To do that, we will use
+                  <code class="highlighter-rouge">.find()</code> on the avengers
+                  list and find the avenger that matches the dynamic
+                  <code class="highlighter-rouge">/:id</code> parameter in the
+                  URL. Then, we will set the newly identified Avenger to an
+                  <code class="highlighter-rouge">avenger</code> variable. This
+                  will all happen inside the component before we return our JSX.
+                  The JSX, will reference that new
+                  <code class="highlighter-rouge">avenger</code> variable to
+                  render out their details.
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="kd">const</span> <span class="nx">avengerData</span> <span class="o">=</span> <span class="p">[];</span> <span class="c1">// get the data from the same source above</span>
 
@@ -658,217 +1650,410 @@ The main benefit of <code class="highlighter-rouge">&lt;Link to="..."&gt;</code>
 </span>    <span class="c1">// ...etc</span>
   <span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div></div>
-<p>But wait, there is a problem. If you test out your new route, you’ll see that there is an error that says something like “Cannot read property <code class="highlighter-rouge">name</code> of undefined.” That means that <code class="highlighter-rouge">avenger</code> is undefined and that the <code class="highlighter-rouge">.find()</code> function is not finding the avenger, nor setting it to the variable. Let’s fix this.</p>
-<p>If you look at that expression <code class="highlighter-rouge">props.match.params.id === avenger.id</code> and inspect the two different <code class="highlighter-rouge">id</code>s, you’ll see that we’re getting a string for the <code class="highlighter-rouge">id</code> coming from the <code class="highlighter-rouge">match</code> object (because it’s coming from the URL string), whereas we’re getting a number from the id from the avengerList data. We need to change one data type so both of them are a string, or so that both of them are numbers. Personally, I like to use an interpolated string here to change the number <code class="highlighter-rouge">id</code> to a string. Refactor your <code class="highlighter-rouge">.find()</code> callback function to look like this:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">avenger</span> <span class="o">=</span> <span class="nx">avengerData</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">avenger</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">match</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="s2">`</span><span class="p">${</span><span class="nx">avenger</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
-</code></pre></div></div>
-<h5>Challenge</h5>
-<p>In the friends app you’ve been building, create a new, dynamic route for the path <code class="highlighter-rouge">/friends/:id</code>. Then create a <code class="highlighter-rouge">FriendPage</code> component that will find your friend from the list of friends based on the <code class="highlighter-rouge">/:id</code> param in the url, and render that friend’s details. Remember to style your app!</p>
-<hr>
-<h2 class="display-4">
-<a id="projects" class="anchor" href="#projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Projects</h2>
-<ul class="list-group">
-<li class="list-group-item">
-<h5><a target="_blank" href="https://github.com/LambdaSchool/React-Router-Basic-Nav">React Router Basic Nav- This is for day 1</a></h5>
-<p>This project is designed to get you used to putting together a Router using React Router V.4</p>
-</li>
-<li class="list-group-item">
-<h5><a target="_blank" href="https://github.com/LambdaSchool/React-Router-Movies">React-Router-Movies</a></h5>
-<p>Create an app that renders a list of movies in one route, and a movie info page in another route.</p>
-</li>
-<li class="list-group-item">
-<h5><a target="_blank" href="https://github.com/LambdaSchool/React-Router-Apple-Nav">React-Router-Apple-Nav STRETCH ASSIGNMENT</a></h5>
-</li>
-</ul>
-<h2 class="display-4">
-<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
-<h3 class="display-5">Class Recordings</h3>
-<p class="lead">You can use class recordings to help you master the material.</p>
-<div>
-<ul class="list-group list-group-flush">
-<li class="list-group-item">
-<strong><a target="_blank" href="https://youtu.be/ZRHal-kPNQY">React Router I for WebPT13 w/Emily Seibert</a></strong>
-<p>Intro to Single Page Applications</p>
-</li>
-<li class="list-group-item">
-<a href="/archive/FSW/module/rec2TJ1vrdfcnx2EG">All previous recordings</a>
-</li>
-</ul>
-</div>
-<h3 class="display-5">Demonstrate Mastery</h3>
-<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
-<ul>
-<li>Objective challenge: <p>On your own, write down some of the pros and cons for both server-side routing and client-side routing, and then write a paragraph of what you like about both, and which you would prefer to use and why. Submit this to your TL via slack.</p>
-</li>
-<li>Objective challenge: <p>Start up a new React app called friends, install <code class="highlighter-rouge">react-router-dom</code> and get it wired up to use React Router. Inspect your app in the browser with the React tools and make sure you see your app wrapped in the <code class="highlighter-rouge">Router</code> component (reference the image above).</p>
-</li>
-<li>Objective challenge: <p>In your friends app, add a new <code class="highlighter-rouge">Home</code> component and a new <code class="highlighter-rouge">Friends</code> component. Then add a route for each component. Test your app in the browser to make sure both apps are rendering at the correct route. Build out your <code class="highlighter-rouge">Home</code> component and then render out a list of friends data in the <code class="highlighter-rouge">Friends</code> component.</p>
-</li>
-<li>Objective challenge: <p>Make a navbar on the friends app. In the list component, add a <code class="highlighter-rouge">Link</code> component to the mapped list of friends to give us a way to route to the individual friend page.</p>
-</li>
-<li>Objective challenge: <p>In the friends app you’ve been building, create a new, dynamic route for the path <code class="highlighter-rouge">/friends/:id</code>. Then create a <code class="highlighter-rouge">FriendPage</code> component that will find your friend from the list of friends based on the <code class="highlighter-rouge">/:id</code> param in the url, and render that friend’s details. Remember to style your app!</p>
-</li>
-<li>Project: React Router Basic Nav- This is for day 1</li>
-<li>Code Challenge: ReverseLinkedList</li>
-<li>Code Challenge: LargestDifferenceInArray</li>
-</ul>
-</div>
-</div>
-</div>
-</main>
-</div>
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  But wait, there is a problem. If you test out your new route,
+                  you’ll see that there is an error that says something like
+                  “Cannot read property
+                  <code class="highlighter-rouge">name</code> of undefined.”
+                  That means that
+                  <code class="highlighter-rouge">avenger</code> is undefined
+                  and that the
+                  <code class="highlighter-rouge">.find()</code> function is not
+                  finding the avenger, nor setting it to the variable. Let’s fix
+                  this.
+                </p>
+                <p>
+                  If you look at that expression
+                  <code class="highlighter-rouge"
+                    >props.match.params.id === avenger.id</code
+                  >
+                  and inspect the two different
+                  <code class="highlighter-rouge">id</code>s, you’ll see that
+                  we’re getting a string for the
+                  <code class="highlighter-rouge">id</code> coming from the
+                  <code class="highlighter-rouge">match</code> object (because
+                  it’s coming from the URL string), whereas we’re getting a
+                  number from the id from the avengerList data. We need to
+                  change one data type so both of them are a string, or so that
+                  both of them are numbers. Personally, I like to use an
+                  interpolated string here to change the number
+                  <code class="highlighter-rouge">id</code> to a string.
+                  Refactor your
+                  <code class="highlighter-rouge">.find()</code> callback
+                  function to look like this:
+                </p>
+                <div class="language-js highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kd">const</span> <span class="nx">avenger</span> <span class="o">=</span> <span class="nx">avengerData</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">avenger</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">match</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="s2">`</span><span class="p">${</span><span class="nx">avenger</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+</code></pre>
+                  </div>
+                </div>
+                <h5>Challenge</h5>
+                <p>
+                  In the friends app you’ve been building, create a new, dynamic
+                  route for the path
+                  <code class="highlighter-rouge">/friends/:id</code>. Then
+                  create a
+                  <code class="highlighter-rouge">FriendPage</code> component
+                  that will find your friend from the list of friends based on
+                  the <code class="highlighter-rouge">/:id</code> param in the
+                  url, and render that friend’s details. Remember to style your
+                  app!
+                </p>
+                <hr />
+                <h2 class="display-4">
+                  <a
+                    id="projects"
+                    class="anchor"
+                    href="#projects"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Projects
+                </h2>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <h5>
+                      <a
+                        target="_blank"
+                        href="https://github.com/LambdaSchool/React-Router-Basic-Nav"
+                        >React Router Basic Nav- This is for day 1</a
+                      >
+                    </h5>
+                    <p>
+                      This project is designed to get you used to putting
+                      together a Router using React Router V.4
+                    </p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5>
+                      <a
+                        target="_blank"
+                        href="https://github.com/LambdaSchool/React-Router-Movies"
+                        >React-Router-Movies</a
+                      >
+                    </h5>
+                    <p>
+                      Create an app that renders a list of movies in one route,
+                      and a movie info page in another route.
+                    </p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5>
+                      <a
+                        target="_blank"
+                        href="https://github.com/LambdaSchool/React-Router-Apple-Nav"
+                        >React-Router-Apple-Nav STRETCH ASSIGNMENT</a
+                      >
+                    </h5>
+                  </li>
+                </ul>
+                <h2 class="display-4">
+                  <a
+                    id="review"
+                    class="anchor"
+                    href="#review"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Review
+                </h2>
+                <h3 class="display-5">Class Recordings</h3>
+                <p class="lead">
+                  You can use class recordings to help you master the material.
+                </p>
+                <div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong
+                        ><a target="_blank" href="https://youtu.be/ZRHal-kPNQY"
+                          >React Router I for WebPT13 w/Emily Seibert</a
+                        ></strong
+                      >
+                      <p>Intro to Single Page Applications</p>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="/archive/FSW/module/rec2TJ1vrdfcnx2EG"
+                        >All previous recordings</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <h3 class="display-5">Demonstrate Mastery</h3>
+                <p>
+                  To demonstrate mastery of this module, you need to complete
+                  and pass a code review on each of the following:
+                </p>
+                <ul>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      On your own, write down some of the pros and cons for both
+                      server-side routing and client-side routing, and then
+                      write a paragraph of what you like about both, and which
+                      you would prefer to use and why. Submit this to your TL
+                      via slack.
+                    </p>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      Start up a new React app called friends, install
+                      <code class="highlighter-rouge">react-router-dom</code>
+                      and get it wired up to use React Router. Inspect your app
+                      in the browser with the React tools and make sure you see
+                      your app wrapped in the
+                      <code class="highlighter-rouge">Router</code> component
+                      (reference the image above).
+                    </p>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      In your friends app, add a new
+                      <code class="highlighter-rouge">Home</code> component and
+                      a new
+                      <code class="highlighter-rouge">Friends</code> component.
+                      Then add a route for each component. Test your app in the
+                      browser to make sure both apps are rendering at the
+                      correct route. Build out your
+                      <code class="highlighter-rouge">Home</code> component and
+                      then render out a list of friends data in the
+                      <code class="highlighter-rouge">Friends</code> component.
+                    </p>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      Make a navbar on the friends app. In the list component,
+                      add a
+                      <code class="highlighter-rouge">Link</code> component to
+                      the mapped list of friends to give us a way to route to
+                      the individual friend page.
+                    </p>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      In the friends app you’ve been building, create a new,
+                      dynamic route for the path
+                      <code class="highlighter-rouge">/friends/:id</code>. Then
+                      create a
+                      <code class="highlighter-rouge">FriendPage</code>
+                      component that will find your friend from the list of
+                      friends based on the
+                      <code class="highlighter-rouge">/:id</code> param in the
+                      url, and render that friend’s details. Remember to style
+                      your app!
+                    </p>
+                  </li>
+                  <li>Project: React Router Basic Nav- This is for day 1</li>
+                  <li>Code Challenge: ReverseLinkedList</li>
+                  <li>Code Challenge: LargestDifferenceInArray</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'UA-80850900-4');
-</script>
-<script type="text/javascript">
-  function getDomain() {
-    const domainName = window.location.hostname.split('.')[1];
-    return `${domainName}.com`;
-  }
-</script>
-<script src="" integrity="" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
-<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
-<script type="text/javascript">
-  SimpleJekyllSearch.init({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    dataSource: '/search.json',
-    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="React Router I">{title}</a></li>',
-    noResultsText: '',
-    limit: 10,
-    fuzzy: true,
-  })
-</script>
-<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
-  if (window.attachEvent) {
-    window.attachEvent('onload', verifySignedIn);
-  } else {
-    if (window.onload) {
-      var currentOnLoadFn = window.onload;
-      var newOnLoadFn = function (evt) {
-        currentOnLoadFn(evt);
-        verifySignedIn();
-      };
-      window.onload = newOnLoadFn;
-    } else {
-      window.onload = verifySignedIn;
-    }
-  }
-
-  function verifySignedIn() {
-    if (isPagePublic()) {
-      return showPageContents();
-    }
-
-    window.__user = null;
-    isSignedIn().then((user) => {
-      window.__user = user;
-
-      if (!user.signedIn) {
-        redirectToSignIn();
-      } else if (!user.student && !window.__openToAdmissions) {
-        showUnauthorizedMessage();
-      } else {
-        showPageContents();
-      }
-    });
-  }
-
-  function isPagePublic() {
-    const openCourses = [
-      'and-pre',
-      'ds-pre',
-      'fsw-pre',
-      'help',
-      'ios-pre',
-    ];
-
-    const openPages = [
-      'cs-and',
-      'cs-fsw',
-      'cs-ios',
-      'cr',
-      'ds',
-      'jx',
-      'p4s',
-      'ux',
-    ];
-
-    const pathParts = window.location.pathname.split('/');
-    const courseName = pathParts[1];
-    const pageName = pathParts[pathParts.length - 1];
-
-    return openCourses.includes(courseName) || openPages.includes(pageName);
-  }
-
-  function isSignedIn() {
-    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
-
-    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
-
-    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
-      .then((response) => response.text())
-      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
-      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
-      .catch((error) => {});
-  }
-
-  function redirectToSignIn() {
-    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
-    const redirectMessage = document.querySelector('#redirect-message');
-    redirectMessage.style.display = "block";
-    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
-    window.location = signInUrl;
-  }
-
-  function showPageContents() {
-    document.querySelector('#content-wrapper').style.visibility = 'visible';
-  }
-
-  function showUnauthorizedMessage() {
-    document.querySelector('#unauthorized-message').style.display = 'block';
-  }
-
-  function getAuthBaseUrl() {
-    const domain = getDomain();
-    const authBaseUrl = `https://auth.${domain}`;
-    return authBaseUrl;
-  }
-</script><script src="/assets/js/docs.min.js"></script><script>
-  var MathJax = {
-    tex: {
-      inlineMath: [['$$', '$$'], ['\[', '\])']]
-    },
-    "HTML-CSS": {
-      styles: {
-        ".MathJax span": {
-          color: "#000000"
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
         }
-      }
-    }
-  }
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<script>
-  handleExternalLinks();
+        gtag("js", new Date());
 
-  function handleExternalLinks() {
-    const domain = getDomain();
-    const links = document.querySelectorAll('a');
-    return links.forEach((link) => {
-      if (!link.host.includes(domain)) link.target = '_blank';
-    })
-  };
-</script>
-</div>
-</body>
+        gtag("config", "UA-80850900-4");
+      </script>
+      <script type="text/javascript">
+        function getDomain() {
+          const domainName = window.location.hostname.split(".")[1];
+          return `${domainName}.com`;
+        }
+      </script>
+      <script src="" integrity="" crossorigin="anonymous"></script>
+      <script>
+        window.jQuery ||
+          document.write(
+            '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>'
+          );
+      </script>
+      <script
+        src="/assets/js/vendor/popper.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="/dist/js/bootstrap.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script src="/assets/js/activate.js"></script>
+      <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        SimpleJekyllSearch.init({
+          searchInput: document.getElementById("search-input"),
+          resultsContainer: document.getElementById("results-container"),
+          dataSource: "/search.json",
+          searchResultTemplate:
+            '<li class="list-group-item"><a href="{url}" title="React Router I">{title}</a></li>',
+          noResultsText: "",
+          limit: 10,
+          fuzzy: true,
+        });
+      </script>
+      <script src="/assets/js/mermaid.min.js"></script>
+      <script type="text/javascript">
+        if (window.attachEvent) {
+          window.attachEvent("onload", verifySignedIn);
+        } else {
+          if (window.onload) {
+            var currentOnLoadFn = window.onload;
+            var newOnLoadFn = function (evt) {
+              currentOnLoadFn(evt);
+              verifySignedIn();
+            };
+            window.onload = newOnLoadFn;
+          } else {
+            window.onload = verifySignedIn;
+          }
+        }
+
+        function verifySignedIn() {
+          if (isPagePublic()) {
+            return showPageContents();
+          }
+
+          window.__user = null;
+          isSignedIn().then((user) => {
+            window.__user = user;
+
+            if (!user.signedIn) {
+              redirectToSignIn();
+            } else if (!user.student && !window.__openToAdmissions) {
+              showUnauthorizedMessage();
+            } else {
+              showPageContents();
+            }
+          });
+        }
+
+        function isPagePublic() {
+          const openCourses = [
+            "and-pre",
+            "ds-pre",
+            "fsw-pre",
+            "help",
+            "ios-pre",
+          ];
+
+          const openPages = [
+            "cs-and",
+            "cs-fsw",
+            "cs-ios",
+            "cr",
+            "ds",
+            "jx",
+            "p4s",
+            "ux",
+          ];
+
+          const pathParts = window.location.pathname.split("/");
+          const courseName = pathParts[1];
+          const pageName = pathParts[pathParts.length - 1];
+
+          return (
+            openCourses.includes(courseName) || openPages.includes(pageName)
+          );
+        }
+
+        function isSignedIn() {
+          const isDeployPreview =
+            window.location.hostname.startsWith("deploy-preview") &&
+            window.location.hostname.endsWith("netlify.com");
+
+          if (isDeployPreview)
+            return Promise.resolve({ signedIn: true, student: true });
+
+          return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: "include" })
+            .then((response) => response.text())
+            .then((userAsText) => (userAsText ? JSON.parse(userAsText) : null))
+            .then((userData) => ({
+              signedIn: Boolean(userData),
+              student: Boolean(userData && userData.airtableId),
+              id: userData ? userData.id : null,
+              email: userData ? userData.email : null,
+            }))
+            .catch((error) => {});
+        }
+
+        function redirectToSignIn() {
+          const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(
+            window.location.href
+          )}&reason=auth_required`;
+          const redirectMessage = document.querySelector("#redirect-message");
+          redirectMessage.style.display = "block";
+          redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`;
+          window.location = signInUrl;
+        }
+
+        function showPageContents() {
+          document.querySelector("#content-wrapper").style.visibility =
+            "visible";
+        }
+
+        function showUnauthorizedMessage() {
+          document.querySelector("#unauthorized-message").style.display =
+            "block";
+        }
+
+        function getAuthBaseUrl() {
+          const domain = getDomain();
+          const authBaseUrl = `https://auth.${domain}`;
+          return authBaseUrl;
+        }
+      </script>
+      <script src="/assets/js/docs.min.js"></script>
+      <script>
+        var MathJax = {
+          tex: {
+            inlineMath: [
+              ["$$", "$$"],
+              ["\[", "\])"],
+            ],
+          },
+          "HTML-CSS": {
+            styles: {
+              ".MathJax span": {
+                color: "#000000",
+              },
+            },
+          },
+        };
+      </script>
+      <script
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+        type="text/javascript"
+      ></script>
+      <script>
+        handleExternalLinks();
+
+        function handleExternalLinks() {
+          const domain = getDomain();
+          const links = document.querySelectorAll("a");
+          return links.forEach((link) => {
+            if (!link.host.includes(domain)) link.target = "_blank";
+          });
+        }
+      </script>
+    </div>
+  </body>
 </html>
