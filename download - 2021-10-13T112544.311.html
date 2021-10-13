@@ -600,4 +600,259 @@
               <h3 id="caching">Caching</h3>
               <p>Servers use hash tables to cache the data and information they are serving down to clients. It doesn’t
                 make sense to have the server run computations every time a client requests a page. Instead, the server
-        
+                runs the calculation the first time and then caches that information to serve to all the other clients
+                that will ask for it. If the server gets updated information, you would then want the server to rerun
+                the computations and cache the new result. Servers would be much less performant in their ability to
+                serve high numbers of clients without being able to utilize caching with hash tables. The hash table, in
+                this case, maps the URL that the client requests to the page data that it needs to send back to the
+                client.</p>
+              <h5>Challenge</h5>
+              <p>You are building a running podcast playlist generator.</p>
+              <p>Long-distance runners love listening to podcasts on their runs. Their second podcast episode often gets
+                cut off as they are ending their run. They want to be able to listen to two entire episodes during their
+                long runs. You are building a feature that would choose two podcast episodes that will equal the exact
+                length of their planned run.</p>
+              <p>Write a function that takes an integer <code class="highlighter-rouge">run_length</code> (in minutes)
+                and a list of integers <code class="highlighter-rouge">podcast_episode_lengths</code> (in minutes) and
+                returns a boolean whether there are two numbers in <code
+                  class="highlighter-rouge">podcast_episode_lengths</code> whose sum equals <code
+                  class="highlighter-rouge">run_length</code>. Remember that the runners will listen to precisely two
+                episodes, and they will not want to listen to the same episode twice.</p>
+              <hr>
+              <h2 class="display-4">
+                <a id="project" class="anchor" href="#project" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Project</h2>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <h5><a target="_blank" href="https://github.com/LambdaSchool/cs-module-project-hash-tables">Hash
+                      Tables</a></h5>
+                  <p>Hash tables are arguably the single most important data structure known to mankind. Used to
+                    implement everything from objects in JavaScript and dictionaries in Python to Memcached over a
+                    distributed computer network, hash tables are beloved by programmers for providing key/value storage
+                    with constant big-O time complexity for insertion, deletion and search.</p>
+                </li>
+              </ul>
+              <h2 class="display-4">
+                <a id="review" class="anchor" href="#review" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Review</h2>
+              <h3 class="display-5">Class Recordings</h3>
+              <p class="lead">You can use class recordings to help you master the material.</p>
+              <div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <strong><a target="_blank" href="https://youtu.be/RZB6DvUf8CE">Hash Tables III for CSPT12 w/Tim
+                        Roy</a></strong>
+                    <p>Describe different use cases for hash tables. • Use hash tables to solve various problems
+                      optimally.</p>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="/archive/CS/module/recsEDFseukQWg92c">All previous recordings</a>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="display-5">Demonstrate Mastery</h3>
+              <p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the
+                following:</p>
+              <ul>
+                <li>Objective challenge: <p>You are building a running podcast playlist generator.</p>
+                  <p>Long-distance runners love listening to podcasts on their runs. Their second podcast episode often
+                    gets cut off as they are ending their run. They want to be able to listen to two entire episodes
+                    during their long runs. You are building a feature that would choose two podcast episodes that will
+                    equal the exact length of their planned run.</p>
+                  <p>Write a function that takes an integer <code class="highlighter-rouge">run_length</code> (in
+                    minutes) and a list of integers <code class="highlighter-rouge">podcast_episode_lengths</code> (in
+                    minutes) and returns a boolean whether there are two numbers in <code
+                      class="highlighter-rouge">podcast_episode_lengths</code> whose sum equals <code
+                      class="highlighter-rouge">run_length</code>. Remember that the runners will listen to precisely
+                    two episodes, and they will not want to listen to the same episode twice.</p>
+                </li>
+
+                <li>Project: Hash Tables</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push( arguments );
+      }
+      gtag( 'js', new Date() );
+
+      gtag( 'config', 'UA-80850900-4' );
+    </script>
+    <script type="text/javascript">
+      function getDomain() {
+        const domainName = window.location.hostname.split( '.' )[ 1 ];
+        return `${domainName}.com`;
+      }
+    </script>
+    <script src="" integrity="" crossorigin="anonymous"></script>
+    <script>
+      window.jQuery || document.write( '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>' )
+    </script>
+    <script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script>
+    <script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
+    <script src="/assets/js/activate.js"></script>
+    <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      SimpleJekyllSearch.init( {
+        searchInput: document.getElementById( 'search-input' ),
+        resultsContainer: document.getElementById( 'results-container' ),
+        dataSource: '/search.json',
+        searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Hash Tables III &amp; IV">{title}</a></li>',
+        noResultsText: '',
+        limit: 10,
+        fuzzy: true,
+      } )
+    </script>
+    <script src="/assets/js/mermaid.min.js"></script>
+    <script type="text/javascript">
+      if ( window.attachEvent ) {
+        window.attachEvent( 'onload', verifySignedIn );
+      } else {
+        if ( window.onload ) {
+          var currentOnLoadFn = window.onload;
+          var newOnLoadFn = function ( evt ) {
+            currentOnLoadFn( evt );
+            verifySignedIn();
+          };
+          window.onload = newOnLoadFn;
+        } else {
+          window.onload = verifySignedIn;
+        }
+      }
+
+      function verifySignedIn() {
+        if ( isPagePublic() ) {
+          return showPageContents();
+        }
+
+        window.__user = null;
+        isSignedIn().then( ( user ) => {
+          window.__user = user;
+
+          if ( !user.signedIn ) {
+            redirectToSignIn();
+          } else if ( !user.student && !window.__openToAdmissions ) {
+            showUnauthorizedMessage();
+          } else {
+            showPageContents();
+          }
+        } );
+      }
+
+      function isPagePublic() {
+        const openCourses = [
+          'and-pre',
+          'ds-pre',
+          'fsw-pre',
+          'help',
+          'ios-pre',
+        ];
+
+        const openPages = [
+          'cs-and',
+          'cs-fsw',
+          'cs-ios',
+          'cr',
+          'ds',
+          'jx',
+          'p4s',
+          'ux',
+        ];
+
+        const pathParts = window.location.pathname.split( '/' );
+        const courseName = pathParts[ 1 ];
+        const pageName = pathParts[ pathParts.length - 1 ];
+
+        return openCourses.includes( courseName ) || openPages.includes( pageName );
+      }
+
+      function isSignedIn() {
+        const isDeployPreview = window.location.hostname.startsWith( 'deploy-preview' ) && window.location.hostname
+          .endsWith( 'netlify.com' );
+
+        if ( isDeployPreview ) return Promise.resolve( {
+          signedIn: true,
+          student: true
+        } );
+
+        return fetch( `${getAuthBaseUrl()}/whoami`, {
+            credentials: 'include'
+          } )
+          .then( ( response ) => response.text() )
+          .then( ( userAsText ) => userAsText ? JSON.parse( userAsText ) : null )
+          .then( ( userData ) => ( {
+            signedIn: Boolean( userData ),
+            student: Boolean( userData && userData.airtableId ),
+            id: userData ? userData.id : null,
+            email: userData ? userData.email : null
+          } ) )
+          .catch( ( error ) => {} );
+      }
+
+      function redirectToSignIn() {
+        const signInUrl =
+          `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+        const redirectMessage = document.querySelector( '#redirect-message' );
+        redirectMessage.style.display = "block";
+        redirectMessage.innerHTML =
+          `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+        window.location = signInUrl;
+      }
+
+      function showPageContents() {
+        document.querySelector( '#content-wrapper' ).style.visibility = 'visible';
+      }
+
+      function showUnauthorizedMessage() {
+        document.querySelector( '#unauthorized-message' ).style.display = 'block';
+      }
+
+      function getAuthBaseUrl() {
+        const domain = getDomain();
+        const authBaseUrl = `https://auth.${domain}`;
+        return authBaseUrl;
+      }
+    </script>
+    <script src="/assets/js/docs.min.js"></script>
+    <script>
+      var MathJax = {
+        tex: {
+          inlineMath: [
+            [ '$$', '$$' ],
+            [ '\[', '\])' ]
+          ]
+        },
+        "HTML-CSS": {
+          styles: {
+            ".MathJax span": {
+              color: "#000000"
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+    </script>
+    <script>
+      handleExternalLinks();
+
+      function handleExternalLinks() {
+        const domain = getDomain();
+        const links = document.querySelectorAll( 'a' );
+        return links.forEach( ( link ) => {
+          if ( !link.host.includes( domain ) ) link.target = '_blank';
+        } )
+      };
+    </script>
+  </div>
+</body>
+
+</html>

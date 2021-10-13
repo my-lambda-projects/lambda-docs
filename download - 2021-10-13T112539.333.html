@@ -1,1098 +1,1581 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Intended as a home for Lambda School curriculum."
+    />
+    <meta name="author" content="" />
+    <meta name="generator" content="Jekyll v3.8.0" />
+    <title>Introduction to Python II · Lambda School</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Intended as a home for Lambda School curriculum.">
-  <meta name="author" content="">
-  <meta name="generator" content="Jekyll v3.8.0">
-  <title>Introduction to Python II · Lambda School</title>
+    <link
+      rel="stylesheet"
+      integrity
+      crossorigin="anonymous"
+      href="https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css"
+    />
 
-  <link rel='stylesheet' integrity crossorigin='anonymous'
-    href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+    <link
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css"
+    />
 
-  <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-  <link rel='stylesheet'
-    href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+    <link
+      rel="stylesheet"
+      href="https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css"
+    />
 
-  <link rel='stylesheet'
-    href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-122016605-1", "learn.lambdaschool.com");
+      ga("send", "pageview");
+    </script>
 
-  <script>
-    ( function ( i, s, o, g, r, a, m ) {
-      i[ 'GoogleAnalyticsObject' ] = r;
-      i[ r ] = i[ r ] || function () {
-        ( i[ r ].q = i[ r ].q || [] ).push( arguments )
-      }, i[ r ].l = 1 * new Date();
-      a = s.createElement( o ),
-        m = s.getElementsByTagName( o )[ 0 ];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore( a, m )
-    } )( window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga' );
-    ga( 'create', 'UA-122016605-1', 'learn.lambdaschool.com' );
-    ga( 'send', 'pageview' );
-  </script>
-
-  <script>
-    ! function () {
-      var analytics = window.analytics = window.analytics || [];
-      if ( !analytics.initialize )
-        if ( analytics.invoked ) window.console && console.error && console.error( "Segment snippet included twice." );
-        else {
-          analytics.invoked = !0;
-          analytics.methods = [ "trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset",
-            "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"
-          ];
-          analytics.factory = function ( t ) {
-            return function () {
-              var e = Array.prototype.slice.call( arguments );
-              e.unshift( t );
-              analytics.push( e );
-              return analytics
+    <script>
+      !(function () {
+        var analytics = (window.analytics = window.analytics || []);
+        if (!analytics.initialize)
+          if (analytics.invoked)
+            window.console &&
+              console.error &&
+              console.error("Segment snippet included twice.");
+          else {
+            analytics.invoked = !0;
+            analytics.methods = [
+              "trackSubmit",
+              "trackClick",
+              "trackLink",
+              "trackForm",
+              "pageview",
+              "identify",
+              "reset",
+              "group",
+              "track",
+              "ready",
+              "alias",
+              "debug",
+              "page",
+              "once",
+              "off",
+              "on",
+            ];
+            analytics.factory = function (t) {
+              return function () {
+                var e = Array.prototype.slice.call(arguments);
+                e.unshift(t);
+                analytics.push(e);
+                return analytics;
+              };
+            };
+            for (var t = 0; t < analytics.methods.length; t++) {
+              var e = analytics.methods[t];
+              analytics[e] = analytics.factory(e);
             }
-          };
-          for ( var t = 0; t < analytics.methods.length; t++ ) {
-            var e = analytics.methods[ t ];
-            analytics[ e ] = analytics.factory( e )
+            analytics.load = function (t, e) {
+              var n = document.createElement("script");
+              n.type = "text/javascript";
+              n.async = !0;
+              n.src =
+                "https://cdn.segment.com/analytics.js/v1/" +
+                t +
+                "/analytics.min.js";
+              var a = document.getElementsByTagName("script")[0];
+              a.parentNode.insertBefore(n, a);
+              analytics._loadOptions = e;
+            };
+            analytics.SNIPPET_VERSION = "4.1.0";
+            analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
+            analytics.page();
           }
-          analytics.load = function ( t, e ) {
-            var n = document.createElement( "script" );
-            n.type = "text/javascript";
-            n.async = !0;
-            n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
-            var a = document.getElementsByTagName( "script" )[ 0 ];
-            a.parentNode.insertBefore( n, a );
-            analytics._loadOptions = e
-          };
-          analytics.SNIPPET_VERSION = "4.1.0";
-          analytics.load( "BjKorwKrSvMamfNoGkBq9rISk7wF6QQX" );
-          analytics.page();
-        }
-    }();
-  </script>
+      })();
+    </script>
 
-  <link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-  <link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="manifest" href="/assets/img/favicons/manifest.json">
-  <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
-  <link rel="icon" href="/favicon.ico">
-  <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
-  <meta name="theme-color" content="#a0001e">
-</head>
+    <link
+      rel="apple-touch-icon"
+      href="/assets/img/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/assets/img/favicons/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicons/safari-pinned-tab.svg"
+      color="#a0001e"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="msapplication-config"
+      content="/assets/img/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#a0001e" />
+  </head>
 
-<body>
-  <noscript>Please enable JavaScript to view this page.</noscript>
-  <div id="redirect-message" style="display: none;">
-    You must be logged in to view this page.
-  </div>
-  <div id="unauthorized-message" style="display: none;">
-    You must be a Lambda School student to view this page.
-  </div>
-  <div id="content-wrapper" style="visibility: hidden;">
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
-      <div class="container">
-        <span class="skiplink-text">Skip to main content</span>
-      </div>
-    </a>
-    <div class="mobile-menu">
-      <div class="m-drop">
-        <div class="mobile-row">
-          <div class="header-row" style="padding: 3px 7px">
-            <a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg"
-                width="33" height="35" viewBox="0 0 33 35" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
-                  fill="#EC3944" />
-              </svg></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu"
-              aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
-                <title>Menu</title>
-                <path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
-                  d="M4 7h22M4 15h22M4 23h22"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="nav-row">
-          <div class="results-container">
-            <ul id="results-container" class="dropdown list-group"></ul>
-          </div>
-          <div id="mobile-course-menu" class="collapse nav-row">
-            <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
-              <nav class="bd-links">
-                <div class="bd-toc-item">
-                  <h4 class="bd-toc-link">Computer Science Legacy</h4>
-                </div>
-
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/cs/sprint/recd4D4w3QrigPqUF">
-                    1.&nbsp;&nbsp;Intro to Python and OOP
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/cs/module/recay2erzDlYUPSeO/">
-                        Introduction to Python I
-                      </a>
-                    </li>
-                    <li class="active bd-sidenav-active">
-                      <a href="/cs/module/recwpe3Y9TVWrGT8L/">
-                        Introduction to Python II
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/reca7NYptklr7F403/">
-                        Introduction to Python III
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recc3eWphKVYd0oHT/">
-                        Introduction to Python IV
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/cs/sprint/recR4gHcvD21ziR9a">
-                    2.&nbsp;&nbsp;Data Structures
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/cs/module/rec3MaMAY78iDm7ax/">
-                        Data Structures I
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recMcvOrFw5BWUku3/">
-                        Data Structures II
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recx53S3pYfDfvFDm/">
-                        Data Structures III
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recHdwPne4Xt3A7lk/">
-                        Data Structures IV
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/cs/sprint/recd9grrKlURJ453N">
-                    3.&nbsp;&nbsp;Algorithms
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/cs/module/reck76SPX26beGSqE/">
-                        Iterative Sorting
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/reccRh9h6ccXghfA4/">
-                        Recursive Sorting
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recrCuZQMVI6LvxhD/">
-                        A First-Pass Solution
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recsvJCzPlM2X63ZX/">
-                        Writing Better Solutions
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/cs/sprint/recvDjRQEq49uoWsU">
-                    4.&nbsp;&nbsp;CS Unit 1 Build
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/cs/sprint/recAr3gdL8U57eho1">
-                    5.&nbsp;&nbsp;Hash Tables
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/cs/module/recSwIvbSV630gdVk/">
-                        Hash Tables I
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recHzCwboKBLBB0Re/">
-                        Hash Tables II
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recsEDFseukQWg92c/">
-                        Hash Tables III & IV
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/cs/sprint/rec7U9K7OCL5ihj0t">
-                    6.&nbsp;&nbsp;Graphs
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/cs/module/recBMbHtb8AOXq3UL/">
-                        Graphs I
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recZL2m6Gx7B4dU3G/">
-                        Graphs II
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/reck4RVWsg82eiYPZ/">
-                        Graphs III
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recoGWlBHjuJxkL1y/">
-                        Graphs IV
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/cs/sprint/recndTnO1V8oDbBPb">
-                    7.&nbsp;&nbsp;Computer Architecture
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                    <li>
-                      <a href="/cs/module/recsuJbrrFgbFUCRX/">
-                        Computer Architecture: Basics, Number Bases
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/rec2NHr4Eyib7XdED/">
-                        Computer Architecture: Bitwise Operations
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recvQUkzz23NTj20G/">
-                        Computer Architecture: The System Stack
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/cs/module/recGPVAdvQcmopSIO/">
-                        Computer Architecture: Subroutines, CALL/RET
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bd-toc-item ">
-                  <a class="bd-toc-link" href="/cs/sprint/reco0t22NdXmr8VyL">
-                    8.&nbsp;&nbsp;CS Unit 2 Build
-                  </a>
-                  <ul class="nav bd-sidenav">
-
-                  </ul>
-                </div>
-                <hr>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
+  <body>
+    <noscript>Please enable JavaScript to view this page.</noscript>
+    <div id="redirect-message" style="display: none">
+      You must be logged in to view this page.
     </div>
-    <div class="main-container">
-      <div class="sidebar-container bd-sidebar">
-        <div class="docs-sidebar">
-          <a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197"
-              fill="#ec3944">
-              <g>
-                <path
-                  d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z">
-                </path>
-                <path
-                  d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z">
-                </path>
-                <path
-                  d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z">
-                </path>
-                <path
-                  d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z">
-                </path>
-                <path
-                  d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z">
-                </path>
-                <path
-                  d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z">
-                </path>
-              </g>
-              <path
-                d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z">
-              </path>
-            </svg></a>
-          <ul id="results-container" class="dropdown list-group"></ul>
-          <nav class="bd-links collapse" id="bd-docs-nav">
-            <div class="bd-toc-item">
-              <h4 class="bd-toc-link">Computer Science Legacy</h4>
+    <div id="unauthorized-message" style="display: none">
+      You must be a Lambda School student to view this page.
+    </div>
+    <div id="content-wrapper" style="visibility: hidden">
+      <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+          <span class="skiplink-text">Skip to main content</span>
+        </div>
+      </a>
+      <div class="mobile-menu">
+        <div class="m-drop">
+          <div class="mobile-row">
+            <div class="header-row" style="padding: 3px 7px">
+              <a class="navbar-brand" href="/" aria-label="Lambda School"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="35"
+                  viewBox="0 0 33 35"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                    fill="#EC3944"
+                  /></svg
+              ></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#mobile-course-menu"
+                aria-controls="mobile-course-menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="30"
+                  height="30"
+                  focusable="false"
+                >
+                  <title>Menu</title>
+                  <path
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    d="M4 7h22M4 15h22M4 23h22"
+                  ></path>
+                </svg>
+              </button>
             </div>
-
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/cs/sprint/recd4D4w3QrigPqUF">
-                1.&nbsp;&nbsp;Intro to Python and OOP
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/cs/module/recay2erzDlYUPSeO/">
-                    Introduction to Python I
-                  </a>
-                </li>
-                <li class="active bd-sidenav-active">
-                  <a href="/cs/module/recwpe3Y9TVWrGT8L/">
-                    Introduction to Python II
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/reca7NYptklr7F403/">
-                    Introduction to Python III
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recc3eWphKVYd0oHT/">
-                    Introduction to Python IV
-                  </a>
-                </li>
-              </ul>
+          </div>
+          <div class="nav-row">
+            <div class="results-container">
+              <ul id="results-container" class="dropdown list-group"></ul>
             </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/cs/sprint/recR4gHcvD21ziR9a">
-                2.&nbsp;&nbsp;Data Structures
-              </a>
-              <ul class="nav bd-sidenav">
+            <div id="mobile-course-menu" class="collapse nav-row">
+              <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+                <nav class="bd-links">
+                  <div class="bd-toc-item">
+                    <h4 class="bd-toc-link">Computer Science Legacy</h4>
+                  </div>
 
-                <li>
-                  <a href="/cs/module/rec3MaMAY78iDm7ax/">
-                    Data Structures I
-                  </a>
-                </li>
-
-                <li>
-                  <a href="/cs/module/recMcvOrFw5BWUku3/">
-                    Data Structures II
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recx53S3pYfDfvFDm/">
-                    Data Structures III
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recHdwPne4Xt3A7lk/">
-                    Data Structures IV
-                  </a>
-                </li>
-              </ul>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/recd4D4w3QrigPqUF">
+                      1.&nbsp;&nbsp;Intro to Python and OOP
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/cs/module/recay2erzDlYUPSeO/">
+                          Introduction to Python I
+                        </a>
+                      </li>
+                      <li class="active bd-sidenav-active">
+                        <a href="/cs/module/recwpe3Y9TVWrGT8L/">
+                          Introduction to Python II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/reca7NYptklr7F403/">
+                          Introduction to Python III
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recc3eWphKVYd0oHT/">
+                          Introduction to Python IV
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/recR4gHcvD21ziR9a">
+                      2.&nbsp;&nbsp;Data Structures
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/cs/module/rec3MaMAY78iDm7ax/">
+                          Data Structures I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recMcvOrFw5BWUku3/">
+                          Data Structures II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recx53S3pYfDfvFDm/">
+                          Data Structures III
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recHdwPne4Xt3A7lk/">
+                          Data Structures IV
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/recd9grrKlURJ453N">
+                      3.&nbsp;&nbsp;Algorithms
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/cs/module/reck76SPX26beGSqE/">
+                          Iterative Sorting
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/reccRh9h6ccXghfA4/">
+                          Recursive Sorting
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recrCuZQMVI6LvxhD/">
+                          A First-Pass Solution
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recsvJCzPlM2X63ZX/">
+                          Writing Better Solutions
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/recvDjRQEq49uoWsU">
+                      4.&nbsp;&nbsp;CS Unit 1 Build
+                    </a>
+                    <ul class="nav bd-sidenav"></ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/recAr3gdL8U57eho1">
+                      5.&nbsp;&nbsp;Hash Tables
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/cs/module/recSwIvbSV630gdVk/">
+                          Hash Tables I
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recHzCwboKBLBB0Re/">
+                          Hash Tables II
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recsEDFseukQWg92c/">
+                          Hash Tables III & IV
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/rec7U9K7OCL5ihj0t">
+                      6.&nbsp;&nbsp;Graphs
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/cs/module/recBMbHtb8AOXq3UL/"> Graphs I </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recZL2m6Gx7B4dU3G/"> Graphs II </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/reck4RVWsg82eiYPZ/"> Graphs III </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recoGWlBHjuJxkL1y/"> Graphs IV </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/recndTnO1V8oDbBPb">
+                      7.&nbsp;&nbsp;Computer Architecture
+                    </a>
+                    <ul class="nav bd-sidenav">
+                      <li>
+                        <a href="/cs/module/recsuJbrrFgbFUCRX/">
+                          Computer Architecture: Basics, Number Bases
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/rec2NHr4Eyib7XdED/">
+                          Computer Architecture: Bitwise Operations
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recvQUkzz23NTj20G/">
+                          Computer Architecture: The System Stack
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/cs/module/recGPVAdvQcmopSIO/">
+                          Computer Architecture: Subroutines, CALL/RET
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/cs/sprint/reco0t22NdXmr8VyL">
+                      8.&nbsp;&nbsp;CS Unit 2 Build
+                    </a>
+                    <ul class="nav bd-sidenav"></ul>
+                  </div>
+                  <hr />
+                </nav>
+              </div>
             </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/cs/sprint/recd9grrKlURJ453N">
-                3.&nbsp;&nbsp;Algorithms
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/cs/module/reck76SPX26beGSqE/">
-                    Iterative Sorting
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/reccRh9h6ccXghfA4/">
-                    Recursive Sorting
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recrCuZQMVI6LvxhD/">
-                    A First-Pass Solution
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recsvJCzPlM2X63ZX/">
-                    Writing Better Solutions
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/cs/sprint/recvDjRQEq49uoWsU">
-                4.&nbsp;&nbsp;CS Unit 1 Build
-              </a>
-              <ul class="nav bd-sidenav">
-
-              </ul>
-            </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/cs/sprint/recAr3gdL8U57eho1">
-                5.&nbsp;&nbsp;Hash Tables
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/cs/module/recSwIvbSV630gdVk/">
-                    Hash Tables I
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recHzCwboKBLBB0Re/">
-                    Hash Tables II
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recsEDFseukQWg92c/">
-                    Hash Tables III & IV
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/cs/sprint/rec7U9K7OCL5ihj0t">
-                6.&nbsp;&nbsp;Graphs
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/cs/module/recBMbHtb8AOXq3UL/">
-                    Graphs I
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recZL2m6Gx7B4dU3G/">
-                    Graphs II
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/reck4RVWsg82eiYPZ/">
-                    Graphs III
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recoGWlBHjuJxkL1y/">
-                    Graphs IV
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/cs/sprint/recndTnO1V8oDbBPb">
-                7.&nbsp;&nbsp;Computer Architecture
-              </a>
-              <ul class="nav bd-sidenav">
-
-                <li>
-                  <a href="/cs/module/recsuJbrrFgbFUCRX/">
-                    Computer Architecture: Basics, Number Bases
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/rec2NHr4Eyib7XdED/">
-                    Computer Architecture: Bitwise Operations
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recvQUkzz23NTj20G/">
-                    Computer Architecture: The System Stack
-                  </a>
-                </li>
-                <li>
-                  <a href="/cs/module/recGPVAdvQcmopSIO/">
-                    Computer Architecture: Subroutines, CALL/RET
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="bd-toc-item ">
-              <a class="bd-toc-link" href="/cs/sprint/reco0t22NdXmr8VyL">
-                8.&nbsp;&nbsp;CS Unit 2 Build
-              </a>
-              <ul class="nav bd-sidenav">
-
-              </ul>
-            </div>
-            <hr>
-          </nav>
+          </div>
         </div>
       </div>
-      <main class="content-container flex-wrapper" role="main">
-        <div class="sticky-nav">
-          <div class="sprint-nav">
-            <ul class="section-nav">
-              <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
-              <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
-              <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
-              <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
-            </ul>
-          </div>
+      <div class="main-container">
+        <div class="sidebar-container bd-sidebar">
+          <div class="docs-sidebar">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"
+              ><svg
+                width="135"
+                height="35"
+                viewBox="0 0 756 197"
+                fill="#ec3944"
+              >
+                <g>
+                  <path
+                    d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"
+                  ></path>
+                  <path
+                    d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"
+                  ></path>
+                  <path
+                    d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"
+                  ></path>
+                  <path
+                    d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"
+                  ></path>
+                  <path
+                    d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"
+                  ></path>
+                  <path
+                    d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"
+                  ></path>
+                </g>
+                <path
+                  d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"
+                ></path></svg
+            ></a>
+            <ul id="results-container" class="dropdown list-group"></ul>
+            <nav class="bd-links collapse" id="bd-docs-nav">
+              <div class="bd-toc-item">
+                <h4 class="bd-toc-link">Computer Science Legacy</h4>
+              </div>
 
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/recd4D4w3QrigPqUF">
+                  1.&nbsp;&nbsp;Intro to Python and OOP
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/cs/module/recay2erzDlYUPSeO/">
+                      Introduction to Python I
+                    </a>
+                  </li>
+                  <li class="active bd-sidenav-active">
+                    <a href="/cs/module/recwpe3Y9TVWrGT8L/">
+                      Introduction to Python II
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/reca7NYptklr7F403/">
+                      Introduction to Python III
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recc3eWphKVYd0oHT/">
+                      Introduction to Python IV
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/recR4gHcvD21ziR9a">
+                  2.&nbsp;&nbsp;Data Structures
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/cs/module/rec3MaMAY78iDm7ax/">
+                      Data Structures I
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/cs/module/recMcvOrFw5BWUku3/">
+                      Data Structures II
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recx53S3pYfDfvFDm/">
+                      Data Structures III
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recHdwPne4Xt3A7lk/">
+                      Data Structures IV
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/recd9grrKlURJ453N">
+                  3.&nbsp;&nbsp;Algorithms
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/cs/module/reck76SPX26beGSqE/">
+                      Iterative Sorting
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/reccRh9h6ccXghfA4/">
+                      Recursive Sorting
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recrCuZQMVI6LvxhD/">
+                      A First-Pass Solution
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recsvJCzPlM2X63ZX/">
+                      Writing Better Solutions
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/recvDjRQEq49uoWsU">
+                  4.&nbsp;&nbsp;CS Unit 1 Build
+                </a>
+                <ul class="nav bd-sidenav"></ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/recAr3gdL8U57eho1">
+                  5.&nbsp;&nbsp;Hash Tables
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/cs/module/recSwIvbSV630gdVk/"> Hash Tables I </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recHzCwboKBLBB0Re/"> Hash Tables II </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recsEDFseukQWg92c/">
+                      Hash Tables III & IV
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/rec7U9K7OCL5ihj0t">
+                  6.&nbsp;&nbsp;Graphs
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/cs/module/recBMbHtb8AOXq3UL/"> Graphs I </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recZL2m6Gx7B4dU3G/"> Graphs II </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/reck4RVWsg82eiYPZ/"> Graphs III </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recoGWlBHjuJxkL1y/"> Graphs IV </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/recndTnO1V8oDbBPb">
+                  7.&nbsp;&nbsp;Computer Architecture
+                </a>
+                <ul class="nav bd-sidenav">
+                  <li>
+                    <a href="/cs/module/recsuJbrrFgbFUCRX/">
+                      Computer Architecture: Basics, Number Bases
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/rec2NHr4Eyib7XdED/">
+                      Computer Architecture: Bitwise Operations
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recvQUkzz23NTj20G/">
+                      Computer Architecture: The System Stack
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cs/module/recGPVAdvQcmopSIO/">
+                      Computer Architecture: Subroutines, CALL/RET
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-toc-item">
+                <a class="bd-toc-link" href="/cs/sprint/reco0t22NdXmr8VyL">
+                  8.&nbsp;&nbsp;CS Unit 2 Build
+                </a>
+                <ul class="nav bd-sidenav"></ul>
+              </div>
+              <hr />
+            </nav>
+          </div>
         </div>
-        <div class="wrapper limit-width">
-          <div class="flex-wrapper">
-            <div class="limit-width">
-              <div class="jumbotron">
-                <h1 class="bd-title" id="content">Introduction to Python II</h1>
-                <span class="lead">
-                  <p class="bd-lead"></p>
-                  <p>We’re going to continue today working through Python basics, but we’re going to do it with an eye
-                    toward problem-solving strategy. Additionally, we’ll discuss applying our basic Python knowledge to
-                    more complex problems.</p>
-                </span>
-                <strong>At the end of this module, you should be able to:</strong>
+        <main class="content-container flex-wrapper" role="main">
+          <div class="sticky-nav">
+            <div class="sprint-nav">
+              <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+                <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+                <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+                <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="wrapper limit-width">
+            <div class="flex-wrapper">
+              <div class="limit-width">
+                <div class="jumbotron">
+                  <h1 class="bd-title" id="content">
+                    Introduction to Python II
+                  </h1>
+                  <span class="lead">
+                    <p class="bd-lead"></p>
+                    <p>
+                      We’re going to continue today working through Python
+                      basics, but we’re going to do it with an eye toward
+                      problem-solving strategy. Additionally, we’ll discuss
+                      applying our basic Python knowledge to more complex
+                      problems.
+                    </p>
+                  </span>
+                  <strong
+                    >At the end of this module, you should be able to:</strong
+                  >
+                  <ul>
+                    <li>
+                      name and describe the details of each step of Lambda’s
+                      Problem Solving Framework
+                    </li>
+                    <li>
+                      examine and interpret project requirements and create an
+                      action plan based on those requirements
+                    </li>
+                    <li>
+                      create a Python program, demonstrate its successful
+                      performance, and explain the process used to create the
+                      program
+                    </li>
+                  </ul>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                  <h4>Pro Tip</h4>
+                  <p>
+                    When talking about your journey, don’t focus on things you
+                    don’t know yet, focus on what you’ve learned and how
+                    quickly.
+                  </p>
+                </div>
+                <h2 class="display-4">
+                  <a
+                    id="prepare"
+                    class="anchor"
+                    href="#prepare"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Prepare
+                </h2>
+                <p class="lead">Review each preclass resource before class.</p>
+                <div class="preclass">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/IIBJ7OA0R7s"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/f3YAP5NsRYI"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <h2 class="display-4">
+                  <a id="learn" class="anchor" href="#learn" aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Learn
+                </h2>
+                <h4 class="mark mb-3 p-2">
+                  Learn to name and describe the details of each step of
+                  Lambda’s Problem Solving Framework
+                </h4>
+                <p>
+                  Many times, both as you are working through the Computer
+                  Science curriculum and when you are on the job, you will find
+                  yourself faced with large, challenging problems. There are
+                  strategies we can use to break these problems down into more
+                  manageable pieces.
+                </p>
+                <blockquote>
+                  <p>
+                    The single most important skill for a computer scientist is
+                    problem solving. Problem solving means the ability to
+                    formulate problems, think creatively about solutions, and
+                    express a solution clearly and accurately. As it turns out,
+                    the process of learning to program is an excellent
+                    opportunity to practice problem-solving skills. Think
+                    Python, 2nd Edition, by Allen B. Downey (O’Reilly).
+                    Copyright 2016 Allen Downey, 978-1-4919-3936-9.
+                  </p>
+                </blockquote>
+                <h5>Overview</h5>
+                <p>
+                  We can break every problem, large or small, into smaller
+                  chunks. It’s logical, if you can take an unsolvable problem
+                  and break it into smaller more manageable chunks that are
+                  solveable, by solving each individual part you will solve the
+                  entire problem.
+                </p>
+                <p>
+                  Throughout the Computer Science curriculum, we will reference
+                  and use the Lambda Problem Solving Framework, sometimes
+                  referred to as <strong>UPER</strong>. This framework is a
+                  step-by-step process:
+                </p>
+                <ol>
+                  <li><strong>U</strong>nderstand</li>
+                  <li><strong>P</strong>lan</li>
+                  <li><strong>E</strong>xecute</li>
+                  <li><strong>R</strong>eflect</li>
+                </ol>
+                <p>
+                  Almost all problems are a series of sub-problems. You will use
+                  the steps of <strong>UPER</strong> on the primary, outer
+                  problem and on the inner individual sub-problems.
+                </p>
+                <h3 id="1-understand">1. Understand</h3>
+                <p>
+                  The most crucial thing to do before you do anything else is to
+                  understand all of the details of what the problem is asking
+                  you to do. One helpful starting point is to transcribe the
+                  description of the problem from the page into your own words.
+                </p>
+                <h4 id="questions">Questions</h4>
+                <p>
+                  Here is a list of starter questions that might come up during
+                  this step:
+                </p>
                 <ul>
-                  <li>name and describe the details of each step of Lambda’s Problem Solving Framework</li>
-                  <li>examine and interpret project requirements and create an action plan based on those requirements
+                  <li>What are the inputs your code receives?</li>
+                  <li>What is the range of input?</li>
+                  <li>How big can the input be (how much data)?</li>
+                  <li>What are the outputs your code produces?</li>
+                  <li>What is the range of output?</li>
+                  <li>How big can the output be (how much data)?</li>
+                  <li>How performant must the code be?</li>
+                  <li>What is missing from the task description?</li>
+                  <li>
+                    Are there third-party stakeholders who we should consult?
                   </li>
-                  <li>create a Python program, demonstrate its successful performance, and explain the process used to
-                    create the program</li>
-                </ul>
-              </div>
-              <div class="alert alert-warning" role="alert">
-                <h4>Pro Tip</h4>
-                <p>When talking about your journey, don’t focus on things you don’t know yet, focus on what you’ve
-                  learned and how quickly.</p>
-              </div>
-              <h2 class="display-4">
-                <a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Prepare</h2>
-              <p class="lead">Review each preclass resource before class.</p>
-              <div class="preclass">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/IIBJ7OA0R7s"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/f3YAP5NsRYI"
-                        frameborder="0" allowfullscreen></iframe>
-                    </div>
+                  <li>
+                    What assumptions are you making?
+                    <ul>
+                      <li>
+                        Does anyone else on the team need to validate these
+                        assumptions?
+                      </li>
+                    </ul>
                   </li>
                 </ul>
-              </div>
-              <h2 class="display-4">
-                <a id="learn" class="anchor" href="#learn" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Learn</h2>
-              <h4 class="mark mb-3 p-2">Learn to name and describe the details of each step of Lambda’s Problem Solving
-                Framework</h4>
-              <p>Many times, both as you are working through the Computer Science curriculum and when you are on the
-                job, you will find yourself faced with large, challenging problems. There are strategies we can use to
-                break these problems down into more manageable pieces.</p>
-              <blockquote>
-                <p>The single most important skill for a computer scientist is problem solving. Problem solving means
-                  the ability to formulate problems, think creatively about solutions, and express a solution
-                  clearly and accurately. As it turns out, the process of learning to program is an excellent
-                  opportunity to practice problem-solving skills.
-                  Think Python, 2nd Edition, by Allen B. Downey (O’Reilly). Copyright 2016 Allen Downey,
-                  978-1-4919-3936-9.</p>
-              </blockquote>
-              <h5>Overview</h5>
-              <p>We can break every problem, large or small, into smaller chunks. It’s logical, if you can take an
-                unsolvable problem and break it into smaller more manageable chunks that are solveable, by solving each
-                individual part you will solve the entire problem.</p>
-              <p>Throughout the Computer Science curriculum, we will reference and use the Lambda Problem Solving
-                Framework, sometimes referred to as <strong>UPER</strong>. This framework is a step-by-step process:</p>
-              <ol>
-                <li>
-                  <strong>U</strong>nderstand</li>
-                <li>
-                  <strong>P</strong>lan</li>
-                <li>
-                  <strong>E</strong>xecute</li>
-                <li>
-                  <strong>R</strong>eflect</li>
-              </ol>
-              <p>Almost all problems are a series of sub-problems. You will use the steps of <strong>UPER</strong> on
-                the primary, outer problem and on the inner individual sub-problems.</p>
-              <h3 id="1-understand">1. Understand</h3>
-              <p>The most crucial thing to do before you do anything else is to understand all of the details of what
-                the problem is asking you to do. One helpful starting point is to transcribe the description of the
-                problem from the page into your own words.</p>
-              <h4 id="questions">Questions</h4>
-              <p>Here is a list of starter questions that might come up during this step:</p>
-              <ul>
-                <li>What are the inputs your code receives?</li>
-                <li>What is the range of input?</li>
-                <li>How big can the input be (how much data)?</li>
-                <li>What are the outputs your code produces?</li>
-                <li>What is the range of output?</li>
-                <li>How big can the output be (how much data)?</li>
-                <li>How performant must the code be?</li>
-                <li>What is missing from the task description?</li>
-                <li>Are there third-party stakeholders who we should consult?</li>
-                <li>What assumptions are you making?
-                  <ul>
-                    <li>Does anyone else on the team need to validate these assumptions?</li>
-                  </ul>
-                </li>
-              </ul>
-              <h4 id="actions">Actions</h4>
-              <ul>
-                <li>The most important thing you can do during this stage of the process is to <strong>ask
-                    questions</strong>!
-                  <ul>
-                    <li>Be as specific as you can when you are asking questions.</li>
-                    <li>Be clear and concise with your questions by using unambiguous language and only including
-                      necessary details.</li>
-                  </ul>
-                </li>
-                <li>Do not fear this part of the process—enjoy it!
-                  <ul>
-                    <li>Try to have a mindset where you see the problem as a curiosity to be explored, not something
-                      there to antagonize you.</li>
-                    <li>Feeling antagonized and afraid won’t help you at work or in an interview. Remember, problem
-                      solving is the fun part so enjoy it!</li>
-                  </ul>
-                </li>
-                <li>Identify the smaller components that make up the larger problem.
-                  <ul>
-                    <li>If you get stuck in understanding, break the larger problem into smaller sub-problems.</li>
-                    <li>Then, apply this framework against each of the smaller sub-problems until you solve the larger
-                      problem.</li>
-                  </ul>
-                </li>
-                <li>Try to digest the problem and comprehend it by rewriting the problem in your own words.
-                  <ul>
-                    <li>If you had to describe the problem to someone else, how would you do so?</li>
-                  </ul>
-                </li>
-                <li>Diagram how the data flows through the problem.
-                  <ul>
-                    <li>Think about each stage of the journey for the data and what will happen to it as it travels
-                      through your program.</li>
-                  </ul>
-                </li>
-                <li>Think like a villain.
-                  <ul>
-                    <li>What inputs would break your program?</li>
-                  </ul>
-                </li>
-                <li>Where is the description of the problem incomplete?
-                  <ul>
-                    <li>If you aren’t able to get answers on something that’s unclear in the specifications, make an
-                      educated guess and document your assumptions and your decision.</li>
-                  </ul>
-                </li>
-              </ul>
-              <p>You are done with this step when you could explain this problem to someone who has never seen it. Your
-                explanation should be thorough enough for the person to skip the Understand step themselves and start to
-                plan right away.</p>
-              <h3 id="2-plan">2. Plan</h3>
-              <p>This is where you will ask <em>what steps will I take to solve the problem</em>? You will take your
-                description of the problem and transform it into a complete, actionable plan to solve that problem. If
-                you find shortcomings in your understanding of the problem while you’re planning, drop back to Step 1
-                until you resolve the ambiguity. If you have not yet completed Step 1, you will end up planning to solve
-                the wrong problem! When interviewing, it’s very important that you do this step aloud!</p>
-              <p>Remember, you aren’t coding during this step, unless it’s small pieces of throwaway code to test a
-                hypothesis. You should write pseudocode during this step, however.</p>
-              <h4 id="questions-1">Questions</h4>
-              <ul>
-                <li>Do you know the answer to a similar problem that has similar inputs and outputs?
-                  <ul>
-                    <li>What does this problem remind you of?</li>
-                    <li>Can you bring that knowledge to bear here?</li>
-                  </ul>
-                </li>
-                <li>Does my plan meet the performance requirements?
-                  <ul>
-                    <li>What’s the time complexity?</li>
-                    <li>What’s the space complexity?</li>
-                    <li>How big can my input data be?</li>
-                  </ul>
-                </li>
-                <li>Can sorting the input data ahead of time lead to any improvements in time complexity?
-                  <ul>
-                    <li>Does recursion help?</li>
-                    <li>Is the problem made up of identical subproblems?</li>
-                    <li>Can you state the problem with itself in its own definition?</li>
-                  </ul>
-                </li>
-                <li>Think like a villain. Does your plan cover the edge cases?</li>
-              </ul>
-              <h4 id="actions-1">Actions</h4>
-              <ul>
-                <li>Solve the problem like a human.
-                  <ul>
-                    <li>If you’re sorting something, imagine your task as a pile of blocks in front of you that need to
-                      be sorted.</li>
-                  </ul>
-                </li>
-                <li>Break down the steps you take into small enough pieces for a computer to understand.</li>
-                <li>Approach the problem from many angles.</li>
-                <li>Get a brute-force solution as quickly as possible, even if it’s not performant enough.
-                  <ul>
-                    <li>It can lead you toward better solutions.</li>
-                  </ul>
-                </li>
-                <li>Come up with as many plans of attack as you can.
-                  <ul>
-                    <li>Choose the best one that satisfies performance needs.</li>
-                  </ul>
-                </li>
-                <li>Try to solve a simpler version of the problem.
-                  <ul>
-                    <li>If the input is a 2D array, can you solve it for a 1D array?</li>
-                    <li>If you need to count the number of ways to eat cookies 1, 2, or 3 at a time, first try to solve
-                      it for the number of ways you could eat two at a time or even one at a time.</li>
-                    <li>The solution to the simpler problem can lead to insights on the more complex problem.</li>
-                  </ul>
-                </li>
-                <li>List the nouns and verbs in the problem description.
-                  <ul>
-                    <li>Map each one to an algorithm, process, data structure, object, method, function, etc.</li>
-                  </ul>
-                </li>
-                <li>Perfect can be the enemy of good.
-                  <ul>
-                    <li>Even if your initial workable solution isn’t performant enough, you can iterate later.</li>
-                    <li>“Premature optimization is the root of all evil.”</li>
-                  </ul>
-                </li>
-              </ul>
-              <p>You know that you completed this step when you have pseudocode that’s detailed enough to convert to
-                real code. You should also be convinced the pseudocode represents a legitimate, working solution.</p>
-              <h3 id="3-execute">3. Execute</h3>
-              <p>This is where you take your plan and convert it to actual, working code. This step isn’t easy, but it’s
-                much easier if you’ve done a good job with Steps 1 and 2 above. If you find shortcomings in your plan
-                while you’re implementing the solution, drop back to Step 2 until you resolve the ambiguity. If you have
-                not yet completed Step 2, you will spend far longer on this step than you have to.</p>
-              <h4 id="questions-2">Questions</h4>
-              <ul>
-                <li>Think like a villain. Does your implementation handle all inputs?</li>
-                <li>What language is best to solve this problem?
-                  <ul>
-                    <li>Best technically?</li>
-                    <li>Best for the company?</li>
-                  </ul>
-                </li>
-                <li>What is the best way to split this code into functional modules?</li>
-                <li>Are any of the modules reusable for later projects?</li>
-                <li>Does this functionality already exist?
-                  <ul>
-                    <li>Are there built-in libraries I can leverage?</li>
-                    <li>Are there third-party libraries I can leverage?
-                      <ul>
-                        <li>Are the licenses on those third-party libraries compatible with our needs?</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <h4 id="actions-2">Actions</h4>
-              <ul>
-                <li>Start a source code control repo (e.g. a git repo) if one doesn’t already exist.</li>
-                <li>Convert your pseudocode and outlines into actual code.</li>
-                <li>Don’t Repeat Yourself (DRY): Remove redundant code as you write it.</li>
-                <li>Document code as you write it.
-                  <ul>
-                    <li>Header blocks that contain usage information.</li>
-                    <li>Comments where necessary.</li>
-                  </ul>
-                </li>
-                <li>Write code clearly enough that comments aren’t necessary.
-                  <ul>
-                    <li>If comments help clarify or summarize a piece of code to a reader, definitely add comments.</li>
-                  </ul>
-                </li>
-                <li>If you write code that’s hackish or kludgy, fix it.
-                  <ul>
-                    <li>If you don’t have time to fix it, comment it with:
-                      <ul>
-                        <li>Why you couldn’t do it the Right Way (time constraints, etc.)</li>
-                        <li>What do you need to do to make it Right.</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li>Follow the style guide for the company.
-                  <ul>
-                    <li>If no style guide is available, follow the style of the existing codebase.</li>
-                    <li>If there is no existing style guide or codebase, choose the best one you can find.</li>
-                  </ul>
-                </li>
-                <li>Write unit tests as required.</li>
-                <li>Write end-to-end tests as required.</li>
-              </ul>
-              <p>You know this step is complete when:</p>
-              <ul>
-                <li>The program works on good data.</li>
-                <li>The program doesn’t fail on bad data or edge cases.</li>
-                <li>The program passes all tests.</li>
-              </ul>
-              <h3 id="4-reflect">4. Reflect</h3>
-              <p>Is this implementation as good as I can make it? Would I be proud to show my code to another
-                programmer?</p>
-              <h4 id="questions-3">Questions</h4>
-              <ul>
-                <li>Does your solution work in all cases?
-                  <ul>
-                    <li>Main case?</li>
-                    <li>Edge cases?</li>
-                  </ul>
-                </li>
-                <li>Is the solution performant enough?</li>
-                <li>Is the code documented?</li>
-                <li>In retrospect, what would you do differently? What will you do differently next time?
-                  <ul>
-                    <li>What went right?</li>
-                    <li>What went wrong?</li>
-                  </ul>
-                </li>
-              </ul>
-              <h4 id="actions-3">Actions</h4>
-              <ul>
-                <li>Document or implement any changes that you still need to make to the code.</li>
-                <li>Document or remove any redundant code that you should refactor.</li>
-                <li>Remove unused code.</li>
-                <li>Document future shortcomings that you will need to address in the medium or long term.</li>
-                <li>Identify and document algorithms that you should replace with algorithms with better time
-                  complexity.</li>
-                <li>Identify and document or remove redundant computation.</li>
-                <li>Document any embarrassing code that you need to fix.
-                  <ul>
-                    <li>Why you couldn’t do it the Right Way (time constraints, etc.)</li>
-                    <li>What you need to do to make it Right.</li>
-                  </ul>
-                </li>
-              </ul>
-              <p>You know that this step is complete when you cannot think of anything else to reflect upon.</p>
-              <h5>Follow Along</h5>
-              <p>Now, let’s use the <em>dining philosophers problem</em> as an example problem to use our Problem
-                Solving Framework on. Here’s a short description of the problem:</p>
-              <p>Five silent philosophers sit at a round table with bowls of noodles. One chopstick is placed between
-                each pair of adjacent philosophers.</p>
-              <p>Each philosopher must alternately think and eat. However, a philosopher can only eat noodles when they
-                have both left and right chopsticks. Each chopstick can be held by only one philosopher and so a
-                philosopher can use the chopstick only if it is not being used by another philosopher. After an
-                individual philosopher finishes eating, they need to put down both chopsticks so that the chopsticks
-                become available to others. A philosopher can take the chopstick on their right or the one on their left
-                as they become available, but cannot start eating before getting both chopsticks.</p>
-              <p>Eating is not limited by the remaining amounts of noodles or stomach space; an infinite supply and an
-                infinite demand are assumed.</p>
-              <p>The problem is how to design a discipline of behavior (a concurrent algorithm) such that no philosopher
-                will starve; i.e. each can forever continue to alternate between eating and thinking, assuming that no
-                philosopher can know when others may want to eat or think.</p>
-              <h3 id="1-understand">1. Understand</h3>
-              <p>On the surface, this seems like a straight-forward problem however, there are some approaches that will
-                lead to problematic results.</p>
-              <p>Some key pieces of information from the question we should highlight:  </p>
-              <ul>
-                <li>there are <strong>5</strong> philosophers</li>
-                <li>there are <strong>2 states</strong> (eating, thinking)</li>
-                <li>there is exactly 1 chopstick in between each pair of philosophers (5 total)</li>
-                <li>BOTH chopsticks are required to transition from thinking to eating</li>
-              </ul>
-              <p>Some important questions to ask here include <em>“When should philosophers pick up a chopstick?”</em>
-                and <em>“When should philosophers put down a chopstick?”</em></p>
-              <p>Remember that before you work on a solution, you want to establish if there are any restrictions or
-                limitations you need to consider.</p>
-              <h3 id="2-plan">2. Plan</h3>
-              <p>Let’s create a solution written as a set of rules that defines how philosophers should interact with
-                chopsticks that will allow them to transition between <em>eating</em> and <em>thinking</em>.  </p>
-              <ol>
-                <li>philosopher is eating (2 chopsticks)</li>
-                <li>philosopher finishes eating and sets down chopsticks</li>
-                <li>philosopher is thinking (0 chopsticks)</li>
-                <li>philosopher sees his/her neighbor set down chopsticks &amp; picks them up</li>
-                <li>repeat steps 1-4</li>
-              </ol>
-              <h3 id="3-implement">3. Implement</h3>
-              <p>We could break down the general plan above into a few specific rules.  </p>
-              <ul>
-                <li>eat for a set amount of time once they are holding both chopsticks</li>
-                <li>set down the right chopstick</li>
-                <li>set down the left chopstick</li>
-                <li>pick up the left chopstick as soon as it becomes available</li>
-                <li>pick up the right chopstick as soon as it becomes available</li>
-                <li>repeat</li>
-              </ul>
-              <p>However, this solution will NOT always work.</p>
-              <h3 id="4-reflect">4. Reflect</h3>
-              <p>The above solution has the potential to create a situation known in Computer Science as
-                <strong>deadlock</strong>. This means that two processes (or in this case, philosophers) are stuck in an
-                eternal state of waiting. If neither has two chopsticks, they cannot eat. But they also won’t put down
-                chopsticks they’re holding (because they haven’t eaten yet). We need to revise the rules about when
-                philosophers should pick up / put down chopsticks to eliminate this possibility.</p>
-              <h5>Challenge</h5>
-              <p>So that everyone gets to eat, there are some situations in which philosophers <em>should</em> pick up a
-                chopstick, and some situations in which they <em>should NOT</em> (because another philosopher needs to
-                use it).</p>
-              <p>Write a better solution to the dining philosophers problem so that deadlock does NOT occur.</p>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to examine and interpret project requirements and create an action plan
-                based on those requirements</h4>
-              <h5>Overview</h5>
-              <p>When you are approaching a software project, it is common to receive a list of specifications or
-                requirements. This usually takes the form of a list of necessary functions, capabilities, or
-                characteristics related to the project and the plans for creating it.</p>
-              <h3 id="types-of-requirements">Types of Requirements</h3>
-              <p>Most requirements fall within one of the following categories:</p>
-              <ol>
-                <li>Business Requirements
-                  <ul>
-                    <li>Define the overall project objectives and what problems the stakeholder is trying to solve with
-                      the product.</li>
-                  </ul>
-                </li>
-                <li>User Requirements
-                  <ul>
-                    <li>Describes user expectations and how they will interact with the product.</li>
-                    <li>User scenarios often outline the tasks your users want to complete with the product.</li>
-                  </ul>
-                </li>
-                <li>Functional Requirements
-                  <ul>
-                    <li>Provide specifics on how a product should behave and specify the development needs.</li>
-                  </ul>
-                </li>
-              </ol>
-              <h3 id="using-project-requirements">Using Project Requirements</h3>
-              <p>The requirements they supply you only tell you what the final product must have and what it must allow
-                users to do. The interesting part comes because the requirements themselves do not tell you the
-                specifics of <em>how</em> to design or develop the site so it meets the required outcomes.</p>
-              <h3 id="requirements-best-practices">Requirements Best Practices</h3>
-              <p>Requirements documents should:</p>
-              <ul>
-                <li>be specific.</li>
-                <li>avoid combining distinct requirements.</li>
-                <li>be verifiable during testing.</li>
-              </ul>
-              <h5>Follow Along</h5>
-              <p>Now, let’s take an example project and transform the requirements into a plan of action. We are going
-                to be looking at a hypothetical Rock-Paper-Scissors Game.</p>
-              <h5 id="requirements">Requirements</h5>
-              <ul>
-                <li>There will be 2 players:
-                  <ul>
-                    <li>One player will be a human user.</li>
-                    <li>The second player will a computer player that the human user is competing against.</li>
-                  </ul>
-                </li>
-                <li>Each player has three choices:
-                  <ul>
-                    <li>rock</li>
-                    <li>paper</li>
-                    <li>scissors</li>
-                  </ul>
-                </li>
-                <li>There are three results after both the human and the computer make one of their choices:
-                  <ul>
-                    <li>win</li>
-                    <li>lose</li>
-                    <li>tie</li>
-                  </ul>
-                </li>
-                <li>The rules for figuring out who wins and who loses are:
-                  <ul>
-                    <li>rock beats scissors</li>
-                    <li>paper beats rock</li>
-                    <li>scissors beats paper</li>
-                  </ul>
-                </li>
-                <li>A tie occurs if both users choose the same option.</li>
-              </ul>
-              <p>Notice how the requirements don’t tell us anything about <em>how</em> to make this program. The
-                requirements merely state the required functionality of the finished product.</p>
-              <p>It’s easy to look at this list of requirements and just freeze up and not know what the next step
-                should be. This is a perfect time to use our Lambda Problem Solving Framework (UPER)! Although for this
-                example we will only do the first two steps of the framework (Understand and Plan).</p>
-              <h5 id="understand">Understand</h5>
-              <p>Let’s make sure we understand all the details of the requirements. Looking over the list again, here
-                are some questions that come up:</p>
-              <ul>
-                <li>What happens at the start of the game?</li>
-                <li>What is the first thing the user will see when starting the game?</li>
-                <li>How are points being tracked?</li>
-                <li>At what point does the game end?</li>
-                <li>Will the computer user merely make random choices or will we program in some strategy based on user
-                  behavior?</li>
-                <li>Should we have some persistent data that stores previous results or a running win/loss count?
-                  <ul>
-                    <li>If we save the data, where should we save it and when should we update the storage.</li>
-                    <li>When do we load the historical data?</li>
-                  </ul>
-                </li>
-                <li>How does the user quit or end the current game session?</li>
-                <li>Will we use the keyboard for input or will there be an interface for using a mouse?</li>
-              </ul>
-              <p>Another important point to remember here is this is a <strong>fun</strong> puzzle to solve. Don’t get
-                trapped into thinking there is <em>one right way</em> to meet these requirements. Think of the
-                requirements as a creative writing prompt. The fun part is that now you get to come up with your own
-                novel plan for meeting these requirements.</p>
-              <p>For this example, we have to decide about the answers to each of these questions before we move onto
-                the planning phase.</p>
-              <ul>
-                <li>
-                  <strong>What happens at the start of the game?</strong>
-                    - <em>We should print out a welcome message to the user after they initialize the game.</em>
-                </li>
-                <li>
-                  <strong>What is the first thing the user will see when starting the game?</strong>
-                    - <em>They will see the welcome message and historical win/loss data.</em>
-                </li>
-                <li>
-                  <strong>How are points being tracked?</strong>
-                    - <em>We will track points in memory during a game and print out current score after each round.
-                    When the game ends we will save data to our data store.</em>
-                </li>
-                <li>
-                  <strong>At what point does the game end?</strong>
-                    - <em>The game will only end when the user quits the game.</em>
-                </li>
-                <li>
-                  <strong>Will the computer user merely make random choices or will we program in some strategy based on
-                    user behavior?</strong>
-                    - <em>For this first implementation of the game, let’s just have the computer make a random choice
-                    and not try to program in any strategy.</em>
-                </li>
-                <li>
-                  <strong>Should we have some persistent data that stores previous results or a running win/loss
-                    count?</strong>
-                    - <em>We will save our win/loss data to a text file that we will read from at the start of a new
-                    game and save to at the end of each game.</em>
-                    - <strong>If we save the data, where should we save it and when should we update the
-                    storage.</strong>
-                      - <em>We will save to a text file and update the file at the end of each game.</em>
-                    - <strong>When do we load the historical data?</strong>
-                      - <em>We will load the historical data from the text file at the start of a new game.</em>
-                </li>
-                <li>
-                  <strong>How does the user quit or end the current game session?</strong>
-                    - <em>The user will have the option to quit after each round of the game</em>
-                </li>
-                <li>
-                  <strong>Will we use the keyboard for input or will there be an interface for using a mouse?</strong>
-                    - <em>We will use keyboard input because this will be a Python terminal game.</em>
-                </li>
-              </ul>
-              <p>I think we’ve answered these questions in adequate detail to move on to the planning phase.</p>
-              <h5 id="plan">Plan</h5>
-              <p>Now we need to take our project requirements and our answers to our questions and transform that
-                information into a complete actionable plan that will produce the desired result. Remember, we will not
-                be completing this problem in code but we will creating a plan of action and writing pseudo-code that
-                will do it.</p>
-              <p>Let’s think of all the variables that will exist in our program first.</p>
-              <pre><code class="language-pseudocode">### necessary variables
+                <h4 id="actions">Actions</h4>
+                <ul>
+                  <li>
+                    The most important thing you can do during this stage of the
+                    process is to <strong>ask questions</strong>!
+                    <ul>
+                      <li>
+                        Be as specific as you can when you are asking questions.
+                      </li>
+                      <li>
+                        Be clear and concise with your questions by using
+                        unambiguous language and only including
+                        necessary details.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Do not fear this part of the process—enjoy it!
+                    <ul>
+                      <li>
+                        Try to have a mindset where you see the problem as a
+                        curiosity to be explored, not something there to
+                        antagonize you.
+                      </li>
+                      <li>
+                        Feeling antagonized and afraid won’t help you at work or
+                        in an interview. Remember, problem solving is the fun
+                        part so enjoy it!
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Identify the smaller components that make up the larger
+                    problem.
+                    <ul>
+                      <li>
+                        If you get stuck in understanding, break the larger
+                        problem into smaller sub-problems.
+                      </li>
+                      <li>
+                        Then, apply this framework against each of the smaller
+                        sub-problems until you solve the larger problem.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Try to digest the problem and comprehend it by rewriting the
+                    problem in your own words.
+                    <ul>
+                      <li>
+                        If you had to describe the problem to someone else, how
+                        would you do so?
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Diagram how the data flows through the problem.
+                    <ul>
+                      <li>
+                        Think about each stage of the journey for the data and
+                        what will happen to it as it travels through your
+                        program.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Think like a villain.
+                    <ul>
+                      <li>What inputs would break your program?</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Where is the description of the problem incomplete?
+                    <ul>
+                      <li>
+                        If you aren’t able to get answers on something that’s
+                        unclear in the specifications, make an educated guess
+                        and document your assumptions and your decision.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  You are done with this step when you could explain this
+                  problem to someone who has never seen it. Your explanation
+                  should be thorough enough for the person to skip the
+                  Understand step themselves and start to plan right away.
+                </p>
+                <h3 id="2-plan">2. Plan</h3>
+                <p>
+                  This is where you will ask
+                  <em>what steps will I take to solve the problem</em>? You will
+                  take your description of the problem and transform it into a
+                  complete, actionable plan to solve that problem. If you find
+                  shortcomings in your understanding of the problem while you’re
+                  planning, drop back to Step 1 until you resolve the ambiguity.
+                  If you have not yet completed Step 1, you will end up planning
+                  to solve the wrong problem! When interviewing, it’s very
+                  important that you do this step aloud!
+                </p>
+                <p>
+                  Remember, you aren’t coding during this step, unless it’s
+                  small pieces of throwaway code to test a hypothesis. You
+                  should write pseudocode during this step, however.
+                </p>
+                <h4 id="questions-1">Questions</h4>
+                <ul>
+                  <li>
+                    Do you know the answer to a similar problem that has similar
+                    inputs and outputs?
+                    <ul>
+                      <li>What does this problem remind you of?</li>
+                      <li>Can you bring that knowledge to bear here?</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Does my plan meet the performance requirements?
+                    <ul>
+                      <li>What’s the time complexity?</li>
+                      <li>What’s the space complexity?</li>
+                      <li>How big can my input data be?</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Can sorting the input data ahead of time lead to any
+                    improvements in time complexity?
+                    <ul>
+                      <li>Does recursion help?</li>
+                      <li>Is the problem made up of identical subproblems?</li>
+                      <li>
+                        Can you state the problem with itself in its own
+                        definition?
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Think like a villain. Does your plan cover the edge cases?
+                  </li>
+                </ul>
+                <h4 id="actions-1">Actions</h4>
+                <ul>
+                  <li>
+                    Solve the problem like a human.
+                    <ul>
+                      <li>
+                        If you’re sorting something, imagine your task as a pile
+                        of blocks in front of you that need to be sorted.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Break down the steps you take into small enough pieces for a
+                    computer to understand.
+                  </li>
+                  <li>Approach the problem from many angles.</li>
+                  <li>
+                    Get a brute-force solution as quickly as possible, even if
+                    it’s not performant enough.
+                    <ul>
+                      <li>It can lead you toward better solutions.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Come up with as many plans of attack as you can.
+                    <ul>
+                      <li>
+                        Choose the best one that satisfies performance needs.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Try to solve a simpler version of the problem.
+                    <ul>
+                      <li>
+                        If the input is a 2D array, can you solve it for a 1D
+                        array?
+                      </li>
+                      <li>
+                        If you need to count the number of ways to eat cookies
+                        1, 2, or 3 at a time, first try to solve it for the
+                        number of ways you could eat two at a time or even one
+                        at a time.
+                      </li>
+                      <li>
+                        The solution to the simpler problem can lead to insights
+                        on the more complex problem.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    List the nouns and verbs in the problem description.
+                    <ul>
+                      <li>
+                        Map each one to an algorithm, process, data structure,
+                        object, method, function, etc.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Perfect can be the enemy of good.
+                    <ul>
+                      <li>
+                        Even if your initial workable solution isn’t performant
+                        enough, you can iterate later.
+                      </li>
+                      <li>“Premature optimization is the root of all evil.”</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  You know that you completed this step when you have pseudocode
+                  that’s detailed enough to convert to real code. You should
+                  also be convinced the pseudocode represents a legitimate,
+                  working solution.
+                </p>
+                <h3 id="3-execute">3. Execute</h3>
+                <p>
+                  This is where you take your plan and convert it to actual,
+                  working code. This step isn’t easy, but it’s much easier if
+                  you’ve done a good job with Steps 1 and 2 above. If you find
+                  shortcomings in your plan while you’re implementing the
+                  solution, drop back to Step 2 until you resolve the ambiguity.
+                  If you have not yet completed Step 2, you will spend far
+                  longer on this step than you have to.
+                </p>
+                <h4 id="questions-2">Questions</h4>
+                <ul>
+                  <li>
+                    Think like a villain. Does your implementation handle all
+                    inputs?
+                  </li>
+                  <li>
+                    What language is best to solve this problem?
+                    <ul>
+                      <li>Best technically?</li>
+                      <li>Best for the company?</li>
+                    </ul>
+                  </li>
+                  <li>
+                    What is the best way to split this code into functional
+                    modules?
+                  </li>
+                  <li>Are any of the modules reusable for later projects?</li>
+                  <li>
+                    Does this functionality already exist?
+                    <ul>
+                      <li>Are there built-in libraries I can leverage?</li>
+                      <li>
+                        Are there third-party libraries I can leverage?
+                        <ul>
+                          <li>
+                            Are the licenses on those third-party libraries
+                            compatible with our needs?
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <h4 id="actions-2">Actions</h4>
+                <ul>
+                  <li>
+                    Start a source code control repo (e.g. a git repo) if one
+                    doesn’t already exist.
+                  </li>
+                  <li>
+                    Convert your pseudocode and outlines into actual code.
+                  </li>
+                  <li>
+                    Don’t Repeat Yourself (DRY): Remove redundant code as you
+                    write it.
+                  </li>
+                  <li>
+                    Document code as you write it.
+                    <ul>
+                      <li>Header blocks that contain usage information.</li>
+                      <li>Comments where necessary.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Write code clearly enough that comments aren’t necessary.
+                    <ul>
+                      <li>
+                        If comments help clarify or summarize a piece of code to
+                        a reader, definitely add comments.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    If you write code that’s hackish or kludgy, fix it.
+                    <ul>
+                      <li>
+                        If you don’t have time to fix it, comment it with:
+                        <ul>
+                          <li>
+                            Why you couldn’t do it the Right Way (time
+                            constraints, etc.)
+                          </li>
+                          <li>What do you need to do to make it Right.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Follow the style guide for the company.
+                    <ul>
+                      <li>
+                        If no style guide is available, follow the style of the
+                        existing codebase.
+                      </li>
+                      <li>
+                        If there is no existing style guide or codebase, choose
+                        the best one you can find.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Write unit tests as required.</li>
+                  <li>Write end-to-end tests as required.</li>
+                </ul>
+                <p>You know this step is complete when:</p>
+                <ul>
+                  <li>The program works on good data.</li>
+                  <li>The program doesn’t fail on bad data or edge cases.</li>
+                  <li>The program passes all tests.</li>
+                </ul>
+                <h3 id="4-reflect">4. Reflect</h3>
+                <p>
+                  Is this implementation as good as I can make it? Would I be
+                  proud to show my code to another programmer?
+                </p>
+                <h4 id="questions-3">Questions</h4>
+                <ul>
+                  <li>
+                    Does your solution work in all cases?
+                    <ul>
+                      <li>Main case?</li>
+                      <li>Edge cases?</li>
+                    </ul>
+                  </li>
+                  <li>Is the solution performant enough?</li>
+                  <li>Is the code documented?</li>
+                  <li>
+                    In retrospect, what would you do differently? What will you
+                    do differently next time?
+                    <ul>
+                      <li>What went right?</li>
+                      <li>What went wrong?</li>
+                    </ul>
+                  </li>
+                </ul>
+                <h4 id="actions-3">Actions</h4>
+                <ul>
+                  <li>
+                    Document or implement any changes that you still need to
+                    make to the code.
+                  </li>
+                  <li>
+                    Document or remove any redundant code that you should
+                    refactor.
+                  </li>
+                  <li>Remove unused code.</li>
+                  <li>
+                    Document future shortcomings that you will need to address
+                    in the medium or long term.
+                  </li>
+                  <li>
+                    Identify and document algorithms that you should replace
+                    with algorithms with better time complexity.
+                  </li>
+                  <li>
+                    Identify and document or remove redundant computation.
+                  </li>
+                  <li>
+                    Document any embarrassing code that you need to fix.
+                    <ul>
+                      <li>
+                        Why you couldn’t do it the Right Way (time constraints,
+                        etc.)
+                      </li>
+                      <li>What you need to do to make it Right.</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  You know that this step is complete when you cannot think of
+                  anything else to reflect upon.
+                </p>
+                <h5>Follow Along</h5>
+                <p>
+                  Now, let’s use the <em>dining philosophers problem</em> as an
+                  example problem to use our Problem Solving Framework on.
+                  Here’s a short description of the problem:
+                </p>
+                <p>
+                  Five silent philosophers sit at a round table with bowls of
+                  noodles. One chopstick is placed between each pair of adjacent
+                  philosophers.
+                </p>
+                <p>
+                  Each philosopher must alternately think and eat. However, a
+                  philosopher can only eat noodles when they have both left and
+                  right chopsticks. Each chopstick can be held by only one
+                  philosopher and so a philosopher can use the chopstick only if
+                  it is not being used by another philosopher. After an
+                  individual philosopher finishes eating, they need to put down
+                  both chopsticks so that the chopsticks become available to
+                  others. A philosopher can take the chopstick on their right or
+                  the one on their left as they become available, but cannot
+                  start eating before getting both chopsticks.
+                </p>
+                <p>
+                  Eating is not limited by the remaining amounts of noodles or
+                  stomach space; an infinite supply and an infinite demand are
+                  assumed.
+                </p>
+                <p>
+                  The problem is how to design a discipline of behavior (a
+                  concurrent algorithm) such that no philosopher will starve;
+                  i.e. each can forever continue to alternate between eating and
+                  thinking, assuming that no philosopher can know when others
+                  may want to eat or think.
+                </p>
+                <h3 id="1-understand">1. Understand</h3>
+                <p>
+                  On the surface, this seems like a straight-forward problem
+                  however, there are some approaches that will lead to
+                  problematic results.
+                </p>
+                <p>
+                  Some key pieces of information from the question we should
+                  highlight:  
+                </p>
+                <ul>
+                  <li>there are <strong>5</strong> philosophers</li>
+                  <li>
+                    there are <strong>2 states</strong> (eating, thinking)
+                  </li>
+                  <li>
+                    there is exactly 1 chopstick in between each pair of
+                    philosophers (5 total)
+                  </li>
+                  <li>
+                    BOTH chopsticks are required to transition from thinking to
+                    eating
+                  </li>
+                </ul>
+                <p>
+                  Some important questions to ask here include
+                  <em>“When should philosophers pick up a chopstick?”</em> and
+                  <em>“When should philosophers put down a chopstick?”</em>
+                </p>
+                <p>
+                  Remember that before you work on a solution, you want to
+                  establish if there are any restrictions or limitations you
+                  need to consider.
+                </p>
+                <h3 id="2-plan">2. Plan</h3>
+                <p>
+                  Let’s create a solution written as a set of rules that defines
+                  how philosophers should interact with chopsticks that will
+                  allow them to transition between <em>eating</em> and
+                  <em>thinking</em>.  
+                </p>
+                <ol>
+                  <li>philosopher is eating (2 chopsticks)</li>
+                  <li>philosopher finishes eating and sets down chopsticks</li>
+                  <li>philosopher is thinking (0 chopsticks)</li>
+                  <li>
+                    philosopher sees his/her neighbor set down chopsticks &amp;
+                    picks them up
+                  </li>
+                  <li>repeat steps 1-4</li>
+                </ol>
+                <h3 id="3-implement">3. Implement</h3>
+                <p>
+                  We could break down the general plan above into a few specific
+                  rules.  
+                </p>
+                <ul>
+                  <li>
+                    eat for a set amount of time once they are holding both
+                    chopsticks
+                  </li>
+                  <li>set down the right chopstick</li>
+                  <li>set down the left chopstick</li>
+                  <li>
+                    pick up the left chopstick as soon as it becomes available
+                  </li>
+                  <li>
+                    pick up the right chopstick as soon as it becomes available
+                  </li>
+                  <li>repeat</li>
+                </ul>
+                <p>However, this solution will NOT always work.</p>
+                <h3 id="4-reflect">4. Reflect</h3>
+                <p>
+                  The above solution has the potential to create a situation
+                  known in Computer Science as <strong>deadlock</strong>. This
+                  means that two processes (or in this case, philosophers) are
+                  stuck in an eternal state of waiting. If neither has two
+                  chopsticks, they cannot eat. But they also won’t put down
+                  chopsticks they’re holding (because they haven’t eaten yet).
+                  We need to revise the rules about when philosophers should
+                  pick up / put down chopsticks to eliminate this possibility.
+                </p>
+                <h5>Challenge</h5>
+                <p>
+                  So that everyone gets to eat, there are some situations in
+                  which philosophers <em>should</em> pick up a chopstick, and
+                  some situations in which they <em>should NOT</em> (because
+                  another philosopher needs to use it).
+                </p>
+                <p>
+                  Write a better solution to the dining philosophers problem so
+                  that deadlock does NOT occur.
+                </p>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to examine and interpret project requirements and create
+                  an action plan based on those requirements
+                </h4>
+                <h5>Overview</h5>
+                <p>
+                  When you are approaching a software project, it is common to
+                  receive a list of specifications or requirements. This usually
+                  takes the form of a list of necessary functions, capabilities,
+                  or characteristics related to the project and the plans for
+                  creating it.
+                </p>
+                <h3 id="types-of-requirements">Types of Requirements</h3>
+                <p>
+                  Most requirements fall within one of the following categories:
+                </p>
+                <ol>
+                  <li>
+                    Business Requirements
+                    <ul>
+                      <li>
+                        Define the overall project objectives and what problems
+                        the stakeholder is trying to solve with the product.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    User Requirements
+                    <ul>
+                      <li>
+                        Describes user expectations and how they will interact
+                        with the product.
+                      </li>
+                      <li>
+                        User scenarios often outline the tasks your users want
+                        to complete with the product.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Functional Requirements
+                    <ul>
+                      <li>
+                        Provide specifics on how a product should behave and
+                        specify the development needs.
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+                <h3 id="using-project-requirements">
+                  Using Project Requirements
+                </h3>
+                <p>
+                  The requirements they supply you only tell you what the final
+                  product must have and what it must allow users to do. The
+                  interesting part comes because the requirements themselves do
+                  not tell you the specifics of <em>how</em> to design or
+                  develop the site so it meets the required outcomes.
+                </p>
+                <h3 id="requirements-best-practices">
+                  Requirements Best Practices
+                </h3>
+                <p>Requirements documents should:</p>
+                <ul>
+                  <li>be specific.</li>
+                  <li>avoid combining distinct requirements.</li>
+                  <li>be verifiable during testing.</li>
+                </ul>
+                <h5>Follow Along</h5>
+                <p>
+                  Now, let’s take an example project and transform the
+                  requirements into a plan of action. We are going to be looking
+                  at a hypothetical Rock-Paper-Scissors Game.
+                </p>
+                <h5 id="requirements">Requirements</h5>
+                <ul>
+                  <li>
+                    There will be 2 players:
+                    <ul>
+                      <li>One player will be a human user.</li>
+                      <li>
+                        The second player will a computer player that the human
+                        user is competing against.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Each player has three choices:
+                    <ul>
+                      <li>rock</li>
+                      <li>paper</li>
+                      <li>scissors</li>
+                    </ul>
+                  </li>
+                  <li>
+                    There are three results after both the human and the
+                    computer make one of their choices:
+                    <ul>
+                      <li>win</li>
+                      <li>lose</li>
+                      <li>tie</li>
+                    </ul>
+                  </li>
+                  <li>
+                    The rules for figuring out who wins and who loses are:
+                    <ul>
+                      <li>rock beats scissors</li>
+                      <li>paper beats rock</li>
+                      <li>scissors beats paper</li>
+                    </ul>
+                  </li>
+                  <li>A tie occurs if both users choose the same option.</li>
+                </ul>
+                <p>
+                  Notice how the requirements don’t tell us anything about
+                  <em>how</em> to make this program. The requirements merely
+                  state the required functionality of the finished product.
+                </p>
+                <p>
+                  It’s easy to look at this list of requirements and just freeze
+                  up and not know what the next step should be. This is a
+                  perfect time to use our Lambda Problem Solving Framework
+                  (UPER)! Although for this example we will only do the first
+                  two steps of the framework (Understand and Plan).
+                </p>
+                <h5 id="understand">Understand</h5>
+                <p>
+                  Let’s make sure we understand all the details of the
+                  requirements. Looking over the list again, here are some
+                  questions that come up:
+                </p>
+                <ul>
+                  <li>What happens at the start of the game?</li>
+                  <li>
+                    What is the first thing the user will see when starting the
+                    game?
+                  </li>
+                  <li>How are points being tracked?</li>
+                  <li>At what point does the game end?</li>
+                  <li>
+                    Will the computer user merely make random choices or will we
+                    program in some strategy based on user behavior?
+                  </li>
+                  <li>
+                    Should we have some persistent data that stores previous
+                    results or a running win/loss count?
+                    <ul>
+                      <li>
+                        If we save the data, where should we save it and when
+                        should we update the storage.
+                      </li>
+                      <li>When do we load the historical data?</li>
+                    </ul>
+                  </li>
+                  <li>
+                    How does the user quit or end the current game session?
+                  </li>
+                  <li>
+                    Will we use the keyboard for input or will there be an
+                    interface for using a mouse?
+                  </li>
+                </ul>
+                <p>
+                  Another important point to remember here is this is a
+                  <strong>fun</strong> puzzle to solve. Don’t get trapped into
+                  thinking there is <em>one right way</em> to meet these
+                  requirements. Think of the requirements as a creative writing
+                  prompt. The fun part is that now you get to come up with your
+                  own novel plan for meeting these requirements.
+                </p>
+                <p>
+                  For this example, we have to decide about the answers to each
+                  of these questions before we move onto the planning phase.
+                </p>
+                <ul>
+                  <li>
+                    <strong>What happens at the start of the game?</strong>
+                      -
+                    <em
+                      >We should print out a welcome message to the user after
+                      they initialize the game.</em
+                    >
+                  </li>
+                  <li>
+                    <strong
+                      >What is the first thing the user will see when starting
+                      the game?</strong
+                    >
+                      -
+                    <em
+                      >They will see the welcome message and historical win/loss
+                      data.</em
+                    >
+                  </li>
+                  <li>
+                    <strong>How are points being tracked?</strong>
+                      -
+                    <em
+                      >We will track points in memory during a game and print
+                      out current score after each round. When the game ends we
+                      will save data to our data store.</em
+                    >
+                  </li>
+                  <li>
+                    <strong>At what point does the game end?</strong>
+                      -
+                    <em
+                      >The game will only end when the user quits the game.</em
+                    >
+                  </li>
+                  <li>
+                    <strong
+                      >Will the computer user merely make random choices or will
+                      we program in some strategy based on user
+                      behavior?</strong
+                    >
+                      -
+                    <em
+                      >For this first implementation of the game, let’s just
+                      have the computer make a random choice and not try to
+                      program in any strategy.</em
+                    >
+                  </li>
+                  <li>
+                    <strong
+                      >Should we have some persistent data that stores previous
+                      results or a running win/loss count?</strong
+                    >
+                      -
+                    <em
+                      >We will save our win/loss data to a text file that we
+                      will read from at the start of a new game and save to at
+                      the end of each game.</em
+                    >
+                      -
+                    <strong
+                      >If we save the data, where should we save it and when
+                      should we update the storage.</strong
+                    >
+                        -
+                    <em
+                      >We will save to a text file and update the file at the
+                      end of each game.</em
+                    >
+                      -
+                    <strong>When do we load the historical data?</strong>     -
+                    <em
+                      >We will load the historical data from the text file at
+                      the start of a new game.</em
+                    >
+                  </li>
+                  <li>
+                    <strong
+                      >How does the user quit or end the current game
+                      session?</strong
+                    >
+                      -
+                    <em
+                      >The user will have the option to quit after each round of
+                      the game</em
+                    >
+                  </li>
+                  <li>
+                    <strong
+                      >Will we use the keyboard for input or will there be an
+                      interface for using a mouse?</strong
+                    >
+                      -
+                    <em
+                      >We will use keyboard input because this will be a Python
+                      terminal game.</em
+                    >
+                  </li>
+                </ul>
+                <p>
+                  I think we’ve answered these questions in adequate detail to
+                  move on to the planning phase.
+                </p>
+                <h5 id="plan">Plan</h5>
+                <p>
+                  Now we need to take our project requirements and our answers
+                  to our questions and transform that information into a
+                  complete actionable plan that will produce the desired result.
+                  Remember, we will not be completing this problem in code but
+                  we will creating a plan of action and writing pseudo-code that
+                  will do it.
+                </p>
+                <p>
+                  Let’s think of all the variables that will exist in our
+                  program first.
+                </p>
+                <pre><code class="language-pseudocode">### necessary variables
 welcome_message
 historical_data_message
 quit_message
@@ -1109,9 +1592,11 @@ choice_options
 computer_choice
 user_choice
 </code></pre>
-              <p>For now, we will just leave these as pseudocode, but next let’s think about the functionality of the
-                game.</p>
-              <pre><code class="language-pseudocode">### procedures
+                <p>
+                  For now, we will just leave these as pseudocode, but next
+                  let’s think about the functionality of the game.
+                </p>
+                <pre><code class="language-pseudocode">### procedures
 1. display welcome_message
 2. load historical_data and populate variables with data
 3. display historical_data_message with historical data
@@ -1124,28 +1609,53 @@ user_choice
 8. update wins, ties, losses appropriately
 9. return to step 4
 </code></pre>
-              <p>So, now we’ve detailed what variables we need to use to store and interact with our data. We’ve also
-                thought through and documented the sequential logic of our program.</p>
-              <p>We know that we have completed this step when we are confident we can start converting our pseudo-code
-                into real code. I feel confident that we could do that.</p>
-              <h5>Challenge</h5>
-              <p>What you need to do is to take our pseudo-code one step further before writing code.</p>
-              <ol>
-                <li>Take the variable list and choose what data structure or data type you will use for each variable
-                  and document your choice.</li>
-                <li>Take the list of procedures and come up with function names that will store related procedural code.
-                  For example, you may want to group all the procedural behavior that occurs when a user quits the game
-                  into a function named <code class="highlighter-rouge">quit_game</code>.</li>
-              </ol>
-              <hr>
-              <h4 class="mark mb-3 p-2">Learn to create a Python program, demonstrate its successful performance, and
-                explain the process used to create the program</h4>
-              <p>Now that you’ve learned the basics, it time to put them to use for a more complex project. implementing
-                a text adventure game.</p>
-              <h5>Overview</h5>
-              <p>Now, we need to write the simple Python terminal game. We will use the pseudo-code that we wrote during
-                the previous objective:</p>
-              <pre><code class="language-pseudocode">### necessary variables
+                <p>
+                  So, now we’ve detailed what variables we need to use to store
+                  and interact with our data. We’ve also thought through and
+                  documented the sequential logic of our program.
+                </p>
+                <p>
+                  We know that we have completed this step when we are confident
+                  we can start converting our pseudo-code into real code. I feel
+                  confident that we could do that.
+                </p>
+                <h5>Challenge</h5>
+                <p>
+                  What you need to do is to take our pseudo-code one step
+                  further before writing code.
+                </p>
+                <ol>
+                  <li>
+                    Take the variable list and choose what data structure or
+                    data type you will use for each variable and document your
+                    choice.
+                  </li>
+                  <li>
+                    Take the list of procedures and come up with function names
+                    that will store related procedural code. For example, you
+                    may want to group all the procedural behavior that occurs
+                    when a user quits the game into a function named
+                    <code class="highlighter-rouge">quit_game</code>.
+                  </li>
+                </ol>
+                <hr />
+                <h4 class="mark mb-3 p-2">
+                  Learn to create a Python program, demonstrate its successful
+                  performance, and explain the process used to create the
+                  program
+                </h4>
+                <p>
+                  Now that you’ve learned the basics, it time to put them to use
+                  for a more complex project. implementing a text adventure
+                  game.
+                </p>
+                <h5>Overview</h5>
+                <p>
+                  Now, we need to write the simple Python terminal game. We will
+                  use the pseudo-code that we wrote during the previous
+                  objective:
+                </p>
+                <pre><code class="language-pseudocode">### necessary variables
 welcome_message
 historical_data_message
 quit_message
@@ -1175,13 +1685,21 @@ user_choice
 8. update wins, ties, and losses
 9. return to step 4
 </code></pre>
-              <h5>Follow Along</h5>
-              <p>Let’s do this part together. We are going to, step by step, transform our pseudocode into an actual
-                working python program.</p>
-              <p>We will start by declaring all of our variables and assigning values to them:</p>
-              <div class="language-python highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
+                <h5>Follow Along</h5>
+                <p>
+                  Let’s do this part together. We are going to, step by step,
+                  transform our pseudocode into an actual working python
+                  program.
+                </p>
+                <p>
+                  We will start by declaring all of our variables and assigning
+                  values to them:
+                </p>
+                <div class="language-python highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kn">import</span> <span class="nn">random</span>
 
 
 <span class="n">score</span> <span class="o">=</span><span class="err"> </span> <span class="p">{</span>
@@ -1212,14 +1730,19 @@ user_choice
 <span class="n">computer_choice</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1"># use the random module imported above
 </span><span class="n">user_choice</span> <span class="o">=</span> <span class="bp">None</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Now, we need to write out our procedural code by transforming our pseudo-code to actual Python code. We
-                will look at our list of necessary procedures and logic and try to contain logical groupings into
-                separate functions.</p>
-              <div class="language-python highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
+                <p>
+                  Now, we need to write out our procedural code by transforming
+                  our pseudo-code to actual Python code. We will look at our
+                  list of necessary procedures and logic and try to contain
+                  logical groupings into separate functions.
+                </p>
+                <div class="language-python highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kn">import</span> <span class="nn">random</span>
 
 
 <span class="n">score</span> <span class="o">=</span><span class="err"> </span> <span class="p">{</span>
@@ -1317,17 +1840,31 @@ user_choice
 <span class="err">       </span> <span class="k">print</span><span class="p">(</span><span class="n">loss_message</span><span class="p">)</span>
 <span class="err">       </span> <span class="n">score</span><span class="p">[</span><span class="err">“</span><span class="n">losses</span><span class="err">”</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>We have all the individual pieces of our code. But, our code is a mess. And, we never figured out how
-                we will loop through our game logic or quit when necessary. Now that we have all of this code there in
-                front of us, it can be much easier to refactor. Let’s do that together.</p>
-              <p><em>Note: we need to create a “history.txt” file with <code class="highlighter-rouge">0,0,0</code> as
-                  it’s only contents.</em></p>
-              <p>The first thing we should do is move all the function definitions to the top of the file.</p>
-              <div class="language-python highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
+                <p>
+                  We have all the individual pieces of our code. But, our code
+                  is a mess. And, we never figured out how we will loop through
+                  our game logic or quit when necessary. Now that we have all of
+                  this code there in front of us, it can be much easier to
+                  refactor. Let’s do that together.
+                </p>
+                <p>
+                  <em
+                    >Note: we need to create a “history.txt” file with
+                    <code class="highlighter-rouge">0,0,0</code> as it’s only
+                    contents.</em
+                  >
+                </p>
+                <p>
+                  The first thing we should do is move all the function
+                  definitions to the top of the file.
+                </p>
+                <div class="language-python highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="kn">import</span> <span class="nn">random</span>
 
 
 <span class="k">def</span> <span class="nf">show_welcome_message</span><span class="p">():</span>
@@ -1410,16 +1947,22 @@ user_choice
 <span class="n">computer_choice</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">user_choice</span> <span class="o">=</span> <span class="bp">None</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>So, now we have all of our function definitions and variable declarations at the top of our file. But,
-                we haven’t used our functions and variables to write out the game loop for our game. This is a perfect
-                scenario for the use of a <code class="highlighter-rouge">while</code> loop. We want to keep looping
-                through our game logic unless the user has quit.</p>
-              <p>Let’s change our code again:</p>
-              <div class="language-python highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="k">def</span> <span class="nf">show_welcome_message</span><span class="p">():</span>
+                <p>
+                  So, now we have all of our function definitions and variable
+                  declarations at the top of our file. But, we haven’t used our
+                  functions and variables to write out the game loop for our
+                  game. This is a perfect scenario for the use of a
+                  <code class="highlighter-rouge">while</code> loop. We want to
+                  keep looping through our game logic unless the user has quit.
+                </p>
+                <p>Let’s change our code again:</p>
+                <div class="language-python highlighter-rouge">
+                  <div class="highlight">
+                    <pre
+                      class="highlight"
+                    ><code><span class="k">def</span> <span class="nf">show_welcome_message</span><span class="p">():</span>
 <span class="err">   </span> <span class="n">welcome_message</span> <span class="o">=</span> <span class="err">“</span><span class="n">Welcome</span> <span class="n">to</span> <span class="n">Rock</span><span class="p">,</span> <span class="n">Paper</span><span class="p">,</span> <span class="n">Scissors</span><span class="err">!”</span>
 <span class="err">   </span> <span class="k">print</span><span class="p">(</span><span class="n">welcome_message</span><span class="p">)</span>
 
@@ -1513,278 +2056,400 @@ user_choice
 <span class="c1">### Quit game if user exits game loop
 </span><span class="n">quit_game</span><span class="p">(</span><span class="n">score</span><span class="p">[</span><span class="err">“</span><span class="n">wins</span><span class="err">”</span><span class="p">],</span> <span class="n">score</span><span class="p">[</span><span class="err">“</span><span class="n">ties</span><span class="err">”</span><span class="p">],</span> <span class="n">score</span><span class="p">[</span><span class="err">“</span><span class="n">losses</span><span class="err">”</span><span class="p">])</span>
 </code></pre>
+                  </div>
                 </div>
-              </div>
-              <p>Now, we have a functioning Rock, Paper, Scissors game!</p>
-              <h5>Challenge</h5>
-              <p>Our game could use some improvements. Take the ending code above and change it to add the following
-                features:</p>
-              <ol>
-                <li>Besides the result message that gets display after every user choice, also display the computer’s
-                  choice and the current score.</li>
-                <li>If the user quits, before exiting the program, display the current score.</li>
-                <li>Besides prompting the user for their input for their choice, also display the previous round’s user
-                  choice and computer choice.</li>
-              </ol>
-              <p>After adding those features, run your program to make sure everything is still working.</p>
-              <p>Now, sit down and write 1-2 paragraphs that explain the process you underwent to add the features to
-                the program. Try not to just explain your new code, line-by-line, but describe your actual thought
-                process and the high-level overview of what your new code does. Think of it the same way you would
-                describe a painting/drawing of yours if someone asked you to explain your process. People don’t want to
-                hear about every time you added more paint to your brush but they want to know why you chose the colors
-                you did or your unique perspective on why you painted what you did.</p>
-              <hr>
-              <h2 class="display-4">
-                <a id="project" class="anchor" href="#project" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Project</h2>
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <h5><a target="_blank" href="https://github.com/LambdaSchool/Intro-Python-I">Intro to Python</a></h5>
-                  <p><em>Note: This project spans two modules (modules 1 and 2). You should roughly try to finish the
-                      first half of the problems during module 1 and the second half of the problems during module
-                      2.</em></p>
-                  <p>Toy programs designed to learn the basics of Python.</p>
-                </li>
-              </ul>
-              <h2 class="display-4">
-                <a id="review" class="anchor" href="#review" aria-hidden="true"><span
-                    class="octicon octicon-link"></span></a>Review</h2>
-              <h3 class="display-5">Class Recordings</h3>
-              <p class="lead">You can use class recordings to help you master the material.</p>
-              <div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <strong><a target="_blank" href="https://youtu.be/ujKHsdRkx6U">Introduction to Python II for CSPT12
-                        w/Beej Jorgensen</a></strong>
-                    <p>Learn to name and describe the details of each step of Lambda’s Problem Solving Framework</p>
+                <p>Now, we have a functioning Rock, Paper, Scissors game!</p>
+                <h5>Challenge</h5>
+                <p>
+                  Our game could use some improvements. Take the ending code
+                  above and change it to add the following features:
+                </p>
+                <ol>
+                  <li>
+                    Besides the result message that gets display after every
+                    user choice, also display the computer’s choice and the
+                    current score.
                   </li>
+                  <li>
+                    If the user quits, before exiting the program, display the
+                    current score.
+                  </li>
+                  <li>
+                    Besides prompting the user for their input for their choice,
+                    also display the previous round’s user choice and computer
+                    choice.
+                  </li>
+                </ol>
+                <p>
+                  After adding those features, run your program to make sure
+                  everything is still working.
+                </p>
+                <p>
+                  Now, sit down and write 1-2 paragraphs that explain the
+                  process you underwent to add the features to the program. Try
+                  not to just explain your new code, line-by-line, but describe
+                  your actual thought process and the high-level overview of
+                  what your new code does. Think of it the same way you would
+                  describe a painting/drawing of yours if someone asked you to
+                  explain your process. People don’t want to hear about every
+                  time you added more paint to your brush but they want to know
+                  why you chose the colors you did or your unique perspective on
+                  why you painted what you did.
+                </p>
+                <hr />
+                <h2 class="display-4">
+                  <a
+                    id="project"
+                    class="anchor"
+                    href="#project"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Project
+                </h2>
+                <ul class="list-group">
                   <li class="list-group-item">
-                    <a href="/archive/CS/module/recwpe3Y9TVWrGT8L">All previous recordings</a>
+                    <h5>
+                      <a
+                        target="_blank"
+                        href="https://github.com/LambdaSchool/Intro-Python-I"
+                        >Intro to Python</a
+                      >
+                    </h5>
+                    <p>
+                      <em
+                        >Note: This project spans two modules (modules 1 and 2).
+                        You should roughly try to finish the first half of the
+                        problems during module 1 and the second half of the
+                        problems during module 2.</em
+                      >
+                    </p>
+                    <p>Toy programs designed to learn the basics of Python.</p>
                   </li>
                 </ul>
+                <h2 class="display-4">
+                  <a
+                    id="review"
+                    class="anchor"
+                    href="#review"
+                    aria-hidden="true"
+                    ><span class="octicon octicon-link"></span></a
+                  >Review
+                </h2>
+                <h3 class="display-5">Class Recordings</h3>
+                <p class="lead">
+                  You can use class recordings to help you master the material.
+                </p>
+                <div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong
+                        ><a target="_blank" href="https://youtu.be/ujKHsdRkx6U"
+                          >Introduction to Python II for CSPT12 w/Beej
+                          Jorgensen</a
+                        ></strong
+                      >
+                      <p>
+                        Learn to name and describe the details of each step of
+                        Lambda’s Problem Solving Framework
+                      </p>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="/archive/CS/module/recwpe3Y9TVWrGT8L"
+                        >All previous recordings</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <h3 class="display-5">Demonstrate Mastery</h3>
+                <p>
+                  To demonstrate mastery of this module, you need to complete
+                  and pass a code review on each of the following:
+                </p>
+                <ul>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      So that everyone gets to eat, there are some situations in
+                      which philosophers <em>should</em> pick up a chopstick,
+                      and some situations in which they
+                      <em>should NOT</em> (because another philosopher needs to
+                      use it).
+                    </p>
+                    <p>
+                      Write a better solution to the dining philosophers problem
+                      so that deadlock does NOT occur.
+                    </p>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      What you need to do is to take our pseudo-code one step
+                      further before writing code.
+                    </p>
+                    <ol>
+                      <li>
+                        Take the variable list and choose what data structure or
+                        data type you will use for each variable and document
+                        your choice.
+                      </li>
+                      <li>
+                        Take the list of procedures and come up with function
+                        names that will store related procedural code. For
+                        example, you may want to group all the procedural
+                        behavior that occurs when a user quits the game into a
+                        function named
+                        <code class="highlighter-rouge">quit_game</code>.
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    Objective challenge:
+                    <p>
+                      Our game could use some improvements. Take the ending code
+                      above and change it to add the following features:
+                    </p>
+                    <ol>
+                      <li>
+                        Besides the result message that gets display after every
+                        user choice, also display the computer’s choice and the
+                        current score.
+                      </li>
+                      <li>
+                        If the user quits, before exiting the program, display
+                        the current score.
+                      </li>
+                      <li>
+                        Besides prompting the user for their input for their
+                        choice, also display the previous round’s user choice
+                        and computer choice.
+                      </li>
+                    </ol>
+                    <p>
+                      After adding those features, run your program to make sure
+                      everything is still working.
+                    </p>
+                    <p>
+                      Now, sit down and write 1-2 paragraphs that explain the
+                      process you underwent to add the features to the program.
+                      Try not to just explain your new code, line-by-line, but
+                      describe your actual thought process and the high-level
+                      overview of what your new code does. Think of it the same
+                      way you would describe a painting/drawing of yours if
+                      someone asked you to explain your process. People don’t
+                      want to hear about every time you added more paint to your
+                      brush but they want to know why you chose the colors you
+                      did or your unique perspective on why you painted what you
+                      did.
+                    </p>
+                  </li>
+                  <li>Project: Intro to Python</li>
+                </ul>
               </div>
-              <h3 class="display-5">Demonstrate Mastery</h3>
-              <p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the
-                following:</p>
-              <ul>
-                <li>Objective challenge: <p>So that everyone gets to eat, there are some situations in which
-                    philosophers <em>should</em> pick up a chopstick, and some situations in which they <em>should
-                      NOT</em> (because another philosopher needs to use it).</p>
-                  <p>Write a better solution to the dining philosophers problem so that deadlock does NOT occur.</p>
-                </li>
-                <li>Objective challenge: <p>What you need to do is to take our pseudo-code one step further before
-                    writing code.</p>
-                  <ol>
-                    <li>Take the variable list and choose what data structure or data type you will use for each
-                      variable and document your choice.</li>
-                    <li>Take the list of procedures and come up with function names that will store related procedural
-                      code. For example, you may want to group all the procedural behavior that occurs when a user quits
-                      the game into a function named <code class="highlighter-rouge">quit_game</code>.</li>
-                  </ol>
-                </li>
-                <li>Objective challenge: <p>Our game could use some improvements. Take the ending code above and change
-                    it to add the following features:</p>
-                  <ol>
-                    <li>Besides the result message that gets display after every user choice, also display the
-                      computer’s choice and the current score.</li>
-                    <li>If the user quits, before exiting the program, display the current score.</li>
-                    <li>Besides prompting the user for their input for their choice, also display the previous round’s
-                      user choice and computer choice.</li>
-                  </ol>
-                  <p>After adding those features, run your program to make sure everything is still working.</p>
-                  <p>Now, sit down and write 1-2 paragraphs that explain the process you underwent to add the features
-                    to the program. Try not to just explain your new code, line-by-line, but describe your actual
-                    thought process and the high-level overview of what your new code does. Think of it the same way you
-                    would describe a painting/drawing of yours if someone asked you to explain your process. People
-                    don’t want to hear about every time you added more paint to your brush but they want to know why you
-                    chose the colors you did or your unique perspective on why you painted what you did.</p>
-                </li>
-                <li>Project: Intro to Python</li>
-              </ul>
             </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-        dataLayer.push( arguments );
-      }
-      gtag( 'js', new Date() );
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
 
-      gtag( 'config', 'UA-80850900-4' );
-    </script>
-    <script type="text/javascript">
-      function getDomain() {
-        const domainName = window.location.hostname.split( '.' )[ 1 ];
-        return `${domainName}.com`;
-      }
-    </script>
-    <script src="" integrity="" crossorigin="anonymous"></script>
-    <script>
-      window.jQuery || document.write( '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>' )
-    </script>
-    <script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script>
-    <script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
-    <script src="/assets/js/activate.js"></script>
-    <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      SimpleJekyllSearch.init( {
-        searchInput: document.getElementById( 'search-input' ),
-        resultsContainer: document.getElementById( 'results-container' ),
-        dataSource: '/search.json',
-        searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Introduction to Python II">{title}</a></li>',
-        noResultsText: '',
-        limit: 10,
-        fuzzy: true,
-      } )
-    </script>
-    <script src="/assets/js/mermaid.min.js"></script>
-    <script type="text/javascript">
-      if ( window.attachEvent ) {
-        window.attachEvent( 'onload', verifySignedIn );
-      } else {
-        if ( window.onload ) {
-          var currentOnLoadFn = window.onload;
-          var newOnLoadFn = function ( evt ) {
-            currentOnLoadFn( evt );
-            verifySignedIn();
-          };
-          window.onload = newOnLoadFn;
+        gtag("config", "UA-80850900-4");
+      </script>
+      <script type="text/javascript">
+        function getDomain() {
+          const domainName = window.location.hostname.split(".")[1];
+          return `${domainName}.com`;
+        }
+      </script>
+      <script src="" integrity="" crossorigin="anonymous"></script>
+      <script>
+        window.jQuery ||
+          document.write(
+            '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>'
+          );
+      </script>
+      <script
+        src="/assets/js/vendor/popper.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="/dist/js/bootstrap.min.js"
+        integrity=""
+        crossorigin="anonymous"
+      ></script>
+      <script src="/assets/js/activate.js"></script>
+      <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        SimpleJekyllSearch.init({
+          searchInput: document.getElementById("search-input"),
+          resultsContainer: document.getElementById("results-container"),
+          dataSource: "/search.json",
+          searchResultTemplate:
+            '<li class="list-group-item"><a href="{url}" title="Introduction to Python II">{title}</a></li>',
+          noResultsText: "",
+          limit: 10,
+          fuzzy: true,
+        });
+      </script>
+      <script src="/assets/js/mermaid.min.js"></script>
+      <script type="text/javascript">
+        if (window.attachEvent) {
+          window.attachEvent("onload", verifySignedIn);
         } else {
-          window.onload = verifySignedIn;
-        }
-      }
-
-      function verifySignedIn() {
-        if ( isPagePublic() ) {
-          return showPageContents();
-        }
-
-        window.__user = null;
-        isSignedIn().then( ( user ) => {
-          window.__user = user;
-
-          if ( !user.signedIn ) {
-            redirectToSignIn();
-          } else if ( !user.student && !window.__openToAdmissions ) {
-            showUnauthorizedMessage();
+          if (window.onload) {
+            var currentOnLoadFn = window.onload;
+            var newOnLoadFn = function (evt) {
+              currentOnLoadFn(evt);
+              verifySignedIn();
+            };
+            window.onload = newOnLoadFn;
           } else {
-            showPageContents();
-          }
-        } );
-      }
-
-      function isPagePublic() {
-        const openCourses = [
-          'and-pre',
-          'ds-pre',
-          'fsw-pre',
-          'help',
-          'ios-pre',
-        ];
-
-        const openPages = [
-          'cs-and',
-          'cs-fsw',
-          'cs-ios',
-          'cr',
-          'ds',
-          'jx',
-          'p4s',
-          'ux',
-        ];
-
-        const pathParts = window.location.pathname.split( '/' );
-        const courseName = pathParts[ 1 ];
-        const pageName = pathParts[ pathParts.length - 1 ];
-
-        return openCourses.includes( courseName ) || openPages.includes( pageName );
-      }
-
-      function isSignedIn() {
-        const isDeployPreview = window.location.hostname.startsWith( 'deploy-preview' ) && window.location.hostname
-          .endsWith( 'netlify.com' );
-
-        if ( isDeployPreview ) return Promise.resolve( {
-          signedIn: true,
-          student: true
-        } );
-
-        return fetch( `${getAuthBaseUrl()}/whoami`, {
-            credentials: 'include'
-          } )
-          .then( ( response ) => response.text() )
-          .then( ( userAsText ) => userAsText ? JSON.parse( userAsText ) : null )
-          .then( ( userData ) => ( {
-            signedIn: Boolean( userData ),
-            student: Boolean( userData && userData.airtableId ),
-            id: userData ? userData.id : null,
-            email: userData ? userData.email : null
-          } ) )
-          .catch( ( error ) => {} );
-      }
-
-      function redirectToSignIn() {
-        const signInUrl =
-          `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
-        const redirectMessage = document.querySelector( '#redirect-message' );
-        redirectMessage.style.display = "block";
-        redirectMessage.innerHTML =
-          `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
-        window.location = signInUrl;
-      }
-
-      function showPageContents() {
-        document.querySelector( '#content-wrapper' ).style.visibility = 'visible';
-      }
-
-      function showUnauthorizedMessage() {
-        document.querySelector( '#unauthorized-message' ).style.display = 'block';
-      }
-
-      function getAuthBaseUrl() {
-        const domain = getDomain();
-        const authBaseUrl = `https://auth.${domain}`;
-        return authBaseUrl;
-      }
-    </script>
-    <script src="/assets/js/docs.min.js"></script>
-    <script>
-      var MathJax = {
-        tex: {
-          inlineMath: [
-            [ '$$', '$$' ],
-            [ '\[', '\])' ]
-          ]
-        },
-        "HTML-CSS": {
-          styles: {
-            ".MathJax span": {
-              color: "#000000"
-            }
+            window.onload = verifySignedIn;
           }
         }
-      }
-    </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
-    </script>
-    <script>
-      handleExternalLinks();
 
-      function handleExternalLinks() {
-        const domain = getDomain();
-        const links = document.querySelectorAll( 'a' );
-        return links.forEach( ( link ) => {
-          if ( !link.host.includes( domain ) ) link.target = '_blank';
-        } )
-      };
-    </script>
-  </div>
-</body>
+        function verifySignedIn() {
+          if (isPagePublic()) {
+            return showPageContents();
+          }
 
+          window.__user = null;
+          isSignedIn().then((user) => {
+            window.__user = user;
+
+            if (!user.signedIn) {
+              redirectToSignIn();
+            } else if (!user.student && !window.__openToAdmissions) {
+              showUnauthorizedMessage();
+            } else {
+              showPageContents();
+            }
+          });
+        }
+
+        function isPagePublic() {
+          const openCourses = [
+            "and-pre",
+            "ds-pre",
+            "fsw-pre",
+            "help",
+            "ios-pre",
+          ];
+
+          const openPages = [
+            "cs-and",
+            "cs-fsw",
+            "cs-ios",
+            "cr",
+            "ds",
+            "jx",
+            "p4s",
+            "ux",
+          ];
+
+          const pathParts = window.location.pathname.split("/");
+          const courseName = pathParts[1];
+          const pageName = pathParts[pathParts.length - 1];
+
+          return (
+            openCourses.includes(courseName) || openPages.includes(pageName)
+          );
+        }
+
+        function isSignedIn() {
+          const isDeployPreview =
+            window.location.hostname.startsWith("deploy-preview") &&
+            window.location.hostname.endsWith("netlify.com");
+
+          if (isDeployPreview)
+            return Promise.resolve({
+              signedIn: true,
+              student: true,
+            });
+
+          return fetch(`${getAuthBaseUrl()}/whoami`, {
+            credentials: "include",
+          })
+            .then((response) => response.text())
+            .then((userAsText) => (userAsText ? JSON.parse(userAsText) : null))
+            .then((userData) => ({
+              signedIn: Boolean(userData),
+              student: Boolean(userData && userData.airtableId),
+              id: userData ? userData.id : null,
+              email: userData ? userData.email : null,
+            }))
+            .catch((error) => {});
+        }
+
+        function redirectToSignIn() {
+          const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(
+            window.location.href
+          )}&reason=auth_required`;
+          const redirectMessage = document.querySelector("#redirect-message");
+          redirectMessage.style.display = "block";
+          redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`;
+          window.location = signInUrl;
+        }
+
+        function showPageContents() {
+          document.querySelector("#content-wrapper").style.visibility =
+            "visible";
+        }
+
+        function showUnauthorizedMessage() {
+          document.querySelector("#unauthorized-message").style.display =
+            "block";
+        }
+
+        function getAuthBaseUrl() {
+          const domain = getDomain();
+          const authBaseUrl = `https://auth.${domain}`;
+          return authBaseUrl;
+        }
+      </script>
+      <script src="/assets/js/docs.min.js"></script>
+      <script>
+        var MathJax = {
+          tex: {
+            inlineMath: [
+              ["$$", "$$"],
+              ["\[", "\])"],
+            ],
+          },
+          "HTML-CSS": {
+            styles: {
+              ".MathJax span": {
+                color: "#000000",
+              },
+            },
+          },
+        };
+      </script>
+      <script
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+        type="text/javascript"
+      ></script>
+      <script>
+        handleExternalLinks();
+
+        function handleExternalLinks() {
+          const domain = getDomain();
+          const links = document.querySelectorAll("a");
+          return links.forEach((link) => {
+            if (!link.host.includes(domain)) link.target = "_blank";
+          });
+        }
+      </script>
+    </div>
+  </body>
 </html>

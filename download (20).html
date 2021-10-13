@@ -1,376 +1,503 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Intended as a home for Lambda School curriculum.">
-<meta name="author" content="">
-<meta name="generator" content="Jekyll v3.8.0">
-<title>React Components and Component State · Lambda School</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Intended as a home for Lambda School curriculum.">
+  <meta name="author" content="">
+  <meta name="generator" content="Jekyll v3.8.0">
+  <title>React Components and Component State · Lambda School</title>
 
-<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+  <link rel='stylesheet' integrity crossorigin='anonymous'
+    href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
 
-<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+  <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+  <link rel='stylesheet'
+    href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
 
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+  <link rel='stylesheet'
+    href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
-  ga('send', 'pageview');
-</script>
+  <script>
+    ( function ( i, s, o, g, r, a, m ) {
+      i[ 'GoogleAnalyticsObject' ] = r;
+      i[ r ] = i[ r ] || function () {
+        ( i[ r ].q = i[ r ].q || [] ).push( arguments )
+      }, i[ r ].l = 1 * new Date();
+      a = s.createElement( o ),
+        m = s.getElementsByTagName( o )[ 0 ];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore( a, m )
+    } )( window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga' );
+    ga( 'create', 'UA-122016605-1', 'learn.lambdaschool.com' );
+    ga( 'send', 'pageview' );
+  </script>
 
-<script>
-  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
-  analytics.page();
-  }}();
-</script>
+  <script>
+    ! function () {
+      var analytics = window.analytics = window.analytics || [];
+      if ( !analytics.initialize )
+        if ( analytics.invoked ) window.console && console.error && console.error( "Segment snippet included twice." );
+        else {
+          analytics.invoked = !0;
+          analytics.methods = [ "trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset",
+            "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"
+          ];
+          analytics.factory = function ( t ) {
+            return function () {
+              var e = Array.prototype.slice.call( arguments );
+              e.unshift( t );
+              analytics.push( e );
+              return analytics
+            }
+          };
+          for ( var t = 0; t < analytics.methods.length; t++ ) {
+            var e = analytics.methods[ t ];
+            analytics[ e ] = analytics.factory( e )
+          }
+          analytics.load = function ( t, e ) {
+            var n = document.createElement( "script" );
+            n.type = "text/javascript";
+            n.async = !0;
+            n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
+            var a = document.getElementsByTagName( "script" )[ 0 ];
+            a.parentNode.insertBefore( n, a );
+            analytics._loadOptions = e
+          };
+          analytics.SNIPPET_VERSION = "4.1.0";
+          analytics.load( "BjKorwKrSvMamfNoGkBq9rISk7wF6QQX" );
+          analytics.page();
+        }
+    }();
+  </script>
 
-<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
-<link rel="icon" href="/favicon.ico">
-<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#a0001e">
+  <link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#a0001e">
 </head>
+
 <body>
-<noscript>Please enable JavaScript to view this page.</noscript>
-<div id="redirect-message" style="display: none;">
-You must be logged in to view this page.
-</div>
-<div id="unauthorized-message" style="display: none;">
-You must be a Lambda School student to view this page.
-</div>
-<div id="content-wrapper" >
-<a id="skippy" class="sr-only sr-only-focusable" href="#content">
-<div class="container">
-<span class="skiplink-text">Skip to main content</span>
-</div>
-</a>
-<div class="mobile-menu">
-<div class="m-drop">
-<div class="mobile-row">
-<div class="header-row" style="padding: 3px 7px">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
-</svg></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
-</button>
-</div>
-</div>
-<div class="nav-row">
-<div class="results-container">
-<ul id="results-container" class="dropdown list-group"></ul>
-</div>
-<div id="mobile-course-menu" class="collapse nav-row">
-<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
-<nav class="bd-links">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Web Applications I</h4>
-</div>
+  <noscript>Please enable JavaScript to view this page.</noscript>
+  <div id="redirect-message" style="display: none;">
+    You must be logged in to view this page.
+  </div>
+  <div id="unauthorized-message" style="display: none;">
+    You must be a Lambda School student to view this page.
+  </div>
+  <div id="content-wrapper">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+    <div class="mobile-menu">
+      <div class="m-drop">
+        <div class="mobile-row">
+          <div class="header-row" style="padding: 3px 7px">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg"
+                width="33" height="35" viewBox="0 0 33 35" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                  fill="#EC3944" />
+              </svg></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu"
+              aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
+                <title>Menu</title>
+                <path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                  d="M4 7h22M4 15h22M4 23h22"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="nav-row">
+          <div class="results-container">
+            <ul id="results-container" class="dropdown list-group"></ul>
+          </div>
+          <div id="mobile-course-menu" class="collapse nav-row">
+            <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+              <nav class="bd-links">
+                <div class="bd-toc-item">
+                  <h4 class="bd-toc-link">Web Applications I</h4>
+                </div>
 
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web2/sprint/recPSZMPrmESUYo2C">
-1.&nbsp;&nbsp;Applied JavaScript
-</a>
-<ul class="nav bd-sidenav">
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web2/sprint/recPSZMPrmESUYo2C">
+                    1.&nbsp;&nbsp;Applied JavaScript
+                  </a>
+                  <ul class="nav bd-sidenav">
 
-<li>
-<a href="/web2/module/rectn5PUU5ubcQkPu/">
-DOM I
-</a>
-</li>
-<li>
-<a href="/web2/module/recJWv3RIfa4NFXbn/">
-DOM II
-</a>
-</li>
-<li>
-<a href="/web2/module/rec847sNXZX9CVDNl/">
-Components I
-</a>
-</li>
-<li>
-<a href="/web2/module/recd6kDKS6eMapSRq/">
-Components II
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web2/sprint/recYL2HDPPpkDmGEm">
-2.&nbsp;&nbsp;Intro to React
-</a>
-<ul class="nav bd-sidenav">
+                    <li>
+                      <a href="/web2/module/rectn5PUU5ubcQkPu/">
+                        DOM I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web2/module/recJWv3RIfa4NFXbn/">
+                        DOM II
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web2/module/rec847sNXZX9CVDNl/">
+                        Components I
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web2/module/recd6kDKS6eMapSRq/">
+                        Components II
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web2/sprint/recYL2HDPPpkDmGEm">
+                    2.&nbsp;&nbsp;Intro to React
+                  </a>
+                  <ul class="nav bd-sidenav">
 
-<li class="active bd-sidenav-active">
-<a href="/web2/module/recZau7hH8vzww14N/">
-React Components and Component State
-</a>
-</li>
-<li>
-<a href="/web2/module/recgzSGQtp2HYwgSR/">
-Composing React Components and Passing Data Via Props
-</a>
-</li>
-<li>
-<a href="/web2/module/recKe8PW6ZMwjL1Qg/">
-Component Side Effects
-</a>
-</li>
-<li>
-<a href="/web2/module/recNDoSqyUw3eq1y3/">
-Advanced Styling Techniques
-</a>
-</li>
-</ul>
-</div>
+                    <li class="active bd-sidenav-active">
+                      <a href="/web2/module/recZau7hH8vzww14N/">
+                        React Components and Component State
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web2/module/recgzSGQtp2HYwgSR/">
+                        Composing React Components and Passing Data Via Props
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web2/module/recKe8PW6ZMwjL1Qg/">
+                        Component Side Effects
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web2/module/recNDoSqyUw3eq1y3/">
+                        Advanced Styling Techniques
+                      </a>
+                    </li>
+                  </ul>
+                </div>
 
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web2/sprint/recH2pYM3qVavZTRN">
-3.&nbsp;&nbsp;Single Page Applications
-</a>
-<ul class="nav bd-sidenav">
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web2/sprint/recH2pYM3qVavZTRN">
+                    3.&nbsp;&nbsp;Single Page Applications
+                  </a>
+                  <ul class="nav bd-sidenav">
 
-<li>
-<a href="/web2/module/recd7jGy7tfVkcFlX/">
-React Router
-</a>
-</li>
-<li>
-<a href="/web2/module/rect081xiYT2cfxGF/">
-Form Management
-</a>
-</li>
-<li>
-<a href="/web2/module/recKK5C7wV0WiECfr/">
-Advanced Form Management
-</a>
-</li>
-<li>
-<a href="/web2/module/recduYpjgZBQaQM8X/">
-cypress.io
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web2/sprint/recwKyMueNtoTTmUD">
-4.&nbsp;&nbsp;WEB Unit 2 Build
-</a>
-<ul class="nav bd-sidenav">
+                    <li>
+                      <a href="/web2/module/recd7jGy7tfVkcFlX/">
+                        React Router
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web2/module/rect081xiYT2cfxGF/">
+                        Form Management
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web2/module/recKK5C7wV0WiECfr/">
+                        Advanced Form Management
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web2/module/recduYpjgZBQaQM8X/">
+                        cypress.io
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web2/sprint/recwKyMueNtoTTmUD">
+                    4.&nbsp;&nbsp;WEB Unit 2 Build
+                  </a>
+                  <ul class="nav bd-sidenav">
 
-</ul>
-</div>
-</nav>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="main-container">
-<div class="sidebar-container bd-sidebar">
-<div class="docs-sidebar">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
-<ul id="results-container" class="dropdown list-group"></ul>
-<nav class="bd-links collapse" id="bd-docs-nav">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Web Applications I</h4>
-</div>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="sidebar-container bd-sidebar">
+        <div class="docs-sidebar">
+          <a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197"
+              fill="#ec3944">
+              <g>
+                <path
+                  d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z">
+                </path>
+                <path
+                  d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z">
+                </path>
+                <path
+                  d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z">
+                </path>
+                <path
+                  d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z">
+                </path>
+                <path
+                  d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z">
+                </path>
+                <path
+                  d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z">
+                </path>
+              </g>
+              <path
+                d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z">
+              </path>
+            </svg></a>
+          <ul id="results-container" class="dropdown list-group"></ul>
+          <nav class="bd-links collapse" id="bd-docs-nav">
+            <div class="bd-toc-item">
+              <h4 class="bd-toc-link">Web Applications I</h4>
+            </div>
 
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web2/sprint/recPSZMPrmESUYo2C">
-1.&nbsp;&nbsp;Applied JavaScript
-</a>
-<ul class="nav bd-sidenav">
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web2/sprint/recPSZMPrmESUYo2C">
+                1.&nbsp;&nbsp;Applied JavaScript
+              </a>
+              <ul class="nav bd-sidenav">
 
-<li>
-<a href="/web2/module/rectn5PUU5ubcQkPu/">
-DOM I
-</a>
-</li>
-<li>
-<a href="/web2/module/recJWv3RIfa4NFXbn/">
-DOM II
-</a>
-</li>
-<li>
-<a href="/web2/module/rec847sNXZX9CVDNl/">
-Components I
-</a>
-</li>
-<li>
-<a href="/web2/module/recd6kDKS6eMapSRq/">
-Components II
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web2/sprint/recYL2HDPPpkDmGEm">
-2.&nbsp;&nbsp;Intro to React
-</a>
-<ul class="nav bd-sidenav">
+                <li>
+                  <a href="/web2/module/rectn5PUU5ubcQkPu/">
+                    DOM I
+                  </a>
+                </li>
+                <li>
+                  <a href="/web2/module/recJWv3RIfa4NFXbn/">
+                    DOM II
+                  </a>
+                </li>
+                <li>
+                  <a href="/web2/module/rec847sNXZX9CVDNl/">
+                    Components I
+                  </a>
+                </li>
+                <li>
+                  <a href="/web2/module/recd6kDKS6eMapSRq/">
+                    Components II
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web2/sprint/recYL2HDPPpkDmGEm">
+                2.&nbsp;&nbsp;Intro to React
+              </a>
+              <ul class="nav bd-sidenav">
 
-<li class="active bd-sidenav-active">
-<a href="/web2/module/recZau7hH8vzww14N/">
-React Components and Component State
-</a>
-</li>
-<li>
-<a href="/web2/module/recgzSGQtp2HYwgSR/">
-Composing React Components and Passing Data Via Props
-</a>
-</li>
-<li>
-<a href="/web2/module/recKe8PW6ZMwjL1Qg/">
-Component Side Effects
-</a>
-</li>
-<li>
-<a href="/web2/module/recNDoSqyUw3eq1y3/">
-Advanced Styling Techniques
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web2/sprint/recH2pYM3qVavZTRN">
- 3.&nbsp;&nbsp;Single Page Applications
-</a>
-<ul class="nav bd-sidenav">
+                <li class="active bd-sidenav-active">
+                  <a href="/web2/module/recZau7hH8vzww14N/">
+                    React Components and Component State
+                  </a>
+                </li>
+                <li>
+                  <a href="/web2/module/recgzSGQtp2HYwgSR/">
+                    Composing React Components and Passing Data Via Props
+                  </a>
+                </li>
+                <li>
+                  <a href="/web2/module/recKe8PW6ZMwjL1Qg/">
+                    Component Side Effects
+                  </a>
+                </li>
+                <li>
+                  <a href="/web2/module/recNDoSqyUw3eq1y3/">
+                    Advanced Styling Techniques
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web2/sprint/recH2pYM3qVavZTRN">
+                3.&nbsp;&nbsp;Single Page Applications
+              </a>
+              <ul class="nav bd-sidenav">
 
-<li>
-<a href="/web2/module/recd7jGy7tfVkcFlX/">
-React Router
-</a>
-</li>
-<li>
-<a href="/web2/module/rect081xiYT2cfxGF/">
-Form Management
-</a>
-</li>
-<li>
-<a href="/web2/module/recKK5C7wV0WiECfr/">
-Advanced Form Management
-</a>
-</li>
-<li>
-<a href="/web2/module/recduYpjgZBQaQM8X/">
-cypress.io
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web2/sprint/recwKyMueNtoTTmUD">
-4.&nbsp;&nbsp;WEB Unit 2 Build
-</a>
-<ul class="nav bd-sidenav">
+                <li>
+                  <a href="/web2/module/recd7jGy7tfVkcFlX/">
+                    React Router
+                  </a>
+                </li>
+                <li>
+                  <a href="/web2/module/rect081xiYT2cfxGF/">
+                    Form Management
+                  </a>
+                </li>
+                <li>
+                  <a href="/web2/module/recKK5C7wV0WiECfr/">
+                    Advanced Form Management
+                  </a>
+                </li>
+                <li>
+                  <a href="/web2/module/recduYpjgZBQaQM8X/">
+                    cypress.io
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web2/sprint/recwKyMueNtoTTmUD">
+                4.&nbsp;&nbsp;WEB Unit 2 Build
+              </a>
+              <ul class="nav bd-sidenav">
 
-</ul>
-</div>
-</nav>
-</div>
-</div>
-<main class="content-container flex-wrapper" role="main">
-<div class="sticky-nav">
-<div class="sprint-nav">
-<ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
-<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
-<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
-<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
-</ul>
-</div>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <main class="content-container flex-wrapper" role="main">
+        <div class="sticky-nav">
+          <div class="sprint-nav">
+            <ul class="section-nav">
+              <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+              <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+              <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+              <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+            </ul>
+          </div>
 
-</div>
-<div class="wrapper limit-width">
-<div class="flex-wrapper">
-<div class="limit-width">
-<div class="jumbotron">
-<h1 class="bd-title" id="content">React Components and Component State</h1>
-<span class="lead">
-<p class="bd-lead"></p>
-<p>Components are the building blocks of React applications. We use components to display some data (often called “state”) to the screen for our users. In this module, we will learn how to build components that can hold state to create a great experience for our end users.</p>
-</span>
-<strong>At the end of this module, you should be able to:</strong>
-<ul>
-<li>describe ReactJS and the problems that it tries to solve</li>
-<li>explain what components are and how they work in React</li>
-<li>explain what state is in web applications and demonstrate how to make a React component stateful</li>
-<li>change the state of the component with a click listener</li>
-</ul>
-</div>
-<div class="alert alert-warning" role="alert">
-<h4>Pro Tip</h4>
-<p>Treat everyone with as much respect and integrity as you wish to be treated with.</p>
-</div>
-<h2 class="display-4">
-<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
-<p class="lead">Review each preclass resource before class.</p>
-<div class="preclass">
-<ul class="list-group list-group-flush">
-<li class="list-group-item">
- <div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/moTpUR8I6-I" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/njU-xhnlze8" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vF4vKyhRff8" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/J3mKJbudYDQ" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-</ul>
-</div>
-<h2 class="display-4">
-<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
-<h4 class="mark mb-3 p-2">Learn to describe ReactJS and the problems that it tries to solve</h4>
-<p>There are many frameworks and libraries out there trying to accomplish the same thing: provide developers with the ability to build large scale applications effectively. In today’s world, software changes fast, and these libraries and frameworks allow us to write software and deploy our changes to our systems rapidly enough to keep up with demand. One of the most popular libraries out there for building applications today is <a href="https://reactjs.org/">ReactJS</a>.</p>
-<p>It is really important to understand that React is just a single paradigm, or one of many ways to write large applications. There are many benefits to starting out with this particular library, especially as new developers, because of the way it leans you toward learning more about JavaScript and it doesn’t force you to rely on too much of its API in order to get things done. This allows for one to gain much more in depth knowledge about the JavaScript programming language, because you get a chance to write a lot of vanilla from within the React ecosystem.</p>
-<h5>Overview</h5>
-<p>React has quickly become one of the most commonly used libraries for building applications today. Because you’ve now seen some code that allows you to build custom components with so-called vanilla Javascript, you’ve come to an understanding of how you can use JS to manipulate DOM elements. React is going to take that knowledge you have learned, and abstract away a lot of the <code class="highlighter-rouge">document.getElementByClassname</code> syntax. As you’ll see later on, your entire application will live within one targeted DOM element. React will handle the rest for you.</p>
-<p>Because we have such rich user interfaces today that interact with ever-changing data, users interacting with DOM elements, and lots of animations and events firing, the DOM is certainly doing a lot of work. Imagine an app like Twitter or Facebook that has users clicking all over the place, with data changing and almost instant status updates. For these types of large scale applications, React is very important. Simply put, we need a way to offload a lot of the <code class="highlighter-rouge">state</code> (data) that our apps need to use, from the DOM. To keep up with today’s demands of the web, we need a way to build applications that can take care of a lot of the work for us.</p>
-<p>Lets face it, working with the DOM API is hard. The React team recognizes this, so they built a simple engine called the <code class="highlighter-rouge">virtual DOM</code> that interacts with the actual DOM for us. We tell the <code class="highlighter-rouge">virtual DOM</code> which elements and <code class="highlighter-rouge">state</code> (data) to render to the actual DOM, and it will do so. Beyond that, it will “react” when the <code class="highlighter-rouge">state</code> (data) in our app changes, and will update the DOM accordingly. All on its own!</p>
-<p>In a process called “reconciliation”, React will detect that the state of the app has changed. Then it will update the virtual DOM, taking note of which nodes have changed due to the state changes. Finally, once it knows which nodes have changed, it will update only those specific nodes on the actual DOM. This takes a lot of pressure off of our browsers and it’s why React is as powerful as it is.</p>
-<p>Today, web applications are enormous, complex pieces of software that millions and millions of users interact with simultaneously. React provides a smooth experience for our users, as well as those developing applications.</p>
-<h5>Follow Along</h5>
-<p>Please read through the ‘Try React’ tutorial found <a href="https://reactjs.org/docs/try-react.html">here</a> and follow along with the documentation there. Take it as far as you’d like. But we’d love for you to come into class on Monday having played around with React and seen some React code.</p>
-<ul>
-<li>Read through <a href="https://reactjs.org/docs/thinking-in-react.html">this portion</a> of the React documentation.</li>
-</ul>
-<h5>Challenge</h5>
-<p>In your own, write a paragraph about what ReactJS is and what problems that it tries to solve.</p>
-<p>Submit that paragraph to your Team Lead via Slack.</p>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://scotch.io/@anitashah/what-problems-does-reactjs-solve-when-must-you-select-reactjs" target="blank_">What problems does React JS solve?</a><br> This article describes some of the reasons one would consider adopting react as their UI library</li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to explain what components are and how they work in React</h4>
-<p>Everything you’ll do in React will revolve around components. They are the building blocks of any react application. There are actually a few different types of React components that are commonly seen today in use by React developers. Today you’ll learn about a simple function component and you’ll learn how to build one on your own to display some state on the DOM using different DOM elements.</p>
-<h5>Overview</h5>
-<h3 id="anatomy-of-a-react-component">Anatomy of a React Component</h3>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+        </div>
+        <div class="wrapper limit-width">
+          <div class="flex-wrapper">
+            <div class="limit-width">
+              <div class="jumbotron">
+                <h1 class="bd-title" id="content">React Components and Component State</h1>
+                <span class="lead">
+                  <p class="bd-lead"></p>
+                  <p>Components are the building blocks of React applications. We use components to display some data
+                    (often called “state”) to the screen for our users. In this module, we will learn how to build
+                    components that can hold state to create a great experience for our end users.</p>
+                </span>
+                <strong>At the end of this module, you should be able to:</strong>
+                <ul>
+                  <li>describe ReactJS and the problems that it tries to solve</li>
+                  <li>explain what components are and how they work in React</li>
+                  <li>explain what state is in web applications and demonstrate how to make a React component stateful
+                  </li>
+                  <li>change the state of the component with a click listener</li>
+                </ul>
+              </div>
+              <div class="alert alert-warning" role="alert">
+                <h4>Pro Tip</h4>
+                <p>Treat everyone with as much respect and integrity as you wish to be treated with.</p>
+              </div>
+              <h2 class="display-4">
+                <a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Prepare</h2>
+              <p class="lead">Review each preclass resource before class.</p>
+              <div class="preclass">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/moTpUR8I6-I"
+                        frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/njU-xhnlze8"
+                        frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vF4vKyhRff8"
+                        frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/J3mKJbudYDQ"
+                        frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <h2 class="display-4">
+                <a id="learn" class="anchor" href="#learn" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Learn</h2>
+              <h4 class="mark mb-3 p-2">Learn to describe ReactJS and the problems that it tries to solve</h4>
+              <p>There are many frameworks and libraries out there trying to accomplish the same thing: provide
+                developers with the ability to build large scale applications effectively. In today’s world, software
+                changes fast, and these libraries and frameworks allow us to write software and deploy our changes to
+                our systems rapidly enough to keep up with demand. One of the most popular libraries out there for
+                building applications today is <a href="https://reactjs.org/">ReactJS</a>.</p>
+              <p>It is really important to understand that React is just a single paradigm, or one of many ways to write
+                large applications. There are many benefits to starting out with this particular library, especially as
+                new developers, because of the way it leans you toward learning more about JavaScript and it doesn’t
+                force you to rely on too much of its API in order to get things done. This allows for one to gain much
+                more in depth knowledge about the JavaScript programming language, because you get a chance to write a
+                lot of vanilla from within the React ecosystem.</p>
+              <h5>Overview</h5>
+              <p>React has quickly become one of the most commonly used libraries for building applications today.
+                Because you’ve now seen some code that allows you to build custom components with so-called vanilla
+                Javascript, you’ve come to an understanding of how you can use JS to manipulate DOM elements. React is
+                going to take that knowledge you have learned, and abstract away a lot of the <code
+                  class="highlighter-rouge">document.getElementByClassname</code> syntax. As you’ll see later on, your
+                entire application will live within one targeted DOM element. React will handle the rest for you.</p>
+              <p>Because we have such rich user interfaces today that interact with ever-changing data, users
+                interacting with DOM elements, and lots of animations and events firing, the DOM is certainly doing a
+                lot of work. Imagine an app like Twitter or Facebook that has users clicking all over the place, with
+                data changing and almost instant status updates. For these types of large scale applications, React is
+                very important. Simply put, we need a way to offload a lot of the <code
+                  class="highlighter-rouge">state</code> (data) that our apps need to use, from the DOM. To keep up with
+                today’s demands of the web, we need a way to build applications that can take care of a lot of the work
+                for us.</p>
+              <p>Lets face it, working with the DOM API is hard. The React team recognizes this, so they built a simple
+                engine called the <code class="highlighter-rouge">virtual DOM</code> that interacts with the actual DOM
+                for us. We tell the <code class="highlighter-rouge">virtual DOM</code> which elements and <code
+                  class="highlighter-rouge">state</code> (data) to render to the actual DOM, and it will do so. Beyond
+                that, it will “react” when the <code class="highlighter-rouge">state</code> (data) in our app changes,
+                and will update the DOM accordingly. All on its own!</p>
+              <p>In a process called “reconciliation”, React will detect that the state of the app has changed. Then it
+                will update the virtual DOM, taking note of which nodes have changed due to the state changes. Finally,
+                once it knows which nodes have changed, it will update only those specific nodes on the actual DOM. This
+                takes a lot of pressure off of our browsers and it’s why React is as powerful as it is.</p>
+              <p>Today, web applications are enormous, complex pieces of software that millions and millions of users
+                interact with simultaneously. React provides a smooth experience for our users, as well as those
+                developing applications.</p>
+              <h5>Follow Along</h5>
+              <p>Please read through the ‘Try React’ tutorial found <a
+                  href="https://reactjs.org/docs/try-react.html">here</a> and follow along with the documentation there.
+                Take it as far as you’d like. But we’d love for you to come into class on Monday having played around
+                with React and seen some React code.</p>
+              <ul>
+                <li>Read through <a href="https://reactjs.org/docs/thinking-in-react.html">this portion</a> of the React
+                  documentation.</li>
+              </ul>
+              <h5>Challenge</h5>
+              <p>In your own, write a paragraph about what ReactJS is and what problems that it tries to solve.</p>
+              <p>Submit that paragraph to your Team Lead via Slack.</p>
+              <h5>Dig Deeper</h5>
+              <ul>
+                <li>
+                  <a href="https://scotch.io/@anitashah/what-problems-does-reactjs-solve-when-must-you-select-reactjs"
+                    target="blank_">What problems does React JS solve?</a><br> This article describes some of the
+                  reasons one would consider adopting react as their UI library</li>
+              </ul>
+              <hr>
+              <h4 class="mark mb-3 p-2">Learn to explain what components are and how they work in React</h4>
+              <p>Everything you’ll do in React will revolve around components. They are the building blocks of any react
+                application. There are actually a few different types of React components that are commonly seen today
+                in use by React developers. Today you’ll learn about a simple function component and you’ll learn how to
+                build one on your own to display some state on the DOM using different DOM elements.</p>
+              <h5>Overview</h5>
+              <h3 id="anatomy-of-a-react-component">Anatomy of a React Component</h3>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="kd">const</span> <span class="nx">Intro</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">(</span>
@@ -379,26 +506,46 @@ cypress.io
 </span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
 </span>  <span class="p">);</span>
 <span class="p">};</span>
-</code></pre></div></div>
-<p>This is an example of a React “component.” A “component” is a pretty loose term to describe a discrete chunk of your site. A header could be a component, for example. Or a footer. Or a hero section, etc. This one’s pretty simple, all we’re doing is rendering a <code class="highlighter-rouge">div</code> with an <code class="highlighter-rouge">h1</code> inside of it.</p>
-<p>his is going to generate pretty much what you’d expect.</p>
-<p><img src="https://tk-assets.lambdaschool.com/e8f09b78-8ada-456b-a058-8135567bed50_hi_lambda.png" alt="hi lambda component" width="300px"></p>
-<p>So what’s so odd about this? Well, we’re mixing two different syntaxes here. Part of this block is a regular Javascript function and part is HTML.</p>
-<p>Javascript:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">Intro</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</code></pre>
+                </div>
+              </div>
+              <p>This is an example of a React “component.” A “component” is a pretty loose term to describe a discrete
+                chunk of your site. A header could be a component, for example. Or a footer. Or a hero section, etc.
+                This one’s pretty simple, all we’re doing is rendering a <code class="highlighter-rouge">div</code> with
+                an <code class="highlighter-rouge">h1</code> inside of it.</p>
+              <p>his is going to generate pretty much what you’d expect.</p>
+              <p><img src="https://tk-assets.lambdaschool.com/e8f09b78-8ada-456b-a058-8135567bed50_hi_lambda.png"
+                  alt="hi lambda component" width="300px"></p>
+              <p>So what’s so odd about this? Well, we’re mixing two different syntaxes here. Part of this block is a
+                regular Javascript function and part is HTML.</p>
+              <p>Javascript:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="kd">const</span> <span class="nx">Intro</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">(</span>
    <span class="p">...</span>
   <span class="p">);</span>
 <span class="p">};</span>
-</code></pre></div></div>
-<p>HTML:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>HTML:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
       <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hi</span> <span class="nx">Lambda</span><span class="o">!&lt;</span><span class="sr">/h1</span><span class="err">&gt;
 </span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
-</span></code></pre></div></div>
-<p>That’s weird! You can’t do that in JavaScript so what the heck is going on here? We don’t need to understand all the details yet, but the basic idea is that the above block only looks like HTML. In actuality, it is something else.</p>
-<p>The fake HTML is called JSX and underneath its disguise, it’s just a JavaScript object. This is a simplification, but what our example above effectively translates into is something like this.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+</span></code></pre>
+                </div>
+              </div>
+              <p>That’s weird! You can’t do that in JavaScript so what the heck is going on here? We don’t need to
+                understand all the details yet, but the basic idea is that the above block only looks like HTML. In
+                actuality, it is something else.</p>
+              <p>The fake HTML is called JSX and underneath its disguise, it’s just a JavaScript object. This is a
+                simplification, but what our example above effectively translates into is something like this.</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="kd">const</span> <span class="nx">Intro</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">(</span>
@@ -417,12 +564,24 @@ cypress.io
 
   <span class="p">);</span>
 <span class="p">};</span>
-</code></pre></div></div>
-<p>So when we return what looks like HTML in a React component, what we’re secretly returning is a JavaScript object that describes the kind of HTML we want to make. React is going to figure out how to make it for us later.</p>
-<p>It’s important to understand early on that a React component is just a regular JavaScript function. We could return an object (sort of) like the one written above, and it would work, but we want to use JSX for a couple of reasons. First, it’s easier to read than that big nested object. And second, it’s going to allow us to put our application’s logic where it belongs: directly next to the thing the logic applies to.</p>
-<h3 id="a-brief-demonstration-of-reacts-power">A brief demonstration of React’s power</h3>
-<p>In the above example, we’ve hardcoded the text of our <code class="highlighter-rouge">h1</code> tag to read <code class="highlighter-rouge">Hi Lambda!</code>. But React gives us the ability to control our app’s content dynamically. Look at this:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>So when we return what looks like HTML in a React component, what we’re secretly returning is a
+                JavaScript object that describes the kind of HTML we want to make. React is going to figure out how to
+                make it for us later.</p>
+              <p>It’s important to understand early on that a React component is just a regular JavaScript function. We
+                could return an object (sort of) like the one written above, and it would work, but we want to use JSX
+                for a couple of reasons. First, it’s easier to read than that big nested object. And second, it’s going
+                to allow us to put our application’s logic where it belongs: directly next to the thing the logic
+                applies to.</p>
+              <h3 id="a-brief-demonstration-of-reacts-power">A brief demonstration of React’s power</h3>
+              <p>In the above example, we’ve hardcoded the text of our <code class="highlighter-rouge">h1</code> tag to
+                read <code class="highlighter-rouge">Hi Lambda!</code>. But React gives us the ability to control our
+                app’s content dynamically. Look at this:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="kd">const</span> <span class="nx">Intro</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="nx">greeting</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Hi Lambda!</span><span class="dl">"</span><span class="p">;</span>
@@ -432,56 +591,109 @@ cypress.io
 </span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
 </span>  <span class="p">);</span>
 <span class="p">};</span>
-</code></pre></div></div>
-<p><img src="https://tk-assets.lambdaschool.com/e8f09b78-8ada-456b-a058-8135567bed50_hi_lambda.png" alt="hi lambda component" width="300px"></p>
-<p>Our code changed, but our output is the same. Because we’re just in a regular JavaScript function, we’re free to declare a variable the way we normally do: <code class="highlighter-rouge">const greeting = "Hi Lambda!";</code></p>
-<p>Once we’re in our JSX, React gives us the power to <em>escape</em> back into regular JavaScript and refer to that variable by using the curly brackets <code class="highlighter-rouge">&lt;h1&gt;{greeting}&lt;/h1&gt;</code>.</p>
-<p>These curly brakets will evaluate <em>any</em> valid JavaScript expression. So if we change<code class="highlighter-rouge">&lt;h1&gt;{greeting}&lt;/h1&gt;</code> to <code class="highlighter-rouge">&lt;h1&gt;{2 + 2}&lt;/h1&gt;</code></p>
-<p>We get:</p>
-<p><img src="https://tk-assets.lambdaschool.com/af9072f7-4853-4742-afde-60f1db84cedf_4.png" alt="four" width="300px"></p>
-<p>Now you know the underlying mechanism of React. We don’t want to have to hardcode the content of our HTML; instead, we want to compute it.</p>
-<p>By now some of you are probably thinking, “Computing our markup, isn’t that what we learned DOM manipulation for?” and it’s a good question.</p>
-<h3 id="why-do-it-this-way">Why do it this way?</h3>
-<p>We’re going to focus on two major pillars of React’s design philosophy for now. The separation of concerns and declarative programming.</p>
-<h4 id="separation-of-concerns">Separation of concerns</h4>
-<p><em>How can We know the dancer from the dance</em></p>
-<p>In computer programming, “the separation of concerns” refers to a design philosophy that each piece of your code should do one and only one thing. Functions with a lot of moving parts are hard to debug. One large function might be tricky to test. If we can split that function apart into smaller pieces that are easy to test individually, our application will be more robust and easier to understand.</p>
-<p>At first glance, it might appear that putting our markup right next to our JavaScript is a violation of this principle, but the React team thinks otherwise. They argue that we can’t <em>truly</em> separate a <code class="highlighter-rouge">&lt;button&gt;</code> tag from the function the button invokes. Separating the two, one in an HTML file and another in a JavaScript file, isn’t a separation of concerns, it’s cutting one concern in half and then putting one half in the bedroom and the other half in the garage. It’s a headache we don’t need.</p>
-<p>Consider the difference between this, the way you’re used to doing it:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//HTML FILE</span>
+</code></pre>
+                </div>
+              </div>
+              <p><img src="https://tk-assets.lambdaschool.com/e8f09b78-8ada-456b-a058-8135567bed50_hi_lambda.png"
+                  alt="hi lambda component" width="300px"></p>
+              <p>Our code changed, but our output is the same. Because we’re just in a regular JavaScript function,
+                we’re free to declare a variable the way we normally do: <code class="highlighter-rouge">const greeting
+                  = "Hi Lambda!";</code></p>
+              <p>Once we’re in our JSX, React gives us the power to <em>escape</em> back into regular JavaScript and
+                refer to that variable by using the curly brackets <code
+                  class="highlighter-rouge">&lt;h1&gt;{greeting}&lt;/h1&gt;</code>.</p>
+              <p>These curly brakets will evaluate <em>any</em> valid JavaScript expression. So if we change<code
+                  class="highlighter-rouge">&lt;h1&gt;{greeting}&lt;/h1&gt;</code> to <code
+                  class="highlighter-rouge">&lt;h1&gt;{2 + 2}&lt;/h1&gt;</code></p>
+              <p>We get:</p>
+              <p><img src="https://tk-assets.lambdaschool.com/af9072f7-4853-4742-afde-60f1db84cedf_4.png" alt="four"
+                  width="300px"></p>
+              <p>Now you know the underlying mechanism of React. We don’t want to have to hardcode the content of our
+                HTML; instead, we want to compute it.</p>
+              <p>By now some of you are probably thinking, “Computing our markup, isn’t that what we learned DOM
+                manipulation for?” and it’s a good question.</p>
+              <h3 id="why-do-it-this-way">Why do it this way?</h3>
+              <p>We’re going to focus on two major pillars of React’s design philosophy for now. The separation of
+                concerns and declarative programming.</p>
+              <h4 id="separation-of-concerns">Separation of concerns</h4>
+              <p><em>How can We know the dancer from the dance</em></p>
+              <p>In computer programming, “the separation of concerns” refers to a design philosophy that each piece of
+                your code should do one and only one thing. Functions with a lot of moving parts are hard to debug. One
+                large function might be tricky to test. If we can split that function apart into smaller pieces that are
+                easy to test individually, our application will be more robust and easier to understand.</p>
+              <p>At first glance, it might appear that putting our markup right next to our JavaScript is a violation of
+                this principle, but the React team thinks otherwise. They argue that we can’t <em>truly</em> separate a
+                <code class="highlighter-rouge">&lt;button&gt;</code> tag from the function the button invokes.
+                Separating the two, one in an HTML file and another in a JavaScript file, isn’t a separation of
+                concerns, it’s cutting one concern in half and then putting one half in the bedroom and the other half
+                in the garage. It’s a headache we don’t need.</p>
+              <p>Consider the difference between this, the way you’re used to doing it:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c1">//HTML FILE</span>
 <span class="o">&lt;</span><span class="nx">button</span> <span class="kd">class</span><span class="o">=</span><span class="dl">"</span><span class="s2">button</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/button</span><span class="err">&gt;
 </span>
 <span class="c1">//JS FILE</span>
 <span class="kd">let</span> <span class="nx">button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">.button</span><span class="dl">'</span><span class="p">);</span>
 <span class="nx">button</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{...</span><span class="nx">logic</span><span class="p">}</span> <span class="p">)</span>
-</code></pre></div></div>
-<p>And the React way:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">submitForm</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
-</span></code></pre></div></div>
-<p>I would argue there are a lot more opportunities for something to go wrong in the first approach.</p>
-<h3 id="imperative-programming-vs-declarative-programming">Imperative Programming vs Declarative Programming</h3>
-<p>We have an array:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">myArray</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">];</span>
-</code></pre></div></div>
-<p>And we want to iterate over it and double each number. Here are two ways we could go about it.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">myArray</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</code></pre>
+                </div>
+              </div>
+              <p>And the React way:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">submitForm</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span></code></pre>
+                </div>
+              </div>
+              <p>I would argue there are a lot more opportunities for something to go wrong in the first approach.</p>
+              <h3 id="imperative-programming-vs-declarative-programming">Imperative Programming vs Declarative
+                Programming</h3>
+              <p>We have an array:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="kd">let</span> <span class="nx">myArray</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">];</span>
+</code></pre>
+                </div>
+              </div>
+              <p>And we want to iterate over it and double each number. Here are two ways we could go about it.</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">myArray</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">myArray</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">myArray</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div>
-<p>Or:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">double</span> <span class="o">=</span>  <span class="nx">number</span> <span class="o">=&gt;</span> <span class="nx">number</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Or:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="kd">const</span> <span class="nx">double</span> <span class="o">=</span>  <span class="nx">number</span> <span class="o">=&gt;</span> <span class="nx">number</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
 
 <span class="nx">myArray</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">double</span><span class="p">);</span>
-</code></pre></div></div>
-<p>The first approach is an example of <em>imperative</em> code, and this is the kind of approach we’re most familiar with. There’s nothing wrong with imperative code, it’s very explicit, and at a lower level, <em>all</em> code is ultimately imperative. The problem with imperative code is it’s pretty difficult and in more complex examples, it can be hard to understand what the code does at a glance.</p>
-<p>The second approach is an example of <em>declarative</em> code. Instead of telling the computer, step by step, <em>how</em> we want it to do something, we just tell it <em>what</em> we want it to do.</p>
-<p><code class="highlighter-rouge">myArray.map(double)</code></p>
-<p><strong>“Map over my array and double everything inside of it.”</strong></p>
-<p>With practice, declarative code is easier to parse. This is important because, believe it or not, as a programmer, most of your time isn’t spent writing code. It’s spent <em>reading other people’s code and trying to understand what it does</em>. If you can grasp this distinction, and appreciate its value, congratulations. You now understand the basis of functional programming, the programming paradigm that React is modeled after.</p>
-<p>So now we know the very basics of what React does and why it does it this way. In the next objective, we’re going to introduce one of the single most important concepts in programming: state.</p>
-<h5>Follow Along</h5>
-<p>Let’s build a component that displays an image. This is how we would do that.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>The first approach is an example of <em>imperative</em> code, and this is the kind of approach we’re
+                most familiar with. There’s nothing wrong with imperative code, it’s very explicit, and at a lower
+                level, <em>all</em> code is ultimately imperative. The problem with imperative code is it’s pretty
+                difficult and in more complex examples, it can be hard to understand what the code does at a glance.</p>
+              <p>The second approach is an example of <em>declarative</em> code. Instead of telling the computer, step
+                by step, <em>how</em> we want it to do something, we just tell it <em>what</em> we want it to do.</p>
+              <p><code class="highlighter-rouge">myArray.map(double)</code></p>
+              <p><strong>“Map over my array and double everything inside of it.”</strong></p>
+              <p>With practice, declarative code is easier to parse. This is important because, believe it or not, as a
+                programmer, most of your time isn’t spent writing code. It’s spent <em>reading other people’s code and
+                  trying to understand what it does</em>. If you can grasp this distinction, and appreciate its value,
+                congratulations. You now understand the basis of functional programming, the programming paradigm that
+                React is modeled after.</p>
+              <p>So now we know the very basics of what React does and why it does it this way. In the next objective,
+                we’re going to introduce one of the single most important concepts in programming: state.</p>
+              <h5>Follow Along</h5>
+              <p>Let’s build a component that displays an image. This is how we would do that.</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">(</span>
     <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App</span><span class="dl">"</span><span class="o">&gt;</span>
@@ -492,10 +704,20 @@ cypress.io
     <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
 </span>  <span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div></div>
-<p>Notice how we have <code class="highlighter-rouge">className</code> instead of <code class="highlighter-rouge">class</code> in our JSX? That is because JSX is just JavaScript, and <code class="highlighter-rouge">class</code> is a reserved word in JS.</p>
-<p>Now, one more trick we can do with JSX. We can evaluate JavaScript expressions. So we can read variables, run functions, read data from objects or arrays, all kinds of things! To do this, we use curly braces - <code class="highlighter-rouge">{}</code>. Here we will use curly braces to render the value of an object property as a header, and then we will evaluate a string variable as the <code class="highlighter-rouge">src</code> of the image.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Notice how we have <code class="highlighter-rouge">className</code> instead of <code
+                  class="highlighter-rouge">class</code> in our JSX? That is because JSX is just JavaScript, and <code
+                  class="highlighter-rouge">class</code> is a reserved word in JS.</p>
+              <p>Now, one more trick we can do with JSX. We can evaluate JavaScript expressions. So we can read
+                variables, run functions, read data from objects or arrays, all kinds of things! To do this, we use
+                curly braces - <code class="highlighter-rouge">{}</code>. Here we will use curly braces to render the
+                value of an object property as a header, and then we will evaluate a string variable as the <code
+                  class="highlighter-rouge">src</code> of the image.</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="kd">const</span> <span class="nx">image</span> <span class="o">=</span>
   <span class="dl">"</span><span class="s2">https://i.pinimg.com/originals/92/94/ba/9294badee7b8f3d93fa9bc6c874641b2.png</span><span class="dl">"</span><span class="p">;</span>
@@ -513,19 +735,31 @@ cypress.io
     <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
 </span>  <span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div></div>
-<p>JSX is so powerful!</p>
-<h5>Challenge</h5>
-<p>Start to build out React components from scratch. Have fun with this. Experiment with different elements.</p>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to explain what state is in web applications and demonstrate how to make a React component stateful</h4>
-<p>Web apps are basically comprised of data (aka state), and things that change that data, or state. It is therefore vital to understand what state is.</p>
-<h5>Overview</h5>
-<p>You actually already know this, though you may not realize it. If you’re at a soccer game, and each team has three goals, you might say that the “state” of the game is “tied.” A traffic light has three possible states: red, yellow, and green. Similarly, our applications also have states. If you have a to-do app, it might be said to have a state of “three to-dos, none of which are completed.” Upon completing one of the to-dos you’ve changed the application’s state.</p>
-<p>To see what this means concretely, let’s start with the simplest state possible: a boolean. We’ll create an app that displays a light. The light will either be on or off.</p>
-<h5>Follow Along</h5>
-<p>Let’s get some code on the page.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>JSX is so powerful!</p>
+              <h5>Challenge</h5>
+              <p>Start to build out React components from scratch. Have fun with this. Experiment with different
+                elements.</p>
+              <hr>
+              <h4 class="mark mb-3 p-2">Learn to explain what state is in web applications and demonstrate how to make a
+                React component stateful</h4>
+              <p>Web apps are basically comprised of data (aka state), and things that change that data, or state. It is
+                therefore vital to understand what state is.</p>
+              <h5>Overview</h5>
+              <p>You actually already know this, though you may not realize it. If you’re at a soccer game, and each
+                team has three goals, you might say that the “state” of the game is “tied.” A traffic light has three
+                possible states: red, yellow, and green. Similarly, our applications also have states. If you have a
+                to-do app, it might be said to have a state of “three to-dos, none of which are completed.” Upon
+                completing one of the to-dos you’ve changed the application’s state.</p>
+              <p>To see what this means concretely, let’s start with the simplest state possible: a boolean. We’ll
+                create an app that displays a light. The light will either be on or off.</p>
+              <h5>Follow Along</h5>
+              <p>Let’s get some code on the page.</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">render</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-dom</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">"</span><span class="s2">./styles.css</span><span class="dl">"</span><span class="p">;</span>
 
@@ -544,11 +778,17 @@ cypress.io
 
 <span class="kd">const</span> <span class="nx">rootElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">root</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nx">rootElement</span><span class="p">);</span>
-</code></pre></div></div>
-<p>This doesn’t quite get us where we want to go.</p>
-<p><img src="https://tk-assets.lambdaschool.com/88214aa0-8105-4c25-a8a6-1be79308052e_same-bulbs.png" alt="drawing" width="1000px"></p>
-<p>Our application has the assets we want, but we only want one lightbulb image to show at a time. To achieve this, we’re going to have to keep track of its state.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span><span class="nx">useState</span><span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>This doesn’t quite get us where we want to go.</p>
+              <p><img src="https://tk-assets.lambdaschool.com/88214aa0-8105-4c25-a8a6-1be79308052e_same-bulbs.png"
+                  alt="drawing" width="1000px"></p>
+              <p>Our application has the assets we want, but we only want one lightbulb image to show at a time. To
+                achieve this, we’re going to have to keep track of its state.</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span><span class="nx">useState</span><span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">render</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-dom</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">"</span><span class="s2">./styles.css</span><span class="dl">"</span><span class="p">;</span>
 
@@ -570,38 +810,83 @@ cypress.io
 
 <span class="kd">const</span> <span class="nx">rootElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">root</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nx">rootElement</span><span class="p">);</span>
-</code></pre></div></div>
-<p>A couple of things have changed here. First, we’re importing the <code class="highlighter-rouge">useState</code> hook from the React library so we can use it.</p>
-<p><code class="highlighter-rouge">import React, {useState} from "react";</code></p>
-<p>Second, we’ve got this odd bit of syntax.</p>
-<p><code class="highlighter-rouge">const [lightOn, setLightOn ] = useState();</code></p>
-<p>This is the <code class="highlighter-rouge">useState</code> hook, and it’s fundamental to understanding modern React. If its syntax looks strange to you you’re not alone, but we’ll get back to why it looks like that later. For now, what you should understand is that while the line may look strange, all it’s really doing is declaring two variables the way you normally might. For now, it’s okay to imagine that it’s doing something real close to this:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">lightOn</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>A couple of things have changed here. First, we’re importing the <code
+                  class="highlighter-rouge">useState</code> hook from the React library so we can use it.</p>
+              <p><code class="highlighter-rouge">import React, {useState} from "react";</code></p>
+              <p>Second, we’ve got this odd bit of syntax.</p>
+              <p><code class="highlighter-rouge">const [lightOn, setLightOn ] = useState();</code></p>
+              <p>This is the <code class="highlighter-rouge">useState</code> hook, and it’s fundamental to understanding
+                modern React. If its syntax looks strange to you you’re not alone, but we’ll get back to why it looks
+                like that later. For now, what you should understand is that while the line may look strange, all it’s
+                really doing is declaring two variables the way you normally might. For now, it’s okay to imagine that
+                it’s doing something real close to this:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="kd">let</span> <span class="nx">lightOn</span><span class="p">;</span>
 <span class="kd">let</span> <span class="nx">setLightOn</span> <span class="o">=</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="nx">lightOn</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;};</span>
-</code></pre></div></div>
-<p>(Note: ignore the discrepancy between the use of <code class="highlighter-rouge">const</code> in the hook and <code class="highlighter-rouge">let</code> in my example. It’s not important for now.)</p>
-<p>The sharp-eyed among you might have noticed that <code class="highlighter-rouge">lightOn</code> doesn’t have a value.<br>
-But as you can see, if we were to invoke <code class="highlighter-rouge">setLightOn</code> and pass a value in as an argument, we can change the value of <code class="highlighter-rouge">lightOn</code>.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">setLightOn</span><span class="p">(</span><span class="dl">"</span><span class="s2">sup</span><span class="dl">"</span><span class="p">);</span>
+</code></pre>
+                </div>
+              </div>
+              <p>(Note: ignore the discrepancy between the use of <code class="highlighter-rouge">const</code> in the
+                hook and <code class="highlighter-rouge">let</code> in my example. It’s not important for now.)</p>
+              <p>The sharp-eyed among you might have noticed that <code class="highlighter-rouge">lightOn</code> doesn’t
+                have a value.<br>
+                But as you can see, if we were to invoke <code class="highlighter-rouge">setLightOn</code> and pass a
+                value in as an argument, we can change the value of <code class="highlighter-rouge">lightOn</code>.</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="nx">setLightOn</span><span class="p">(</span><span class="dl">"</span><span class="s2">sup</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">lightOn</span><span class="p">);</span> <span class="c1">// "sup"</span>
-</code></pre></div></div>
-<p>But what if we don’t want to have to assign a value to <code class="highlighter-rouge">lightOn</code> right away? What if we want that variable to be initialized with a value from the get-go? We can do that.</p>
-<p>Let’s change:</p>
-<p><code class="highlighter-rouge">const [lightOn, setLightOn ] = useState();</code></p>
-<p>To:</p>
-<p><code class="highlighter-rouge">const [lightOn, setLightOn ] = useState(false);</code></p>
-<p>Now it’s sort of like we’re saying this:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">lightOn</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>But what if we don’t want to have to assign a value to <code class="highlighter-rouge">lightOn</code>
+                right away? What if we want that variable to be initialized with a value from the get-go? We can do
+                that.</p>
+              <p>Let’s change:</p>
+              <p><code class="highlighter-rouge">const [lightOn, setLightOn ] = useState();</code></p>
+              <p>To:</p>
+              <p><code class="highlighter-rouge">const [lightOn, setLightOn ] = useState(false);</code></p>
+              <p>Now it’s sort of like we’re saying this:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="kd">let</span> <span class="nx">lightOn</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
 <span class="kd">let</span> <span class="nx">setLightOn</span> <span class="o">=</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="nx">lightOn</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;};</span>
-</code></pre></div></div>
-<p>In summation the <code class="highlighter-rouge">useState</code> hook <code class="highlighter-rouge">const [lightOn, setLightOn ] = useState(false);</code> works like this:</p>
-<p><code class="highlighter-rouge">lightOn</code> is a variable the value of which is whatever we passed in to <code class="highlighter-rouge">useState</code>. In this case, it’s value is the boolean primitive <code class="highlighter-rouge">false</code>. <code class="highlighter-rouge">setLightOn</code> is a function that will change the value of <code class="highlighter-rouge">lightOn</code>. We’ll also note that I could have named <code class="highlighter-rouge">lightOn</code> and <code class="highlighter-rouge">setLightOn</code> whatever I wanted. I could’ve named them <code class="highlighter-rouge">peanutButter</code> and <code class="highlighter-rouge">jelly</code> if I wanted but that would’ve made it pretty confusing for someone reading my code to understand what they do.</p>
-<h4 id="recap-state">Recap State</h4>
-<p>Okay, so what have we learned? We know what state is in an application. We also know how to keep track of a state variable from within a component, we know how to initilize it with a value, and we know how we can change that value. What’s missing?</p>
-<p>Well for one we still have two light bulbs. We have a state variable initialized and a way to change it, but our lightbulbs don’t know it exists. We have to make our lightbulbs aware of what the state is in some way so that they can know what to do when it changes. We’re going to need to learn a critically important pattern to make that happen.</p>
-<h3 id="what-is-conditional-rendering">What is Conditional Rendering?</h3>
-<p>Conditional rendering is just a fancy name for a very common pattern in React. We don’t want to see both lightbulbs at once. We only want to <strong>render</strong> one or the other based on some <strong>condition</strong>. In this case, if the <code class="highlighter-rouge">lightOn</code> boolean is set to <code class="highlighter-rouge">false</code> we want to see the white lightbulb. If it’s set to true we want to see the yellow one. This is a straightforward use-case for the ternary operator in JavaScript.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>In summation the <code class="highlighter-rouge">useState</code> hook <code
+                  class="highlighter-rouge">const [lightOn, setLightOn ] = useState(false);</code> works like this:</p>
+              <p><code class="highlighter-rouge">lightOn</code> is a variable the value of which is whatever we passed
+                in to <code class="highlighter-rouge">useState</code>. In this case, it’s value is the boolean primitive
+                <code class="highlighter-rouge">false</code>. <code class="highlighter-rouge">setLightOn</code> is a
+                function that will change the value of <code class="highlighter-rouge">lightOn</code>. We’ll also note
+                that I could have named <code class="highlighter-rouge">lightOn</code> and <code
+                  class="highlighter-rouge">setLightOn</code> whatever I wanted. I could’ve named them <code
+                  class="highlighter-rouge">peanutButter</code> and <code class="highlighter-rouge">jelly</code> if I
+                wanted but that would’ve made it pretty confusing for someone reading my code to understand what they
+                do.</p>
+              <h4 id="recap-state">Recap State</h4>
+              <p>Okay, so what have we learned? We know what state is in an application. We also know how to keep track
+                of a state variable from within a component, we know how to initilize it with a value, and we know how
+                we can change that value. What’s missing?</p>
+              <p>Well for one we still have two light bulbs. We have a state variable initialized and a way to change
+                it, but our lightbulbs don’t know it exists. We have to make our lightbulbs aware of what the state is
+                in some way so that they can know what to do when it changes. We’re going to need to learn a critically
+                important pattern to make that happen.</p>
+              <h3 id="what-is-conditional-rendering">What is Conditional Rendering?</h3>
+              <p>Conditional rendering is just a fancy name for a very common pattern in React. We don’t want to see
+                both lightbulbs at once. We only want to <strong>render</strong> one or the other based on some
+                <strong>condition</strong>. In this case, if the <code class="highlighter-rouge">lightOn</code> boolean
+                is set to <code class="highlighter-rouge">false</code> we want to see the white lightbulb. If it’s set
+                to true we want to see the yellow one. This is a straightforward use-case for the ternary operator in
+                JavaScript.</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">render</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-dom</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">"</span><span class="s2">./styles.css</span><span class="dl">"</span><span class="p">;</span>
 
@@ -621,39 +906,74 @@ But as you can see, if we were to invoke <code class="highlighter-rouge">setLigh
 
 <span class="kd">const</span> <span class="nx">rootElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">root</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nx">rootElement</span><span class="p">);</span>
-</code></pre></div></div>
-<p>This is the only part that changed:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App</span><span class="dl">"</span><span class="o">&gt;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>This is the only part that changed:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App</span><span class="dl">"</span><span class="o">&gt;</span>
       <span class="p">{</span><span class="nx">lightOn</span> <span class="o">===</span> <span class="kc">false</span> <span class="p">?</span> <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">white</span><span class="p">}</span> <span class="sr">/&gt; : &lt;img src={yellow} /</span><span class="o">&gt;</span><span class="p">}</span>
     <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
-</span></code></pre></div></div>
-<p>A ternary operator acts as a single line <code class="highlighter-rouge">if/else</code> statment. This line:</p>
-<p><code class="highlighter-rouge">{lightOn === false ? &lt;img src={white} /&gt; : &lt;img src={yellow} /&gt;}</code></p>
-<p>It’s saying <em>“Is the <code class="highlighter-rouge">lightOn</code> state variable set to <code class="highlighter-rouge">false</code>? If so render <code class="highlighter-rouge">&lt;img src={white} /&gt;</code>, otherwise render <code class="highlighter-rouge">&lt;img src={yellow} /&gt;</code></em></p>
-<p>Remember this pattern, you’ll use it a lot.</p>
-<p>So what’s the result of this code? Well, let’s find out.</p>
-<p><img src="https://tk-assets.lambdaschool.com/0a42bf4e-9454-49a1-b70d-325ba6368fe5_dark-bulb.png" alt="drawing" width="1000px"></p>
-<p>Progress. It’s only showing the white bulb. What if we want it to show the yellow one now? Well, remember, our ternary operator is conditionally rendering one lightbulb or the other. It’s being told to show the white one if <code class="highlighter-rouge">lightOn</code> is set to false, and to show the yellow one if it’s <code class="highlighter-rouge">true</code>. What happens if we hard code the initial value of <code class="highlighter-rouge">lightOn</code> to true?</p>
-<p><code class="highlighter-rouge">const [lightOn, setLightOn] = useState(true);</code></p>
-<p>The result?</p>
-<p><img src="https://tk-assets.lambdaschool.com/782b4acd-8006-4578-8f88-133c7f2b2220_lit-bulb.png" alt="drawing" width="1000px"></p>
-<p>Victory is nearly ours. We setup up a condition on which to render one bulb or the other. That condition was based on our application’s state. When we forced the state of the application to change what appeared on the page <em>reacted</em> to that change. That’s what React is really all about. Your state changes and your application <em>reacts</em>.</p>
-<p>The last step is figuring out how to change the state.</p>
-<p>Remember our hook from earlier?</p>
-<p><code class="highlighter-rouge">const [lightOn, setLightOn] = useState(false);</code></p>
-<p>You’ll recall that <code class="highlighter-rouge">setLightOn</code> is a function that can change the value of <code class="highlighter-rouge">lightOn</code>. Now we just have to find a way to invoke this function.</p>
-<h5>Challenge</h5>
-<p>Build a component that holds a <code class="highlighter-rouge">person</code> object in state. Display the person’s data in the component.</p>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to change the state of the component with a click listener</h4>
-<p>As we discussed earlier, web apps are really made up of just two things - state and things that change that state. The things that can change state vary, but often times our state is changed by some user interaction in the app. We will learn here how to respond to our users clicking on an element, and change the state accordingly.</p>
-<h5>Overview</h5>
-<p>You’ve already used click listeners outside of React, so we’re finally going to look at something that feels familiar. To attach a click listener to a react component, we need to use this camel-casing: <code class="highlighter-rouge">onClick</code>. This event listener will take in a callback function. There are a couple of “gotchas” with this, but don’t worry; we’ll describe them below.</p>
-<h5>Follow Along</h5>
-<p>Now that we know what the click event listener is in React let’s put one on our <code class="highlighter-rouge">&lt;div&gt;</code>.</p>
-<p>Before we talk about the right way to do this, however, I want to show you a couple of wrong ways. I want to do this for two reasons. 1) It will help us think more critically about how React works and 2) You will almost certainly make this mistake at some point, and it’ll help to know what to look out for.</p>
-<p>So again, this is wrong:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</span></code></pre>
+                </div>
+              </div>
+              <p>A ternary operator acts as a single line <code class="highlighter-rouge">if/else</code> statment. This
+                line:</p>
+              <p><code class="highlighter-rouge">{lightOn === false ? &lt;img src={white} /&gt; : &lt;img src={yellow}
+                  /&gt;}</code></p>
+              <p>It’s saying <em>“Is the <code class="highlighter-rouge">lightOn</code> state variable set to <code
+                    class="highlighter-rouge">false</code>? If so render <code class="highlighter-rouge">&lt;img
+                    src={white} /&gt;</code>, otherwise render <code class="highlighter-rouge">&lt;img src={yellow}
+                    /&gt;</code></em></p>
+              <p>Remember this pattern, you’ll use it a lot.</p>
+              <p>So what’s the result of this code? Well, let’s find out.</p>
+              <p><img src="https://tk-assets.lambdaschool.com/0a42bf4e-9454-49a1-b70d-325ba6368fe5_dark-bulb.png"
+                  alt="drawing" width="1000px"></p>
+              <p>Progress. It’s only showing the white bulb. What if we want it to show the yellow one now? Well,
+                remember, our ternary operator is conditionally rendering one lightbulb or the other. It’s being told to
+                show the white one if <code class="highlighter-rouge">lightOn</code> is set to false, and to show the
+                yellow one if it’s <code class="highlighter-rouge">true</code>. What happens if we hard code the initial
+                value of <code class="highlighter-rouge">lightOn</code> to true?</p>
+              <p><code class="highlighter-rouge">const [lightOn, setLightOn] = useState(true);</code></p>
+              <p>The result?</p>
+              <p><img src="https://tk-assets.lambdaschool.com/782b4acd-8006-4578-8f88-133c7f2b2220_lit-bulb.png"
+                  alt="drawing" width="1000px"></p>
+              <p>Victory is nearly ours. We setup up a condition on which to render one bulb or the other. That
+                condition was based on our application’s state. When we forced the state of the application to change
+                what appeared on the page <em>reacted</em> to that change. That’s what React is really all about. Your
+                state changes and your application <em>reacts</em>.</p>
+              <p>The last step is figuring out how to change the state.</p>
+              <p>Remember our hook from earlier?</p>
+              <p><code class="highlighter-rouge">const [lightOn, setLightOn] = useState(false);</code></p>
+              <p>You’ll recall that <code class="highlighter-rouge">setLightOn</code> is a function that can change the
+                value of <code class="highlighter-rouge">lightOn</code>. Now we just have to find a way to invoke this
+                function.</p>
+              <h5>Challenge</h5>
+              <p>Build a component that holds a <code class="highlighter-rouge">person</code> object in state. Display
+                the person’s data in the component.</p>
+              <hr>
+              <h4 class="mark mb-3 p-2">Learn to change the state of the component with a click listener</h4>
+              <p>As we discussed earlier, web apps are really made up of just two things - state and things that change
+                that state. The things that can change state vary, but often times our state is changed by some user
+                interaction in the app. We will learn here how to respond to our users clicking on an element, and
+                change the state accordingly.</p>
+              <h5>Overview</h5>
+              <p>You’ve already used click listeners outside of React, so we’re finally going to look at something that
+                feels familiar. To attach a click listener to a react component, we need to use this camel-casing: <code
+                  class="highlighter-rouge">onClick</code>. This event listener will take in a callback function. There
+                are a couple of “gotchas” with this, but don’t worry; we’ll describe them below.</p>
+              <h5>Follow Along</h5>
+              <p>Now that we know what the click event listener is in React let’s put one on our <code
+                  class="highlighter-rouge">&lt;div&gt;</code>.</p>
+              <p>Before we talk about the right way to do this, however, I want to show you a couple of wrong ways. I
+                want to do this for two reasons. 1) It will help us think more critically about how React works and 2)
+                You will almost certainly make this mistake at some point, and it’ll help to know what to look out for.
+              </p>
+              <p>So again, this is wrong:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">render</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-dom</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">"</span><span class="s2">./styles.css</span><span class="dl">"</span><span class="p">;</span>
 
@@ -673,13 +993,18 @@ But as you can see, if we were to invoke <code class="highlighter-rouge">setLigh
 
 <span class="kd">const</span> <span class="nx">rootElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">root</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nx">rootElement</span><span class="p">);</span>
-</code></pre></div></div>
-<p>This is the relevant line:</p>
-<p><code class="highlighter-rouge">&lt;div onClick={setLightOn} className="App"&gt;</code></p>
-<p>The reason this is wrong is because <code class="highlighter-rouge">setLightOn</code> is expecting an argument. Wewps! Common mistake. Well, no problem we’ll just pass it one like so:</p>
-<p><code class="highlighter-rouge">&lt;div onClick={setLightOn(false)} className="App"&gt;</code></p>
-<p>Now our code looks like this:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>This is the relevant line:</p>
+              <p><code class="highlighter-rouge">&lt;div onClick={setLightOn} className="App"&gt;</code></p>
+              <p>The reason this is wrong is because <code class="highlighter-rouge">setLightOn</code> is expecting an
+                argument. Wewps! Common mistake. Well, no problem we’ll just pass it one like so:</p>
+              <p><code class="highlighter-rouge">&lt;div onClick={setLightOn(false)} className="App"&gt;</code></p>
+              <p>Now our code looks like this:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">render</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-dom</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">"</span><span class="s2">./styles.css</span><span class="dl">"</span><span class="p">;</span>
 
@@ -699,24 +1024,41 @@ But as you can see, if we were to invoke <code class="highlighter-rouge">setLigh
 
 <span class="kd">const</span> <span class="nx">rootElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">root</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nx">rootElement</span><span class="p">);</span>
-</code></pre></div></div>
-<p>Wewps. Everything broke again. What happened?</p>
-<p>Essentially <code class="highlighter-rouge">&lt;div onClick={setLightOn(false)} className="App"&gt;</code> is invoking <code class="highlighter-rouge">setLightOn(false)</code> over and over again and each invocation is triggering a rerender. We stumbled into an infinite loop. What we meant to write was this.</p>
-<p><code class="highlighter-rouge">&lt;div onClick={ ()=&gt; setLightOn(false) } className="App"&gt;</code></p>
-<p>See the difference?</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Everything is on fire</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Wewps. Everything broke again. What happened?</p>
+              <p>Essentially <code class="highlighter-rouge">&lt;div onClick={setLightOn(false)}
+                  className="App"&gt;</code> is invoking <code class="highlighter-rouge">setLightOn(false)</code> over
+                and over again and each invocation is triggering a rerender. We stumbled into an infinite loop. What we
+                meant to write was this.</p>
+              <p><code class="highlighter-rouge">&lt;div onClick={ ()=&gt; setLightOn(false) }
+                  className="App"&gt;</code></p>
+              <p>See the difference?</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c1">// Everything is on fire</span>
 <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span> <span class="nx">setLightOn</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span> <span class="p">}</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App</span><span class="dl">"</span><span class="o">&gt;</span>
 
 <span class="c1">// Everything is fine</span>
 <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span> <span class="p">()</span><span class="o">=&gt;</span> <span class="nx">setLightOn</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span> <span class="p">}</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App</span><span class="dl">"</span><span class="o">&gt;</span>
-</code></pre></div></div>
-<p>The first invokes the function every nanosecond. The second only invokes it when you click the div.</p>
-<p>There’s one last little tweak we need to make to get our application to work. Try to figure it out for yourselves before reading on.</p>
-<h3 id="make-our-lightbulb-app-work">Make our lightbulb app work</h3>
-<p>In this case, we’re passing <code class="highlighter-rouge">false</code> as an argument to <code class="highlighter-rouge">setLightOn</code> every time. That means the state will always be false, which means we’re only ever going to hit one of our two conditions in our render. Instead of passing <code class="highlighter-rouge">false</code>, let’s pass the opposite of whatever the state is.</p>
-<p><code class="highlighter-rouge">&lt;div onClick={ ()=&gt; setLightOn(!lightOn) } className="App"&gt;</code></p>
-<p>The final code looks like this:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>The first invokes the function every nanosecond. The second only invokes it when you click the div.</p>
+              <p>There’s one last little tweak we need to make to get our application to work. Try to figure it out for
+                yourselves before reading on.</p>
+              <h3 id="make-our-lightbulb-app-work">Make our lightbulb app work</h3>
+              <p>In this case, we’re passing <code class="highlighter-rouge">false</code> as an argument to <code
+                  class="highlighter-rouge">setLightOn</code> every time. That means the state will always be false,
+                which means we’re only ever going to hit one of our two conditions in our render. Instead of passing
+                <code class="highlighter-rouge">false</code>, let’s pass the opposite of whatever the state is.</p>
+              <p><code class="highlighter-rouge">&lt;div onClick={ ()=&gt; setLightOn(!lightOn) }
+                  className="App"&gt;</code></p>
+              <p>The final code looks like this:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">render</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-dom</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">"</span><span class="s2">./styles.css</span><span class="dl">"</span><span class="p">;</span>
 
@@ -736,206 +1078,251 @@ But as you can see, if we were to invoke <code class="highlighter-rouge">setLigh
 
 <span class="kd">const</span> <span class="nx">rootElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">root</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nx">rootElement</span><span class="p">);</span>
-</code></pre></div></div>
-<p>And the result?</p>
-<p><img src="https://tk-assets.lambdaschool.com/ee77a471-9c5e-484f-b857-bcebdfdd444c_changing-bulb.gif" alt="drawing" width="1000px"></p>
-<p>It’s glorious.</p>
-<h5>Challenge</h5>
-<p>Build a counter app that keeps track of how many times you click on a button and displays that count in the component.</p>
-<hr>
-<h2 class="display-4">
-<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
-<ul class="list-group">
-<li class="list-group-item">
-<h5><a target="_blank" href="https://github.com/LambdaSchool/react-stateful-widgets">React Stateful Widgets</a></h5>
-<p>React Stateful Widgets is an application containing 6 components displaying hard-coded information. We will make the app interactive by adding state to each component, and by implementing event handlers that allow the user to update state.</p>
-</li>
-</ul>
-<h2 class="display-4">
-<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
-<h3 class="display-5">Class Recordings</h3>
-<p class="lead">You can use class recordings to help you master the material.</p>
-<div>
-<ul class="list-group list-group-flush">
-<li class="list-group-item">
-<strong><a target="_blank" href="https://youtu.be/In0AvH4VHQw">React Components and Component State for WebPT22 w/Keiran Kozlowski</a></strong>
-<p>Components are the building blocks of React applications. We use components to display some data (often called “state”) to the screen for our users. In this module, we will learn how to build components that can hold state to create a great experience for our end users.</p>
-</li>
-<li class="list-group-item">
-<a href="/archive/FSW/module/recZau7hH8vzww14N">All previous recordings</a>
-</li>
-</ul>
-</div>
-<h3 class="display-5">Demonstrate Mastery</h3>
-<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
-<ul>
-<li>Objective challenge: <p>In your own, write a paragraph about what ReactJS is and what problems that it tries to solve.</p>
-<p>Submit that paragraph to your Team Lead via Slack.</p>
-</li>
-<li>Objective challenge: <p>Start to build out React components from scratch. Have fun with this. Experiment with different elements.</p>
-</li>
-<li>Objective challenge: <p>Build a component that holds a <code class="highlighter-rouge">person</code> object in state. Display the person’s data in the component.</p>
-</li>
-<li>Objective challenge: <p>Build a counter app that keeps track of how many times you click on a button and displays that count in the component.</p>
-</li>
-<li>Project: React Stateful Widgets</li>
-</ul>
-</div>
-</div>
-</div>
-</main>
-</div>
+</code></pre>
+                </div>
+              </div>
+              <p>And the result?</p>
+              <p><img src="https://tk-assets.lambdaschool.com/ee77a471-9c5e-484f-b857-bcebdfdd444c_changing-bulb.gif"
+                  alt="drawing" width="1000px"></p>
+              <p>It’s glorious.</p>
+              <h5>Challenge</h5>
+              <p>Build a counter app that keeps track of how many times you click on a button and displays that count in
+                the component.</p>
+              <hr>
+              <h2 class="display-4">
+                <a id="project" class="anchor" href="#project" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Project</h2>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <h5><a target="_blank" href="https://github.com/LambdaSchool/react-stateful-widgets">React Stateful
+                      Widgets</a></h5>
+                  <p>React Stateful Widgets is an application containing 6 components displaying hard-coded information.
+                    We will make the app interactive by adding state to each component, and by implementing event
+                    handlers that allow the user to update state.</p>
+                </li>
+              </ul>
+              <h2 class="display-4">
+                <a id="review" class="anchor" href="#review" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Review</h2>
+              <h3 class="display-5">Class Recordings</h3>
+              <p class="lead">You can use class recordings to help you master the material.</p>
+              <div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <strong><a target="_blank" href="https://youtu.be/In0AvH4VHQw">React Components and Component State
+                        for WebPT22 w/Keiran Kozlowski</a></strong>
+                    <p>Components are the building blocks of React applications. We use components to display some data
+                      (often called “state”) to the screen for our users. In this module, we will learn how to build
+                      components that can hold state to create a great experience for our end users.</p>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="/archive/FSW/module/recZau7hH8vzww14N">All previous recordings</a>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="display-5">Demonstrate Mastery</h3>
+              <p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the
+                following:</p>
+              <ul>
+                <li>Objective challenge: <p>In your own, write a paragraph about what ReactJS is and what problems that
+                    it tries to solve.</p>
+                  <p>Submit that paragraph to your Team Lead via Slack.</p>
+                </li>
+                <li>Objective challenge: <p>Start to build out React components from scratch. Have fun with this.
+                    Experiment with different elements.</p>
+                </li>
+                <li>Objective challenge: <p>Build a component that holds a <code class="highlighter-rouge">person</code>
+                    object in state. Display the person’s data in the component.</p>
+                </li>
+                <li>Objective challenge: <p>Build a counter app that keeps track of how many times you click on a button
+                    and displays that count in the component.</p>
+                </li>
+                <li>Project: React Stateful Widgets</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-80850900-4');
-</script>
-<script type="text/javascript">
-  function getDomain() {
-    const domainName = window.location.hostname.split('.')[1];
-    return `${domainName}.com`;
-  }
-</script>
-<script src="" integrity="" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
-<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
-<script type="text/javascript">
-  SimpleJekyllSearch.init({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    dataSource: '/search.json',
-    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="React Components and Component State">{title}</a></li>',
-    noResultsText: '',
-    limit: 10,
-    fuzzy: true,
-  })
-</script>
-<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
-  if (window.attachEvent) {
-    window.attachEvent('onload', verifySignedIn);
-  } else {
-    if (window.onload) {
-      var currentOnLoadFn = window.onload;
-      var newOnLoadFn = function (evt) {
-        currentOnLoadFn(evt);
-        verifySignedIn();
-      };
-      window.onload = newOnLoadFn;
-    } else {
-      window.onload = verifySignedIn;
-    }
-  }
-
-  function verifySignedIn() {
-    if (isPagePublic()) {
-      return showPageContents();
-    }
-
-    window.__user = null;
-    isSignedIn().then((user) => {
-      window.__user = user;
-
-      if (!user.signedIn) {
-        redirectToSignIn();
-      } else if (!user.student && !window.__openToAdmissions) {
-        showUnauthorizedMessage();
-      } else {
-        showPageContents();
+      function gtag() {
+        dataLayer.push( arguments );
       }
-    });
-  }
+      gtag( 'js', new Date() );
 
-  function isPagePublic() {
-    const openCourses = [
-      'and-pre',
-      'ds-pre',
-      'fsw-pre',
-      'help',
-      'ios-pre',
-    ];
-
-    const openPages = [
-      'cs-and',
-      'cs-fsw',
-      'cs-ios',
-      'cr',
-      'ds',
-      'jx',
-      'p4s',
-      'ux',
-    ];
-
-    const pathParts = window.location.pathname.split('/');
-    const courseName = pathParts[1];
-    const pageName = pathParts[pathParts.length - 1];
-
-    return openCourses.includes(courseName) || openPages.includes(pageName);
-  }
-
-  function isSignedIn() {
-    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
-
-    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
-
-    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
-      .then((response) => response.text())
-      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
-      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
-      .catch((error) => {});
-  }
-
-  function redirectToSignIn() {
-    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
-    const redirectMessage = document.querySelector('#redirect-message');
-    redirectMessage.style.display = "block";
-    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
-    window.location = signInUrl;
-  }
-
-  function showPageContents() {
-    document.querySelector('#content-wrapper').style.visibility = 'visible';
-  }
-
-  function showUnauthorizedMessage() {
-    document.querySelector('#unauthorized-message').style.display = 'block';
-  }
-
-  function getAuthBaseUrl() {
-    const domain = getDomain();
-    const authBaseUrl = `https://auth.${domain}`;
-    return authBaseUrl;
-  }
-</script><script src="/assets/js/docs.min.js"></script><script>
-  var MathJax = {
-    tex: {
-      inlineMath: [['$$', '$$'], ['\[', '\])']]
-    },
-    "HTML-CSS": {
-      styles: {
-        ".MathJax span": {
-          color: "#000000"
+      gtag( 'config', 'UA-80850900-4' );
+    </script>
+    <script type="text/javascript">
+      function getDomain() {
+        const domainName = window.location.hostname.split( '.' )[ 1 ];
+        return `${domainName}.com`;
+      }
+    </script>
+    <script src="" integrity="" crossorigin="anonymous"></script>
+    <script>
+      window.jQuery || document.write( '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>' )
+    </script>
+    <script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script>
+    <script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
+    <script src="/assets/js/activate.js"></script>
+    <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      SimpleJekyllSearch.init( {
+        searchInput: document.getElementById( 'search-input' ),
+        resultsContainer: document.getElementById( 'results-container' ),
+        dataSource: '/search.json',
+        searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="React Components and Component State">{title}</a></li>',
+        noResultsText: '',
+        limit: 10,
+        fuzzy: true,
+      } )
+    </script>
+    <script src="/assets/js/mermaid.min.js"></script>
+    <script type="text/javascript">
+      if ( window.attachEvent ) {
+        window.attachEvent( 'onload', verifySignedIn );
+      } else {
+        if ( window.onload ) {
+          var currentOnLoadFn = window.onload;
+          var newOnLoadFn = function ( evt ) {
+            currentOnLoadFn( evt );
+            verifySignedIn();
+          };
+          window.onload = newOnLoadFn;
+        } else {
+          window.onload = verifySignedIn;
         }
       }
-    }
-  }
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<script>
-  handleExternalLinks();
 
-  function handleExternalLinks() {
-    const domain = getDomain();
-    const links = document.querySelectorAll('a');
-    return links.forEach((link) => {
-      if (!link.host.includes(domain)) link.target = '_blank';
-    })
-  };
-</script>
-</div>
+      function verifySignedIn() {
+        if ( isPagePublic() ) {
+          return showPageContents();
+        }
+
+        window.__user = null;
+        isSignedIn().then( ( user ) => {
+          window.__user = user;
+
+          if ( !user.signedIn ) {
+            redirectToSignIn();
+          } else if ( !user.student && !window.__openToAdmissions ) {
+            showUnauthorizedMessage();
+          } else {
+            showPageContents();
+          }
+        } );
+      }
+
+      function isPagePublic() {
+        const openCourses = [
+          'and-pre',
+          'ds-pre',
+          'fsw-pre',
+          'help',
+          'ios-pre',
+        ];
+
+        const openPages = [
+          'cs-and',
+          'cs-fsw',
+          'cs-ios',
+          'cr',
+          'ds',
+          'jx',
+          'p4s',
+          'ux',
+        ];
+
+        const pathParts = window.location.pathname.split( '/' );
+        const courseName = pathParts[ 1 ];
+        const pageName = pathParts[ pathParts.length - 1 ];
+
+        return openCourses.includes( courseName ) || openPages.includes( pageName );
+      }
+
+      function isSignedIn() {
+        const isDeployPreview = window.location.hostname.startsWith( 'deploy-preview' ) && window.location.hostname
+          .endsWith( 'netlify.com' );
+
+        if ( isDeployPreview ) return Promise.resolve( {
+          signedIn: true,
+          student: true
+        } );
+
+        return fetch( `${getAuthBaseUrl()}/whoami`, {
+            credentials: 'include'
+          } )
+          .then( ( response ) => response.text() )
+          .then( ( userAsText ) => userAsText ? JSON.parse( userAsText ) : null )
+          .then( ( userData ) => ( {
+            signedIn: Boolean( userData ),
+            student: Boolean( userData && userData.airtableId ),
+            id: userData ? userData.id : null,
+            email: userData ? userData.email : null
+          } ) )
+          .catch( ( error ) => {} );
+      }
+
+      function redirectToSignIn() {
+        const signInUrl =
+          `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+        const redirectMessage = document.querySelector( '#redirect-message' );
+        redirectMessage.style.display = "block";
+        redirectMessage.innerHTML =
+          `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+        window.location = signInUrl;
+      }
+
+      function showPageContents() {
+        document.querySelector( '#content-wrapper' ).style.visibility = 'visible';
+      }
+
+      function showUnauthorizedMessage() {
+        document.querySelector( '#unauthorized-message' ).style.display = 'block';
+      }
+
+      function getAuthBaseUrl() {
+        const domain = getDomain();
+        const authBaseUrl = `https://auth.${domain}`;
+        return authBaseUrl;
+      }
+    </script>
+    <script src="/assets/js/docs.min.js"></script>
+    <script>
+      var MathJax = {
+        tex: {
+          inlineMath: [
+            [ '$$', '$$' ],
+            [ '\[', '\])' ]
+          ]
+        },
+        "HTML-CSS": {
+          styles: {
+            ".MathJax span": {
+              color: "#000000"
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+    </script>
+    <script>
+      handleExternalLinks();
+
+      function handleExternalLinks() {
+        const domain = getDomain();
+        const links = document.querySelectorAll( 'a' );
+        return links.forEach( ( link ) => {
+          if ( !link.host.includes( domain ) ) link.target = '_blank';
+        } )
+      };
+    </script>
+  </div>
 </body>
+
 </html>

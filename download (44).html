@@ -1,554 +1,826 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Intended as a home for Lambda School curriculum.">
-<meta name="author" content="">
-<meta name="generator" content="Jekyll v3.8.0">
-<title>Introduction to Relational Databases · Lambda School</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Intended as a home for Lambda School curriculum.">
+  <meta name="author" content="">
+  <meta name="generator" content="Jekyll v3.8.0">
+  <title>Introduction to Relational Databases · Lambda School</title>
 
-<link rel='stylesheet' integrity crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
+  <link rel='stylesheet' integrity crossorigin='anonymous'
+    href='https://d33wubrfki0l68.cloudfront.net/css/0f99ed215b3d52fa1bee44dc614ea3fa1d1bebc0/dist/css/bootstrap.min.css' />
 
-<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
+  <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+  <link rel='stylesheet'
+    href='https://d33wubrfki0l68.cloudfront.net/css/1bf8317b3d6d0c9d813c92505f052bf79ffdcdfe/assets/css/docs.min.css' />
 
-<link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
+  <link rel='stylesheet'
+    href='https://d33wubrfki0l68.cloudfront.net/css/f3626ab7ab84821f8b60ea92b4a5c6acf59991af/assets/css/main.css' />
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-122016605-1', 'learn.lambdaschool.com');
-  ga('send', 'pageview');
-</script>
+  <script>
+    ( function ( i, s, o, g, r, a, m ) {
+      i[ 'GoogleAnalyticsObject' ] = r;
+      i[ r ] = i[ r ] || function () {
+        ( i[ r ].q = i[ r ].q || [] ).push( arguments )
+      }, i[ r ].l = 1 * new Date();
+      a = s.createElement( o ),
+        m = s.getElementsByTagName( o )[ 0 ];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore( a, m )
+    } )( window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga' );
+    ga( 'create', 'UA-122016605-1', 'learn.lambdaschool.com' );
+    ga( 'send', 'pageview' );
+  </script>
 
-<script>
-  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-  analytics.load("BjKorwKrSvMamfNoGkBq9rISk7wF6QQX");
-  analytics.page();
-  }}();
-</script>
+  <script>
+    ! function () {
+      var analytics = window.analytics = window.analytics || [];
+      if ( !analytics.initialize )
+        if ( analytics.invoked ) window.console && console.error && console.error( "Segment snippet included twice." );
+        else {
+          analytics.invoked = !0;
+          analytics.methods = [ "trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset",
+            "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"
+          ];
+          analytics.factory = function ( t ) {
+            return function () {
+              var e = Array.prototype.slice.call( arguments );
+              e.unshift( t );
+              analytics.push( e );
+              return analytics
+            }
+          };
+          for ( var t = 0; t < analytics.methods.length; t++ ) {
+            var e = analytics.methods[ t ];
+            analytics[ e ] = analytics.factory( e )
+          }
+          analytics.load = function ( t, e ) {
+            var n = document.createElement( "script" );
+            n.type = "text/javascript";
+            n.async = !0;
+            n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
+            var a = document.getElementsByTagName( "script" )[ 0 ];
+            a.parentNode.insertBefore( n, a );
+            analytics._loadOptions = e
+          };
+          analytics.SNIPPET_VERSION = "4.1.0";
+          analytics.load( "BjKorwKrSvMamfNoGkBq9rISk7wF6QQX" );
+          analytics.page();
+        }
+    }();
+  </script>
 
-<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
-<link rel="icon" href="/favicon.ico">
-<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#a0001e">
+  <link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#a0001e">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#a0001e">
 </head>
+
 <body>
-<noscript>Please enable JavaScript to view this page.</noscript>
-<div id="redirect-message" style="display: none;">
-You must be logged in to view this page.
-</div>
-<div id="unauthorized-message" style="display: none;">
-You must be a Lambda School student to view this page.
-</div>
-<div id="content-wrapper" >
-<a id="skippy" class="sr-only sr-only-focusable" href="#content">
-<div class="container">
-<span class="skiplink-text">Skip to main content</span>
-</div>
-</a>
-<div class="mobile-menu">
-<div class="m-drop">
-<div class="mobile-row">
-<div class="header-row" style="padding: 3px 7px">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35" fill="none">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z" fill="#EC3944" />
-</svg></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu" aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
-</button>
-</div>
-</div>
-<div class="nav-row">
-<div class="results-container">
-<ul id="results-container" class="dropdown list-group"></ul>
-</div>
-<div id="mobile-course-menu" class="collapse nav-row">
-<div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
-<nav class="bd-links">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Web API: Node</h4>
-</div>
+  <noscript>Please enable JavaScript to view this page.</noscript>
+  <div id="redirect-message" style="display: none;">
+    You must be logged in to view this page.
+  </div>
+  <div id="unauthorized-message" style="display: none;">
+    You must be a Lambda School student to view this page.
+  </div>
+  <div id="content-wrapper">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+    <div class="mobile-menu">
+      <div class="m-drop">
+        <div class="mobile-row">
+          <div class="header-row" style="padding: 3px 7px">
+            <a class="navbar-brand" href="/" aria-label="Lambda School"><svg xmlns="http://www.w3.org/2000/svg"
+                width="33" height="35" viewBox="0 0 33 35" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 0V16.0609C0 27.7335 9.08929 31.7843 15.7321 34.7513H15.75L16.2857 35C16.4107 34.9289 16.5357 34.8756 16.6786 34.8223C16.75 34.7868 16.8393 34.7513 16.9107 34.7157C23.5714 31.7665 32.6964 27.698 32.6964 16.0609V0H0ZM20.7071 23.4536L20.3571 22.5102L15.6071 10.0736C15.3214 10.802 14.6607 12.5609 13.9464 14.4442L11.2143 21.7817C11.0893 22.1371 11.1607 22.3147 11.25 22.4391C11.4464 22.6701 11.8768 22.6701 12.5554 22.6701H12.6786L12.6768 23.4518H7.56964V22.6701H7.9625C8.65893 22.6701 9.23036 22.368 9.65893 21.5152L10.1768 20.3426L14.9089 8.29696L14.0696 6.07614H18.4804L24.5696 22.0127L25.125 23.4536H20.7071Z"
+                  fill="#EC3944" />
+              </svg></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-course-menu"
+              aria-controls="mobile-course-menu" aria-expanded="false" aria-label="Toggle navigation">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
+                <title>Menu</title>
+                <path stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                  d="M4 7h22M4 15h22M4 23h22"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="nav-row">
+          <div class="results-container">
+            <ul id="results-container" class="dropdown list-group"></ul>
+          </div>
+          <div id="mobile-course-menu" class="collapse nav-row">
+            <div class="docs-mobile-sidebar" id="bd-docs-nav-mobile">
+              <nav class="bd-links">
+                <div class="bd-toc-item">
+                  <h4 class="bd-toc-link">Web API: Node</h4>
+                </div>
 
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4node/sprint/reckzQd7ZgiFY5ok5">
-1.&nbsp;&nbsp;Build a Web API
-</a>
-<ul class="nav bd-sidenav">
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web4node/sprint/reckzQd7ZgiFY5ok5">
+                    1.&nbsp;&nbsp;Build a Web API
+                  </a>
+                  <ul class="nav bd-sidenav">
 
-<li>
-<a href="/web4node/module/recZiPP8Oyg1WlHxT/">
-Introduction to Node.js and Express
-</a>
-</li>
-<li>
-<a href="/web4node/module/recBjiSulq0PYLCIj/">
-Server-Side Routing with Express
-</a>
-</li>
-<li>
-<a href="/web4node/module/recCJjYFEz0i5O5p5/">
-Express Middleware
-</a>
-</li>
-<li>
-<a href="/web4node/module/recs9QOkOAtZhsjc4/">
-Web Deployment and Best Practices
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4node/sprint/receFLR7MpwQXesIN">
-2.&nbsp;&nbsp;Adding Data Persistence
-</a>
-<ul class="nav bd-sidenav">
+                    <li>
+                      <a href="/web4node/module/recZiPP8Oyg1WlHxT/">
+                        Introduction to Node.js and Express
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4node/module/recBjiSulq0PYLCIj/">
+                        Server-Side Routing with Express
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4node/module/recCJjYFEz0i5O5p5/">
+                        Express Middleware
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4node/module/recs9QOkOAtZhsjc4/">
+                        Web Deployment and Best Practices
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web4node/sprint/receFLR7MpwQXesIN">
+                    2.&nbsp;&nbsp;Adding Data Persistence
+                  </a>
+                  <ul class="nav bd-sidenav">
 
-<li class="active bd-sidenav-active">
-<a href="/web4node/module/recFG7SqlSCAB8iU7/">
-Introduction to Relational Databases
-</a>
-</li>
-<li>
-<a href="/web4node/module/recIbfNn9xRhLTOv4/">
-Database Schema Design
-</a>
-</li>
-<li>
-<a href="/web4node/module/recw2ezN22yjehidj/">
-Multi-Table Queries
-</a>
-</li>
-<li>
-<a href="/web4node/module/rec5J23yAIdjmFbgP/">
-Data Modeling
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4node/sprint/recGqGeZ7n75vZivn">
-3.&nbsp;&nbsp;Authentication and Testing
-</a>
-<ul class="nav bd-sidenav">
+                    <li class="active bd-sidenav-active">
+                      <a href="/web4node/module/recFG7SqlSCAB8iU7/">
+                        Introduction to Relational Databases
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4node/module/recIbfNn9xRhLTOv4/">
+                        Database Schema Design
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4node/module/recw2ezN22yjehidj/">
+                        Multi-Table Queries
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4node/module/rec5J23yAIdjmFbgP/">
+                        Data Modeling
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web4node/sprint/recGqGeZ7n75vZivn">
+                    3.&nbsp;&nbsp;Authentication and Testing
+                  </a>
+                  <ul class="nav bd-sidenav">
 
-<li>
-<a href="/web4node/module/recQD9lnhqWEFh6g4/">
-Introduction to Authentication
-</a>
-</li>
-<li>
-<a href="/web4node/module/reciCHdNjavSKaaLt/">
-Using JSON Web Tokens (JWT)
-</a>
-</li>
-<li>
-<a href="/web4node/module/recd26oZ3GBNHh3Na/">
-WEB Unit Testing
-</a>
-</li>
-<li>
-<a href="/web4node/module/reciXdxRA8zXJXDID/">
-Testing the Back End
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4node/sprint/recWkcWui91eG1s8q">
-4.&nbsp;&nbsp;WEB Unit 4 Node Build
-</a>
-<ul class="nav bd-sidenav">
+                    <li>
+                      <a href="/web4node/module/recQD9lnhqWEFh6g4/">
+                        Introduction to Authentication
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4node/module/reciCHdNjavSKaaLt/">
+                        Using JSON Web Tokens (JWT)
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4node/module/recd26oZ3GBNHh3Na/">
+                        WEB Unit Testing
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/web4node/module/reciXdxRA8zXJXDID/">
+                        Testing the Back End
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bd-toc-item ">
+                  <a class="bd-toc-link" href="/web4node/sprint/recWkcWui91eG1s8q">
+                    4.&nbsp;&nbsp;WEB Unit 4 Node Build
+                  </a>
+                  <ul class="nav bd-sidenav">
 
-</ul>
-</div>
-</nav>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="main-container">
-<div class="sidebar-container bd-sidebar">
-<div class="docs-sidebar">
-<a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197" fill="#ec3944"><g><path d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z"></path><path d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z"></path><path d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z"></path><path d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z"></path><path d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z"></path><path d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z"></path></g><path d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z"></path></svg></a>
-<ul id="results-container" class="dropdown list-group"></ul>
-<nav class="bd-links collapse" id="bd-docs-nav">
-<div class="bd-toc-item">
-<h4 class="bd-toc-link">Web API: Node</h4>
-</div>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="sidebar-container bd-sidebar">
+        <div class="docs-sidebar">
+          <a class="navbar-brand" href="/" aria-label="Lambda School"><svg width="135" height="35" viewBox="0 0 756 197"
+              fill="#ec3944">
+              <g>
+                <path
+                  d="M292.9,126.6h-6.7c-9,0-12.6-1.9-12.6-9.5V48.5c0-7.7,1.6-8.6,11.4-9.7v-4.5h-41.3v4.5 c9.8,1.1,11.4,1.9,11.4,9.7v69.3c0,7.7-1.6,8.6-11.4,9.7v4.5h73.7l4.9-29.4h-4.4C308.5,119.6,303.9,126.6,292.9,126.6z">
+                </path>
+                <path
+                  d="M385.5,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1l0.1-0.1l0,0V132h26v-4.4C387.7,127.1,385.5,126.2,385.5,121.1z M368,117.8 c-4.4,3.3-7.6,5.3-12,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4V117.8L368,117.8z">
+                </path>
+                <path
+                  d="M514.4,121V79.5c0-14.8-6-22.4-18.7-22.4c-11.5,0-19.4,6.6-25.5,13.9c-1.8-9.6-7.7-13.9-17.8-13.9 c-11.4,0-18.7,6.2-24.8,13.6V57h-2.3l-23.8,7.4v2.4l8.6,5v49.4c0,5-2.1,6.1-8.9,6.4v4.4h35.1v-4.4c-6.7-0.3-8.7-1.3-8.7-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7v40.8c0,5-1.9,6.1-8.7,6.4v4.4l34.8,0v-4.4c-6.7-0.3-8.6-1.3-8.6-6.4v-47 c4.7-3.6,9.5-6.5,15.5-6.5c7.6,0,10.5,4.2,10.5,12.7l-0.1,40.5c0,5-1.8,6.4-8.6,6.7l0,4.4h35.1v-4.4 C516.7,127.4,514.4,126.1,514.4,121z">
+                </path>
+                <path
+                  d="M573.2,57.3c-11,0-18.5,5.7-23.4,12.8V22.9h-2.7l-23.4,6.8v2.5l8.6,4.5V132h2.9l8-3.5c5.8,3.3,12.3,5,20.2,5 c20.8,0,37.4-15.8,37.4-42.6C600.9,69.9,590.4,57.3,573.2,57.3z M563.4,128.7c-5.4,0-10.3-2.4-13.7-7.9V73.6 c3.4-3.4,8.5-5.7,13.5-5.7c13.9,0,20,12.8,20,29.5C583.3,114.7,575.8,128.5,563.4,128.7z">
+                </path>
+                <path
+                  d="M677,121.2V22.8h-2.6L651,29.6V32l8.6,4.5v25.7c-3.4-3.2-8.8-5.1-15.5-5.1c-19.9,0-35.2,15.3-35.2,41.3 c0,20.7,11.2,34.6,28.1,34.6c9.8,0,17-5.3,22.6-13.1v0.9V132h26.3l0-4.4C679.1,127.3,677,126.3,677,121.2z M659.6,117.1 L659.6,117.1c-3.4,3.4-8,5.1-13.2,5.1c-13.2,0-20.4-12.8-20.4-29.8c0-17.8,7.3-29.2,19.5-29.2c8.7,0,14.1,6.9,14.1,18.3 L659.6,117.1z">
+                </path>
+                <path
+                  d="M747.1,121.1V79.3c0-15.8-9.4-22.4-26.6-22.4c-15,0-26.8,6.6-26.8,19.3c0,2.4,0.2,3.3,0.8,5h16.6 c-0.5-2-0.7-5-0.7-7.5c0-9.6,3.6-12.4,9.4-12.4c6.4,0,9.7,2,9.7,14.4v11.2l-20.8,7.7c-10.6,4.1-19.3,8.8-19.3,20.7 c0,10.9,7.5,17.8,18.6,17.8c9.9,0,17.4-6.2,21.9-12.1v-0.1h0.1l0,11.1l26,0.1v-4.5C749.3,127.1,747.1,126.2,747.1,121.1z M729.6,117.8c-4.4,3.3-7.6,5.3-12.1,5.4c-7.7,0-11.2-5.2-11.2-12.6c0-7.7,3.6-11.2,9.8-13.5l13.4-5.4L729.6,117.8L729.6,117.8z">
+                </path>
+              </g>
+              <path
+                d="M0,0v90.4c0,65.7,50.9,88.5,88.1,105.2h0.1l3,1.4c0.7-0.4,1.4-0.7,2.2-1c0.4-0.2,0.9-0.4,1.3-0.6 c37.3-16.6,88.4-39.5,88.4-105V0H0z M116,132l-2-5.3l-26.6-70c-1.6,4.1-5.3,14-9.3,24.6l-15.3,41.3c-0.7,2-0.3,3,0.2,3.7 c1.1,1.3,3.5,1.3,7.3,1.3H71l0,4.4H42.4l0-4.4h2.2c3.9,0,7.1-1.7,9.5-6.5l2.9-6.6l26.5-67.8l-4.7-12.5h24.7l34.1,89.7l3.1,8.1H116z">
+              </path>
+            </svg></a>
+          <ul id="results-container" class="dropdown list-group"></ul>
+          <nav class="bd-links collapse" id="bd-docs-nav">
+            <div class="bd-toc-item">
+              <h4 class="bd-toc-link">Web API: Node</h4>
+            </div>
 
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4node/sprint/reckzQd7ZgiFY5ok5">
-1.&nbsp;&nbsp;Build a Web API
-</a>
-<ul class="nav bd-sidenav">
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web4node/sprint/reckzQd7ZgiFY5ok5">
+                1.&nbsp;&nbsp;Build a Web API
+              </a>
+              <ul class="nav bd-sidenav">
 
-<li>
-<a href="/web4node/module/recZiPP8Oyg1WlHxT/">
-Introduction to Node.js and Express
-</a>
-</li>
-<li>
-<a href="/web4node/module/recBjiSulq0PYLCIj/">
-Server-Side Routing with Express
-</a>
-</li>
-<li>
-<a href="/web4node/module/recCJjYFEz0i5O5p5/">
-Express Middleware
-</a>
-</li>
-<li>
-<a href="/web4node/module/recs9QOkOAtZhsjc4/">
-Web Deployment and Best Practices
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4node/sprint/receFLR7MpwQXesIN">
-2.&nbsp;&nbsp;Adding Data Persistence
-</a>
-<ul class="nav bd-sidenav">
+                <li>
+                  <a href="/web4node/module/recZiPP8Oyg1WlHxT/">
+                    Introduction to Node.js and Express
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4node/module/recBjiSulq0PYLCIj/">
+                    Server-Side Routing with Express
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4node/module/recCJjYFEz0i5O5p5/">
+                    Express Middleware
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4node/module/recs9QOkOAtZhsjc4/">
+                    Web Deployment and Best Practices
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web4node/sprint/receFLR7MpwQXesIN">
+                2.&nbsp;&nbsp;Adding Data Persistence
+              </a>
+              <ul class="nav bd-sidenav">
 
-<li class="active bd-sidenav-active">
-<a href="/web4node/module/recFG7SqlSCAB8iU7/">
-Introduction to Relational Databases
-</a>
-</li>
-<li>
-<a href="/web4node/module/recIbfNn9xRhLTOv4/">
-Database Schema Design
-</a>
-</li>
-<li>
-<a href="/web4node/module/recw2ezN22yjehidj/">
-Multi-Table Queries
-</a>
-</li>
-<li>
-<a href="/web4node/module/rec5J23yAIdjmFbgP/">
-Data Modeling
-</a>
-</li>
- </ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4node/sprint/recGqGeZ7n75vZivn">
-3.&nbsp;&nbsp;Authentication and Testing
-</a>
-<ul class="nav bd-sidenav">
+                <li class="active bd-sidenav-active">
+                  <a href="/web4node/module/recFG7SqlSCAB8iU7/">
+                    Introduction to Relational Databases
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4node/module/recIbfNn9xRhLTOv4/">
+                    Database Schema Design
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4node/module/recw2ezN22yjehidj/">
+                    Multi-Table Queries
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4node/module/rec5J23yAIdjmFbgP/">
+                    Data Modeling
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web4node/sprint/recGqGeZ7n75vZivn">
+                3.&nbsp;&nbsp;Authentication and Testing
+              </a>
+              <ul class="nav bd-sidenav">
 
-<li>
-<a href="/web4node/module/recQD9lnhqWEFh6g4/">
-Introduction to Authentication
-</a>
-</li>
-<li>
-<a href="/web4node/module/reciCHdNjavSKaaLt/">
-Using JSON Web Tokens (JWT)
-</a>
-</li>
-<li>
-<a href="/web4node/module/recd26oZ3GBNHh3Na/">
-WEB Unit Testing
-</a>
-</li>
-<li>
-<a href="/web4node/module/reciXdxRA8zXJXDID/">
-Testing the Back End
-</a>
-</li>
-</ul>
-</div>
-<div class="bd-toc-item ">
-<a class="bd-toc-link" href="/web4node/sprint/recWkcWui91eG1s8q">
-4.&nbsp;&nbsp;WEB Unit 4 Node Build
-</a>
-<ul class="nav bd-sidenav">
+                <li>
+                  <a href="/web4node/module/recQD9lnhqWEFh6g4/">
+                    Introduction to Authentication
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4node/module/reciCHdNjavSKaaLt/">
+                    Using JSON Web Tokens (JWT)
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4node/module/recd26oZ3GBNHh3Na/">
+                    WEB Unit Testing
+                  </a>
+                </li>
+                <li>
+                  <a href="/web4node/module/reciXdxRA8zXJXDID/">
+                    Testing the Back End
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bd-toc-item ">
+              <a class="bd-toc-link" href="/web4node/sprint/recWkcWui91eG1s8q">
+                4.&nbsp;&nbsp;WEB Unit 4 Node Build
+              </a>
+              <ul class="nav bd-sidenav">
 
-</ul>
-</div>
-</nav>
-</div>
-</div>
-<main class="content-container flex-wrapper" role="main">
-<div class="sticky-nav">
-<div class="sprint-nav">
-<ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
-<li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
-<li class="toc-entry toc-h2"><a href="#guided-project">Guided Project</a></li>
-<li class="toc-entry toc-h2"><a href="#project">Project</a></li>
-<li class="toc-entry toc-h2"><a href="#review">Review</a></li>
-</ul>
-</div>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <main class="content-container flex-wrapper" role="main">
+        <div class="sticky-nav">
+          <div class="sprint-nav">
+            <ul class="section-nav">
+              <li class="toc-entry toc-h2"><a href="#prepare">Prepare</a></li>
+              <li class="toc-entry toc-h2"><a href="#learn">Learn</a></li>
+              <li class="toc-entry toc-h2"><a href="#guided-project">Guided Project</a></li>
+              <li class="toc-entry toc-h2"><a href="#project">Project</a></li>
+              <li class="toc-entry toc-h2"><a href="#review">Review</a></li>
+            </ul>
+          </div>
 
-</div>
-<div class="wrapper limit-width">
-<div class="flex-wrapper">
-<div class="limit-width">
-<div class="jumbotron">
-<h1 class="bd-title" id="content">Introduction to Relational Databases</h1>
-<span class="lead">
-<p class="bd-lead"></p>
-<p>The modern world runs on data. Our every day life is dependent on the data in our devices.The places we shop, the work that we do, all of it is data-driven. Computers and devices that do anything useful have some type of data persistence.</p>
-<p>Out of all the technologies used to save and retrieve that data, Relational Databases is king. Learning how relational databases work and how to write <code class="highlighter-rouge">Structured Query Language (SQL)</code> to communicate with <strong>Relational Database Management Systems</strong> is a well sought out skill by companies of all sizes and a great tool to have in your arsenal.</p>
-<p>On this lecture we will cover the following topics:</p>
-<ul>
-<li>Introduction to Relational Databases</li>
-<li>The basics of Structured Query Language (SQL)</li>
-<li>Select, Insert, Update, and Delete queries in SQL</li>
-<li>Setup for Knex.js</li>
-<li>Select, Insert, Update, and Delete queries using Knex</li>
-</ul>
-</span>
-<strong>At the end of this module, you should be able to:</strong>
-<ul>
-<li>explain what a Relational Database is and its core components</li>
-<li>explain what SQL is and its advantages</li>
-<li>query, insert, and modify data in SQL</li>
-<li>write database queries using knex.js</li>
-</ul>
-</div>
-<div class="alert alert-warning" role="alert">
-<h4>Pro Tip</h4>
-<p>Life is a marathon, not a sprint.</p>
-</div>
-<h2 class="display-4">
-<a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare</h2>
-<p class="lead">Review each preclass resource before class.</p>
-<div class="preclass">
-<ul class="list-group list-group-flush">
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cd7Yio-D7qM" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/h-migT0FtvU" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Q-7hlnXK1gU" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OFLPJfCNAS0" frameborder="0" allowfullscreen></iframe>
-</div>
-</li>
-<li class="list-group-item">
-<a target="_blank" href="https://www.w3schools.com/sql/default.asp">Overview of SQL</a>
-</li>
-</ul>
-</div>
-<h2 class="display-4">
-<a id="learn" class="anchor" href="#learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn</h2>
-<h4 class="mark mb-3 p-2">Learn to explain what a Relational Database is and its core components</h4>
-<p>Databases are everywhere. They drive all businesses and our own lives. The contact list in your mobile device, the appointments on your calendar, be it a pen and paper calendar or a digital one in your computer or other electronic devices. That’s right! A database can be analog, it doesn’t have to be digital.</p>
-<p>In this section we’ll learn what databases are with special attention to electronic databases.</p>
-<h5>Overview</h5>
-<p>A database is <strong>a collection of data organized for easy retrieval and manipulation</strong>. We’re concerned only with digital databases, those that run on computers or other electronic devices.</p>
-<p>Digital databases have been around since the 1960s. Relational databases, those which store “related” data, are the oldest and most common type of database in use today.</p>
-<h3 id="data-persistence">Data Persistence</h3>
-<p>A database is often necessary because our application or code requires <strong>data persistence</strong>. This term refers to data that is infrequently accessed and not likely to be modified. In less technical terms, the data is going to be safely stored and remain untouched unless intentionally modified.</p>
-<p>A familiar example of non-persistent data would be JS objects and arrays, which reset each time the code runs.</p>
-<h3 id="relational-databases">Relational Databases</h3>
-<p>In relational databases, the data is stored in tabular format grouped into rows and columns (similar to spreadsheets). A collection of <strong>rows</strong> is called a <strong>table</strong>. Each row represents a single record in the table and is made up of one or more <strong>columns</strong>.</p>
-<p>These kinds of databases are called relational because a <em>relation</em> is a mathematical idea that is equivalent to a table. So relational databases are databases that store their data in tables.</p>
-<h5 id="tables">Tables</h5>
-<ul>
-<li>Tables organize data in rows and columns.</li>
-<li>Each row on a table represents one distinct record.</li>
-<li>Each column represents a field or attribute that is common to all records.</li>
-<li>Fields should have a descriptive name and a data type appropriate for the attribute it represents.</li>
-<li>Tables usually have more rows than columns</li>
-<li>Tables have primary keys that uniquely identify each row.</li>
-<li>Foreign keys represent the relationships with other tables.</li>
-</ul>
-<h5>Follow Along</h5>
-<p>Follow along as we use W3School’s SQL Try it to explore tables, rows, and columns.</p>
-<h5>Challenge</h5>
-<p>Use the internet to research two other types of databases (non-relational) and write a short paragraph for each describing how they are different from relational databases. Send the response to your TL on slack.</p>
-<h5>Dig Deeper</h5>
-<ul>
-<li>
-<a href="https://www.w3resource.com/sql/tutorials.php" target="blank_">SQL Tutorial</a><br> </li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to explain what SQL is and its advantages</h4>
-<p>Structured Query Language is the standard language used to manage databases and the data within them. It is the de facto way to interact with a database.</p>
-<p>As a query language, SQL is optimized for the sole purpose of querying data. This means not only optimization in writing queries, but optimization in terms of retrieving data, which is critical in the modern world of big data.</p>
-<h5>Overview</h5>
-<p>SQL is a standard language, which means that it almost certainly be supported, no matter how your database is managed. That said, be aware the SQL language can vary depending on database management tools. This lesson focuses on a set of core commands that never change. Learning the standard commands is an excellent introduction since the knowledge transfers between database products.</p>
-<h5>Follow Along</h5>
-<p>The syntax for SQL is English-like and requires fewer symbols than programming languages like C, Java, and JavaScript. It is declarative and concise, which means there is a lot less to learn to use it effectively.</p>
-<p>When learning SQL it is helpful to understand that each command is designed for a different purpose. If we classify the commands by purpose we’ll end up with the following sub-categories of SQL:</p>
-<ul>
-<li>
-<strong>Data Definition Language (DDL)</strong>: used to modify database objects. Some examples are: <code class="highlighter-rouge">CREATE TABLE</code>, <code class="highlighter-rouge">ALTER TABLE</code> , and <code class="highlighter-rouge">DROP TABLE</code>.</li>
-<li>
-<strong>Data Manipulation Language (DML)</strong>: used to manipulate the data stored in the database. Some examples are: <code class="highlighter-rouge">INSERT</code>, <code class="highlighter-rouge">UPDATE</code> , and <code class="highlighter-rouge">DELETE</code>.</li>
-<li>
-<strong>Data Query Language (DQL)</strong>: used to ask questions about the data stored in the database. The most commonly used SQL command by far is <code class="highlighter-rouge">SELECT</code>, and it falls in this category.</li>
-<li>
-<strong>Data Control Language (DCL)</strong>: used to manage database security and user’s access to data. This falls into the realm of Database Administrators. Some examples are <code class="highlighter-rouge">GRANT</code> and <code class="highlighter-rouge">REVOKE</code>.</li>
-<li>
-<strong>Transaction Control Commands</strong>: used for managing groups of statements that must execute as a unit or not execute at all. Examples are <code class="highlighter-rouge">COMMIT</code> and <code class="highlighter-rouge">ROLLBACK</code>.</li>
-</ul>
-<p>As a developer, you’ll need to get familiar with DDL and become proficient using DML an DQL. This lesson will cover only DML and DQL commands.</p>
-<h5>Challenge</h5>
-<p>Imagine that you have been contracted to work with a dataset of 10 million entries. The client needs a tool to filter through this data for fast retrieval. They are foolishly insisting you use javascript to perform these operations.</p>
-<p>Write a 1 paragraph explanation of why SQL would be a better tool. Use language that a non-technical person would understand. Do any research necessary to support your argument.</p>
-<p>Send this to your PM when it is complete.</p>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to query, insert, and modify data in SQL</h4>
-<p>Four critical SQL commands are <strong>SELECT</strong>, <strong>INSERT</strong>, <strong>UPDATE</strong>, and <strong>DELETE</strong>. This commands allow for basic querying, inserting, and modifying of data. As well, they are the SQL commands necessary for performing CRUD operations on the database level.</p>
-<h5>Overview</h5>
-<p>The four SQL operations covered in this section will allow a user to <strong>query</strong>, <strong>insert</strong>, and <strong>modify</strong> a database table.</p>
-<p>A <strong>query</strong> is a SQL statement used to retrieve data from a database. The command used to write queries is <code class="highlighter-rouge">SELECT</code>, and it is one of the most used SQL commands.</p>
-<p>The basic syntax for a <code class="highlighter-rouge">SELECT</code> statement is this:</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">&lt;</span><span class="n">selection</span><span class="o">&gt;</span> <span class="k">from</span> <span class="o">&lt;</span><span class="k">table</span> <span class="n">name</span><span class="o">&gt;</span><span class="p">;</span>
-</code></pre></div></div>
-<p>To see all the fields on a table we can use a <code class="highlighter-rouge">*</code> as the <code class="highlighter-rouge">selection</code>.</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">employees</span><span class="p">;</span>
-</code></pre></div></div>
-<p>The preceding statement would show all the records and all the columns for each record for the table employees.</p>
-<p>To pick the fields we want to see, we list them separated by commas.</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">salary</span> <span class="k">from</span> <span class="n">employees</span><span class="p">;</span>
-</code></pre></div></div>
-<p>The return of that statement would hold all records from the listed fields.</p>
-<p>We can extend the capabilities of the <code class="highlighter-rouge">SELECT</code> command using <code class="highlighter-rouge">clauses</code> for things like filtering, sorting, pagination, and more.</p>
-<p>It is possible to query multiple tables in a single query, but in this section, we only perform queries on a single table. That will be covered in another section.</p>
-<p>To <strong>insert</strong> new data into a table, we’ll use the <code class="highlighter-rouge">INSERT</code> command. The basic syntax for an <code class="highlighter-rouge">INSERT</code> statement is this:</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">insert</span> <span class="k">into</span> <span class="o">&lt;</span><span class="k">table</span> <span class="n">name</span><span class="o">&gt;</span> <span class="p">(</span><span class="o">&lt;</span><span class="n">selection</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">values</span> <span class="p">(</span><span class="o">&lt;</span><span class="k">values</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre></div></div>
-<p>Using this formula we can specify which values will be inserted into which fields like so:</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">insert</span> <span class="k">into</span> <span class="n">Customers</span> <span class="p">(</span><span class="n">Country</span><span class="p">,</span> <span class="n">CustomerName</span><span class="p">,</span> <span class="n">ContactName</span><span class="p">,</span> <span class="n">Address</span><span class="p">,</span> <span class="n">City</span><span class="p">,</span> <span class="n">PostalCode</span><span class="p">)</span>
+        </div>
+        <div class="wrapper limit-width">
+          <div class="flex-wrapper">
+            <div class="limit-width">
+              <div class="jumbotron">
+                <h1 class="bd-title" id="content">Introduction to Relational Databases</h1>
+                <span class="lead">
+                  <p class="bd-lead"></p>
+                  <p>The modern world runs on data. Our every day life is dependent on the data in our devices.The
+                    places we shop, the work that we do, all of it is data-driven. Computers and devices that do
+                    anything useful have some type of data persistence.</p>
+                  <p>Out of all the technologies used to save and retrieve that data, Relational Databases is king.
+                    Learning how relational databases work and how to write <code class="highlighter-rouge">Structured
+                      Query Language (SQL)</code> to communicate with <strong>Relational Database Management
+                      Systems</strong> is a well sought out skill by companies of all sizes and a great tool to have in
+                    your arsenal.</p>
+                  <p>On this lecture we will cover the following topics:</p>
+                  <ul>
+                    <li>Introduction to Relational Databases</li>
+                    <li>The basics of Structured Query Language (SQL)</li>
+                    <li>Select, Insert, Update, and Delete queries in SQL</li>
+                    <li>Setup for Knex.js</li>
+                    <li>Select, Insert, Update, and Delete queries using Knex</li>
+                  </ul>
+                </span>
+                <strong>At the end of this module, you should be able to:</strong>
+                <ul>
+                  <li>explain what a Relational Database is and its core components</li>
+                  <li>explain what SQL is and its advantages</li>
+                  <li>query, insert, and modify data in SQL</li>
+                  <li>write database queries using knex.js</li>
+                </ul>
+              </div>
+              <div class="alert alert-warning" role="alert">
+                <h4>Pro Tip</h4>
+                <p>Life is a marathon, not a sprint.</p>
+              </div>
+              <h2 class="display-4">
+                <a id="prepare" class="anchor" href="#prepare" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Prepare</h2>
+              <p class="lead">Review each preclass resource before class.</p>
+              <div class="preclass">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cd7Yio-D7qM"
+                        frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/h-migT0FtvU"
+                        frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Q-7hlnXK1gU"
+                        frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OFLPJfCNAS0"
+                        frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <a target="_blank" href="https://www.w3schools.com/sql/default.asp">Overview of SQL</a>
+                  </li>
+                </ul>
+              </div>
+              <h2 class="display-4">
+                <a id="learn" class="anchor" href="#learn" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Learn</h2>
+              <h4 class="mark mb-3 p-2">Learn to explain what a Relational Database is and its core components</h4>
+              <p>Databases are everywhere. They drive all businesses and our own lives. The contact list in your mobile
+                device, the appointments on your calendar, be it a pen and paper calendar or a digital one in your
+                computer or other electronic devices. That’s right! A database can be analog, it doesn’t have to be
+                digital.</p>
+              <p>In this section we’ll learn what databases are with special attention to electronic databases.</p>
+              <h5>Overview</h5>
+              <p>A database is <strong>a collection of data organized for easy retrieval and manipulation</strong>.
+                We’re concerned only with digital databases, those that run on computers or other electronic devices.
+              </p>
+              <p>Digital databases have been around since the 1960s. Relational databases, those which store “related”
+                data, are the oldest and most common type of database in use today.</p>
+              <h3 id="data-persistence">Data Persistence</h3>
+              <p>A database is often necessary because our application or code requires <strong>data
+                  persistence</strong>. This term refers to data that is infrequently accessed and not likely to be
+                modified. In less technical terms, the data is going to be safely stored and remain untouched unless
+                intentionally modified.</p>
+              <p>A familiar example of non-persistent data would be JS objects and arrays, which reset each time the
+                code runs.</p>
+              <h3 id="relational-databases">Relational Databases</h3>
+              <p>In relational databases, the data is stored in tabular format grouped into rows and columns (similar to
+                spreadsheets). A collection of <strong>rows</strong> is called a <strong>table</strong>. Each row
+                represents a single record in the table and is made up of one or more <strong>columns</strong>.</p>
+              <p>These kinds of databases are called relational because a <em>relation</em> is a mathematical idea that
+                is equivalent to a table. So relational databases are databases that store their data in tables.</p>
+              <h5 id="tables">Tables</h5>
+              <ul>
+                <li>Tables organize data in rows and columns.</li>
+                <li>Each row on a table represents one distinct record.</li>
+                <li>Each column represents a field or attribute that is common to all records.</li>
+                <li>Fields should have a descriptive name and a data type appropriate for the attribute it represents.
+                </li>
+                <li>Tables usually have more rows than columns</li>
+                <li>Tables have primary keys that uniquely identify each row.</li>
+                <li>Foreign keys represent the relationships with other tables.</li>
+              </ul>
+              <h5>Follow Along</h5>
+              <p>Follow along as we use W3School’s SQL Try it to explore tables, rows, and columns.</p>
+              <h5>Challenge</h5>
+              <p>Use the internet to research two other types of databases (non-relational) and write a short paragraph
+                for each describing how they are different from relational databases. Send the response to your TL on
+                slack.</p>
+              <h5>Dig Deeper</h5>
+              <ul>
+                <li>
+                  <a href="https://www.w3resource.com/sql/tutorials.php" target="blank_">SQL Tutorial</a><br> </li>
+              </ul>
+              <hr>
+              <h4 class="mark mb-3 p-2">Learn to explain what SQL is and its advantages</h4>
+              <p>Structured Query Language is the standard language used to manage databases and the data within them.
+                It is the de facto way to interact with a database.</p>
+              <p>As a query language, SQL is optimized for the sole purpose of querying data. This means not only
+                optimization in writing queries, but optimization in terms of retrieving data, which is critical in the
+                modern world of big data.</p>
+              <h5>Overview</h5>
+              <p>SQL is a standard language, which means that it almost certainly be supported, no matter how your
+                database is managed. That said, be aware the SQL language can vary depending on database management
+                tools. This lesson focuses on a set of core commands that never change. Learning the standard commands
+                is an excellent introduction since the knowledge transfers between database products.</p>
+              <h5>Follow Along</h5>
+              <p>The syntax for SQL is English-like and requires fewer symbols than programming languages like C, Java,
+                and JavaScript. It is declarative and concise, which means there is a lot less to learn to use it
+                effectively.</p>
+              <p>When learning SQL it is helpful to understand that each command is designed for a different purpose. If
+                we classify the commands by purpose we’ll end up with the following sub-categories of SQL:</p>
+              <ul>
+                <li>
+                  <strong>Data Definition Language (DDL)</strong>: used to modify database objects. Some examples are:
+                  <code class="highlighter-rouge">CREATE TABLE</code>, <code class="highlighter-rouge">ALTER
+                    TABLE</code> , and <code class="highlighter-rouge">DROP TABLE</code>.</li>
+                <li>
+                  <strong>Data Manipulation Language (DML)</strong>: used to manipulate the data stored in the database.
+                  Some examples are: <code class="highlighter-rouge">INSERT</code>, <code
+                    class="highlighter-rouge">UPDATE</code> , and <code class="highlighter-rouge">DELETE</code>.</li>
+                <li>
+                  <strong>Data Query Language (DQL)</strong>: used to ask questions about the data stored in the
+                  database. The most commonly used SQL command by far is <code class="highlighter-rouge">SELECT</code>,
+                  and it falls in this category.</li>
+                <li>
+                  <strong>Data Control Language (DCL)</strong>: used to manage database security and user’s access to
+                  data. This falls into the realm of Database Administrators. Some examples are <code
+                    class="highlighter-rouge">GRANT</code> and <code class="highlighter-rouge">REVOKE</code>.</li>
+                <li>
+                  <strong>Transaction Control Commands</strong>: used for managing groups of statements that must
+                  execute as a unit or not execute at all. Examples are <code class="highlighter-rouge">COMMIT</code>
+                  and <code class="highlighter-rouge">ROLLBACK</code>.</li>
+              </ul>
+              <p>As a developer, you’ll need to get familiar with DDL and become proficient using DML an DQL. This
+                lesson will cover only DML and DQL commands.</p>
+              <h5>Challenge</h5>
+              <p>Imagine that you have been contracted to work with a dataset of 10 million entries. The client needs a
+                tool to filter through this data for fast retrieval. They are foolishly insisting you use javascript to
+                perform these operations.</p>
+              <p>Write a 1 paragraph explanation of why SQL would be a better tool. Use language that a non-technical
+                person would understand. Do any research necessary to support your argument.</p>
+              <p>Send this to your PM when it is complete.</p>
+              <hr>
+              <h4 class="mark mb-3 p-2">Learn to query, insert, and modify data in SQL</h4>
+              <p>Four critical SQL commands are <strong>SELECT</strong>, <strong>INSERT</strong>,
+                <strong>UPDATE</strong>, and <strong>DELETE</strong>. This commands allow for basic querying, inserting,
+                and modifying of data. As well, they are the SQL commands necessary for performing CRUD operations on
+                the database level.</p>
+              <h5>Overview</h5>
+              <p>The four SQL operations covered in this section will allow a user to <strong>query</strong>,
+                <strong>insert</strong>, and <strong>modify</strong> a database table.</p>
+              <p>A <strong>query</strong> is a SQL statement used to retrieve data from a database. The command used to
+                write queries is <code class="highlighter-rouge">SELECT</code>, and it is one of the most used SQL
+                commands.</p>
+              <p>The basic syntax for a <code class="highlighter-rouge">SELECT</code> statement is this:</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">select</span> <span class="o">&lt;</span><span class="n">selection</span><span class="o">&gt;</span> <span class="k">from</span> <span class="o">&lt;</span><span class="k">table</span> <span class="n">name</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>To see all the fields on a table we can use a <code class="highlighter-rouge">*</code> as the <code
+                  class="highlighter-rouge">selection</code>.</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">employees</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>The preceding statement would show all the records and all the columns for each record for the table
+                employees.</p>
+              <p>To pick the fields we want to see, we list them separated by commas.</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">select</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">salary</span> <span class="k">from</span> <span class="n">employees</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>The return of that statement would hold all records from the listed fields.</p>
+              <p>We can extend the capabilities of the <code class="highlighter-rouge">SELECT</code> command using <code
+                  class="highlighter-rouge">clauses</code> for things like filtering, sorting, pagination, and more.</p>
+              <p>It is possible to query multiple tables in a single query, but in this section, we only perform queries
+                on a single table. That will be covered in another section.</p>
+              <p>To <strong>insert</strong> new data into a table, we’ll use the <code
+                  class="highlighter-rouge">INSERT</code> command. The basic syntax for an <code
+                  class="highlighter-rouge">INSERT</code> statement is this:</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">insert</span> <span class="k">into</span> <span class="o">&lt;</span><span class="k">table</span> <span class="n">name</span><span class="o">&gt;</span> <span class="p">(</span><span class="o">&lt;</span><span class="n">selection</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">values</span> <span class="p">(</span><span class="o">&lt;</span><span class="k">values</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Using this formula we can specify which values will be inserted into which fields like so:</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">insert</span> <span class="k">into</span> <span class="n">Customers</span> <span class="p">(</span><span class="n">Country</span><span class="p">,</span> <span class="n">CustomerName</span><span class="p">,</span> <span class="n">ContactName</span><span class="p">,</span> <span class="n">Address</span><span class="p">,</span> <span class="n">City</span><span class="p">,</span> <span class="n">PostalCode</span><span class="p">)</span>
 <span class="k">values</span> <span class="p">(</span><span class="s1">'USA'</span><span class="p">,</span> <span class="s1">'Lambda School'</span><span class="p">,</span> <span class="s1">'Austen Allred'</span><span class="p">,</span> <span class="s1">'1 Lambda Court'</span><span class="p">,</span> <span class="s1">'Provo'</span><span class="p">,</span> <span class="s1">'84601'</span><span class="p">);</span>
-</code></pre></div></div>
-<p><strong>Modifying</strong> a database consists of updating and removing records. For these operations, we’ll use <code class="highlighter-rouge">UPDATE</code>, and <code class="highlighter-rouge">DELETE</code> commands, respectively.</p>
-<p>The basic syntax for an <code class="highlighter-rouge">UPDATE</code> statement is:</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">update</span> <span class="o">&lt;</span><span class="k">table</span> <span class="n">name</span><span class="o">&gt;</span> <span class="k">set</span> <span class="o">&lt;</span><span class="n">field</span><span class="o">&gt;</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span> <span class="k">where</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span><span class="p">;</span>
-</code></pre></div></div>
-<p>The basic syntax for a <code class="highlighter-rouge">DELETE</code> statement is:</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">delete</span> <span class="k">from</span> <span class="o">&lt;</span><span class="k">table</span> <span class="n">name</span><span class="o">&gt;</span> <span class="k">where</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span><span class="p">;</span>
-</code></pre></div></div>
-<h5>Follow Along</h5>
-<h3 id="filtering-results-using-where-clause">Filtering results using WHERE clause</h3>
-<p>When querying a database, by default, the result will be every entry in the given table. However, often, we are looking for a specific record or a set of records that meets certain criteria.</p>
-<p>A where clause can help in both cases.</p>
-<p>Here’s an example where we might only want to find customers living in Berlin.</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">City</span><span class="p">,</span> <span class="n">CustomerName</span><span class="p">,</span> <span class="n">ContactName</span>
+</code></pre>
+                </div>
+              </div>
+              <p><strong>Modifying</strong> a database consists of updating and removing records. For these operations,
+                we’ll use <code class="highlighter-rouge">UPDATE</code>, and <code
+                  class="highlighter-rouge">DELETE</code> commands, respectively.</p>
+              <p>The basic syntax for an <code class="highlighter-rouge">UPDATE</code> statement is:</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">update</span> <span class="o">&lt;</span><span class="k">table</span> <span class="n">name</span><span class="o">&gt;</span> <span class="k">set</span> <span class="o">&lt;</span><span class="n">field</span><span class="o">&gt;</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span> <span class="k">where</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>The basic syntax for a <code class="highlighter-rouge">DELETE</code> statement is:</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">delete</span> <span class="k">from</span> <span class="o">&lt;</span><span class="k">table</span> <span class="n">name</span><span class="o">&gt;</span> <span class="k">where</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <h5>Follow Along</h5>
+              <h3 id="filtering-results-using-where-clause">Filtering results using WHERE clause</h3>
+              <p>When querying a database, by default, the result will be every entry in the given table. However,
+                often, we are looking for a specific record or a set of records that meets certain criteria.</p>
+              <p>A where clause can help in both cases.</p>
+              <p>Here’s an example where we might only want to find customers living in Berlin.</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">select</span> <span class="n">City</span><span class="p">,</span> <span class="n">CustomerName</span><span class="p">,</span> <span class="n">ContactName</span>
 <span class="k">from</span> <span class="n">Customers</span>
 <span class="k">where</span> <span class="n">City</span> <span class="o">=</span> <span class="s1">'Berlin'</span>
-</code></pre></div></div>
-<p>We can also chain together where clauses using <code class="highlighter-rouge">OR</code> and <code class="highlighter-rouge">AND</code> to limit our results further.</p>
-<p>The following query includes only records that match both criteria.</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">City</span><span class="p">,</span> <span class="n">CustomerName</span><span class="p">,</span> <span class="n">ContactName</span>
+</code></pre>
+                </div>
+              </div>
+              <p>We can also chain together where clauses using <code class="highlighter-rouge">OR</code> and <code
+                  class="highlighter-rouge">AND</code> to limit our results further.</p>
+              <p>The following query includes only records that match both criteria.</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">select</span> <span class="n">City</span><span class="p">,</span> <span class="n">CustomerName</span><span class="p">,</span> <span class="n">ContactName</span>
 <span class="k">from</span> <span class="n">Customers</span>
 <span class="k">where</span> <span class="n">Country</span> <span class="o">=</span> <span class="s1">'France'</span> <span class="k">and</span> <span class="n">City</span> <span class="o">=</span> <span class="s1">'Paris'</span>
-</code></pre></div></div>
-<p>And this query includes records that match either criteria.</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">City</span><span class="p">,</span> <span class="n">CustomerName</span><span class="p">,</span> <span class="n">ContactName</span>
+</code></pre>
+                </div>
+              </div>
+              <p>And this query includes records that match either criteria.</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">select</span> <span class="n">City</span><span class="p">,</span> <span class="n">CustomerName</span><span class="p">,</span> <span class="n">ContactName</span>
 <span class="k">from</span> <span class="n">Customers</span>
 <span class="k">where</span> <span class="n">Country</span> <span class="o">=</span> <span class="s1">'France'</span> <span class="k">or</span> <span class="n">City</span> <span class="o">=</span> <span class="s1">'Paris'</span>
-</code></pre></div></div>
-<p>These operators can be combined and grouped with parentheses to add complex selection logic. They behave similarly to what you’re used to in programming languages.</p>
-<p>You can read more about SQLite operators from <a href="https://www.w3resource.com/sqlite/operators.php">this website</a>.</p>
-<p>To select a single record, we can use a <code class="highlighter-rouge">WHERE</code> statement with a uniquely identifying field, like an id:</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">Customers</span>
+</code></pre>
+                </div>
+              </div>
+              <p>These operators can be combined and grouped with parentheses to add complex selection logic. They
+                behave similarly to what you’re used to in programming languages.</p>
+              <p>You can read more about SQLite operators from <a
+                  href="https://www.w3resource.com/sqlite/operators.php">this website</a>.</p>
+              <p>To select a single record, we can use a <code class="highlighter-rouge">WHERE</code> statement with a
+                uniquely identifying field, like an id:</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">Customers</span>
 <span class="k">where</span> <span class="n">CustomerId</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>
-</code></pre></div></div>
-<p>Other comparison operators also work in <code class="highlighter-rouge">WHERE</code> conditions, such a &gt;, &lt;, &lt;=, &gt;=.</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">employees</span> <span class="k">where</span> <span class="n">salary</span> <span class="o">&gt;=</span> <span class="mi">50000</span>
-</code></pre></div></div>
-<h3 id="ordering-results-using-the-order-by-clause">Ordering results using the ORDER BY clause.</h3>
-<p>Query results are shown in the same order the data was inserted. To control how the data is sorted, we can use the <code class="highlighter-rouge">ORDER BY</code> clause; let’s see an example.</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- sorts the results first by salary in descending order, then by last name in ascending order</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Other comparison operators also work in <code class="highlighter-rouge">WHERE</code> conditions, such a
+                &gt;, &lt;, &lt;=, &gt;=.</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">employees</span> <span class="k">where</span> <span class="n">salary</span> <span class="o">&gt;=</span> <span class="mi">50000</span>
+</code></pre>
+                </div>
+              </div>
+              <h3 id="ordering-results-using-the-order-by-clause">Ordering results using the ORDER BY clause.</h3>
+              <p>Query results are shown in the same order the data was inserted. To control how the data is sorted, we
+                can use the <code class="highlighter-rouge">ORDER BY</code> clause; let’s see an example.</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c1">-- sorts the results first by salary in descending order, then by last name in ascending order</span>
 <span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">employees</span> <span class="k">order</span> <span class="k">by</span> <span class="n">salary</span> <span class="k">desc</span><span class="p">,</span> <span class="n">last_name</span><span class="p">;</span>
-</code></pre></div></div>
-<p>We can pass a list of field names to <code class="highlighter-rouge">order by</code> and optionally choose <code class="highlighter-rouge">asc</code> or <code class="highlighter-rouge">desc</code> for the sort direction. The default is <code class="highlighter-rouge">asc</code>, so it doesn’t need to be specified.</p>
-<p>Some SQL engines also support using field abbreviations when sorting.</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">name</span><span class="p">,</span> <span class="n">salary</span><span class="p">,</span> <span class="n">department</span> <span class="k">from</span> <span class="n">employees</span> <span class="k">order</span> <span class="k">by</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span> <span class="k">desc</span><span class="p">;</span>
-</code></pre></div></div>
-<p>In this case, the results are sorted by department in ascending order first and then by salary in descending order. The numbers refer to the position of the fields in the <em>selection</em> portion of the query, so 1 would be <em>name</em>, 2 would be <em>salary</em> and so on.</p>
-<p>Note that the <code class="highlighter-rouge">WHERE</code> clause should come after the <code class="highlighter-rouge">FROM</code> clause. The <code class="highlighter-rouge">ORDER BY</code> clause always goes last.</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">employees</span> <span class="k">where</span> <span class="n">salary</span> <span class="o">&gt;</span> <span class="mi">50000</span> <span class="k">order</span> <span class="k">by</span> <span class="n">last_name</span><span class="p">;</span>
-</code></pre></div></div>
-<h3 id="limiting-results-using-the-limit-clause">Limiting results using the LIMIT clause.</h3>
-<p>When we wish to see only a limited number of records, we can use a <code class="highlighter-rouge">LIMIT</code> clause.</p>
-<p>The following returns the first 10 records in the products table:</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">products</span>
+</code></pre>
+                </div>
+              </div>
+              <p>We can pass a list of field names to <code class="highlighter-rouge">order by</code> and optionally
+                choose <code class="highlighter-rouge">asc</code> or <code class="highlighter-rouge">desc</code> for the
+                sort direction. The default is <code class="highlighter-rouge">asc</code>, so it doesn’t need to be
+                specified.</p>
+              <p>Some SQL engines also support using field abbreviations when sorting.</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">select</span> <span class="n">name</span><span class="p">,</span> <span class="n">salary</span><span class="p">,</span> <span class="n">department</span> <span class="k">from</span> <span class="n">employees</span> <span class="k">order</span> <span class="k">by</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span> <span class="k">desc</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>In this case, the results are sorted by department in ascending order first and then by salary in
+                descending order. The numbers refer to the position of the fields in the <em>selection</em> portion of
+                the query, so 1 would be <em>name</em>, 2 would be <em>salary</em> and so on.</p>
+              <p>Note that the <code class="highlighter-rouge">WHERE</code> clause should come after the <code
+                  class="highlighter-rouge">FROM</code> clause. The <code class="highlighter-rouge">ORDER BY</code>
+                clause always goes last.</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">employees</span> <span class="k">where</span> <span class="n">salary</span> <span class="o">&gt;</span> <span class="mi">50000</span> <span class="k">order</span> <span class="k">by</span> <span class="n">last_name</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <h3 id="limiting-results-using-the-limit-clause">Limiting results using the LIMIT clause.</h3>
+              <p>When we wish to see only a limited number of records, we can use a <code
+                  class="highlighter-rouge">LIMIT</code> clause.</p>
+              <p>The following returns the first 10 records in the products table:</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">products</span>
 <span class="k">limit</span> <span class="mi">10</span>
-</code></pre></div></div>
-<p><code class="highlighter-rouge">LIMIT</code> clauses are often used in conjunction with <code class="highlighter-rouge">ORDER BY</code>. The following shows us the 5 cheapest products:</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">products</span>
+</code></pre>
+                </div>
+              </div>
+              <p><code class="highlighter-rouge">LIMIT</code> clauses are often used in conjunction with <code
+                  class="highlighter-rouge">ORDER BY</code>. The following shows us the 5 cheapest products:</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">products</span>
 <span class="k">order</span> <span class="k">by</span> <span class="n">price</span> <span class="k">desc</span>
 <span class="k">limit</span> <span class="mi">5</span>
-</code></pre></div></div>
-<h3 id="inserting-data-using-insert">Inserting data using INSERT</h3>
-<p>An insert statement adds a new record in the database. All non-null fields must be listed out in the same order as their values. Note that some fields, like ids and timestamps, may be auto-generated and do not need to be included in an <code class="highlighter-rouge">INSERT</code> statement.</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- we can add fields in any order, the values need to be in the same ordinal position</span>
+</code></pre>
+                </div>
+              </div>
+              <h3 id="inserting-data-using-insert">Inserting data using INSERT</h3>
+              <p>An insert statement adds a new record in the database. All non-null fields must be listed out in the
+                same order as their values. Note that some fields, like ids and timestamps, may be auto-generated and do
+                not need to be included in an <code class="highlighter-rouge">INSERT</code> statement.</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c1">-- we can add fields in any order, the values need to be in the same ordinal position</span>
 <span class="c1">-- the id will be assigned automatically</span>
   <span class="k">insert</span> <span class="k">into</span> <span class="n">Customers</span> <span class="p">(</span><span class="n">Country</span><span class="p">,</span> <span class="n">CustomerName</span><span class="p">,</span> <span class="n">ContactName</span><span class="p">,</span> <span class="n">Address</span><span class="p">,</span> <span class="n">City</span><span class="p">,</span> <span class="n">PostalCode</span><span class="p">)</span>
   <span class="k">values</span> <span class="p">(</span><span class="s1">'USA'</span><span class="p">,</span> <span class="s1">'Lambda School'</span><span class="p">,</span> <span class="s1">'Austen Allred'</span><span class="p">,</span> <span class="s1">'1 Lambda Court'</span><span class="p">,</span> <span class="s1">'Provo'</span><span class="p">,</span> <span class="s1">'84601'</span><span class="p">);</span>
-</code></pre></div></div>
-<p>The values in an insert statement must not violate any restrictions and constraints that the database has in place, such as expected datatypes. We will learn more about constraints and schema design in a later section.</p>
-<h3 id="modifying-recording-using-update">Modifying recording using UPDATE</h3>
-<p>When modifying a record, we identify a single record or a set of records to update using a <code class="highlighter-rouge">WHERE</code> clause. Then we can set the new value(s) in place.</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">update</span> <span class="n">Customers</span>
+</code></pre>
+                </div>
+              </div>
+              <p>The values in an insert statement must not violate any restrictions and constraints that the database
+                has in place, such as expected datatypes. We will learn more about constraints and schema design in a
+                later section.</p>
+              <h3 id="modifying-recording-using-update">Modifying recording using UPDATE</h3>
+              <p>When modifying a record, we identify a single record or a set of records to update using a <code
+                  class="highlighter-rouge">WHERE</code> clause. Then we can set the new value(s) in place.</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">update</span> <span class="n">Customers</span>
 <span class="k">set</span> <span class="n">City</span> <span class="o">=</span> <span class="s1">'Silicon Valley'</span><span class="p">,</span> <span class="n">Country</span> <span class="o">=</span> <span class="s1">'USA'</span>
 <span class="k">where</span> <span class="n">CustomerName</span> <span class="o">=</span> <span class="s1">'Lambda School'</span>
-</code></pre></div></div>
-<p>Technically the <code class="highlighter-rouge">WHERE</code> clause is not required, but leaving it off would result in every record within the table receiving the update.</p>
-<h4 id="removing-records-using-delete">Removing records using DELETE</h4>
-<p>When removing a record or set of records, we need only identify which record(s) to remove using a <code class="highlighter-rouge">WHERE</code> clause:</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">delete</span> <span class="k">from</span> <span class="n">Customers</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Technically the <code class="highlighter-rouge">WHERE</code> clause is not required, but leaving it off
+                would result in every record within the table receiving the update.</p>
+              <h4 id="removing-records-using-delete">Removing records using DELETE</h4>
+              <p>When removing a record or set of records, we need only identify which record(s) to remove using a <code
+                  class="highlighter-rouge">WHERE</code> clause:</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">delete</span> <span class="k">from</span> <span class="n">Customers</span>
 <span class="k">where</span> <span class="n">CustomerName</span> <span class="o">=</span> <span class="s1">'Lambda School`;
-</span></code></pre></div></div>
-<p>Once again, the <code class="highlighter-rouge">WHERE</code> clause is not required, but leaving it off would remove every record in the table, so it’s very important.</p>
-<h5>Challenge</h5>
-<p>Write queries for the following requirements:</p>
-<ul>
-<li>List the products but only show the product id and the product name.</li>
-<li>List the employees sorted by the last name in ascending order.</li>
-<li>Add a new record in the category table</li>
-<li>Come up with a more creative name for the product “tofu” and update it in the database.</li>
-<li>Delete a single record for the “employees” table.</li>
-</ul>
-<hr>
-<h4 class="mark mb-3 p-2">Learn to write database queries using knex.js</h4>
-<p>We’ll be exploring the <strong>query builder</strong> library of <strong>knex.js</strong>. <strong>knex</strong> allows us to write sql commands using javascript. In this section, we’ll be exploring the basic set up of the library as well as writing the queries for <strong>CRUD</strong> operations on a single resource.</p>
-<h5>Overview</h5>
-<p>While raw SQL is a critical baseline skill, Node developers generally use an <strong>ORM</strong> or <strong>query builder</strong> to write database commands in a backend codebase. Both <strong>ORMs</strong> and <strong>query builders</strong> are JavaScript libraries that allow us to interface with the database using a JavaScript version of the SQL language.</p>
-<p>For example, instead of a raw SQL select:</p>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">users</span><span class="p">;</span>
-</code></pre></div></div>
-<p>We could use a query builder to write the same logic in JavaScript:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">db</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="dl">'</span><span class="s1">*</span><span class="dl">'</span><span class="p">).</span><span class="k">from</span><span class="p">(</span><span class="dl">'</span><span class="s1">users</span><span class="dl">'</span><span class="p">);</span>
-</code></pre></div></div>
-<p><strong>Query builders</strong> are lightweight and easy to get off the ground, whereas <strong>ORMs</strong> use an object-oriented model and can provide more heavy lifting within their rigid structure.</p>
-<p>Within this sprint, we will use a <strong>query builder</strong> called <a href="https://knexjs.org/">knex.js</a>.</p>
-<h5>Follow Along</h5>
-<h3 id="knex-setup">Knex Setup</h3>
-<p>To use Knex in a repository, we’ll need to add two libraries:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install knex sqlite3
-</code></pre></div></div>
-<p><code class="highlighter-rouge">knex</code> is our query builder library, and <code class="highlighter-rouge">sqlite3</code> allows us to interface with a <code class="highlighter-rouge">sqlite</code> database. We’ll learn more about <code class="highlighter-rouge">sqlite</code> and other <strong>database management systems</strong> in the following module. For now, just know that you need both libraries.</p>
-<p>Next, we use Knex to set up a config file:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">knex</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">knex</span><span class="dl">'</span><span class="p">);</span>
+</span></code></pre>
+                </div>
+              </div>
+              <p>Once again, the <code class="highlighter-rouge">WHERE</code> clause is not required, but leaving it off
+                would remove every record in the table, so it’s very important.</p>
+              <h5>Challenge</h5>
+              <p>Write queries for the following requirements:</p>
+              <ul>
+                <li>List the products but only show the product id and the product name.</li>
+                <li>List the employees sorted by the last name in ascending order.</li>
+                <li>Add a new record in the category table</li>
+                <li>Come up with a more creative name for the product “tofu” and update it in the database.</li>
+                <li>Delete a single record for the “employees” table.</li>
+              </ul>
+              <hr>
+              <h4 class="mark mb-3 p-2">Learn to write database queries using knex.js</h4>
+              <p>We’ll be exploring the <strong>query builder</strong> library of <strong>knex.js</strong>.
+                <strong>knex</strong> allows us to write sql commands using javascript. In this section, we’ll be
+                exploring the basic set up of the library as well as writing the queries for <strong>CRUD</strong>
+                operations on a single resource.</p>
+              <h5>Overview</h5>
+              <p>While raw SQL is a critical baseline skill, Node developers generally use an <strong>ORM</strong> or
+                <strong>query builder</strong> to write database commands in a backend codebase. Both
+                <strong>ORMs</strong> and <strong>query builders</strong> are JavaScript libraries that allow us to
+                interface with the database using a JavaScript version of the SQL language.</p>
+              <p>For example, instead of a raw SQL select:</p>
+              <div class="language-sql highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">users</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>We could use a query builder to write the same logic in JavaScript:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="nx">db</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="dl">'</span><span class="s1">*</span><span class="dl">'</span><span class="p">).</span><span class="k">from</span><span class="p">(</span><span class="dl">'</span><span class="s1">users</span><span class="dl">'</span><span class="p">);</span>
+</code></pre>
+                </div>
+              </div>
+              <p><strong>Query builders</strong> are lightweight and easy to get off the ground, whereas
+                <strong>ORMs</strong> use an object-oriented model and can provide more heavy lifting within their rigid
+                structure.</p>
+              <p>Within this sprint, we will use a <strong>query builder</strong> called <a
+                  href="https://knexjs.org/">knex.js</a>.</p>
+              <h5>Follow Along</h5>
+              <h3 id="knex-setup">Knex Setup</h3>
+              <p>To use Knex in a repository, we’ll need to add two libraries:</p>
+              <div class="highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>npm install knex sqlite3
+</code></pre>
+                </div>
+              </div>
+              <p><code class="highlighter-rouge">knex</code> is our query builder library, and <code
+                  class="highlighter-rouge">sqlite3</code> allows us to interface with a <code
+                  class="highlighter-rouge">sqlite</code> database. We’ll learn more about <code
+                  class="highlighter-rouge">sqlite</code> and other <strong>database management systems</strong> in the
+                following module. For now, just know that you need both libraries.</p>
+              <p>Next, we use Knex to set up a config file:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="kd">const</span> <span class="nx">knex</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">knex</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">client</span><span class="p">:</span> <span class="dl">'</span><span class="s1">sqlite3</span><span class="dl">'</span><span class="p">,</span>
@@ -559,22 +831,47 @@ Testing the Back End
 <span class="p">};</span>
 
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">knex</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
-</code></pre></div></div>
-<p>To use the query builder elsewhere in our code, we need to call <code class="highlighter-rouge">knex</code> and pass in a <code class="highlighter-rouge">config</code> object. We’ll be discussing Knex configuration more in a future module, but for now, all we only need the <code class="highlighter-rouge">client</code>, <code class="highlighter-rouge">connection</code>, and <code class="highlighter-rouge">useNullAsDefault</code> keys as shown above. The <code class="highlighter-rouge">filename</code> should point towards the pre-existing database file which can be recognized by the <code class="highlighter-rouge">.db3</code> extension.</p>
-<p><strong>GOTCHA</strong>: The file path to the database should be with respect to the <strong>root</strong> of the repo, not the configuration file itself.</p>
-<p>Once Knex is configured, we can import the above config file anywhere in our codebase to access the database.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">db</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">../data/db-config.js);
-</span></code></pre></div></div>
-<p>The <code class="highlighter-rouge">db</code> object provides methods that allow us to begin building queries.</p>
-<h3 id="select-using-knex">SELECT using Knex</h3>
-<p>In Knex, the equivalent of <code class="highlighter-rouge">SELECT * FROM users</code> is:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">db</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="dl">'</span><span class="s1">*</span><span class="dl">'</span><span class="p">).</span><span class="k">from</span><span class="p">(</span><span class="dl">'</span><span class="s1">users</span><span class="dl">'</span><span class="p">);</span>
-</code></pre></div></div>
-<p>There’s a simpler way to write the same command:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">db</span><span class="p">(</span><span class="dl">'</span><span class="s1">users</span><span class="dl">'</span><span class="p">);</span>
-</code></pre></div></div>
-<p>Using this, we could write a <code class="highlighter-rouge">GET</code> endpoint.</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">router</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/api/users</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</code></pre>
+                </div>
+              </div>
+              <p>To use the query builder elsewhere in our code, we need to call <code
+                  class="highlighter-rouge">knex</code> and pass in a <code class="highlighter-rouge">config</code>
+                object. We’ll be discussing Knex configuration more in a future module, but for now, all we only need
+                the <code class="highlighter-rouge">client</code>, <code class="highlighter-rouge">connection</code>,
+                and <code class="highlighter-rouge">useNullAsDefault</code> keys as shown above. The <code
+                  class="highlighter-rouge">filename</code> should point towards the pre-existing database file which
+                can be recognized by the <code class="highlighter-rouge">.db3</code> extension.</p>
+              <p><strong>GOTCHA</strong>: The file path to the database should be with respect to the
+                <strong>root</strong> of the repo, not the configuration file itself.</p>
+              <p>Once Knex is configured, we can import the above config file anywhere in our codebase to access the
+                database.</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="kd">const</span> <span class="nx">db</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">../data/db-config.js);
+</span></code></pre>
+                </div>
+              </div>
+              <p>The <code class="highlighter-rouge">db</code> object provides methods that allow us to begin building
+                queries.</p>
+              <h3 id="select-using-knex">SELECT using Knex</h3>
+              <p>In Knex, the equivalent of <code class="highlighter-rouge">SELECT * FROM users</code> is:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="nx">db</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="dl">'</span><span class="s1">*</span><span class="dl">'</span><span class="p">).</span><span class="k">from</span><span class="p">(</span><span class="dl">'</span><span class="s1">users</span><span class="dl">'</span><span class="p">);</span>
+</code></pre>
+                </div>
+              </div>
+              <p>There’s a simpler way to write the same command:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="nx">db</span><span class="p">(</span><span class="dl">'</span><span class="s1">users</span><span class="dl">'</span><span class="p">);</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Using this, we could write a <code class="highlighter-rouge">GET</code> endpoint.</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="nx">router</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/api/users</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="nx">db</span><span class="p">(</span><span class="dl">'</span><span class="s1">users</span><span class="dl">'</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">users</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span><span class="nx">users</span><span class="p">);</span>
@@ -583,14 +880,25 @@ Testing the Back End
     <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">500</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span> <span class="na">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Failed to get users</span><span class="dl">'</span> <span class="p">});</span>
   <span class="p">});</span>
 <span class="p">});</span>
-</code></pre></div></div>
-<p><strong>NOTE</strong>: All Knex queries return promises.</p>
-<p>Knex also allows for a where clause. In Knex, we could write <code class="highlighter-rouge">SELECT * FROM users WHERE id=1</code> as</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">db</span><span class="p">(</span><span class="dl">'</span><span class="s1">users</span><span class="dl">'</span><span class="p">).</span><span class="nx">where</span><span class="p">({</span> <span class="na">id</span><span class="p">:</span> <span class="mi">1</span> <span class="p">});</span>
-</code></pre></div></div>
-<p>This method will resolve to an array containing a single entry like so: <code class="highlighter-rouge">[{ id: 1, name: 'bill' }]</code>.</p>
-<p>Using this, we might add a <code class="highlighter-rouge">GET</code> endpoint where a specific user:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">server</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">api/users/:id</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</code></pre>
+                </div>
+              </div>
+              <p><strong>NOTE</strong>: All Knex queries return promises.</p>
+              <p>Knex also allows for a where clause. In Knex, we could write <code class="highlighter-rouge">SELECT *
+                  FROM users WHERE id=1</code> as</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="nx">db</span><span class="p">(</span><span class="dl">'</span><span class="s1">users</span><span class="dl">'</span><span class="p">).</span><span class="nx">where</span><span class="p">({</span> <span class="na">id</span><span class="p">:</span> <span class="mi">1</span> <span class="p">});</span>
+</code></pre>
+                </div>
+              </div>
+              <p>This method will resolve to an array containing a single entry like so: <code
+                  class="highlighter-rouge">[{ id: 1, name: 'bill' }]</code>.</p>
+              <p>Using this, we might add a <code class="highlighter-rouge">GET</code> endpoint where a specific user:
+              </p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="nx">server</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">api/users/:id</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="p">{</span> <span class="nx">id</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">;</span>
 
   <span class="nx">db</span><span class="p">(</span><span class="dl">'</span><span class="s1">users</span><span class="dl">'</span><span class="p">).</span><span class="nx">where</span><span class="p">({</span> <span class="nx">id</span> <span class="p">})</span>
@@ -605,233 +913,300 @@ Testing the Back End
     <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">500</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span> <span class="na">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Failed to get user</span><span class="dl">'</span> <span class="p">});</span>
   <span class="p">});</span>
 <span class="p">});</span>
-</code></pre></div></div>
-<h3 id="insert-using-knex">INSERT using Knex</h3>
-<p>In Knex, the equivalent of <code class="highlighter-rouge">INSERT INTO users (name, age) VALUES ('Eva', 32)</code> is:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">db</span><span class="p">(</span><span class="dl">'</span><span class="s1">users</span><span class="dl">'</span><span class="p">).</span><span class="nx">insert</span><span class="p">({</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Eva</span><span class="dl">'</span><span class="p">,</span> <span class="na">age</span><span class="p">:</span> <span class="mi">32</span> <span class="p">});</span>
-</code></pre></div></div>
-<p>The insert method in Knex will resolve to an array containing the newly created id for that user like so: <code class="highlighter-rouge">[3]</code>.</p>
-<h4 id="update-using-knex">UPDATE using Knex</h4>
-<p>In knex, the equivalent of <code class="highlighter-rouge">UPDATE users SET name='Ava', age=33 WHERE id=3;</code> is:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">db</span><span class="p">(</span><span class="dl">'</span><span class="s1">users</span><span class="dl">'</span><span class="p">).</span><span class="nx">where</span><span class="p">({</span> <span class="na">id</span><span class="p">:</span> <span class="mi">3</span> <span class="p">})</span>
+</code></pre>
+                </div>
+              </div>
+              <h3 id="insert-using-knex">INSERT using Knex</h3>
+              <p>In Knex, the equivalent of <code class="highlighter-rouge">INSERT INTO users (name, age) VALUES ('Eva',
+                  32)</code> is:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="nx">db</span><span class="p">(</span><span class="dl">'</span><span class="s1">users</span><span class="dl">'</span><span class="p">).</span><span class="nx">insert</span><span class="p">({</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Eva</span><span class="dl">'</span><span class="p">,</span> <span class="na">age</span><span class="p">:</span> <span class="mi">32</span> <span class="p">});</span>
+</code></pre>
+                </div>
+              </div>
+              <p>The insert method in Knex will resolve to an array containing the newly created id for that user like
+                so: <code class="highlighter-rouge">[3]</code>.</p>
+              <h4 id="update-using-knex">UPDATE using Knex</h4>
+              <p>In knex, the equivalent of <code class="highlighter-rouge">UPDATE users SET name='Ava', age=33 WHERE
+                  id=3;</code> is:</p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="nx">db</span><span class="p">(</span><span class="dl">'</span><span class="s1">users</span><span class="dl">'</span><span class="p">).</span><span class="nx">where</span><span class="p">({</span> <span class="na">id</span><span class="p">:</span> <span class="mi">3</span> <span class="p">})</span>
 <span class="p">.</span><span class="nx">update</span><span class="p">({</span><span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Ava</span><span class="dl">'</span><span class="p">,</span> <span class="na">age</span><span class="p">:</span> <span class="mi">33</span> <span class="p">});</span>
-</code></pre></div></div>
-<p>Note that the <code class="highlighter-rouge">where</code> method comes before <code class="highlighter-rouge">update</code>, unlike in SQL.</p>
-<p>Update will resolve to a count of rows updated.</p>
-<h3 id="delete-using-knex">DELETE using Knex</h3>
-<p>In Knex, the equivalent of <code class="highlighter-rouge">DELETE FROM users WHERE age=33;</code> is:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">db</span><span class="p">(</span><span class="dl">'</span><span class="s1">users</span><span class="dl">'</span><span class="p">).</span><span class="nx">where</span><span class="p">({</span> <span class="na">age</span><span class="p">:</span> <span class="mi">33</span><span class="p">}).</span><span class="nx">del</span><span class="p">();</span>
-</code></pre></div></div>
-<p>Once again, the <code class="highlighter-rouge">where</code> must come before the <code class="highlighter-rouge">del</code>. This method will resolve to a count of records removed.</p>
-<h5>Challenge</h5>
-<p>Pick a challenge or guided project from the previous sprint. First, find where Knex is configured. Then find where the Knex queries are written.</p>
-<hr>
-<h2>
-<a id="guided-project" class="anchor" href="#guided-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Guided Project</h2>
-<h3>Node DB 1 Guided Project</h3>
-<a target="_blank" href="https://github.com/LambdaSchool/node-db1-guided">GitHub Repo</a>
-<hr>
-<h2 class="display-4">
-<a id="project" class="anchor" href="#project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project</h2>
-<ul class="list-group">
-<li class="list-group-item">
-<h5><a target="_blank" href="https://github.com/LambdaSchool/node-db1-project">Node DB 1 Project</a></h5>
-</li>
-</ul>
-<h2 class="display-4">
-<a id="review" class="anchor" href="#review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review</h2>
-<h3 class="display-5">Class Recordings</h3>
-<p class="lead">You can use class recordings to help you master the material.</p>
-<div>
-<ul class="list-group list-group-flush">
-<li class="list-group-item">
-<strong><a target="_blank" href="https://youtu.be/kQ-bMUtw4d4">Introduction to Relational Databases for Web PT 18 with Jason Maurer</a></strong>
-<p>The modern world runs on data. Our every day life is dependent on the data in our devices.The places we shop, the work that we do, all of it is data-driven. Computers and devices that do anything useful have some type of data persistence. Out of all the technologies used to save and retrieve that data, Relational Databases is king. Learning how relational databases work and how to write Structured Query Language (SQL) to communicate with Relational Database Management Systems is a well sought out skill by companies of all sizes and a great tool to have in your arsenal.</p>
-</li>
-<li class="list-group-item">
-<a href="/archive/FSW/module/recFG7SqlSCAB8iU7">All previous recordings</a>
-</li>
-</ul>
-</div>
-<h3 class="display-5">Demonstrate Mastery</h3>
-<p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the following:</p>
-<ul>
-<li>Objective challenge: <p>Use the internet to research two other types of databases (non-relational) and write a short paragraph for each describing how they are different from relational databases. Send the response to your TL on slack.</p>
-</li>
-<li>Objective challenge: <p>Imagine that you have been contracted to work with a dataset of 10 million entries. The client needs a tool to filter through this data for fast retrieval. They are foolishly insisting you use javascript to perform these operations.</p>
-<p>Write a 1 paragraph explanation of why SQL would be a better tool. Use language that a non-technical person would understand. Do any research necessary to support your argument.</p>
-<p>Send this to your PM when it is complete.</p>
-</li>
-<li>Objective challenge: <p>Write queries for the following requirements:</p>
-<ul>
-<li>List the products but only show the product id and the product name.</li>
-<li>List the employees sorted by the last name in ascending order.</li>
-<li>Add a new record in the category table</li>
-<li>Come up with a more creative name for the product “tofu” and update it in the database.</li>
-<li>Delete a single record for the “employees” table.</li>
-</ul>
-</li>
-<li>Objective challenge: <p>Pick a challenge or guided project from the previous sprint. First, find where Knex is configured. Then find where the Knex queries are written.</p>
-</li>
-<li>Guided Project: Node DB 1 Guided Project</li>
-<li>Project: Node DB 1 Project</li>
-</ul>
-</div>
-</div>
-</div>
-</main>
-</div>
+</code></pre>
+                </div>
+              </div>
+              <p>Note that the <code class="highlighter-rouge">where</code> method comes before <code
+                  class="highlighter-rouge">update</code>, unlike in SQL.</p>
+              <p>Update will resolve to a count of rows updated.</p>
+              <h3 id="delete-using-knex">DELETE using Knex</h3>
+              <p>In Knex, the equivalent of <code class="highlighter-rouge">DELETE FROM users WHERE age=33;</code> is:
+              </p>
+              <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="nx">db</span><span class="p">(</span><span class="dl">'</span><span class="s1">users</span><span class="dl">'</span><span class="p">).</span><span class="nx">where</span><span class="p">({</span> <span class="na">age</span><span class="p">:</span> <span class="mi">33</span><span class="p">}).</span><span class="nx">del</span><span class="p">();</span>
+</code></pre>
+                </div>
+              </div>
+              <p>Once again, the <code class="highlighter-rouge">where</code> must come before the <code
+                  class="highlighter-rouge">del</code>. This method will resolve to a count of records removed.</p>
+              <h5>Challenge</h5>
+              <p>Pick a challenge or guided project from the previous sprint. First, find where Knex is configured. Then
+                find where the Knex queries are written.</p>
+              <hr>
+              <h2>
+                <a id="guided-project" class="anchor" href="#guided-project" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Guided Project</h2>
+              <h3>Node DB 1 Guided Project</h3>
+              <a target="_blank" href="https://github.com/LambdaSchool/node-db1-guided">GitHub Repo</a>
+              <hr>
+              <h2 class="display-4">
+                <a id="project" class="anchor" href="#project" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Project</h2>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <h5><a target="_blank" href="https://github.com/LambdaSchool/node-db1-project">Node DB 1 Project</a>
+                  </h5>
+                </li>
+              </ul>
+              <h2 class="display-4">
+                <a id="review" class="anchor" href="#review" aria-hidden="true"><span
+                    class="octicon octicon-link"></span></a>Review</h2>
+              <h3 class="display-5">Class Recordings</h3>
+              <p class="lead">You can use class recordings to help you master the material.</p>
+              <div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <strong><a target="_blank" href="https://youtu.be/kQ-bMUtw4d4">Introduction to Relational Databases
+                        for Web PT 18 with Jason Maurer</a></strong>
+                    <p>The modern world runs on data. Our every day life is dependent on the data in our devices.The
+                      places we shop, the work that we do, all of it is data-driven. Computers and devices that do
+                      anything useful have some type of data persistence. Out of all the technologies used to save and
+                      retrieve that data, Relational Databases is king. Learning how relational databases work and how
+                      to write Structured Query Language (SQL) to communicate with Relational Database Management
+                      Systems is a well sought out skill by companies of all sizes and a great tool to have in your
+                      arsenal.</p>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="/archive/FSW/module/recFG7SqlSCAB8iU7">All previous recordings</a>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="display-5">Demonstrate Mastery</h3>
+              <p>To demonstrate mastery of this module, you need to complete and pass a code review on each of the
+                following:</p>
+              <ul>
+                <li>Objective challenge: <p>Use the internet to research two other types of databases (non-relational)
+                    and write a short paragraph for each describing how they are different from relational databases.
+                    Send the response to your TL on slack.</p>
+                </li>
+                <li>Objective challenge: <p>Imagine that you have been contracted to work with a dataset of 10 million
+                    entries. The client needs a tool to filter through this data for fast retrieval. They are foolishly
+                    insisting you use javascript to perform these operations.</p>
+                  <p>Write a 1 paragraph explanation of why SQL would be a better tool. Use language that a
+                    non-technical person would understand. Do any research necessary to support your argument.</p>
+                  <p>Send this to your PM when it is complete.</p>
+                </li>
+                <li>Objective challenge: <p>Write queries for the following requirements:</p>
+                  <ul>
+                    <li>List the products but only show the product id and the product name.</li>
+                    <li>List the employees sorted by the last name in ascending order.</li>
+                    <li>Add a new record in the category table</li>
+                    <li>Come up with a more creative name for the product “tofu” and update it in the database.</li>
+                    <li>Delete a single record for the “employees” table.</li>
+                  </ul>
+                </li>
+                <li>Objective challenge: <p>Pick a challenge or guided project from the previous sprint. First, find
+                    where Knex is configured. Then find where the Knex queries are written.</p>
+                </li>
+                <li>Guided Project: Node DB 1 Guided Project</li>
+                <li>Project: Node DB 1 Project</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80850900-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-80850900-4');
-</script>
-<script type="text/javascript">
-  function getDomain() {
-    const domainName = window.location.hostname.split('.')[1];
-    return `${domainName}.com`;
-  }
-</script>
-<script src="" integrity="" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script><script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script><script src="/assets/js/activate.js"></script>
-<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
-<script type="text/javascript">
-  SimpleJekyllSearch.init({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    dataSource: '/search.json',
-    searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Introduction to Relational Databases">{title}</a></li>',
-    noResultsText: '',
-    limit: 10,
-    fuzzy: true,
-  })
-</script>
-<script src="/assets/js/mermaid.min.js"></script><script type="text/javascript">
-  if (window.attachEvent) {
-    window.attachEvent('onload', verifySignedIn);
-  } else {
-    if (window.onload) {
-      var currentOnLoadFn = window.onload;
-      var newOnLoadFn = function (evt) {
-        currentOnLoadFn(evt);
-        verifySignedIn();
-      };
-      window.onload = newOnLoadFn;
-    } else {
-      window.onload = verifySignedIn;
-    }
-  }
-
-  function verifySignedIn() {
-    if (isPagePublic()) {
-      return showPageContents();
-    }
-
-    window.__user = null;
-    isSignedIn().then((user) => {
-      window.__user = user;
-
-      if (!user.signedIn) {
-        redirectToSignIn();
-      } else if (!user.student && !window.__openToAdmissions) {
-        showUnauthorizedMessage();
-      } else {
-        showPageContents();
+      function gtag() {
+        dataLayer.push( arguments );
       }
-    });
-  }
+      gtag( 'js', new Date() );
 
-  function isPagePublic() {
-    const openCourses = [
-      'and-pre',
-      'ds-pre',
-      'fsw-pre',
-      'help',
-      'ios-pre',
-    ];
-
-    const openPages = [
-      'cs-and',
-      'cs-fsw',
-      'cs-ios',
-      'cr',
-      'ds',
-      'jx',
-      'p4s',
-      'ux',
-    ];
-
-    const pathParts = window.location.pathname.split('/');
-    const courseName = pathParts[1];
-    const pageName = pathParts[pathParts.length - 1];
-
-    return openCourses.includes(courseName) || openPages.includes(pageName);
-  }
-
-  function isSignedIn() {
-    const isDeployPreview = window.location.hostname.startsWith('deploy-preview') && window.location.hostname.endsWith('netlify.com');
-
-    if (isDeployPreview) return Promise.resolve({ signedIn: true, student: true });
-
-    return fetch(`${getAuthBaseUrl()}/whoami`, { credentials: 'include' })
-      .then((response) => response.text())
-      .then((userAsText) => userAsText ? JSON.parse(userAsText) : null)
-      .then((userData) => ({ signedIn: Boolean(userData), student: Boolean(userData && userData.airtableId), id: userData ? userData.id : null, email: userData ? userData.email : null }))
-      .catch((error) => {});
-  }
-
-  function redirectToSignIn() {
-    const signInUrl = `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
-    const redirectMessage = document.querySelector('#redirect-message');
-    redirectMessage.style.display = "block";
-    redirectMessage.innerHTML = `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
-    window.location = signInUrl;
-  }
-
-  function showPageContents() {
-    document.querySelector('#content-wrapper').style.visibility = 'visible';
-  }
-
-  function showUnauthorizedMessage() {
-    document.querySelector('#unauthorized-message').style.display = 'block';
-  }
-
-  function getAuthBaseUrl() {
-    const domain = getDomain();
-    const authBaseUrl = `https://auth.${domain}`;
-    return authBaseUrl;
-  }
-</script><script src="/assets/js/docs.min.js"></script><script>
-  var MathJax = {
-    tex: {
-      inlineMath: [['$$', '$$'], ['\[', '\])']]
-    },
-    "HTML-CSS": {
-      styles: {
-        ".MathJax span": {
-          color: "#000000"
+      gtag( 'config', 'UA-80850900-4' );
+    </script>
+    <script type="text/javascript">
+      function getDomain() {
+        const domainName = window.location.hostname.split( '.' )[ 1 ];
+        return `${domainName}.com`;
+      }
+    </script>
+    <script src="" integrity="" crossorigin="anonymous"></script>
+    <script>
+      window.jQuery || document.write( '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>' )
+    </script>
+    <script src="/assets/js/vendor/popper.min.js" integrity="" crossorigin="anonymous"></script>
+    <script src="/dist/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
+    <script src="/assets/js/activate.js"></script>
+    <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      SimpleJekyllSearch.init( {
+        searchInput: document.getElementById( 'search-input' ),
+        resultsContainer: document.getElementById( 'results-container' ),
+        dataSource: '/search.json',
+        searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="Introduction to Relational Databases">{title}</a></li>',
+        noResultsText: '',
+        limit: 10,
+        fuzzy: true,
+      } )
+    </script>
+    <script src="/assets/js/mermaid.min.js"></script>
+    <script type="text/javascript">
+      if ( window.attachEvent ) {
+        window.attachEvent( 'onload', verifySignedIn );
+      } else {
+        if ( window.onload ) {
+          var currentOnLoadFn = window.onload;
+          var newOnLoadFn = function ( evt ) {
+            currentOnLoadFn( evt );
+            verifySignedIn();
+          };
+          window.onload = newOnLoadFn;
+        } else {
+          window.onload = verifySignedIn;
         }
       }
-    }
-  }
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<script>
-  handleExternalLinks();
 
-  function handleExternalLinks() {
-    const domain = getDomain();
-    const links = document.querySelectorAll('a');
-    return links.forEach((link) => {
-      if (!link.host.includes(domain)) link.target = '_blank';
-    })
-  };
-</script>
-</div>
+      function verifySignedIn() {
+        if ( isPagePublic() ) {
+          return showPageContents();
+        }
+
+        window.__user = null;
+        isSignedIn().then( ( user ) => {
+          window.__user = user;
+
+          if ( !user.signedIn ) {
+            redirectToSignIn();
+          } else if ( !user.student && !window.__openToAdmissions ) {
+            showUnauthorizedMessage();
+          } else {
+            showPageContents();
+          }
+        } );
+      }
+
+      function isPagePublic() {
+        const openCourses = [
+          'and-pre',
+          'ds-pre',
+          'fsw-pre',
+          'help',
+          'ios-pre',
+        ];
+
+        const openPages = [
+          'cs-and',
+          'cs-fsw',
+          'cs-ios',
+          'cr',
+          'ds',
+          'jx',
+          'p4s',
+          'ux',
+        ];
+
+        const pathParts = window.location.pathname.split( '/' );
+        const courseName = pathParts[ 1 ];
+        const pageName = pathParts[ pathParts.length - 1 ];
+
+        return openCourses.includes( courseName ) || openPages.includes( pageName );
+      }
+
+      function isSignedIn() {
+        const isDeployPreview = window.location.hostname.startsWith( 'deploy-preview' ) && window.location.hostname
+          .endsWith( 'netlify.com' );
+
+        if ( isDeployPreview ) return Promise.resolve( {
+          signedIn: true,
+          student: true
+        } );
+
+        return fetch( `${getAuthBaseUrl()}/whoami`, {
+            credentials: 'include'
+          } )
+          .then( ( response ) => response.text() )
+          .then( ( userAsText ) => userAsText ? JSON.parse( userAsText ) : null )
+          .then( ( userData ) => ( {
+            signedIn: Boolean( userData ),
+            student: Boolean( userData && userData.airtableId ),
+            id: userData ? userData.id : null,
+            email: userData ? userData.email : null
+          } ) )
+          .catch( ( error ) => {} );
+      }
+
+      function redirectToSignIn() {
+        const signInUrl =
+          `${getAuthBaseUrl()}/sign-in?redirect=${encodeURIComponent(window.location.href)}&reason=auth_required`
+        const redirectMessage = document.querySelector( '#redirect-message' );
+        redirectMessage.style.display = "block";
+        redirectMessage.innerHTML =
+          `<div>You are being redirected to the sign in page. If you aren't redirected automatically, you can use <a href=${signInUrl}>this link</a>.</div>`
+        window.location = signInUrl;
+      }
+
+      function showPageContents() {
+        document.querySelector( '#content-wrapper' ).style.visibility = 'visible';
+      }
+
+      function showUnauthorizedMessage() {
+        document.querySelector( '#unauthorized-message' ).style.display = 'block';
+      }
+
+      function getAuthBaseUrl() {
+        const domain = getDomain();
+        const authBaseUrl = `https://auth.${domain}`;
+        return authBaseUrl;
+      }
+    </script>
+    <script src="/assets/js/docs.min.js"></script>
+    <script>
+      var MathJax = {
+        tex: {
+          inlineMath: [
+            [ '$$', '$$' ],
+            [ '\[', '\])' ]
+          ]
+        },
+        "HTML-CSS": {
+          styles: {
+            ".MathJax span": {
+              color: "#000000"
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+    </script>
+    <script>
+      handleExternalLinks();
+
+      function handleExternalLinks() {
+        const domain = getDomain();
+        const links = document.querySelectorAll( 'a' );
+        return links.forEach( ( link ) => {
+          if ( !link.host.includes( domain ) ) link.target = '_blank';
+        } )
+      };
+    </script>
+  </div>
 </body>
+
 </html>

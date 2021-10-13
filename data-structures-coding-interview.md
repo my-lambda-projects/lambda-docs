@@ -1,4 +1,4 @@
-## Get a *free* weekly practice problem!
+## Get a _free_ weekly practice problem!
 
 Keep that axe sharp.
 
@@ -6,7 +6,7 @@ Keep that axe sharp.
 
 No spam, ever. Easy unsubscribe.
 
-*Cool, watch your inbox!*
+_Cool, watch your inbox!_
 
 <span class="small">[× No thanks]()</span>
 
@@ -16,71 +16,72 @@ No spam, ever. Easy unsubscribe.
 
 <a href="/" class="navbar-brand">Interview Cake</a>
 
--   <a href="" class="dropdown-toggle">Interview Tips <span class="caret"></span></a>
-    -   [First coding interview? Start here.](/coding-interview-beginner-faq)
-    -   [General coding interview tips](/coding-interview-tips)
-    -   [How to get un-stuck](/tricks-for-getting-unstuck-programming-interview)
-    -   [Beating impostor syndrome](/impostor-syndrome-in-programming-interviews)
-    -   [24 hours before your onsite](/24-hours-before-onsite-whiteboard-coding-interview)
-    -   [Why you're hitting dead ends](/why-youre-hitting-dead-ends-in-whiteboard-interviews)
-    -   [Best ways to practice](/getting-the-most-from-coding-interview-practice-sessions)
-    -   [Organizing your interview timeline](/coding-interview-timeline-exploding-offers-burnout-negotiation-leverage)
-    -   [Mastering behavioral questions](/behavioral-questions-programming-interview-story-telling)
-    -   [Common issues](/coding-interview-faq)
--   <a href="" class="dropdown-toggle">Glossary <span class="caret"></span></a>
-    -   [Big O Notation: <span complexity="n"></span>, <span complexity="n^2"></span>, etc](/big-o-notation-time-and-space-complexity)
-    -   [Logarithms](/article/logarithms)
-    -   [Triangular Series](/concept/triangular-series)
-    -   
-    -   [Binary Search](/concept/binary-search)
-    -   [Breadth-First Search](/concept/bfs)
-    -   [Depth-First Search](/concept/dfs)
-    -   
-    -   [Brute Force Algorithms](/concept/brute-force)
-    -   [Greedy Algorithms](/concept/greedy)
-    -   [Bottom-Up Algorithms](/concept/bottom-up)
-    -   [Overlapping Subproblems](/concept/overlapping-subproblems)
-    -   [Memoization](/concept/memoization)
-    -   
-    -   [Short Circuit Evaluation](/concept/short-circuit-evaluation)
-    -   [Garbage Collection](/concept/garbage-collection)
-    -   [Closure](/concept/js-closure)
-    -   [Array Slicing](/concept/slice)
-    -   [Hashing](/concept/hashing)
-    -   [Mutable vs Immutable](/concept/mutable)
-    -   [In-Place Operation](/concept/in-place)
-    -   
-    -   [Data Structures Overview](/article/data-structures-computer-science)
-    -   [Array](/concept/array)
-    -   [Dynamic Array](/concept/dynamic-array)
-    -   [Hash Table](/concept/hash-map)
-    -   [Linked List](/concept/linked-list)
-    -   [Queue](/concept/queue)
-    -   [Stack](/concept/stack)
-    -   [Binary Tree](/concept/binary-tree)
-    -   [Graph](/concept/graph)
-    -   
-    -   [Binary Numbers](/concept/binary-numbers)
-    -   [Bitwise AND](/concept/and)
-    -   [Bitwise OR](/concept/or)
-    -   [Bitwise XOR](/concept/xor)
-    -   [Bitwise NOT](/concept/not)
-    -   [Bit Shifting](/concept/bit-shift)
-    -   [Integer Overflow](/concept/integer-overflow)
--   [Full Course](/table-of-contents)
+- <a href="" class="dropdown-toggle">Interview Tips <span class="caret"></span></a>
+  - [First coding interview? Start here.](/coding-interview-beginner-faq)
+  - [General coding interview tips](/coding-interview-tips)
+  - [How to get un-stuck](/tricks-for-getting-unstuck-programming-interview)
+  - [Beating impostor syndrome](/impostor-syndrome-in-programming-interviews)
+  - [24 hours before your onsite](/24-hours-before-onsite-whiteboard-coding-interview)
+  - [Why you're hitting dead ends](/why-youre-hitting-dead-ends-in-whiteboard-interviews)
+  - [Best ways to practice](/getting-the-most-from-coding-interview-practice-sessions)
+  - [Organizing your interview timeline](/coding-interview-timeline-exploding-offers-burnout-negotiation-leverage)
+  - [Mastering behavioral questions](/behavioral-questions-programming-interview-story-telling)
+  - [Common issues](/coding-interview-faq)
+- <a href="" class="dropdown-toggle">Glossary <span class="caret"></span></a>
+  - [Big O Notation: <span complexity="n"></span>, <span complexity="n^2"></span>, etc](/big-o-notation-time-and-space-complexity)
+  - [Logarithms](/article/logarithms)
+  - [Triangular Series](/concept/triangular-series)
+  -
+  - [Binary Search](/concept/binary-search)
+  - [Breadth-First Search](/concept/bfs)
+  - [Depth-First Search](/concept/dfs)
+  -
+  - [Brute Force Algorithms](/concept/brute-force)
+  - [Greedy Algorithms](/concept/greedy)
+  - [Bottom-Up Algorithms](/concept/bottom-up)
+  - [Overlapping Subproblems](/concept/overlapping-subproblems)
+  - [Memoization](/concept/memoization)
+  -
+  - [Short Circuit Evaluation](/concept/short-circuit-evaluation)
+  - [Garbage Collection](/concept/garbage-collection)
+  - [Closure](/concept/js-closure)
+  - [Array Slicing](/concept/slice)
+  - [Hashing](/concept/hashing)
+  - [Mutable vs Immutable](/concept/mutable)
+  - [In-Place Operation](/concept/in-place)
+  -
+  - [Data Structures Overview](/article/data-structures-computer-science)
+  - [Array](/concept/array)
+  - [Dynamic Array](/concept/dynamic-array)
+  - [Hash Table](/concept/hash-map)
+  - [Linked List](/concept/linked-list)
+  - [Queue](/concept/queue)
+  - [Stack](/concept/stack)
+  - [Binary Tree](/concept/binary-tree)
+  - [Graph](/concept/graph)
+  -
+  - [Binary Numbers](/concept/binary-numbers)
+  - [Bitwise AND](/concept/and)
+  - [Bitwise OR](/concept/or)
+  - [Bitwise XOR](/concept/xor)
+  - [Bitwise NOT](/concept/not)
+  - [Bit Shifting](/concept/bit-shift)
+  - [Integer Overflow](/concept/integer-overflow)
+- [Full Course](/table-of-contents)
 
 <!-- -->
 
--   <a href="/upgrade" class="upgrade">Get the full course <span class="glyphicon glyphicon-chevron-right full-access-badge"></span></a>
+- <a href="/upgrade" class="upgrade">Get the full course <span class="glyphicon glyphicon-chevron-right full-access-badge"></span></a>
 
--   <a href="" class="dropdown-toggle"><span data-ng-bind="contentLanguage.display_name"></span> <span class="caret"></span></a>
-    -   []()
+- <a href="" class="dropdown-toggle"><span data-ng-bind="contentLanguage.display_name"></span> <span class="caret"></span></a>
 
--   <span class="glyphicon glyphicon-star full-access-badge" ng-show="currentUser.is_full_access"></span>
+  - []()
 
--   [Log out]()
+- <span class="glyphicon glyphicon-star full-access-badge" ng-show="currentUser.is_full_access"></span>
 
--   [Log in to save progress]()
+- [Log out]()
+
+- [Log in to save progress]()
 
 [<span class="glyphicon glyphicon-arrow-left"></span> The Intuitive Guide to Data Structures and Algorithms](/data-structures-and-algorithms-guide)
 
@@ -88,25 +89,25 @@ No spam, ever. Easy unsubscribe.
 
 ## Computer science in plain English
 
-To really understand how data structures *work*, we're going to derive each of them from scratch. Starting with bits.
+To really understand how data structures _work_, we're going to derive each of them from scratch. Starting with bits.
 
 Don't worry—we'll skip the convoluted academic jargon and proofs.
 
 We'll cover:
 
--   [Random Access Memory](#ram)
--   [Binary Numbers](#binary-numbers)
--   [Fixed-Width Integers](#fixed-width-nums)
--   [Arrays](#arrays)
--   [Strings](#strings)
--   [Pointers](#pointers)
--   [Dynamic Arrays](#dynamic-arrays)
--   [Linked Lists](#linked-lists)
--   [Hash Tables](#hash-tables)
+- [Random Access Memory](#ram)
+- [Binary Numbers](#binary-numbers)
+- [Fixed-Width Integers](#fixed-width-nums)
+- [Arrays](#arrays)
+- [Strings](#strings)
+- [Pointers](#pointers)
+- [Dynamic Arrays](#dynamic-arrays)
+- [Linked Lists](#linked-lists)
+- [Hash Tables](#hash-tables)
 
 ### Get the 7-day crash course!
 
-In this free email course, I'll teach you the right *way of thinking* for breaking down tricky algorithmic coding interview questions.
+In this free email course, I'll teach you the right _way of thinking_ for breaking down tricky algorithmic coding interview questions.
 
 No CS degree necessary.
 
@@ -118,7 +119,7 @@ No spam, ever.
 
 ### Get the coding interview crash course
 
-In this free email course, I'll teach you the right *way of thinking* for breaking down tricky algorithmic coding interview questions.
+In this free email course, I'll teach you the right _way of thinking_ for breaking down tricky algorithmic coding interview questions.
 
 7 days. One short-but-helpful email a day. Unsubscribe whenever.
 
@@ -130,19 +131,19 @@ You're in! Head over to your email inbox right now to read day one!
 
 ## Random Access Memory (RAM)
 
-When a computer is running code, it needs to keep track of *variables* (numbers, strings, arrays, etc.).
+When a computer is running code, it needs to keep track of _variables_ (numbers, strings, arrays, etc.).
 
 Variables are stored in **random access memory** (**RAM**). We sometimes call RAM "working memory" or just "memory."
 
-RAM is *not* where mp3s and apps get stored. In addition to "memory," your computer has **storage** (sometimes called "persistent storage" or "disk"). While *memory* is where we keep the variables our <span words="article__data-structures-coding-interview__function">function</span>s allocate as they crunch data for us, *storage* is where we keep *files* like mp3s, videos, Word documents, and even executable programs or apps.
+RAM is _not_ where mp3s and apps get stored. In addition to "memory," your computer has **storage** (sometimes called "persistent storage" or "disk"). While _memory_ is where we keep the variables our <span words="article__data-structures-coding-interview__function">function</span>s allocate as they crunch data for us, _storage_ is where we keep _files_ like mp3s, videos, Word documents, and even executable programs or apps.
 
 Memory (or RAM) is faster but has less space, while storage (or "disk") is slower but has more space. A modern laptop might have ~500GB of storage but only ~16GB of RAM.
 
-Think of RAM like a really tall bookcase with a *lot* of shelves. Like, *billions* of shelves.
+Think of RAM like a really tall bookcase with a _lot_ of shelves. Like, _billions_ of shelves.
 
 <img src="/images/svgs/cs_for_hackers__ram_empty_no_indices.svg?bust=209" width="125" height="277" alt="A column of empty RAM slots." />
 
-It just keeps going down. Again, picture *billions* of these shelves.
+It just keeps going down. Again, picture _billions_ of these shelves.
 
 The shelves are numbered.
 
@@ -150,7 +151,7 @@ The shelves are numbered.
 
 We call a shelf's number its **address**.
 
-Each shelf holds 8 **bits**. A *bit* is a tiny electrical switch that can be turned "on" or "off." But instead of calling it "on" or "off" we call it <span code-inline="article__data-structures-coding-interview__one">1</span> or <span code-inline="article__data-structures-coding-interview__zero">0</span>.
+Each shelf holds 8 **bits**. A _bit_ is a tiny electrical switch that can be turned "on" or "off." But instead of calling it "on" or "off" we call it <span code-inline="article__data-structures-coding-interview__one">1</span> or <span code-inline="article__data-structures-coding-interview__zero">0</span>.
 
 <img src="/images/svgs/cs_for_hackers__ram_bits.svg?bust=209" width="125" height="277" alt="A column of RAM slots filled with various bits that make up bytes." />
 
@@ -160,27 +161,27 @@ Of course, we also have a processor that does all the real work inside our compu
 
 <img src="/images/svgs/cs_for_hackers__ram_processor.svg?bust=209" width="309" height="277" alt="A section of RAM connected to the computer&#39;s processor, which does most of the heavy lifting." />
 
-It's connected to a **memory controller**. The memory controller does the actual reading and writing to and from RAM. It has a *direct connection* to each shelf of RAM.
+It's connected to a **memory controller**. The memory controller does the actual reading and writing to and from RAM. It has a _direct connection_ to each shelf of RAM.
 
 <img src="/images/svgs/cs_for_hackers__ram_memory_controller.svg?bust=209" width="309" height="277" alt="The computer&#39;s processor connected to a memory controller, which does the actual reading and writing to and from RAM." />
 
-That *direct connection* is important. It means we can access address 0 and then immediately access address 918,873 without having to "climb down" our massive bookshelf of RAM.
+That _direct connection_ is important. It means we can access address 0 and then immediately access address 918,873 without having to "climb down" our massive bookshelf of RAM.
 
-That's why we call it Random Access Memory (RAM)—we can *Access* the bits at any *Random* address in *Memory* right away.
+That's why we call it Random Access Memory (RAM)—we can _Access_ the bits at any _Random_ address in _Memory_ right away.
 
 Spinning hard drives don't have this "random access" superpower, because there's no direct connection to each byte on the disk. Instead, there's a reader—called a **head**—that moves along the surface of a spinning storage disk (like the needle on a record player). Reading bytes that are far apart takes longer because you have to wait for the head to physically move along the disk.
 
-Even though the memory controller can jump between far-apart memory addresses quickly, programs *tend to* access memory that's nearby. **So computers are tuned to get an extra speed boost when reading memory addresses that're close to each other**. Here's how it works:
+Even though the memory controller can jump between far-apart memory addresses quickly, programs _tend to_ access memory that's nearby. **So computers are tuned to get an extra speed boost when reading memory addresses that're close to each other**. Here's how it works:
 
 The processor has a **cache** where it stores a copy of stuff it's recently read from RAM.
 
 <img src="/images/svgs/cs_for_hackers__ram_cache.svg?bust=209" width="309" height="277" alt="A series of caches inside of the memory controller, where the processor stores what it has recently read from RAM." />
 
-Actually, it has a *series* of caches. But we can picture them all lumped together as one cache like this.
+Actually, it has a _series_ of caches. But we can picture them all lumped together as one cache like this.
 
 This cache is much faster to read from than RAM, so the processor saves time whenever it can read something from cache instead of going out to RAM.
 
-**When the processor asks for the contents of a given memory address, the memory controller *also* sends the contents of a handful of *nearby* memory addresses.** And the processor puts *all* of it in the cache.
+**When the processor asks for the contents of a given memory address, the memory controller _also_ sends the contents of a handful of _nearby_ memory addresses.** And the processor puts _all_ of it in the cache.
 
 So if the processor asks for the contents of address 951, then 952, then 953, then 954...it'll go out to RAM once for that first read, and the subsequent reads will come straight from the super-fast cache.
 
@@ -192,9 +193,9 @@ So reading from sequential memory addresses is faster than jumping around.
 
 Let's put those bits to use. Let's store some stuff. Starting with numbers.
 
-The number system we usually use (the one you probably learned in elementary school) is called **base 10**, because each digit has *ten* possible values (1, 2, 3, 4, 5, 6, 7, 8, 9, and 0).
+The number system we usually use (the one you probably learned in elementary school) is called **base 10**, because each digit has _ten_ possible values (1, 2, 3, 4, 5, 6, 7, 8, 9, and 0).
 
-But computers don't have digits with ten possible values. They have *bits* with *two* possible values. So they use **base 2** numbers.
+But computers don't have digits with ten possible values. They have _bits_ with _two_ possible values. So they use **base 2** numbers.
 
 Base 10 is also called **decimal**. Base 2 is also called **binary**.
 
@@ -202,7 +203,7 @@ To understand binary, let's take a closer look at how decimal numbers work. Take
 
 <img src="/images/svgs/cs_for_hackers__binary_numbers_base_10_101.svg?bust=209" width="115" height="50" alt="In base 10, the digits 101 represent 1 hundred, 0 tens, and 1 one." />
 
-Notice we have two "1"s here, but they don't *mean* the same thing. The leftmost "1" *means* 100, and the rightmost "1" *means* 1. That's because the leftmost "1" is in the hundreds place, while the rightmost "1" is in the ones place. And the "0" between them is in the tens place.
+Notice we have two "1"s here, but they don't _mean_ the same thing. The leftmost "1" _means_ 100, and the rightmost "1" _means_ 1. That's because the leftmost "1" is in the hundreds place, while the rightmost "1" is in the ones place. And the "0" between them is in the tens place.
 
 <img src="/images/svgs/cs_for_hackers__binary_numbers_base_10_digits.svg?bust=209" width="341" height="100" alt="In base 10, the digits 101 represent 1 hundred, 0 tens, and 1 one." />
 
@@ -210,23 +211,23 @@ Notice we have two "1"s here, but they don't *mean* the same thing. The leftmost
 
 <img src="/images/svgs/cs_for_hackers__binary_numbers_base_10.svg?bust=209" width="341" height="199" alt="In base 10, the digits 101 represent 1 hundred, 0 tens, and 1 one, which add to give the value one hundred and one." />
 
-Notice how the *places* in base 10 (ones place, tens place, hundreds place, etc.) are *sequential powers of 10*:
+Notice how the _places_ in base 10 (ones place, tens place, hundreds place, etc.) are _sequential powers of 10_:
 
--   <span math=""> 10^0=1 </span>
--   <span math=""> 10^1=10 </span>
--   <span math=""> 10^2=100 </span>
--   <span math=""> 10^3=1000 </span>
--   etc.
+- <span math=""> 10^0=1 </span>
+- <span math=""> 10^1=10 </span>
+- <span math=""> 10^2=100 </span>
+- <span math=""> 10^3=1000 </span>
+- etc.
 
-**The places in *binary* (base 2) are sequential powers of *2*:**
+**The places in _binary_ (base 2) are sequential powers of _2_:**
 
--   <span math="">2^0=1</span>
--   <span math="">2^1=2</span>
--   <span math="">2^2=4</span>
--   <span math="">2^3=8</span>
--   etc.
+- <span math="">2^0=1</span>
+- <span math="">2^1=2</span>
+- <span math="">2^2=4</span>
+- <span math="">2^3=8</span>
+- etc.
 
-So let's take that same "101" but this time let's read it as a *binary* number:
+So let's take that same "101" but this time let's read it as a _binary_ number:
 
 <img src="/images/svgs/cs_for_hackers__binary_numbers_base_2_digits.svg?bust=209" width="341" height="100" alt="In base 2, the digits 101 represent 1 four, 0 twos, and 1 one." />
 
@@ -238,15 +239,15 @@ Here's how we'd count up to 12 in binary:
 
 <table class="table table-condensed binary-table"><thead><tr class="header"><th><strong>Decimal</strong></th><th><strong>Binary</strong></th></tr></thead><tbody><tr class="odd"><td><span data-math="">0</span></td><td class="cl">0000</td></tr><tr class="even"><td><span data-math="">1</span></td><td class="cl">0001</td></tr><tr class="odd"><td><span data-math="">2</span></td><td class="cl">0010</td></tr><tr class="even"><td><span data-math="">3</span></td><td class="cl">0011</td></tr><tr class="odd"><td><span data-math="">4</span></td><td class="cl">0100</td></tr><tr class="even"><td><span data-math="">5</span></td><td class="cl">0101</td></tr><tr class="odd"><td><span data-math="">6</span></td><td class="cl">0110</td></tr><tr class="even"><td><span data-math="">7</span></td><td class="cl">0111</td></tr><tr class="odd"><td><span data-math="">8</span></td><td class="cl">1000</td></tr><tr class="even"><td><span data-math="">9</span></td><td class="cl">1001</td></tr><tr class="odd"><td><span data-math="">10</span></td><td class="cl">1010</td></tr><tr class="even"><td><span data-math="">11</span></td><td class="cl">1011</td></tr><tr class="odd"><td><span data-math="">12</span></td><td class="cl">1100</td></tr></tbody></table>
 
-So far we've been talking about **unsigned integers** ("unsigned" means non-negative, and "integer" means a whole number, not a fraction or decimal). Storing other numbers isn't hard though. Here's how some other numbers *could* be stored:
+So far we've been talking about **unsigned integers** ("unsigned" means non-negative, and "integer" means a whole number, not a fraction or decimal). Storing other numbers isn't hard though. Here's how some other numbers _could_ be stored:
 
-**Fractions:** Store *two* numbers: the numerator and the denominator.
+**Fractions:** Store _two_ numbers: the numerator and the denominator.
 
-**Decimals:** Also two numbers: 1) the number with the decimal point taken out, and 2) the *position* where the decimal point goes (how many digits over from the leftmost digit).
+**Decimals:** Also two numbers: 1) the number with the decimal point taken out, and 2) the _position_ where the decimal point goes (how many digits over from the leftmost digit).
 
 **Negative Numbers:** Reserve the leftmost bit for expressing the sign of the number. <span code-inline="article__data-structures-coding-interview__zero">0</span> for positive and <span code-inline="article__data-structures-coding-interview__one">1</span> for negative.
 
-In reality we usually do something slightly fancier for each of these. But these approaches *work*, and they show how we can express some complex stuff with just <span code-inline="article__data-structures-coding-interview__one">1</span>s and <span code-inline="article__data-structures-coding-interview__zero">0</span>s.
+In reality we usually do something slightly fancier for each of these. But these approaches _work_, and they show how we can express some complex stuff with just <span code-inline="article__data-structures-coding-interview__one">1</span>s and <span code-inline="article__data-structures-coding-interview__zero">0</span>s.
 
 We've talked about base 10 and base 2...you may have also seen **base 16**, also called **hexadecimal** or **hex**.
 
@@ -258,18 +259,18 @@ In CSS, colors are sometimes expressed in hex. Interview Cake's signature blue c
 
 How many different numbers can we express with 1 byte (8 bits)?
 
-<span math="">2^8=256</span> different numbers. <span concept="bits-number-of-possibilities">*How did we know to take <span math="">2^8</span>?*</span>
+<span math="">2^8=256</span> different numbers. <span concept="bits-number-of-possibilities">_How did we know to take <span math="">2^8</span>?_</span>
 
 What happens if we have the number 255 in an 8-bit unsigned integer (<span code-inline="article__data-structures-coding-interview__one-one-one-one-one-one-one-one">1111 1111</span> in binary) and we add 1? The answer (256) needs a 9th bit (<span code-inline="article__data-structures-coding-interview__one-zero-zero-zero-zero-zero-zero-zero-zero">1 0000 0000</span>). But we only have 8 bits!
 
-This is called an **integer overflow**. At best, we might just get an error. At worst, our computer might compute the correct answer but then just throw out the 9th bit, giving us *zero* (<span code-inline="article__data-structures-coding-interview__zero-zero-zero-zero-zero-zero-zero-zero">0000 0000</span>) instead of 256 (<span code-inline="article__data-structures-coding-interview__one-zero-zero-zero-zero-zero-zero-zero-zero">1 0000 0000</span>)! (<span words="article__data-structures-coding-interview__how-overflow-is-handled">Python actually notices that the result won't fit and automatically allocates more bits to store the larger number.</span>)
+This is called an **integer overflow**. At best, we might just get an error. At worst, our computer might compute the correct answer but then just throw out the 9th bit, giving us _zero_ (<span code-inline="article__data-structures-coding-interview__zero-zero-zero-zero-zero-zero-zero-zero">0000 0000</span>) instead of 256 (<span code-inline="article__data-structures-coding-interview__one-zero-zero-zero-zero-zero-zero-zero-zero">1 0000 0000</span>)! (<span words="article__data-structures-coding-interview__how-overflow-is-handled">Python actually notices that the result won't fit and automatically allocates more bits to store the larger number.</span>)
 
 The 256 possibilities we get with 1 byte are pretty limiting. So **we usually use 4 or 8 bytes (32 or 64 bits) for storing integers**.
 
--   32-bit integers have <span math="">2^{32}</span> possible values—more than *4 billion*
--   64-bit integers have <span math="">2^{64}</span> possible values—more than *10 billion billion* (<span math="">10^{19}</span>).
+- 32-bit integers have <span math="">2^{32}</span> possible values—more than _4 billion_
+- 64-bit integers have <span math="">2^{64}</span> possible values—more than _10 billion billion_ (<span math="">10^{19}</span>).
 
-**"How come I've never had to think about how many bits my integers are?"** Maybe you *have* but just didn't know it.
+**"How come I've never had to think about how many bits my integers are?"** Maybe you _have_ but just didn't know it.
 
 Have you ever noticed how in some languages (<span words="article__data-structures-coding-interview__languages-with-different-integer-types">like Java and C</span>) sometimes numbers are <span code-inline="article__data-structures-coding-interview__integer">Integer</span>s and sometimes they're <span code-inline="article__data-structures-coding-interview__long">Long</span>s? The difference is the number of bits (in Java, <span code-inline="article__data-structures-coding-interview__integer">Integer</span>s are 32 bits and <span code-inline="article__data-structures-coding-interview__long">Long</span>s are 64).
 
@@ -279,7 +280,7 @@ Ever created a table in SQL? When you specify that a column will hold integers, 
 
 Most integers are **fixed-width** or **fixed-length**, which means the number of bits they take up doesn't change.
 
-It's usually safe to assume an integer is fixed-width unless you're told otherwise. Variable-size numbers *exist*, but they're only used in special cases.
+It's usually safe to assume an integer is fixed-width unless you're told otherwise. Variable-size numbers _exist_, but they're only used in special cases.
 
 If we have a 64-bit fixed-length integer, it doesn't matter if that integer is 0 or 193,457—it still takes up the same amount of space in RAM: 64 bits.
 
@@ -289,17 +290,17 @@ If we have a 64-bit fixed-length integer, it doesn't matter if that integer is 0
 
 **<span complexity="n"></span>** or **linear** means the time or space grows proportionally as the dataset grows.
 
-So <span complexity="1"></span> space is much smaller than <span complexity="n"></span> space. And <span complexity="1"></span> *time* is much faster than <span complexity="n"></span> time.
+So <span complexity="1"></span> space is much smaller than <span complexity="n"></span> space. And <span complexity="1"></span> _time_ is much faster than <span complexity="n"></span> time.
 
 That's all you need for this piece. But if you're curious, you can read [our whole big O explainer here](/big-o-notation-time-and-space-complexity).
 
-In big O notation, we say **fixed-width integers take up *constant space* or <span complexity="1"></span> space.**
+In big O notation, we say **fixed-width integers take up _constant space_ or <span complexity="1"></span> space.**
 
-And *because* they have a constant number of bits, **most simple operations on fixed-width integers (addition, subtraction, multiplication, division) take constant *time* (<span complexity="1"></span> time)**.
+And _because_ they have a constant number of bits, **most simple operations on fixed-width integers (addition, subtraction, multiplication, division) take constant _time_ (<span complexity="1"></span> time)**.
 
 So fixed-width integers are very space efficient and time efficient.
 
-But that efficiency comes at a cost—*their values are limited*. Specifically, they're limited to <span math="">2^n</span> possibilities, where <span math="">n</span> is the number of bits.
+But that efficiency comes at a cost—_their values are limited_. Specifically, they're limited to <span math="">2^n</span> possibilities, where <span math="">n</span> is the number of bits.
 
 So there's a tradeoff. As we'll see, that's a trend in data structures—to get a nice property, we'll often have to lose something.
 
@@ -311,25 +312,25 @@ Real quick—is this making sense? Feeling like it's coming together?
 
 No spam, ever. Easy unsubscribe.
 
-*Cool, watch your inbox!*
+_Cool, watch your inbox!_
 
 ## Arrays
 
-Ok, so we know how to store individual numbers. Let's talk about storing *several numbers*.
+Ok, so we know how to store individual numbers. Let's talk about storing _several numbers_.
 
-That's right, things are starting to *heat up*.
+That's right, things are starting to _heat up_.
 
 Suppose we wanted to keep a count of how many bottles of kombucha we drink every day.
 
-Let's store each day's kombucha count in an 8-bit, fixed-width, unsigned integer. That should be plenty—we're not likely to get through more than 256 (<span math="">2^8</span>) bottles in a *single day*, right?
+Let's store each day's kombucha count in an 8-bit, fixed-width, unsigned integer. That should be plenty—we're not likely to get through more than 256 (<span math="">2^8</span>) bottles in a _single day_, right?
 
 And let's store the kombucha counts right next to each other in RAM, starting at memory address 0:
 
 <img src="/images/svgs/cs_for_hackers__array_kombucha_counts.svg?bust=209" width="250" height="310" alt="A stack of RAM in which we store kombucha counts starting at index 0." />
 
-Bam. That's an **array**. RAM is *basically* an array already.
+Bam. That's an **array**. RAM is _basically_ an array already.
 
-Just like with RAM, the elements of an array are numbered. We call that number the **index** of the array element (plural: indices). In *this* example, each array element's index is the same as its address in RAM.
+Just like with RAM, the elements of an array are numbered. We call that number the **index** of the array element (plural: indices). In _this_ example, each array element's index is the same as its address in RAM.
 
 But that's not usually true. Suppose another program like Spotify had already stored some information at memory address 2:
 
@@ -339,19 +340,19 @@ We'd have to start our array below it, for example at memory address 3. So index
 
 <img src="/images/svgs/cs_for_hackers__array5.svg?bust=209" width="250" height="350" alt="A column of 9 RAM slots representing an array. The row at index 2 is highlighted, and the rows at indices 3 through 7 are selected with a bracket." />
 
-Suppose we wanted to get the kombucha count at index 4 in our array. How do we figure out what *address in memory* to go to? Simple math:
+Suppose we wanted to get the kombucha count at index 4 in our array. How do we figure out what _address in memory_ to go to? Simple math:
 
 Take the array's starting address (3), add the index we're looking for (4), and that's the address of the item we're looking for. 3 + 4 = 7. In general, for getting the <span math="">n</span>th item in our array:
 
 <span block="" math=""> \\text{address of nth item in array} = </span> <span block="" math=""> \\text{address of array start} + n </span>
 
-This works out nicely because the size of the addressed memory slots and the size of each kombucha count are *both* 1 byte. So a slot in our array corresponds to a slot in RAM.
+This works out nicely because the size of the addressed memory slots and the size of each kombucha count are _both_ 1 byte. So a slot in our array corresponds to a slot in RAM.
 
-But that's not always the case. In fact, it's *usually not* the case. We *usually* use *64-bit* integers.
+But that's not always the case. In fact, it's _usually not_ the case. We _usually_ use _64-bit_ integers.
 
-So how do we build an array of *64-bit* (8 byte) integers on top of our *8-bit* (1 byte) memory slots?
+So how do we build an array of _64-bit_ (8 byte) integers on top of our _8-bit_ (1 byte) memory slots?
 
-We simply give each array index *8* address slots instead of 1:
+We simply give each array index _8_ address slots instead of 1:
 
 <img src="/images/svgs/cs_for_hackers__array64_long.svg?bust=209" width="162" height="433" alt="A column of RAM slots representing an array of 64-bit integers. Every 8 buckets of RAM represents one integer." />
 
@@ -359,22 +360,22 @@ So we can still use simple math to grab the start of the <span math="">nth</span
 
 <span block="" math=""> \\text{address of nth item in array} = </span> <span block="" math=""> \\text{address of array start} + (n \* \\text{size of each item in bytes}) </span>
 
-Don't worry—adding this multiplication doesn't really slow us down. Remember: addition, subtraction, multiplication, and division of fixed-width integers takes <span complexity="1"></span> time. So *all* the math we're using here to get the address of the <span math="">n</span>th item in the array takes <span complexity="1"></span> time.
+Don't worry—adding this multiplication doesn't really slow us down. Remember: addition, subtraction, multiplication, and division of fixed-width integers takes <span complexity="1"></span> time. So _all_ the math we're using here to get the address of the <span math="">n</span>th item in the array takes <span complexity="1"></span> time.
 
-And remember how we said the memory controller has a *direct connection* to each slot in RAM? That means we can read the stuff at any given memory address in <span complexity="1"></span> time.
+And remember how we said the memory controller has a _direct connection_ to each slot in RAM? That means we can read the stuff at any given memory address in <span complexity="1"></span> time.
 
 <img src="/images/svgs/cs_for_hackers__arrays_no_processor_ram_memory_controller.svg?bust=209" width="248" height="279" alt="A memory controller connected to a section of RAM." />
 
 **Together, this means looking up the contents of a given array index is <span complexity="1"></span> time.** This fast lookup capability is the most important property of arrays.
 
-But the formula we used to get the address of the <span math="">n</span>th item in our array only works *if*:
+But the formula we used to get the address of the <span math="">n</span>th item in our array only works _if_:
 
-1.  **Each item in the array is the *same size*** (takes up the same number of bytes).
-2.  **The array is *uninterrupted* (contiguous) in memory**. There can't be any gaps in the array...like to "skip over" a memory slot Spotify was already using.
+1.  **Each item in the array is the _same size_** (takes up the same number of bytes).
+2.  **The array is _uninterrupted_ (contiguous) in memory**. There can't be any gaps in the array...like to "skip over" a memory slot Spotify was already using.
 
-These things make our formula for finding the <span math="">n</span>th item *work* because they make our array *predictable*. We can *predict* exactly where in memory the <span math="">n</span>th element of our array will be.
+These things make our formula for finding the <span math="">n</span>th item _work_ because they make our array _predictable_. We can _predict_ exactly where in memory the <span math="">n</span>th element of our array will be.
 
-But they also constrain what kinds of things we can put in an array. Every item has to be the same size. And if our array is going to store a *lot* of stuff, we'll need a *bunch* of uninterrupted free space in RAM. Which gets hard when most of our RAM is already occupied by other programs (like Spotify).
+But they also constrain what kinds of things we can put in an array. Every item has to be the same size. And if our array is going to store a _lot_ of stuff, we'll need a _bunch_ of uninterrupted free space in RAM. Which gets hard when most of our RAM is already occupied by other programs (like Spotify).
 
 That's the tradeoff. Arrays have fast lookups (<span complexity="1"></span> time), but each item in the array needs to be the same size, and you need a big block of uninterrupted free memory to store the array.
 
@@ -382,9 +383,9 @@ That's the tradeoff. Arrays have fast lookups (<span complexity="1"></span> time
 
 Okay, let's store some words.
 
-A series of *characters* (letters, punctuation, etc.) is called a **string**.
+A series of _characters_ (letters, punctuation, etc.) is called a **string**.
 
-We already know one way to store a *series of things*—arrays. But how can an array store *characters* instead of numbers?
+We already know one way to store a _series of things_—arrays. But how can an array store _characters_ instead of numbers?
 
 Easy. Let's define a mapping between numbers and characters. Let's say "A" is 1 (or <span code-inline="article__data-structures-coding-interview__zero-zero-zero-zero-zero-zero-zero-one">0000 0001</span> in binary), "B" is 2 (or <span code-inline="article__data-structures-coding-interview__zero-zero-zero-zero-zero-zero-one-zero">0000 0010</span> in binary), etc. Bam. Now we have characters.
 
@@ -490,15 +491,15 @@ Q: 01010001
 
 i: 01101001
 
- 
+
 
 R: 01010010
 
 j: 01101010
 
- 
 
-You get the idea. So since we can express characters as 8-bit integers, we can express *strings* as *arrays* of 8-bit <s>numbers</s> characters.
+
+You get the idea. So since we can express characters as 8-bit integers, we can express _strings_ as _arrays_ of 8-bit <s>numbers</s> characters.
 
 <img src="/images/svgs/cs_for_hackers__strings_nice_array.svg?bust=209" width="256" height="152" alt="Three illustrations of the string &quot;NICE&quot;: one in binary, one in base 10, and one in ASCII." />
 
@@ -506,9 +507,9 @@ You get the idea. So since we can express characters as 8-bit integers, we can e
 
 Remember how we said every item in an array had to be the same size? Let's dig into that a little more.
 
-Suppose we wanted to store a bunch of ideas for baby names. Because we've got some *really* cute ones.
+Suppose we wanted to store a bunch of ideas for baby names. Because we've got some _really_ cute ones.
 
-Each name is a string. Which is really an array. And now we want to store *those arrays* in an array. *Whoa*.
+Each name is a string. Which is really an array. And now we want to store _those arrays_ in an array. _Whoa_.
 
 Now, what if our baby names have different lengths? That'd violate our rule that all the items in an array need to be the same size!
 
@@ -518,34 +519,34 @@ We could put our baby names in arbitrarily large arrays (say, 13 characters each
 
 "Wigglesworth" is a cute baby name, right?
 
-But look at all that wasted space after "Bill". And what if we wanted to store a string that was *more* than 13 characters? We'd be out of luck.
+But look at all that wasted space after "Bill". And what if we wanted to store a string that was _more_ than 13 characters? We'd be out of luck.
 
-There's a better way. Instead of storing the strings right inside our array, let's just put the strings wherever we can fit them in memory. Then we'll have each element in our array hold the *address in memory* of its corresponding string. Each address is an integer, so really our outer array is just an array of integers. We can call each of these integers a **pointer**, since it points to another spot in memory.
+There's a better way. Instead of storing the strings right inside our array, let's just put the strings wherever we can fit them in memory. Then we'll have each element in our array hold the _address in memory_ of its corresponding string. Each address is an integer, so really our outer array is just an array of integers. We can call each of these integers a **pointer**, since it points to another spot in memory.
 
 <img src="/images/svgs/cs_for_hackers__pointers_pointer_array.svg?bust=209" width="208" height="457" alt="An array of names represented in RAM. The names are stored out of order, but an array holds the address in memory of each of name with arrows pointing from the number to the memory address." />
 
 The pointers are marked with a <span code-inline="article__data-structures-coding-interview__asterisk">\*</span> at the beginning.
 
-Pretty clever, right? This fixes *both* the disadvantages of arrays:
+Pretty clever, right? This fixes _both_ the disadvantages of arrays:
 
 1.  The items don't have to be the same length—each string can be as long or as short as we want.
 2.  We don't need enough uninterrupted free memory to store all our strings next to each other—we can place each of them separately, wherever there's space in RAM.
 
 We fixed it! No more tradeoffs. Right?
 
-Nope. Now we have a *new* tradeoff:
+Nope. Now we have a _new_ tradeoff:
 
-Remember how the memory controller sends the contents of *nearby* memory addresses to the processor with each read? And the processor caches them? So reading sequential addresses in RAM is *faster* because we can get most of those reads right from the cache?
+Remember how the memory controller sends the contents of _nearby_ memory addresses to the processor with each read? And the processor caches them? So reading sequential addresses in RAM is _faster_ because we can get most of those reads right from the cache?
 
 <img src="/images/svgs/cs_for_hackers__ram_cache.svg?bust=209" width="309" height="277" alt="A series of caches inside of the memory controller, where the processor stores what it has recently read from RAM." />
 
 Our original array was very **cache-friendly**, because everything was sequential. So reading from the 0th index, then the 1st index, then the 2nd, etc. got an extra speedup from the processor cache.
 
-**But the pointers in this array make it *not* cache-friendly**, because the baby names are scattered randomly around RAM. So reading from the 0th index, then the 1st index, etc. doesn't get that extra speedup from the cache.
+**But the pointers in this array make it _not_ cache-friendly**, because the baby names are scattered randomly around RAM. So reading from the 0th index, then the 1st index, etc. doesn't get that extra speedup from the cache.
 
-That's the tradeoff. This pointer-based array requires less uninterrupted memory and can accommodate elements that aren't all the same size, *but* it's *slower* because it's not cache-friendly.
+That's the tradeoff. This pointer-based array requires less uninterrupted memory and can accommodate elements that aren't all the same size, _but_ it's _slower_ because it's not cache-friendly.
 
-This slowdown isn't reflected in the big O time cost. Lookups in this pointer-based array are *still* <span complexity="1"></span> time.
+This slowdown isn't reflected in the big O time cost. Lookups in this pointer-based array are _still_ <span complexity="1"></span> time.
 
 ## Dynamic arrays
 
@@ -553,11 +554,11 @@ Let's build a very simple word processor. What data structure should we use to s
 
 Strings are stored as arrays, right? So we should use an array?
 
-Here's where that gets tricky: **when we allocate an array in a low-level language like <span words="article__data-structures-coding-interview__language-with-low-level-array">C or Java</span>, we have to specify upfront *how many indices* we want our array to have.**
+Here's where that gets tricky: **when we allocate an array in a low-level language like <span words="article__data-structures-coding-interview__language-with-low-level-array">C or Java</span>, we have to specify upfront _how many indices_ we want our array to have.**
 
 There's a reason for this—the computer has to reserve space in memory for the array and commit to not letting anything else use that space. We can't have some other program overwriting the elements in our array!
 
-The computer can't reserve *all* its memory for a single array. So we have to tell it how much to reserve.
+The computer can't reserve _all_ its memory for a single array. So we have to tell it how much to reserve.
 
 But for our word processor, we don't know ahead of time how long the user's document is going to be! So what can we do?
 
@@ -567,7 +568,7 @@ Just make an array and program it to resize itself when it runs out of space! Th
 
 Here's how it works:
 
-When you allocate a dynamic array, your dynamic array implementation makes an *underlying static array*. The starting size depends on the implementation—let's say our implementation uses 10 indices:
+When you allocate a dynamic array, your dynamic array implementation makes an _underlying static array_. The starting size depends on the implementation—let's say our implementation uses 10 indices:
 
 <img src="/images/svgs/cs_for_hackers__dynamic_arrays_10_indices.svg?bust=209" width="300" height="303" alt="A blank dynamic array created by default with 10 indices." />
 
@@ -575,13 +576,13 @@ Say you append 4 items to your dynamic array:
 
 <img src="/images/svgs/cs_for_hackers__dynamic_arrays_dear.svg?bust=209" width="300" height="303" alt="The same dynamic array storing the word &quot;Dear.&quot;" />
 
-At this point, our dynamic array contains 4 items. It has a length of 4. But the *underlying array* has a length of 10.
+At this point, our dynamic array contains 4 items. It has a length of 4. But the _underlying array_ has a length of 10.
 
 We'd say this dynamic array's **size** is 4 and its **capacity** is 10.
 
 <img src="/images/svgs/cs_for_hackers__dynamic_arrays_size_and_capacity.svg?bust=209" width="300" height="303" alt="Our dynamic array now has a size of 4 and a capacity of 10." />
 
-The dynamic array stores an <span var="article__data-structures-coding-interview__end-index">end\_index</span> to keep track of where the dynamic array ends and the extra capacity begins.
+The dynamic array stores an <span var="article__data-structures-coding-interview__end-index">end_index</span> to keep track of where the dynamic array ends and the extra capacity begins.
 
 <img src="/images/svgs/cs_for_hackers__dynamic_arrays_end_index.svg?bust=209" width="300" height="303" alt="The end_index of our dynamic array is marked at index 3, where the last letter of the word &quot;Dear&quot; is stored." />
 
@@ -593,11 +594,11 @@ Next time you append, the dynamic array implementation will do a few things unde
 
 **1. Make a new, bigger array.** Usually twice as big.
 
-Why not just *extend* the existing array? Because that memory might already be taken. Say we have Spotify open and it's using a handful of memory addresses right after the end of our old array. We'll have to skip that memory and reserve the next 20 uninterrupted memory slots for our new array:
+Why not just _extend_ the existing array? Because that memory might already be taken. Say we have Spotify open and it's using a handful of memory addresses right after the end of our old array. We'll have to skip that memory and reserve the next 20 uninterrupted memory slots for our new array:
 
 <img src="/images/svgs/cs_for_hackers__dynamic_arrays_new_array.svg?bust=209" width="211" height="614" alt="A new dynamic array, twice as big as the old dynamic array, is created in order to make more room." />
 
-**2. Copy *each* element from the old array into the new array.**
+**2. Copy _each_ element from the old array into the new array.**
 
 <img src="/images/svgs/cs_for_hackers__dynamic_arrays_copy_array.svg?bust=209" width="211" height="614" alt="Each element from the old dynamic array is copied into the new dynamic array." />
 
@@ -615,27 +616,27 @@ Appending an item to an array is usually an <span complexity="1"></span> time op
 
 Does that mean an append operation on a dynamic array is always worst-case <span complexity="n"></span> time? Yes. So if we make an empty dynamic array and append <span math="">n</span> items, that has some crazy time cost like <span complexity="n^2"></span> or <span complexity="n!"></span>?!?! Not quite.
 
-While the time cost of each special <span complexity="n"></span> doubling append *doubles* each time, the *number of <span complexity="1"></span> appends* you get until the *next doubling* append *also* doubles. This kind of "cancels out," and we can say <span concept="dynamic-array-amortized-analysis-shorter">each append has an *average* cost or **amortized cost** of <span complexity="1"></span>.</span>
+While the time cost of each special <span complexity="n"></span> doubling append _doubles_ each time, the _number of <span complexity="1"></span> appends_ you get until the _next doubling_ append _also_ doubles. This kind of "cancels out," and we can say <span concept="dynamic-array-amortized-analysis-shorter">each append has an _average_ cost or **amortized cost** of <span complexity="1"></span>.</span>
 
-Given this, in industry we usually wave our hands and say dynamic arrays have a time cost of <span complexity="1"></span> for appends, even though strictly speaking that's only true for the *average* case or the *amortized* cost.
+Given this, in industry we usually wave our hands and say dynamic arrays have a time cost of <span complexity="1"></span> for appends, even though strictly speaking that's only true for the _average_ case or the _amortized_ cost.
 
 In an interview, if we were worried about that <span complexity="n"></span>-time worst-case cost of appends, we might try to use a normal, non-dynamic array.
 
-**The *advantage* of dynamic arrays over arrays is that you don't have to specify the size ahead of time, but the *disadvantage* is that some appends can be expensive**. That's the tradeoff.
+**The _advantage_ of dynamic arrays over arrays is that you don't have to specify the size ahead of time, but the _disadvantage_ is that some appends can be expensive**. That's the tradeoff.
 
 But what if we wanted the best of both worlds...
 
 ## Linked lists
 
-Our word processor is definitely going to need fast appends—appending to the document is like the *main thing* you do with a word processor.
+Our word processor is definitely going to need fast appends—appending to the document is like the _main thing_ you do with a word processor.
 
-Can we build a data structure that can store a string, has fast appends, *and* doesn't require you to say how long the string will be ahead of time?
+Can we build a data structure that can store a string, has fast appends, _and_ doesn't require you to say how long the string will be ahead of time?
 
-Let's focus first on not having to know the length of our string ahead of time. Remember how we used *pointers* to get around length issues with our array of baby names?
+Let's focus first on not having to know the length of our string ahead of time. Remember how we used _pointers_ to get around length issues with our array of baby names?
 
 What if we pushed that idea even further?
 
-What if each *character* in our string were a *two-index array* with:
+What if each _character_ in our string were a _two-index array_ with:
 
 1.  the character itself
 2.  a pointer to the next character
@@ -648,7 +649,7 @@ Here's how we'd actually implement it in memory:
 
 <img src="/images/svgs/cs_for_hackers__linked_lists_in_memory.svg?bust=209" width="129" height="409" alt="The same linked list represented in RAM, showing the nodes scattered in memory but connected by pointers." />
 
-Notice how we're free to store our nodes wherever we can find two open slots in memory. They don't have to be next to each other. They don't even have to be *in order*:
+Notice how we're free to store our nodes wherever we can find two open slots in memory. They don't have to be next to each other. They don't even have to be _in order_:
 
 <img src="/images/svgs/cs_for_hackers__linked_lists_in_memory_out_of_order.svg?bust=209" width="129" height="409" alt="The same linked list represented in RAM. This time the characters are stored out of order to show that the pointers still keep everything in place." />
 
@@ -656,7 +657,7 @@ Notice how we're free to store our nodes wherever we can find two open slots in 
 
 The first node of a linked list is called the **head**, and the last node is usually called the **tail**.
 
-Confusingly, some people prefer to use "tail" to refer to *everything after the head* of a linked list. In an interview it's fine to use either definition. Briefly say which definition you're using, just to be clear.
+Confusingly, some people prefer to use "tail" to refer to _everything after the head_ of a linked list. In an interview it's fine to use either definition. Briefly say which definition you're using, just to be clear.
 
 It's important to have a pointer variable referencing the head of the list—otherwise we'd be unable to find our way back to the start of the list!
 
@@ -682,7 +683,7 @@ And tweak some pointers:
 
 <img src="/images/svgs/cs_for_hackers__linked_lists_logs_string_point_next.svg?bust=209" width="200" height="390" alt="A linked list with head and tail pointers storing the word &quot;LOG.&quot; The &quot;G&quot;&#39;s *next pointer is bolded and pointing to the appended &quot;S&quot;." />
 
-3\. Update the <span var="article__data-structures-coding-interview__tail">tail</span> pointer to point to our *new* last letter, "S".
+3\. Update the <span var="article__data-structures-coding-interview__tail">tail</span> pointer to point to our _new_ last letter, "S".
 
 <img src="/images/svgs/cs_for_hackers__linked_lists_logs_string_tweak_pointers.svg?bust=209" width="200" height="390" alt="A linked list with head and tail pointers storing the word &quot;LOGS.&quot; The *tail pointer is now pointed to the new last letter: &quot;S&quot;." />
 
@@ -690,15 +691,15 @@ That's <span complexity="1"></span> time.
 
 Why is it <span complexity="1"></span> time? Because the runtime doesn't get bigger if the string gets bigger. No matter how many characters are in our string, we still just have to tweak a couple pointers for any append.
 
-Now, what if instead of a linked list, our string had been a *dynamic array*? We might not have any room at the end, forcing us to do one of those doubling operations to make space:
+Now, what if instead of a linked list, our string had been a _dynamic array_? We might not have any room at the end, forcing us to do one of those doubling operations to make space:
 
 <img src="/images/svgs/cs_for_hackers__linked_lists_log_string_doubled_array.svg?bust=209" width="231" height="188" alt="A dynamic array containing the word &quot;LOG&quot; going through a doubling operation to make space for an appended letter." />
 
-So with a dynamic array, our append would have a *worst-case* time cost of <span complexity="n"></span>.
+So with a dynamic array, our append would have a _worst-case_ time cost of <span complexity="n"></span>.
 
 **Linked lists have worst-case <span complexity="1"></span>-time appends, which is better than the worst-case <span complexity="n"></span> time of dynamic arrays.**
 
-That *worst-case* part is important. The *average case* runtime for appends to linked lists and dynamic arrays is the same: <span complexity="1"></span>.
+That _worst-case_ part is important. The _average case_ runtime for appends to linked lists and dynamic arrays is the same: <span complexity="1"></span>.
 
 Now, what if we wanted to *pre*pend something to our string? Let's say we wanted to put a "B" at the beginning.
 
@@ -715,7 +716,7 @@ And tweak some pointers:
 
 Bam. <span complexity="1"></span> time again.
 
-But if our string were a *dynamic array*...
+But if our string were a _dynamic array_...
 
 <img src="/images/svgs/cs_for_hackers__linked_lists_log_string_dynamic_array.svg?bust=209" width="210" height="152" alt="A dynamic array storing the string &quot;LOGS.&quot;" />
 
@@ -723,9 +724,9 @@ And we wanted to add in that "B":
 
 <img src="/images/svgs/cs_for_hackers__linked_lists_log_string_dynamic_array_add_b.svg?bust=209" width="210" height="182" alt="A dynamic array storing the string &quot;LOGS.&quot; A bolded &quot;B&quot; is added above the array." />
 
-Eep. We have to *make room* for the "B"!
+Eep. We have to _make room_ for the "B"!
 
-We have to move *each character* one space down:
+We have to move _each character_ one space down:
 
 <img src="/images/svgs/cs_for_hackers__linked_lists_log_string_dynamic_array_move_s.svg?bust=209" width="210" height="182" alt="A dynamic array storing the string &quot;LOGS&quot; with the letter &quot;B&quot; floating above. The &quot;S&quot; is bolded with an arrow attached showing how the character is being moved one index up." />
 
@@ -735,31 +736,31 @@ We have to move *each character* one space down:
 
 <img src="/images/svgs/cs_for_hackers__linked_lists_log_string_dynamic_array_move_l.svg?bust=209" width="210" height="182" alt="A dynamic array storing the string &quot;LOGS&quot; with the letter &quot;B&quot; floating above. The &quot;L&quot; is bolded with an arrow attached showing how the character is being moved one index up." />
 
-*Now* we can drop the "B" in there:
+_Now_ we can drop the "B" in there:
 
 <img src="/images/svgs/cs_for_hackers__linked_lists_log_string_dynamic_array_chars_moved.svg?bust=209" width="210" height="182" alt="A dynamic array storing the string &quot;LOGS&quot; with the letter &quot;B&quot; floating above. The &quot;B&quot; is bolded with an arrow attached showing how the character is now being placed in the first index." />
 
 What's our time cost here?
 
-It's all in the step where we made room for the first letter. We had to move *all <span math="">n</span>* characters in our string. One at a time. That's <span complexity="n"></span> time.
+It's all in the step where we made room for the first letter. We had to move _all <span math="">n</span>_ characters in our string. One at a time. That's <span complexity="n"></span> time.
 
 **So linked lists have faster *pre*pends (<span complexity="1"></span> time) than dynamic arrays (<span complexity="n"></span> time).**
 
-No "worst case" caveat this time—prepends for dynamic arrays are *always* <span complexity="n"></span> time. And prepends for linked lists are *always* <span complexity="1"></span> time.
+No "worst case" caveat this time—prepends for dynamic arrays are _always_ <span complexity="n"></span> time. And prepends for linked lists are _always_ <span complexity="1"></span> time.
 
 These quick appends and prepends for linked lists come from the fact that linked list nodes can go anywhere in memory. They don't have to sit right next to each other the way items in an array do.
 
-So if linked lists are so great, why do we usually store strings in an array? **Because [arrays have <span complexity="1"></span>-time lookups](#constant-time-array-lookups).** And those constant-time lookups *come from* the fact that all the array elements are lined up next to each other in memory.
+So if linked lists are so great, why do we usually store strings in an array? **Because [arrays have <span complexity="1"></span>-time lookups](#constant-time-array-lookups).** And those constant-time lookups _come from_ the fact that all the array elements are lined up next to each other in memory.
 
 Lookups with a linked list are more of a process, because we have no way of knowing where the <span math="">i</span>th node is in memory. So we have to walk through the linked list node by node, counting as we go, until we hit the <span math="">i</span>th item.
 
-def get\_ith\_item\_in\_linked\_list(head, i): if i &lt; 0: raise ValueError("i can't be negative: %d" % i) current\_node = head current\_position = 0 while current\_node: if current\_position == i: # Found it! return current\_node # Move on to the next node current\_node = current\_node.next current\_position += 1 raise ValueError('List has fewer than i + 1 (%d) nodes' % (i + 1))
+def get_ith_item_in_linked_list(head, i): if i &lt; 0: raise ValueError("i can't be negative: %d" % i) current_node = head current_position = 0 while current_node: if current_position == i: # Found it! return current_node # Move on to the next node current_node = current_node.next current_position += 1 raise ValueError('List has fewer than i + 1 (%d) nodes' % (i + 1))
 
 That's <span math="">i + 1</span> steps down our linked list to get to the <span math="">i</span>th node (we made our <span words="article__data-structures-coding-interview__function">function</span> zero-based to match indices in arrays). **So linked lists have <span complexity="i"></span>-time lookups.** Much slower than the <span complexity="1"></span>-time lookups for arrays and dynamic arrays.
 
-Not only that—**walking down a linked list is *not* cache-friendly.** Because the next node could be *anywhere* in memory, we don't get any benefit from the processor cache. This means lookups in a linked list are even slower.
+Not only that—**walking down a linked list is _not_ cache-friendly.** Because the next node could be _anywhere_ in memory, we don't get any benefit from the processor cache. This means lookups in a linked list are even slower.
 
-So the tradeoff with linked lists is they have faster prepends and faster appends than dynamic arrays, *but* they have slower lookups.
+So the tradeoff with linked lists is they have faster prepends and faster appends than dynamic arrays, _but_ they have slower lookups.
 
 ## Hash tables
 
@@ -769,21 +770,21 @@ For example, suppose we wanted to count how many times each ASCII character appe
 
 We can use arrays in a clever way here. Remember—characters are just numbers. In ASCII (a common character encoding) 'A' is 65, 'B' is 66, etc.
 
-So we can use the character('s number value) as the *index* in our array, and store the *count* for that character *at that index* in the array:
+So we can use the character('s number value) as the _index_ in our array, and store the _count_ for that character _at that index_ in the array:
 
 <img src="/images/svgs/cs_for_hackers__hash_tables_chars_to_ints.svg?bust=209" width="407" height="218" alt="An array showing indices 63 through 68. To the left of the indices are the ASCII characters that correspond to the numeric indices with arrows pointing from each character to its corresponding number." />
 
 With this array, we can look up (and edit) the count for any character in constant time. Because we can access any index in our array in constant time.
 
-Something interesting is happening here—this array isn't just a list of values. This array is storing *two* things: characters and counts. The characters are *implied* by the indices.
+Something interesting is happening here—this array isn't just a list of values. This array is storing _two_ things: characters and counts. The characters are _implied_ by the indices.
 
-**So we can think of an array as a *table* with *two columns*...except you don't really get to pick the values in one column (the indices)—they're always 0, 1, 2, 3, etc.**
+**So we can think of an array as a _table_ with _two columns_...except you don't really get to pick the values in one column (the indices)—they're always 0, 1, 2, 3, etc.**
 
-But what if we wanted to put *any* value in that column and still get quick lookups?
+But what if we wanted to put _any_ value in that column and still get quick lookups?
 
-Suppose we wanted to count the number of times each *word* appears in Romeo and Juliet. Can we adapt our array?
+Suppose we wanted to count the number of times each _word_ appears in Romeo and Juliet. Can we adapt our array?
 
-Translating a *character* into an array index was easy. But we'll have to do something more clever to translate a *word* (a string) into an array index...
+Translating a _character_ into an array index was easy. But we'll have to do something more clever to translate a _word_ (a string) into an array index...
 
 <img src="/images/svgs/cs_for_hackers__hash_tables_lies_key_unlabeled.svg?bust=209" width="406" height="255" alt="A blank array except for the value 20 stored at index 9. To the left the array is the word &quot;lies&quot; with an arrow pointing to the right at diamond with a question mark in the middle. The diamond points to the 9th index of the array." />
 
@@ -793,13 +794,13 @@ Grab the number value for each character and add those up.
 
 <img src="/images/svgs/cs_for_hackers__hash_tables_lies_chars.svg?bust=209" width="201" height="79" alt="The word &quot;lies&quot; in quotes. Arrows point from each character down to their corresponding number values, which are separated by plus signs and shown in sum to equal 429." />
 
-The result is 429. But what if we only have *30* slots in our array? We'll use a common trick for forcing a number into a specific range: the <span concept="modulus">modulus operator (<span code-inline="article__data-structures-coding-interview__modulus">%</span>).</span> Modding our sum by 30 ensures we get a whole number that's less than 30 (and at least 0):
+The result is 429. But what if we only have _30_ slots in our array? We'll use a common trick for forcing a number into a specific range: the <span concept="modulus">modulus operator (<span code-inline="article__data-structures-coding-interview__modulus">%</span>).</span> Modding our sum by 30 ensures we get a whole number that's less than 30 (and at least 0):
 
 429 \\: \\% \\: 30 = 9
 
 Bam. That'll get us from a word (or any string) to an array index.
 
-This data structure is called a **hash table** or **hash map**. In our hash table, the *counts* are the **values** and the *words* ("lies," etc.) are the **keys** (analogous to the *indices* in an array). The process we used to translate a key into an array index is called a **hashing <span words="article__data-structures-coding-interview__function">function</span>**.
+This data structure is called a **hash table** or **hash map**. In our hash table, the _counts_ are the **values** and the _words_ ("lies," etc.) are the **keys** (analogous to the _indices_ in an array). The process we used to translate a key into an array index is called a **hashing <span words="article__data-structures-coding-interview__function">function</span>**.
 
 <img src="/images/svgs/cs_for_hackers__hash_tables_lies_key_labeled.svg?bust=209" width="407" height="254" alt="A blank array except for a 20, labeled as the value, stored at index 9. To the left the array is the word &quot;lies,&quot; labeled as the key, with an arrow pointing to the right at diamond with a question mark in the middle, labeled as the hashing function. The diamond points to the 9th index of the array." />
 
@@ -819,33 +820,33 @@ They both sum up to 429! So of course they'll have the same answer when we mod b
 
 So our hashing <span words="article__data-structures-coding-interview__function">function</span> gives us the same answer for "lies" and "foes." This is called a **hash collision**. There are a few different strategies for dealing with them.
 
-Here's a common one: instead of storing the actual values in our array, let's have each array slot hold a *pointer* to a *linked list* holding the counts for all the words that hash to that index:
+Here's a common one: instead of storing the actual values in our array, let's have each array slot hold a _pointer_ to a _linked list_ holding the counts for all the words that hash to that index:
 
 <img src="/images/svgs/cs_for_hackers__hash_tables_hash_collision.svg?bust=209" width="322" height="254" alt="An array storing pointers. Three of the pointers have arrows pointing to linked lists to the right of the array." />
 
-One problem—how do we know which count is for "lies" and which is for "foes"? To fix this, we'll store the *word* as well as the count in each linked list node:
+One problem—how do we know which count is for "lies" and which is for "foes"? To fix this, we'll store the _word_ as well as the count in each linked list node:
 
 <img src="/images/svgs/cs_for_hackers__hash_tables_hash_collision_key_val.svg?bust=209" width="322" height="254" alt="An array storing pointers. The pointer at index 9 has an arrow pointing to a linked list to the right of the array. Each linked list node now stores the word as well as its count and a pointer." />
 
-"But wait!" you may be thinking, "Now lookups in our hash table take <span complexity="n"></span> time in the worst case, since we have to walk down a linked list." That's true! You could even say that in the worst case *every* key creates a hash collision, so our whole hash table *degrades to a linked list*.
+"But wait!" you may be thinking, "Now lookups in our hash table take <span complexity="n"></span> time in the worst case, since we have to walk down a linked list." That's true! You could even say that in the worst case _every_ key creates a hash collision, so our whole hash table _degrades to a linked list_.
 
-In industry though, we usually wave our hands and say **collisions are rare enough that on *average* lookups in a hash table are <span complexity="1"></span> time**. And there are fancy algorithms that keep the number of collisions low and keep the lengths of our linked lists nice and short.
+In industry though, we usually wave our hands and say **collisions are rare enough that on _average_ lookups in a hash table are <span complexity="1"></span> time**. And there are fancy algorithms that keep the number of collisions low and keep the lengths of our linked lists nice and short.
 
-But that's sort of the tradeoff with hash tables. You get fast lookups by key...except *some* lookups could be slow. And of course, you only get those fast lookups in one direction—looking up the *key* for a given *value* still takes <span complexity="n"></span> time.
+But that's sort of the tradeoff with hash tables. You get fast lookups by key...except _some_ lookups could be slow. And of course, you only get those fast lookups in one direction—looking up the _key_ for a given _value_ still takes <span complexity="n"></span> time.
 
 ## Summary
 
-**Arrays** have <span complexity="1"></span>-time lookups. But you need enough *uninterrupted* space in RAM to store the whole array. And the array items need to be the same size.
+**Arrays** have <span complexity="1"></span>-time lookups. But you need enough _uninterrupted_ space in RAM to store the whole array. And the array items need to be the same size.
 
-But if your array stores **pointers** to the actual array items (like we did with our list of baby names), you can get around both those weaknesses. You can store each array item wherever there's space in RAM, and the array items can be different sizes. The tradeoff is that now your array is *slower* because it's not cache-friendly.
+But if your array stores **pointers** to the actual array items (like we did with our list of baby names), you can get around both those weaknesses. You can store each array item wherever there's space in RAM, and the array items can be different sizes. The tradeoff is that now your array is _slower_ because it's not cache-friendly.
 
 Another problem with arrays is you have to specify their sizes ahead of time. There are two ways to get around this: **dynamic arrays** and **linked lists**. Linked lists have faster appends and prepends than dynamic arrays, but dynamic arrays have faster lookups.
 
-Fast lookups are really useful, especially if you can look things up not just by *indices* (0, 1, 2, 3, etc.) but by arbitrary *keys* ("lies", "foes"...any *string*). That's what **hash tables** are for. The only problem with hash tables is they have to deal with hash collisions, which means *some* lookups *could* be a bit slow.
+Fast lookups are really useful, especially if you can look things up not just by _indices_ (0, 1, 2, 3, etc.) but by arbitrary _keys_ ("lies", "foes"...any _string_). That's what **hash tables** are for. The only problem with hash tables is they have to deal with hash collisions, which means _some_ lookups _could_ be a bit slow.
 
 **Each data structure has tradeoffs. You can't have it all.**
 
-So you have to know *what's important* in the problem you're working on. What does your data structure need to do *quickly*? Is it lookups by index? Is it appends or prepends?
+So you have to know _what's important_ in the problem you're working on. What does your data structure need to do _quickly_? Is it lookups by index? Is it appends or prepends?
 
 Once you know what's important, you can pick the data structure that does it best.
 
@@ -871,35 +872,35 @@ Check out <span class="url">interviewcake.com</span> for more advice, guides, an
 
 ##### Programming interview questions by company:
 
--   [Google interview questions](/google-interview-questions)
--   [Facebook interview questions](/facebook-interview-questions)
--   [Amazon interview questions](/amazon-interview-questions)
--   [Uber interview questions](/uber-interview-questions)
--   [Microsoft interview questions](/microsoft-interview-questions)
--   [Apple interview questions](/apple-interview-questions)
--   [Netflix interview questions](/netflix-interview-questions)
--   [Dropbox interview questions](/dropbox-interview-questions)
--   [eBay interview questions](/ebay-interview-questions)
--   [LinkedIn interview questions](/linkedin-interview-questions)
--   [Oracle interview questions](/oracle-interview-questions)
--   [PayPal interview questions](/paypal-interview-questions)
--   [Yahoo interview questions](/yahoo-interview-questions)
+- [Google interview questions](/google-interview-questions)
+- [Facebook interview questions](/facebook-interview-questions)
+- [Amazon interview questions](/amazon-interview-questions)
+- [Uber interview questions](/uber-interview-questions)
+- [Microsoft interview questions](/microsoft-interview-questions)
+- [Apple interview questions](/apple-interview-questions)
+- [Netflix interview questions](/netflix-interview-questions)
+- [Dropbox interview questions](/dropbox-interview-questions)
+- [eBay interview questions](/ebay-interview-questions)
+- [LinkedIn interview questions](/linkedin-interview-questions)
+- [Oracle interview questions](/oracle-interview-questions)
+- [PayPal interview questions](/paypal-interview-questions)
+- [Yahoo interview questions](/yahoo-interview-questions)
 
 ##### Programming interview questions by topic:
 
--   [SQL interview questions](/sql-interview-questions)
--   [Testing and QA interview questions](/testing-and-qa-interview-questions)
--   [Bit manipulation interview questions](/bit-manipulation)
--   [Java interview questions](/java-interview-questions)
--   [Python interview questions](/python-interview-questions)
--   [Ruby interview questions](/ruby-interview-questions)
--   [JavaScript interview questions](/javascript-interview-questions)
--   [C++ interview questions](/cpp-interview-questions)
--   [C interview questions](/c-interview-questions)
--   [Swift interview questions](/swift-interview-questions)
--   [Objective-C interview questions](/objective-c-interview-questions)
--   [PHP interview questions](/php-interview-questions)
--   [C# interview questions](/c-sharp-interview-questions)
+- [SQL interview questions](/sql-interview-questions)
+- [Testing and QA interview questions](/testing-and-qa-interview-questions)
+- [Bit manipulation interview questions](/bit-manipulation)
+- [Java interview questions](/java-interview-questions)
+- [Python interview questions](/python-interview-questions)
+- [Ruby interview questions](/ruby-interview-questions)
+- [JavaScript interview questions](/javascript-interview-questions)
+- [C++ interview questions](/cpp-interview-questions)
+- [C interview questions](/c-interview-questions)
+- [Swift interview questions](/swift-interview-questions)
+- [Objective-C interview questions](/objective-c-interview-questions)
+- [PHP interview questions](/php-interview-questions)
+- [C# interview questions](/c-sharp-interview-questions)
 
 <a href="https://www.facebook.com/interviewcake" class="facebook"><em></em></a> <a href="https://www.twitter.com/interviewcake" class="twitter"><em></em></a>
 
@@ -909,7 +910,7 @@ Copyright © 2021 <span itemprop="name">Cake Labs, Inc.</span> All rights reserv
 
 [About](/about) | [Privacy](/privacy-policy) | [Terms](/terms-and-conditions)
 
-{"id":22442089,"username":"2021-10-13\_15:26:05\_^@i\*2t","email":null,"date\_joined":"2021-10-13T15:26:05.399004+00:00","first\_name":"","last\_name":"","full\_name":"","short\_name":"friend","is\_anonymous":true,"is\_on\_last\_question":false,"percent\_done":0,"num\_questions\_done":0,"num\_questions\_remaining":46,"is\_full\_access":false,"is\_student":false,"first\_payment\_date":null,"last\_payment\_date":null,"num\_free\_questions\_left":3,"terms\_has\_agreed\_to\_latest":false,"preferred\_content\_language":"","preferred\_editor\_language":"","is\_staff":false,"auth\_providers\_human\_readable\_list":"","num\_auth\_providers":0,"auth\_email":""}
+{"id":22442089,"username":"2021-10-13_15:26:05\_^@i\*2t","email":null,"date_joined":"2021-10-13T15:26:05.399004+00:00","first_name":"","last_name":"","full_name":"","short_name":"friend","is_anonymous":true,"is_on_last_question":false,"percent_done":0,"num_questions_done":0,"num_questions_remaining":46,"is_full_access":false,"is_student":false,"first_payment_date":null,"last_payment_date":null,"num_free_questions_left":3,"terms_has_agreed_to_latest":false,"preferred_content_language":"","preferred_editor_language":"","is_staff":false,"auth_providers_human_readable_list":"","num_auth_providers":0,"auth_email":""}
 
 ×
 
